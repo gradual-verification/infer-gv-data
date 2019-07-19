@@ -1,4 +1,5 @@
-import csv
+from matplotlib import pyplot as plt
+from matplotlib_venn import venn3
 
 # https://stackoverflow.com/a/1884277/5044950
 def find_nth(haystack, needle, n):
@@ -23,17 +24,10 @@ checkers = {
     'nullsafe': 'NULLSAFE',
 }
 
-def write(filename, sets, f):
-    with open(filename, 'w') as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow([''] + list(checkers.keys()))
-        for x in checkers:
-            writer.writerow([x] + [f(sets[x], sets[y]) for y in checkers])
-
 for repo in repos:
     sets = {}
     for name, issuetype in checkers.items():
         sets[name] = lines('{}/{}.txt'.format(repo, name), issuetype)
-    write('{}/{}.csv'.format(repo, 'intersect'), sets, lambda x, y: len(x&y))
-    write('{}/{}.csv'.format(repo, 'difference1'), sets, lambda x, y: len(x-y))
-    write('{}/{}.csv'.format(repo, 'difference2'), sets, lambda x, y: len(y-x))
+    keys = sets.keys()
+    venn3([sets[k] for k in keys], set_labels=keys)
+    plt.savefig('{}/venn.png'.format(repo))
