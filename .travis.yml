@@ -1,0 +1,11 @@
+language: python
+branches:
+  only:
+    - master
+script: python venn.py
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: venn
+  target_branch: venn
+  github_token: $GITHUB_TOKEN
