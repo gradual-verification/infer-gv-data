@@ -1,0 +1,952 @@
+Found 118 issues
+
+butterknife-reflect/src/main/java/butterknife/ListenerUnbinder.java:14: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `ListenerUnbinder.listener` can be null but is not declared `@Nullable`. (Origin: null constant at line 14).
+  12.       this.targets = targets;
+  13.       this.setter = setter;
+  14. >     this.listener = null;
+  15.     }
+  16.   
+
+butterknife-runtime/src/main/java/butterknife/internal/Utils.java:35: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `drawable` in the call to `mutate()` is nullable and is not locally checked for null. (Origin: call to getDrawable(...) at line 34).
+  33.   
+  34.       Drawable drawable = ContextCompat.getDrawable(context, id);
+  35. >     drawable = DrawableCompat.wrap(drawable.mutate());
+  36.       int color = ContextCompat.getColor(context, VALUE.resourceId);
+  37.       DrawableCompat.setTint(drawable, color);
+
+butterknife-integration-test/src/main/java/com/example/butterknife/library/SimpleActivity.java:25: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `SimpleActivity.headerViews` is not initialized in the constructor and is not declared `@Nullable`.
+  23.   import static android.widget.Toast.LENGTH_SHORT;
+  24.   
+  25. > public class SimpleActivity extends Activity {
+  26.     private static final Action<View> ALPHA_FADE = (view, index) -> {
+  27.       AlphaAnimation alphaAnimation = new AlphaAnimation(0, 1);
+
+butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleAdapter$ViewHolder_ViewBinding.java:29: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `SimpleAdapter$ViewHolder_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 29).
+  27.       SimpleAdapter.ViewHolder target = this.target;
+  28.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  29. >     this.target = null;
+  30.   
+  31.       target.word = null;
+
+butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/unbinder/C_ViewBinding.java:31: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `C_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 31).
+  29.       C target = this.target;
+  30.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  31. >     this.target = null;
+  32.   
+  33.       target.button1 = null;
+
+butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/unbinder/H_ViewBinding.java:31: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `H_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 31).
+  29.       H target = this.target;
+  30.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  31. >     this.target = null;
+  32.   
+  33.       target.button3 = null;
+
+butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/unbinder/G_ViewBinding.java:43: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `G_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 43).
+  41.       G target = this.target;
+  42.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  43. >     this.target = null;
+  44.   
+  45.       target.button2 = null;
+
+butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/unbinder/G_ViewBinding.java:48: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `G_ViewBinding.view1020002` can be null but is not declared `@Nullable`. (Origin: null constant at line 48).
+  46.   
+  47.       view1020002.setOnClickListener(null);
+  48. >     view1020002 = null;
+  49.   
+  50.       super.unbind();
+
+butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/unbinder/G_ViewBinding.java:47: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View.setOnClickListener(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 47).
+  45.       target.button2 = null;
+  46.   
+  47. >     view1020002.setOnClickListener(null);
+  48.       view1020002 = null;
+  49.   
+
+butterknife-lint/src/main/java/butterknife/lint/InvalidR2UsageDetector.java:82: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `qualifiedName` in the call to `contains(...)` is nullable and is not locally checked for null. (Origin: call to getName() at line 81).
+  80.         if (!classes.isEmpty() && classes.get(0).getName() != null) {
+  81.           String qualifiedName = classes.get(0).getName();
+  82. >         if (qualifiedName.contains("_ViewBinder")
+  83.               || qualifiedName.contains("_ViewBinding")
+  84.               || qualifiedName.equals(R2)) {
+
+butterknife-lint/src/main/java/butterknife/lint/InvalidR2UsageDetector.java:83: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `qualifiedName` in the call to `contains(...)` is nullable and is not locally checked for null. (Origin: call to getName() at line 81).
+  81.           String qualifiedName = classes.get(0).getName();
+  82.           if (qualifiedName.contains("_ViewBinder")
+  83. >             || qualifiedName.contains("_ViewBinding")
+  84.               || qualifiedName.equals(R2)) {
+  85.             // skip generated files and R2
+
+butterknife-lint/src/main/java/butterknife/lint/InvalidR2UsageDetector.java:84: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `qualifiedName` in the call to `equals(...)` is nullable and is not locally checked for null. (Origin: call to getName() at line 81).
+  82.           if (qualifiedName.contains("_ViewBinder")
+  83.               || qualifiedName.contains("_ViewBinding")
+  84. >             || qualifiedName.equals(R2)) {
+  85.             // skip generated files and R2
+  86.             return;
+
+butterknife-lint/src/main/java/butterknife/lint/InvalidR2UsageDetector.java:79: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `sourceFile` in the call to `getClasses()` is nullable and is not locally checked for null. (Origin: call to getUastFile() at line 78).
+  77.       private static void detectR2(JavaContext context, UElement node) {
+  78.         UFile sourceFile = context.getUastFile();
+  79. >       List<UClass> classes = sourceFile.getClasses();
+  80.         if (!classes.isEmpty() && classes.get(0).getName() != null) {
+  81.           String qualifiedName = classes.get(0).getName();
+
+butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:89: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `SimpleActivity.headerViews` can be null but is not declared `@Nullable`. (Origin: null constant at line 89).
+  87.       target.listOfThings = null;
+  88.       target.footer = null;
+  89. >     target.headerViews = null;
+  90.   
+  91.       view7f08001d.setOnClickListener(null);
+
+butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:82: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `SimpleActivity_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 82).
+  80.       SimpleActivity target = this.target;
+  81.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  82. >     this.target = null;
+  83.   
+  84.       target.title = null;
+
+butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:93: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `SimpleActivity_ViewBinding.view7f08001d` can be null but is not declared `@Nullable`. (Origin: null constant at line 93).
+  91.       view7f08001d.setOnClickListener(null);
+  92.       view7f08001d.setOnLongClickListener(null);
+  93. >     view7f08001d = null;
+  94.       ((AdapterView<?>) view7f08001e).setOnItemClickListener(null);
+  95.       view7f08001e = null;
+
+butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:95: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `SimpleActivity_ViewBinding.view7f08001e` can be null but is not declared `@Nullable`. (Origin: null constant at line 95).
+  93.       view7f08001d = null;
+  94.       ((AdapterView<?>) view7f08001e).setOnItemClickListener(null);
+  95. >     view7f08001e = null;
+  96.     }
+  97.   }
+
+butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:94: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `AdapterView.setOnItemClickListener(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 94).
+  92.       view7f08001d.setOnLongClickListener(null);
+  93.       view7f08001d = null;
+  94. >     ((AdapterView<?>) view7f08001e).setOnItemClickListener(null);
+  95.       view7f08001e = null;
+  96.     }
+
+butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:91: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View.setOnClickListener(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 91).
+  89.       target.headerViews = null;
+  90.   
+  91. >     view7f08001d.setOnClickListener(null);
+  92.       view7f08001d.setOnLongClickListener(null);
+  93.       view7f08001d = null;
+
+butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:92: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View.setOnLongClickListener(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 92).
+  90.   
+  91.       view7f08001d.setOnClickListener(null);
+  92. >     view7f08001d.setOnLongClickListener(null);
+  93.       view7f08001d = null;
+  94.       ((AdapterView<?>) view7f08001e).setOnItemClickListener(null);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:88: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ButterKnifeProcessor.filer` is not initialized in the constructor and is not declared `@Nullable`.
+  86.   @AutoService(Processor.class)
+  87.   @SuppressWarnings("NullAway") // TODO fix all these...
+  88. > public final class ButterKnifeProcessor extends AbstractProcessor {
+  89.     // TODO remove when http://b.android.com/187527 is released.
+  90.     private static final String OPTION_SDK_INT = "butterknife.minSdk";
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:88: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ButterKnifeProcessor.typeUtils` is not initialized in the constructor and is not declared `@Nullable`.
+  86.   @AutoService(Processor.class)
+  87.   @SuppressWarnings("NullAway") // TODO fix all these...
+  88. > public final class ButterKnifeProcessor extends AbstractProcessor {
+  89.     // TODO remove when http://b.android.com/187527 is released.
+  90.     private static final String OPTION_SDK_INT = "butterknife.minSdk";
+
+butterknife-runtime/src/main/java/butterknife/ViewCollections.java:99: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Property.set(...)` needs a non-null value in parameter 2 but argument `value` can be null. (Origin: method parameter value).
+  97.       //noinspection ForLoopReplaceableByForEach
+  98.       for (int i = 0, count = list.size(); i < count; i++) {
+  99. >       setter.set(list.get(i), value);
+  100.       }
+  101.     }
+
+butterknife-runtime/src/main/java/butterknife/ViewCollections.java:111: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Property.set(...)` needs a non-null value in parameter 2 but argument `value` can be null. (Origin: method parameter value).
+  109.       //noinspection ForLoopReplaceableByForEach
+  110.       for (int i = 0, count = array.length; i < count; i++) {
+  111. >       setter.set(array[i], value);
+  112.       }
+  113.     }
+
+butterknife-runtime/src/main/java/butterknife/ViewCollections.java:119: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Property.set(...)` needs a non-null value in parameter 2 but argument `value` can be null. (Origin: method parameter value).
+  117.     public static <T extends View, V> void set(@NonNull T view,
+  118.         @NonNull Property<? super T, V> setter, @Nullable V value) {
+  119. >     setter.set(view, value);
+  120.     }
+  121.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/BindingSet.java:363: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Objects.requireNonNull(...)` needs a non-null value in parameter 1 but argument `binding.getFieldBinding()` can be null. (Origin: call to getFieldBinding() at line 363).
+  361.       if (binding.isSingleFieldBinding()) {
+  362.         // Optimize the common case where there's a single binding directly to a field.
+  363. >       FieldViewBinding fieldBinding = requireNonNull(binding.getFieldBinding());
+  364.         CodeBlock.Builder builder = CodeBlock.builder()
+  365.             .add("target.$L = ", fieldBinding.getName());
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:396: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getKind()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 384).
+  394.   
+  395.       // Verify containing type.
+  396. >     if (enclosingElement.getKind() != CLASS) {
+  397.         error(enclosingElement, "@%s %s may only be contained in classes. (%s.%s)",
+  398.             annotationClass.getSimpleName(), targetThing, enclosingElement.getQualifiedName(),
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:404: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getModifiers()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 384).
+  402.   
+  403.       // Verify containing class visibility is not private.
+  404. >     if (enclosingElement.getModifiers().contains(PRIVATE)) {
+  405.         error(enclosingElement, "@%s %s may not be contained in private classes. (%s.%s)",
+  406.             annotationClass.getSimpleName(), targetThing, enclosingElement.getQualifiedName(),
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:390: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 384).
+  388.       if (modifiers.contains(PRIVATE) || modifiers.contains(STATIC)) {
+  389.         error(element, "@%s %s must not be private or static. (%s.%s)",
+  390. >           annotationClass.getSimpleName(), targetThing, enclosingElement.getQualifiedName(),
+  391.             element.getSimpleName());
+  392.         hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:398: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 384).
+  396.       if (enclosingElement.getKind() != CLASS) {
+  397.         error(enclosingElement, "@%s %s may only be contained in classes. (%s.%s)",
+  398. >           annotationClass.getSimpleName(), targetThing, enclosingElement.getQualifiedName(),
+  399.             element.getSimpleName());
+  400.         hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:406: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 384).
+  404.       if (enclosingElement.getModifiers().contains(PRIVATE)) {
+  405.         error(enclosingElement, "@%s %s may not be contained in private classes. (%s.%s)",
+  406. >           annotationClass.getSimpleName(), targetThing, enclosingElement.getQualifiedName(),
+  407.             element.getSimpleName());
+  408.         hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:397: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.error(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 384).
+  395.       // Verify containing type.
+  396.       if (enclosingElement.getKind() != CLASS) {
+  397. >       error(enclosingElement, "@%s %s may only be contained in classes. (%s.%s)",
+  398.             annotationClass.getSimpleName(), targetThing, enclosingElement.getQualifiedName(),
+  399.             element.getSimpleName());
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:405: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.error(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 384).
+  403.       // Verify containing class visibility is not private.
+  404.       if (enclosingElement.getModifiers().contains(PRIVATE)) {
+  405. >       error(enclosingElement, "@%s %s may not be contained in private classes. (%s.%s)",
+  406.             annotationClass.getSimpleName(), targetThing, enclosingElement.getQualifiedName(),
+  407.             element.getSimpleName());
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:417: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 416).
+  415.         Element element) {
+  416.       TypeElement enclosingElement = (TypeElement) element.getEnclosingElement();
+  417. >     String qualifiedName = enclosingElement.getQualifiedName().toString();
+  418.   
+  419.       if (qualifiedName.startsWith("android.")) {
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:466: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `element.getAnnotation(...)` in the call to `value()` is nullable and is not locally checked for null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 466).
+  464.   
+  465.       // Assemble information on the field.
+  466. >     int id = element.getAnnotation(BindView.class).value();
+  467.       BindingSet.Builder builder = builderMap.get(enclosingElement);
+  468.       Id resourceId = elementToId(element, BindView.class, id);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:447: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 435).
+  445.         elementType = typeVariable.getUpperBound();
+  446.       }
+  447. >     Name qualifiedName = enclosingElement.getQualifiedName();
+  448.       Name simpleName = element.getSimpleName();
+  449.       if (!isSubtypeOfType(elementType, VIEW_TYPE) && !isInterface(elementType)) {
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:474: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 435).
+  472.           error(element, "Attempt to use @%s for an already bound ID %d on '%s'. (%s.%s)",
+  473.               BindView.class.getSimpleName(), id, existingBindingName,
+  474. >             enclosingElement.getQualifiedName(), element.getSimpleName());
+  475.           return;
+  476.         }
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:478: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.getOrCreateBindingBuilder(...)` needs a non-null value in parameter 2 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 435).
+  476.         }
+  477.       } else {
+  478. >       builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  479.       }
+  480.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:488: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Set.add(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 435).
+  486.   
+  487.       // Add the type-erased version to the valid binding targets set.
+  488. >     erasedTargetNames.add(enclosingElement);
+  489.     }
+  490.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:547: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `element.getAnnotation(...)` in the call to `value()` is nullable and is not locally checked for null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 547).
+  545.       // Assemble information on the field.
+  546.       String name = element.getSimpleName().toString();
+  547. >     int[] ids = element.getAnnotation(BindViews.class).value();
+  548.       if (ids.length == 0) {
+  549.         error(element, "@%s must specify at least one ID. (%s.%s)", BindViews.class.getSimpleName(),
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:513: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 493).
+  511.         if (typeArguments.size() != 1) {
+  512.           error(element, "@%s List must have a generic component. (%s.%s)",
+  513. >             BindViews.class.getSimpleName(), enclosingElement.getQualifiedName(),
+  514.               element.getSimpleName());
+  515.           hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:522: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 493).
+  520.       } else {
+  521.         error(element, "@%s must be a List or array. (%s.%s)", BindViews.class.getSimpleName(),
+  522. >           enclosingElement.getQualifiedName(), element.getSimpleName());
+  523.         hasError = true;
+  524.       }
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:535: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 493).
+  533.           note(element, "@%s List or array with unresolved type (%s) "
+  534.                   + "must elsewhere be generated as a View or interface. (%s.%s)",
+  535. >             BindViews.class.getSimpleName(), viewType, enclosingElement.getQualifiedName(),
+  536.               element.getSimpleName());
+  537.         } else {
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:539: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 493).
+  537.         } else {
+  538.           error(element, "@%s List or array type must extend from View or be an interface. (%s.%s)",
+  539. >             BindViews.class.getSimpleName(), enclosingElement.getQualifiedName(),
+  540.               element.getSimpleName());
+  541.           hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:550: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 493).
+  548.       if (ids.length == 0) {
+  549.         error(element, "@%s must specify at least one ID. (%s.%s)", BindViews.class.getSimpleName(),
+  550. >           enclosingElement.getQualifiedName(), element.getSimpleName());
+  551.         hasError = true;
+  552.       }
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:557: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 493).
+  555.       if (duplicateId != null) {
+  556.         error(element, "@%s annotation contains duplicate ID %d. (%s.%s)",
+  557. >           BindViews.class.getSimpleName(), duplicateId, enclosingElement.getQualifiedName(),
+  558.             element.getSimpleName());
+  559.         hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:569: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.getOrCreateBindingBuilder(...)` needs a non-null value in parameter 2 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 493).
+  567.       boolean required = isFieldRequired(element);
+  568.   
+  569. >     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  570.       builder.addFieldCollection(new FieldCollectionViewBinding(name, type, requireNonNull(kind),
+  571.           new ArrayList<>(elementToIds(element, BindViews.class, ids).values()), required));
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:570: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Objects.requireNonNull(...)` needs a non-null value in parameter 1 but argument `kind` can be null. (Origin: null constant at line 503).
+  568.   
+  569.       BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  570. >     builder.addFieldCollection(new FieldCollectionViewBinding(name, type, requireNonNull(kind),
+  571.           new ArrayList<>(elementToIds(element, BindViews.class, ids).values()), required));
+  572.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:566: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Objects.requireNonNull(...)` needs a non-null value in parameter 1 but argument `viewType` can be null. (Origin: null constant at line 502).
+  564.       }
+  565.   
+  566. >     TypeName type = TypeName.get(requireNonNull(viewType));
+  567.       boolean required = isFieldRequired(element);
+  568.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:573: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Set.add(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 493).
+  571.           new ArrayList<>(elementToIds(element, BindViews.class, ids).values()), required));
+  572.   
+  573. >     erasedTargetNames.add(enclosingElement);
+  574.     }
+  575.   
+
+butterknife-reflect/src/main/java/butterknife/ButterKnife.java:590: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Typeface.create(...)` needs a non-null value in parameter 1 but argument `font` can be null. (Origin: call to getFont(...) at line 582).
+  588.           case Typeface.ITALIC:
+  589.           case Typeface.BOLD_ITALIC:
+  590. >           value = Typeface.create(font, style);
+  591.             break;
+  592.           default:
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:599: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `element.getAnnotation(...)` in the call to `value()` is nullable and is not locally checked for null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 599).
+  597.       // Assemble information on the field.
+  598.       String name = element.getSimpleName().toString();
+  599. >     int id = element.getAnnotation(BindAnim.class).value();
+  600.       Id resourceId = elementToId(element, BindAnim.class, id);
+  601.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:584: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 579).
+  582.       if (!ANIMATION_TYPE.equals(element.asType().toString())) {
+  583.         error(element, "@%s field type must be 'Animation'. (%s.%s)",
+  584. >           BindAnim.class.getSimpleName(), enclosingElement.getQualifiedName(),
+  585.             element.getSimpleName());
+  586.         hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:602: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.getOrCreateBindingBuilder(...)` needs a non-null value in parameter 2 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 579).
+  600.       Id resourceId = elementToId(element, BindAnim.class, id);
+  601.   
+  602. >     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  603.       builder.addResource(new FieldAnimationBinding(resourceId, name));
+  604.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:605: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Set.add(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 579).
+  603.       builder.addResource(new FieldAnimationBinding(resourceId, name));
+  604.   
+  605. >     erasedTargetNames.add(enclosingElement);
+  606.     }
+  607.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:631: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `element.getAnnotation(...)` in the call to `value()` is nullable and is not locally checked for null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 631).
+  629.       // Assemble information on the field.
+  630.       String name = element.getSimpleName().toString();
+  631. >     int id = element.getAnnotation(BindBool.class).value();
+  632.       Id resourceId = elementToId(element, BindBool.class, id);
+  633.       BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:616: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 611).
+  614.       if (element.asType().getKind() != TypeKind.BOOLEAN) {
+  615.         error(element, "@%s field type must be 'boolean'. (%s.%s)",
+  616. >           BindBool.class.getSimpleName(), enclosingElement.getQualifiedName(),
+  617.             element.getSimpleName());
+  618.         hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:633: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.getOrCreateBindingBuilder(...)` needs a non-null value in parameter 2 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 611).
+  631.       int id = element.getAnnotation(BindBool.class).value();
+  632.       Id resourceId = elementToId(element, BindBool.class, id);
+  633. >     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  634.       builder.addResource(
+  635.           new FieldResourceBinding(resourceId, name, FieldResourceBinding.Type.BOOL));
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:637: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Set.add(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 611).
+  635.           new FieldResourceBinding(resourceId, name, FieldResourceBinding.Type.BOOL));
+  636.   
+  637. >     erasedTargetNames.add(enclosingElement);
+  638.     }
+  639.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:667: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `element.getAnnotation(...)` in the call to `value()` is nullable and is not locally checked for null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 667).
+  665.       // Assemble information on the field.
+  666.       String name = element.getSimpleName().toString();
+  667. >     int id = element.getAnnotation(BindColor.class).value();
+  668.       Id resourceId = elementToId(element, BindColor.class, id);
+  669.       BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:652: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 643).
+  650.       } else if (elementType.getKind() != TypeKind.INT) {
+  651.         error(element, "@%s field type must be 'int' or 'ColorStateList'. (%s.%s)",
+  652. >           BindColor.class.getSimpleName(), enclosingElement.getQualifiedName(),
+  653.             element.getSimpleName());
+  654.         hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:669: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.getOrCreateBindingBuilder(...)` needs a non-null value in parameter 2 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 643).
+  667.       int id = element.getAnnotation(BindColor.class).value();
+  668.       Id resourceId = elementToId(element, BindColor.class, id);
+  669. >     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  670.   
+  671.       FieldResourceBinding.Type colorStateList = FieldResourceBinding.Type.COLOR_STATE_LIST;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:678: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Set.add(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 643).
+  676.           isColorStateList ? colorStateList : color));
+  677.   
+  678. >     erasedTargetNames.add(enclosingElement);
+  679.     }
+  680.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:708: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `element.getAnnotation(...)` in the call to `value()` is nullable and is not locally checked for null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 708).
+  706.       // Assemble information on the field.
+  707.       String name = element.getSimpleName().toString();
+  708. >     int id = element.getAnnotation(BindDimen.class).value();
+  709.       Id resourceId = elementToId(element, BindDimen.class, id);
+  710.       BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:693: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 684).
+  691.       } else if (elementType.getKind() != TypeKind.FLOAT) {
+  692.         error(element, "@%s field type must be 'int' or 'float'. (%s.%s)",
+  693. >           BindDimen.class.getSimpleName(), enclosingElement.getQualifiedName(),
+  694.             element.getSimpleName());
+  695.         hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:710: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.getOrCreateBindingBuilder(...)` needs a non-null value in parameter 2 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 684).
+  708.       int id = element.getAnnotation(BindDimen.class).value();
+  709.       Id resourceId = elementToId(element, BindDimen.class, id);
+  710. >     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  711.       builder.addResource(new FieldResourceBinding(resourceId, name,
+  712.           isInt ? FieldResourceBinding.Type.DIMEN_AS_INT : FieldResourceBinding.Type.DIMEN_AS_FLOAT));
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:714: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Set.add(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 684).
+  712.           isInt ? FieldResourceBinding.Type.DIMEN_AS_INT : FieldResourceBinding.Type.DIMEN_AS_FLOAT));
+  713.   
+  714. >     erasedTargetNames.add(enclosingElement);
+  715.     }
+  716.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:740: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `element.getAnnotation(...)` in the call to `value()` is nullable and is not locally checked for null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 740).
+  738.       // Assemble information on the field.
+  739.       String name = element.getSimpleName().toString();
+  740. >     int id = element.getAnnotation(BindBitmap.class).value();
+  741.       Id resourceId = elementToId(element, BindBitmap.class, id);
+  742.       BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:725: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 720).
+  723.       if (!BITMAP_TYPE.equals(element.asType().toString())) {
+  724.         error(element, "@%s field type must be 'Bitmap'. (%s.%s)",
+  725. >           BindBitmap.class.getSimpleName(), enclosingElement.getQualifiedName(),
+  726.             element.getSimpleName());
+  727.         hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:742: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.getOrCreateBindingBuilder(...)` needs a non-null value in parameter 2 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 720).
+  740.       int id = element.getAnnotation(BindBitmap.class).value();
+  741.       Id resourceId = elementToId(element, BindBitmap.class, id);
+  742. >     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  743.       builder.addResource(
+  744.           new FieldResourceBinding(resourceId, name, FieldResourceBinding.Type.BITMAP));
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:746: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Set.add(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 720).
+  744.           new FieldResourceBinding(resourceId, name, FieldResourceBinding.Type.BITMAP));
+  745.   
+  746. >     erasedTargetNames.add(enclosingElement);
+  747.     }
+  748.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:773: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `element.getAnnotation(...)` in the call to `tint()` is nullable and is not locally checked for null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 772).
+  771.       String name = element.getSimpleName().toString();
+  772.       int id = element.getAnnotation(BindDrawable.class).value();
+  773. >     int tint = element.getAnnotation(BindDrawable.class).tint();
+  774.       Map<Integer, Id> resourceIds = elementToIds(element, BindDrawable.class, new int[] {id, tint});
+  775.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:772: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `element.getAnnotation(...)` in the call to `value()` is nullable and is not locally checked for null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 772).
+  770.       // Assemble information on the field.
+  771.       String name = element.getSimpleName().toString();
+  772. >     int id = element.getAnnotation(BindDrawable.class).value();
+  773.       int tint = element.getAnnotation(BindDrawable.class).tint();
+  774.       Map<Integer, Id> resourceIds = elementToIds(element, BindDrawable.class, new int[] {id, tint});
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:757: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 752).
+  755.       if (!DRAWABLE_TYPE.equals(element.asType().toString())) {
+  756.         error(element, "@%s field type must be 'Drawable'. (%s.%s)",
+  757. >           BindDrawable.class.getSimpleName(), enclosingElement.getQualifiedName(),
+  758.             element.getSimpleName());
+  759.         hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:776: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.getOrCreateBindingBuilder(...)` needs a non-null value in parameter 2 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 752).
+  774.       Map<Integer, Id> resourceIds = elementToIds(element, BindDrawable.class, new int[] {id, tint});
+  775.   
+  776. >     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  777.       builder.addResource(new FieldDrawableBinding(resourceIds.get(id), name, resourceIds.get(tint)));
+  778.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:777: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `FieldDrawableBinding(...)` needs a non-null value in parameter 1 but argument `resourceIds.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 777).
+  775.   
+  776.       BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  777. >     builder.addResource(new FieldDrawableBinding(resourceIds.get(id), name, resourceIds.get(tint)));
+  778.   
+  779.       erasedTargetNames.add(enclosingElement);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:777: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `FieldDrawableBinding(...)` needs a non-null value in parameter 3 but argument `resourceIds.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 777).
+  775.   
+  776.       BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  777. >     builder.addResource(new FieldDrawableBinding(resourceIds.get(id), name, resourceIds.get(tint)));
+  778.   
+  779.       erasedTargetNames.add(enclosingElement);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:779: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Set.add(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 752).
+  777.       builder.addResource(new FieldDrawableBinding(resourceIds.get(id), name, resourceIds.get(tint)));
+  778.   
+  779. >     erasedTargetNames.add(enclosingElement);
+  780.     }
+  781.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:805: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `element.getAnnotation(...)` in the call to `value()` is nullable and is not locally checked for null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 805).
+  803.       // Assemble information on the field.
+  804.       String name = element.getSimpleName().toString();
+  805. >     int id = element.getAnnotation(BindFloat.class).value();
+  806.       Id resourceId = elementToId(element, BindFloat.class, id);
+  807.       BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:790: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 785).
+  788.       if (element.asType().getKind() != TypeKind.FLOAT) {
+  789.         error(element, "@%s field type must be 'float'. (%s.%s)",
+  790. >           BindFloat.class.getSimpleName(), enclosingElement.getQualifiedName(),
+  791.             element.getSimpleName());
+  792.         hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:807: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.getOrCreateBindingBuilder(...)` needs a non-null value in parameter 2 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 785).
+  805.       int id = element.getAnnotation(BindFloat.class).value();
+  806.       Id resourceId = elementToId(element, BindFloat.class, id);
+  807. >     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  808.       builder.addResource(
+  809.           new FieldResourceBinding(resourceId, name, FieldResourceBinding.Type.FLOAT));
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:811: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Set.add(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 785).
+  809.           new FieldResourceBinding(resourceId, name, FieldResourceBinding.Type.FLOAT));
+  810.   
+  811. >     erasedTargetNames.add(enclosingElement);
+  812.     }
+  813.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:835: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `bindFont` in the call to `style()` is nullable and is not locally checked for null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 833).
+  833.       BindFont bindFont = element.getAnnotation(BindFont.class);
+  834.   
+  835. >     int styleValue = bindFont.style();
+  836.       TypefaceStyles style = TypefaceStyles.fromValue(styleValue);
+  837.       if (style == null) {
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:848: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `bindFont` in the call to `value()` is nullable and is not locally checked for null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 833).
+  846.   
+  847.       BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  848. >     Id resourceId = elementToId(element, BindFont.class, bindFont.value());
+  849.       builder.addResource(new FieldTypefaceBinding(resourceId, name, style));
+  850.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:822: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 817).
+  820.       if (!TYPEFACE_TYPE.equals(element.asType().toString())) {
+  821.         error(element, "@%s field type must be 'Typeface'. (%s.%s)",
+  822. >           BindFont.class.getSimpleName(), enclosingElement.getQualifiedName(),
+  823.             element.getSimpleName());
+  824.         hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:839: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 817).
+  837.       if (style == null) {
+  838.         error(element, "@%s style must be NORMAL, BOLD, ITALIC, or BOLD_ITALIC. (%s.%s)",
+  839. >           BindFont.class.getSimpleName(), enclosingElement.getQualifiedName(), name);
+  840.         hasError = true;
+  841.       }
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:847: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.getOrCreateBindingBuilder(...)` needs a non-null value in parameter 2 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 817).
+  845.       }
+  846.   
+  847. >     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  848.       Id resourceId = elementToId(element, BindFont.class, bindFont.value());
+  849.       builder.addResource(new FieldTypefaceBinding(resourceId, name, style));
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:849: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `FieldTypefaceBinding(...)` needs a non-null value in parameter 3 but argument `style` can be null. (Origin: call to fromValue(...) at line 836).
+  847.       BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  848.       Id resourceId = elementToId(element, BindFont.class, bindFont.value());
+  849. >     builder.addResource(new FieldTypefaceBinding(resourceId, name, style));
+  850.   
+  851.       erasedTargetNames.add(enclosingElement);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:851: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Set.add(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 817).
+  849.       builder.addResource(new FieldTypefaceBinding(resourceId, name, style));
+  850.   
+  851. >     erasedTargetNames.add(enclosingElement);
+  852.     }
+  853.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:876: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `element.getAnnotation(...)` in the call to `value()` is nullable and is not locally checked for null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 876).
+  874.       // Assemble information on the field.
+  875.       String name = element.getSimpleName().toString();
+  876. >     int id = element.getAnnotation(BindInt.class).value();
+  877.       Id resourceId = elementToId(element, BindInt.class, id);
+  878.       BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:862: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 857).
+  860.       if (element.asType().getKind() != TypeKind.INT) {
+  861.         error(element, "@%s field type must be 'int'. (%s.%s)", BindInt.class.getSimpleName(),
+  862. >           enclosingElement.getQualifiedName(), element.getSimpleName());
+  863.         hasError = true;
+  864.       }
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:878: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.getOrCreateBindingBuilder(...)` needs a non-null value in parameter 2 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 857).
+  876.       int id = element.getAnnotation(BindInt.class).value();
+  877.       Id resourceId = elementToId(element, BindInt.class, id);
+  878. >     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  879.       builder.addResource(
+  880.           new FieldResourceBinding(resourceId, name, FieldResourceBinding.Type.INT));
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:882: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Set.add(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 857).
+  880.           new FieldResourceBinding(resourceId, name, FieldResourceBinding.Type.INT));
+  881.   
+  882. >     erasedTargetNames.add(enclosingElement);
+  883.     }
+  884.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:908: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `element.getAnnotation(...)` in the call to `value()` is nullable and is not locally checked for null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 908).
+  906.       // Assemble information on the field.
+  907.       String name = element.getSimpleName().toString();
+  908. >     int id = element.getAnnotation(BindString.class).value();
+  909.       Id resourceId = elementToId(element, BindString.class, id);
+  910.       BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:893: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 888).
+  891.       if (!STRING_TYPE.equals(element.asType().toString())) {
+  892.         error(element, "@%s field type must be 'String'. (%s.%s)",
+  893. >           BindString.class.getSimpleName(), enclosingElement.getQualifiedName(),
+  894.             element.getSimpleName());
+  895.         hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:910: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.getOrCreateBindingBuilder(...)` needs a non-null value in parameter 2 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 888).
+  908.       int id = element.getAnnotation(BindString.class).value();
+  909.       Id resourceId = elementToId(element, BindString.class, id);
+  910. >     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  911.       builder.addResource(
+  912.           new FieldResourceBinding(resourceId, name, FieldResourceBinding.Type.STRING));
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:914: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Set.add(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 888).
+  912.           new FieldResourceBinding(resourceId, name, FieldResourceBinding.Type.STRING));
+  913.   
+  914. >     erasedTargetNames.add(enclosingElement);
+  915.     }
+  916.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:942: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `element.getAnnotation(...)` in the call to `value()` is nullable and is not locally checked for null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 942).
+  940.       // Assemble information on the field.
+  941.       String name = element.getSimpleName().toString();
+  942. >     int id = element.getAnnotation(BindArray.class).value();
+  943.       Id resourceId = elementToId(element, BindArray.class, id);
+  944.       BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:927: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 920).
+  925.         error(element,
+  926.             "@%s field type must be one of: String[], int[], CharSequence[], %s. (%s.%s)",
+  927. >           BindArray.class.getSimpleName(), TYPED_ARRAY_TYPE, enclosingElement.getQualifiedName(),
+  928.             element.getSimpleName());
+  929.         hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:944: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.getOrCreateBindingBuilder(...)` needs a non-null value in parameter 2 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 920).
+  942.       int id = element.getAnnotation(BindArray.class).value();
+  943.       Id resourceId = elementToId(element, BindArray.class, id);
+  944. >     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  945.       builder.addResource(new FieldResourceBinding(resourceId, name, requireNonNull(type)));
+  946.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:945: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Objects.requireNonNull(...)` needs a non-null value in parameter 1 but argument `type` can be null. (Origin: call to getArrayResourceMethodName(...) at line 923).
+  943.       Id resourceId = elementToId(element, BindArray.class, id);
+  944.       BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  945. >     builder.addResource(new FieldResourceBinding(resourceId, name, requireNonNull(type)));
+  946.   
+  947.       erasedTargetNames.add(enclosingElement);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:947: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Set.add(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 920).
+  945.       builder.addResource(new FieldResourceBinding(resourceId, name, requireNonNull(type)));
+  946.   
+  947. >     erasedTargetNames.add(enclosingElement);
+  948.     }
+  949.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1044: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 1023).
+  1042.       if (duplicateId != null) {
+  1043.         error(element, "@%s annotation for method contains duplicate ID %d. (%s.%s)",
+  1044. >           annotationClass.getSimpleName(), duplicateId, enclosingElement.getQualifiedName(),
+  1045.             element.getSimpleName());
+  1046.         hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1061: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 1023).
+  1059.             if (!required) {
+  1060.               error(element, "ID-free binding must not be annotated with @Optional. (%s.%s)",
+  1061. >                 enclosingElement.getQualifiedName(), element.getSimpleName());
+  1062.               hasError = true;
+  1063.             }
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1066: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 1023).
+  1064.           } else {
+  1065.             error(element, "@%s annotation contains invalid ID %d. (%s.%s)",
+  1066. >               annotationClass.getSimpleName(), id, enclosingElement.getQualifiedName(),
+  1067.                 element.getSimpleName());
+  1068.             hasError = true;
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1103: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 1023).
+  1101.         error(element, "@%s methods can have at most %s parameter(s). (%s.%s)",
+  1102.             annotationClass.getSimpleName(), method.parameters().length,
+  1103. >           enclosingElement.getQualifiedName(), element.getSimpleName());
+  1104.         hasError = true;
+  1105.       }
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1118: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 1023).
+  1116.         error(element, "@%s methods must have a '%s' return type. (%s.%s)",
+  1117.             annotationClass.getSimpleName(), method.returnType(),
+  1118. >           enclosingElement.getQualifiedName(), element.getSimpleName());
+  1119.         hasError = true;
+  1120.       }
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1157: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 1023).
+  1155.                 .append(annotationClass.getSimpleName())
+  1156.                 .append(" method arguments. (")
+  1157. >               .append(enclosingElement.getQualifiedName())
+  1158.                 .append('.')
+  1159.                 .append(element.getSimpleName())
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1199: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `enclosingElement` in the call to `getQualifiedName()` is nullable and is not locally checked for null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 1023).
+  1197.         if (!builder.addMethod(entry.getValue(), listener, method, binding)) {
+  1198.           error(element, "Multiple listener methods with return value specified for ID %d. (%s.%s)",
+  1199. >             entry.getKey(), enclosingElement.getQualifiedName(), element.getSimpleName());
+  1200.           return;
+  1201.         }
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1193: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ButterKnifeProcessor.getOrCreateBindingBuilder(...)` needs a non-null value in parameter 2 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 1023).
+  1191.       MethodViewBinding binding =
+  1192.           new MethodViewBinding(name, Arrays.asList(parameters), required, hasReturnValue);
+  1193. >     BindingSet.Builder builder = getOrCreateBindingBuilder(builderMap, enclosingElement);
+  1194.       Map<Integer, Id> resourceIds = elementToIds(element, annotationClass, ids);
+  1195.   
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1033: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Method.invoke(...)` needs a non-null value in parameter 1 but argument `annotation` can be null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 1026).
+  1031.       }
+  1032.   
+  1033. >     int[] ids = (int[]) annotationValue.invoke(annotation);
+  1034.       String name = executableElement.getSimpleName().toString();
+  1035.       boolean required = isListenerRequired(executableElement);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1087: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Method.invoke(...)` needs a non-null value in parameter 1 but argument `annotation` can be null. (Origin: call to getAnnotation(...) modelled in modelTables.ml at line 1026).
+  1085.       } else {
+  1086.         Method annotationCallback = annotationClass.getDeclaredMethod("callback");
+  1087. >       Enum<?> callback = (Enum<?>) annotationCallback.invoke(annotation);
+  1088.         Field callbackField = callback.getDeclaringClass().getField(callback.name());
+  1089.         method = callbackField.getAnnotation(ListenerMethod.class);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1205: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Set.add(...)` needs a non-null value in parameter 1 but argument `enclosingElement` can be null. (Origin: call to getEnclosingElement() modelled in modelTables.ml at line 1023).
+  1203.   
+  1204.       // Add the type-erased version to the valid binding targets set.
+  1205. >     erasedTargetNames.add(enclosingElement);
+  1206.     }
+  1207.   
+
+butterknife-reflect/src/main/java/butterknife/ButterKnife.java:1120: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Field.set(...)` needs a non-null value in parameter 2 but argument `value` can be null. (Origin: method parameter value).
+  1118.     static void trySet(Field field, Object target, @Nullable Object value) {
+  1119.       try {
+  1120. >       field.set(target, value);
+  1121.       } catch (IllegalAccessException e) {
+  1122.         throw new RuntimeException("Unable to assign " + value + " to " + field + " on " + target, e);
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1303: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `ButterKnifeProcessor.trees` in the call to `getTree(...)` is nullable and is not locally checked for null. (Origin: field ButterKnifeProcessor.trees at line 1303).
+  1301.   
+  1302.     private Id elementToId(Element element, Class<? extends Annotation> annotation, int value) {
+  1303. >     JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+  1304.       if (tree != null) { // tree can be null if the references are compiled types and not source
+  1305.         rScanner.reset();
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1303: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Trees.getTree(...)` needs a non-null value in parameter 2 but argument `getMirror(...)` can be null. (Origin: call to getMirror(...) at line 1303).
+  1301.   
+  1302.     private Id elementToId(Element element, Class<? extends Annotation> annotation, int value) {
+  1303. >     JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+  1304.       if (tree != null) { // tree can be null if the references are compiled types and not source
+  1305.         rScanner.reset();
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1317: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `ButterKnifeProcessor.trees` in the call to `getTree(...)` is nullable and is not locally checked for null. (Origin: field ButterKnifeProcessor.trees at line 1317).
+  1315.         int[] values) {
+  1316.       Map<Integer, Id> resourceIds = new LinkedHashMap<>();
+  1317. >     JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+  1318.       if (tree != null) { // tree can be null if the references are compiled types and not source
+  1319.         rScanner.reset();
+
+butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1317: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Trees.getTree(...)` needs a non-null value in parameter 2 but argument `getMirror(...)` can be null. (Origin: call to getMirror(...) at line 1317).
+  1315.         int[] values) {
+  1316.       Map<Integer, Id> resourceIds = new LinkedHashMap<>();
+  1317. >     JCTree tree = (JCTree) trees.getTree(element, getMirror(element, annotation));
+  1318.       if (tree != null) { // tree can be null if the references are compiled types and not source
+  1319.         rScanner.reset();
+
+Summary of the reports
+
+    ERADICATE_NULLABLE_DEREFERENCE: 55
+  ERADICATE_PARAMETER_NOT_NULLABLE: 50
+      ERADICATE_FIELD_NOT_NULLABLE: 10
+   ERADICATE_FIELD_NOT_INITIALIZED: 3
