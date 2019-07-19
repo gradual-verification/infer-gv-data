@@ -30,4 +30,5 @@ for repo in repos:
         sets[name] = lines('{}/{}.txt'.format(repo, name), issuetype)
     keys = sets.keys()
     venn3([sets[k] for k in keys], set_labels=keys)
+    plt.title(repo)
     plt.savefig('{}/venn.png'.format(repo))
