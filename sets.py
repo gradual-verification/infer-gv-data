@@ -1,0 +1,39 @@
+import csv
+
+# https://stackoverflow.com/a/1884277/5044950
+def find_nth(haystack, needle, n):
+    start = haystack.find(needle)
+    while start >= 0 and n > 1:
+        start = haystack.find(needle, start+len(needle))
+        n -= 1
+    return start
+
+# https://stackoverflow.com/a/3277515/5044950
+def lines(filename, issuetype):
+    with open(filename) as file:
+        strings = [line.rstrip() for line in file if issuetype in line]
+        strings = [s for s in strings if s.lstrip() == s]
+        return {s[:find_nth(s, ':', 2)] for s in strings}
+
+repos = ['JakeWharton/butterknife']
+
+checkers = {
+    'eradicate': 'ERADICATE',
+    'gradual': 'GRADUAL_STATIC',
+    'nullsafe': 'NULLSAFE',
+}
+
+def write(filename, sets, f):
+    with open(filename, 'w') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow([''] + list(checkers.keys()))
+        for x in checkers:
+            writer.writerow([x] + [f(sets[x], sets[y]) for y in checkers])
+
+for repo in repos:
+    sets = {}
+    for name, issuetype in checkers.items():
+        sets[name] = lines('{}/{}.txt'.format(repo, name), issuetype)
+    write('{}/{}.csv'.format(repo, 'intersect'), sets, lambda x, y: len(x&y))
+    write('{}/{}.csv'.format(repo, 'difference1'), sets, lambda x, y: len(x-y))
+    write('{}/{}.csv'.format(repo, 'difference2'), sets, lambda x, y: len(y-x))
