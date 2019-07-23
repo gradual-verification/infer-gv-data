@@ -18,7 +18,10 @@ def lines(filename, issuetype):
         strings = [s for s in strings if s.lstrip() == s]
         return {s[:find_nth(s, ':', 2)] for s in strings}
 
-repos = ['JakeWharton/butterknife']
+repos = [
+    'uber/okbuck',
+    'JakeWharton/butterknife',
+]
 
 checkers = {
     'eradicate': 'ERADICATE',
@@ -36,3 +39,4 @@ for repo in repos:
     dir = 'venn/{}'.format(repo)
     os.makedirs(dir, exist_ok=True)
     plt.savefig('{}/venn.png'.format(dir))
+    plt.clf()

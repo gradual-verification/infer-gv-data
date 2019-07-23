@@ -1,0 +1,821 @@
+Found 23 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/AutoValue_VersionlessDependency.java:22: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `mavenCoords` should be annotated with `@Nullable`.
+  20.           if (mavenCoords == null) {
+  21.             mavenCoords = super.mavenCoords();
+  22. >           if (mavenCoords == null) {
+  23.               throw new NullPointerException("mavenCoords() cannot return null");
+  24.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/AutoValue_BaseExternalDependency.java:33: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `getMavenCoords` should be annotated with `@Nullable`.
+  31.           if (getMavenCoords == null) {
+  32.             getMavenCoords = super.getMavenCoords();
+  33. >           if (getMavenCoords == null) {
+  34.               throw new NullPointerException("getMavenCoords() cannot return null");
+  35.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/src/main/java/com/uber/okbuck/core/manager/BuckManager.java:35: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `OkBuckExtension.buckBinary` should be annotated with `@Nullable`.
+  33.   
+  34.       // Create dependency cache for buck binary if needed
+  35. >     if (okbuckExt.buckBinary != null) {
+  36.         Configuration buckConfig =
+  37.             rootProject.getConfigurations().maybeCreate(BUCK_BINARY_CONFIGURATION);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/AutoValue_BaseExternalDependency.java:48: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `packaging` should be annotated with `@Nullable`.
+  46.           if (packaging == null) {
+  47.             packaging = super.packaging();
+  48. >           if (packaging == null) {
+  49.               throw new NullPointerException("packaging() cannot return null");
+  50.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/AutoValue_BaseExternalDependency.java:63: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `cacheName` should be annotated with `@Nullable`.
+  61.           if (cacheName == null) {
+  62.             cacheName = super.cacheName();
+  63. >           if (cacheName == null) {
+  64.               throw new NullPointerException("cacheName() cannot return null");
+  65.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/AutoValue_BaseExternalDependency.java:78: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `basePath` should be annotated with `@Nullable`.
+  76.           if (basePath == null) {
+  77.             basePath = super.basePath();
+  78. >           if (basePath == null) {
+  79.               throw new NullPointerException("basePath() cannot return null");
+  80.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/src/main/java/com/uber/okbuck/core/manager/LintManager.java:78: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `OkBuckGradlePlugin.lintDepCache` should be annotated with `@Nullable`.
+  76.     public DependencyCache getLintDepsCache() {
+  77.       OkBuckGradlePlugin okBuckGradlePlugin = ProjectUtil.getPlugin(project);
+  78. >     if (okBuckGradlePlugin.lintDepCache == null) {
+  79.         okBuckGradlePlugin.lintDepCache =
+  80.             new DependencyCache(project, ProjectUtil.getDependencyManager(project));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/AutoValue_BaseExternalDependency.java:93: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `asGradleDependency` should be annotated with `@Nullable`.
+  91.           if (asGradleDependency == null) {
+  92.             asGradleDependency = super.asGradleDependency();
+  93. >           if (asGradleDependency == null) {
+  94.               throw new NullPointerException("asGradleDependency() cannot return null");
+  95.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/src/main/java/com/uber/okbuck/core/manager/LintManager.java:90: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `dependencies` should be annotated with `@Nullable`.
+  88.   
+  89.     public void finalizeDependencies() {
+  90. >     if (dependencies != null) {
+  91.         new JvmBinaryRule()
+  92.             .mainClassName("")
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/generated-src/rocker/main/com/uber/okbuck/template/jvm/JvmBinaryRule.java:109: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `mainClassName` should be annotated with `@Nullable`.
+  107.                   // IfBlockBegin @ [7:1]
+  108.                   __internal.aboutToExecutePosInTemplate(7, 1);
+  109. >                 if (mainClassName != null) {
+  110.                       // PlainText @ [7:30]
+  111.                       __internal.aboutToExecutePosInTemplate(7, 30);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/$AutoValue_VersionlessDependency.java:124: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `group` should be annotated with `@Nullable`.
+  122.       public VersionlessDependency build() {
+  123.         String missing = "";
+  124. >       if (this.group == null) {
+  125.           missing += " group";
+  126.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/$AutoValue_VersionlessDependency.java:127: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `name` should be annotated with `@Nullable`.
+  125.           missing += " group";
+  126.         }
+  127. >       if (this.name == null) {
+  128.           missing += " name";
+  129.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/$AutoValue_BaseExternalDependency.java:147: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `isLocal` should be annotated with `@Nullable`.
+  145.           missing += " version";
+  146.         }
+  147. >       if (this.isLocal == null) {
+  148.           missing += " isLocal";
+  149.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/$AutoValue_BaseExternalDependency.java:153: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `isVersioned` should be annotated with `@Nullable`.
+  151.           missing += " realDependencyFile";
+  152.         }
+  153. >       if (this.isVersioned == null) {
+  154.           missing += " isVersioned";
+  155.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/$AutoValue_BaseExternalDependency.java:150: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `realDependencyFile` should be annotated with `@Nullable`.
+  148.           missing += " isLocal";
+  149.         }
+  150. >       if (this.realDependencyFile == null) {
+  151.           missing += " realDependencyFile";
+  152.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/$AutoValue_BaseExternalDependency.java:144: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `version` should be annotated with `@Nullable`.
+  142.           missing += " versionless";
+  143.         }
+  144. >       if (this.version == null) {
+  145.           missing += " version";
+  146.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/$AutoValue_BaseExternalDependency.java:141: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `versionless` should be annotated with `@Nullable`.
+  139.       public BaseExternalDependency build() {
+  140.         String missing = "";
+  141. >       if (this.versionless == null) {
+  142.           missing += " versionless";
+  143.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/src/main/java/com/uber/okbuck/core/model/android/AndroidAppTarget.java:144: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `proguardMappingFile` should be annotated with `@Nullable`.
+  142.     @Nullable
+  143.     public String getProguardMapping() {
+  144. >     if (!minifyEnabled || proguardMappingFile == null || !proguardMappingFile.exists()) {
+  145.         return null;
+  146.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/generated-src/rocker/main/com/uber/okbuck/template/config/BuckDefs.java:244: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `classpathExclusionRegex` should be annotated with `@Nullable`.
+  242.               // IfBlockBegin @ [157:1]
+  243.               __internal.aboutToExecutePosInTemplate(157, 1);
+  244. >             if (classpathExclusionRegex != null) {
+  245.                   // PlainText @ [157:39]
+  246.                   __internal.aboutToExecutePosInTemplate(157, 39);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/src/main/java/com/uber/okbuck/core/model/android/AndroidTarget.java:269: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `versionCode` should be annotated with `@Nullable`.
+  267.       buildConfig.add(String.format("String FLAVOR = \"%s\"", getFlavor()));
+  268.   
+  269. >     if (versionCode != null) {
+  270.         buildConfig.add(String.format("int VERSION_CODE = %s", versionCode));
+  271.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/src/main/java/com/uber/okbuck/core/model/android/AndroidTarget.java:272: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `versionName` should be annotated with `@Nullable`.
+  270.         buildConfig.add(String.format("int VERSION_CODE = %s", versionCode));
+  271.       }
+  272. >     if (versionName != null) {
+  273.         buildConfig.add(String.format("String VERSION_NAME = \"%s\"", versionName));
+  274.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/generated-src/rocker/main/com/uber/okbuck/template/jvm/JvmRule.java:883: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `content` should be annotated with `@Nullable`.
+  881.                   // IfBlockBegin @ [118:1]
+  882.                   __internal.aboutToExecutePosInTemplate(118, 1);
+  883. >                 if (content != null) {
+  884.                       // ValueExpression @ [119:1]
+  885.                       __internal.aboutToExecutePosInTemplate(119, 1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/generated-src/rocker/main/com/uber/okbuck/template/android/AndroidRule.java:838: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `lintOptions` should be annotated with `@Nullable`.
+  836.                               // IfBlockBegin @ [106:1]
+  837.                               __internal.aboutToExecutePosInTemplate(106, 1);
+  838. >                             if (lintOptions != null) {
+  839.                                   // PlainText @ [106:28]
+  840.                                   __internal.aboutToExecutePosInTemplate(106, 28);
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 23No issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundFound 6 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/demo/debug/com/uber/okbuck/example/MainActivity_ViewBinding.java:37: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mTextView2` should be annotated with `@Nullable`.
+  35.   
+  36.       target.mTextView = null;
+  37. >     target.mTextView2 = null;
+  38.     }
+  39.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/demo/debug/com/uber/okbuck/example/MainActivity_ViewBinding.java:36: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mTextView` should be annotated with `@Nullable`.
+  34.       this.target = null;
+  35.   
+  36. >     target.mTextView = null;
+  37.       target.mTextView2 = null;
+  38.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/demo/debug/com/uber/okbuck/example/MainActivity_ViewBinding.java:34: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  32.       MainActivity target = this.target;
+  33.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  34. >     this.target = null;
+  35.   
+  36.       target.mTextView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/demo/debug/com/uber/okbuck/example/DaggerDummyComponent.java:58: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `androidModule` should be annotated with `@Nullable`.
+  56.           this.javaModule = new JavaModule();
+  57.         }
+  58. >       if (androidModule == null) {
+  59.           this.androidModule = new AndroidModule();
+  60.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/demo/debug/com/uber/okbuck/example/DaggerDummyComponent.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `javaModule` should be annotated with `@Nullable`.
+  53.   
+  54.       public DummyComponent build() {
+  55. >       if (javaModule == null) {
+  56.           this.javaModule = new JavaModule();
+  57.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/src/main/java/com/uber/okbuck/example/MainActivity.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mIMyAidlInterface` should be annotated with `@Nullable`.
+  53.           @Override
+  54.           public void onServiceDisconnected(ComponentName name) {
+  55. >           mIMyAidlInterface = null;
+  56.           }
+  57.         };
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 6Found 6 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/dev/debug/com/uber/okbuck/example/MainActivity_ViewBinding.java:37: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mTextView2` should be annotated with `@Nullable`.
+  35.   
+  36.       target.mTextView = null;
+  37. >     target.mTextView2 = null;
+  38.     }
+  39.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/dev/debug/com/uber/okbuck/example/MainActivity_ViewBinding.java:36: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mTextView` should be annotated with `@Nullable`.
+  34.       this.target = null;
+  35.   
+  36. >     target.mTextView = null;
+  37.       target.mTextView2 = null;
+  38.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/dev/debug/com/uber/okbuck/example/MainActivity_ViewBinding.java:34: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  32.       MainActivity target = this.target;
+  33.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  34. >     this.target = null;
+  35.   
+  36.       target.mTextView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/dev/debug/com/uber/okbuck/example/DaggerDummyComponent.java:58: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `androidModule` should be annotated with `@Nullable`.
+  56.           this.javaModule = new JavaModule();
+  57.         }
+  58. >       if (androidModule == null) {
+  59.           this.androidModule = new AndroidModule();
+  60.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/dev/debug/com/uber/okbuck/example/DaggerDummyComponent.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `javaModule` should be annotated with `@Nullable`.
+  53.   
+  54.       public DummyComponent build() {
+  55. >       if (javaModule == null) {
+  56.           this.javaModule = new JavaModule();
+  57.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/src/main/java/com/uber/okbuck/example/MainActivity.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mIMyAidlInterface` should be annotated with `@Nullable`.
+  53.           @Override
+  54.           public void onServiceDisconnected(ComponentName name) {
+  55. >           mIMyAidlInterface = null;
+  56.           }
+  57.         };
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 6Found 6 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/prod/debug/com/uber/okbuck/example/MainActivity_ViewBinding.java:37: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mTextView2` should be annotated with `@Nullable`.
+  35.   
+  36.       target.mTextView = null;
+  37. >     target.mTextView2 = null;
+  38.     }
+  39.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/prod/debug/com/uber/okbuck/example/MainActivity_ViewBinding.java:36: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mTextView` should be annotated with `@Nullable`.
+  34.       this.target = null;
+  35.   
+  36. >     target.mTextView = null;
+  37.       target.mTextView2 = null;
+  38.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/prod/debug/com/uber/okbuck/example/MainActivity_ViewBinding.java:34: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  32.       MainActivity target = this.target;
+  33.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  34. >     this.target = null;
+  35.   
+  36.       target.mTextView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/prod/debug/com/uber/okbuck/example/DaggerDummyComponent.java:58: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `androidModule` should be annotated with `@Nullable`.
+  56.           this.javaModule = new JavaModule();
+  57.         }
+  58. >       if (androidModule == null) {
+  59.           this.androidModule = new AndroidModule();
+  60.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/prod/debug/com/uber/okbuck/example/DaggerDummyComponent.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `javaModule` should be annotated with `@Nullable`.
+  53.   
+  54.       public DummyComponent build() {
+  55. >       if (javaModule == null) {
+  56.           this.javaModule = new JavaModule();
+  57.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/src/main/java/com/uber/okbuck/example/MainActivity.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mIMyAidlInterface` should be annotated with `@Nullable`.
+  53.           @Override
+  54.           public void onServiceDisconnected(ComponentName name) {
+  55. >           mIMyAidlInterface = null;
+  56.           }
+  57.         };
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 6No issues foundNo issues foundNo issues foundFound 6 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/demo/release/com/uber/okbuck/example/MainActivity_ViewBinding.java:37: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mTextView2` should be annotated with `@Nullable`.
+  35.   
+  36.       target.mTextView = null;
+  37. >     target.mTextView2 = null;
+  38.     }
+  39.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/demo/release/com/uber/okbuck/example/MainActivity_ViewBinding.java:36: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mTextView` should be annotated with `@Nullable`.
+  34.       this.target = null;
+  35.   
+  36. >     target.mTextView = null;
+  37.       target.mTextView2 = null;
+  38.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/demo/release/com/uber/okbuck/example/MainActivity_ViewBinding.java:34: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  32.       MainActivity target = this.target;
+  33.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  34. >     this.target = null;
+  35.   
+  36.       target.mTextView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/demo/release/com/uber/okbuck/example/DaggerDummyComponent.java:58: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `androidModule` should be annotated with `@Nullable`.
+  56.           this.javaModule = new JavaModule();
+  57.         }
+  58. >       if (androidModule == null) {
+  59.           this.androidModule = new AndroidModule();
+  60.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/demo/release/com/uber/okbuck/example/DaggerDummyComponent.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `javaModule` should be annotated with `@Nullable`.
+  53.   
+  54.       public DummyComponent build() {
+  55. >       if (javaModule == null) {
+  56.           this.javaModule = new JavaModule();
+  57.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/src/main/java/com/uber/okbuck/example/MainActivity.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mIMyAidlInterface` should be annotated with `@Nullable`.
+  53.           @Override
+  54.           public void onServiceDisconnected(ComponentName name) {
+  55. >           mIMyAidlInterface = null;
+  56.           }
+  57.         };
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 6Found 6 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/dev/release/com/uber/okbuck/example/MainActivity_ViewBinding.java:37: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mTextView2` should be annotated with `@Nullable`.
+  35.   
+  36.       target.mTextView = null;
+  37. >     target.mTextView2 = null;
+  38.     }
+  39.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/dev/release/com/uber/okbuck/example/MainActivity_ViewBinding.java:36: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mTextView` should be annotated with `@Nullable`.
+  34.       this.target = null;
+  35.   
+  36. >     target.mTextView = null;
+  37.       target.mTextView2 = null;
+  38.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/dev/release/com/uber/okbuck/example/MainActivity_ViewBinding.java:34: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  32.       MainActivity target = this.target;
+  33.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  34. >     this.target = null;
+  35.   
+  36.       target.mTextView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/dev/release/com/uber/okbuck/example/DaggerDummyComponent.java:58: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `androidModule` should be annotated with `@Nullable`.
+  56.           this.javaModule = new JavaModule();
+  57.         }
+  58. >       if (androidModule == null) {
+  59.           this.androidModule = new AndroidModule();
+  60.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/dev/release/com/uber/okbuck/example/DaggerDummyComponent.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `javaModule` should be annotated with `@Nullable`.
+  53.   
+  54.       public DummyComponent build() {
+  55. >       if (javaModule == null) {
+  56.           this.javaModule = new JavaModule();
+  57.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/src/main/java/com/uber/okbuck/example/MainActivity.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mIMyAidlInterface` should be annotated with `@Nullable`.
+  53.           @Override
+  54.           public void onServiceDisconnected(ComponentName name) {
+  55. >           mIMyAidlInterface = null;
+  56.           }
+  57.         };
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 6Found 6 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/prod/release/com/uber/okbuck/example/MainActivity_ViewBinding.java:37: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mTextView2` should be annotated with `@Nullable`.
+  35.   
+  36.       target.mTextView = null;
+  37. >     target.mTextView2 = null;
+  38.     }
+  39.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/prod/release/com/uber/okbuck/example/MainActivity_ViewBinding.java:36: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mTextView` should be annotated with `@Nullable`.
+  34.       this.target = null;
+  35.   
+  36. >     target.mTextView = null;
+  37.       target.mTextView2 = null;
+  38.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/prod/release/com/uber/okbuck/example/MainActivity_ViewBinding.java:34: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  32.       MainActivity target = this.target;
+  33.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  34. >     this.target = null;
+  35.   
+  36.       target.mTextView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/prod/release/com/uber/okbuck/example/DaggerDummyComponent.java:58: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `androidModule` should be annotated with `@Nullable`.
+  56.           this.javaModule = new JavaModule();
+  57.         }
+  58. >       if (androidModule == null) {
+  59.           this.androidModule = new AndroidModule();
+  60.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/build/generated/source/apt/prod/release/com/uber/okbuck/example/DaggerDummyComponent.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `javaModule` should be annotated with `@Nullable`.
+  53.   
+  54.       public DummyComponent build() {
+  55. >       if (javaModule == null) {
+  56.           this.javaModule = new JavaModule();
+  57.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/app/src/main/java/com/uber/okbuck/example/MainActivity.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `MainActivity.mIMyAidlInterface` should be annotated with `@Nullable`.
+  53.           @Override
+  54.           public void onServiceDisconnected(ComponentName name) {
+  55. >           mIMyAidlInterface = null;
+  56.           }
+  57.         };
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 6No issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundFound 3 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/kotlin-app/build/generated/source/kapt/debug/com/uber/okbuck/example/DaggerAppComponent.java:123: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `analyticsModule` should be annotated with `@Nullable`.
+  121.       @Override
+  122.       public AppComponent build() {
+  123. >       if (analyticsModule == null) {
+  124.           this.analyticsModule = new AnalyticsModule();
+  125.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/kotlin-app/build/generated/source/kapt/debug/com/uber/okbuck/example/DaggerAppComponent.java:126: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `seedInstance` should be annotated with `@Nullable`.
+  124.           this.analyticsModule = new AnalyticsModule();
+  125.         }
+  126. >       if (seedInstance == null) {
+  127.           throw new IllegalStateException(MainApp.class.getCanonicalName() + " must be set");
+  128.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/kotlin-app/build/generated/source/kapt/debug/com/uber/okbuck/example/DaggerAppComponent.java:144: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `seedInstance` should be annotated with `@Nullable`.
+  142.       @Override
+  143.       public BindingModule_ContributeMainActivity.MainActivitySubcomponent build() {
+  144. >       if (seedInstance == null) {
+  145.           throw new IllegalStateException(MainActivity.class.getCanonicalName() + " must be set");
+  146.         }
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 3Found 3 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/kotlin-app/build/generated/source/kapt/release/com/uber/okbuck/example/DaggerAppComponent.java:123: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `analyticsModule` should be annotated with `@Nullable`.
+  121.       @Override
+  122.       public AppComponent build() {
+  123. >       if (analyticsModule == null) {
+  124.           this.analyticsModule = new AnalyticsModule();
+  125.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/kotlin-app/build/generated/source/kapt/release/com/uber/okbuck/example/DaggerAppComponent.java:126: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `seedInstance` should be annotated with `@Nullable`.
+  124.           this.analyticsModule = new AnalyticsModule();
+  125.         }
+  126. >       if (seedInstance == null) {
+  127.           throw new IllegalStateException(MainApp.class.getCanonicalName() + " must be set");
+  128.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/kotlin-app/build/generated/source/kapt/release/com/uber/okbuck/example/DaggerAppComponent.java:144: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `seedInstance` should be annotated with `@Nullable`.
+  142.       @Override
+  143.       public BindingModule_ContributeMainActivity.MainActivitySubcomponent build() {
+  144. >       if (seedInstance == null) {
+  145.           throw new IllegalStateException(MainActivity.class.getCanonicalName() + " must be set");
+  146.         }
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 3Found 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/kotlin-app/build/generated/source/kapt/debugUnitTest/com/uber/okbuck/example/DaggerCoffeeShop.java:49: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `dripCoffeeModule` should be annotated with `@Nullable`.
+  47.   
+  48.       public CoffeeShop build() {
+  49. >       if (dripCoffeeModule == null) {
+  50.           this.dripCoffeeModule = new DripCoffeeModule();
+  51.         }
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 1Found 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/kotlin-app/build/generated/source/kapt/releaseUnitTest/com/uber/okbuck/example/DaggerCoffeeShop.java:49: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `dripCoffeeModule` should be annotated with `@Nullable`.
+  47.   
+  48.       public CoffeeShop build() {
+  49. >       if (dripCoffeeModule == null) {
+  50.           this.dripCoffeeModule = new DripCoffeeModule();
+  51.         }
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 1No issues foundFound 23 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/AutoValue_VersionlessDependency.java:22: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `mavenCoords` should be annotated with `@Nullable`.
+  20.           if (mavenCoords == null) {
+  21.             mavenCoords = super.mavenCoords();
+  22. >           if (mavenCoords == null) {
+  23.               throw new NullPointerException("mavenCoords() cannot return null");
+  24.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/AutoValue_BaseExternalDependency.java:33: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `getMavenCoords` should be annotated with `@Nullable`.
+  31.           if (getMavenCoords == null) {
+  32.             getMavenCoords = super.getMavenCoords();
+  33. >           if (getMavenCoords == null) {
+  34.               throw new NullPointerException("getMavenCoords() cannot return null");
+  35.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/src/main/java/com/uber/okbuck/core/manager/BuckManager.java:35: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `OkBuckExtension.buckBinary` should be annotated with `@Nullable`.
+  33.   
+  34.       // Create dependency cache for buck binary if needed
+  35. >     if (okbuckExt.buckBinary != null) {
+  36.         Configuration buckConfig =
+  37.             rootProject.getConfigurations().maybeCreate(BUCK_BINARY_CONFIGURATION);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/AutoValue_BaseExternalDependency.java:48: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `packaging` should be annotated with `@Nullable`.
+  46.           if (packaging == null) {
+  47.             packaging = super.packaging();
+  48. >           if (packaging == null) {
+  49.               throw new NullPointerException("packaging() cannot return null");
+  50.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/AutoValue_BaseExternalDependency.java:63: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `cacheName` should be annotated with `@Nullable`.
+  61.           if (cacheName == null) {
+  62.             cacheName = super.cacheName();
+  63. >           if (cacheName == null) {
+  64.               throw new NullPointerException("cacheName() cannot return null");
+  65.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/AutoValue_BaseExternalDependency.java:78: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `basePath` should be annotated with `@Nullable`.
+  76.           if (basePath == null) {
+  77.             basePath = super.basePath();
+  78. >           if (basePath == null) {
+  79.               throw new NullPointerException("basePath() cannot return null");
+  80.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/src/main/java/com/uber/okbuck/core/manager/LintManager.java:78: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `OkBuckGradlePlugin.lintDepCache` should be annotated with `@Nullable`.
+  76.     public DependencyCache getLintDepsCache() {
+  77.       OkBuckGradlePlugin okBuckGradlePlugin = ProjectUtil.getPlugin(project);
+  78. >     if (okBuckGradlePlugin.lintDepCache == null) {
+  79.         okBuckGradlePlugin.lintDepCache =
+  80.             new DependencyCache(project, ProjectUtil.getDependencyManager(project));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/AutoValue_BaseExternalDependency.java:93: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `asGradleDependency` should be annotated with `@Nullable`.
+  91.           if (asGradleDependency == null) {
+  92.             asGradleDependency = super.asGradleDependency();
+  93. >           if (asGradleDependency == null) {
+  94.               throw new NullPointerException("asGradleDependency() cannot return null");
+  95.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/src/main/java/com/uber/okbuck/core/manager/LintManager.java:90: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `dependencies` should be annotated with `@Nullable`.
+  88.   
+  89.     public void finalizeDependencies() {
+  90. >     if (dependencies != null) {
+  91.         new JvmBinaryRule()
+  92.             .mainClassName("")
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/generated-src/rocker/main/com/uber/okbuck/template/jvm/JvmBinaryRule.java:109: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `mainClassName` should be annotated with `@Nullable`.
+  107.                   // IfBlockBegin @ [7:1]
+  108.                   __internal.aboutToExecutePosInTemplate(7, 1);
+  109. >                 if (mainClassName != null) {
+  110.                       // PlainText @ [7:30]
+  111.                       __internal.aboutToExecutePosInTemplate(7, 30);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/$AutoValue_VersionlessDependency.java:124: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `group` should be annotated with `@Nullable`.
+  122.       public VersionlessDependency build() {
+  123.         String missing = "";
+  124. >       if (this.group == null) {
+  125.           missing += " group";
+  126.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/$AutoValue_VersionlessDependency.java:127: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `name` should be annotated with `@Nullable`.
+  125.           missing += " group";
+  126.         }
+  127. >       if (this.name == null) {
+  128.           missing += " name";
+  129.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/$AutoValue_BaseExternalDependency.java:147: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `isLocal` should be annotated with `@Nullable`.
+  145.           missing += " version";
+  146.         }
+  147. >       if (this.isLocal == null) {
+  148.           missing += " isLocal";
+  149.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/$AutoValue_BaseExternalDependency.java:153: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `isVersioned` should be annotated with `@Nullable`.
+  151.           missing += " realDependencyFile";
+  152.         }
+  153. >       if (this.isVersioned == null) {
+  154.           missing += " isVersioned";
+  155.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/$AutoValue_BaseExternalDependency.java:150: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `realDependencyFile` should be annotated with `@Nullable`.
+  148.           missing += " isLocal";
+  149.         }
+  150. >       if (this.realDependencyFile == null) {
+  151.           missing += " realDependencyFile";
+  152.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/$AutoValue_BaseExternalDependency.java:144: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `version` should be annotated with `@Nullable`.
+  142.           missing += " versionless";
+  143.         }
+  144. >       if (this.version == null) {
+  145.           missing += " version";
+  146.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/classes/java/main/com/uber/okbuck/core/dependency/$AutoValue_BaseExternalDependency.java:141: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `versionless` should be annotated with `@Nullable`.
+  139.       public BaseExternalDependency build() {
+  140.         String missing = "";
+  141. >       if (this.versionless == null) {
+  142.           missing += " versionless";
+  143.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/src/main/java/com/uber/okbuck/core/model/android/AndroidAppTarget.java:144: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `proguardMappingFile` should be annotated with `@Nullable`.
+  142.     @Nullable
+  143.     public String getProguardMapping() {
+  144. >     if (!minifyEnabled || proguardMappingFile == null || !proguardMappingFile.exists()) {
+  145.         return null;
+  146.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/generated-src/rocker/main/com/uber/okbuck/template/config/BuckDefs.java:244: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `classpathExclusionRegex` should be annotated with `@Nullable`.
+  242.               // IfBlockBegin @ [157:1]
+  243.               __internal.aboutToExecutePosInTemplate(157, 1);
+  244. >             if (classpathExclusionRegex != null) {
+  245.                   // PlainText @ [157:39]
+  246.                   __internal.aboutToExecutePosInTemplate(157, 39);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/src/main/java/com/uber/okbuck/core/model/android/AndroidTarget.java:269: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `versionCode` should be annotated with `@Nullable`.
+  267.       buildConfig.add(String.format("String FLAVOR = \"%s\"", getFlavor()));
+  268.   
+  269. >     if (versionCode != null) {
+  270.         buildConfig.add(String.format("int VERSION_CODE = %s", versionCode));
+  271.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/src/main/java/com/uber/okbuck/core/model/android/AndroidTarget.java:272: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `versionName` should be annotated with `@Nullable`.
+  270.         buildConfig.add(String.format("int VERSION_CODE = %s", versionCode));
+  271.       }
+  272. >     if (versionName != null) {
+  273.         buildConfig.add(String.format("String VERSION_NAME = \"%s\"", versionName));
+  274.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/generated-src/rocker/main/com/uber/okbuck/template/jvm/JvmRule.java:883: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `content` should be annotated with `@Nullable`.
+  881.                   // IfBlockBegin @ [118:1]
+  882.                   __internal.aboutToExecutePosInTemplate(118, 1);
+  883. >                 if (content != null) {
+  884.                       // ValueExpression @ [119:1]
+  885.                       __internal.aboutToExecutePosInTemplate(119, 1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/buildSrc/build/generated-src/rocker/main/com/uber/okbuck/template/android/AndroidRule.java:838: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `lintOptions` should be annotated with `@Nullable`.
+  836.                               // IfBlockBegin @ [106:1]
+  837.                               __internal.aboutToExecutePosInTemplate(106, 1);
+  838. >                             if (lintOptions != null) {
+  839.                                   // PlainText @ [106:28]
+  840.                                   __internal.aboutToExecutePosInTemplate(106, 28);
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 23Found 3 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/transform-cli/src/main/java/com/uber/okbuck/transform/TransformRunner.java:49: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `configFile` should be annotated with `@Nullable`.
+  47.         System.out.println("Config file: " + configFile.getAbsolutePath());
+  48.       } else {
+  49. >       this.configFile = null;
+  50.       }
+  51.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/transform-cli/src/main/java/com/uber/okbuck/transform/TransformInvocationBuilder.java:66: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `outputProvider` should be annotated with `@Nullable`.
+  64.      */
+  65.     TransformInvocation build() {
+  66. >     if (outputProvider == null) {
+  67.         throw new IllegalArgumentException("Output provider needs to be specified.");
+  68.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/transform-cli/src/main/java/com/uber/okbuck/transform/TransformRunner.java:69: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `configFile` should be annotated with `@Nullable`.
+  67.      */
+  68.     void runTransform() throws Exception {
+  69. >     Transform transform =
+  70.           configFile != null
+  71.               ? transformClass.getConstructor(File.class).newInstance(configFile)
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 3No issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundFound 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/libraries/kotlinlibrary/build/generated/source/kapt/main/demo/di/DaggerCoffeeShop.java:49: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `dripCoffeeModule` should be annotated with `@Nullable`.
+  47.   
+  48.       public CoffeeShop build() {
+  49. >       if (dripCoffeeModule == null) {
+  50.           this.dripCoffeeModule = new DripCoffeeModule();
+  51.         }
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 1Found 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/okbuck/libraries/kotlinlibrary/build/generated/source/kapt/test/demo/di/DaggerTestCoffeeShop.java:49: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `dripCoffeeModule` should be annotated with `@Nullable`.
+  47.   
+  48.       public TestCoffeeShop build() {
+  49. >       if (dripCoffeeModule == null) {
+  50.           this.dripCoffeeModule = new DripCoffeeModule();
+  51.         }
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 1No issues foundNo issues foundNo issues found
