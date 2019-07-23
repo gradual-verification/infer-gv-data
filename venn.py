@@ -21,6 +21,7 @@ def lines(filename, issuetype):
 repos = [
     'okbuck',
     'caffeine',
+    'jib',
     'butterknife',
 ]
 

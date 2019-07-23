@@ -1,0 +1,125 @@
+Found 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/jib/jib-core/src/main/java/com/google/cloud/tools/jib/frontend/CredentialRetrieverFactory.java:255: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `eventDispatcher` should be annotated with `@Nullable`.
+  253.   
+  254.     private void dispatchEvent(JibEvent jibEvent) {
+  255. >     if (eventDispatcher == null) {
+  256.         return;
+  257.       }
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 1Found 12 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/jib/jib-core/src/test/java/com/google/cloud/tools/jib/registry/RegistryAuthenticatorTest.java:38: error: NULLSAFE_NULLABLE_DEREFERENCE
+  Variable `registryAuthenticator` is indirectly annotated with `@Nullable` (source `RegistryAuthenticator RegistryAuthenticator.fromAuthenticationMethod(String,RegistryEndpointRequestProperties) at line 33`) and is dereferenced without being checked for null at line 38.
+  36.       Assert.assertEquals(
+  37.           new URL("https://somerealm?service=someservice&scope=repository:someimage:scope"),
+  38. >         registryAuthenticator.getAuthenticationUrl("scope"));
+  39.   
+  40.       registryAuthenticator =
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/jib/jib-core/src/test/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigTest.java:56: error: NULLSAFE_NULLABLE_DEREFERENCE
+  The return value of `DockerConfig.getCredentialHelperFor(...)` is annotated with `@Nullable` and is dereferenced without being checked for null at line 56.
+  54.       Assert.assertEquals(
+  55.           Paths.get("docker-credential-some credential store"),
+  56. >         dockerConfig.getCredentialHelperFor("some registry").getCredentialHelper());
+  57.       Assert.assertEquals(
+  58.           Paths.get("docker-credential-some credential store"),
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/jib/jib-core/src/test/java/com/google/cloud/tools/jib/api/JibContainerBuilderTest.java:87: error: NULLSAFE_NULLABLE_DEREFERENCE
+  Variable `containerConfiguration` is indirectly annotated with `@Nullable` (source `ContainerConfiguration BuildConfiguration.getContainerConfiguration() at line 78`) and is dereferenced without being checked for null at line 87.
+  85.       Assert.assertEquals(
+  86.           Arrays.asList("program", "arguments"), containerConfiguration.getProgramArguments());
+  87. >     Assert.assertEquals(Instant.ofEpochMilli(1000), containerConfiguration.getCreationTime());
+  88.       Assert.assertEquals("user", containerConfiguration.getUser());
+  89.       Assert.assertEquals(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/jib/jib-core/src/test/java/com/google/cloud/tools/jib/image/json/OCIManifestTemplateTest.java:76: error: NULLSAFE_NULLABLE_DEREFERENCE
+  The return value of `OCIManifestTemplate.getContainerConfiguration()` is annotated with `@Nullable` and is dereferenced without being checked for null at line 76.
+  74.           manifestJson.getContainerConfiguration().getDigest());
+  75.   
+  76. >     Assert.assertEquals(1000, manifestJson.getContainerConfiguration().getSize());
+  77.   
+  78.       Assert.assertEquals(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/jib/jib-core/src/test/java/com/google/cloud/tools/jib/image/json/V22ManifestTemplateTest.java:76: error: NULLSAFE_NULLABLE_DEREFERENCE
+  The return value of `V22ManifestTemplate.getContainerConfiguration()` is annotated with `@Nullable` and is dereferenced without being checked for null at line 76.
+  74.           manifestJson.getContainerConfiguration().getDigest());
+  75.   
+  76. >     Assert.assertEquals(1000, manifestJson.getContainerConfiguration().getSize());
+  77.   
+  78.       Assert.assertEquals(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/jib/jib-core/src/test/java/com/google/cloud/tools/jib/api/JibContainerBuilderTest.java:122: error: NULLSAFE_NULLABLE_DEREFERENCE
+  Variable `containerConfiguration` is indirectly annotated with `@Nullable` (source `ContainerConfiguration BuildConfiguration.getContainerConfiguration() at line 110`) and is dereferenced without being checked for null at line 122.
+  120.       Assert.assertEquals(
+  121.           Arrays.asList("program", "arguments"), containerConfiguration.getProgramArguments());
+  122. >     Assert.assertEquals(Instant.EPOCH, containerConfiguration.getCreationTime());
+  123.     }
+  124.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/jib/jib-core/src/test/java/com/google/cloud/tools/jib/registry/RegistryAuthenticatorTest.java:105: error: NULLSAFE_NULLABLE_DEREFERENCE
+  Variable `registryAuthenticator` is indirectly annotated with `@Nullable` (source `RegistryAuthenticator RegistryAuthenticator.fromAuthenticationMethod(String,RegistryEndpointRequestProperties) at line 100`) and is dereferenced without being checked for null at line 105.
+  103.       Assert.assertEquals(
+  104.           new URL("https://somerealm?service=someserver&scope=repository:someimage:scope"),
+  105. >         registryAuthenticator.getAuthenticationUrl("scope"));
+  106.     }
+  107.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/jib/jib-core/src/test/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigTest.java:107: error: NULLSAFE_NULLABLE_DEREFERENCE
+  The return value of `DockerConfig.getCredentialHelperFor(...)` is annotated with `@Nullable` and is dereferenced without being checked for null at line 107.
+  105.       Assert.assertEquals(
+  106.           Paths.get("docker-credential-some credential store"),
+  107. >         dockerConfig.getCredentialHelperFor("just registry").getCredentialHelper());
+  108.     }
+  109.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/jib/jib-core/src/test/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigTest.java:119: error: NULLSAFE_NULLABLE_DEREFERENCE
+  The return value of `DockerConfig.getCredentialHelperFor(...)` is annotated with `@Nullable` and is dereferenced without being checked for null at line 119.
+  117.       Assert.assertEquals(
+  118.           Paths.get("docker-credential-some credential store"),
+  119. >         dockerConfig.getCredentialHelperFor("with.protocol").getCredentialHelper());
+  120.     }
+  121.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/jib/jib-core/src/test/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigTest.java:131: error: NULLSAFE_NULLABLE_DEREFERENCE
+  The return value of `DockerConfig.getCredentialHelperFor(...)` is annotated with `@Nullable` and is dereferenced without being checked for null at line 131.
+  129.       Assert.assertEquals(
+  130.           Paths.get("docker-credential-some credential store"),
+  131. >         dockerConfig.getCredentialHelperFor("with.suffix").getCredentialHelper());
+  132.     }
+  133.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/jib/jib-core/src/test/java/com/google/cloud/tools/jib/registry/credentials/DockerConfigTest.java:144: error: NULLSAFE_NULLABLE_DEREFERENCE
+  The return value of `DockerConfig.getCredentialHelperFor(...)` is annotated with `@Nullable` and is dereferenced without being checked for null at line 144.
+  142.       Assert.assertEquals(
+  143.           Paths.get("docker-credential-some credential store"),
+  144. >         dockerConfig.getCredentialHelperFor("with.protocol.and.suffix").getCredentialHelper());
+  145.     }
+  146.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/jib/jib-core/src/test/java/com/google/cloud/tools/jib/registry/AuthenticationMethodRetrieverTest.java:152: error: NULLSAFE_NULLABLE_DEREFERENCE
+  Variable `registryAuthenticator` is indirectly annotated with `@Nullable` (source `RegistryAuthenticator AuthenticationMethodRetriever.handleHttpResponseException(HttpResponseException) at line 148`) and is dereferenced without being checked for null at line 152.
+  150.       Assert.assertEquals(
+  151.           new URL("https://somerealm?service=someservice&scope=repository:someImageName:someScope"),
+  152. >         registryAuthenticator.getAuthenticationUrl("someScope"));
+  153.     }
+  154.   }
+
+Summary of the reports
+
+  NULLSAFE_NULLABLE_DEREFERENCE: 12Found 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/jib/jib-core/src/integration-test/java/com/google/cloud/tools/jib/registry/BlobCheckerIntegrationTest.java:45: error: NULLSAFE_NULLABLE_DEREFERENCE
+  The return value of `RegistryClient.checkBlob(...)` is annotated with `@Nullable` and is dereferenced without being checked for null at line 45.
+  43.       DescriptorDigest blobDigest = manifestTemplate.getLayers().get(0).getDigest();
+  44.   
+  45. >     Assert.assertEquals(blobDigest, registryClient.checkBlob(blobDigest).getDigest());
+  46.     }
+  47.   
+
+Summary of the reports
+
+  NULLSAFE_NULLABLE_DEREFERENCE: 1
