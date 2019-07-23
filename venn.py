@@ -28,6 +28,7 @@ repos = [
     'keyvaluestore',
     'filesystem-generator',
     'butterknife',
+    'picasso',
 ]
 
 checkers = {

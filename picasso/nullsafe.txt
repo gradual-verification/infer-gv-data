@@ -1,0 +1,141 @@
+Found 3 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/picasso/picasso/src/test/java/com/squareup/picasso3/BitmapHunterTest.java:147: error: NULLSAFE_NULLABLE_DEREFERENCE
+  Variable `exception` is indirectly annotated with `@Nullable` (source `Exception BitmapHunter.getException() at line 143`) and is dereferenced without being checked for null at line 147.
+  145.       assertThat(hunter.getResult()).isNull();
+  146.       assertThat(exception).hasMessageThat().contains("BEGIN PICASSO STATS");
+  147. >     assertThat(exception.getCause()).isInstanceOf(OutOfMemoryError.class);
+  148.     }
+  149.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/picasso/picasso/src/test/java/com/squareup/picasso3/BitmapHunterTest.java:1046: error: NULLSAFE_NULLABLE_DEREFERENCE
+  The return value of `RequestHandler$Result.getBitmap()` is annotated with `@Nullable` and is dereferenced without being checked for null at line 1046.
+  1044.       Transformation badTransformation = new Transformation() {
+  1045.         @Override public RequestHandler.Result transform(RequestHandler.Result source) {
+  1046. >         source.getBitmap().recycle();
+  1047.           return source;
+  1048.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/picasso/picasso/src/test/java/com/squareup/picasso3/BitmapHunterTest.java:1099: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `exception` should be annotated with `@Nullable`.
+  1097.   
+  1098.       @Override public void load(@NonNull Picasso picasso, @NonNull Request request, @NonNull Callback callback) {
+  1099. >       if (exception != null) {
+  1100.           callback.onError(exception);
+  1101.         } else {
+
+Summary of the reports
+
+  NULLSAFE_NULLABLE_DEREFERENCE: 2
+    NULLSAFE_FIELD_NOT_NULLABLE: 1Found 3 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/picasso/picasso/src/test/java/com/squareup/picasso3/BitmapHunterTest.java:147: error: NULLSAFE_NULLABLE_DEREFERENCE
+  Variable `exception` is indirectly annotated with `@Nullable` (source `Exception BitmapHunter.getException() at line 143`) and is dereferenced without being checked for null at line 147.
+  145.       assertThat(hunter.getResult()).isNull();
+  146.       assertThat(exception).hasMessageThat().contains("BEGIN PICASSO STATS");
+  147. >     assertThat(exception.getCause()).isInstanceOf(OutOfMemoryError.class);
+  148.     }
+  149.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/picasso/picasso/src/test/java/com/squareup/picasso3/BitmapHunterTest.java:1046: error: NULLSAFE_NULLABLE_DEREFERENCE
+  The return value of `RequestHandler$Result.getBitmap()` is annotated with `@Nullable` and is dereferenced without being checked for null at line 1046.
+  1044.       Transformation badTransformation = new Transformation() {
+  1045.         @Override public RequestHandler.Result transform(RequestHandler.Result source) {
+  1046. >         source.getBitmap().recycle();
+  1047.           return source;
+  1048.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/picasso/picasso/src/test/java/com/squareup/picasso3/BitmapHunterTest.java:1099: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `exception` should be annotated with `@Nullable`.
+  1097.   
+  1098.       @Override public void load(@NonNull Picasso picasso, @NonNull Request request, @NonNull Callback callback) {
+  1099. >       if (exception != null) {
+  1100.           callback.onError(exception);
+  1101.         } else {
+
+Summary of the reports
+
+  NULLSAFE_NULLABLE_DEREFERENCE: 2
+    NULLSAFE_FIELD_NOT_NULLABLE: 1No issues foundNo issues foundNo issues foundNo issues foundFound 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/picasso/picasso-provider/src/main/java/com/squareup/picasso3/provider/PicassoProvider.java:33: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `instance` should be annotated with `@Nullable`.
+  31.       if (instance == null) {
+  32.         synchronized (PicassoProvider.class) {
+  33. >         if (instance == null) {
+  34.             Context autoContext = PicassoContentProvider.context;
+  35.             if (autoContext == null) {
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 1Found 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/picasso/picasso-provider/src/main/java/com/squareup/picasso3/provider/PicassoProvider.java:33: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `instance` should be annotated with `@Nullable`.
+  31.       if (instance == null) {
+  32.         synchronized (PicassoProvider.class) {
+  33. >         if (instance == null) {
+  34.             Context autoContext = PicassoContentProvider.context;
+  35.             if (autoContext == null) {
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 1Found 3 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/picasso/picasso-sample/src/main/java/com/example/picasso/SampleGalleryActivity.java:39: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `image` should be annotated with `@Nullable`.
+  37.       if (savedInstanceState != null) {
+  38.         image = savedInstanceState.getString(KEY_IMAGE);
+  39. >       if (image != null) {
+  40.           loadImage();
+  41.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/picasso/picasso-sample/src/main/java/com/example/picasso/GrayscaleTransformation.java:76: error: NULLSAFE_NULLABLE_DEREFERENCE
+  Variable `noise` is indirectly annotated with `@Nullable` (source `Bitmap RequestCreator.get() at line 52`) and is dereferenced without being checked for null at line 76.
+  74.   
+  75.       bitmap.recycle();
+  76. >     noise.recycle();
+  77.   
+  78.       return new RequestHandler.Result(result, source.getLoadedFrom(), source.getExifRotation());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/picasso/picasso-sample/src/main/java/com/example/picasso/SampleListDetailActivity.java:80: error: NULLSAFE_NULLABLE_DEREFERENCE
+  Variable `arguments` is indirectly annotated with `@Nullable` (source `Bundle Fragment.getArguments() at line 79`) and is dereferenced without being checked for null at line 80.
+  78.   
+  79.         Bundle arguments = getArguments();
+  80. >       String url = arguments.getString(KEY_URL);
+  81.   
+  82.         urlView.setText(url);
+
+Summary of the reports
+
+  NULLSAFE_NULLABLE_DEREFERENCE: 2
+    NULLSAFE_FIELD_NOT_NULLABLE: 1Found 3 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/picasso/picasso-sample/src/main/java/com/example/picasso/SampleGalleryActivity.java:39: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `image` should be annotated with `@Nullable`.
+  37.       if (savedInstanceState != null) {
+  38.         image = savedInstanceState.getString(KEY_IMAGE);
+  39. >       if (image != null) {
+  40.           loadImage();
+  41.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/picasso/picasso-sample/src/main/java/com/example/picasso/GrayscaleTransformation.java:76: error: NULLSAFE_NULLABLE_DEREFERENCE
+  Variable `noise` is indirectly annotated with `@Nullable` (source `Bitmap RequestCreator.get() at line 52`) and is dereferenced without being checked for null at line 76.
+  74.   
+  75.       bitmap.recycle();
+  76. >     noise.recycle();
+  77.   
+  78.       return new RequestHandler.Result(result, source.getLoadedFrom(), source.getExifRotation());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/picasso/picasso-sample/src/main/java/com/example/picasso/SampleListDetailActivity.java:80: error: NULLSAFE_NULLABLE_DEREFERENCE
+  Variable `arguments` is indirectly annotated with `@Nullable` (source `Bundle Fragment.getArguments() at line 79`) and is dereferenced without being checked for null at line 80.
+  78.   
+  79.         Bundle arguments = getArguments();
+  80. >       String url = arguments.getString(KEY_URL);
+  81.   
+  82.         urlView.setText(url);
+
+Summary of the reports
+
+  NULLSAFE_NULLABLE_DEREFERENCE: 2
+    NULLSAFE_FIELD_NOT_NULLABLE: 1
