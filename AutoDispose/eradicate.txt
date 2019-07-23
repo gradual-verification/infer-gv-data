@@ -1,0 +1,508 @@
+No issues foundFound 11 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/ExceptionHelper.java:55: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `AtomicReference.compareAndSet(...)` needs a non-null value in parameter 1 but argument `current` can be null. (Origin: call to get() modelled in modelTables.ml at line 42).
+  53.         }
+  54.   
+  55. >       if (field.compareAndSet(current, update)) {
+  56.           return true;
+  57.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeEndConsumerHelper.java:52: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `AtomicReference.compareAndSet(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 52).
+  50.     public static boolean setOnce(AtomicReference<Disposable> upstream, Disposable next, Class<?> observer) {
+  51.       AutoDisposeUtil.checkNotNull(next, "next is null");
+  52. >     if (!upstream.compareAndSet(null, next)) {
+  53.         next.dispose();
+  54.         if (upstream.get() != AutoDisposableHelper.DISPOSED) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeEndConsumerHelper.java:75: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `AtomicReference.compareAndSet(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 75).
+  73.     public static boolean setOnce(AtomicReference<Subscription> upstream, Subscription next, Class<?> subscriber) {
+  74.       AutoDisposeUtil.checkNotNull(next, "next is null");
+  75. >     if (!upstream.compareAndSet(null, next)) {
+  76.         next.cancel();
+  77.         if (upstream.get() != AutoSubscriptionHelper.CANCELLED) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:82: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Subscriber.onError(...)` needs a non-null value in parameter 1 but argument `error.terminate()` can be null. (Origin: call to terminate() at line 82).
+  80.       if (error.addThrowable(ex)) {
+  81.         if (wip.getAndIncrement() == 0) {
+  82. >         subscriber.onError(error.terminate());
+  83.         }
+  84.       } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:127: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `AtomicReference.compareAndSet(...)` needs a non-null value in parameter 1 but argument `current` can be null. (Origin: call to get() modelled in modelTables.ml at line 120).
+  125.           return false;
+  126.         }
+  127. >       if (field.compareAndSet(current, s)) {
+  128.           if (current != null) {
+  129.             current.cancel();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:127: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `AtomicReference.compareAndSet(...)` needs a non-null value in parameter 2 but argument `s` can be null. (Origin: method parameter s).
+  125.           return false;
+  126.         }
+  127. >       if (field.compareAndSet(current, s)) {
+  128.           if (current != null) {
+  129.             current.cancel();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:147: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `AtomicReference.compareAndSet(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 147).
+  145.     static boolean setOnce(AtomicReference<Subscription> field, Subscription s) {
+  146.       AutoDisposeUtil.checkNotNull(s, "s is null");
+  147. >     if (!field.compareAndSet(null, s)) {
+  148.         s.cancel();
+  149.         if (field.get() != CANCELLED) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:148: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Observer.onError(...)` needs a non-null value in parameter 1 but argument `error.terminate()` can be null. (Origin: call to terminate() at line 148).
+  146.       if (error.addThrowable(ex)) {
+  147.         if (wip.getAndIncrement() == 0) {
+  148. >         observer.onError(error.terminate());
+  149.         }
+  150.       } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:167: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `AtomicReference.compareAndSet(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 167).
+  165.     static boolean setIfNotSet(AtomicReference<Subscription> field, Subscription s) {
+  166.       AutoDisposeUtil.checkNotNull(s, "s is null");
+  167. >     return field.compareAndSet(null, s);
+  168.     }
+  169.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:189: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `AtomicReference.compareAndSet(...)` needs a non-null value in parameter 1 but argument `current` can be null. (Origin: call to get() modelled in modelTables.ml at line 182).
+  187.           return false;
+  188.         }
+  189. >       if (field.compareAndSet(current, s)) {
+  190.           return true;
+  191.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:189: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `AtomicReference.compareAndSet(...)` needs a non-null value in parameter 2 but argument `s` can be null. (Origin: method parameter s).
+  187.           return false;
+  188.         }
+  189. >       if (field.compareAndSet(current, s)) {
+  190.           return true;
+  191.         }
+
+Summary of the reports
+
+  ERADICATE_PARAMETER_NOT_NULLABLE: 11No issues foundFound 25 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:147: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `atomicAutoDisposingObserver.get()` in the call to `delegateObserver()` is nullable and is not locally checked for null. (Origin: call to get() modelled in modelTables.ml at line 145).
+  145.         assertThat(atomicAutoDisposingObserver.get()).isNotNull();
+  146.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingObserver.class);
+  147. >       assertThat(((AutoDisposingObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  148.         assertThat(((AutoDisposingObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+  149.             atomicObserver.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:148: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `atomicAutoDisposingObserver.get()` in the call to `delegateObserver()` is nullable and is not locally checked for null. (Origin: call to get() modelled in modelTables.ml at line 145).
+  146.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingObserver.class);
+  147.         assertThat(((AutoDisposingObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  148. >       assertThat(((AutoDisposingObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+  149.             atomicObserver.get());
+  150.       } finally {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:148: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Subject.isSameAs(...)` needs a non-null value in parameter 1 but argument `atomicObserver.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 149).
+  146.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingObserver.class);
+  147.         assertThat(((AutoDisposingObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  148. >       assertThat(((AutoDisposingObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+  149.             atomicObserver.get());
+  150.       } finally {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:145: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Truth.assertThat(...)` needs a non-null value in parameter 1 but argument `atomicAutoDisposingObserver.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 145).
+  143.             .subscribe();
+  144.   
+  145. >       assertThat(atomicAutoDisposingObserver.get()).isNotNull();
+  146.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingObserver.class);
+  147.         assertThat(((AutoDisposingObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:146: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Truth.assertThat(...)` needs a non-null value in parameter 1 but argument `atomicAutoDisposingObserver.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 145).
+  144.   
+  145.         assertThat(atomicAutoDisposingObserver.get()).isNotNull();
+  146. >       assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingObserver.class);
+  147.         assertThat(((AutoDisposingObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  148.         assertThat(((AutoDisposingObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:153: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `atomicAutoDisposingSubscriber.get()` in the call to `delegateSubscriber()` is nullable and is not locally checked for null. (Origin: call to get() modelled in modelTables.ml at line 151).
+  151.         assertThat(atomicAutoDisposingSubscriber.get()).isNotNull();
+  152.         assertThat(atomicAutoDisposingSubscriber.get()).isInstanceOf(AutoDisposingSubscriber.class);
+  153. >       assertThat(((AutoDisposingSubscriber) atomicAutoDisposingSubscriber.get()).delegateSubscriber()).isNotNull();
+  154.         assertThat(((AutoDisposingSubscriber) atomicAutoDisposingSubscriber.get()).delegateSubscriber()).isSameAs(
+  155.             atomicSubscriber.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:154: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `atomicAutoDisposingSubscriber.get()` in the call to `delegateSubscriber()` is nullable and is not locally checked for null. (Origin: call to get() modelled in modelTables.ml at line 151).
+  152.         assertThat(atomicAutoDisposingSubscriber.get()).isInstanceOf(AutoDisposingSubscriber.class);
+  153.         assertThat(((AutoDisposingSubscriber) atomicAutoDisposingSubscriber.get()).delegateSubscriber()).isNotNull();
+  154. >       assertThat(((AutoDisposingSubscriber) atomicAutoDisposingSubscriber.get()).delegateSubscriber()).isSameAs(
+  155.             atomicSubscriber.get());
+  156.       } finally {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:154: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Subject.isSameAs(...)` needs a non-null value in parameter 1 but argument `atomicSubscriber.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 155).
+  152.         assertThat(atomicAutoDisposingSubscriber.get()).isInstanceOf(AutoDisposingSubscriber.class);
+  153.         assertThat(((AutoDisposingSubscriber) atomicAutoDisposingSubscriber.get()).delegateSubscriber()).isNotNull();
+  154. >       assertThat(((AutoDisposingSubscriber) atomicAutoDisposingSubscriber.get()).delegateSubscriber()).isSameAs(
+  155.             atomicSubscriber.get());
+  156.       } finally {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:151: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Truth.assertThat(...)` needs a non-null value in parameter 1 but argument `atomicAutoDisposingSubscriber.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 151).
+  149.             .subscribe();
+  150.   
+  151. >       assertThat(atomicAutoDisposingSubscriber.get()).isNotNull();
+  152.         assertThat(atomicAutoDisposingSubscriber.get()).isInstanceOf(AutoDisposingSubscriber.class);
+  153.         assertThat(((AutoDisposingSubscriber) atomicAutoDisposingSubscriber.get()).delegateSubscriber()).isNotNull();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:152: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Truth.assertThat(...)` needs a non-null value in parameter 1 but argument `atomicAutoDisposingSubscriber.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 151).
+  150.   
+  151.         assertThat(atomicAutoDisposingSubscriber.get()).isNotNull();
+  152. >       assertThat(atomicAutoDisposingSubscriber.get()).isInstanceOf(AutoDisposingSubscriber.class);
+  153.         assertThat(((AutoDisposingSubscriber) atomicAutoDisposingSubscriber.get()).delegateSubscriber()).isNotNull();
+  154.         assertThat(((AutoDisposingSubscriber) atomicAutoDisposingSubscriber.get()).delegateSubscriber()).isSameAs(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeCompletableObserverTest.java:151: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `atomicAutoDisposingObserver.get()` in the call to `delegateObserver()` is nullable and is not locally checked for null. (Origin: call to get() modelled in modelTables.ml at line 149).
+  149.         assertThat(atomicAutoDisposingObserver.get()).isNotNull();
+  150.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingCompletableObserver.class);
+  151. >       assertThat(((AutoDisposingCompletableObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  152.         assertThat(((AutoDisposingCompletableObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+  153.             atomicObserver.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeCompletableObserverTest.java:152: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `atomicAutoDisposingObserver.get()` in the call to `delegateObserver()` is nullable and is not locally checked for null. (Origin: call to get() modelled in modelTables.ml at line 149).
+  150.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingCompletableObserver.class);
+  151.         assertThat(((AutoDisposingCompletableObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  152. >       assertThat(((AutoDisposingCompletableObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+  153.             atomicObserver.get());
+  154.       } finally {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeCompletableObserverTest.java:152: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Subject.isSameAs(...)` needs a non-null value in parameter 1 but argument `atomicObserver.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 153).
+  150.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingCompletableObserver.class);
+  151.         assertThat(((AutoDisposingCompletableObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  152. >       assertThat(((AutoDisposingCompletableObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+  153.             atomicObserver.get());
+  154.       } finally {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeCompletableObserverTest.java:149: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Truth.assertThat(...)` needs a non-null value in parameter 1 but argument `atomicAutoDisposingObserver.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 149).
+  147.             .subscribe();
+  148.   
+  149. >       assertThat(atomicAutoDisposingObserver.get()).isNotNull();
+  150.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingCompletableObserver.class);
+  151.         assertThat(((AutoDisposingCompletableObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeCompletableObserverTest.java:150: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Truth.assertThat(...)` needs a non-null value in parameter 1 but argument `atomicAutoDisposingObserver.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 149).
+  148.   
+  149.         assertThat(atomicAutoDisposingObserver.get()).isNotNull();
+  150. >       assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingCompletableObserver.class);
+  151.         assertThat(((AutoDisposingCompletableObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  152.         assertThat(((AutoDisposingCompletableObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSingleObserverTest.java:160: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `atomicAutoDisposingObserver.get()` in the call to `delegateObserver()` is nullable and is not locally checked for null. (Origin: call to get() modelled in modelTables.ml at line 158).
+  158.         assertThat(atomicAutoDisposingObserver.get()).isNotNull();
+  159.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingSingleObserver.class);
+  160. >       assertThat(((AutoDisposingSingleObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  161.         assertThat(((AutoDisposingSingleObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+  162.             atomicObserver.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSingleObserverTest.java:161: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `atomicAutoDisposingObserver.get()` in the call to `delegateObserver()` is nullable and is not locally checked for null. (Origin: call to get() modelled in modelTables.ml at line 158).
+  159.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingSingleObserver.class);
+  160.         assertThat(((AutoDisposingSingleObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  161. >       assertThat(((AutoDisposingSingleObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+  162.             atomicObserver.get());
+  163.       } finally {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSingleObserverTest.java:161: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Subject.isSameAs(...)` needs a non-null value in parameter 1 but argument `atomicObserver.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 162).
+  159.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingSingleObserver.class);
+  160.         assertThat(((AutoDisposingSingleObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  161. >       assertThat(((AutoDisposingSingleObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+  162.             atomicObserver.get());
+  163.       } finally {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSingleObserverTest.java:158: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Truth.assertThat(...)` needs a non-null value in parameter 1 but argument `atomicAutoDisposingObserver.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 158).
+  156.             .subscribe();
+  157.   
+  158. >       assertThat(atomicAutoDisposingObserver.get()).isNotNull();
+  159.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingSingleObserver.class);
+  160.         assertThat(((AutoDisposingSingleObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSingleObserverTest.java:159: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Truth.assertThat(...)` needs a non-null value in parameter 1 but argument `atomicAutoDisposingObserver.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 158).
+  157.   
+  158.         assertThat(atomicAutoDisposingObserver.get()).isNotNull();
+  159. >       assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingSingleObserver.class);
+  160.         assertThat(((AutoDisposingSingleObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  161.         assertThat(((AutoDisposingSingleObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeMaybeObserverTest.java:184: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `atomicAutoDisposingObserver.get()` in the call to `delegateObserver()` is nullable and is not locally checked for null. (Origin: call to get() modelled in modelTables.ml at line 182).
+  182.         assertThat(atomicAutoDisposingObserver.get()).isNotNull();
+  183.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingMaybeObserver.class);
+  184. >       assertThat(((AutoDisposingMaybeObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  185.         assertThat(((AutoDisposingMaybeObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+  186.             atomicObserver.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeMaybeObserverTest.java:185: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `atomicAutoDisposingObserver.get()` in the call to `delegateObserver()` is nullable and is not locally checked for null. (Origin: call to get() modelled in modelTables.ml at line 182).
+  183.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingMaybeObserver.class);
+  184.         assertThat(((AutoDisposingMaybeObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  185. >       assertThat(((AutoDisposingMaybeObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+  186.             atomicObserver.get());
+  187.       } finally {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeMaybeObserverTest.java:185: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Subject.isSameAs(...)` needs a non-null value in parameter 1 but argument `atomicObserver.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 186).
+  183.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingMaybeObserver.class);
+  184.         assertThat(((AutoDisposingMaybeObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  185. >       assertThat(((AutoDisposingMaybeObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+  186.             atomicObserver.get());
+  187.       } finally {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeMaybeObserverTest.java:182: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Truth.assertThat(...)` needs a non-null value in parameter 1 but argument `atomicAutoDisposingObserver.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 182).
+  180.             .subscribe();
+  181.   
+  182. >       assertThat(atomicAutoDisposingObserver.get()).isNotNull();
+  183.         assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingMaybeObserver.class);
+  184.         assertThat(((AutoDisposingMaybeObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeMaybeObserverTest.java:183: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Truth.assertThat(...)` needs a non-null value in parameter 1 but argument `atomicAutoDisposingObserver.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 182).
+  181.   
+  182.         assertThat(atomicAutoDisposingObserver.get()).isNotNull();
+  183. >       assertThat(atomicAutoDisposingObserver.get()).isInstanceOf(AutoDisposingMaybeObserver.class);
+  184.         assertThat(((AutoDisposingMaybeObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isNotNull();
+  185.         assertThat(((AutoDisposingMaybeObserver) atomicAutoDisposingObserver.get()).delegateObserver()).isSameAs(
+
+Summary of the reports
+
+  ERADICATE_PARAMETER_NOT_NULLABLE: 15
+    ERADICATE_NULLABLE_DEREFERENCE: 10No issues foundNo issues foundFound 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/TestLifecycleScopeProvider.java:78: warning: ERADICATE_RETURN_NOT_NULLABLE
+  Method `peekLifecycle()` may return null but it is not annotated with `@Nullable`. (Origin: call to getValue() at line 79).
+  76.     }
+  77.   
+  78. >   @Override public TestLifecycle peekLifecycle() {
+  79.       return lifecycleSubject.getValue();
+  80.     }
+
+Summary of the reports
+
+  ERADICATE_RETURN_NOT_NULLABLE: 1No issues foundFound 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:49: warning: ERADICATE_RETURN_NOT_NULLABLE
+  Method `getValue()` may return null but it is not annotated with `@Nullable`. (Origin: call to getValue() at line 49).
+  47.   
+  48.     Event getValue() {
+  49. >     return eventsObservable.getValue();
+  50.     }
+  51.   
+
+Summary of the reports
+
+  ERADICATE_RETURN_NOT_NULLABLE: 1Found 8 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaFragment.java:59: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LayoutInflater.inflate(...)` needs a non-null value in parameter 2 but argument `container` can be null. (Origin: method parameter container).
+  57.         @Nullable Bundle savedInstanceState) {
+  58.       Log.d(TAG, "onCreateView()");
+  59. >     return inflater.inflate(R.layout.content_main, container, false);
+  60.     }
+  61.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:66: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View(...)` needs a non-null value in parameter 2 but argument `attrs` can be null. (Origin: method parameter attrs).
+  64.   
+  65.     public AutoDisposeView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+  66. >     super(context, attrs, defStyleAttr);
+  67.       init();
+  68.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:72: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View(...)` needs a non-null value in parameter 2 but argument `attrs` can be null. (Origin: method parameter attrs).
+  70.     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+  71.     public AutoDisposeView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+  72. >     super(context, attrs, defStyleAttr, defStyleRes);
+  73.       init();
+  74.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeActivity.java:84: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Activity.onCreate(...)` needs a non-null value in parameter 1 but argument `savedInstanceState` can be null. (Origin: method parameter savedInstanceState).
+  82.   
+  83.     @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
+  84. >     super.onCreate(savedInstanceState);
+  85.       lifecycleEvents.onNext(ActivityEvent.CREATE);
+  86.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeFragment.java:99: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Fragment.onCreate(...)` needs a non-null value in parameter 1 but argument `savedInstanceState` can be null. (Origin: method parameter savedInstanceState).
+  97.   
+  98.     @Override public void onCreate(@Nullable Bundle savedInstanceState) {
+  99. >     super.onCreate(savedInstanceState);
+  100.       lifecycleEvents.onNext(FragmentEvent.CREATE);
+  101.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeFragment.java:104: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Fragment.onViewCreated(...)` needs a non-null value in parameter 2 but argument `savedInstanceState` can be null. (Origin: method parameter savedInstanceState).
+  102.   
+  103.     @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+  104. >     super.onViewCreated(view, savedInstanceState);
+  105.       lifecycleEvents.onNext(FragmentEvent.CREATE_VIEW);
+  106.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:105: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `AutoDisposeView.lifecycleEvents` in the call to `hide()` is nullable and is not locally checked for null. (Origin: field AutoDisposeView.lifecycleEvents at line 105).
+  103.     public Observable<ViewEvent> lifecycle() {
+  104.       //noinspection ConstantConditions only in layoutlib
+  105. >     return lifecycleEvents.hide();
+  106.     }
+  107.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:117: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `AutoDisposeView.lifecycleEvents` in the call to `getValue()` is nullable and is not locally checked for null. (Origin: field AutoDisposeView.lifecycleEvents at line 117).
+  115.     public ViewEvent peekLifecycle() {
+  116.       //noinspection ConstantConditions only in layoutlib
+  117. >     return lifecycleEvents.getValue();
+  118.     }
+  119.   
+
+Summary of the reports
+
+  ERADICATE_PARAMETER_NOT_NULLABLE: 6
+    ERADICATE_NULLABLE_DEREFERENCE: 2No issues foundNo issues foundFound 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:49: warning: ERADICATE_RETURN_NOT_NULLABLE
+  Method `getValue()` may return null but it is not annotated with `@Nullable`. (Origin: call to getValue() at line 49).
+  47.   
+  48.     Event getValue() {
+  49. >     return eventsObservable.getValue();
+  50.     }
+  51.   
+
+Summary of the reports
+
+  ERADICATE_RETURN_NOT_NULLABLE: 1Found 8 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaFragment.java:59: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LayoutInflater.inflate(...)` needs a non-null value in parameter 2 but argument `container` can be null. (Origin: method parameter container).
+  57.         @Nullable Bundle savedInstanceState) {
+  58.       Log.d(TAG, "onCreateView()");
+  59. >     return inflater.inflate(R.layout.content_main, container, false);
+  60.     }
+  61.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:66: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View(...)` needs a non-null value in parameter 2 but argument `attrs` can be null. (Origin: method parameter attrs).
+  64.   
+  65.     public AutoDisposeView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+  66. >     super(context, attrs, defStyleAttr);
+  67.       init();
+  68.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:72: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View(...)` needs a non-null value in parameter 2 but argument `attrs` can be null. (Origin: method parameter attrs).
+  70.     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+  71.     public AutoDisposeView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+  72. >     super(context, attrs, defStyleAttr, defStyleRes);
+  73.       init();
+  74.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeActivity.java:84: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Activity.onCreate(...)` needs a non-null value in parameter 1 but argument `savedInstanceState` can be null. (Origin: method parameter savedInstanceState).
+  82.   
+  83.     @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
+  84. >     super.onCreate(savedInstanceState);
+  85.       lifecycleEvents.onNext(ActivityEvent.CREATE);
+  86.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeFragment.java:99: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Fragment.onCreate(...)` needs a non-null value in parameter 1 but argument `savedInstanceState` can be null. (Origin: method parameter savedInstanceState).
+  97.   
+  98.     @Override public void onCreate(@Nullable Bundle savedInstanceState) {
+  99. >     super.onCreate(savedInstanceState);
+  100.       lifecycleEvents.onNext(FragmentEvent.CREATE);
+  101.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeFragment.java:104: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Fragment.onViewCreated(...)` needs a non-null value in parameter 2 but argument `savedInstanceState` can be null. (Origin: method parameter savedInstanceState).
+  102.   
+  103.     @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+  104. >     super.onViewCreated(view, savedInstanceState);
+  105.       lifecycleEvents.onNext(FragmentEvent.CREATE_VIEW);
+  106.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:105: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `AutoDisposeView.lifecycleEvents` in the call to `hide()` is nullable and is not locally checked for null. (Origin: field AutoDisposeView.lifecycleEvents at line 105).
+  103.     public Observable<ViewEvent> lifecycle() {
+  104.       //noinspection ConstantConditions only in layoutlib
+  105. >     return lifecycleEvents.hide();
+  106.     }
+  107.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:117: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `AutoDisposeView.lifecycleEvents` in the call to `getValue()` is nullable and is not locally checked for null. (Origin: field AutoDisposeView.lifecycleEvents at line 117).
+  115.     public ViewEvent peekLifecycle() {
+  116.       //noinspection ConstantConditions only in layoutlib
+  117. >     return lifecycleEvents.getValue();
+  118.     }
+  119.   
+
+Summary of the reports
+
+  ERADICATE_PARAMETER_NOT_NULLABLE: 6
+    ERADICATE_NULLABLE_DEREFERENCE: 2No issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundFound 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/TestUtil.java:49: warning: ERADICATE_RETURN_NOT_NULLABLE
+  Method `peekLifecycle()` may return null but it is not annotated with `@Nullable`. (Origin: call to getValue() at line 50).
+  47.         }
+  48.   
+  49. >       @Override public Integer peekLifecycle() {
+  50.           return lifecycle.getValue();
+  51.         }
+
+Summary of the reports
+
+  ERADICATE_RETURN_NOT_NULLABLE: 1No issues foundFound 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle-jdk8/src/test/java/com/uber/autodispose/lifecycle/jdk8/DefaultLifecycleScopeProviderTest.java:60: warning: ERADICATE_RETURN_NOT_NULLABLE
+  Method `peekLifecycle()` may return null but it is not annotated with `@Nullable`. (Origin: call to getValue() at line 61).
+  58.       }
+  59.   
+  60. >     @Override public LifecycleEvent peekLifecycle() {
+  61.         return lifecycle.getValue();
+  62.       }
+
+Summary of the reports
+
+  ERADICATE_RETURN_NOT_NULLABLE: 1Found 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/static-analysis/autodispose-error-prone/src/test/java/com/uber/autodispose/errorprone/UseAutoDisposeTest.java:29: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `UseAutoDisposeTest.compilationHelper` is not initialized in the constructor and is not declared `@Nullable`.
+  27.   
+  28.   @RunWith(JUnit4.class)
+  29. > public final class UseAutoDisposeTest {
+  30.   
+  31.     @Rule public TemporaryFolder temporaryFolder = new TemporaryFolder();
+
+Summary of the reports
+
+  ERADICATE_FIELD_NOT_INITIALIZED: 1

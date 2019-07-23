@@ -23,6 +23,7 @@ repos = [
     'caffeine',
     'jib',
     'skaffold-tools-for-java',
+    'AutoDispose',
     'butterknife',
 ]
 
