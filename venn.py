@@ -24,6 +24,9 @@ repos = [
     'jib',
     'skaffold-tools-for-java',
     'AutoDispose',
+    'ReactiveNetwork',
+    'keyvaluestore',
+    'filesystem-generator',
     'butterknife',
 ]
 

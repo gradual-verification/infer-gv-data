@@ -1,0 +1,21 @@
+No issues foundFound 2 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:13: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `FSGeneratorTest.tempFolder` is not initialized in the constructor and is not declared `@Nullable`.
+  11.   import static org.assertj.core.api.Assertions.contentOf;
+  12.   
+  13. > public class FSGeneratorTest {
+  14.   
+  15.     private File tempFolder;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:13: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `FSGeneratorTest.tempPath` is not initialized in the constructor and is not declared `@Nullable`.
+  11.   import static org.assertj.core.api.Assertions.contentOf;
+  12.   
+  13. > public class FSGeneratorTest {
+  14.   
+  15.     private File tempFolder;
+
+Summary of the reports
+
+  ERADICATE_FIELD_NOT_INITIALIZED: 2

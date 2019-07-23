@@ -1,0 +1,553 @@
+Found 11 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:26: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `folder`.
+  24.     public FSGenerator createFolder(final String folderName) {
+  25.       final File folder = Paths.get(rootFolder.getAbsolutePath(), folderName).toFile();
+  26. >     if (folder.mkdir()) {
+  27.         lastFileTouched = folder;
+  28.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:25: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  23.   
+  24.     public FSGenerator createFolder(final String folderName) {
+  25. >     final File folder = Paths.get(rootFolder.getAbsolutePath(), folderName).toFile();
+  26.       if (folder.mkdir()) {
+  27.         lastFileTouched = folder;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:25: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->de.zuellich.fsgenerator.FSGenerator.rootFolder`.
+  23.   
+  24.     public FSGenerator createFolder(final String folderName) {
+  25. >     final File folder = Paths.get(rootFolder.getAbsolutePath(), folderName).toFile();
+  26.       if (folder.mkdir()) {
+  27.         lastFileTouched = folder;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:45: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `file`.
+  43.       final File file = Paths.get(rootFolder.getAbsolutePath(), fileName).toFile();
+  44.       try {
+  45. >       if (file.createNewFile()) {
+  46.           lastFileTouched = file;
+  47.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  41.   
+  42.     public FSGenerator createFile(final String fileName) {
+  43. >     final File file = Paths.get(rootFolder.getAbsolutePath(), fileName).toFile();
+  44.       try {
+  45.         if (file.createNewFile()) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->de.zuellich.fsgenerator.FSGenerator.rootFolder`.
+  41.   
+  42.     public FSGenerator createFile(final String fileName) {
+  43. >     final File file = Paths.get(rootFolder.getAbsolutePath(), fileName).toFile();
+  44.       try {
+  45.         if (file.createNewFile()) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:56: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  54.   
+  55.     public FSGenerator cd(final String folderName) {
+  56. >     rootFolder = Paths.get(rootFolder.getAbsolutePath(), folderName).toFile();
+  57.       return this;
+  58.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:56: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->de.zuellich.fsgenerator.FSGenerator.rootFolder`.
+  54.   
+  55.     public FSGenerator cd(final String folderName) {
+  56. >     rootFolder = Paths.get(rootFolder.getAbsolutePath(), folderName).toFile();
+  57.       return this;
+  58.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:70: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `move`.
+  68.       try {
+  69.         final Path move = Files.move(toBeRenamed, newPath);
+  70. >       lastFileTouched = move.toFile();
+  71.       } catch (final IOException e) {
+  72.         throw new RuntimeException(e);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:66: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->de.zuellich.fsgenerator.FSGenerator.rootFolder`.
+  64.   
+  65.     public FSGenerator rename(final String target, final String newName) {
+  66. >     final Path toBeRenamed = Paths.get(rootFolder.getAbsolutePath(), target);
+  67.       final Path newPath = Paths.get(rootFolder.getAbsolutePath(), newName);
+  68.       try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:67: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->de.zuellich.fsgenerator.FSGenerator.rootFolder`.
+  65.     public FSGenerator rename(final String target, final String newName) {
+  66.       final Path toBeRenamed = Paths.get(rootFolder.getAbsolutePath(), target);
+  67. >     final Path newPath = Paths.get(rootFolder.getAbsolutePath(), newName);
+  68.       try {
+  69.         final Path move = Files.move(toBeRenamed, newPath);
+
+Summary of the reports
+
+  GRADUAL_CHECK: 11Found 57 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:21: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->de.zuellich.fsgenerator.FSGeneratorTest.tempFolder`.
+  19.     public void setUp() {
+  20.       tempFolder = Files.newTemporaryFolder();
+  21. >     tempPath = tempFolder.getAbsolutePath();
+  22.     }
+  23.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:33: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `generator`.
+  31.       final FSGenerator generator = FSGenerator.root(tempPath + "/rootfolder");
+  32.   
+  33. >     final File lastFileTouched = generator.getLastFileTouched();
+  34.       assertThat(lastFileTouched).isNotNull();
+  35.       assertThat(lastFileTouched).exists().isDirectory();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:34: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$19`.
+  32.   
+  33.       final File lastFileTouched = generator.getLastFileTouched();
+  34. >     assertThat(lastFileTouched).isNotNull();
+  35.       assertThat(lastFileTouched).exists().isDirectory();
+  36.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:35: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$24`.
+  33.       final File lastFileTouched = generator.getLastFileTouched();
+  34.       assertThat(lastFileTouched).isNotNull();
+  35. >     assertThat(lastFileTouched).exists().isDirectory();
+  36.     }
+  37.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:35: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$27`.
+  33.       final File lastFileTouched = generator.getLastFileTouched();
+  34.       assertThat(lastFileTouched).isNotNull();
+  35. >     assertThat(lastFileTouched).exists().isDirectory();
+  36.     }
+  37.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:31: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$6`.
+  29.     @Test
+  30.     public void createsRootFolder() {
+  31. >     final FSGenerator generator = FSGenerator.root(tempPath + "/rootfolder");
+  32.   
+  33.       final File lastFileTouched = generator.getLastFileTouched();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:31: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  29.     @Test
+  30.     public void createsRootFolder() {
+  31. >     final FSGenerator generator = FSGenerator.root(tempPath + "/rootfolder");
+  32.   
+  33.       final File lastFileTouched = generator.getLastFileTouched();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `generator`.
+  40.       final FSGenerator generator = FSGenerator.root(tempPath + "/rootfolder").createFile("file.txt");
+  41.   
+  42. >     final File lastFileTouched = generator.getLastFileTouched();
+  43.       assertThat(lastFileTouched).exists().isFile().hasParent(tempPath + "/rootfolder");
+  44.       assertThat(contentOf(lastFileTouched)).isEmpty();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$14`.
+  38.     @Test
+  39.     public void createsFile() {
+  40. >     final FSGenerator generator = FSGenerator.root(tempPath + "/rootfolder").createFile("file.txt");
+  41.   
+  42.       final File lastFileTouched = generator.getLastFileTouched();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$22`.
+  41.   
+  42.       final File lastFileTouched = generator.getLastFileTouched();
+  43. >     assertThat(lastFileTouched).exists().isFile().hasParent(tempPath + "/rootfolder");
+  44.       assertThat(contentOf(lastFileTouched)).isEmpty();
+  45.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$25`.
+  41.   
+  42.       final File lastFileTouched = generator.getLastFileTouched();
+  43. >     assertThat(lastFileTouched).exists().isFile().hasParent(tempPath + "/rootfolder");
+  44.       assertThat(contentOf(lastFileTouched)).isEmpty();
+  45.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$28`.
+  41.   
+  42.       final File lastFileTouched = generator.getLastFileTouched();
+  43. >     assertThat(lastFileTouched).exists().isFile().hasParent(tempPath + "/rootfolder");
+  44.       assertThat(contentOf(lastFileTouched)).isEmpty();
+  45.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$35`.
+  41.   
+  42.       final File lastFileTouched = generator.getLastFileTouched();
+  43. >     assertThat(lastFileTouched).exists().isFile().hasParent(tempPath + "/rootfolder");
+  44.       assertThat(contentOf(lastFileTouched)).isEmpty();
+  45.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$38`.
+  41.   
+  42.       final File lastFileTouched = generator.getLastFileTouched();
+  43. >     assertThat(lastFileTouched).exists().isFile().hasParent(tempPath + "/rootfolder");
+  44.       assertThat(contentOf(lastFileTouched)).isEmpty();
+  45.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:44: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$49`.
+  42.       final File lastFileTouched = generator.getLastFileTouched();
+  43.       assertThat(lastFileTouched).exists().isFile().hasParent(tempPath + "/rootfolder");
+  44. >     assertThat(contentOf(lastFileTouched)).isEmpty();
+  45.     }
+  46.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$6`.
+  38.     @Test
+  39.     public void createsFile() {
+  40. >     final FSGenerator generator = FSGenerator.root(tempPath + "/rootfolder").createFile("file.txt");
+  41.   
+  42.       final File lastFileTouched = generator.getLastFileTouched();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  38.     @Test
+  39.     public void createsFile() {
+  40. >     final FSGenerator generator = FSGenerator.root(tempPath + "/rootfolder").createFile("file.txt");
+  41.   
+  42.       final File lastFileTouched = generator.getLastFileTouched();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:51: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `generator`.
+  49.       final FSGenerator generator = FSGenerator.root(tempPath + "/rootfolder").createFolder("folder");
+  50.   
+  51. >     final File lastFileTouched = generator.getLastFileTouched();
+  52.       assertThat(lastFileTouched).exists().isDirectory();
+  53.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:49: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$14`.
+  47.     @Test
+  48.     public void createsFolder() {
+  49. >     final FSGenerator generator = FSGenerator.root(tempPath + "/rootfolder").createFolder("folder");
+  50.   
+  51.       final File lastFileTouched = generator.getLastFileTouched();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:52: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$22`.
+  50.   
+  51.       final File lastFileTouched = generator.getLastFileTouched();
+  52. >     assertThat(lastFileTouched).exists().isDirectory();
+  53.     }
+  54.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:52: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$25`.
+  50.   
+  51.       final File lastFileTouched = generator.getLastFileTouched();
+  52. >     assertThat(lastFileTouched).exists().isDirectory();
+  53.     }
+  54.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:49: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$6`.
+  47.     @Test
+  48.     public void createsFolder() {
+  49. >     final FSGenerator generator = FSGenerator.root(tempPath + "/rootfolder").createFolder("folder");
+  50.   
+  51.       final File lastFileTouched = generator.getLastFileTouched();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:49: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  47.     @Test
+  48.     public void createsFolder() {
+  49. >     final FSGenerator generator = FSGenerator.root(tempPath + "/rootfolder").createFolder("folder");
+  50.   
+  51.       final File lastFileTouched = generator.getLastFileTouched();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:63: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `generator`.
+  61.               .createFile("file.txt");
+  62.   
+  63. >     assertThat(generator.getLastFileTouched().getAbsolutePath())
+  64.           .endsWith("/rootfolder/subfolder/file.txt");
+  65.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:59: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$14`.
+  57.       final FSGenerator generator =
+  58.           FSGenerator.root(tempPath + "/rootfolder")
+  59. >             .createFolder("subfolder")
+  60.               .cd("subfolder")
+  61.               .createFile("file.txt");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:60: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  58.           FSGenerator.root(tempPath + "/rootfolder")
+  59.               .createFolder("subfolder")
+  60. >             .cd("subfolder")
+  61.               .createFile("file.txt");
+  62.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:61: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$20`.
+  59.               .createFolder("subfolder")
+  60.               .cd("subfolder")
+  61. >             .createFile("file.txt");
+  62.   
+  63.       assertThat(generator.getLastFileTouched().getAbsolutePath())
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:63: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$26`.
+  61.               .createFile("file.txt");
+  62.   
+  63. >     assertThat(generator.getLastFileTouched().getAbsolutePath())
+  64.           .endsWith("/rootfolder/subfolder/file.txt");
+  65.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:64: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$31`.
+  62.   
+  63.       assertThat(generator.getLastFileTouched().getAbsolutePath())
+  64. >         .endsWith("/rootfolder/subfolder/file.txt");
+  65.     }
+  66.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:57: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$6`.
+  55.     @Test
+  56.     public void canChangeDirectory() {
+  57. >     final FSGenerator generator =
+  58.           FSGenerator.root(tempPath + "/rootfolder")
+  59.               .createFolder("subfolder")
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:57: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  55.     @Test
+  56.     public void canChangeDirectory() {
+  57. >     final FSGenerator generator =
+  58.           FSGenerator.root(tempPath + "/rootfolder")
+  59.               .createFolder("subfolder")
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:75: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `generator`.
+  73.               .createFile("file.txt");
+  74.   
+  75. >     assertThat(generator.getLastFileTouched().getAbsolutePath())
+  76.           .endsWith("/rootfolder/subfolder/file.txt");
+  77.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:71: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$14`.
+  69.       final FSGenerator generator =
+  70.           FSGenerator.root(tempPath + "/rootfolder")
+  71. >             .createFolder("subfolder")
+  72.               .cd()
+  73.               .createFile("file.txt");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:72: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  70.           FSGenerator.root(tempPath + "/rootfolder")
+  71.               .createFolder("subfolder")
+  72. >             .cd()
+  73.               .createFile("file.txt");
+  74.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:73: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$20`.
+  71.               .createFolder("subfolder")
+  72.               .cd()
+  73. >             .createFile("file.txt");
+  74.   
+  75.       assertThat(generator.getLastFileTouched().getAbsolutePath())
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:75: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$26`.
+  73.               .createFile("file.txt");
+  74.   
+  75. >     assertThat(generator.getLastFileTouched().getAbsolutePath())
+  76.           .endsWith("/rootfolder/subfolder/file.txt");
+  77.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:76: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$31`.
+  74.   
+  75.       assertThat(generator.getLastFileTouched().getAbsolutePath())
+  76. >         .endsWith("/rootfolder/subfolder/file.txt");
+  77.     }
+  78.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:69: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$6`.
+  67.     @Test
+  68.     public void canImplicitlyChangeDirectory() {
+  69. >     final FSGenerator generator =
+  70.           FSGenerator.root(tempPath + "/rootfolder")
+  71.               .createFolder("subfolder")
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:69: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  67.     @Test
+  68.     public void canImplicitlyChangeDirectory() {
+  69. >     final FSGenerator generator =
+  70.           FSGenerator.root(tempPath + "/rootfolder")
+  71.               .createFolder("subfolder")
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:88: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `lastFileTouched`.
+  86.       final File lastFileTouched = rename.getLastFileTouched();
+  87.       assertThat(lastFileTouched).exists().isDirectory();
+  88. >     assertThat(lastFileTouched.getAbsolutePath()).endsWith("/rootfolder/sub_folder");
+  89.     }
+  90.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:83: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$14`.
+  81.       final FSGenerator rename =
+  82.           FSGenerator.root(tempPath + "/rootfolder")
+  83. >             .createFolder("subfolder")
+  84.               .rename("subfolder", "sub_folder");
+  85.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:84: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  82.           FSGenerator.root(tempPath + "/rootfolder")
+  83.               .createFolder("subfolder")
+  84. >             .rename("subfolder", "sub_folder");
+  85.   
+  86.       final File lastFileTouched = rename.getLastFileTouched();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:87: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$25`.
+  85.   
+  86.       final File lastFileTouched = rename.getLastFileTouched();
+  87. >     assertThat(lastFileTouched).exists().isDirectory();
+  88.       assertThat(lastFileTouched.getAbsolutePath()).endsWith("/rootfolder/sub_folder");
+  89.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:87: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$28`.
+  85.   
+  86.       final File lastFileTouched = rename.getLastFileTouched();
+  87. >     assertThat(lastFileTouched).exists().isDirectory();
+  88.       assertThat(lastFileTouched.getAbsolutePath()).endsWith("/rootfolder/sub_folder");
+  89.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:88: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$36`.
+  86.       final File lastFileTouched = rename.getLastFileTouched();
+  87.       assertThat(lastFileTouched).exists().isDirectory();
+  88. >     assertThat(lastFileTouched.getAbsolutePath()).endsWith("/rootfolder/sub_folder");
+  89.     }
+  90.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:81: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$6`.
+  79.     @Test
+  80.     public void canRenameFolder() {
+  81. >     final FSGenerator rename =
+  82.           FSGenerator.root(tempPath + "/rootfolder")
+  83.               .createFolder("subfolder")
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:81: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  79.     @Test
+  80.     public void canRenameFolder() {
+  81. >     final FSGenerator rename =
+  82.           FSGenerator.root(tempPath + "/rootfolder")
+  83.               .createFolder("subfolder")
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:86: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `rename`.
+  84.               .rename("subfolder", "sub_folder");
+  85.   
+  86. >     final File lastFileTouched = rename.getLastFileTouched();
+  87.       assertThat(lastFileTouched).exists().isDirectory();
+  88.       assertThat(lastFileTouched.getAbsolutePath()).endsWith("/rootfolder/sub_folder");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:100: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `lastFileTouched`.
+  98.       final File lastFileTouched = rename.getLastFileTouched();
+  99.       assertThat(lastFileTouched).exists().isFile();
+  100. >     assertThat(lastFileTouched.getAbsolutePath()).endsWith("/rootfolder/file_txt");
+  101.     }
+  102.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:95: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$14`.
+  93.       final FSGenerator rename =
+  94.           FSGenerator.root(tempPath + "/rootfolder")
+  95. >             .createFile("file.txt")
+  96.               .rename("file.txt", "file_txt");
+  97.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:96: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  94.           FSGenerator.root(tempPath + "/rootfolder")
+  95.               .createFile("file.txt")
+  96. >             .rename("file.txt", "file_txt");
+  97.   
+  98.       final File lastFileTouched = rename.getLastFileTouched();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:99: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$25`.
+  97.   
+  98.       final File lastFileTouched = rename.getLastFileTouched();
+  99. >     assertThat(lastFileTouched).exists().isFile();
+  100.       assertThat(lastFileTouched.getAbsolutePath()).endsWith("/rootfolder/file_txt");
+  101.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:99: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$28`.
+  97.   
+  98.       final File lastFileTouched = rename.getLastFileTouched();
+  99. >     assertThat(lastFileTouched).exists().isFile();
+  100.       assertThat(lastFileTouched.getAbsolutePath()).endsWith("/rootfolder/file_txt");
+  101.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:100: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$36`.
+  98.       final File lastFileTouched = rename.getLastFileTouched();
+  99.       assertThat(lastFileTouched).exists().isFile();
+  100. >     assertThat(lastFileTouched.getAbsolutePath()).endsWith("/rootfolder/file_txt");
+  101.     }
+  102.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:93: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$6`.
+  91.     @Test
+  92.     public void canRenameFile() {
+  93. >     final FSGenerator rename =
+  94.           FSGenerator.root(tempPath + "/rootfolder")
+  95.               .createFile("file.txt")
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:93: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  91.     @Test
+  92.     public void canRenameFile() {
+  93. >     final FSGenerator rename =
+  94.           FSGenerator.root(tempPath + "/rootfolder")
+  95.               .createFile("file.txt")
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:98: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `rename`.
+  96.               .rename("file.txt", "file_txt");
+  97.   
+  98. >     final File lastFileTouched = rename.getLastFileTouched();
+  99.       assertThat(lastFileTouched).exists().isFile();
+  100.       assertThat(lastFileTouched.getAbsolutePath()).endsWith("/rootfolder/file_txt");
+
+Summary of the reports
+
+  GRADUAL_CHECK: 57
