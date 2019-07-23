@@ -1,110 +1,6 @@
-Found 24 issues
+No issues foundFound 2 issues
 
-butterknife-reflect/src/main/java/butterknife/ListenerUnbinder.java:14: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `listener` should be annotated with `@Nullable`.
-  12.       this.targets = targets;
-  13.       this.setter = setter;
-  14. >     this.listener = null;
-  15.     }
-  16.   
-
-butterknife-runtime/src/main/java/butterknife/internal/Utils.java:35: error: NULLSAFE_NULLABLE_DEREFERENCE
-  Variable `drawable` is indirectly annotated with `@Nullable` (source `Drawable ContextCompat.getDrawable(Context,int) at line 34`) and is dereferenced without being checked for null at line 35.
-  33.   
-  34.       Drawable drawable = ContextCompat.getDrawable(context, id);
-  35. >     drawable = DrawableCompat.wrap(drawable.mutate());
-  36.       int color = ContextCompat.getColor(context, VALUE.resourceId);
-  37.       DrawableCompat.setTint(drawable, color);
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleAdapter$ViewHolder_ViewBinding.java:32: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `SimpleAdapter$ViewHolder.length` should be annotated with `@Nullable`.
-  30.   
-  31.       target.word = null;
-  32. >     target.length = null;
-  33.       target.position = null;
-  34.     }
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleAdapter$ViewHolder_ViewBinding.java:33: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `SimpleAdapter$ViewHolder.position` should be annotated with `@Nullable`.
-  31.       target.word = null;
-  32.       target.length = null;
-  33. >     target.position = null;
-  34.     }
-  35.   }
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleAdapter$ViewHolder_ViewBinding.java:31: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `SimpleAdapter$ViewHolder.word` should be annotated with `@Nullable`.
-  29.       this.target = null;
-  30.   
-  31. >     target.word = null;
-  32.       target.length = null;
-  33.       target.position = null;
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleAdapter$ViewHolder_ViewBinding.java:29: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `target` should be annotated with `@Nullable`.
-  27.       SimpleAdapter.ViewHolder target = this.target;
-  28.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
-  29. >     this.target = null;
-  30.   
-  31.       target.word = null;
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/unbinder/C_ViewBinding.java:33: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `C.button1` should be annotated with `@Nullable`.
-  31.       this.target = null;
-  32.   
-  33. >     target.button1 = null;
-  34.   
-  35.       super.unbind();
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/unbinder/C_ViewBinding.java:31: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `target` should be annotated with `@Nullable`.
-  29.       C target = this.target;
-  30.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
-  31. >     this.target = null;
-  32.   
-  33.       target.button1 = null;
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/unbinder/H_ViewBinding.java:33: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `H.button3` should be annotated with `@Nullable`.
-  31.       this.target = null;
-  32.   
-  33. >     target.button3 = null;
-  34.   
-  35.       super.unbind();
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/unbinder/H_ViewBinding.java:31: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `target` should be annotated with `@Nullable`.
-  29.       H target = this.target;
-  30.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
-  31. >     this.target = null;
-  32.   
-  33.       target.button3 = null;
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/unbinder/G_ViewBinding.java:45: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `G.button2` should be annotated with `@Nullable`.
-  43.       this.target = null;
-  44.   
-  45. >     target.button2 = null;
-  46.   
-  47.       view1020002.setOnClickListener(null);
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/unbinder/G_ViewBinding.java:43: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `target` should be annotated with `@Nullable`.
-  41.       G target = this.target;
-  42.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
-  43. >     this.target = null;
-  44.   
-  45.       target.button2 = null;
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/unbinder/G_ViewBinding.java:48: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `view1020002` should be annotated with `@Nullable`.
-  46.   
-  47.       view1020002.setOnClickListener(null);
-  48. >     view1020002 = null;
-  49.   
-  50.       super.unbind();
-
-butterknife-lint/src/main/java/butterknife/lint/InvalidR2UsageDetector.java:79: error: NULLSAFE_NULLABLE_DEREFERENCE
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/butterknife/butterknife-lint/src/main/java/butterknife/lint/InvalidR2UsageDetector.java:79: error: NULLSAFE_NULLABLE_DEREFERENCE
   Variable `sourceFile` is indirectly annotated with `@Nullable` (source `UFile JavaContext.getUastFile() at line 78`) and is dereferenced without being checked for null at line 79.
   77.       private static void detectR2(JavaContext context, UElement node) {
   78.         UFile sourceFile = context.getUastFile();
@@ -112,79 +8,7 @@ butterknife-lint/src/main/java/butterknife/lint/InvalidR2UsageDetector.java:79: 
   80.         if (!classes.isEmpty() && classes.get(0).getName() != null) {
   81.           String qualifiedName = classes.get(0).getName();
 
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:88: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `SimpleActivity.footer` should be annotated with `@Nullable`.
-  86.       target.hello = null;
-  87.       target.listOfThings = null;
-  88. >     target.footer = null;
-  89.       target.headerViews = null;
-  90.   
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:89: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `SimpleActivity.headerViews` should be annotated with `@Nullable`.
-  87.       target.listOfThings = null;
-  88.       target.footer = null;
-  89. >     target.headerViews = null;
-  90.   
-  91.       view7f08001d.setOnClickListener(null);
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:86: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `SimpleActivity.hello` should be annotated with `@Nullable`.
-  84.       target.title = null;
-  85.       target.subtitle = null;
-  86. >     target.hello = null;
-  87.       target.listOfThings = null;
-  88.       target.footer = null;
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:87: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `SimpleActivity.listOfThings` should be annotated with `@Nullable`.
-  85.       target.subtitle = null;
-  86.       target.hello = null;
-  87. >     target.listOfThings = null;
-  88.       target.footer = null;
-  89.       target.headerViews = null;
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:85: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `SimpleActivity.subtitle` should be annotated with `@Nullable`.
-  83.   
-  84.       target.title = null;
-  85. >     target.subtitle = null;
-  86.       target.hello = null;
-  87.       target.listOfThings = null;
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:84: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `SimpleActivity.title` should be annotated with `@Nullable`.
-  82.       this.target = null;
-  83.   
-  84. >     target.title = null;
-  85.       target.subtitle = null;
-  86.       target.hello = null;
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:82: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `target` should be annotated with `@Nullable`.
-  80.       SimpleActivity target = this.target;
-  81.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
-  82. >     this.target = null;
-  83.   
-  84.       target.title = null;
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:93: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `view7f08001d` should be annotated with `@Nullable`.
-  91.       view7f08001d.setOnClickListener(null);
-  92.       view7f08001d.setOnLongClickListener(null);
-  93. >     view7f08001d = null;
-  94.       ((AdapterView<?>) view7f08001e).setOnItemClickListener(null);
-  95.       view7f08001e = null;
-
-butterknife-integration-test/build/generated/source/apt/codegen/release/com/example/butterknife/library/SimpleActivity_ViewBinding.java:95: warning: NULLSAFE_FIELD_NOT_NULLABLE
-  Field `view7f08001e` should be annotated with `@Nullable`.
-  93.       view7f08001d = null;
-  94.       ((AdapterView<?>) view7f08001e).setOnItemClickListener(null);
-  95. >     view7f08001e = null;
-  96.     }
-  97.   }
-
-butterknife-lint/src/main/java/butterknife/lint/InvalidR2UsageDetector.java:104: error: NULLSAFE_NULLABLE_DEREFERENCE
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/butterknife/butterknife-lint/src/main/java/butterknife/lint/InvalidR2UsageDetector.java:104: error: NULLSAFE_NULLABLE_DEREFERENCE
   Variable `parent` is indirectly annotated with `@Nullable` (source `UElement LintUtils.skipParentheses(UElement) at line 101`) and is dereferenced without being checked for null at line 104.
   102.         return (text.equals(R2) || text.contains(".R2"))
   103.             && parent instanceof UExpression
@@ -194,5 +18,28 @@ butterknife-lint/src/main/java/butterknife/lint/InvalidR2UsageDetector.java:104:
 
 Summary of the reports
 
-    NULLSAFE_FIELD_NOT_NULLABLE: 21
-  NULLSAFE_NULLABLE_DEREFERENCE: 3
+  NULLSAFE_NULLABLE_DEREFERENCE: 2Found 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/butterknife/butterknife-runtime/src/main/java/butterknife/internal/Utils.java:35: error: NULLSAFE_NULLABLE_DEREFERENCE
+  Variable `drawable` is indirectly annotated with `@Nullable` (source `Drawable ContextCompat.getDrawable(Context,int) at line 34`) and is dereferenced without being checked for null at line 35.
+  33.   
+  34.       Drawable drawable = ContextCompat.getDrawable(context, id);
+  35. >     drawable = DrawableCompat.wrap(drawable.mutate());
+  36.       int color = ContextCompat.getColor(context, VALUE.resourceId);
+  37.       DrawableCompat.setTint(drawable, color);
+
+Summary of the reports
+
+  NULLSAFE_NULLABLE_DEREFERENCE: 1No issues foundFound 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/butterknife/butterknife-runtime/src/main/java/butterknife/internal/Utils.java:35: error: NULLSAFE_NULLABLE_DEREFERENCE
+  Variable `drawable` is indirectly annotated with `@Nullable` (source `Drawable ContextCompat.getDrawable(Context,int) at line 34`) and is dereferenced without being checked for null at line 35.
+  33.   
+  34.       Drawable drawable = ContextCompat.getDrawable(context, id);
+  35. >     drawable = DrawableCompat.wrap(drawable.mutate());
+  36.       int color = ContextCompat.getColor(context, VALUE.resourceId);
+  37.       DrawableCompat.setTint(drawable, color);
+
+Summary of the reports
+
+  NULLSAFE_NULLABLE_DEREFERENCE: 1No issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues foundNo issues found
