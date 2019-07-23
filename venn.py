@@ -20,6 +20,7 @@ def lines(filename, issuetype):
 
 repos = [
     'uber/okbuck',
+    'ben-manes/caffeine',
     'JakeWharton/butterknife',
 ]
 

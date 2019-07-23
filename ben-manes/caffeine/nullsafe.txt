@@ -1,0 +1,2425 @@
+No issues foundFound 293 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SIMSA.java:45: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  43.       this.ticker = builder.getTicker();
+  44.       this.expiry = builder.getExpiry(isAsync);
+  45. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  46.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  47.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SIMWA.java:45: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  43.       this.ticker = builder.getTicker();
+  44.       this.expiry = builder.getExpiry(isAsync);
+  45. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  46.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  47.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSMSA.java:45: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  43.       this.ticker = builder.getTicker();
+  44.       this.expiry = builder.getExpiry(isAsync);
+  45. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  46.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  47.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSMWA.java:45: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  43.       this.ticker = builder.getTicker();
+  44.       this.expiry = builder.getExpiry(isAsync);
+  45. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  46.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  47.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WIMSA.java:45: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  43.       this.ticker = builder.getTicker();
+  44.       this.expiry = builder.getExpiry(isAsync);
+  45. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  46.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  47.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WIMWA.java:45: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  43.       this.ticker = builder.getTicker();
+  44.       this.expiry = builder.getExpiry(isAsync);
+  45. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  46.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  47.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSMSA.java:45: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  43.       this.ticker = builder.getTicker();
+  44.       this.expiry = builder.getExpiry(isAsync);
+  45. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  46.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  47.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSMWA.java:45: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  43.       this.ticker = builder.getTicker();
+  44.       this.expiry = builder.getExpiry(isAsync);
+  45. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  46.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  47.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILMSA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILMWA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SISMSA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SISMWA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLMSA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLMWA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSSMSA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSSMWA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILMSA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILMWA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WISMSA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WISMWA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLMSA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLMWA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSSMSA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSSMWA.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  44.       this.ticker = builder.getTicker();
+  45.       this.expiry = builder.getExpiry(isAsync);
+  46. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  47.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILSMSA.java:47: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  45.       this.ticker = builder.getTicker();
+  46.       this.expiry = builder.getExpiry(isAsync);
+  47. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  48.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  49.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILSMWA.java:47: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  45.       this.ticker = builder.getTicker();
+  46.       this.expiry = builder.getExpiry(isAsync);
+  47. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  48.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  49.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLSMSA.java:47: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  45.       this.ticker = builder.getTicker();
+  46.       this.expiry = builder.getExpiry(isAsync);
+  47. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  48.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  49.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLSMWA.java:47: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  45.       this.ticker = builder.getTicker();
+  46.       this.expiry = builder.getExpiry(isAsync);
+  47. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  48.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  49.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILSMSA.java:47: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  45.       this.ticker = builder.getTicker();
+  46.       this.expiry = builder.getExpiry(isAsync);
+  47. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  48.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  49.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILSMWA.java:47: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  45.       this.ticker = builder.getTicker();
+  46.       this.expiry = builder.getExpiry(isAsync);
+  47. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  48.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  49.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLSMSA.java:47: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  45.       this.ticker = builder.getTicker();
+  46.       this.expiry = builder.getExpiry(isAsync);
+  47. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  48.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  49.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLSMWA.java:47: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  45.       this.ticker = builder.getTicker();
+  46.       this.expiry = builder.getExpiry(isAsync);
+  47. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  48.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  49.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SIA.java:48: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  46.       super(builder, cacheLoader, async);
+  47.       this.ticker = builder.getTicker();
+  48. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  49.           ? new AccessOrderDeque<Node<K, V>>()
+  50.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SIA.java:52: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  50.           : null;
+  51.       this.expiry = builder.getExpiry(isAsync);
+  52. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  53.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  54.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSA.java:48: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  46.       super(builder, cacheLoader, async);
+  47.       this.ticker = builder.getTicker();
+  48. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  49.           ? new AccessOrderDeque<Node<K, V>>()
+  50.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSA.java:52: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  50.           : null;
+  51.       this.expiry = builder.getExpiry(isAsync);
+  52. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  53.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  54.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WIA.java:48: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  46.       super(builder, cacheLoader, async);
+  47.       this.ticker = builder.getTicker();
+  48. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  49.           ? new AccessOrderDeque<Node<K, V>>()
+  50.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WIA.java:52: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  50.           : null;
+  51.       this.expiry = builder.getExpiry(isAsync);
+  52. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  53.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  54.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSA.java:48: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  46.       super(builder, cacheLoader, async);
+  47.       this.ticker = builder.getTicker();
+  48. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  49.           ? new AccessOrderDeque<Node<K, V>>()
+  50.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSA.java:52: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  50.           : null;
+  51.       this.expiry = builder.getExpiry(isAsync);
+  52. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  53.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  54.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILA.java:49: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  47.       super(builder, cacheLoader, async);
+  48.       this.ticker = builder.getTicker();
+  49. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  50.           ? new AccessOrderDeque<Node<K, V>>()
+  51.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILA.java:53: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  51.           : null;
+  52.       this.expiry = builder.getExpiry(isAsync);
+  53. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  54.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  55.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SISA.java:49: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  47.       super(builder, cacheLoader, async);
+  48.       this.ticker = builder.getTicker();
+  49. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  50.           ? new AccessOrderDeque<Node<K, V>>()
+  51.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SISA.java:53: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  51.           : null;
+  52.       this.expiry = builder.getExpiry(isAsync);
+  53. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  54.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  55.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLA.java:49: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  47.       super(builder, cacheLoader, async);
+  48.       this.ticker = builder.getTicker();
+  49. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  50.           ? new AccessOrderDeque<Node<K, V>>()
+  51.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLA.java:53: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  51.           : null;
+  52.       this.expiry = builder.getExpiry(isAsync);
+  53. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  54.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  55.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSSA.java:49: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  47.       super(builder, cacheLoader, async);
+  48.       this.ticker = builder.getTicker();
+  49. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  50.           ? new AccessOrderDeque<Node<K, V>>()
+  51.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSSA.java:53: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  51.           : null;
+  52.       this.expiry = builder.getExpiry(isAsync);
+  53. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  54.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  55.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILA.java:49: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  47.       super(builder, cacheLoader, async);
+  48.       this.ticker = builder.getTicker();
+  49. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  50.           ? new AccessOrderDeque<Node<K, V>>()
+  51.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILA.java:53: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  51.           : null;
+  52.       this.expiry = builder.getExpiry(isAsync);
+  53. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  54.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  55.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WISA.java:49: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  47.       super(builder, cacheLoader, async);
+  48.       this.ticker = builder.getTicker();
+  49. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  50.           ? new AccessOrderDeque<Node<K, V>>()
+  51.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WISA.java:53: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  51.           : null;
+  52.       this.expiry = builder.getExpiry(isAsync);
+  53. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  54.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  55.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLA.java:49: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  47.       super(builder, cacheLoader, async);
+  48.       this.ticker = builder.getTicker();
+  49. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  50.           ? new AccessOrderDeque<Node<K, V>>()
+  51.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLA.java:53: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  51.           : null;
+  52.       this.expiry = builder.getExpiry(isAsync);
+  53. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  54.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  55.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSSA.java:49: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  47.       super(builder, cacheLoader, async);
+  48.       this.ticker = builder.getTicker();
+  49. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  50.           ? new AccessOrderDeque<Node<K, V>>()
+  51.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSSA.java:53: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  51.           : null;
+  52.       this.expiry = builder.getExpiry(isAsync);
+  53. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  54.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  55.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILSA.java:50: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  48.       super(builder, cacheLoader, async);
+  49.       this.ticker = builder.getTicker();
+  50. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  51.           ? new AccessOrderDeque<Node<K, V>>()
+  52.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILSA.java:54: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  52.           : null;
+  53.       this.expiry = builder.getExpiry(isAsync);
+  54. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  55.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  56.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLSA.java:50: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  48.       super(builder, cacheLoader, async);
+  49.       this.ticker = builder.getTicker();
+  50. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  51.           ? new AccessOrderDeque<Node<K, V>>()
+  52.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLSA.java:54: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  52.           : null;
+  53.       this.expiry = builder.getExpiry(isAsync);
+  54. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  55.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  56.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILSA.java:50: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  48.       super(builder, cacheLoader, async);
+  49.       this.ticker = builder.getTicker();
+  50. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  51.           ? new AccessOrderDeque<Node<K, V>>()
+  52.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILSA.java:54: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  52.           : null;
+  53.       this.expiry = builder.getExpiry(isAsync);
+  54. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  55.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  56.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLSA.java:50: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  48.       super(builder, cacheLoader, async);
+  49.       this.ticker = builder.getTicker();
+  50. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  51.           ? new AccessOrderDeque<Node<K, V>>()
+  52.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLSA.java:54: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  52.           : null;
+  53.       this.expiry = builder.getExpiry(isAsync);
+  54. >     this.timerWheel = builder.expiresVariable() ? new TimerWheel<K, V>(this) : null;
+  55.       this.expiresAfterAccessNanos = builder.getExpiresAfterAccessNanos();
+  56.       this.writeBuffer = new MpscGrowableArrayQueue<>(WRITE_BUFFER_MIN, WRITE_BUFFER_MAX);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SIMSA.java:54: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  52.   
+  53.     protected final boolean expiresVariable() {
+  54. >     return (timerWheel != null);
+  55.     }
+  56.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SIMWA.java:54: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  52.   
+  53.     protected final boolean expiresVariable() {
+  54. >     return (timerWheel != null);
+  55.     }
+  56.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WIMSA.java:54: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  52.   
+  53.     protected final boolean expiresVariable() {
+  54. >     return (timerWheel != null);
+  55.     }
+  56.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WIMWA.java:54: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  52.   
+  53.     protected final boolean expiresVariable() {
+  54. >     return (timerWheel != null);
+  55.     }
+  56.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSMSA.java:54: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  52.   
+  53.     protected final boolean expiresVariable() {
+  54. >     return (timerWheel != null);
+  55.     }
+  56.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSMWA.java:54: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  52.   
+  53.     protected final boolean expiresVariable() {
+  54. >     return (timerWheel != null);
+  55.     }
+  56.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILMSA.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  53.   
+  54.     protected final boolean expiresVariable() {
+  55. >     return (timerWheel != null);
+  56.     }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILMWA.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  53.   
+  54.     protected final boolean expiresVariable() {
+  55. >     return (timerWheel != null);
+  56.     }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SISMSA.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  53.   
+  54.     protected final boolean expiresVariable() {
+  55. >     return (timerWheel != null);
+  56.     }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SISMWA.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  53.   
+  54.     protected final boolean expiresVariable() {
+  55. >     return (timerWheel != null);
+  56.     }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILMSA.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  53.   
+  54.     protected final boolean expiresVariable() {
+  55. >     return (timerWheel != null);
+  56.     }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILMWA.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  53.   
+  54.     protected final boolean expiresVariable() {
+  55. >     return (timerWheel != null);
+  56.     }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WISMSA.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  53.   
+  54.     protected final boolean expiresVariable() {
+  55. >     return (timerWheel != null);
+  56.     }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WISMWA.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  53.   
+  54.     protected final boolean expiresVariable() {
+  55. >     return (timerWheel != null);
+  56.     }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLMSA.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  53.   
+  54.     protected final boolean expiresVariable() {
+  55. >     return (timerWheel != null);
+  56.     }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLMWA.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  53.   
+  54.     protected final boolean expiresVariable() {
+  55. >     return (timerWheel != null);
+  56.     }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSSMSA.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  53.   
+  54.     protected final boolean expiresVariable() {
+  55. >     return (timerWheel != null);
+  56.     }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSSMWA.java:55: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  53.   
+  54.     protected final boolean expiresVariable() {
+  55. >     return (timerWheel != null);
+  56.     }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILSMSA.java:56: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  54.   
+  55.     protected final boolean expiresVariable() {
+  56. >     return (timerWheel != null);
+  57.     }
+  58.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILSMWA.java:56: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  54.   
+  55.     protected final boolean expiresVariable() {
+  56. >     return (timerWheel != null);
+  57.     }
+  58.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILSMSA.java:56: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  54.   
+  55.     protected final boolean expiresVariable() {
+  56. >     return (timerWheel != null);
+  57.     }
+  58.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILSMWA.java:56: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  54.   
+  55.     protected final boolean expiresVariable() {
+  56. >     return (timerWheel != null);
+  57.     }
+  58.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLSMSA.java:56: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  54.   
+  55.     protected final boolean expiresVariable() {
+  56. >     return (timerWheel != null);
+  57.     }
+  58.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLSMWA.java:56: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  54.   
+  55.     protected final boolean expiresVariable() {
+  56. >     return (timerWheel != null);
+  57.     }
+  58.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSMSA.java:58: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  56.   
+  57.     protected final boolean expiresVariable() {
+  58. >     return (timerWheel != null);
+  59.     }
+  60.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSMWA.java:58: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  56.   
+  57.     protected final boolean expiresVariable() {
+  58. >     return (timerWheel != null);
+  59.     }
+  60.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/LocalCacheFactory.java:71: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `Caffeine.removalListener` should be annotated with `@Nullable`.
+  69.         sb.append('I');
+  70.       }
+  71. >     if (builder.removalListener != null) {
+  72.         sb.append('L');
+  73.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLMSA.java:59: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  57.   
+  58.     protected final boolean expiresVariable() {
+  59. >     return (timerWheel != null);
+  60.     }
+  61.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLMWA.java:59: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  57.   
+  58.     protected final boolean expiresVariable() {
+  59. >     return (timerWheel != null);
+  60.     }
+  61.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSSMSA.java:59: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  57.   
+  58.     protected final boolean expiresVariable() {
+  59. >     return (timerWheel != null);
+  60.     }
+  61.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSSMWA.java:59: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  57.   
+  58.     protected final boolean expiresVariable() {
+  59. >     return (timerWheel != null);
+  60.     }
+  61.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLSMSA.java:60: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  58.   
+  59.     protected final boolean expiresVariable() {
+  60. >     return (timerWheel != null);
+  61.     }
+  62.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLSMWA.java:60: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  58.   
+  59.     protected final boolean expiresVariable() {
+  60. >     return (timerWheel != null);
+  61.     }
+  62.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SIA.java:66: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  64.   
+  65.     protected final boolean expiresVariable() {
+  66. >     return (timerWheel != null);
+  67.     }
+  68.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SIMSA.java:66: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  64.   
+  65.     protected final boolean expiresAfterAccess() {
+  66. >     return (timerWheel == null);
+  67.     }
+  68.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SIMWA.java:66: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  64.   
+  65.     protected final boolean expiresAfterAccess() {
+  66. >     return (timerWheel == null);
+  67.     }
+  68.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSA.java:66: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  64.   
+  65.     protected final boolean expiresVariable() {
+  66. >     return (timerWheel != null);
+  67.     }
+  68.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WIA.java:66: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  64.   
+  65.     protected final boolean expiresVariable() {
+  66. >     return (timerWheel != null);
+  67.     }
+  68.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WIMSA.java:66: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  64.   
+  65.     protected final boolean expiresAfterAccess() {
+  66. >     return (timerWheel == null);
+  67.     }
+  68.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WIMWA.java:66: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  64.   
+  65.     protected final boolean expiresAfterAccess() {
+  66. >     return (timerWheel == null);
+  67.     }
+  68.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSA.java:66: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  64.   
+  65.     protected final boolean expiresVariable() {
+  66. >     return (timerWheel != null);
+  67.     }
+  68.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSMSA.java:66: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  64.   
+  65.     protected final boolean expiresAfterAccess() {
+  66. >     return (timerWheel == null);
+  67.     }
+  68.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSMWA.java:66: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  64.   
+  65.     protected final boolean expiresAfterAccess() {
+  66. >     return (timerWheel == null);
+  67.     }
+  68.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresVariable() {
+  67. >     return (timerWheel != null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILMSA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresAfterAccess() {
+  67. >     return (timerWheel == null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILMWA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresAfterAccess() {
+  67. >     return (timerWheel == null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SISA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresVariable() {
+  67. >     return (timerWheel != null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SISMSA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresAfterAccess() {
+  67. >     return (timerWheel == null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SISMWA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresAfterAccess() {
+  67. >     return (timerWheel == null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresVariable() {
+  67. >     return (timerWheel != null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSSA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresVariable() {
+  67. >     return (timerWheel != null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresVariable() {
+  67. >     return (timerWheel != null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILMSA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresAfterAccess() {
+  67. >     return (timerWheel == null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILMWA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresAfterAccess() {
+  67. >     return (timerWheel == null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WISA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresVariable() {
+  67. >     return (timerWheel != null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WISMSA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresAfterAccess() {
+  67. >     return (timerWheel == null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WISMWA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresAfterAccess() {
+  67. >     return (timerWheel == null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresVariable() {
+  67. >     return (timerWheel != null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLMSA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresAfterAccess() {
+  67. >     return (timerWheel == null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLMWA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresAfterAccess() {
+  67. >     return (timerWheel == null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSSA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresVariable() {
+  67. >     return (timerWheel != null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSSMSA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresAfterAccess() {
+  67. >     return (timerWheel == null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSSMWA.java:67: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  65.   
+  66.     protected final boolean expiresAfterAccess() {
+  67. >     return (timerWheel == null);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILSA.java:68: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  66.   
+  67.     protected final boolean expiresVariable() {
+  68. >     return (timerWheel != null);
+  69.     }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILSMSA.java:68: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  66.   
+  67.     protected final boolean expiresAfterAccess() {
+  68. >     return (timerWheel == null);
+  69.     }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILSMWA.java:68: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  66.   
+  67.     protected final boolean expiresAfterAccess() {
+  68. >     return (timerWheel == null);
+  69.     }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLSA.java:68: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  66.   
+  67.     protected final boolean expiresVariable() {
+  68. >     return (timerWheel != null);
+  69.     }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILSA.java:68: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  66.   
+  67.     protected final boolean expiresVariable() {
+  68. >     return (timerWheel != null);
+  69.     }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILSMSA.java:68: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  66.   
+  67.     protected final boolean expiresAfterAccess() {
+  68. >     return (timerWheel == null);
+  69.     }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILSMWA.java:68: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  66.   
+  67.     protected final boolean expiresAfterAccess() {
+  68. >     return (timerWheel == null);
+  69.     }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLSA.java:68: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  66.   
+  67.     protected final boolean expiresVariable() {
+  68. >     return (timerWheel != null);
+  69.     }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLSMSA.java:68: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  66.   
+  67.     protected final boolean expiresAfterAccess() {
+  68. >     return (timerWheel == null);
+  69.     }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLSMWA.java:68: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  66.   
+  67.     protected final boolean expiresAfterAccess() {
+  68. >     return (timerWheel == null);
+  69.     }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SIMS.java:75: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  73.         this.sketch.ensureCapacity(capacity);
+  74.       }
+  75. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  76.           ? new AccessOrderDeque<Node<K, V>>()
+  77.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SIMW.java:75: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  73.         this.sketch.ensureCapacity(capacity);
+  74.       }
+  75. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  76.           ? new AccessOrderDeque<Node<K, V>>()
+  77.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSMS.java:75: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  73.         this.sketch.ensureCapacity(capacity);
+  74.       }
+  75. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  76.           ? new AccessOrderDeque<Node<K, V>>()
+  77.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSMW.java:75: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  73.         this.sketch.ensureCapacity(capacity);
+  74.       }
+  75. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  76.           ? new AccessOrderDeque<Node<K, V>>()
+  77.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WIMS.java:75: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  73.         this.sketch.ensureCapacity(capacity);
+  74.       }
+  75. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  76.           ? new AccessOrderDeque<Node<K, V>>()
+  77.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WIMW.java:75: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  73.         this.sketch.ensureCapacity(capacity);
+  74.       }
+  75. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  76.           ? new AccessOrderDeque<Node<K, V>>()
+  77.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSMS.java:75: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  73.         this.sketch.ensureCapacity(capacity);
+  74.       }
+  75. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  76.           ? new AccessOrderDeque<Node<K, V>>()
+  77.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSMW.java:75: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  73.         this.sketch.ensureCapacity(capacity);
+  74.       }
+  75. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  76.           ? new AccessOrderDeque<Node<K, V>>()
+  77.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILMS.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILMW.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SISMS.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SISMW.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLMS.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLMW.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSMSA.java:70: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  68.   
+  69.     protected final boolean expiresAfterAccess() {
+  70. >     return (timerWheel == null);
+  71.     }
+  72.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSMWA.java:70: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  68.   
+  69.     protected final boolean expiresAfterAccess() {
+  70. >     return (timerWheel == null);
+  71.     }
+  72.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSSMS.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSSMW.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILMS.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILMW.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WISMS.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WISMW.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLMS.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLMW.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSSMS.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSSMW.java:76: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  74.         this.sketch.ensureCapacity(capacity);
+  75.       }
+  76. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  77.           ? new AccessOrderDeque<Node<K, V>>()
+  78.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILSMS.java:77: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  75.         this.sketch.ensureCapacity(capacity);
+  76.       }
+  77. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  78.           ? new AccessOrderDeque<Node<K, V>>()
+  79.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILSMW.java:77: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  75.         this.sketch.ensureCapacity(capacity);
+  76.       }
+  77. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  78.           ? new AccessOrderDeque<Node<K, V>>()
+  79.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLMSA.java:71: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  69.   
+  70.     protected final boolean expiresAfterAccess() {
+  71. >     return (timerWheel == null);
+  72.     }
+  73.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLMWA.java:71: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  69.   
+  70.     protected final boolean expiresAfterAccess() {
+  71. >     return (timerWheel == null);
+  72.     }
+  73.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLSMS.java:77: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  75.         this.sketch.ensureCapacity(capacity);
+  76.       }
+  77. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  78.           ? new AccessOrderDeque<Node<K, V>>()
+  79.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLSMW.java:77: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  75.         this.sketch.ensureCapacity(capacity);
+  76.       }
+  77. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  78.           ? new AccessOrderDeque<Node<K, V>>()
+  79.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSSMSA.java:71: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  69.   
+  70.     protected final boolean expiresAfterAccess() {
+  71. >     return (timerWheel == null);
+  72.     }
+  73.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSSMWA.java:71: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  69.   
+  70.     protected final boolean expiresAfterAccess() {
+  71. >     return (timerWheel == null);
+  72.     }
+  73.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILSMS.java:77: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  75.         this.sketch.ensureCapacity(capacity);
+  76.       }
+  77. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  78.           ? new AccessOrderDeque<Node<K, V>>()
+  79.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILSMW.java:77: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  75.         this.sketch.ensureCapacity(capacity);
+  76.       }
+  77. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  78.           ? new AccessOrderDeque<Node<K, V>>()
+  79.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLSMS.java:77: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  75.         this.sketch.ensureCapacity(capacity);
+  76.       }
+  77. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  78.           ? new AccessOrderDeque<Node<K, V>>()
+  79.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLSMW.java:77: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accessOrderEdenDeque` should be annotated with `@Nullable`.
+  75.         this.sketch.ensureCapacity(capacity);
+  76.       }
+  77. >     this.accessOrderEdenDeque = builder.evicts() || builder.expiresAfterAccess()
+  78.           ? new AccessOrderDeque<Node<K, V>>()
+  79.           : null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLSMSA.java:72: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  70.   
+  71.     protected final boolean expiresAfterAccess() {
+  72. >     return (timerWheel == null);
+  73.     }
+  74.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLSMWA.java:72: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  70.   
+  71.     protected final boolean expiresAfterAccess() {
+  72. >     return (timerWheel == null);
+  73.     }
+  74.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SIA.java:78: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  76.   
+  77.     protected final boolean expiresAfterAccess() {
+  78. >     return (timerWheel == null);
+  79.     }
+  80.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSA.java:78: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  76.   
+  77.     protected final boolean expiresAfterAccess() {
+  78. >     return (timerWheel == null);
+  79.     }
+  80.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WIA.java:78: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  76.   
+  77.     protected final boolean expiresAfterAccess() {
+  78. >     return (timerWheel == null);
+  79.     }
+  80.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSA.java:78: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  76.   
+  77.     protected final boolean expiresAfterAccess() {
+  78. >     return (timerWheel == null);
+  79.     }
+  80.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILA.java:79: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  77.   
+  78.     protected final boolean expiresAfterAccess() {
+  79. >     return (timerWheel == null);
+  80.     }
+  81.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SISA.java:79: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  77.   
+  78.     protected final boolean expiresAfterAccess() {
+  79. >     return (timerWheel == null);
+  80.     }
+  81.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLA.java:79: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  77.   
+  78.     protected final boolean expiresAfterAccess() {
+  79. >     return (timerWheel == null);
+  80.     }
+  81.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSSA.java:79: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  77.   
+  78.     protected final boolean expiresAfterAccess() {
+  79. >     return (timerWheel == null);
+  80.     }
+  81.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILA.java:79: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  77.   
+  78.     protected final boolean expiresAfterAccess() {
+  79. >     return (timerWheel == null);
+  80.     }
+  81.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WISA.java:79: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  77.   
+  78.     protected final boolean expiresAfterAccess() {
+  79. >     return (timerWheel == null);
+  80.     }
+  81.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLA.java:79: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  77.   
+  78.     protected final boolean expiresAfterAccess() {
+  79. >     return (timerWheel == null);
+  80.     }
+  81.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSSA.java:79: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  77.   
+  78.     protected final boolean expiresAfterAccess() {
+  79. >     return (timerWheel == null);
+  80.     }
+  81.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SILSA.java:80: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  78.   
+  79.     protected final boolean expiresAfterAccess() {
+  80. >     return (timerWheel == null);
+  81.     }
+  82.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/SSLSA.java:80: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  78.   
+  79.     protected final boolean expiresAfterAccess() {
+  80. >     return (timerWheel == null);
+  81.     }
+  82.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WILSA.java:80: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  78.   
+  79.     protected final boolean expiresAfterAccess() {
+  80. >     return (timerWheel == null);
+  81.     }
+  82.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/build/generated-sources/com/github/benmanes/caffeine/cache/WSLSA.java:80: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `timerWheel` should be annotated with `@Nullable`.
+  78.   
+  79.     protected final boolean expiresAfterAccess() {
+  80. >     return (timerWheel == null);
+  81.     }
+  82.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:96: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `last` should be annotated with `@Nullable`.
+  94.       first = next;
+  95.       if (next == null) {
+  96. >       last = null;
+  97.       } else {
+  98.         setPrevious(next, null);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/FrequencySketch.java:94: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `table` should be annotated with `@Nullable`.
+  92.       requireArgument(maximumSize >= 0);
+  93.       int maximum = (int) Math.min(maximumSize, Integer.MAX_VALUE >>> 1);
+  94. >     if ((table != null) && (table.length >= maximum)) {
+  95.         return;
+  96.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/SerializationProxy.java:111: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `loader` should be annotated with `@Nullable`.
+  109.       }
+  110.   
+  111. >     if (loader == null) {
+  112.         return builder.build();
+  113.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/CaffeineSpec.java:127: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `expireAfterAccessTimeUnit` should be annotated with `@Nullable`.
+  125.         }
+  126.       }
+  127. >     if (expireAfterAccessTimeUnit != null) {
+  128.         builder.expireAfterAccess(expireAfterAccessDuration, expireAfterAccessTimeUnit);
+  129.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/CaffeineSpec.java:130: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `expireAfterWriteTimeUnit` should be annotated with `@Nullable`.
+  128.         builder.expireAfterAccess(expireAfterAccessDuration, expireAfterAccessTimeUnit);
+  129.       }
+  130. >     if (expireAfterWriteTimeUnit != null) {
+  131.         builder.expireAfterWrite(expireAfterWriteDuration, expireAfterWriteTimeUnit);
+  132.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/CaffeineSpec.java:114: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `keyStrength` should be annotated with `@Nullable`.
+  112.         builder.maximumWeight(maximumWeight);
+  113.       }
+  114. >     if (keyStrength != null) {
+  115.         requireState(keyStrength == Strength.WEAK);
+  116.         builder.weakKeys();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/CaffeineSpec.java:133: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `refreshAfterWriteTimeUnit` should be annotated with `@Nullable`.
+  131.         builder.expireAfterWrite(expireAfterWriteDuration, expireAfterWriteTimeUnit);
+  132.       }
+  133. >     if (refreshAfterWriteTimeUnit != null) {
+  134.         builder.refreshAfterWrite(refreshAfterWriteDuration, refreshAfterWriteTimeUnit);
+  135.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/CaffeineSpec.java:118: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `valueStrength` should be annotated with `@Nullable`.
+  116.         builder.weakKeys();
+  117.       }
+  118. >     if (valueStrength != null) {
+  119.         if (valueStrength == Strength.WEAK) {
+  120.           builder.weakValues();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:111: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `first` should be annotated with `@Nullable`.
+  109.       last = prev;
+  110.       if (prev == null) {
+  111. >       first = null;
+  112.       } else {
+  113.         setNext(prev, null);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/FrequencySketch.java:112: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `table` should be annotated with `@Nullable`.
+  110.      */
+  111.     public boolean isNotInitialized() {
+  112. >     return (table == null);
+  113.     }
+  114.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:140: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `first` should be annotated with `@Nullable`.
+  138.     @Override
+  139.     public boolean isEmpty() {
+  140. >     return (first == null);
+  141.     }
+  142.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java:143: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `removalListener` should be annotated with `@Nullable`.
+  141.     @Override
+  142.     public boolean hasRemovalListener() {
+  143. >     return (removalListener != null);
+  144.     }
+  145.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:171: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `first` should be annotated with `@Nullable`.
+  169.         e = next;
+  170.       }
+  171. >     first = last = null;
+  172.     }
+  173.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:171: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `last` should be annotated with `@Nullable`.
+  169.         e = next;
+  170.       }
+  171. >     first = last = null;
+  172.     }
+  173.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncLoadingCache.java:165: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `cacheView` should be annotated with `@Nullable`.
+  163.     @Override
+  164.     public LoadingCache<K, V> synchronous() {
+  165. >     return (cacheView == null) ? (cacheView = new LoadingCacheView<>(this)) : cacheView;
+  166.     }
+  167.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/SingleConsumerQueue.java:198: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `SingleConsumerQueue$Node.next` should be annotated with `@Nullable`.
+  196.         Node<E> next = cursor.getNextRelaxed();
+  197.         if (next == null) {
+  198. >         while ((next = cursor.next) == null) {}
+  199.         }
+  200.         cursor = next;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/StripedBuffer.java:231: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `table` should be annotated with `@Nullable`.
+  229.                 Buffer<E>[] rs;
+  230.                 int mask, j;
+  231. >               if (((rs = table) != null) && ((mask = rs.length) > 0)
+  232.                     && (rs[j = (mask - 1) & h] == null)) {
+  233.                   rs[j] = create(e);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/SingleConsumerQueue.java:228: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `SingleConsumerQueue$Node.next` should be annotated with `@Nullable`.
+  226.       Node<E> next = h.getNextRelaxed();
+  227.       if (next == null) {
+  228. >       while ((next = h.next) == null) {}
+  229.       }
+  230.       return next.value;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/CaffeineSpec.java:240: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `keyStrength` should be annotated with `@Nullable`.
+  238.     void weakKeys(@Nullable String value) {
+  239.       requireArgument(value == null, "weak keys does not take a value");
+  240. >     requireArgument(keyStrength == null, "weak keys was already set");
+  241.       keyStrength = Strength.WEAK;
+  242.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/SingleConsumerQueue.java:257: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `SingleConsumerQueue$Node.next` should be annotated with `@Nullable`.
+  255.       head = next;
+  256.       if (factory == OPTIMISIC) {
+  257. >       h.next = null; // prevent nepotism
+  258.       }
+  259.       return e;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/SingleConsumerQueue.java:254: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `SingleConsumerQueue$Node.value` should be annotated with `@Nullable`.
+  252.       }
+  253.       E e = next.value;
+  254. >     next.value = null;
+  255.       head = next;
+  256.       if (factory == OPTIMISIC) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/CaffeineSpec.java:247: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `valueStrength` should be annotated with `@Nullable`.
+  245.     void valueStrength(String key, @Nullable String value, Strength strength) {
+  246.       requireArgument(value == null, "%s does not take a value", key);
+  247. >     requireArgument(valueStrength == null, "%s was already set to %s", key, valueStrength);
+  248.       valueStrength = strength;
+  249.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java:269: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `asMapView` should be annotated with `@Nullable`.
+  267.       @Override
+  268.       public ConcurrentMap<K, V> asMap() {
+  269. >       return (asMapView == null) ? (asMapView = new AsMapView<>(asyncCache().cache())) : asMapView;
+  270.       }
+  271.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:282: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `executor` should be annotated with `@Nullable`.
+  280.     @NonNull
+  281.     public Caffeine<K, V> executor(@NonNull Executor executor) {
+  282. >     requireState(this.executor == null, "executor was already set to %s", this.executor);
+  283.       this.executor = requireNonNull(executor);
+  284.       return this;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:289: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `executor` should be annotated with `@Nullable`.
+  287.     @NonNull
+  288.     Executor getExecutor() {
+  289. >     return (executor == null) ? ForkJoinPool.commonPool() : executor;
+  290.     }
+  291.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/SingleConsumerQueue.java:307: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `SingleConsumerQueue$Node.next` should be annotated with `@Nullable`.
+  305.             Node<E> next = first.getNextRelaxed();
+  306.             if (next.value == null) {
+  307. >             first.next = null; // reduce nepotism
+  308.             }
+  309.             first = next;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/SingleConsumerQueue.java:306: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `SingleConsumerQueue$Node.value` should be annotated with `@Nullable`.
+  304.             }
+  305.             Node<E> next = first.getNextRelaxed();
+  306. >           if (next.value == null) {
+  307.               first.next = null; // reduce nepotism
+  308.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:315: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `weigher` should be annotated with `@Nullable`.
+  313.       requireState(this.maximumWeight == UNSET_INT,
+  314.           "maximum weight was already set to %s", this.maximumWeight);
+  315. >     requireState(this.weigher == null, "maximum size can not be combined with weigher");
+  316.       requireArgument(maximumSize >= 0, "maximum size must not be negative");
+  317.       this.maximumSize = maximumSize;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:377: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `cursor` should be annotated with `@Nullable`.
+  375.       @Override
+  376.       public boolean hasNext() {
+  377. >       return (cursor != null);
+  378.       }
+  379.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:390: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `weigher` should be annotated with `@Nullable`.
+  388.         @NonNull Weigher<? super K1, ? super V1> weigher) {
+  389.       requireNonNull(weigher);
+  390. >     requireState(this.weigher == null, "weigher was already set to %s", this.weigher);
+  391.       requireState(!strictParsing || this.maximumSize == UNSET_INT,
+  392.           "weigher can not be combined with maximum size", this.maximumSize);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java:405: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `previous` should be annotated with `@Nullable`.
+  403.         }
+  404.         AbstractLinkedDeque.this.remove(previous);
+  405. >       previous = null;
+  406.       }
+  407.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/SingleConsumerQueue.java:405: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `prev` should be annotated with `@Nullable`.
+  403.   
+  404.         private void advance() {
+  405. >         if ((prev == null) || !failOnRemoval) {
+  406.             prev = cursor;
+  407.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:405: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `weigher` should be annotated with `@Nullable`.
+  403.   
+  404.     boolean isWeighted() {
+  405. >     return (weigher != null);
+  406.     }
+  407.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/SingleConsumerQueue.java:417: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `SingleConsumerQueue$Node.value` should be annotated with `@Nullable`.
+  415.           }
+  416.           failOnRemoval = true;
+  417. >         cursor.value = null;
+  418.   
+  419.           if (t == cursor) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/SingleConsumerQueue.java:430: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `SingleConsumerQueue$Node.next` should be annotated with `@Nullable`.
+  428.         Node<E> awaitNext() {
+  429.           if (cursor.getNextRelaxed() == null) {
+  430. >           while (cursor.next == null) {}
+  431.           }
+  432.           return cursor.getNextRelaxed();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:440: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `keyStrength` should be annotated with `@Nullable`.
+  438.     @NonNull
+  439.     public Caffeine<K, V> weakKeys() {
+  440. >     requireState(keyStrength == null, "Key strength was already set to %s", keyStrength);
+  441.       requireState(writer == null, "Weak keys may not be used with CacheWriter");
+  442.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:441: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `writer` should be annotated with `@Nullable`.
+  439.     public Caffeine<K, V> weakKeys() {
+  440.       requireState(keyStrength == null, "Key strength was already set to %s", keyStrength);
+  441. >     requireState(writer == null, "Weak keys may not be used with CacheWriter");
+  442.   
+  443.       keyStrength = Strength.WEAK;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:448: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `keyStrength` should be annotated with `@Nullable`.
+  446.   
+  447.     boolean isStrongKeys() {
+  448. >     return (keyStrength == null);
+  449.     }
+  450.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:472: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `valueStrength` should be annotated with `@Nullable`.
+  470.     @NonNull
+  471.     public Caffeine<K, V> weakValues() {
+  472. >     requireState(valueStrength == null, "Value strength was already set to %s", valueStrength);
+  473.       valueStrength = Strength.WEAK;
+  474.       return this;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:478: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `valueStrength` should be annotated with `@Nullable`.
+  476.   
+  477.     boolean isStrongValues() {
+  478. >     return (valueStrength == null);
+  479.     }
+  480.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:509: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `valueStrength` should be annotated with `@Nullable`.
+  507.     @NonNull
+  508.     public Caffeine<K, V> softValues() {
+  509. >     requireState(valueStrength == null, "Value strength was already set to %s", valueStrength);
+  510.       valueStrength = Strength.SOFT;
+  511.       return this;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java:509: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `values` should be annotated with `@Nullable`.
+  507.       @Override
+  508.       public Collection<V> values() {
+  509. >       return (values == null) ? (values = new Values()) : values;
+  510.       }
+  511.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java:514: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `entries` should be annotated with `@Nullable`.
+  512.       @Override
+  513.       public Set<Entry<K, V>> entrySet() {
+  514. >       return (entries == null) ? (entries = new EntrySet()) : entries;
+  515.       }
+  516.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:556: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `expiry` should be annotated with `@Nullable`.
+  554.       requireState(expireAfterWriteNanos == UNSET_INT,
+  555.           "expireAfterWrite was already set to %s ns", expireAfterWriteNanos);
+  556. >     requireState(expiry == null, "expireAfterWrite may not be used with variable expiration");
+  557.       requireArgument(duration >= 0, "duration cannot be negative: %s %s", duration, unit);
+  558.       this.expireAfterWriteNanos = unit.toNanos(duration);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java:614: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `cursor` should be annotated with `@Nullable`.
+  612.                 }
+  613.               }
+  614. >             return (cursor != null);
+  615.             }
+  616.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java:617: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `current` should be annotated with `@Nullable`.
+  615.         }
+  616.         cache.remove(current);
+  617. >       current = null;
+  618.       }
+  619.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:618: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `expiry` should be annotated with `@Nullable`.
+  616.       requireState(expireAfterAccessNanos == UNSET_INT,
+  617.           "expireAfterAccess was already set to %s ns", expireAfterAccessNanos);
+  618. >     requireState(expiry == null, "expireAfterAccess may not be used with variable expiration");
+  619.       requireArgument(duration >= 0, "duration cannot be negative: %s %s", duration, unit);
+  620.       this.expireAfterAccessNanos = unit.toNanos(duration);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java:626: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `cursor` should be annotated with `@Nullable`.
+  624.               Entry<K, V> entry = cursor;
+  625.               removalKey = key;
+  626. >             cursor = null;
+  627.               return entry;
+  628.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java:634: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `removalKey` should be annotated with `@Nullable`.
+  632.               Caffeine.requireState(removalKey != null);
+  633.               delegate.remove(removalKey);
+  634. >             removalKey = null;
+  635.             }
+  636.           };
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:653: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `expiry` should be annotated with `@Nullable`.
+  651.         @NonNull Expiry<? super K1, ? super V1> expiry) {
+  652.       requireNonNull(expiry);
+  653. >     requireState(this.expiry == null, "Expiry was already set to %s", this.expiry);
+  654.       requireState(this.expireAfterAccessNanos == UNSET_INT,
+  655.           "Expiry may not be used with expiresAfterAccess");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:666: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `expiry` should be annotated with `@Nullable`.
+  664.   
+  665.     boolean expiresVariable() {
+  666. >     return expiry != null;
+  667.     }
+  668.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:671: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `expiry` should be annotated with `@Nullable`.
+  669.     @SuppressWarnings("unchecked")
+  670.     @Nullable Expiry<K, V> getExpiry(boolean isAsync) {
+  671. >     return isAsync && (expiry != null)
+  672.           ? (Expiry<K, V>) new AsyncExpiry<>(expiry)
+  673.           : (Expiry<K, V>) expiry;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java:700: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `entry` should be annotated with `@Nullable`.
+  698.         }
+  699.         cache.remove(entry.getKey());
+  700. >       entry = null;
+  701.       }
+  702.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:753: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `ticker` should be annotated with `@Nullable`.
+  751.     @NonNull
+  752.     public Caffeine<K, V> ticker(@NonNull Ticker ticker) {
+  753. >     requireState(this.ticker == null, "Ticker was already set to %s", this.ticker);
+  754.       this.ticker = requireNonNull(ticker);
+  755.       return this;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java:799: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `entry` should be annotated with `@Nullable`.
+  797.         }
+  798.         cache.remove(entry.getKey());
+  799. >       entry = null;
+  800.       }
+  801.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:795: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `removalListener` should be annotated with `@Nullable`.
+  793.     public <K1 extends K, V1 extends V> Caffeine<K1, V1> removalListener(
+  794.         @NonNull RemovalListener<? super K1, ? super V1> removalListener) {
+  795. >     requireState(this.removalListener == null,
+  796.           "removal listener was already set to %s", this.removalListener);
+  797.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:844: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `keyStrength` should be annotated with `@Nullable`.
+  842.         @NonNull CacheWriter<? super K1, ? super V1> writer) {
+  843.       requireState(this.writer == null, "Writer was already set to %s", this.writer);
+  844. >     requireState(keyStrength == null, "Weak keys may not be used with CacheWriter");
+  845.   
+  846.       @SuppressWarnings("unchecked")
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:843: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `writer` should be annotated with `@Nullable`.
+  841.     public <K1 extends K, V1 extends V> Caffeine<K1, V1> writer(
+  842.         @NonNull CacheWriter<? super K1, ? super V1> writer) {
+  843. >     requireState(this.writer == null, "Writer was already set to %s", this.writer);
+  844.       requireState(keyStrength == null, "Weak keys may not be used with CacheWriter");
+  845.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:868: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `statsCounterSupplier` should be annotated with `@Nullable`.
+  866.     @NonNull
+  867.     public Caffeine<K, V> recordStats() {
+  868. >     requireState(this.statsCounterSupplier == null, "Statistics recording was already set");
+  869.       statsCounterSupplier = ENABLED_STATS_COUNTER_SUPPLIER;
+  870.       return this;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java:871: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `policy` should be annotated with `@Nullable`.
+  869.       @Override
+  870.       public Policy<K, V> policy() {
+  871. >       return (policy == null) ? (policy = new UnboundedPolicy<>(cache.isRecordingStats)) : policy;
+  872.       }
+  873.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:886: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `statsCounterSupplier` should be annotated with `@Nullable`.
+  884.     public Caffeine<K, V> recordStats(
+  885.         @NonNull Supplier<? extends StatsCounter> statsCounterSupplier) {
+  886. >     requireState(this.statsCounterSupplier == null, "Statistics recording was already set");
+  887.       requireNonNull(statsCounterSupplier);
+  888.       this.statsCounterSupplier = () -> StatsCounter.guardedStatsCounter(statsCounterSupplier.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:893: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `statsCounterSupplier` should be annotated with `@Nullable`.
+  891.   
+  892.     boolean isRecordingStats() {
+  893. >     return (statsCounterSupplier != null);
+  894.     }
+  895.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:898: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `statsCounterSupplier` should be annotated with `@Nullable`.
+  896.     @NonNull
+  897.     Supplier<StatsCounter> getStatsCounterSupplier() {
+  898. >     return (statsCounterSupplier == null)
+  899.           ? StatsCounter::disabledStatsCounter
+  900.           : statsCounterSupplier;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:904: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `expiry` should be annotated with `@Nullable`.
+  902.   
+  903.     boolean isBounded() {
+  904. >     return (maximumSize != UNSET_INT)
+  905.           || (maximumWeight != UNSET_INT)
+  906.           || (expireAfterAccessNanos != UNSET_INT)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:904: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `keyStrength` should be annotated with `@Nullable`.
+  902.   
+  903.     boolean isBounded() {
+  904. >     return (maximumSize != UNSET_INT)
+  905.           || (maximumWeight != UNSET_INT)
+  906.           || (expireAfterAccessNanos != UNSET_INT)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:904: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `valueStrength` should be annotated with `@Nullable`.
+  902.   
+  903.     boolean isBounded() {
+  904. >     return (maximumSize != UNSET_INT)
+  905.           || (maximumWeight != UNSET_INT)
+  906.           || (expireAfterAccessNanos != UNSET_INT)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:988: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `valueStrength` should be annotated with `@Nullable`.
+  986.     @NonNull
+  987.     public <K1 extends K, V1 extends V> AsyncCache<K1, V1> buildAsync() {
+  988. >     requireState(valueStrength == null, "Weak or soft values can not be combined with AsyncCache");
+  989.       requireState(writer == null, "CacheWriter can not be combined with AsyncCache");
+  990.       requireWeightWithWeigher();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:989: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `writer` should be annotated with `@Nullable`.
+  987.     public <K1 extends K, V1 extends V> AsyncCache<K1, V1> buildAsync() {
+  988.       requireState(valueStrength == null, "Weak or soft values can not be combined with AsyncCache");
+  989. >     requireState(writer == null, "CacheWriter can not be combined with AsyncCache");
+  990.       requireWeightWithWeigher();
+  991.       requireNonLoadingCache();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java:991: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `cacheView` should be annotated with `@Nullable`.
+  989.       @Override
+  990.       public Cache<K, V> synchronous() {
+  991. >       return (cacheView == null) ? (cacheView = new CacheView<>(this)) : cacheView;
+  992.       }
+  993.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java:996: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `policy` should be annotated with `@Nullable`.
+  994.       @Override
+  995.       public Policy<K, V> policy() {
+  996. >       return (policy == null) ? (policy = new UnboundedPolicy<>(cache.isRecordingStats)) : policy;
+  997.       }
+  998.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java:1038: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `policy` should be annotated with `@Nullable`.
+  1036.       @Override
+  1037.       public Policy<K, V> policy() {
+  1038. >       return (policy == null) ? (policy = new UnboundedPolicy<>(cache.isRecordingStats)) : policy;
+  1039.       }
+  1040.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:1045: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `valueStrength` should be annotated with `@Nullable`.
+  1043.     public <K1 extends K, V1 extends V> AsyncLoadingCache<K1, V1> buildAsync(
+  1044.         @NonNull AsyncCacheLoader<? super K1, V1> loader) {
+  1045. >     requireState(valueStrength == null,
+  1046.           "Weak or soft values can not be combined with AsyncLoadingCache");
+  1047.       requireState(writer == null, "CacheWriter can not be combined with AsyncLoadingCache");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:1047: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `writer` should be annotated with `@Nullable`.
+  1045.       requireState(valueStrength == null,
+  1046.           "Weak or soft values can not be combined with AsyncLoadingCache");
+  1047. >     requireState(writer == null, "CacheWriter can not be combined with AsyncLoadingCache");
+  1048.       requireWeightWithWeigher();
+  1049.       requireNonNull(loader);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:1063: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `weigher` should be annotated with `@Nullable`.
+  1061.   
+  1062.     void requireWeightWithWeigher() {
+  1063. >     if (weigher == null) {
+  1064.         requireState(maximumWeight == UNSET_INT, "maximumWeight requires weigher");
+  1065.       } else if (strictParsing) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:1096: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `expiry` should be annotated with `@Nullable`.
+  1094.         s.append("expireAfterAccess=").append(expireAfterAccessNanos).append("ns, ");
+  1095.       }
+  1096. >     if (expiry != null) {
+  1097.         s.append("expiry, ");
+  1098.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:1102: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `keyStrength` should be annotated with `@Nullable`.
+  1100.         s.append("refreshNanos=").append(refreshNanos).append("ns, ");
+  1101.       }
+  1102. >     if (keyStrength != null) {
+  1103.         s.append("keyStrength=").append(keyStrength.toString().toLowerCase(US)).append(", ");
+  1104.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:1108: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `removalListener` should be annotated with `@Nullable`.
+  1106.         s.append("valueStrength=").append(valueStrength.toString().toLowerCase(US)).append(", ");
+  1107.       }
+  1108. >     if (removalListener != null) {
+  1109.         s.append("removalListener, ");
+  1110.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:1105: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `valueStrength` should be annotated with `@Nullable`.
+  1103.         s.append("keyStrength=").append(keyStrength.toString().toLowerCase(US)).append(", ");
+  1104.       }
+  1105. >     if (valueStrength != null) {
+  1106.         s.append("valueStrength=").append(valueStrength.toString().toLowerCase(US)).append(", ");
+  1107.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java:1111: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `writer` should be annotated with `@Nullable`.
+  1109.         s.append("removalListener, ");
+  1110.       }
+  1111. >     if (writer != null) {
+  1112.         s.append("writer, ");
+  1113.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2842: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `key` should be annotated with `@Nullable`.
+  2840.               value = null;
+  2841.               next = null;
+  2842. >             key = null;
+  2843.               continue;
+  2844.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2841: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `next` should be annotated with `@Nullable`.
+  2839.             if (cache.hasExpired(next, now) || (key == null) || (value == null) || !next.isAlive()) {
+  2840.               value = null;
+  2841. >             next = null;
+  2842.               key = null;
+  2843.               continue;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2840: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `value` should be annotated with `@Nullable`.
+  2838.             key = next.getKey();
+  2839.             if (cache.hasExpired(next, now) || (key == null) || (value == null) || !next.isAlive()) {
+  2840. >             value = null;
+  2841.               next = null;
+  2842.               key = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2859: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `key` should be annotated with `@Nullable`.
+  2857.         value = null;
+  2858.         next = null;
+  2859. >       key = null;
+  2860.         return removalKey;
+  2861.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2858: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `next` should be annotated with `@Nullable`.
+  2856.         removalKey = key;
+  2857.         value = null;
+  2858. >       next = null;
+  2859.         key = null;
+  2860.         return removalKey;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2857: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `value` should be annotated with `@Nullable`.
+  2855.         }
+  2856.         removalKey = key;
+  2857. >       value = null;
+  2858.         next = null;
+  2859.         key = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2872: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `key` should be annotated with `@Nullable`.
+  2870.         value = null;
+  2871.         next = null;
+  2872. >       key = null;
+  2873.         return val;
+  2874.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2871: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `next` should be annotated with `@Nullable`.
+  2869.         V val = value;
+  2870.         value = null;
+  2871. >       next = null;
+  2872.         key = null;
+  2873.         return val;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2870: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `value` should be annotated with `@Nullable`.
+  2868.         removalKey = key;
+  2869.         V val = value;
+  2870. >       value = null;
+  2871.         next = null;
+  2872.         key = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2886: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `key` should be annotated with `@Nullable`.
+  2884.         value = null;
+  2885.         next = null;
+  2886. >       key = null;
+  2887.         return entry;
+  2888.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2885: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `next` should be annotated with `@Nullable`.
+  2883.         removalKey = key;
+  2884.         value = null;
+  2885. >       next = null;
+  2886.         key = null;
+  2887.         return entry;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2884: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `value` should be annotated with `@Nullable`.
+  2882.         Entry<K, V> entry = new WriteThroughEntry<>(cache, key, value);
+  2883.         removalKey = key;
+  2884. >       value = null;
+  2885.         next = null;
+  2886.         key = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:2896: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `removalKey` should be annotated with `@Nullable`.
+  2894.         }
+  2895.         cache.remove(removalKey);
+  2896. >       removalKey = null;
+  2897.       }
+  2898.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:3096: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `eviction` should be annotated with `@Nullable`.
+  3094.       }
+  3095.       @Override public Optional<Eviction<K, V>> eviction() {
+  3096. >       return cache.evicts()
+  3097.             ? (eviction == null) ? (eviction = Optional.of(new BoundedEviction())) : eviction
+  3098.             : Optional.empty();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:3104: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `afterAccess` should be annotated with `@Nullable`.
+  3102.           return Optional.empty();
+  3103.         }
+  3104. >       return (afterAccess == null)
+  3105.             ? (afterAccess = Optional.of(new BoundedExpireAfterAccess()))
+  3106.             : afterAccess;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:3112: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `afterWrite` should be annotated with `@Nullable`.
+  3110.           return Optional.empty();
+  3111.         }
+  3112. >       return (afterWrite == null)
+  3113.             ? (afterWrite = Optional.of(new BoundedExpireAfterWrite()))
+  3114.             : afterWrite;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:3120: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `variable` should be annotated with `@Nullable`.
+  3118.           return Optional.empty();
+  3119.         }
+  3120. >       return (variable == null)
+  3121.             ? (variable = Optional.of(new BoundedVarExpiration()))
+  3122.             : variable;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:3128: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `refreshes` should be annotated with `@Nullable`.
+  3126.           return Optional.empty();
+  3127.         }
+  3128. >       return (refreshes == null)
+  3129.             ? (refreshes = Optional.of(new BoundedRefreshAfterWrite()))
+  3130.             : refreshes;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:3442: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `cacheView` should be annotated with `@Nullable`.
+  3440.       @Override
+  3441.       public Cache<K, V> synchronous() {
+  3442. >       return (cacheView == null) ? (cacheView = new CacheView<>(this)) : cacheView;
+  3443.       }
+  3444.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:3447: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `policy` should be annotated with `@Nullable`.
+  3445.       @Override
+  3446.       public Policy<K, V> policy() {
+  3447. >       if (policy == null) {
+  3448.           @SuppressWarnings("unchecked")
+  3449.           BoundedLocalCache<K, V> castCache = (BoundedLocalCache<K, V>) cache;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:3498: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `policy` should be annotated with `@Nullable`.
+  3496.       @Override
+  3497.       public Policy<K, V> policy() {
+  3498. >       if (policy == null) {
+  3499.           @SuppressWarnings("unchecked")
+  3500.           BoundedLocalCache<K, V> castCache = (BoundedLocalCache<K, V>) cache;
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 293Found 9 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/jmh/java/com/github/benmanes/caffeine/cache/impl/ConcurrentHashMapV7.java:814: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `ConcurrentHashMapV7$Segment.table` should be annotated with `@Nullable`.
+  812.       static final <K,V> HashEntry<K,V> entryForHash(Segment<K,V> seg, int h) {
+  813.           HashEntry<K,V>[] tab;
+  814. >         return (seg == null || (tab = seg.table) == null) ? null :
+  815.               (HashEntry<K,V>) UNSAFE.getObjectVolatile
+  816.               (tab, ((long)(((tab.length - 1) & h)) << TSHIFT) + TBASE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/jmh/java/com/github/benmanes/caffeine/cache/impl/ConcurrentHashMapV7.java:1043: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `ConcurrentHashMapV7$Segment.table` should be annotated with `@Nullable`.
+  1041.           int h = hash(key);
+  1042.           long u = (((h >>> segmentShift) & segmentMask) << SSHIFT) + SBASE;
+  1043. >         if ((s = (Segment<K,V>)UNSAFE.getObjectVolatile(segments, u)) != null &&
+  1044.               (tab = s.table) != null) {
+  1045.               for (HashEntry<K,V> e = (HashEntry<K,V>) UNSAFE.getObjectVolatile
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/jmh/java/com/github/benmanes/caffeine/cache/impl/ConcurrentHashMapV7.java:1073: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `ConcurrentHashMapV7$Segment.table` should be annotated with `@Nullable`.
+  1071.           int h = hash(key);
+  1072.           long u = (((h >>> segmentShift) & segmentMask) << SSHIFT) + SBASE;
+  1073. >         if ((s = (Segment<K,V>)UNSAFE.getObjectVolatile(segments, u)) != null &&
+  1074.               (tab = s.table) != null) {
+  1075.               for (HashEntry<K,V> e = (HashEntry<K,V>) UNSAFE.getObjectVolatile
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/jmh/java/com/github/benmanes/caffeine/cache/impl/ConcurrentHashMapV7.java:1121: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `ConcurrentHashMapV7$Segment.table` should be annotated with `@Nullable`.
+  1119.                       HashEntry<K,V>[] tab;
+  1120.                       Segment<K,V> seg = segmentAt(segments, j);
+  1121. >                     if (seg != null && (tab = seg.table) != null) {
+  1122.                           for (int i = 0 ; i < tab.length; i++) {
+  1123.                               HashEntry<K,V> e;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/jmh/java/com/github/benmanes/caffeine/cache/impl/ConcurrentHashMapV7.java:1425: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `ConcurrentHashMapV7$Segment.table` should be annotated with `@Nullable`.
+  1423.                   else if (nextSegmentIndex >= 0) {
+  1424.                       Segment<K,V> seg = segmentAt(segments, nextSegmentIndex--);
+  1425. >                     if (seg != null && (currentTable = seg.table) != null) {
+  1426.                         nextTableIndex = currentTable.length - 1;
+  1427.                       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/jmh/java/com/github/benmanes/caffeine/cache/impl/ConcurrentHashMapV7.java:1440: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `ConcurrentHashMapV7$HashEntry.next` should be annotated with `@Nullable`.
+  1438.               }
+  1439.               lastReturned = e; // cannot assign until after null check
+  1440. >             if ((nextEntry = e.next) == null) {
+  1441.                 advance();
+  1442.               }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/jmh/java/com/github/benmanes/caffeine/cache/impl/ConcurrentHashMapV7.java:1446: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `nextEntry` should be annotated with `@Nullable`.
+  1444.           }
+  1445.   
+  1446. >         public final boolean hasNext() { return nextEntry != null; }
+  1447.           public final boolean hasMoreElements() { return nextEntry != null; }
+  1448.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/jmh/java/com/github/benmanes/caffeine/cache/impl/ConcurrentHashMapV7.java:1447: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `nextEntry` should be annotated with `@Nullable`.
+  1445.   
+  1446.           public final boolean hasNext() { return nextEntry != null; }
+  1447. >         public final boolean hasMoreElements() { return nextEntry != null; }
+  1448.   
+  1449.           public final void remove() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/caffeine/caffeine/src/jmh/java/com/github/benmanes/caffeine/cache/impl/ConcurrentHashMapV7.java:1454: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `lastReturned` should be annotated with `@Nullable`.
+  1452.               }
+  1453.               ConcurrentHashMapV7.this.remove(lastReturned.key);
+  1454. >             lastReturned = null;
+  1455.           }
+  1456.       }
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 9
