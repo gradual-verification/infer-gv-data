@@ -22,6 +22,7 @@ repos = [
     'okbuck',
     'caffeine',
     'jib',
+    'skaffold-tools-for-java',
     'butterknife',
 ]
 

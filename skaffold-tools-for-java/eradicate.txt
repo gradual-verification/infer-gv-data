@@ -1,0 +1,215 @@
+Found 3 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/image/ImageReference.java:144: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Strings.isNullOrEmpty(...)` needs a non-null value in parameter 1 but argument `registry` can be null. (Origin: method parameter registry).
+  142.     public static ImageReference of(
+  143.         @Nullable String registry, String repository, @Nullable String tag) {
+  144. >     if (Strings.isNullOrEmpty(registry)) {
+  145.         registry = DOCKER_HUB_REGISTRY;
+  146.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/image/ImageReference.java:147: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Strings.isNullOrEmpty(...)` needs a non-null value in parameter 1 but argument `tag` can be null. (Origin: method parameter tag).
+  145.         registry = DOCKER_HUB_REGISTRY;
+  146.       }
+  147. >     if (Strings.isNullOrEmpty(tag)) {
+  148.         tag = DEFAULT_TAG;
+  149.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:174: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `` in the call to `addSuppressed(...)` is nullable and is not locally checked for null. (Origin: null constant at line 160).
+  172.           listenableFuture.get();
+  173.         }
+  174. >     }
+  175.   
+  176.       return skaffoldProcess.waitFor();
+
+Summary of the reports
+
+  ERADICATE_PARAMETER_NOT_NULLABLE: 2
+    ERADICATE_NULLABLE_DEREFERENCE: 1Found 19 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/filesystem/UserCacheHomeTest.java:35: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `UserCacheHomeTest.fakeCacheHome` is not initialized in the constructor and is not declared `@Nullable`.
+  33.   
+  34.   /** Tests for {@link UserCacheHome}. */
+  35. > public class UserCacheHomeTest {
+  36.   
+  37.     @Rule public final TemporaryFolder temporaryFolder = new TemporaryFolder();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/downloader/DownloaderTest.java:37: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DownloaderTest.mockURLConnection` is not initialized in the constructor and is not declared `@Nullable`.
+  35.   /** Test for {@link Downloader}. */
+  36.   @RunWith(MockitoJUnitRunner.class)
+  37. > public class DownloaderTest {
+  38.   
+  39.     @Rule public final TemporaryFolder temporaryFolder = new TemporaryFolder();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/downloader/DownloaderTest.java:37: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DownloaderTest.mockURL` is not initialized in the constructor and is not declared `@Nullable`.
+  35.   /** Test for {@link Downloader}. */
+  36.   @RunWith(MockitoJUnitRunner.class)
+  37. > public class DownloaderTest {
+  38.   
+  39.     @Rule public final TemporaryFolder temporaryFolder = new TemporaryFolder();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:96: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertEquals(...)` needs a non-null value in parameter 2 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 96).
+  94.   
+  95.       digestMap.put(descriptorDigestA1, "digest with a");
+  96. >     Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA1));
+  97.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  98.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:102: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertEquals(...)` needs a non-null value in parameter 2 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 96).
+  100.   
+  101.       digestMap.put(descriptorDigestA2, "digest with a");
+  102. >     Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA1));
+  103.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  104.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:108: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertEquals(...)` needs a non-null value in parameter 2 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 96).
+  106.   
+  107.       digestMap.put(descriptorDigestA3, "digest with a");
+  108. >     Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA1));
+  109.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  110.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:114: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertEquals(...)` needs a non-null value in parameter 2 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 96).
+  112.   
+  113.       digestMap.put(descriptorDigestB, "digest with b");
+  114. >     Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA1));
+  115.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  116.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:97: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertEquals(...)` needs a non-null value in parameter 2 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 97).
+  95.       digestMap.put(descriptorDigestA1, "digest with a");
+  96.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA1));
+  97. >     Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  98.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+  99.       Assert.assertNull(digestMap.get(descriptorDigestB));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:103: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertEquals(...)` needs a non-null value in parameter 2 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 97).
+  101.       digestMap.put(descriptorDigestA2, "digest with a");
+  102.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA1));
+  103. >     Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  104.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+  105.       Assert.assertNull(digestMap.get(descriptorDigestB));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:109: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertEquals(...)` needs a non-null value in parameter 2 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 97).
+  107.       digestMap.put(descriptorDigestA3, "digest with a");
+  108.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA1));
+  109. >     Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  110.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+  111.       Assert.assertNull(digestMap.get(descriptorDigestB));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:115: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertEquals(...)` needs a non-null value in parameter 2 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 97).
+  113.       digestMap.put(descriptorDigestB, "digest with b");
+  114.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA1));
+  115. >     Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  116.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+  117.       Assert.assertEquals("digest with b", digestMap.get(descriptorDigestB));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:98: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertEquals(...)` needs a non-null value in parameter 2 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 98).
+  96.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA1));
+  97.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  98. >     Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+  99.       Assert.assertNull(digestMap.get(descriptorDigestB));
+  100.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:104: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertEquals(...)` needs a non-null value in parameter 2 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 98).
+  102.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA1));
+  103.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  104. >     Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+  105.       Assert.assertNull(digestMap.get(descriptorDigestB));
+  106.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:110: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertEquals(...)` needs a non-null value in parameter 2 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 98).
+  108.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA1));
+  109.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  110. >     Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+  111.       Assert.assertNull(digestMap.get(descriptorDigestB));
+  112.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:116: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertEquals(...)` needs a non-null value in parameter 2 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 98).
+  114.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA1));
+  115.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  116. >     Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+  117.       Assert.assertEquals("digest with b", digestMap.get(descriptorDigestB));
+  118.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:117: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertEquals(...)` needs a non-null value in parameter 2 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 99).
+  115.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  116.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+  117. >     Assert.assertEquals("digest with b", digestMap.get(descriptorDigestB));
+  118.     }
+  119.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:99: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertNull(...)` needs a non-null value in parameter 1 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 99).
+  97.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  98.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+  99. >     Assert.assertNull(digestMap.get(descriptorDigestB));
+  100.   
+  101.       digestMap.put(descriptorDigestA2, "digest with a");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:105: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertNull(...)` needs a non-null value in parameter 1 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 99).
+  103.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  104.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+  105. >     Assert.assertNull(digestMap.get(descriptorDigestB));
+  106.   
+  107.       digestMap.put(descriptorDigestA3, "digest with a");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:111: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Assert.assertNull(...)` needs a non-null value in parameter 1 but argument `digestMap.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 99).
+  109.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA2));
+  110.       Assert.assertEquals("digest with a", digestMap.get(descriptorDigestA3));
+  111. >     Assert.assertNull(digestMap.get(descriptorDigestB));
+  112.   
+  113.       digestMap.put(descriptorDigestB, "digest with b");
+
+Summary of the reports
+
+  ERADICATE_PARAMETER_NOT_NULLABLE: 16
+   ERADICATE_FIELD_NOT_INITIALIZED: 3Found 3 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/integration-test/java/com/google/cloud/tools/skaffold/downloader/CachedSkaffoldManagerIntegrationTest.java:30: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `CachedSkaffoldManagerIntegrationTest.fakeDigestLocation` is not initialized in the constructor and is not declared `@Nullable`.
+  28.   
+  29.   /** Integration tests for {@link CachedSkaffoldManager}. */
+  30. > public class CachedSkaffoldManagerIntegrationTest {
+  31.   
+  32.     @Rule public final TemporaryFolder temporaryFolder = new TemporaryFolder();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/integration-test/java/com/google/cloud/tools/skaffold/downloader/CachedSkaffoldManagerIntegrationTest.java:30: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `CachedSkaffoldManagerIntegrationTest.fakeSkaffoldLocation` is not initialized in the constructor and is not declared `@Nullable`.
+  28.   
+  29.   /** Integration tests for {@link CachedSkaffoldManager}. */
+  30. > public class CachedSkaffoldManagerIntegrationTest {
+  31.   
+  32.     @Rule public final TemporaryFolder temporaryFolder = new TemporaryFolder();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/integration-test/java/com/google/cloud/tools/skaffold/downloader/CachedSkaffoldManagerIntegrationTest.java:30: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `CachedSkaffoldManagerIntegrationTest.latestDigestLocation` is not initialized in the constructor and is not declared `@Nullable`.
+  28.   
+  29.   /** Integration tests for {@link CachedSkaffoldManager}. */
+  30. > public class CachedSkaffoldManagerIntegrationTest {
+  31.   
+  32.     @Rule public final TemporaryFolder temporaryFolder = new TemporaryFolder();
+
+Summary of the reports
+
+  ERADICATE_FIELD_NOT_INITIALIZED: 3
