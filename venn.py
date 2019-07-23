@@ -19,9 +19,9 @@ def lines(filename, issuetype):
         return {s[:find_nth(s, ':', 2)] for s in strings}
 
 repos = [
-    'uber/okbuck',
-    'ben-manes/caffeine',
-    'JakeWharton/butterknife',
+    'okbuck',
+    'caffeine',
+    'butterknife',
 ]
 
 checkers = {
@@ -37,7 +37,7 @@ for repo in repos:
     keys = sets.keys()
     venn3([sets[k] for k in keys], set_labels=keys)
     plt.title(repo)
-    dir = 'venn/{}'.format(repo)
+    dir = 'venn'
     os.makedirs(dir, exist_ok=True)
-    plt.savefig('{}/venn.png'.format(dir))
+    plt.savefig('{}/{}.png'.format(dir, repo))
     plt.clf()
