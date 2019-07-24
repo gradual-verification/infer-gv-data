@@ -1,0 +1,2315 @@
+Found 144 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/TestRootInteractor.java:9: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootInteractor.presenter`.
+  7.     public static RootInteractor create(final RootInteractor.RootPresenter presenter) {
+  8.       RootInteractor interactor = new RootInteractor();
+  9. >     interactor.presenter = presenter;
+  10.       return interactor;
+  11.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/TestLoginInteractor.java:14: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.accountNetworkRepository`.
+  12.       LoginInteractor interactor = new LoginInteractor();
+  13.       interactor.presenter = presenter;
+  14. >     interactor.accountNetworkRepository = accountNetworkRepository;
+  15.       interactor.listener = listener;
+  16.       return interactor;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/TestLoginInteractor.java:15: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.listener`.
+  13.       interactor.presenter = presenter;
+  14.       interactor.accountNetworkRepository = accountNetworkRepository;
+  15. >     interactor.listener = listener;
+  16.       return interactor;
+  17.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/TestLoginInteractor.java:13: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.presenter`.
+  11.         final LoginInteractor.Listener listener) {
+  12.       LoginInteractor interactor = new LoginInteractor();
+  13. >     interactor.presenter = presenter;
+  14.       interactor.accountNetworkRepository = accountNetworkRepository;
+  15.       interactor.listener = listener;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/TestInstrumentInteractor.java:15: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.accountId`.
+  13.       interactor.presenter = presenter;
+  14.       interactor.instrumentNetworkRepository = instrumentNetworkRepository;
+  15. >     interactor.accountId = accountId;
+  16.       return interactor;
+  17.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/TestInstrumentInteractor.java:14: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.instrumentNetworkRepository`.
+  12.       InstrumentInteractor interactor = new InstrumentInteractor();
+  13.       interactor.presenter = presenter;
+  14. >     interactor.instrumentNetworkRepository = instrumentNetworkRepository;
+  15.       interactor.accountId = accountId;
+  16.       return interactor;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/TestInstrumentInteractor.java:13: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.presenter`.
+  11.         final InstrumentNetworkRepository instrumentNetworkRepository, final String accountId) {
+  12.       InstrumentInteractor interactor = new InstrumentInteractor();
+  13. >     interactor.presenter = presenter;
+  14.       interactor.instrumentNetworkRepository = instrumentNetworkRepository;
+  15.       interactor.accountId = accountId;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_ProvideHttpClientFactory.java:24: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  22.     public OkHttpClient get() {
+  23.       return Preconditions.checkNotNull(
+  24. >         LoginBuilder.Module.provideHttpClient(contextProvider.get()),
+  25.           "Cannot return null from a non-@Nullable @Provides method");
+  26.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_ProvideHttpClientFactory.java:24: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_ProvideHttpClientFactory.contextProvider`.
+  22.     public OkHttpClient get() {
+  23.       return Preconditions.checkNotNull(
+  24. >         LoginBuilder.Module.provideHttpClient(contextProvider.get()),
+  25.           "Cannot return null from a non-@Nullable @Provides method");
+  26.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideHttpClientFactory.java:25: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  23.     public OkHttpClient get() {
+  24.       return Preconditions.checkNotNull(
+  25. >         InstrumentBuilder.Module.provideHttpClient(contextProvider.get()),
+  26.           "Cannot return null from a non-@Nullable @Provides method");
+  27.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideHttpClientFactory.java:25: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_ProvideHttpClientFactory.contextProvider`.
+  23.     public OkHttpClient get() {
+  24.       return Preconditions.checkNotNull(
+  25. >         InstrumentBuilder.Module.provideHttpClient(contextProvider.get()),
+  26.           "Cannot return null from a non-@Nullable @Provides method");
+  27.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_ProvideLoginLisenter$app_debugFactory.java:25: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  23.     public LoginInteractor.Listener get() {
+  24.       return Preconditions.checkNotNull(
+  25. >         RootBuilder.Module.provideLoginLisenter$app_debug(rootInteractorProvider.get()),
+  26.           "Cannot return null from a non-@Nullable @Provides method");
+  27.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_ProvideLoginLisenter$app_debugFactory.java:25: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_ProvideLoginLisenter$app_debugFactory.rootInteractorProvider`.
+  23.     public LoginInteractor.Listener get() {
+  24.       return Preconditions.checkNotNull(
+  25. >         RootBuilder.Module.provideLoginLisenter$app_debug(rootInteractorProvider.get()),
+  26.           "Cannot return null from a non-@Nullable @Provides method");
+  27.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideInstrumentAPIServiceFactory.java:26: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  24.     public InstrumentAPIService get() {
+  25.       return Preconditions.checkNotNull(
+  26. >         InstrumentBuilder.Module.provideInstrumentAPIService(okHttpClientProvider.get()),
+  27.           "Cannot return null from a non-@Nullable @Provides method");
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideInstrumentAPIServiceFactory.java:26: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_ProvideInstrumentAPIServiceFactory.okHttpClientProvider`.
+  24.     public InstrumentAPIService get() {
+  25.       return Preconditions.checkNotNull(
+  26. >         InstrumentBuilder.Module.provideInstrumentAPIService(okHttpClientProvider.get()),
+  27.           "Cannot return null from a non-@Nullable @Provides method");
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory.java:26: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  24.     public InstrumentNetworkRepository get() {
+  25.       return Preconditions.checkNotNull(
+  26. >         InstrumentBuilder.Module.provideInstrumentNetworkRepository(
+  27.               instrumentAPIServiceProvider.get()),
+  28.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory.java:27: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory.instrumentAPIServiceProvider`.
+  25.       return Preconditions.checkNotNull(
+  26.           InstrumentBuilder.Module.provideInstrumentNetworkRepository(
+  27. >             instrumentAPIServiceProvider.get()),
+  28.           "Cannot return null from a non-@Nullable @Provides method");
+  29.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_ProvideAccountAPIServiceFactory.java:26: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  24.     public AccountAPIService get() {
+  25.       return Preconditions.checkNotNull(
+  26. >         LoginBuilder.Module.provideAccountAPIService(okHttpClientProvider.get()),
+  27.           "Cannot return null from a non-@Nullable @Provides method");
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_ProvideAccountAPIServiceFactory.java:26: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_ProvideAccountAPIServiceFactory.okHttpClientProvider`.
+  24.     public AccountAPIService get() {
+  25.       return Preconditions.checkNotNull(
+  26. >         LoginBuilder.Module.provideAccountAPIService(okHttpClientProvider.get()),
+  27.           "Cannot return null from a non-@Nullable @Provides method");
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory.java:26: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  24.     public AccountNetworkRepository get() {
+  25.       return Preconditions.checkNotNull(
+  26. >         LoginBuilder.Module.provideAccountNetworkRepository(accountAPIServiceProvider.get()),
+  27.           "Cannot return null from a non-@Nullable @Provides method");
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory.java:26: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory.accountAPIServiceProvider`.
+  24.     public AccountNetworkRepository get() {
+  25.       return Preconditions.checkNotNull(
+  26. >         LoginBuilder.Module.provideAccountNetworkRepository(accountAPIServiceProvider.get()),
+  27.           "Cannot return null from a non-@Nullable @Provides method");
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootInteractor_MembersInjector.java:26: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootInteractor_MembersInjector.presenterProvider`.
+  24.     @Override
+  25.     public void injectMembers(RootInteractor instance) {
+  26. >     Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  27.       injectPresenter(instance, presenterProvider.get());
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootInteractor_MembersInjector.java:27: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootInteractor_MembersInjector.presenterProvider`.
+  25.     public void injectMembers(RootInteractor instance) {
+  26.       Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  27. >     injectPresenter(instance, presenterProvider.get());
+  28.     }
+  29.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Companion_ProvideLoginLisenter$app_debugFactory.java:28: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter.
+  26.     public LoginInteractor.Listener get() {
+  27.       return Preconditions.checkNotNull(
+  28. >         module.provideLoginLisenter$app_debug(rootInteractorProvider.get()),
+  29.           "Cannot return null from a non-@Nullable @Provides method");
+  30.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Companion_ProvideLoginLisenter$app_debugFactory.java:28: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Companion_ProvideLoginLisenter$app_debugFactory.module`.
+  26.     public LoginInteractor.Listener get() {
+  27.       return Preconditions.checkNotNull(
+  28. >         module.provideLoginLisenter$app_debug(rootInteractorProvider.get()),
+  29.           "Cannot return null from a non-@Nullable @Provides method");
+  30.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Companion_ProvideLoginLisenter$app_debugFactory.java:28: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Companion_ProvideLoginLisenter$app_debugFactory.rootInteractorProvider`.
+  26.     public LoginInteractor.Listener get() {
+  27.       return Preconditions.checkNotNull(
+  28. >         module.provideLoginLisenter$app_debug(rootInteractorProvider.get()),
+  29.           "Cannot return null from a non-@Nullable @Provides method");
+  30.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter.
+  27.     public OkHttpClient get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideHttpClient(contextProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.contextProvider`.
+  27.     public OkHttpClient get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideHttpClient(contextProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.module`.
+  27.     public OkHttpClient get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideHttpClient(contextProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter.
+  27.     public InstrumentAPIService get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideInstrumentAPIService(okHttpClientProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.module`.
+  27.     public InstrumentAPIService get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideInstrumentAPIService(okHttpClientProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.okHttpClientProvider`.
+  27.     public InstrumentAPIService get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideInstrumentAPIService(okHttpClientProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter.
+  27.     public AccountAPIService get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideAccountAPIService(okHttpClientProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.module`.
+  27.     public AccountAPIService get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideAccountAPIService(okHttpClientProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.okHttpClientProvider`.
+  27.     public AccountAPIService get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideAccountAPIService(okHttpClientProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter.
+  27.     public AccountNetworkRepository get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideAccountNetworkRepository(accountAPIServiceProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.accountAPIServiceProvider`.
+  27.     public AccountNetworkRepository get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideAccountNetworkRepository(accountAPIServiceProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.module`.
+  27.     public AccountNetworkRepository get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideAccountNetworkRepository(accountAPIServiceProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideHttpClientFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter.
+  27.     public OkHttpClient get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideHttpClient(contextProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideHttpClientFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideHttpClientFactory.contextProvider`.
+  27.     public OkHttpClient get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideHttpClient(contextProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideHttpClientFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideHttpClientFactory.module`.
+  27.     public OkHttpClient get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideHttpClient(contextProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter.
+  28.     public InstrumentNetworkRepository get() {
+  29.       return Preconditions.checkNotNull(
+  30. >         module.provideInstrumentNetworkRepository(instrumentAPIServiceProvider.get()),
+  31.           "Cannot return null from a non-@Nullable @Provides method");
+  32.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.java:30: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.instrumentAPIServiceProvider`.
+  28.     public InstrumentNetworkRepository get() {
+  29.       return Preconditions.checkNotNull(
+  30. >         module.provideInstrumentNetworkRepository(instrumentAPIServiceProvider.get()),
+  31.           "Cannot return null from a non-@Nullable @Provides method");
+  32.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.java:30: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.module`.
+  28.     public InstrumentNetworkRepository get() {
+  29.       return Preconditions.checkNotNull(
+  30. >         module.provideInstrumentNetworkRepository(instrumentAPIServiceProvider.get()),
+  31.           "Cannot return null from a non-@Nullable @Provides method");
+  32.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Router$app_debugFactory.java:31: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter,check ambiguous argument `n$7` passed to nonnull parameter,check ambiguous argument `n$11` passed to nonnull parameter.
+  29.     public LoginRouter get() {
+  30.       return Preconditions.checkNotNull(
+  31. >         LoginBuilder.Module.router$app_debug(
+  32.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Router$app_debugFactory.java:32: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Router$app_debugFactory.componentProvider`.
+  30.       return Preconditions.checkNotNull(
+  31.           LoginBuilder.Module.router$app_debug(
+  32. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+  34.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Router$app_debugFactory.java:32: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Router$app_debugFactory.interactorProvider`.
+  30.       return Preconditions.checkNotNull(
+  31.           LoginBuilder.Module.router$app_debug(
+  32. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+  34.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Router$app_debugFactory.java:32: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Router$app_debugFactory.viewProvider`.
+  30.       return Preconditions.checkNotNull(
+  31.           LoginBuilder.Module.router$app_debug(
+  32. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+  34.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Router$app_debugFactory.java:31: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter,check ambiguous argument `n$7` passed to nonnull parameter,check ambiguous argument `n$11` passed to nonnull parameter.
+  29.     public RootRouter get() {
+  30.       return Preconditions.checkNotNull(
+  31. >         RootBuilder.Module.router$app_debug(
+  32.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Router$app_debugFactory.java:32: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Router$app_debugFactory.componentProvider`.
+  30.       return Preconditions.checkNotNull(
+  31.           RootBuilder.Module.router$app_debug(
+  32. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+  34.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Router$app_debugFactory.java:32: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Router$app_debugFactory.interactorProvider`.
+  30.       return Preconditions.checkNotNull(
+  31.           RootBuilder.Module.router$app_debug(
+  32. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+  34.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Router$app_debugFactory.java:32: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Router$app_debugFactory.viewProvider`.
+  30.       return Preconditions.checkNotNull(
+  31.           RootBuilder.Module.router$app_debug(
+  32. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+  34.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Router$app_debugFactory.java:32: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter,check ambiguous argument `n$7` passed to nonnull parameter,check ambiguous argument `n$11` passed to nonnull parameter.
+  30.     public InstrumentRouter get() {
+  31.       return Preconditions.checkNotNull(
+  32. >         InstrumentBuilder.Module.router$app_debug(
+  33.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  34.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Router$app_debugFactory.java:33: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Router$app_debugFactory.componentProvider`.
+  31.       return Preconditions.checkNotNull(
+  32.           InstrumentBuilder.Module.router$app_debug(
+  33. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  34.           "Cannot return null from a non-@Nullable @Provides method");
+  35.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Router$app_debugFactory.java:33: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Router$app_debugFactory.interactorProvider`.
+  31.       return Preconditions.checkNotNull(
+  32.           InstrumentBuilder.Module.router$app_debug(
+  33. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  34.           "Cannot return null from a non-@Nullable @Provides method");
+  35.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Router$app_debugFactory.java:33: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Router$app_debugFactory.viewProvider`.
+  31.       return Preconditions.checkNotNull(
+  32.           InstrumentBuilder.Module.router$app_debug(
+  33. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  34.           "Cannot return null from a non-@Nullable @Provides method");
+  35.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootInteractor_MembersInjector.java:32: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootInteractor.presenter`.
+  30.     public static void injectPresenter(
+  31.         RootInteractor instance, RootInteractor.RootPresenter presenter) {
+  32. >     instance.presenter = presenter;
+  33.     }
+  34.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootInteractor_MembersInjector.java:32: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  30.     public static void injectPresenter(
+  31.         RootInteractor instance, RootInteractor.RootPresenter presenter) {
+  32. >     instance.presenter = presenter;
+  33.     }
+  34.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_debugFactory.java:36: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter,check ambiguous argument `n$9` passed to nonnull parameter,check ambiguous argument `n$13` passed to nonnull parameter.
+  34.     public InstrumentRouter get() {
+  35.       return Preconditions.checkNotNull(
+  36. >         module.router$app_debug(
+  37.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_debugFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_debugFactory.componentProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_debug(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_debugFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_debugFactory.interactorProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_debug(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_debugFactory.java:36: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_debugFactory.module`.
+  34.     public InstrumentRouter get() {
+  35.       return Preconditions.checkNotNull(
+  36. >         module.router$app_debug(
+  37.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_debugFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_debugFactory.viewProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_debug(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_debugFactory.java:36: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter,check ambiguous argument `n$9` passed to nonnull parameter,check ambiguous argument `n$13` passed to nonnull parameter.
+  34.     public LoginRouter get() {
+  35.       return Preconditions.checkNotNull(
+  36. >         module.router$app_debug(
+  37.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_debugFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_debugFactory.componentProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_debug(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_debugFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_debugFactory.interactorProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_debug(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_debugFactory.java:36: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_debugFactory.module`.
+  34.     public LoginRouter get() {
+  35.       return Preconditions.checkNotNull(
+  36. >         module.router$app_debug(
+  37.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_debugFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_debugFactory.viewProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_debug(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_debugFactory.java:36: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter,check ambiguous argument `n$9` passed to nonnull parameter,check ambiguous argument `n$13` passed to nonnull parameter.
+  34.     public RootRouter get() {
+  35.       return Preconditions.checkNotNull(
+  36. >         module.router$app_debug(
+  37.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_debugFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_debugFactory.componentProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_debug(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_debugFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_debugFactory.interactorProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_debug(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_debugFactory.java:36: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_debugFactory.module`.
+  34.     public RootRouter get() {
+  35.       return Preconditions.checkNotNull(
+  36. >         module.router$app_debug(
+  37.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_debugFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_debugFactory.viewProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_debug(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:41: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginInteractor_MembersInjector.accountNetworkRepositoryProvider`.
+  39.       Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  40.       injectPresenter(instance, presenterProvider.get());
+  41. >     injectAccountNetworkRepository(instance, accountNetworkRepositoryProvider.get());
+  42.       injectListener(instance, listenerProvider.get());
+  43.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginInteractor_MembersInjector.listenerProvider`.
+  40.       injectPresenter(instance, presenterProvider.get());
+  41.       injectAccountNetworkRepository(instance, accountNetworkRepositoryProvider.get());
+  42. >     injectListener(instance, listenerProvider.get());
+  43.     }
+  44.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:39: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginInteractor_MembersInjector.presenterProvider`.
+  37.     @Override
+  38.     public void injectMembers(LoginInteractor instance) {
+  39. >     Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  40.       injectPresenter(instance, presenterProvider.get());
+  41.       injectAccountNetworkRepository(instance, accountNetworkRepositoryProvider.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginInteractor_MembersInjector.presenterProvider`.
+  38.     public void injectMembers(LoginInteractor instance) {
+  39.       Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  40. >     injectPresenter(instance, presenterProvider.get());
+  41.       injectAccountNetworkRepository(instance, accountNetworkRepositoryProvider.get());
+  42.       injectListener(instance, listenerProvider.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentInteractor_MembersInjector.accountIdProvider`.
+  41.       injectPresenter(instance, presenterProvider.get());
+  42.       injectInstrumentNetworkRepository(instance, instrumentNetworkRepositoryProvider.get());
+  43. >     injectAccountId(instance, accountIdProvider.get());
+  44.     }
+  45.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentInteractor_MembersInjector.instrumentNetworkRepositoryProvider`.
+  40.       Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  41.       injectPresenter(instance, presenterProvider.get());
+  42. >     injectInstrumentNetworkRepository(instance, instrumentNetworkRepositoryProvider.get());
+  43.       injectAccountId(instance, accountIdProvider.get());
+  44.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentInteractor_MembersInjector.presenterProvider`.
+  38.     @Override
+  39.     public void injectMembers(InstrumentInteractor instance) {
+  40. >     Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  41.       injectPresenter(instance, presenterProvider.get());
+  42.       injectInstrumentNetworkRepository(instance, instrumentNetworkRepositoryProvider.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:41: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentInteractor_MembersInjector.presenterProvider`.
+  39.     public void injectMembers(InstrumentInteractor instance) {
+  40.       Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  41. >     injectPresenter(instance, presenterProvider.get());
+  42.       injectInstrumentNetworkRepository(instance, instrumentNetworkRepositoryProvider.get());
+  43.       injectAccountId(instance, accountIdProvider.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:42: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  40.     @SuppressWarnings("unchecked")
+  41.     private void initialize(final Builder builder) {
+  42. >     this.viewProvider = InstanceFactory.create(builder.view);
+  43.       this.presenter$app_debugProvider = DoubleCheck.provider((Provider) viewProvider);
+  44.       this.componentProvider = InstanceFactory.<RootBuilder.Component>create(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:45: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  43.       this.presenter$app_debugProvider = DoubleCheck.provider((Provider) viewProvider);
+  44.       this.componentProvider = InstanceFactory.<RootBuilder.Component>create(this);
+  45. >     this.interactorProvider = InstanceFactory.create(builder.interactor);
+  46.       this.router$app_debugProvider =
+  47.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:53: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  51.           DoubleCheck.provider(
+  52.               RootBuilder_Module_ProvideLoginLisenter$app_debugFactory.create(interactorProvider));
+  53. >     this.provideContext = builder.provideContext;
+  54.     }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:47: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.presenter`.
+  45.     public static void injectPresenter(
+  46.         LoginInteractor instance, LoginInteractor.LoginPresenter presenter) {
+  47. >     instance.presenter = presenter;
+  48.     }
+  49.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:47: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  45.     public static void injectPresenter(
+  46.         LoginInteractor instance, LoginInteractor.LoginPresenter presenter) {
+  47. >     instance.presenter = presenter;
+  48.     }
+  49.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:48: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.presenter`.
+  46.     public static void injectPresenter(
+  47.         InstrumentInteractor instance, InstrumentInteractor.InstrumentPresenter presenter) {
+  48. >     instance.presenter = presenter;
+  49.     }
+  50.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:48: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  46.     public static void injectPresenter(
+  47.         InstrumentInteractor instance, InstrumentInteractor.InstrumentPresenter presenter) {
+  48. >     instance.presenter = presenter;
+  49.     }
+  50.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:50: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  48.     @SuppressWarnings("unchecked")
+  49.     private void initialize(final Builder builder) {
+  50. >     this.viewProvider = InstanceFactory.create(builder.view);
+  51.       this.presenter$app_debugProvider = DoubleCheck.provider((Provider) viewProvider);
+  52.       this.contextProvider =
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:54: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  52.       this.contextProvider =
+  53.           new com_wdx_oandafx_instrument_InstrumentBuilder_ParentComponent_context(
+  54. >             builder.parentComponent);
+  55.       this.provideHttpClientProvider =
+  56.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:66: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  64.               InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory.create(
+  65.                   provideInstrumentAPIServiceProvider));
+  66. >     this.accountId = builder.accountId;
+  67.       this.componentProvider = InstanceFactory.<InstrumentBuilder.Component>create(this);
+  68.       this.interactorProvider = InstanceFactory.create(builder.interactor);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:68: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  66.       this.accountId = builder.accountId;
+  67.       this.componentProvider = InstanceFactory.<InstrumentBuilder.Component>create(this);
+  68. >     this.interactorProvider = InstanceFactory.create(builder.interactor);
+  69.       this.router$app_debugProvider =
+  70.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:50: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  48.     @SuppressWarnings("unchecked")
+  49.     private void initialize(final Builder builder) {
+  50. >     this.viewProvider = InstanceFactory.create(builder.view);
+  51.       this.presenter$app_debugProvider = DoubleCheck.provider((Provider) viewProvider);
+  52.       this.contextProvider =
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:53: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  51.       this.presenter$app_debugProvider = DoubleCheck.provider((Provider) viewProvider);
+  52.       this.contextProvider =
+  53. >         new com_wdx_oandafx_login_LoginBuilder_ParentComponent_context(builder.parentComponent);
+  54.       this.provideHttpClientProvider =
+  55.           DoubleCheck.provider(LoginBuilder_Module_ProvideHttpClientFactory.create(contextProvider));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:63: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  61.               LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory.create(
+  62.                   provideAccountAPIServiceProvider));
+  63. >     this.parentComponent = builder.parentComponent;
+  64.       this.componentProvider = InstanceFactory.<LoginBuilder.Component>create(this);
+  65.       this.interactorProvider = InstanceFactory.create(builder.interactor);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:65: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  63.       this.parentComponent = builder.parentComponent;
+  64.       this.componentProvider = InstanceFactory.<LoginBuilder.Component>create(this);
+  65. >     this.interactorProvider = InstanceFactory.create(builder.interactor);
+  66.       this.router$app_debugProvider =
+  67.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:52: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.accountNetworkRepository`.
+  50.     public static void injectAccountNetworkRepository(
+  51.         LoginInteractor instance, AccountNetworkRepository accountNetworkRepository) {
+  52. >     instance.accountNetworkRepository = accountNetworkRepository;
+  53.     }
+  54.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:52: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  50.     public static void injectAccountNetworkRepository(
+  51.         LoginInteractor instance, AccountNetworkRepository accountNetworkRepository) {
+  52. >     instance.accountNetworkRepository = accountNetworkRepository;
+  53.     }
+  54.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:53: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.instrumentNetworkRepository`.
+  51.     public static void injectInstrumentNetworkRepository(
+  52.         InstrumentInteractor instance, InstrumentNetworkRepository instrumentNetworkRepository) {
+  53. >     instance.instrumentNetworkRepository = instrumentNetworkRepository;
+  54.     }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:53: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  51.     public static void injectInstrumentNetworkRepository(
+  52.         InstrumentInteractor instance, InstrumentNetworkRepository instrumentNetworkRepository) {
+  53. >     instance.instrumentNetworkRepository = instrumentNetworkRepository;
+  54.     }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.listener`.
+  54.   
+  55.     public static void injectListener(LoginInteractor instance, LoginInteractor.Listener listener) {
+  56. >     instance.listener = listener;
+  57.     }
+  58.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:56: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  54.   
+  55.     public static void injectListener(LoginInteractor instance, LoginInteractor.Listener listener) {
+  56. >     instance.listener = listener;
+  57.     }
+  58.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:57: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.accountId`.
+  55.   
+  56.     public static void injectAccountId(InstrumentInteractor instance, String accountId) {
+  57. >     instance.accountId = accountId;
+  58.     }
+  59.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:57: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  55.   
+  56.     public static void injectAccountId(InstrumentInteractor instance, String accountId) {
+  57. >     instance.accountId = accountId;
+  58.     }
+  59.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:63: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.DaggerRootBuilder_Component.router$app_debugProvider`.
+  61.     @Override
+  62.     public RootRouter rootRouter() {
+  63. >     return router$app_debugProvider.get();
+  64.     }
+  65.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:68: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.DaggerRootBuilder_Component.provideLoginLisenter$app_debugProvider`.
+  66.     @Override
+  67.     public LoginInteractor.Listener loginListener() {
+  68. >     return provideLoginLisenter$app_debugProvider.get();
+  69.     }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:78: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.DaggerRootBuilder_Component.presenter$app_debugProvider`.
+  76.     @CanIgnoreReturnValue
+  77.     private RootInteractor injectRootInteractor(RootInteractor instance) {
+  78. >     Interactor_MembersInjector.injectPresenter(instance, presenter$app_debugProvider.get());
+  79.       RootInteractor_MembersInjector.injectPresenter(instance, presenter$app_debugProvider.get());
+  80.       return instance;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:79: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.DaggerRootBuilder_Component.presenter$app_debugProvider`.
+  77.     private RootInteractor injectRootInteractor(RootInteractor instance) {
+  78.       Interactor_MembersInjector.injectPresenter(instance, presenter$app_debugProvider.get());
+  79. >     RootInteractor_MembersInjector.injectPresenter(instance, presenter$app_debugProvider.get());
+  80.       return instance;
+  81.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:79: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.DaggerLoginBuilder_Component.router$app_debugProvider`.
+  77.     @Override
+  78.     public LoginRouter loginRouter() {
+  79. >     return router$app_debugProvider.get();
+  80.     }
+  81.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:82: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.DaggerInstrumentBuilder_Component.router$app_debugProvider`.
+  80.     @Override
+  81.     public InstrumentRouter instrumentRouter() {
+  82. >     return router$app_debugProvider.get();
+  83.     }
+  84.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:91: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.DaggerLoginBuilder_Component.parentComponent`.
+  89.           instance,
+  90.           Preconditions.checkNotNull(
+  91. >             parentComponent.loginListener(),
+  92.               "Cannot return null from a non-@Nullable component method"));
+  93.       return instance;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:84: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.DaggerLoginBuilder_Component.presenter$app_debugProvider`.
+  82.     @CanIgnoreReturnValue
+  83.     private LoginInteractor injectLoginInteractor(LoginInteractor instance) {
+  84. >     Interactor_MembersInjector.injectPresenter(instance, presenter$app_debugProvider.get());
+  85.       LoginInteractor_MembersInjector.injectPresenter(instance, presenter$app_debugProvider.get());
+  86.       LoginInteractor_MembersInjector.injectAccountNetworkRepository(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:85: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.DaggerLoginBuilder_Component.presenter$app_debugProvider`.
+  83.     private LoginInteractor injectLoginInteractor(LoginInteractor instance) {
+  84.       Interactor_MembersInjector.injectPresenter(instance, presenter$app_debugProvider.get());
+  85. >     LoginInteractor_MembersInjector.injectPresenter(instance, presenter$app_debugProvider.get());
+  86.       LoginInteractor_MembersInjector.injectAccountNetworkRepository(
+  87.           instance, provideAccountNetworkRepositoryProvider.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:87: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.DaggerLoginBuilder_Component.provideAccountNetworkRepositoryProvider`.
+  85.       LoginInteractor_MembersInjector.injectPresenter(instance, presenter$app_debugProvider.get());
+  86.       LoginInteractor_MembersInjector.injectAccountNetworkRepository(
+  87. >         instance, provideAccountNetworkRepositoryProvider.get());
+  88.       LoginInteractor_MembersInjector.injectListener(
+  89.           instance,
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:83: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  81.     }
+  82.   
+  83. >   private static final class Builder implements RootBuilder.Component.Builder {
+  84.       private RootBuilder.ParentComponent parentComponent;
+  85.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:87: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.DaggerInstrumentBuilder_Component.presenter$app_debugProvider`.
+  85.     @CanIgnoreReturnValue
+  86.     private InstrumentInteractor injectInstrumentInteractor(InstrumentInteractor instance) {
+  87. >     Interactor_MembersInjector.injectPresenter(instance, presenter$app_debugProvider.get());
+  88.       InstrumentInteractor_MembersInjector.injectPresenter(
+  89.           instance, presenter$app_debugProvider.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:89: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.DaggerInstrumentBuilder_Component.presenter$app_debugProvider`.
+  87.       Interactor_MembersInjector.injectPresenter(instance, presenter$app_debugProvider.get());
+  88.       InstrumentInteractor_MembersInjector.injectPresenter(
+  89. >         instance, presenter$app_debugProvider.get());
+  90.       InstrumentInteractor_MembersInjector.injectInstrumentNetworkRepository(
+  91.           instance, provideInstrumentNetworkRepositoryProvider.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:91: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.DaggerInstrumentBuilder_Component.provideInstrumentNetworkRepositoryProvider`.
+  89.           instance, presenter$app_debugProvider.get());
+  90.       InstrumentInteractor_MembersInjector.injectInstrumentNetworkRepository(
+  91. >         instance, provideInstrumentNetworkRepositoryProvider.get());
+  92.       InstrumentInteractor_MembersInjector.injectAccountId(instance, accountId);
+  93.       return instance;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:96: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$11`.
+  94.         if (parentComponent == null) {
+  95.           throw new IllegalStateException(
+  96. >             RootBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  97.         }
+  98.         if (interactor == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:99: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$27`.
+  97.         }
+  98.         if (interactor == null) {
+  99. >         throw new IllegalStateException(RootInteractor.class.getCanonicalName() + " must be set");
+  100.         }
+  101.         if (view == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:99: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$30`.
+  97.         }
+  98.         if (interactor == null) {
+  99. >         throw new IllegalStateException(RootInteractor.class.getCanonicalName() + " must be set");
+  100.         }
+  101.         if (view == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:102: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$46`.
+  100.         }
+  101.         if (view == null) {
+  102. >         throw new IllegalStateException(RootView.class.getCanonicalName() + " must be set");
+  103.         }
+  104.         if (provideContext == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:102: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$49`.
+  100.         }
+  101.         if (view == null) {
+  102. >         throw new IllegalStateException(RootView.class.getCanonicalName() + " must be set");
+  103.         }
+  104.         if (provideContext == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:105: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$65`.
+  103.         }
+  104.         if (provideContext == null) {
+  105. >         throw new IllegalStateException(Context.class.getCanonicalName() + " must be set");
+  106.         }
+  107.         return new DaggerRootBuilder_Component(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:105: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$68`.
+  103.         }
+  104.         if (provideContext == null) {
+  105. >         throw new IllegalStateException(Context.class.getCanonicalName() + " must be set");
+  106.         }
+  107.         return new DaggerRootBuilder_Component(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:96: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$8`.
+  94.         if (parentComponent == null) {
+  95.           throw new IllegalStateException(
+  96. >             RootBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  97.         }
+  98.         if (interactor == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:96: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements InstrumentBuilder.Component.Builder {
+  97.       private InstrumentBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:96: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements LoginBuilder.Component.Builder {
+  97.       private LoginBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:107: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$11`.
+  105.         if (parentComponent == null) {
+  106.           throw new IllegalStateException(
+  107. >             LoginBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  108.         }
+  109.         if (interactor == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:110: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$27`.
+  108.         }
+  109.         if (interactor == null) {
+  110. >         throw new IllegalStateException(LoginInteractor.class.getCanonicalName() + " must be set");
+  111.         }
+  112.         if (view == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:110: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$30`.
+  108.         }
+  109.         if (interactor == null) {
+  110. >         throw new IllegalStateException(LoginInteractor.class.getCanonicalName() + " must be set");
+  111.         }
+  112.         if (view == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:113: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$46`.
+  111.         }
+  112.         if (view == null) {
+  113. >         throw new IllegalStateException(LoginView.class.getCanonicalName() + " must be set");
+  114.         }
+  115.         return new DaggerLoginBuilder_Component(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:113: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$49`.
+  111.         }
+  112.         if (view == null) {
+  113. >         throw new IllegalStateException(LoginView.class.getCanonicalName() + " must be set");
+  114.         }
+  115.         return new DaggerLoginBuilder_Component(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:107: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$8`.
+  105.         if (parentComponent == null) {
+  106.           throw new IllegalStateException(
+  107. >             LoginBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  108.         }
+  109.         if (interactor == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:109: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$11`.
+  107.         if (parentComponent == null) {
+  108.           throw new IllegalStateException(
+  109. >             InstrumentBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  110.         }
+  111.         if (interactor == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:113: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$27`.
+  111.         if (interactor == null) {
+  112.           throw new IllegalStateException(
+  113. >             InstrumentInteractor.class.getCanonicalName() + " must be set");
+  114.         }
+  115.         if (view == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:113: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$30`.
+  111.         if (interactor == null) {
+  112.           throw new IllegalStateException(
+  113. >             InstrumentInteractor.class.getCanonicalName() + " must be set");
+  114.         }
+  115.         if (view == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:116: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$46`.
+  114.         }
+  115.         if (view == null) {
+  116. >         throw new IllegalStateException(InstrumentView.class.getCanonicalName() + " must be set");
+  117.         }
+  118.         if (accountId == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:116: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$49`.
+  114.         }
+  115.         if (view == null) {
+  116. >         throw new IllegalStateException(InstrumentView.class.getCanonicalName() + " must be set");
+  117.         }
+  118.         if (accountId == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:119: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$65`.
+  117.         }
+  118.         if (accountId == null) {
+  119. >         throw new IllegalStateException(String.class.getCanonicalName() + " must be set");
+  120.         }
+  121.         return new DaggerInstrumentBuilder_Component(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:119: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$68`.
+  117.         }
+  118.         if (accountId == null) {
+  119. >         throw new IllegalStateException(String.class.getCanonicalName() + " must be set");
+  120.         }
+  121.         return new DaggerInstrumentBuilder_Component(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:109: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$8`.
+  107.         if (parentComponent == null) {
+  108.           throw new IllegalStateException(
+  109. >             InstrumentBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  110.         }
+  111.         if (interactor == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:149: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.DaggerLoginBuilder_Component$com_wdx_oandafx_login_LoginBuilder_ParentComponent_context.parentComponent`.
+  147.       public Context get() {
+  148.         return Preconditions.checkNotNull(
+  149. >           parentComponent.context(), "Cannot return null from a non-@Nullable component method");
+  150.       }
+  151.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:161: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.DaggerInstrumentBuilder_Component$com_wdx_oandafx_instrument_InstrumentBuilder_ParentComponent_context.parentComponent`.
+  159.       public Context get() {
+  160.         return Preconditions.checkNotNull(
+  161. >           parentComponent.context(), "Cannot return null from a non-@Nullable component method");
+  162.       }
+  163.     }
+
+Summary of the reports
+
+     GRADUAL_CHECK: 110
+  GRADUAL_BOUNDARY: 34Found 144 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/TestRootInteractor.java:9: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootInteractor.presenter`.
+  7.     public static RootInteractor create(final RootInteractor.RootPresenter presenter) {
+  8.       RootInteractor interactor = new RootInteractor();
+  9. >     interactor.presenter = presenter;
+  10.       return interactor;
+  11.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/TestLoginInteractor.java:14: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.accountNetworkRepository`.
+  12.       LoginInteractor interactor = new LoginInteractor();
+  13.       interactor.presenter = presenter;
+  14. >     interactor.accountNetworkRepository = accountNetworkRepository;
+  15.       interactor.listener = listener;
+  16.       return interactor;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/TestLoginInteractor.java:15: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.listener`.
+  13.       interactor.presenter = presenter;
+  14.       interactor.accountNetworkRepository = accountNetworkRepository;
+  15. >     interactor.listener = listener;
+  16.       return interactor;
+  17.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/TestLoginInteractor.java:13: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.presenter`.
+  11.         final LoginInteractor.Listener listener) {
+  12.       LoginInteractor interactor = new LoginInteractor();
+  13. >     interactor.presenter = presenter;
+  14.       interactor.accountNetworkRepository = accountNetworkRepository;
+  15.       interactor.listener = listener;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/TestInstrumentInteractor.java:15: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.accountId`.
+  13.       interactor.presenter = presenter;
+  14.       interactor.instrumentNetworkRepository = instrumentNetworkRepository;
+  15. >     interactor.accountId = accountId;
+  16.       return interactor;
+  17.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/TestInstrumentInteractor.java:14: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.instrumentNetworkRepository`.
+  12.       InstrumentInteractor interactor = new InstrumentInteractor();
+  13.       interactor.presenter = presenter;
+  14. >     interactor.instrumentNetworkRepository = instrumentNetworkRepository;
+  15.       interactor.accountId = accountId;
+  16.       return interactor;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/TestInstrumentInteractor.java:13: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.presenter`.
+  11.         final InstrumentNetworkRepository instrumentNetworkRepository, final String accountId) {
+  12.       InstrumentInteractor interactor = new InstrumentInteractor();
+  13. >     interactor.presenter = presenter;
+  14.       interactor.instrumentNetworkRepository = instrumentNetworkRepository;
+  15.       interactor.accountId = accountId;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_ProvideHttpClientFactory.java:24: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  22.     public OkHttpClient get() {
+  23.       return Preconditions.checkNotNull(
+  24. >         LoginBuilder.Module.provideHttpClient(contextProvider.get()),
+  25.           "Cannot return null from a non-@Nullable @Provides method");
+  26.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_ProvideHttpClientFactory.java:24: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_ProvideHttpClientFactory.contextProvider`.
+  22.     public OkHttpClient get() {
+  23.       return Preconditions.checkNotNull(
+  24. >         LoginBuilder.Module.provideHttpClient(contextProvider.get()),
+  25.           "Cannot return null from a non-@Nullable @Provides method");
+  26.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideHttpClientFactory.java:25: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  23.     public OkHttpClient get() {
+  24.       return Preconditions.checkNotNull(
+  25. >         InstrumentBuilder.Module.provideHttpClient(contextProvider.get()),
+  26.           "Cannot return null from a non-@Nullable @Provides method");
+  27.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideHttpClientFactory.java:25: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_ProvideHttpClientFactory.contextProvider`.
+  23.     public OkHttpClient get() {
+  24.       return Preconditions.checkNotNull(
+  25. >         InstrumentBuilder.Module.provideHttpClient(contextProvider.get()),
+  26.           "Cannot return null from a non-@Nullable @Provides method");
+  27.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_ProvideLoginLisenter$app_releaseFactory.java:25: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  23.     public LoginInteractor.Listener get() {
+  24.       return Preconditions.checkNotNull(
+  25. >         RootBuilder.Module.provideLoginLisenter$app_release(rootInteractorProvider.get()),
+  26.           "Cannot return null from a non-@Nullable @Provides method");
+  27.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_ProvideLoginLisenter$app_releaseFactory.java:25: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_ProvideLoginLisenter$app_releaseFactory.rootInteractorProvider`.
+  23.     public LoginInteractor.Listener get() {
+  24.       return Preconditions.checkNotNull(
+  25. >         RootBuilder.Module.provideLoginLisenter$app_release(rootInteractorProvider.get()),
+  26.           "Cannot return null from a non-@Nullable @Provides method");
+  27.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideInstrumentAPIServiceFactory.java:26: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  24.     public InstrumentAPIService get() {
+  25.       return Preconditions.checkNotNull(
+  26. >         InstrumentBuilder.Module.provideInstrumentAPIService(okHttpClientProvider.get()),
+  27.           "Cannot return null from a non-@Nullable @Provides method");
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideInstrumentAPIServiceFactory.java:26: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_ProvideInstrumentAPIServiceFactory.okHttpClientProvider`.
+  24.     public InstrumentAPIService get() {
+  25.       return Preconditions.checkNotNull(
+  26. >         InstrumentBuilder.Module.provideInstrumentAPIService(okHttpClientProvider.get()),
+  27.           "Cannot return null from a non-@Nullable @Provides method");
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory.java:26: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  24.     public InstrumentNetworkRepository get() {
+  25.       return Preconditions.checkNotNull(
+  26. >         InstrumentBuilder.Module.provideInstrumentNetworkRepository(
+  27.               instrumentAPIServiceProvider.get()),
+  28.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory.java:27: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory.instrumentAPIServiceProvider`.
+  25.       return Preconditions.checkNotNull(
+  26.           InstrumentBuilder.Module.provideInstrumentNetworkRepository(
+  27. >             instrumentAPIServiceProvider.get()),
+  28.           "Cannot return null from a non-@Nullable @Provides method");
+  29.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_ProvideAccountAPIServiceFactory.java:26: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  24.     public AccountAPIService get() {
+  25.       return Preconditions.checkNotNull(
+  26. >         LoginBuilder.Module.provideAccountAPIService(okHttpClientProvider.get()),
+  27.           "Cannot return null from a non-@Nullable @Provides method");
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_ProvideAccountAPIServiceFactory.java:26: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_ProvideAccountAPIServiceFactory.okHttpClientProvider`.
+  24.     public AccountAPIService get() {
+  25.       return Preconditions.checkNotNull(
+  26. >         LoginBuilder.Module.provideAccountAPIService(okHttpClientProvider.get()),
+  27.           "Cannot return null from a non-@Nullable @Provides method");
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory.java:26: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  24.     public AccountNetworkRepository get() {
+  25.       return Preconditions.checkNotNull(
+  26. >         LoginBuilder.Module.provideAccountNetworkRepository(accountAPIServiceProvider.get()),
+  27.           "Cannot return null from a non-@Nullable @Provides method");
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory.java:26: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory.accountAPIServiceProvider`.
+  24.     public AccountNetworkRepository get() {
+  25.       return Preconditions.checkNotNull(
+  26. >         LoginBuilder.Module.provideAccountNetworkRepository(accountAPIServiceProvider.get()),
+  27.           "Cannot return null from a non-@Nullable @Provides method");
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootInteractor_MembersInjector.java:26: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootInteractor_MembersInjector.presenterProvider`.
+  24.     @Override
+  25.     public void injectMembers(RootInteractor instance) {
+  26. >     Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  27.       injectPresenter(instance, presenterProvider.get());
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootInteractor_MembersInjector.java:27: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootInteractor_MembersInjector.presenterProvider`.
+  25.     public void injectMembers(RootInteractor instance) {
+  26.       Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  27. >     injectPresenter(instance, presenterProvider.get());
+  28.     }
+  29.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Companion_ProvideLoginLisenter$app_releaseFactory.java:28: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter.
+  26.     public LoginInteractor.Listener get() {
+  27.       return Preconditions.checkNotNull(
+  28. >         module.provideLoginLisenter$app_release(rootInteractorProvider.get()),
+  29.           "Cannot return null from a non-@Nullable @Provides method");
+  30.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Companion_ProvideLoginLisenter$app_releaseFactory.java:28: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Companion_ProvideLoginLisenter$app_releaseFactory.module`.
+  26.     public LoginInteractor.Listener get() {
+  27.       return Preconditions.checkNotNull(
+  28. >         module.provideLoginLisenter$app_release(rootInteractorProvider.get()),
+  29.           "Cannot return null from a non-@Nullable @Provides method");
+  30.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Companion_ProvideLoginLisenter$app_releaseFactory.java:28: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Companion_ProvideLoginLisenter$app_releaseFactory.rootInteractorProvider`.
+  26.     public LoginInteractor.Listener get() {
+  27.       return Preconditions.checkNotNull(
+  28. >         module.provideLoginLisenter$app_release(rootInteractorProvider.get()),
+  29.           "Cannot return null from a non-@Nullable @Provides method");
+  30.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter.
+  27.     public OkHttpClient get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideHttpClient(contextProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.contextProvider`.
+  27.     public OkHttpClient get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideHttpClient(contextProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.module`.
+  27.     public OkHttpClient get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideHttpClient(contextProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter.
+  27.     public InstrumentAPIService get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideInstrumentAPIService(okHttpClientProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.module`.
+  27.     public InstrumentAPIService get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideInstrumentAPIService(okHttpClientProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.okHttpClientProvider`.
+  27.     public InstrumentAPIService get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideInstrumentAPIService(okHttpClientProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter.
+  27.     public AccountAPIService get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideAccountAPIService(okHttpClientProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.module`.
+  27.     public AccountAPIService get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideAccountAPIService(okHttpClientProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.okHttpClientProvider`.
+  27.     public AccountAPIService get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideAccountAPIService(okHttpClientProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter.
+  27.     public AccountNetworkRepository get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideAccountNetworkRepository(accountAPIServiceProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.accountAPIServiceProvider`.
+  27.     public AccountNetworkRepository get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideAccountNetworkRepository(accountAPIServiceProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.module`.
+  27.     public AccountNetworkRepository get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideAccountNetworkRepository(accountAPIServiceProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideHttpClientFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter.
+  27.     public OkHttpClient get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideHttpClient(contextProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideHttpClientFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideHttpClientFactory.contextProvider`.
+  27.     public OkHttpClient get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideHttpClient(contextProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideHttpClientFactory.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideHttpClientFactory.module`.
+  27.     public OkHttpClient get() {
+  28.       return Preconditions.checkNotNull(
+  29. >         module.provideHttpClient(contextProvider.get()),
+  30.           "Cannot return null from a non-@Nullable @Provides method");
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter.
+  28.     public InstrumentNetworkRepository get() {
+  29.       return Preconditions.checkNotNull(
+  30. >         module.provideInstrumentNetworkRepository(instrumentAPIServiceProvider.get()),
+  31.           "Cannot return null from a non-@Nullable @Provides method");
+  32.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.java:30: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.instrumentAPIServiceProvider`.
+  28.     public InstrumentNetworkRepository get() {
+  29.       return Preconditions.checkNotNull(
+  30. >         module.provideInstrumentNetworkRepository(instrumentAPIServiceProvider.get()),
+  31.           "Cannot return null from a non-@Nullable @Provides method");
+  32.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.java:30: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.module`.
+  28.     public InstrumentNetworkRepository get() {
+  29.       return Preconditions.checkNotNull(
+  30. >         module.provideInstrumentNetworkRepository(instrumentAPIServiceProvider.get()),
+  31.           "Cannot return null from a non-@Nullable @Provides method");
+  32.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Router$app_releaseFactory.java:31: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter,check ambiguous argument `n$7` passed to nonnull parameter,check ambiguous argument `n$11` passed to nonnull parameter.
+  29.     public LoginRouter get() {
+  30.       return Preconditions.checkNotNull(
+  31. >         LoginBuilder.Module.router$app_release(
+  32.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Router$app_releaseFactory.java:32: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Router$app_releaseFactory.componentProvider`.
+  30.       return Preconditions.checkNotNull(
+  31.           LoginBuilder.Module.router$app_release(
+  32. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+  34.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Router$app_releaseFactory.java:32: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Router$app_releaseFactory.interactorProvider`.
+  30.       return Preconditions.checkNotNull(
+  31.           LoginBuilder.Module.router$app_release(
+  32. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+  34.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Router$app_releaseFactory.java:32: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Router$app_releaseFactory.viewProvider`.
+  30.       return Preconditions.checkNotNull(
+  31.           LoginBuilder.Module.router$app_release(
+  32. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+  34.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Router$app_releaseFactory.java:31: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter,check ambiguous argument `n$7` passed to nonnull parameter,check ambiguous argument `n$11` passed to nonnull parameter.
+  29.     public RootRouter get() {
+  30.       return Preconditions.checkNotNull(
+  31. >         RootBuilder.Module.router$app_release(
+  32.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Router$app_releaseFactory.java:32: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Router$app_releaseFactory.componentProvider`.
+  30.       return Preconditions.checkNotNull(
+  31.           RootBuilder.Module.router$app_release(
+  32. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+  34.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Router$app_releaseFactory.java:32: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Router$app_releaseFactory.interactorProvider`.
+  30.       return Preconditions.checkNotNull(
+  31.           RootBuilder.Module.router$app_release(
+  32. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+  34.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Router$app_releaseFactory.java:32: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Router$app_releaseFactory.viewProvider`.
+  30.       return Preconditions.checkNotNull(
+  31.           RootBuilder.Module.router$app_release(
+  32. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  33.           "Cannot return null from a non-@Nullable @Provides method");
+  34.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Router$app_releaseFactory.java:32: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter,check ambiguous argument `n$7` passed to nonnull parameter,check ambiguous argument `n$11` passed to nonnull parameter.
+  30.     public InstrumentRouter get() {
+  31.       return Preconditions.checkNotNull(
+  32. >         InstrumentBuilder.Module.router$app_release(
+  33.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  34.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Router$app_releaseFactory.java:33: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Router$app_releaseFactory.componentProvider`.
+  31.       return Preconditions.checkNotNull(
+  32.           InstrumentBuilder.Module.router$app_release(
+  33. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  34.           "Cannot return null from a non-@Nullable @Provides method");
+  35.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Router$app_releaseFactory.java:33: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Router$app_releaseFactory.interactorProvider`.
+  31.       return Preconditions.checkNotNull(
+  32.           InstrumentBuilder.Module.router$app_release(
+  33. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  34.           "Cannot return null from a non-@Nullable @Provides method");
+  35.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Router$app_releaseFactory.java:33: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Router$app_releaseFactory.viewProvider`.
+  31.       return Preconditions.checkNotNull(
+  32.           InstrumentBuilder.Module.router$app_release(
+  33. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  34.           "Cannot return null from a non-@Nullable @Provides method");
+  35.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootInteractor_MembersInjector.java:32: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootInteractor.presenter`.
+  30.     public static void injectPresenter(
+  31.         RootInteractor instance, RootInteractor.RootPresenter presenter) {
+  32. >     instance.presenter = presenter;
+  33.     }
+  34.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootInteractor_MembersInjector.java:32: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  30.     public static void injectPresenter(
+  31.         RootInteractor instance, RootInteractor.RootPresenter presenter) {
+  32. >     instance.presenter = presenter;
+  33.     }
+  34.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_releaseFactory.java:36: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter,check ambiguous argument `n$9` passed to nonnull parameter,check ambiguous argument `n$13` passed to nonnull parameter.
+  34.     public InstrumentRouter get() {
+  35.       return Preconditions.checkNotNull(
+  36. >         module.router$app_release(
+  37.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_releaseFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_releaseFactory.componentProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_release(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_releaseFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_releaseFactory.interactorProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_release(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_releaseFactory.java:36: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_releaseFactory.module`.
+  34.     public InstrumentRouter get() {
+  35.       return Preconditions.checkNotNull(
+  36. >         module.router$app_release(
+  37.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_releaseFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_releaseFactory.viewProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_release(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_releaseFactory.java:36: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter,check ambiguous argument `n$9` passed to nonnull parameter,check ambiguous argument `n$13` passed to nonnull parameter.
+  34.     public LoginRouter get() {
+  35.       return Preconditions.checkNotNull(
+  36. >         module.router$app_release(
+  37.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_releaseFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_releaseFactory.componentProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_release(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_releaseFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_releaseFactory.interactorProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_release(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_releaseFactory.java:36: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_releaseFactory.module`.
+  34.     public LoginRouter get() {
+  35.       return Preconditions.checkNotNull(
+  36. >         module.router$app_release(
+  37.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_releaseFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_releaseFactory.viewProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_release(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_releaseFactory.java:36: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$5` passed to nonnull parameter,check ambiguous argument `n$9` passed to nonnull parameter,check ambiguous argument `n$13` passed to nonnull parameter.
+  34.     public RootRouter get() {
+  35.       return Preconditions.checkNotNull(
+  36. >         module.router$app_release(
+  37.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_releaseFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_releaseFactory.componentProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_release(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_releaseFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_releaseFactory.interactorProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_release(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_releaseFactory.java:36: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_releaseFactory.module`.
+  34.     public RootRouter get() {
+  35.       return Preconditions.checkNotNull(
+  36. >         module.router$app_release(
+  37.               componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_releaseFactory.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_releaseFactory.viewProvider`.
+  35.       return Preconditions.checkNotNull(
+  36.           module.router$app_release(
+  37. >             componentProvider.get(), viewProvider.get(), interactorProvider.get()),
+  38.           "Cannot return null from a non-@Nullable @Provides method");
+  39.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:41: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginInteractor_MembersInjector.accountNetworkRepositoryProvider`.
+  39.       Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  40.       injectPresenter(instance, presenterProvider.get());
+  41. >     injectAccountNetworkRepository(instance, accountNetworkRepositoryProvider.get());
+  42.       injectListener(instance, listenerProvider.get());
+  43.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginInteractor_MembersInjector.listenerProvider`.
+  40.       injectPresenter(instance, presenterProvider.get());
+  41.       injectAccountNetworkRepository(instance, accountNetworkRepositoryProvider.get());
+  42. >     injectListener(instance, listenerProvider.get());
+  43.     }
+  44.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:39: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginInteractor_MembersInjector.presenterProvider`.
+  37.     @Override
+  38.     public void injectMembers(LoginInteractor instance) {
+  39. >     Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  40.       injectPresenter(instance, presenterProvider.get());
+  41.       injectAccountNetworkRepository(instance, accountNetworkRepositoryProvider.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.LoginInteractor_MembersInjector.presenterProvider`.
+  38.     public void injectMembers(LoginInteractor instance) {
+  39.       Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  40. >     injectPresenter(instance, presenterProvider.get());
+  41.       injectAccountNetworkRepository(instance, accountNetworkRepositoryProvider.get());
+  42.       injectListener(instance, listenerProvider.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentInteractor_MembersInjector.accountIdProvider`.
+  41.       injectPresenter(instance, presenterProvider.get());
+  42.       injectInstrumentNetworkRepository(instance, instrumentNetworkRepositoryProvider.get());
+  43. >     injectAccountId(instance, accountIdProvider.get());
+  44.     }
+  45.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentInteractor_MembersInjector.instrumentNetworkRepositoryProvider`.
+  40.       Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  41.       injectPresenter(instance, presenterProvider.get());
+  42. >     injectInstrumentNetworkRepository(instance, instrumentNetworkRepositoryProvider.get());
+  43.       injectAccountId(instance, accountIdProvider.get());
+  44.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentInteractor_MembersInjector.presenterProvider`.
+  38.     @Override
+  39.     public void injectMembers(InstrumentInteractor instance) {
+  40. >     Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  41.       injectPresenter(instance, presenterProvider.get());
+  42.       injectInstrumentNetworkRepository(instance, instrumentNetworkRepositoryProvider.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:41: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.InstrumentInteractor_MembersInjector.presenterProvider`.
+  39.     public void injectMembers(InstrumentInteractor instance) {
+  40.       Interactor_MembersInjector.injectPresenter(instance, presenterProvider.get());
+  41. >     injectPresenter(instance, presenterProvider.get());
+  42.       injectInstrumentNetworkRepository(instance, instrumentNetworkRepositoryProvider.get());
+  43.       injectAccountId(instance, accountIdProvider.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:42: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  40.     @SuppressWarnings("unchecked")
+  41.     private void initialize(final Builder builder) {
+  42. >     this.viewProvider = InstanceFactory.create(builder.view);
+  43.       this.presenter$app_releaseProvider = DoubleCheck.provider((Provider) viewProvider);
+  44.       this.componentProvider = InstanceFactory.<RootBuilder.Component>create(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:45: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  43.       this.presenter$app_releaseProvider = DoubleCheck.provider((Provider) viewProvider);
+  44.       this.componentProvider = InstanceFactory.<RootBuilder.Component>create(this);
+  45. >     this.interactorProvider = InstanceFactory.create(builder.interactor);
+  46.       this.router$app_releaseProvider =
+  47.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:53: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  51.           DoubleCheck.provider(
+  52.               RootBuilder_Module_ProvideLoginLisenter$app_releaseFactory.create(interactorProvider));
+  53. >     this.provideContext = builder.provideContext;
+  54.     }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:47: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.presenter`.
+  45.     public static void injectPresenter(
+  46.         LoginInteractor instance, LoginInteractor.LoginPresenter presenter) {
+  47. >     instance.presenter = presenter;
+  48.     }
+  49.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:47: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  45.     public static void injectPresenter(
+  46.         LoginInteractor instance, LoginInteractor.LoginPresenter presenter) {
+  47. >     instance.presenter = presenter;
+  48.     }
+  49.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:48: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.presenter`.
+  46.     public static void injectPresenter(
+  47.         InstrumentInteractor instance, InstrumentInteractor.InstrumentPresenter presenter) {
+  48. >     instance.presenter = presenter;
+  49.     }
+  50.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:48: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  46.     public static void injectPresenter(
+  47.         InstrumentInteractor instance, InstrumentInteractor.InstrumentPresenter presenter) {
+  48. >     instance.presenter = presenter;
+  49.     }
+  50.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:50: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  48.     @SuppressWarnings("unchecked")
+  49.     private void initialize(final Builder builder) {
+  50. >     this.viewProvider = InstanceFactory.create(builder.view);
+  51.       this.presenter$app_releaseProvider = DoubleCheck.provider((Provider) viewProvider);
+  52.       this.contextProvider =
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:54: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  52.       this.contextProvider =
+  53.           new com_wdx_oandafx_instrument_InstrumentBuilder_ParentComponent_context(
+  54. >             builder.parentComponent);
+  55.       this.provideHttpClientProvider =
+  56.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:66: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  64.               InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory.create(
+  65.                   provideInstrumentAPIServiceProvider));
+  66. >     this.accountId = builder.accountId;
+  67.       this.componentProvider = InstanceFactory.<InstrumentBuilder.Component>create(this);
+  68.       this.interactorProvider = InstanceFactory.create(builder.interactor);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:68: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  66.       this.accountId = builder.accountId;
+  67.       this.componentProvider = InstanceFactory.<InstrumentBuilder.Component>create(this);
+  68. >     this.interactorProvider = InstanceFactory.create(builder.interactor);
+  69.       this.router$app_releaseProvider =
+  70.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:50: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  48.     @SuppressWarnings("unchecked")
+  49.     private void initialize(final Builder builder) {
+  50. >     this.viewProvider = InstanceFactory.create(builder.view);
+  51.       this.presenter$app_releaseProvider = DoubleCheck.provider((Provider) viewProvider);
+  52.       this.contextProvider =
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:53: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  51.       this.presenter$app_releaseProvider = DoubleCheck.provider((Provider) viewProvider);
+  52.       this.contextProvider =
+  53. >         new com_wdx_oandafx_login_LoginBuilder_ParentComponent_context(builder.parentComponent);
+  54.       this.provideHttpClientProvider =
+  55.           DoubleCheck.provider(LoginBuilder_Module_ProvideHttpClientFactory.create(contextProvider));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:63: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  61.               LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory.create(
+  62.                   provideAccountAPIServiceProvider));
+  63. >     this.parentComponent = builder.parentComponent;
+  64.       this.componentProvider = InstanceFactory.<LoginBuilder.Component>create(this);
+  65.       this.interactorProvider = InstanceFactory.create(builder.interactor);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:65: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  63.       this.parentComponent = builder.parentComponent;
+  64.       this.componentProvider = InstanceFactory.<LoginBuilder.Component>create(this);
+  65. >     this.interactorProvider = InstanceFactory.create(builder.interactor);
+  66.       this.router$app_releaseProvider =
+  67.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:52: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.accountNetworkRepository`.
+  50.     public static void injectAccountNetworkRepository(
+  51.         LoginInteractor instance, AccountNetworkRepository accountNetworkRepository) {
+  52. >     instance.accountNetworkRepository = accountNetworkRepository;
+  53.     }
+  54.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:52: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  50.     public static void injectAccountNetworkRepository(
+  51.         LoginInteractor instance, AccountNetworkRepository accountNetworkRepository) {
+  52. >     instance.accountNetworkRepository = accountNetworkRepository;
+  53.     }
+  54.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:53: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.instrumentNetworkRepository`.
+  51.     public static void injectInstrumentNetworkRepository(
+  52.         InstrumentInteractor instance, InstrumentNetworkRepository instrumentNetworkRepository) {
+  53. >     instance.instrumentNetworkRepository = instrumentNetworkRepository;
+  54.     }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:53: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  51.     public static void injectInstrumentNetworkRepository(
+  52.         InstrumentInteractor instance, InstrumentNetworkRepository instrumentNetworkRepository) {
+  53. >     instance.instrumentNetworkRepository = instrumentNetworkRepository;
+  54.     }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.listener`.
+  54.   
+  55.     public static void injectListener(LoginInteractor instance, LoginInteractor.Listener listener) {
+  56. >     instance.listener = listener;
+  57.     }
+  58.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:56: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  54.   
+  55.     public static void injectListener(LoginInteractor instance, LoginInteractor.Listener listener) {
+  56. >     instance.listener = listener;
+  57.     }
+  58.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:57: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.accountId`.
+  55.   
+  56.     public static void injectAccountId(InstrumentInteractor instance, String accountId) {
+  57. >     instance.accountId = accountId;
+  58.     }
+  59.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:57: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  55.   
+  56.     public static void injectAccountId(InstrumentInteractor instance, String accountId) {
+  57. >     instance.accountId = accountId;
+  58.     }
+  59.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:63: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.DaggerRootBuilder_Component.router$app_releaseProvider`.
+  61.     @Override
+  62.     public RootRouter rootRouter() {
+  63. >     return router$app_releaseProvider.get();
+  64.     }
+  65.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:68: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.DaggerRootBuilder_Component.provideLoginLisenter$app_releaseProvider`.
+  66.     @Override
+  67.     public LoginInteractor.Listener loginListener() {
+  68. >     return provideLoginLisenter$app_releaseProvider.get();
+  69.     }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:78: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.DaggerRootBuilder_Component.presenter$app_releaseProvider`.
+  76.     @CanIgnoreReturnValue
+  77.     private RootInteractor injectRootInteractor(RootInteractor instance) {
+  78. >     Interactor_MembersInjector.injectPresenter(instance, presenter$app_releaseProvider.get());
+  79.       RootInteractor_MembersInjector.injectPresenter(instance, presenter$app_releaseProvider.get());
+  80.       return instance;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:79: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.root.DaggerRootBuilder_Component.presenter$app_releaseProvider`.
+  77.     private RootInteractor injectRootInteractor(RootInteractor instance) {
+  78.       Interactor_MembersInjector.injectPresenter(instance, presenter$app_releaseProvider.get());
+  79. >     RootInteractor_MembersInjector.injectPresenter(instance, presenter$app_releaseProvider.get());
+  80.       return instance;
+  81.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:79: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.DaggerLoginBuilder_Component.router$app_releaseProvider`.
+  77.     @Override
+  78.     public LoginRouter loginRouter() {
+  79. >     return router$app_releaseProvider.get();
+  80.     }
+  81.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:82: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.DaggerInstrumentBuilder_Component.router$app_releaseProvider`.
+  80.     @Override
+  81.     public InstrumentRouter instrumentRouter() {
+  82. >     return router$app_releaseProvider.get();
+  83.     }
+  84.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:91: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.DaggerLoginBuilder_Component.parentComponent`.
+  89.           instance,
+  90.           Preconditions.checkNotNull(
+  91. >             parentComponent.loginListener(),
+  92.               "Cannot return null from a non-@Nullable component method"));
+  93.       return instance;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:84: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.DaggerLoginBuilder_Component.presenter$app_releaseProvider`.
+  82.     @CanIgnoreReturnValue
+  83.     private LoginInteractor injectLoginInteractor(LoginInteractor instance) {
+  84. >     Interactor_MembersInjector.injectPresenter(instance, presenter$app_releaseProvider.get());
+  85.       LoginInteractor_MembersInjector.injectPresenter(instance, presenter$app_releaseProvider.get());
+  86.       LoginInteractor_MembersInjector.injectAccountNetworkRepository(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:85: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.DaggerLoginBuilder_Component.presenter$app_releaseProvider`.
+  83.     private LoginInteractor injectLoginInteractor(LoginInteractor instance) {
+  84.       Interactor_MembersInjector.injectPresenter(instance, presenter$app_releaseProvider.get());
+  85. >     LoginInteractor_MembersInjector.injectPresenter(instance, presenter$app_releaseProvider.get());
+  86.       LoginInteractor_MembersInjector.injectAccountNetworkRepository(
+  87.           instance, provideAccountNetworkRepositoryProvider.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:87: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.DaggerLoginBuilder_Component.provideAccountNetworkRepositoryProvider`.
+  85.       LoginInteractor_MembersInjector.injectPresenter(instance, presenter$app_releaseProvider.get());
+  86.       LoginInteractor_MembersInjector.injectAccountNetworkRepository(
+  87. >         instance, provideAccountNetworkRepositoryProvider.get());
+  88.       LoginInteractor_MembersInjector.injectListener(
+  89.           instance,
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:83: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  81.     }
+  82.   
+  83. >   private static final class Builder implements RootBuilder.Component.Builder {
+  84.       private RootBuilder.ParentComponent parentComponent;
+  85.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:87: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.DaggerInstrumentBuilder_Component.presenter$app_releaseProvider`.
+  85.     @CanIgnoreReturnValue
+  86.     private InstrumentInteractor injectInstrumentInteractor(InstrumentInteractor instance) {
+  87. >     Interactor_MembersInjector.injectPresenter(instance, presenter$app_releaseProvider.get());
+  88.       InstrumentInteractor_MembersInjector.injectPresenter(
+  89.           instance, presenter$app_releaseProvider.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:89: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.DaggerInstrumentBuilder_Component.presenter$app_releaseProvider`.
+  87.       Interactor_MembersInjector.injectPresenter(instance, presenter$app_releaseProvider.get());
+  88.       InstrumentInteractor_MembersInjector.injectPresenter(
+  89. >         instance, presenter$app_releaseProvider.get());
+  90.       InstrumentInteractor_MembersInjector.injectInstrumentNetworkRepository(
+  91.           instance, provideInstrumentNetworkRepositoryProvider.get());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:91: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.DaggerInstrumentBuilder_Component.provideInstrumentNetworkRepositoryProvider`.
+  89.           instance, presenter$app_releaseProvider.get());
+  90.       InstrumentInteractor_MembersInjector.injectInstrumentNetworkRepository(
+  91. >         instance, provideInstrumentNetworkRepositoryProvider.get());
+  92.       InstrumentInteractor_MembersInjector.injectAccountId(instance, accountId);
+  93.       return instance;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:96: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$11`.
+  94.         if (parentComponent == null) {
+  95.           throw new IllegalStateException(
+  96. >             RootBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  97.         }
+  98.         if (interactor == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:99: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$27`.
+  97.         }
+  98.         if (interactor == null) {
+  99. >         throw new IllegalStateException(RootInteractor.class.getCanonicalName() + " must be set");
+  100.         }
+  101.         if (view == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:99: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$30`.
+  97.         }
+  98.         if (interactor == null) {
+  99. >         throw new IllegalStateException(RootInteractor.class.getCanonicalName() + " must be set");
+  100.         }
+  101.         if (view == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:102: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$46`.
+  100.         }
+  101.         if (view == null) {
+  102. >         throw new IllegalStateException(RootView.class.getCanonicalName() + " must be set");
+  103.         }
+  104.         if (provideContext == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:102: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$49`.
+  100.         }
+  101.         if (view == null) {
+  102. >         throw new IllegalStateException(RootView.class.getCanonicalName() + " must be set");
+  103.         }
+  104.         if (provideContext == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:105: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$65`.
+  103.         }
+  104.         if (provideContext == null) {
+  105. >         throw new IllegalStateException(Context.class.getCanonicalName() + " must be set");
+  106.         }
+  107.         return new DaggerRootBuilder_Component(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:105: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$68`.
+  103.         }
+  104.         if (provideContext == null) {
+  105. >         throw new IllegalStateException(Context.class.getCanonicalName() + " must be set");
+  106.         }
+  107.         return new DaggerRootBuilder_Component(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:96: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$8`.
+  94.         if (parentComponent == null) {
+  95.           throw new IllegalStateException(
+  96. >             RootBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  97.         }
+  98.         if (interactor == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:96: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements InstrumentBuilder.Component.Builder {
+  97.       private InstrumentBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:96: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements LoginBuilder.Component.Builder {
+  97.       private LoginBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:107: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$11`.
+  105.         if (parentComponent == null) {
+  106.           throw new IllegalStateException(
+  107. >             LoginBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  108.         }
+  109.         if (interactor == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:110: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$27`.
+  108.         }
+  109.         if (interactor == null) {
+  110. >         throw new IllegalStateException(LoginInteractor.class.getCanonicalName() + " must be set");
+  111.         }
+  112.         if (view == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:110: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$30`.
+  108.         }
+  109.         if (interactor == null) {
+  110. >         throw new IllegalStateException(LoginInteractor.class.getCanonicalName() + " must be set");
+  111.         }
+  112.         if (view == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:113: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$46`.
+  111.         }
+  112.         if (view == null) {
+  113. >         throw new IllegalStateException(LoginView.class.getCanonicalName() + " must be set");
+  114.         }
+  115.         return new DaggerLoginBuilder_Component(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:113: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$49`.
+  111.         }
+  112.         if (view == null) {
+  113. >         throw new IllegalStateException(LoginView.class.getCanonicalName() + " must be set");
+  114.         }
+  115.         return new DaggerLoginBuilder_Component(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:107: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$8`.
+  105.         if (parentComponent == null) {
+  106.           throw new IllegalStateException(
+  107. >             LoginBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  108.         }
+  109.         if (interactor == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:109: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$11`.
+  107.         if (parentComponent == null) {
+  108.           throw new IllegalStateException(
+  109. >             InstrumentBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  110.         }
+  111.         if (interactor == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:113: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$27`.
+  111.         if (interactor == null) {
+  112.           throw new IllegalStateException(
+  113. >             InstrumentInteractor.class.getCanonicalName() + " must be set");
+  114.         }
+  115.         if (view == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:113: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$30`.
+  111.         if (interactor == null) {
+  112.           throw new IllegalStateException(
+  113. >             InstrumentInteractor.class.getCanonicalName() + " must be set");
+  114.         }
+  115.         if (view == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:116: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$46`.
+  114.         }
+  115.         if (view == null) {
+  116. >         throw new IllegalStateException(InstrumentView.class.getCanonicalName() + " must be set");
+  117.         }
+  118.         if (accountId == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:116: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$49`.
+  114.         }
+  115.         if (view == null) {
+  116. >         throw new IllegalStateException(InstrumentView.class.getCanonicalName() + " must be set");
+  117.         }
+  118.         if (accountId == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:119: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$65`.
+  117.         }
+  118.         if (accountId == null) {
+  119. >         throw new IllegalStateException(String.class.getCanonicalName() + " must be set");
+  120.         }
+  121.         return new DaggerInstrumentBuilder_Component(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:119: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$68`.
+  117.         }
+  118.         if (accountId == null) {
+  119. >         throw new IllegalStateException(String.class.getCanonicalName() + " must be set");
+  120.         }
+  121.         return new DaggerInstrumentBuilder_Component(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:109: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$8`.
+  107.         if (parentComponent == null) {
+  108.           throw new IllegalStateException(
+  109. >             InstrumentBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  110.         }
+  111.         if (interactor == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:149: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.login.DaggerLoginBuilder_Component$com_wdx_oandafx_login_LoginBuilder_ParentComponent_context.parentComponent`.
+  147.       public Context get() {
+  148.         return Preconditions.checkNotNull(
+  149. >           parentComponent.context(), "Cannot return null from a non-@Nullable component method");
+  150.       }
+  151.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:161: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.wdx.oandafx.instrument.DaggerInstrumentBuilder_Component$com_wdx_oandafx_instrument_InstrumentBuilder_ParentComponent_context.parentComponent`.
+  159.       public Context get() {
+  160.         return Preconditions.checkNotNull(
+  161. >           parentComponent.context(), "Cannot return null from a non-@Nullable component method");
+  162.       }
+  163.     }
+
+Summary of the reports
+
+     GRADUAL_CHECK: 110
+  GRADUAL_BOUNDARY: 34

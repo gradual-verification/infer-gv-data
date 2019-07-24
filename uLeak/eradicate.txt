@@ -1,0 +1,603 @@
+No issues foundNo issues foundFound 37 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/TrackedReferencesTest.java:28: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `TrackedReferencesTest.refGeneratorFactory` is not initialized in the constructor and is not declared `@Nullable`.
+  26.   import org.mockito.MockitoAnnotations;
+  27.   
+  28. > public class TrackedReferencesTest {
+  29.   
+  30.     TrackedReferences references;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/TrackedReferencesTest.java:28: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `TrackedReferencesTest.references` is not initialized in the constructor and is not declared `@Nullable`.
+  26.   import org.mockito.MockitoAnnotations;
+  27.   
+  28. > public class TrackedReferencesTest {
+  29.   
+  30.     TrackedReferences references;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:31: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `LifecycleInstanceTrackerTest.weakIntReference` is not initialized in the constructor and is not declared `@Nullable`.
+  29.   import java.lang.ref.WeakReference;
+  30.   
+  31. > public class LifecycleInstanceTrackerTest {
+  32.   
+  33.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:31: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `LifecycleInstanceTrackerTest.weakObjectReference` is not initialized in the constructor and is not declared `@Nullable`.
+  29.   import java.lang.ref.WeakReference;
+  30.   
+  31. > public class LifecycleInstanceTrackerTest {
+  32.   
+  33.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:31: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `LifecycleInstanceTrackerTest.weakReferenceGenerator` is not initialized in the constructor and is not declared `@Nullable`.
+  29.   import java.lang.ref.WeakReference;
+  30.   
+  31. > public class LifecycleInstanceTrackerTest {
+  32.   
+  33.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:31: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `SingleInstanceTrackerTest.weakIntReference2` is not initialized in the constructor and is not declared `@Nullable`.
+  29.   import java.lang.ref.WeakReference;
+  30.   
+  31. > public class SingleInstanceTrackerTest {
+  32.   
+  33.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:31: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `SingleInstanceTrackerTest.weakIntReference3` is not initialized in the constructor and is not declared `@Nullable`.
+  29.   import java.lang.ref.WeakReference;
+  30.   
+  31. > public class SingleInstanceTrackerTest {
+  32.   
+  33.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:31: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `SingleInstanceTrackerTest.weakIntReference` is not initialized in the constructor and is not declared `@Nullable`.
+  29.   import java.lang.ref.WeakReference;
+  30.   
+  31. > public class SingleInstanceTrackerTest {
+  32.   
+  33.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:31: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `SingleInstanceTrackerTest.weakReferenceGenerator` is not initialized in the constructor and is not declared `@Nullable`.
+  29.   import java.lang.ref.WeakReference;
+  30.   
+  31. > public class SingleInstanceTrackerTest {
+  32.   
+  33.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.activeTracker` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.errorRelay` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.gcCallWrapper` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.genericWeakRef1` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.genericWeakRef2` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.random` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.scheduler` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.testObserver` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.testRefGeneratorFactory` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.uLeakEventReporter` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.weakReferenceGenerator` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:63: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `LifecycleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 63).
+  61.       LifecycleInstanceTracker tracker =
+  62.           new LifecycleInstanceTracker(Object.class, weakReferenceGenerator, "Object");
+  63. >     when(weakIntReference.get()).thenReturn(0);
+  64.       tracker.track(weakIntReference, lifecycleEndTimeMs);
+  65.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(0);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:74: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `LifecycleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 74).
+  72.       LifecycleInstanceTracker tracker =
+  73.           new LifecycleInstanceTracker(Integer.class, weakReferenceGenerator, "Integer");
+  74. >     when(weakIntReference.get()).thenReturn(0);
+  75.       tracker.track(weakIntReference, lifecycleEndTimeMs);
+  76.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:75: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 75).
+  73.       SingleInstanceTracker tracker =
+  74.           new SingleInstanceTracker(Object.class, weakReferenceGenerator, "Object");
+  75. >     when(weakIntReference.get()).thenReturn(0);
+  76.       tracker.track(weakIntReference, timeCreatedMs);
+  77.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(0);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:85: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `LifecycleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 85).
+  83.       LifecycleInstanceTracker tracker =
+  84.           new LifecycleInstanceTracker(Integer.class, weakReferenceGenerator, "Integer");
+  85. >     when(weakIntReference.get()).thenReturn(0);
+  86.       tracker.track(weakIntReference, lifecycleEndTimeMs);
+  87.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:86: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 86).
+  84.       SingleInstanceTracker tracker =
+  85.           new SingleInstanceTracker(Integer.class, weakReferenceGenerator, "Integer");
+  86. >     when(weakIntReference.get()).thenReturn(0);
+  87.       tracker.track(weakIntReference, timeCreatedMs);
+  88.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:98: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 98).
+  96.       SingleInstanceTracker tracker =
+  97.           new SingleInstanceTracker(Integer.class, new TestWeakRefGenerator(), "Integer");
+  98. >     when(weakIntReference.get()).thenReturn(0);
+  99.       when(weakIntReference2.get()).thenReturn(1);
+  100.       when(weakIntReference3.get()).thenReturn(new Object());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:99: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference2.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 99).
+  97.           new SingleInstanceTracker(Integer.class, new TestWeakRefGenerator(), "Integer");
+  98.       when(weakIntReference.get()).thenReturn(0);
+  99. >     when(weakIntReference2.get()).thenReturn(1);
+  100.       when(weakIntReference3.get()).thenReturn(new Object());
+  101.       tracker.track(weakIntReference, timeCreatedMs);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:100: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference3.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 100).
+  98.       when(weakIntReference.get()).thenReturn(0);
+  99.       when(weakIntReference2.get()).thenReturn(1);
+  100. >     when(weakIntReference3.get()).thenReturn(new Object());
+  101.       tracker.track(weakIntReference, timeCreatedMs);
+  102.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:101: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `LifecycleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 101).
+  99.       LifecycleInstanceTracker tracker =
+  100.           new LifecycleInstanceTracker(Integer.class, new TestWeakRedGenerator(), "Integer");
+  101. >     when(weakIntReference.get()).thenReturn(0);
+  102.       when(weakObjectReference.get()).thenReturn(new Object());
+  103.       tracker.track(weakIntReference, lifecycleEndTimeMs);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:102: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `LifecycleInstanceTrackerTest.weakObjectReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 102).
+  100.           new LifecycleInstanceTracker(Integer.class, new TestWeakRedGenerator(), "Integer");
+  101.       when(weakIntReference.get()).thenReturn(0);
+  102. >     when(weakObjectReference.get()).thenReturn(new Object());
+  103.       tracker.track(weakIntReference, lifecycleEndTimeMs);
+  104.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:114: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 114).
+  112.       SingleInstanceTracker tracker =
+  113.           new SingleInstanceTracker(Integer.class, new TestWeakRefGenerator(), "Integer");
+  114. >     when(weakIntReference.get()).thenReturn(0);
+  115.       when(weakIntReference2.get()).thenReturn(1);
+  116.       tracker.track(weakIntReference, timeCreatedMs);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:115: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference2.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 115).
+  113.           new SingleInstanceTracker(Integer.class, new TestWeakRefGenerator(), "Integer");
+  114.       when(weakIntReference.get()).thenReturn(0);
+  115. >     when(weakIntReference2.get()).thenReturn(1);
+  116.       tracker.track(weakIntReference, timeCreatedMs);
+  117.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:115: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `LifecycleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 115).
+  113.       LifecycleInstanceTracker tracker =
+  114.           new LifecycleInstanceTracker(Integer.class, new TestWeakRedGenerator(), "Integer");
+  115. >     when(weakIntReference.get()).thenReturn(0);
+  116.       tracker.track(weakIntReference, lifecycleEndTimeMs);
+  117.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:130: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 130).
+  128.       SingleInstanceTracker tracker =
+  129.           new SingleInstanceTracker(Integer.class, weakReferenceGenerator, "Integer");
+  130. >     when(weakIntReference.get()).thenReturn(0);
+  131.       when(weakIntReference2.get()).thenReturn(1);
+  132.       tracker.track(weakIntReference, timeCreatedMs);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:131: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference2.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 131).
+  129.           new SingleInstanceTracker(Integer.class, weakReferenceGenerator, "Integer");
+  130.       when(weakIntReference.get()).thenReturn(0);
+  131. >     when(weakIntReference2.get()).thenReturn(1);
+  132.       tracker.track(weakIntReference, timeCreatedMs);
+  133.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:417: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `ActiveTrackerTest.genericWeakRef2.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 417).
+  415.       queue.add(new ULeak.QueuedLeakEvent(genericWeakRef2, className, createdTimeMs2));
+  416.   
+  417. >     when(genericWeakRef2.get()).thenReturn(1).thenReturn(1).thenReturn(1).thenReturn(null);
+  418.   
+  419.       when(testRefGeneratorFactory.createGenerator()).thenReturn(weakReferenceGenerator);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:417: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `OngoingStubbing.thenReturn(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 417).
+  415.       queue.add(new ULeak.QueuedLeakEvent(genericWeakRef2, className, createdTimeMs2));
+  416.   
+  417. >     when(genericWeakRef2.get()).thenReturn(1).thenReturn(1).thenReturn(1).thenReturn(null);
+  418.   
+  419.       when(testRefGeneratorFactory.createGenerator()).thenReturn(weakReferenceGenerator);
+
+Summary of the reports
+
+   ERADICATE_FIELD_NOT_INITIALIZED: 20
+  ERADICATE_PARAMETER_NOT_NULLABLE: 17Found 37 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/TrackedReferencesTest.java:28: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `TrackedReferencesTest.refGeneratorFactory` is not initialized in the constructor and is not declared `@Nullable`.
+  26.   import org.mockito.MockitoAnnotations;
+  27.   
+  28. > public class TrackedReferencesTest {
+  29.   
+  30.     TrackedReferences references;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/TrackedReferencesTest.java:28: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `TrackedReferencesTest.references` is not initialized in the constructor and is not declared `@Nullable`.
+  26.   import org.mockito.MockitoAnnotations;
+  27.   
+  28. > public class TrackedReferencesTest {
+  29.   
+  30.     TrackedReferences references;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:31: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `LifecycleInstanceTrackerTest.weakIntReference` is not initialized in the constructor and is not declared `@Nullable`.
+  29.   import java.lang.ref.WeakReference;
+  30.   
+  31. > public class LifecycleInstanceTrackerTest {
+  32.   
+  33.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:31: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `LifecycleInstanceTrackerTest.weakObjectReference` is not initialized in the constructor and is not declared `@Nullable`.
+  29.   import java.lang.ref.WeakReference;
+  30.   
+  31. > public class LifecycleInstanceTrackerTest {
+  32.   
+  33.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:31: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `LifecycleInstanceTrackerTest.weakReferenceGenerator` is not initialized in the constructor and is not declared `@Nullable`.
+  29.   import java.lang.ref.WeakReference;
+  30.   
+  31. > public class LifecycleInstanceTrackerTest {
+  32.   
+  33.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:31: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `SingleInstanceTrackerTest.weakIntReference2` is not initialized in the constructor and is not declared `@Nullable`.
+  29.   import java.lang.ref.WeakReference;
+  30.   
+  31. > public class SingleInstanceTrackerTest {
+  32.   
+  33.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:31: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `SingleInstanceTrackerTest.weakIntReference3` is not initialized in the constructor and is not declared `@Nullable`.
+  29.   import java.lang.ref.WeakReference;
+  30.   
+  31. > public class SingleInstanceTrackerTest {
+  32.   
+  33.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:31: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `SingleInstanceTrackerTest.weakIntReference` is not initialized in the constructor and is not declared `@Nullable`.
+  29.   import java.lang.ref.WeakReference;
+  30.   
+  31. > public class SingleInstanceTrackerTest {
+  32.   
+  33.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:31: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `SingleInstanceTrackerTest.weakReferenceGenerator` is not initialized in the constructor and is not declared `@Nullable`.
+  29.   import java.lang.ref.WeakReference;
+  30.   
+  31. > public class SingleInstanceTrackerTest {
+  32.   
+  33.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.activeTracker` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.errorRelay` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.gcCallWrapper` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.genericWeakRef1` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.genericWeakRef2` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.random` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.scheduler` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.testObserver` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.testRefGeneratorFactory` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.uLeakEventReporter` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ActiveTrackerTest.weakReferenceGenerator` is not initialized in the constructor and is not declared `@Nullable`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:63: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `LifecycleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 63).
+  61.       LifecycleInstanceTracker tracker =
+  62.           new LifecycleInstanceTracker(Object.class, weakReferenceGenerator, "Object");
+  63. >     when(weakIntReference.get()).thenReturn(0);
+  64.       tracker.track(weakIntReference, lifecycleEndTimeMs);
+  65.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(0);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:74: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `LifecycleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 74).
+  72.       LifecycleInstanceTracker tracker =
+  73.           new LifecycleInstanceTracker(Integer.class, weakReferenceGenerator, "Integer");
+  74. >     when(weakIntReference.get()).thenReturn(0);
+  75.       tracker.track(weakIntReference, lifecycleEndTimeMs);
+  76.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:75: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 75).
+  73.       SingleInstanceTracker tracker =
+  74.           new SingleInstanceTracker(Object.class, weakReferenceGenerator, "Object");
+  75. >     when(weakIntReference.get()).thenReturn(0);
+  76.       tracker.track(weakIntReference, timeCreatedMs);
+  77.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(0);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:85: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `LifecycleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 85).
+  83.       LifecycleInstanceTracker tracker =
+  84.           new LifecycleInstanceTracker(Integer.class, weakReferenceGenerator, "Integer");
+  85. >     when(weakIntReference.get()).thenReturn(0);
+  86.       tracker.track(weakIntReference, lifecycleEndTimeMs);
+  87.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:86: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 86).
+  84.       SingleInstanceTracker tracker =
+  85.           new SingleInstanceTracker(Integer.class, weakReferenceGenerator, "Integer");
+  86. >     when(weakIntReference.get()).thenReturn(0);
+  87.       tracker.track(weakIntReference, timeCreatedMs);
+  88.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:98: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 98).
+  96.       SingleInstanceTracker tracker =
+  97.           new SingleInstanceTracker(Integer.class, new TestWeakRefGenerator(), "Integer");
+  98. >     when(weakIntReference.get()).thenReturn(0);
+  99.       when(weakIntReference2.get()).thenReturn(1);
+  100.       when(weakIntReference3.get()).thenReturn(new Object());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:99: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference2.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 99).
+  97.           new SingleInstanceTracker(Integer.class, new TestWeakRefGenerator(), "Integer");
+  98.       when(weakIntReference.get()).thenReturn(0);
+  99. >     when(weakIntReference2.get()).thenReturn(1);
+  100.       when(weakIntReference3.get()).thenReturn(new Object());
+  101.       tracker.track(weakIntReference, timeCreatedMs);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:100: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference3.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 100).
+  98.       when(weakIntReference.get()).thenReturn(0);
+  99.       when(weakIntReference2.get()).thenReturn(1);
+  100. >     when(weakIntReference3.get()).thenReturn(new Object());
+  101.       tracker.track(weakIntReference, timeCreatedMs);
+  102.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:101: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `LifecycleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 101).
+  99.       LifecycleInstanceTracker tracker =
+  100.           new LifecycleInstanceTracker(Integer.class, new TestWeakRedGenerator(), "Integer");
+  101. >     when(weakIntReference.get()).thenReturn(0);
+  102.       when(weakObjectReference.get()).thenReturn(new Object());
+  103.       tracker.track(weakIntReference, lifecycleEndTimeMs);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:102: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `LifecycleInstanceTrackerTest.weakObjectReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 102).
+  100.           new LifecycleInstanceTracker(Integer.class, new TestWeakRedGenerator(), "Integer");
+  101.       when(weakIntReference.get()).thenReturn(0);
+  102. >     when(weakObjectReference.get()).thenReturn(new Object());
+  103.       tracker.track(weakIntReference, lifecycleEndTimeMs);
+  104.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:114: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 114).
+  112.       SingleInstanceTracker tracker =
+  113.           new SingleInstanceTracker(Integer.class, new TestWeakRefGenerator(), "Integer");
+  114. >     when(weakIntReference.get()).thenReturn(0);
+  115.       when(weakIntReference2.get()).thenReturn(1);
+  116.       tracker.track(weakIntReference, timeCreatedMs);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:115: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference2.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 115).
+  113.           new SingleInstanceTracker(Integer.class, new TestWeakRefGenerator(), "Integer");
+  114.       when(weakIntReference.get()).thenReturn(0);
+  115. >     when(weakIntReference2.get()).thenReturn(1);
+  116.       tracker.track(weakIntReference, timeCreatedMs);
+  117.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:115: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `LifecycleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 115).
+  113.       LifecycleInstanceTracker tracker =
+  114.           new LifecycleInstanceTracker(Integer.class, new TestWeakRedGenerator(), "Integer");
+  115. >     when(weakIntReference.get()).thenReturn(0);
+  116.       tracker.track(weakIntReference, lifecycleEndTimeMs);
+  117.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:130: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 130).
+  128.       SingleInstanceTracker tracker =
+  129.           new SingleInstanceTracker(Integer.class, weakReferenceGenerator, "Integer");
+  130. >     when(weakIntReference.get()).thenReturn(0);
+  131.       when(weakIntReference2.get()).thenReturn(1);
+  132.       tracker.track(weakIntReference, timeCreatedMs);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:131: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `SingleInstanceTrackerTest.weakIntReference2.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 131).
+  129.           new SingleInstanceTracker(Integer.class, weakReferenceGenerator, "Integer");
+  130.       when(weakIntReference.get()).thenReturn(0);
+  131. >     when(weakIntReference2.get()).thenReturn(1);
+  132.       tracker.track(weakIntReference, timeCreatedMs);
+  133.       assertThat(tracker.getCurrentNumInMemoryInstances()).isEqualTo(1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:417: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Mockito.when(...)` needs a non-null value in parameter 1 but argument `ActiveTrackerTest.genericWeakRef2.get()` can be null. (Origin: call to get() modelled in modelTables.ml at line 417).
+  415.       queue.add(new ULeak.QueuedLeakEvent(genericWeakRef2, className, createdTimeMs2));
+  416.   
+  417. >     when(genericWeakRef2.get()).thenReturn(1).thenReturn(1).thenReturn(1).thenReturn(null);
+  418.   
+  419.       when(testRefGeneratorFactory.createGenerator()).thenReturn(weakReferenceGenerator);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:417: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `OngoingStubbing.thenReturn(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 417).
+  415.       queue.add(new ULeak.QueuedLeakEvent(genericWeakRef2, className, createdTimeMs2));
+  416.   
+  417. >     when(genericWeakRef2.get()).thenReturn(1).thenReturn(1).thenReturn(1).thenReturn(null);
+  418.   
+  419.       when(testRefGeneratorFactory.createGenerator()).thenReturn(weakReferenceGenerator);
+
+Summary of the reports
+
+   ERADICATE_FIELD_NOT_INITIALIZED: 20
+  ERADICATE_PARAMETER_NOT_NULLABLE: 17

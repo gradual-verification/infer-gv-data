@@ -1,0 +1,2507 @@
+Found 156 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Help.java:18: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `bottomNavigationView`.
+  16.   
+  17.           BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+  18. >         Menu menu = bottomNavigationView.getMenu();
+  19.           MenuItem menuItem = menu.getItem(2);
+  20.           menuItem.setChecked(true);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Help.java:21: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `bottomNavigationView`.
+  19.           MenuItem menuItem = menu.getItem(2);
+  20.           menuItem.setChecked(true);
+  21. >         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  22.               @Override
+  23.               public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Help.java:20: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `menuItem`.
+  18.           Menu menu = bottomNavigationView.getMenu();
+  19.           MenuItem menuItem = menu.getItem(2);
+  20. >         menuItem.setChecked(true);
+  21.           bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  22.               @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Help.java:27: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Help$1.this$0`.
+  25.                       case R.id.navigation_scan:
+  26.                           Intent intent1 = new Intent(Help.this, MainActivity.class);
+  27. >                         startActivity(intent1);
+  28.                           break;
+  29.                       case R.id.navigation_make:
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Help.java:31: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Help$1.this$0`.
+  29.                       case R.id.navigation_make:
+  30.                           Intent intent2 = new Intent(Help.this, Make.class);
+  31. >                         startActivity(intent2);
+  32.                           break;
+  33.                       case R.id.navigation_help:
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:38: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `x0`.
+  36.   import ezvcard.property.StructuredName;
+  37.   
+  38. > public class Make extends AppCompatActivity {
+  39.       final String[] VCardTags = {"VERSION", "PRODID", "N:", "EMAIL", "TEL", "END"};
+  40.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:75: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `bottomNavigationView`.
+  73.   
+  74.           final BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+  75. >         Menu menu = bottomNavigationView.getMenu();
+  76.           MenuItem menuItem = menu.getItem(1);
+  77.           menuItem.setChecked(true);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:78: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `bottomNavigationView`.
+  76.           MenuItem menuItem = menu.getItem(1);
+  77.           menuItem.setChecked(true);
+  78. >         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  79.               @Override
+  80.               public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:114: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `chooseProfile`.
+  112.           profileList.setAdapter(arrayAdapter);
+  113.   
+  114. >         chooseProfile.setOnClickListener(new View.OnClickListener() {
+  115.               @Override
+  116.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:77: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `menuItem`.
+  75.           Menu menu = bottomNavigationView.getMenu();
+  76.           MenuItem menuItem = menu.getItem(1);
+  77. >         menuItem.setChecked(true);
+  78.           bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  79.               @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:47: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$6`.
+  45.           super.onCreate(savedInstanceState);
+  46.           setContentView(R.layout.activity_make);
+  47. >         Picasso.get().setLoggingEnabled(true);
+  48.           final ImageView imageView = (ImageView) findViewById(R.id.imageView);
+  49.           Button refresh = (Button) findViewById(R.id.button);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:112: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `profileList`.
+  110.                   profileArrayList
+  111.           );
+  112. >         profileList.setAdapter(arrayAdapter);
+  113.   
+  114.           chooseProfile.setOnClickListener(new View.OnClickListener() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `profileList`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:56: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `refresh`.
+  54.           final EditText profileName = findViewById(R.id.profileName);
+  55.   
+  56. >         refresh.setOnClickListener(new View.OnClickListener() {
+  57.               @Override
+  58.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `saveProfile`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:123: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `bottomNavigationView`.
+  121.   
+  122.           BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+  123. >         Menu menu = bottomNavigationView.getMenu();
+  124.           MenuItem menuItem = menu.getItem(0);
+  125.           menuItem.setChecked(true);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:126: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `bottomNavigationView`.
+  124.           MenuItem menuItem = menu.getItem(0);
+  125.           menuItem.setChecked(true);
+  126. >         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  127.               @Override
+  128.               public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:125: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `menuItem`.
+  123.           Menu menu = bottomNavigationView.getMenu();
+  124.           MenuItem menuItem = menu.getItem(0);
+  125. >         menuItem.setChecked(true);
+  126.           bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  127.               @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:52: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$23`.
+  50.           textView = (TextView) findViewById(R.id.textView);
+  51.           barcodeDetector = new BarcodeDetector.Builder(this)
+  52. >                 .setBarcodeFormats(Barcode.QR_CODE).build();
+  53.   
+  54.           cameraSource = new CameraSource.Builder(this, barcodeDetector).setAutoFocusEnabled(true)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$36`.
+  53.   
+  54.           cameraSource = new CameraSource.Builder(this, barcodeDetector).setAutoFocusEnabled(true)
+  55. >                 .setRequestedPreviewSize(640, 480).build();
+  56.   
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$39`.
+  53.   
+  54.           cameraSource = new CameraSource.Builder(this, barcodeDetector).setAutoFocusEnabled(true)
+  55. >                 .setRequestedPreviewSize(640, 480).build();
+  56.   
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:58: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$48`.
+  56.   
+  57.   
+  58. >         surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
+  59.               @Override
+  60.               public void surfaceCreated(SurfaceHolder holder) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:86: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity.barcodeDetector`.
+  84.           });
+  85.   
+  86. >         barcodeDetector.setProcessor(new Detector.Processor<Barcode>() {
+  87.               @Override
+  88.               public void release() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:58: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity.surfaceView`.
+  56.   
+  57.   
+  58. >         surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
+  59.               @Override
+  60.               public void surfaceCreated(SurfaceHolder holder) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:60: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$20`.
+  58.               public void onClick(View v) {
+  59.                   VCard vcard = makeVCard(firstName, lastName, email, phone);
+  60. >                 String fullContact = Ezvcard.write(vcard).version(VCardVersion.V3_0).go();
+  61.   
+  62.                   fullContact = getUrlVCard(vcard);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:60: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$24`.
+  58.               public void onClick(View v) {
+  59.                   VCard vcard = makeVCard(firstName, lastName, email, phone);
+  60. >                 String fullContact = Ezvcard.write(vcard).version(VCardVersion.V3_0).go();
+  61.   
+  62.                   fullContact = getUrlVCard(vcard);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:65: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$34`.
+  63.   
+  64.                   Log.d("myTag", "Registered Click");
+  65. >                 Picasso.get().load("https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=" + fullContact).into(imageView);
+  66.   
+  67.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:65: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$39`.
+  63.   
+  64.                   Log.d("myTag", "Registered Click");
+  65. >                 Picasso.get().load("https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=" + fullContact).into(imageView);
+  66.   
+  67.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:65: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$43`.
+  63.   
+  64.                   Log.d("myTag", "Registered Click");
+  65. >                 Picasso.get().load("https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=" + fullContact).into(imageView);
+  66.   
+  67.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:65: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$50`.
+  63.   
+  64.                   Log.d("myTag", "Registered Click");
+  65. >                 Picasso.get().load("https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=" + fullContact).into(imageView);
+  66.   
+  67.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:59: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$1.this$0`.
+  57.               @Override
+  58.               public void onClick(View v) {
+  59. >                 VCard vcard = makeVCard(firstName, lastName, email, phone);
+  60.                   String fullContact = Ezvcard.write(vcard).version(VCardVersion.V3_0).go();
+  61.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:62: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$1.this$0`.
+  60.                   String fullContact = Ezvcard.write(vcard).version(VCardVersion.V3_0).go();
+  61.   
+  62. >                 fullContact = getUrlVCard(vcard);
+  63.   
+  64.                   Log.d("myTag", "Registered Click");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:61: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  59.               @Override
+  60.               public void surfaceCreated(SurfaceHolder holder) {
+  61. >                 if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+  62.                       return;
+  63.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:66: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$1.this$0`,check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$1.this$0->com.example.emily.qrcontact.MainActivity.cameraSource`.
+  64.                   try
+  65.                   {
+  66. >                     cameraSource.start(holder);
+  67.                   } catch(IOException e)
+  68.                   {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:69: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  67.                   } catch(IOException e)
+  68.                   {
+  69. >                     e.printStackTrace();
+  70.                   }
+  71.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:61: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$1.this$0`.
+  59.               @Override
+  60.               public void surfaceCreated(SurfaceHolder holder) {
+  61. >                 if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+  62.                       return;
+  63.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:82: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$1.this$0`,check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$1.this$0->com.example.emily.qrcontact.MainActivity.cameraSource`.
+  80.               public void surfaceDestroyed(SurfaceHolder holder) {
+  81.   
+  82. >                 cameraSource.stop();
+  83.               }
+  84.           });
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:84: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$2.this$0`.
+  82.                       case R.id.navigation_scan:
+  83.                           Intent intent1 = new Intent(Make.this, MainActivity.class);
+  84. >                         startActivity(intent1);
+  85.                           break;
+  86.                       case R.id.navigation_make:
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:90: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$2.this$0`.
+  88.                       case R.id.navigation_help:
+  89.                           Intent intent3 = new Intent(Make.this, Help.class);
+  90. >                         startActivity(intent3);
+  91.                           break;
+  92.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:97: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2.this$0`,check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2.this$0->com.example.emily.qrcontact.MainActivity.textView`.
+  95.   
+  96.                   if(qrCodes.size() != 0) {
+  97. >                     textView.post(new Runnable() {
+  98.                           @Override
+  99.                           public void run() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:94: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `detections`.
+  92.               @Override
+  93.               public void receiveDetections(Detector.Detections<Barcode> detections) {
+  94. >                 final SparseArray<Barcode> qrCodes = detections.getDetectedItems();
+  95.   
+  96.                   if(qrCodes.size() != 0) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:96: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `qrCodes`.
+  94.                   final SparseArray<Barcode> qrCodes = detections.getDetectedItems();
+  95.   
+  96. >                 if(qrCodes.size() != 0) {
+  97.                       textView.post(new Runnable() {
+  98.                           @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:104: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `n$23`.
+  102.                               try {
+  103.                                   for (int x = 0; x < qrCodes.size(); x++) {
+  104. >                                     Log.d("ScanTest", qrCodes.valueAt(x).rawValue);
+  105.   
+  106.                                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:112: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `n$53`.
+  110.                               textView.setText(qrCodes.valueAt(0).rawValue);
+  111.   
+  112. >                             VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+  113.                               Log.d("ScanTest", scannedContact.getEmails().get(0).toString());
+  114.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:110: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.this$1`,check dereference of ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.this$1->com.example.emily.qrcontact.MainActivity$2.this$0`,check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.this$1->com.example.emily.qrcontact.MainActivity$2.this$0->com.example.emily.qrcontact.MainActivity.textView`,check dereference of ambiguous pointer `n$43`.
+  108.                                   Log.d("ScanTest", e.toString());
+  109.                               }
+  110. >                             textView.setText(qrCodes.valueAt(0).rawValue);
+  111.   
+  112.                               VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:100: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.this$1`,check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.this$1->com.example.emily.qrcontact.MainActivity$2.this$0`.
+  98.                           @Override
+  99.                           public void run() {
+  100. >                             Vibrator vibrator = (Vibrator)getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
+  101.                               vibrator.vibrate(1000);
+  102.                               try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:108: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  106.                                   }
+  107.                               } catch (Exception e) {
+  108. >                                 Log.d("ScanTest", e.toString());
+  109.                               }
+  110.                               textView.setText(qrCodes.valueAt(0).rawValue);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:100: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$4`.
+  98.                           @Override
+  99.                           public void run() {
+  100. >                             Vibrator vibrator = (Vibrator)getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
+  101.                               vibrator.vibrate(1000);
+  102.                               try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:112: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$58`.
+  110.                               textView.setText(qrCodes.valueAt(0).rawValue);
+  111.   
+  112. >                             VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+  113.                               Log.d("ScanTest", scannedContact.getEmails().get(0).toString());
+  114.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:113: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$64`.
+  111.   
+  112.                               VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+  113. >                             Log.d("ScanTest", scannedContact.getEmails().get(0).toString());
+  114.   
+  115.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:113: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$67`.
+  111.   
+  112.                               VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+  113. >                             Log.d("ScanTest", scannedContact.getEmails().get(0).toString());
+  114.   
+  115.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:113: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `scannedContact`.
+  111.   
+  112.                               VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+  113. >                             Log.d("ScanTest", scannedContact.getEmails().get(0).toString());
+  114.   
+  115.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:103: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.val$qrCodes`.
+  101.                               vibrator.vibrate(1000);
+  102.                               try {
+  103. >                                 for (int x = 0; x < qrCodes.size(); x++) {
+  104.                                       Log.d("ScanTest", qrCodes.valueAt(x).rawValue);
+  105.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:104: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.val$qrCodes`.
+  102.                               try {
+  103.                                   for (int x = 0; x < qrCodes.size(); x++) {
+  104. >                                     Log.d("ScanTest", qrCodes.valueAt(x).rawValue);
+  105.   
+  106.                                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:110: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.val$qrCodes`.
+  108.                                   Log.d("ScanTest", e.toString());
+  109.                               }
+  110. >                             textView.setText(qrCodes.valueAt(0).rawValue);
+  111.   
+  112.                               VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:112: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.val$qrCodes`.
+  110.                               textView.setText(qrCodes.valueAt(0).rawValue);
+  111.   
+  112. >                             VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+  113.                               Log.d("ScanTest", scannedContact.getEmails().get(0).toString());
+  114.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:101: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `vibrator`.
+  99.                           public void run() {
+  100.                               Vibrator vibrator = (Vibrator)getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
+  101. >                             vibrator.vibrate(1000);
+  102.                               try {
+  103.                                   for (int x = 0; x < qrCodes.size(); x++) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:122: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$3.val$bottomNavigationView`.
+  120.                   }
+  121.                   profileLayout.setVisibility(View.GONE);
+  122. >                 bottomNavigationView.setVisibility(View.GONE);
+  123.                   imageView.setVisibility(View.GONE);
+  124.                   profileList.setVisibility(View.VISIBLE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:123: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$3.val$imageView`.
+  121.                   profileLayout.setVisibility(View.GONE);
+  122.                   bottomNavigationView.setVisibility(View.GONE);
+  123. >                 imageView.setVisibility(View.GONE);
+  124.                   profileList.setVisibility(View.VISIBLE);
+  125.               }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:117: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$3.val$profileArrayList`.
+  115.               @Override
+  116.               public void onClick(View v) {
+  117. >                 if (profileArrayList.size() == 0) {
+  118.                       Log.d("Choose Profile", "No profiles");
+  119.                       return;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:121: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$3.val$profileLayout`.
+  119.                       return;
+  120.                   }
+  121. >                 profileLayout.setVisibility(View.GONE);
+  122.                   bottomNavigationView.setVisibility(View.GONE);
+  123.                   imageView.setVisibility(View.GONE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:124: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$3.val$profileList`.
+  122.                   bottomNavigationView.setVisibility(View.GONE);
+  123.                   imageView.setVisibility(View.GONE);
+  124. >                 profileList.setVisibility(View.VISIBLE);
+  125.               }
+  126.           });
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:134: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$3.this$0`.
+  132.                       case R.id.navigation_make:
+  133.                           Intent intent2 = new Intent(MainActivity.this, Make.class);
+  134. >                         startActivity(intent2);
+  135.                           break;
+  136.                       case R.id.navigation_help:
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:138: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$3.this$0`.
+  136.                       case R.id.navigation_help:
+  137.                           Intent intent3 = new Intent(MainActivity.this, Help.class);
+  138. >                         startActivity(intent3);
+  139.                           break;
+  140.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:132: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$11`.
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+  131.                   Profile temp = profileArrayList.get(position);
+  132. >                 firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:132: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$14`.
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+  131.                   Profile temp = profileArrayList.get(position);
+  132. >                 firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:133: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$26`.
+  131.                   Profile temp = profileArrayList.get(position);
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133. >                 lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:133: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$29`.
+  131.                   Profile temp = profileArrayList.get(position);
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133. >                 lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:134: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$41`.
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134. >                 email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:134: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$44`.
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134. >                 email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:134: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$47`.
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134. >                 email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:135: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$61`.
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135. >                 phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+  137.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:135: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$64`.
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135. >                 phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+  137.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:135: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$67`.
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135. >                 phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+  137.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:132: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `temp`.
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+  131.                   Profile temp = profileArrayList.get(position);
+  132. >                 firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:133: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `temp`.
+  131.                   Profile temp = profileArrayList.get(position);
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133. >                 lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:134: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `temp`.
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134. >                 email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:135: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `temp`.
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135. >                 phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+  137.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:136: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `temp`.
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136. >                 profileName.setText(temp.getProfileName());
+  137.   
+  138.                   profileLayout.setVisibility(View.VISIBLE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:139: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$bottomNavigationView`.
+  137.   
+  138.                   profileLayout.setVisibility(View.VISIBLE);
+  139. >                 bottomNavigationView.setVisibility(View.VISIBLE);
+  140.                   imageView.setVisibility(View.VISIBLE);
+  141.                   profileList.setVisibility(View.GONE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:134: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$email`.
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134. >                 email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:132: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$firstName`.
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+  131.                   Profile temp = profileArrayList.get(position);
+  132. >                 firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:140: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$imageView`.
+  138.                   profileLayout.setVisibility(View.VISIBLE);
+  139.                   bottomNavigationView.setVisibility(View.VISIBLE);
+  140. >                 imageView.setVisibility(View.VISIBLE);
+  141.                   profileList.setVisibility(View.GONE);
+  142.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:133: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$lastName`.
+  131.                   Profile temp = profileArrayList.get(position);
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133. >                 lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:135: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$phone`.
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135. >                 phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+  137.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:131: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$profileArrayList`.
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+  131. >                 Profile temp = profileArrayList.get(position);
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:138: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$profileLayout`.
+  136.                   profileName.setText(temp.getProfileName());
+  137.   
+  138. >                 profileLayout.setVisibility(View.VISIBLE);
+  139.                   bottomNavigationView.setVisibility(View.VISIBLE);
+  140.                   imageView.setVisibility(View.VISIBLE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:141: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$profileList`.
+  139.                   bottomNavigationView.setVisibility(View.VISIBLE);
+  140.                   imageView.setVisibility(View.VISIBLE);
+  141. >                 profileList.setVisibility(View.GONE);
+  142.   
+  143.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:136: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$profileName`.
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136. >                 profileName.setText(temp.getProfileName());
+  137.   
+  138.                   profileLayout.setVisibility(View.VISIBLE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:153: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$21`.
+  151.                   boolean isThereACopy = false;
+  152.                   VCard toAddToProfile = makeVCard(firstName, lastName, email, phone);
+  153. >                 Profile toAddToList = new Profile(toAddToProfile, profileName.getText().toString());
+  154.   
+  155.                   if (toAddToList == null || toAddToList.getProfileName().equals("")) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:155: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$33`.
+  153.                   Profile toAddToList = new Profile(toAddToProfile, profileName.getText().toString());
+  154.   
+  155. >                 if (toAddToList == null || toAddToList.getProfileName().equals("")) {
+  156.                       Log.d("Save Profile", "No Profile Name");
+  157.                       return;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:160: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$42`.
+  158.                   }
+  159.   
+  160. >                 for (Profile profile : profileArrayList) {
+  161.                       if (profile.equals(toAddToList) || toAddToList.getProfileName().equals(profile.getProfileName())) {
+  162.                           isThereACopy = true;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:161: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$59`.
+  159.   
+  160.                   for (Profile profile : profileArrayList) {
+  161. >                     if (profile.equals(toAddToList) || toAddToList.getProfileName().equals(profile.getProfileName())) {
+  162.                           isThereACopy = true;
+  163.                           break;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:161: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `profile`.
+  159.   
+  160.                   for (Profile profile : profileArrayList) {
+  161. >                     if (profile.equals(toAddToList) || toAddToList.getProfileName().equals(profile.getProfileName())) {
+  162.                           isThereACopy = true;
+  163.                           break;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:152: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$5.this$0`.
+  150.   
+  151.                   boolean isThereACopy = false;
+  152. >                 VCard toAddToProfile = makeVCard(firstName, lastName, email, phone);
+  153.                   Profile toAddToList = new Profile(toAddToProfile, profileName.getText().toString());
+  154.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:176: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$5.this$0`.
+  174.   
+  175.                   profileArrayList.add(toAddToList);
+  176. >                 saveData(profileArrayList);
+  177.                   Log.d("Persistence", "Saved Data");
+  178.               }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:160: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$5.val$profileArrayList`.
+  158.                   }
+  159.   
+  160. >                 for (Profile profile : profileArrayList) {
+  161.                       if (profile.equals(toAddToList) || toAddToList.getProfileName().equals(profile.getProfileName())) {
+  162.                           isThereACopy = true;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:175: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$5.val$profileArrayList`.
+  173.   
+  174.   
+  175. >                 profileArrayList.add(toAddToList);
+  176.                   saveData(profileArrayList);
+  177.                   Log.d("Persistence", "Saved Data");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:153: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$5.val$profileName`.
+  151.                   boolean isThereACopy = false;
+  152.                   VCard toAddToProfile = makeVCard(firstName, lastName, email, phone);
+  153. >                 Profile toAddToList = new Profile(toAddToProfile, profileName.getText().toString());
+  154.   
+  155.                   if (toAddToList == null || toAddToList.getProfileName().equals("")) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:161: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `toAddToList`.
+  159.   
+  160.                   for (Profile profile : profileArrayList) {
+  161. >                     if (profile.equals(toAddToList) || toAddToList.getProfileName().equals(profile.getProfileName())) {
+  162.                           isThereACopy = true;
+  163.                           break;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:195: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `editor`.
+  193.           String json = gson.toJson(profileArrayList);
+  194.           Log.d("Persistence", "Made Json");
+  195. >         editor.putString("task list", json);
+  196.           Log.d("Persistence", "Put Json");
+  197.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:198: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `editor`.
+  196.           Log.d("Persistence", "Put Json");
+  197.   
+  198. >         editor.apply();
+  199.           Log.d("Persistence", "Applied");
+  200.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:189: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `sharedPreferences`.
+  187.           SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+  188.           Log.d("Persistence", "Make Shared Pref");
+  189. >         SharedPreferences.Editor editor = sharedPreferences.edit();
+  190.           Log.d("Persistence", "Make Editor");
+  191.           Gson gson = new Gson();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:217: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  215.               return profileArrayList;
+  216.           } catch (Exception e) {
+  217. >             Log.d("Persistence", e.toString());
+  218.           }
+  219.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:207: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `sharedPreferences`.
+  205.               SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+  206.               Gson gson = new Gson();
+  207. >             String json = sharedPreferences.getString("task list", null);
+  208.               Type type = new TypeToken<ArrayList<Profile>>() {}.getType();
+  209.               profileArrayList = gson.fromJson(json, type);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:230: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.example.emily.qrcontact.Make.VCardTags`,check method call on ambiguous pointer `*(this->com.example.emily.qrcontact.Make.VCardTags)[_]`.
+  228.               if (newFullContact.contains(VCardTags[x])) {
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230. >                 if (VCardTags[x].equals("N:")) {
+  231.                       parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+  232.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:237: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237. >                     Log.d("out of bounds", e.toString() + " " + parseStop);
+  238.   
+  239.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:237: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$101`.
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237. >                     Log.d("out of bounds", e.toString() + " " + parseStop);
+  238.   
+  239.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:224: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$4`.
+  222.   
+  223.       private String getUrlVCard(VCard vCard) {
+  224. >         String fullContact = Ezvcard.write(vCard).version(VCardVersion.V3_0).go();
+  225.           String newFullContact = fullContact;
+  226.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:234: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$70`.
+  232.                   }
+  233.                   try {
+  234. >                     newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:235: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$73`.
+  233.                   try {
+  234.                       newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235. >                             + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237.                       Log.d("out of bounds", e.toString() + " " + parseStop);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:235: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$81`.
+  233.                   try {
+  234.                       newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235. >                             + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237.                       Log.d("out of bounds", e.toString() + " " + parseStop);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:224: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$8`.
+  222.   
+  223.       private String getUrlVCard(VCard vCard) {
+  224. >         String fullContact = Ezvcard.write(vCard).version(VCardVersion.V3_0).go();
+  225.           String newFullContact = fullContact;
+  226.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:237: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$94`.
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237. >                     Log.d("out of bounds", e.toString() + " " + parseStop);
+  238.   
+  239.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:237: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$97`.
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237. >                     Log.d("out of bounds", e.toString() + " " + parseStop);
+  238.   
+  239.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:234: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`.
+  232.                   }
+  233.                   try {
+  234. >                     newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:235: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`.
+  233.                   try {
+  234.                       newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235. >                             + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237.                       Log.d("out of bounds", e.toString() + " " + parseStop);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:228: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`,check dereference of ambiguous pointer `this->com.example.emily.qrcontact.Make.VCardTags`.
+  226.   
+  227.           for (int x = 0; x < VCardTags.length; x++) {
+  228. >             if (newFullContact.contains(VCardTags[x])) {
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:229: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`,check dereference of ambiguous pointer `this->com.example.emily.qrcontact.Make.VCardTags`.
+  227.           for (int x = 0; x < VCardTags.length; x++) {
+  228.               if (newFullContact.contains(VCardTags[x])) {
+  229. >                 int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+  231.                       parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:231: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`,check dereference of ambiguous pointer `this->com.example.emily.qrcontact.Make.VCardTags`.
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+  231. >                     parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+  232.                   }
+  233.                   try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:255: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$1`.
+  253.       private void loadImage(ImageView toSet) {
+  254.           Log.d("fucntion", "Default code");
+  255. >         Picasso.get().load("https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=Example").into(toSet);
+  256.       }
+  257.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:255: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$4`.
+  253.       private void loadImage(ImageView toSet) {
+  254.           Log.d("fucntion", "Default code");
+  255. >         Picasso.get().load("https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=Example").into(toSet);
+  256.       }
+  257.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:264: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `email`.
+  262.           fullName.setGiven(String.valueOf(firstName.getText()));
+  263.           vcard.setStructuredName(fullName);
+  264. >         vcard.addEmail(String.valueOf(email.getText()), EmailType.WORK);
+  265.           vcard.addTelephoneNumber(String.valueOf(phone.getText()));
+  266.           return vcard;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:262: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `firstName`.
+  260.           StructuredName fullName = new StructuredName();
+  261.           fullName.setFamily(String.valueOf(lastName.getText()));
+  262. >         fullName.setGiven(String.valueOf(firstName.getText()));
+  263.           vcard.setStructuredName(fullName);
+  264.           vcard.addEmail(String.valueOf(email.getText()), EmailType.WORK);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:261: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `lastName`.
+  259.           VCard vcard = new VCard();
+  260.           StructuredName fullName = new StructuredName();
+  261. >         fullName.setFamily(String.valueOf(lastName.getText()));
+  262.           fullName.setGiven(String.valueOf(firstName.getText()));
+  263.           vcard.setStructuredName(fullName);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:265: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `phone`.
+  263.           vcard.setStructuredName(fullName);
+  264.           vcard.addEmail(String.valueOf(email.getText()), EmailType.WORK);
+  265. >         vcard.addTelephoneNumber(String.valueOf(phone.getText()));
+  266.           return vcard;
+  267.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:306: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `email`.
+  304.   
+  305.   
+  306. >             return (firstName.equals(toCompareFirstName) && lastName.equals(toCompareLastName) && email.equals(toCompareEmail)
+  307.                       && phone.equals(toComparePhone) && profileName.equals(newCompare.getProfileName()));
+  308.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:306: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `firstName`.
+  304.   
+  305.   
+  306. >             return (firstName.equals(toCompareFirstName) && lastName.equals(toCompareLastName) && email.equals(toCompareEmail)
+  307.                       && phone.equals(toComparePhone) && profileName.equals(newCompare.getProfileName()));
+  308.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:306: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `lastName`.
+  304.   
+  305.   
+  306. >             return (firstName.equals(toCompareFirstName) && lastName.equals(toCompareLastName) && email.equals(toCompareEmail)
+  307.                       && phone.equals(toComparePhone) && profileName.equals(newCompare.getProfileName()));
+  308.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:300: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$102`.
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300. >             String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+  302.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:294: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$16`.
+  292.               Profile newCompare = (Profile) toCompare;
+  293.               String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294. >             String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:294: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$19`.
+  292.               Profile newCompare = (Profile) toCompare;
+  293.               String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294. >             String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:295: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$29`.
+  293.               String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295. >             String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:296: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$38`.
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296. >             String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:296: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$41`.
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296. >             String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:297: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$51`.
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297. >             String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:297: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$54`.
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297. >             String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:298: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$65`.
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298. >             String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:298: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$68`.
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298. >             String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:298: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$71`.
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298. >             String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:293: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$7`.
+  291.   
+  292.               Profile newCompare = (Profile) toCompare;
+  293. >             String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:299: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$83`.
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299. >             String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:299: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$86`.
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299. >             String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:300: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$96`.
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300. >             String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+  302.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:300: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$99`.
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300. >             String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+  302.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:294: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  292.               Profile newCompare = (Profile) toCompare;
+  293.               String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294. >             String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:296: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296. >             String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:298: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298. >             String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:300: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300. >             String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+  302.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:307: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  305.   
+  306.               return (firstName.equals(toCompareFirstName) && lastName.equals(toCompareLastName) && email.equals(toCompareEmail)
+  307. >                     && phone.equals(toComparePhone) && profileName.equals(newCompare.getProfileName()));
+  308.   
+  309.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:307: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `phone`.
+  305.   
+  306.               return (firstName.equals(toCompareFirstName) && lastName.equals(toCompareLastName) && email.equals(toCompareEmail)
+  307. >                     && phone.equals(toComparePhone) && profileName.equals(newCompare.getProfileName()));
+  308.   
+  309.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:307: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$Profile.profileName`.
+  305.   
+  306.               return (firstName.equals(toCompareFirstName) && lastName.equals(toCompareLastName) && email.equals(toCompareEmail)
+  307. >                     && phone.equals(toComparePhone) && profileName.equals(newCompare.getProfileName()));
+  308.   
+  309.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:293: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$Profile.vCard`.
+  291.   
+  292.               Profile newCompare = (Profile) toCompare;
+  293. >             String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:295: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$Profile.vCard`.
+  293.               String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295. >             String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:297: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$Profile.vCard`.
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297. >             String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:299: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$Profile.vCard`.
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299. >             String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+
+Summary of the reports
+
+     GRADUAL_CHECK: 155
+  GRADUAL_BOUNDARY: 1Found 156 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Help.java:18: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `bottomNavigationView`.
+  16.   
+  17.           BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+  18. >         Menu menu = bottomNavigationView.getMenu();
+  19.           MenuItem menuItem = menu.getItem(2);
+  20.           menuItem.setChecked(true);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Help.java:21: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `bottomNavigationView`.
+  19.           MenuItem menuItem = menu.getItem(2);
+  20.           menuItem.setChecked(true);
+  21. >         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  22.               @Override
+  23.               public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Help.java:20: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `menuItem`.
+  18.           Menu menu = bottomNavigationView.getMenu();
+  19.           MenuItem menuItem = menu.getItem(2);
+  20. >         menuItem.setChecked(true);
+  21.           bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  22.               @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Help.java:27: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Help$1.this$0`.
+  25.                       case R.id.navigation_scan:
+  26.                           Intent intent1 = new Intent(Help.this, MainActivity.class);
+  27. >                         startActivity(intent1);
+  28.                           break;
+  29.                       case R.id.navigation_make:
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Help.java:31: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Help$1.this$0`.
+  29.                       case R.id.navigation_make:
+  30.                           Intent intent2 = new Intent(Help.this, Make.class);
+  31. >                         startActivity(intent2);
+  32.                           break;
+  33.                       case R.id.navigation_help:
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:38: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `x0`.
+  36.   import ezvcard.property.StructuredName;
+  37.   
+  38. > public class Make extends AppCompatActivity {
+  39.       final String[] VCardTags = {"VERSION", "PRODID", "N:", "EMAIL", "TEL", "END"};
+  40.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:75: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `bottomNavigationView`.
+  73.   
+  74.           final BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+  75. >         Menu menu = bottomNavigationView.getMenu();
+  76.           MenuItem menuItem = menu.getItem(1);
+  77.           menuItem.setChecked(true);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:78: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `bottomNavigationView`.
+  76.           MenuItem menuItem = menu.getItem(1);
+  77.           menuItem.setChecked(true);
+  78. >         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  79.               @Override
+  80.               public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:114: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `chooseProfile`.
+  112.           profileList.setAdapter(arrayAdapter);
+  113.   
+  114. >         chooseProfile.setOnClickListener(new View.OnClickListener() {
+  115.               @Override
+  116.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:77: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `menuItem`.
+  75.           Menu menu = bottomNavigationView.getMenu();
+  76.           MenuItem menuItem = menu.getItem(1);
+  77. >         menuItem.setChecked(true);
+  78.           bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  79.               @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:47: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$6`.
+  45.           super.onCreate(savedInstanceState);
+  46.           setContentView(R.layout.activity_make);
+  47. >         Picasso.get().setLoggingEnabled(true);
+  48.           final ImageView imageView = (ImageView) findViewById(R.id.imageView);
+  49.           Button refresh = (Button) findViewById(R.id.button);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:112: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `profileList`.
+  110.                   profileArrayList
+  111.           );
+  112. >         profileList.setAdapter(arrayAdapter);
+  113.   
+  114.           chooseProfile.setOnClickListener(new View.OnClickListener() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `profileList`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:56: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `refresh`.
+  54.           final EditText profileName = findViewById(R.id.profileName);
+  55.   
+  56. >         refresh.setOnClickListener(new View.OnClickListener() {
+  57.               @Override
+  58.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `saveProfile`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:123: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `bottomNavigationView`.
+  121.   
+  122.           BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+  123. >         Menu menu = bottomNavigationView.getMenu();
+  124.           MenuItem menuItem = menu.getItem(0);
+  125.           menuItem.setChecked(true);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:126: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `bottomNavigationView`.
+  124.           MenuItem menuItem = menu.getItem(0);
+  125.           menuItem.setChecked(true);
+  126. >         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  127.               @Override
+  128.               public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:125: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `menuItem`.
+  123.           Menu menu = bottomNavigationView.getMenu();
+  124.           MenuItem menuItem = menu.getItem(0);
+  125. >         menuItem.setChecked(true);
+  126.           bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  127.               @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:52: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$23`.
+  50.           textView = (TextView) findViewById(R.id.textView);
+  51.           barcodeDetector = new BarcodeDetector.Builder(this)
+  52. >                 .setBarcodeFormats(Barcode.QR_CODE).build();
+  53.   
+  54.           cameraSource = new CameraSource.Builder(this, barcodeDetector).setAutoFocusEnabled(true)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$36`.
+  53.   
+  54.           cameraSource = new CameraSource.Builder(this, barcodeDetector).setAutoFocusEnabled(true)
+  55. >                 .setRequestedPreviewSize(640, 480).build();
+  56.   
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$39`.
+  53.   
+  54.           cameraSource = new CameraSource.Builder(this, barcodeDetector).setAutoFocusEnabled(true)
+  55. >                 .setRequestedPreviewSize(640, 480).build();
+  56.   
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:58: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$48`.
+  56.   
+  57.   
+  58. >         surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
+  59.               @Override
+  60.               public void surfaceCreated(SurfaceHolder holder) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:86: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity.barcodeDetector`.
+  84.           });
+  85.   
+  86. >         barcodeDetector.setProcessor(new Detector.Processor<Barcode>() {
+  87.               @Override
+  88.               public void release() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:58: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity.surfaceView`.
+  56.   
+  57.   
+  58. >         surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
+  59.               @Override
+  60.               public void surfaceCreated(SurfaceHolder holder) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:60: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$20`.
+  58.               public void onClick(View v) {
+  59.                   VCard vcard = makeVCard(firstName, lastName, email, phone);
+  60. >                 String fullContact = Ezvcard.write(vcard).version(VCardVersion.V3_0).go();
+  61.   
+  62.                   fullContact = getUrlVCard(vcard);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:60: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$24`.
+  58.               public void onClick(View v) {
+  59.                   VCard vcard = makeVCard(firstName, lastName, email, phone);
+  60. >                 String fullContact = Ezvcard.write(vcard).version(VCardVersion.V3_0).go();
+  61.   
+  62.                   fullContact = getUrlVCard(vcard);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:65: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$34`.
+  63.   
+  64.                   Log.d("myTag", "Registered Click");
+  65. >                 Picasso.get().load("https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=" + fullContact).into(imageView);
+  66.   
+  67.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:65: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$39`.
+  63.   
+  64.                   Log.d("myTag", "Registered Click");
+  65. >                 Picasso.get().load("https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=" + fullContact).into(imageView);
+  66.   
+  67.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:65: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$43`.
+  63.   
+  64.                   Log.d("myTag", "Registered Click");
+  65. >                 Picasso.get().load("https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=" + fullContact).into(imageView);
+  66.   
+  67.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:65: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$50`.
+  63.   
+  64.                   Log.d("myTag", "Registered Click");
+  65. >                 Picasso.get().load("https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=" + fullContact).into(imageView);
+  66.   
+  67.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:59: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$1.this$0`.
+  57.               @Override
+  58.               public void onClick(View v) {
+  59. >                 VCard vcard = makeVCard(firstName, lastName, email, phone);
+  60.                   String fullContact = Ezvcard.write(vcard).version(VCardVersion.V3_0).go();
+  61.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:62: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$1.this$0`.
+  60.                   String fullContact = Ezvcard.write(vcard).version(VCardVersion.V3_0).go();
+  61.   
+  62. >                 fullContact = getUrlVCard(vcard);
+  63.   
+  64.                   Log.d("myTag", "Registered Click");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:61: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `n$3` passed to nonnull parameter.
+  59.               @Override
+  60.               public void surfaceCreated(SurfaceHolder holder) {
+  61. >                 if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+  62.                       return;
+  63.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:66: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$1.this$0`,check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$1.this$0->com.example.emily.qrcontact.MainActivity.cameraSource`.
+  64.                   try
+  65.                   {
+  66. >                     cameraSource.start(holder);
+  67.                   } catch(IOException e)
+  68.                   {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:69: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  67.                   } catch(IOException e)
+  68.                   {
+  69. >                     e.printStackTrace();
+  70.                   }
+  71.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:61: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$1.this$0`.
+  59.               @Override
+  60.               public void surfaceCreated(SurfaceHolder holder) {
+  61. >                 if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+  62.                       return;
+  63.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:82: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$1.this$0`,check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$1.this$0->com.example.emily.qrcontact.MainActivity.cameraSource`.
+  80.               public void surfaceDestroyed(SurfaceHolder holder) {
+  81.   
+  82. >                 cameraSource.stop();
+  83.               }
+  84.           });
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:84: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$2.this$0`.
+  82.                       case R.id.navigation_scan:
+  83.                           Intent intent1 = new Intent(Make.this, MainActivity.class);
+  84. >                         startActivity(intent1);
+  85.                           break;
+  86.                       case R.id.navigation_make:
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:90: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$2.this$0`.
+  88.                       case R.id.navigation_help:
+  89.                           Intent intent3 = new Intent(Make.this, Help.class);
+  90. >                         startActivity(intent3);
+  91.                           break;
+  92.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:97: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2.this$0`,check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2.this$0->com.example.emily.qrcontact.MainActivity.textView`.
+  95.   
+  96.                   if(qrCodes.size() != 0) {
+  97. >                     textView.post(new Runnable() {
+  98.                           @Override
+  99.                           public void run() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:94: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `detections`.
+  92.               @Override
+  93.               public void receiveDetections(Detector.Detections<Barcode> detections) {
+  94. >                 final SparseArray<Barcode> qrCodes = detections.getDetectedItems();
+  95.   
+  96.                   if(qrCodes.size() != 0) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:96: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `qrCodes`.
+  94.                   final SparseArray<Barcode> qrCodes = detections.getDetectedItems();
+  95.   
+  96. >                 if(qrCodes.size() != 0) {
+  97.                       textView.post(new Runnable() {
+  98.                           @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:104: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `n$23`.
+  102.                               try {
+  103.                                   for (int x = 0; x < qrCodes.size(); x++) {
+  104. >                                     Log.d("ScanTest", qrCodes.valueAt(x).rawValue);
+  105.   
+  106.                                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:112: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `n$53`.
+  110.                               textView.setText(qrCodes.valueAt(0).rawValue);
+  111.   
+  112. >                             VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+  113.                               Log.d("ScanTest", scannedContact.getEmails().get(0).toString());
+  114.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:110: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.this$1`,check dereference of ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.this$1->com.example.emily.qrcontact.MainActivity$2.this$0`,check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.this$1->com.example.emily.qrcontact.MainActivity$2.this$0->com.example.emily.qrcontact.MainActivity.textView`,check dereference of ambiguous pointer `n$43`.
+  108.                                   Log.d("ScanTest", e.toString());
+  109.                               }
+  110. >                             textView.setText(qrCodes.valueAt(0).rawValue);
+  111.   
+  112.                               VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:100: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.this$1`,check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.this$1->com.example.emily.qrcontact.MainActivity$2.this$0`.
+  98.                           @Override
+  99.                           public void run() {
+  100. >                             Vibrator vibrator = (Vibrator)getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
+  101.                               vibrator.vibrate(1000);
+  102.                               try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:108: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  106.                                   }
+  107.                               } catch (Exception e) {
+  108. >                                 Log.d("ScanTest", e.toString());
+  109.                               }
+  110.                               textView.setText(qrCodes.valueAt(0).rawValue);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:100: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$4`.
+  98.                           @Override
+  99.                           public void run() {
+  100. >                             Vibrator vibrator = (Vibrator)getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
+  101.                               vibrator.vibrate(1000);
+  102.                               try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:112: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$58`.
+  110.                               textView.setText(qrCodes.valueAt(0).rawValue);
+  111.   
+  112. >                             VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+  113.                               Log.d("ScanTest", scannedContact.getEmails().get(0).toString());
+  114.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:113: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$64`.
+  111.   
+  112.                               VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+  113. >                             Log.d("ScanTest", scannedContact.getEmails().get(0).toString());
+  114.   
+  115.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:113: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$67`.
+  111.   
+  112.                               VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+  113. >                             Log.d("ScanTest", scannedContact.getEmails().get(0).toString());
+  114.   
+  115.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:113: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `scannedContact`.
+  111.   
+  112.                               VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+  113. >                             Log.d("ScanTest", scannedContact.getEmails().get(0).toString());
+  114.   
+  115.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:103: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.val$qrCodes`.
+  101.                               vibrator.vibrate(1000);
+  102.                               try {
+  103. >                                 for (int x = 0; x < qrCodes.size(); x++) {
+  104.                                       Log.d("ScanTest", qrCodes.valueAt(x).rawValue);
+  105.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:104: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.val$qrCodes`.
+  102.                               try {
+  103.                                   for (int x = 0; x < qrCodes.size(); x++) {
+  104. >                                     Log.d("ScanTest", qrCodes.valueAt(x).rawValue);
+  105.   
+  106.                                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:110: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.val$qrCodes`.
+  108.                                   Log.d("ScanTest", e.toString());
+  109.                               }
+  110. >                             textView.setText(qrCodes.valueAt(0).rawValue);
+  111.   
+  112.                               VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:112: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$2$1.val$qrCodes`.
+  110.                               textView.setText(qrCodes.valueAt(0).rawValue);
+  111.   
+  112. >                             VCard scannedContact = Ezvcard.parse(qrCodes.valueAt(0).rawValue).first();
+  113.                               Log.d("ScanTest", scannedContact.getEmails().get(0).toString());
+  114.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:101: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `vibrator`.
+  99.                           public void run() {
+  100.                               Vibrator vibrator = (Vibrator)getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
+  101. >                             vibrator.vibrate(1000);
+  102.                               try {
+  103.                                   for (int x = 0; x < qrCodes.size(); x++) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:122: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$3.val$bottomNavigationView`.
+  120.                   }
+  121.                   profileLayout.setVisibility(View.GONE);
+  122. >                 bottomNavigationView.setVisibility(View.GONE);
+  123.                   imageView.setVisibility(View.GONE);
+  124.                   profileList.setVisibility(View.VISIBLE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:123: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$3.val$imageView`.
+  121.                   profileLayout.setVisibility(View.GONE);
+  122.                   bottomNavigationView.setVisibility(View.GONE);
+  123. >                 imageView.setVisibility(View.GONE);
+  124.                   profileList.setVisibility(View.VISIBLE);
+  125.               }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:117: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$3.val$profileArrayList`.
+  115.               @Override
+  116.               public void onClick(View v) {
+  117. >                 if (profileArrayList.size() == 0) {
+  118.                       Log.d("Choose Profile", "No profiles");
+  119.                       return;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:121: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$3.val$profileLayout`.
+  119.                       return;
+  120.                   }
+  121. >                 profileLayout.setVisibility(View.GONE);
+  122.                   bottomNavigationView.setVisibility(View.GONE);
+  123.                   imageView.setVisibility(View.GONE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:124: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$3.val$profileList`.
+  122.                   bottomNavigationView.setVisibility(View.GONE);
+  123.                   imageView.setVisibility(View.GONE);
+  124. >                 profileList.setVisibility(View.VISIBLE);
+  125.               }
+  126.           });
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:134: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$3.this$0`.
+  132.                       case R.id.navigation_make:
+  133.                           Intent intent2 = new Intent(MainActivity.this, Make.class);
+  134. >                         startActivity(intent2);
+  135.                           break;
+  136.                       case R.id.navigation_help:
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:138: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.MainActivity$3.this$0`.
+  136.                       case R.id.navigation_help:
+  137.                           Intent intent3 = new Intent(MainActivity.this, Help.class);
+  138. >                         startActivity(intent3);
+  139.                           break;
+  140.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:132: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$11`.
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+  131.                   Profile temp = profileArrayList.get(position);
+  132. >                 firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:132: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$14`.
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+  131.                   Profile temp = profileArrayList.get(position);
+  132. >                 firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:133: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$26`.
+  131.                   Profile temp = profileArrayList.get(position);
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133. >                 lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:133: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$29`.
+  131.                   Profile temp = profileArrayList.get(position);
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133. >                 lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:134: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$41`.
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134. >                 email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:134: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$44`.
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134. >                 email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:134: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$47`.
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134. >                 email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:135: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$61`.
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135. >                 phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+  137.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:135: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$64`.
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135. >                 phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+  137.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:135: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$67`.
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135. >                 phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+  137.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:132: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `temp`.
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+  131.                   Profile temp = profileArrayList.get(position);
+  132. >                 firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:133: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `temp`.
+  131.                   Profile temp = profileArrayList.get(position);
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133. >                 lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:134: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `temp`.
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134. >                 email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:135: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `temp`.
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135. >                 phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+  137.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:136: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `temp`.
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136. >                 profileName.setText(temp.getProfileName());
+  137.   
+  138.                   profileLayout.setVisibility(View.VISIBLE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:139: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$bottomNavigationView`.
+  137.   
+  138.                   profileLayout.setVisibility(View.VISIBLE);
+  139. >                 bottomNavigationView.setVisibility(View.VISIBLE);
+  140.                   imageView.setVisibility(View.VISIBLE);
+  141.                   profileList.setVisibility(View.GONE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:134: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$email`.
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134. >                 email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:132: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$firstName`.
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+  131.                   Profile temp = profileArrayList.get(position);
+  132. >                 firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:140: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$imageView`.
+  138.                   profileLayout.setVisibility(View.VISIBLE);
+  139.                   bottomNavigationView.setVisibility(View.VISIBLE);
+  140. >                 imageView.setVisibility(View.VISIBLE);
+  141.                   profileList.setVisibility(View.GONE);
+  142.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:133: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$lastName`.
+  131.                   Profile temp = profileArrayList.get(position);
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133. >                 lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:135: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$phone`.
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135. >                 phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136.                   profileName.setText(temp.getProfileName());
+  137.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:131: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$profileArrayList`.
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+  131. >                 Profile temp = profileArrayList.get(position);
+  132.                   firstName.setText(temp.getvCard().getStructuredName().getGiven());
+  133.                   lastName.setText(temp.getvCard().getStructuredName().getFamily());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:138: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$profileLayout`.
+  136.                   profileName.setText(temp.getProfileName());
+  137.   
+  138. >                 profileLayout.setVisibility(View.VISIBLE);
+  139.                   bottomNavigationView.setVisibility(View.VISIBLE);
+  140.                   imageView.setVisibility(View.VISIBLE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:141: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$profileList`.
+  139.                   bottomNavigationView.setVisibility(View.VISIBLE);
+  140.                   imageView.setVisibility(View.VISIBLE);
+  141. >                 profileList.setVisibility(View.GONE);
+  142.   
+  143.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:136: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$4.val$profileName`.
+  134.                   email.setText(temp.getvCard().getEmails().get(0).getValue());
+  135.                   phone.setText(temp.getvCard().getTelephoneNumbers().get(0).getText());
+  136. >                 profileName.setText(temp.getProfileName());
+  137.   
+  138.                   profileLayout.setVisibility(View.VISIBLE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:153: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$21`.
+  151.                   boolean isThereACopy = false;
+  152.                   VCard toAddToProfile = makeVCard(firstName, lastName, email, phone);
+  153. >                 Profile toAddToList = new Profile(toAddToProfile, profileName.getText().toString());
+  154.   
+  155.                   if (toAddToList == null || toAddToList.getProfileName().equals("")) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:155: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$33`.
+  153.                   Profile toAddToList = new Profile(toAddToProfile, profileName.getText().toString());
+  154.   
+  155. >                 if (toAddToList == null || toAddToList.getProfileName().equals("")) {
+  156.                       Log.d("Save Profile", "No Profile Name");
+  157.                       return;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:160: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$42`.
+  158.                   }
+  159.   
+  160. >                 for (Profile profile : profileArrayList) {
+  161.                       if (profile.equals(toAddToList) || toAddToList.getProfileName().equals(profile.getProfileName())) {
+  162.                           isThereACopy = true;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:161: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$59`.
+  159.   
+  160.                   for (Profile profile : profileArrayList) {
+  161. >                     if (profile.equals(toAddToList) || toAddToList.getProfileName().equals(profile.getProfileName())) {
+  162.                           isThereACopy = true;
+  163.                           break;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:161: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `profile`.
+  159.   
+  160.                   for (Profile profile : profileArrayList) {
+  161. >                     if (profile.equals(toAddToList) || toAddToList.getProfileName().equals(profile.getProfileName())) {
+  162.                           isThereACopy = true;
+  163.                           break;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:152: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$5.this$0`.
+  150.   
+  151.                   boolean isThereACopy = false;
+  152. >                 VCard toAddToProfile = makeVCard(firstName, lastName, email, phone);
+  153.                   Profile toAddToList = new Profile(toAddToProfile, profileName.getText().toString());
+  154.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:176: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$5.this$0`.
+  174.   
+  175.                   profileArrayList.add(toAddToList);
+  176. >                 saveData(profileArrayList);
+  177.                   Log.d("Persistence", "Saved Data");
+  178.               }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:160: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$5.val$profileArrayList`.
+  158.                   }
+  159.   
+  160. >                 for (Profile profile : profileArrayList) {
+  161.                       if (profile.equals(toAddToList) || toAddToList.getProfileName().equals(profile.getProfileName())) {
+  162.                           isThereACopy = true;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:175: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$5.val$profileArrayList`.
+  173.   
+  174.   
+  175. >                 profileArrayList.add(toAddToList);
+  176.                   saveData(profileArrayList);
+  177.                   Log.d("Persistence", "Saved Data");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:153: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$5.val$profileName`.
+  151.                   boolean isThereACopy = false;
+  152.                   VCard toAddToProfile = makeVCard(firstName, lastName, email, phone);
+  153. >                 Profile toAddToList = new Profile(toAddToProfile, profileName.getText().toString());
+  154.   
+  155.                   if (toAddToList == null || toAddToList.getProfileName().equals("")) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:161: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `toAddToList`.
+  159.   
+  160.                   for (Profile profile : profileArrayList) {
+  161. >                     if (profile.equals(toAddToList) || toAddToList.getProfileName().equals(profile.getProfileName())) {
+  162.                           isThereACopy = true;
+  163.                           break;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:195: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `editor`.
+  193.           String json = gson.toJson(profileArrayList);
+  194.           Log.d("Persistence", "Made Json");
+  195. >         editor.putString("task list", json);
+  196.           Log.d("Persistence", "Put Json");
+  197.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:198: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `editor`.
+  196.           Log.d("Persistence", "Put Json");
+  197.   
+  198. >         editor.apply();
+  199.           Log.d("Persistence", "Applied");
+  200.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:189: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `sharedPreferences`.
+  187.           SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+  188.           Log.d("Persistence", "Make Shared Pref");
+  189. >         SharedPreferences.Editor editor = sharedPreferences.edit();
+  190.           Log.d("Persistence", "Make Editor");
+  191.           Gson gson = new Gson();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:217: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  215.               return profileArrayList;
+  216.           } catch (Exception e) {
+  217. >             Log.d("Persistence", e.toString());
+  218.           }
+  219.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:207: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `sharedPreferences`.
+  205.               SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+  206.               Gson gson = new Gson();
+  207. >             String json = sharedPreferences.getString("task list", null);
+  208.               Type type = new TypeToken<ArrayList<Profile>>() {}.getType();
+  209.               profileArrayList = gson.fromJson(json, type);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:230: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.example.emily.qrcontact.Make.VCardTags`,check method call on ambiguous pointer `*(this->com.example.emily.qrcontact.Make.VCardTags)[_]`.
+  228.               if (newFullContact.contains(VCardTags[x])) {
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230. >                 if (VCardTags[x].equals("N:")) {
+  231.                       parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+  232.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:237: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237. >                     Log.d("out of bounds", e.toString() + " " + parseStop);
+  238.   
+  239.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:237: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$101`.
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237. >                     Log.d("out of bounds", e.toString() + " " + parseStop);
+  238.   
+  239.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:224: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$4`.
+  222.   
+  223.       private String getUrlVCard(VCard vCard) {
+  224. >         String fullContact = Ezvcard.write(vCard).version(VCardVersion.V3_0).go();
+  225.           String newFullContact = fullContact;
+  226.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:234: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$70`.
+  232.                   }
+  233.                   try {
+  234. >                     newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:235: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$73`.
+  233.                   try {
+  234.                       newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235. >                             + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237.                       Log.d("out of bounds", e.toString() + " " + parseStop);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:235: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$81`.
+  233.                   try {
+  234.                       newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235. >                             + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237.                       Log.d("out of bounds", e.toString() + " " + parseStop);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:224: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$8`.
+  222.   
+  223.       private String getUrlVCard(VCard vCard) {
+  224. >         String fullContact = Ezvcard.write(vCard).version(VCardVersion.V3_0).go();
+  225.           String newFullContact = fullContact;
+  226.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:237: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$94`.
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237. >                     Log.d("out of bounds", e.toString() + " " + parseStop);
+  238.   
+  239.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:237: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$97`.
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237. >                     Log.d("out of bounds", e.toString() + " " + parseStop);
+  238.   
+  239.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:234: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`.
+  232.                   }
+  233.                   try {
+  234. >                     newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:235: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`.
+  233.                   try {
+  234.                       newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235. >                             + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237.                       Log.d("out of bounds", e.toString() + " " + parseStop);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:228: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`,check dereference of ambiguous pointer `this->com.example.emily.qrcontact.Make.VCardTags`.
+  226.   
+  227.           for (int x = 0; x < VCardTags.length; x++) {
+  228. >             if (newFullContact.contains(VCardTags[x])) {
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:229: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`,check dereference of ambiguous pointer `this->com.example.emily.qrcontact.Make.VCardTags`.
+  227.           for (int x = 0; x < VCardTags.length; x++) {
+  228.               if (newFullContact.contains(VCardTags[x])) {
+  229. >                 int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+  231.                       parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:231: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`,check dereference of ambiguous pointer `this->com.example.emily.qrcontact.Make.VCardTags`.
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+  231. >                     parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+  232.                   }
+  233.                   try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:255: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$1`.
+  253.       private void loadImage(ImageView toSet) {
+  254.           Log.d("fucntion", "Default code");
+  255. >         Picasso.get().load("https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=Example").into(toSet);
+  256.       }
+  257.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:255: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$4`.
+  253.       private void loadImage(ImageView toSet) {
+  254.           Log.d("fucntion", "Default code");
+  255. >         Picasso.get().load("https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=Example").into(toSet);
+  256.       }
+  257.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:264: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `email`.
+  262.           fullName.setGiven(String.valueOf(firstName.getText()));
+  263.           vcard.setStructuredName(fullName);
+  264. >         vcard.addEmail(String.valueOf(email.getText()), EmailType.WORK);
+  265.           vcard.addTelephoneNumber(String.valueOf(phone.getText()));
+  266.           return vcard;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:262: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `firstName`.
+  260.           StructuredName fullName = new StructuredName();
+  261.           fullName.setFamily(String.valueOf(lastName.getText()));
+  262. >         fullName.setGiven(String.valueOf(firstName.getText()));
+  263.           vcard.setStructuredName(fullName);
+  264.           vcard.addEmail(String.valueOf(email.getText()), EmailType.WORK);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:261: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `lastName`.
+  259.           VCard vcard = new VCard();
+  260.           StructuredName fullName = new StructuredName();
+  261. >         fullName.setFamily(String.valueOf(lastName.getText()));
+  262.           fullName.setGiven(String.valueOf(firstName.getText()));
+  263.           vcard.setStructuredName(fullName);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:265: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `phone`.
+  263.           vcard.setStructuredName(fullName);
+  264.           vcard.addEmail(String.valueOf(email.getText()), EmailType.WORK);
+  265. >         vcard.addTelephoneNumber(String.valueOf(phone.getText()));
+  266.           return vcard;
+  267.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:306: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `email`.
+  304.   
+  305.   
+  306. >             return (firstName.equals(toCompareFirstName) && lastName.equals(toCompareLastName) && email.equals(toCompareEmail)
+  307.                       && phone.equals(toComparePhone) && profileName.equals(newCompare.getProfileName()));
+  308.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:306: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `firstName`.
+  304.   
+  305.   
+  306. >             return (firstName.equals(toCompareFirstName) && lastName.equals(toCompareLastName) && email.equals(toCompareEmail)
+  307.                       && phone.equals(toComparePhone) && profileName.equals(newCompare.getProfileName()));
+  308.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:306: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `lastName`.
+  304.   
+  305.   
+  306. >             return (firstName.equals(toCompareFirstName) && lastName.equals(toCompareLastName) && email.equals(toCompareEmail)
+  307.                       && phone.equals(toComparePhone) && profileName.equals(newCompare.getProfileName()));
+  308.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:300: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$102`.
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300. >             String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+  302.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:294: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$16`.
+  292.               Profile newCompare = (Profile) toCompare;
+  293.               String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294. >             String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:294: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$19`.
+  292.               Profile newCompare = (Profile) toCompare;
+  293.               String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294. >             String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:295: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$29`.
+  293.               String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295. >             String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:296: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$38`.
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296. >             String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:296: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$41`.
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296. >             String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:297: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$51`.
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297. >             String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:297: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$54`.
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297. >             String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:298: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$65`.
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298. >             String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:298: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$68`.
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298. >             String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:298: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$71`.
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298. >             String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:293: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$7`.
+  291.   
+  292.               Profile newCompare = (Profile) toCompare;
+  293. >             String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:299: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$83`.
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299. >             String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:299: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$86`.
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299. >             String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:300: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$96`.
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300. >             String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+  302.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:300: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$99`.
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300. >             String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+  302.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:294: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  292.               Profile newCompare = (Profile) toCompare;
+  293.               String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294. >             String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:296: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296. >             String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:298: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298. >             String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:300: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300. >             String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+  302.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:307: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  305.   
+  306.               return (firstName.equals(toCompareFirstName) && lastName.equals(toCompareLastName) && email.equals(toCompareEmail)
+  307. >                     && phone.equals(toComparePhone) && profileName.equals(newCompare.getProfileName()));
+  308.   
+  309.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:307: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `phone`.
+  305.   
+  306.               return (firstName.equals(toCompareFirstName) && lastName.equals(toCompareLastName) && email.equals(toCompareEmail)
+  307. >                     && phone.equals(toComparePhone) && profileName.equals(newCompare.getProfileName()));
+  308.   
+  309.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:307: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$Profile.profileName`.
+  305.   
+  306.               return (firstName.equals(toCompareFirstName) && lastName.equals(toCompareLastName) && email.equals(toCompareEmail)
+  307. >                     && phone.equals(toComparePhone) && profileName.equals(newCompare.getProfileName()));
+  308.   
+  309.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:293: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$Profile.vCard`.
+  291.   
+  292.               Profile newCompare = (Profile) toCompare;
+  293. >             String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:295: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$Profile.vCard`.
+  293.               String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295. >             String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:297: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$Profile.vCard`.
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297. >             String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:299: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.example.emily.qrcontact.Make$Profile.vCard`.
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299. >             String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+
+Summary of the reports
+
+     GRADUAL_CHECK: 155
+  GRADUAL_BOUNDARY: 1No issues foundNo issues found

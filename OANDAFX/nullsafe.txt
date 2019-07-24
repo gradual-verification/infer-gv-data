@@ -1,0 +1,185 @@
+Found 11 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:98: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `interactor` should be annotated with `@Nullable`.
+  96.               RootBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  97.         }
+  98. >       if (interactor == null) {
+  99.           throw new IllegalStateException(RootInteractor.class.getCanonicalName() + " must be set");
+  100.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:94: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `parentComponent` should be annotated with `@Nullable`.
+  92.       @Override
+  93.       public RootBuilder.Component build() {
+  94. >       if (parentComponent == null) {
+  95.           throw new IllegalStateException(
+  96.               RootBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:104: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `provideContext` should be annotated with `@Nullable`.
+  102.           throw new IllegalStateException(RootView.class.getCanonicalName() + " must be set");
+  103.         }
+  104. >       if (provideContext == null) {
+  105.           throw new IllegalStateException(Context.class.getCanonicalName() + " must be set");
+  106.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:101: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `view` should be annotated with `@Nullable`.
+  99.           throw new IllegalStateException(RootInteractor.class.getCanonicalName() + " must be set");
+  100.         }
+  101. >       if (view == null) {
+  102.           throw new IllegalStateException(RootView.class.getCanonicalName() + " must be set");
+  103.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:109: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `interactor` should be annotated with `@Nullable`.
+  107.               LoginBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  108.         }
+  109. >       if (interactor == null) {
+  110.           throw new IllegalStateException(LoginInteractor.class.getCanonicalName() + " must be set");
+  111.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:105: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `parentComponent` should be annotated with `@Nullable`.
+  103.       @Override
+  104.       public LoginBuilder.Component build() {
+  105. >       if (parentComponent == null) {
+  106.           throw new IllegalStateException(
+  107.               LoginBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:112: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `view` should be annotated with `@Nullable`.
+  110.           throw new IllegalStateException(LoginInteractor.class.getCanonicalName() + " must be set");
+  111.         }
+  112. >       if (view == null) {
+  113.           throw new IllegalStateException(LoginView.class.getCanonicalName() + " must be set");
+  114.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:118: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accountId` should be annotated with `@Nullable`.
+  116.           throw new IllegalStateException(InstrumentView.class.getCanonicalName() + " must be set");
+  117.         }
+  118. >       if (accountId == null) {
+  119.           throw new IllegalStateException(String.class.getCanonicalName() + " must be set");
+  120.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:111: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `interactor` should be annotated with `@Nullable`.
+  109.               InstrumentBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  110.         }
+  111. >       if (interactor == null) {
+  112.           throw new IllegalStateException(
+  113.               InstrumentInteractor.class.getCanonicalName() + " must be set");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:107: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `parentComponent` should be annotated with `@Nullable`.
+  105.       @Override
+  106.       public InstrumentBuilder.Component build() {
+  107. >       if (parentComponent == null) {
+  108.           throw new IllegalStateException(
+  109.               InstrumentBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:115: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `view` should be annotated with `@Nullable`.
+  113.               InstrumentInteractor.class.getCanonicalName() + " must be set");
+  114.         }
+  115. >       if (view == null) {
+  116.           throw new IllegalStateException(InstrumentView.class.getCanonicalName() + " must be set");
+  117.         }
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 11Found 11 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:98: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `interactor` should be annotated with `@Nullable`.
+  96.               RootBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  97.         }
+  98. >       if (interactor == null) {
+  99.           throw new IllegalStateException(RootInteractor.class.getCanonicalName() + " must be set");
+  100.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:94: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `parentComponent` should be annotated with `@Nullable`.
+  92.       @Override
+  93.       public RootBuilder.Component build() {
+  94. >       if (parentComponent == null) {
+  95.           throw new IllegalStateException(
+  96.               RootBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:104: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `provideContext` should be annotated with `@Nullable`.
+  102.           throw new IllegalStateException(RootView.class.getCanonicalName() + " must be set");
+  103.         }
+  104. >       if (provideContext == null) {
+  105.           throw new IllegalStateException(Context.class.getCanonicalName() + " must be set");
+  106.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:101: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `view` should be annotated with `@Nullable`.
+  99.           throw new IllegalStateException(RootInteractor.class.getCanonicalName() + " must be set");
+  100.         }
+  101. >       if (view == null) {
+  102.           throw new IllegalStateException(RootView.class.getCanonicalName() + " must be set");
+  103.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:109: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `interactor` should be annotated with `@Nullable`.
+  107.               LoginBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  108.         }
+  109. >       if (interactor == null) {
+  110.           throw new IllegalStateException(LoginInteractor.class.getCanonicalName() + " must be set");
+  111.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:105: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `parentComponent` should be annotated with `@Nullable`.
+  103.       @Override
+  104.       public LoginBuilder.Component build() {
+  105. >       if (parentComponent == null) {
+  106.           throw new IllegalStateException(
+  107.               LoginBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:112: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `view` should be annotated with `@Nullable`.
+  110.           throw new IllegalStateException(LoginInteractor.class.getCanonicalName() + " must be set");
+  111.         }
+  112. >       if (view == null) {
+  113.           throw new IllegalStateException(LoginView.class.getCanonicalName() + " must be set");
+  114.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:118: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `accountId` should be annotated with `@Nullable`.
+  116.           throw new IllegalStateException(InstrumentView.class.getCanonicalName() + " must be set");
+  117.         }
+  118. >       if (accountId == null) {
+  119.           throw new IllegalStateException(String.class.getCanonicalName() + " must be set");
+  120.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:111: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `interactor` should be annotated with `@Nullable`.
+  109.               InstrumentBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+  110.         }
+  111. >       if (interactor == null) {
+  112.           throw new IllegalStateException(
+  113.               InstrumentInteractor.class.getCanonicalName() + " must be set");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:107: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `parentComponent` should be annotated with `@Nullable`.
+  105.       @Override
+  106.       public InstrumentBuilder.Component build() {
+  107. >       if (parentComponent == null) {
+  108.           throw new IllegalStateException(
+  109.               InstrumentBuilder.ParentComponent.class.getCanonicalName() + " must be set");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:115: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `view` should be annotated with `@Nullable`.
+  113.               InstrumentInteractor.class.getCanonicalName() + " must be set");
+  114.         }
+  115. >       if (view == null) {
+  116.           throw new IllegalStateException(InstrumentView.class.getCanonicalName() + " must be set");
+  117.         }
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 11

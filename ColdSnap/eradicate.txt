@@ -1,0 +1,2447 @@
+Found 150 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/service/AutoValue_ActionReply.java:17: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `AutoValue_ActionReply.error` can be null but is not declared `@Nullable`. (Origin: method parameter error).
+  15.         @Nullable Throwable error) {
+  16.       this.success = success;
+  17. >     this.error = error;
+  18.     }
+  19.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:30: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `AutoValue_GraphCardViewModel.XFormatter` can be null but is not declared `@Nullable`. (Origin: method parameter XFormatter).
+  28.       this.rangeLines = rangeLines;
+  29.       this.dataSeries = dataSeries;
+  30. >     this.XFormatter = XFormatter;
+  31.       this.YFormatter = YFormatter;
+  32.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:31: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `AutoValue_GraphCardViewModel.YFormatter` can be null but is not declared `@Nullable`. (Origin: method parameter YFormatter).
+  29.       this.dataSeries = dataSeries;
+  30.       this.XFormatter = XFormatter;
+  31. >     this.YFormatter = YFormatter;
+  32.     }
+  33.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/TemperaturePickerDialog_ViewBinding.java:29: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `TemperaturePickerDialog_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 29).
+  27.       TemperaturePickerDialog target = this.target;
+  28.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  29. >     this.target = null;
+  30.   
+  31.       target.tpvPicker = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/TimePickerDialogPreference_ViewBinding.java:29: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `TimePickerDialogPreference_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 29).
+  27.       TimePickerDialogPreference target = this.target;
+  28.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  29. >     this.target = null;
+  30.   
+  31.       target.timePicker = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/ColdSnapDatabase_Impl.java:30: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ColdSnapDatabase_Impl._forecastHourRowDAO` is not initialized in the constructor and is not declared `@Nullable`.
+  28.   
+  29.   @SuppressWarnings("unchecked")
+  30. > public class ColdSnapDatabase_Impl extends ColdSnapDatabase {
+  31.     private volatile PlantRowDAO _plantRowDAO;
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/ColdSnapDatabase_Impl.java:30: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ColdSnapDatabase_Impl._plantImageRowDAO` is not initialized in the constructor and is not declared `@Nullable`.
+  28.   
+  29.   @SuppressWarnings("unchecked")
+  30. > public class ColdSnapDatabase_Impl extends ColdSnapDatabase {
+  31.     private volatile PlantRowDAO _plantRowDAO;
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/ColdSnapDatabase_Impl.java:30: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ColdSnapDatabase_Impl._plantRowDAO` is not initialized in the constructor and is not declared `@Nullable`.
+  28.   
+  29.   @SuppressWarnings("unchecked")
+  30. > public class ColdSnapDatabase_Impl extends ColdSnapDatabase {
+  31.     private volatile PlantRowDAO _plantRowDAO;
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/feed/ActivityFeed.java:30: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `ActivityFeed.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  28.   
+  29.       @Override
+  30. >     public void onCreate(Bundle savedInstanceState)
+  31.       {
+  32.           setContentView(R.layout.activity_feed);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/feed/ActivityFeed.java:30: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `ActivityFeed.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  28.   
+  29.       @Override
+  30. >     public void onCreate(Bundle savedInstanceState)
+  31.       {
+  32.           setContentView(R.layout.activity_feed);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/feed/ActivityFeed.java:30: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `ActivityFeed.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  28.   
+  29.       @Override
+  30. >     public void onCreate(Bundle savedInstanceState)
+  31.       {
+  32.           setContentView(R.layout.activity_feed);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/core/BaseColdsnapActivity_ViewBinding.java:34: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `BaseColdsnapActivity_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 34).
+  32.       BaseColdsnapActivity target = this.target;
+  33.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  34. >     this.target = null;
+  35.   
+  36.       target.bnvNavigation = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView_ViewBinding.java:34: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `TemperatureCardView_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 34).
+  32.       TemperatureCardView target = this.target;
+  33.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  34. >     this.target = null;
+  35.   
+  36.       target.xypTemperature = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/service/image/file/ImageFileServiceImpl.java:35: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ContentResolver.delete(...)` needs a non-null value in parameter 2 but argument `null` can be null. (Origin: null constant at line 35).
+  33.                   "com.yoxjames.coldsnap.provider",
+  34.                   image);
+  35. >             context.getContentResolver().delete(photoURI, null, null);
+  36.               e.onNext(ActionReply.genericSuccess());
+  37.               e.onComplete();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/service/image/file/ImageFileServiceImpl.java:35: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ContentResolver.delete(...)` needs a non-null value in parameter 3 but argument `null` can be null. (Origin: null constant at line 35).
+  33.                   "com.yoxjames.coldsnap.provider",
+  34.                   image);
+  35. >             context.getContentResolver().delete(photoURI, null, null);
+  36.               e.onNext(ActionReply.genericSuccess());
+  37.               e.onComplete();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/image/PlantImageRowDAO_Impl.java:33: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  31.         @Override
+  32.         public void bind(SupportSQLiteStatement stmt, PlantImageRow value) {
+  33. >         if (value.getUuid() == null) {
+  34.             stmt.bindNull(1);
+  35.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/image/PlantImageRowDAO_Impl.java:38: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  36.             stmt.bindString(1, value.getUuid());
+  37.           }
+  38. >         if (value.getPlantUUID() == null) {
+  39.             stmt.bindNull(2);
+  40.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/image/PlantImageRowDAO_Impl.java:43: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  41.             stmt.bindString(2, value.getPlantUUID());
+  42.           }
+  43. >         if (value.getTitle() == null) {
+  44.             stmt.bindNull(3);
+  45.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/image/PlantImageRowDAO_Impl.java:48: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  46.             stmt.bindString(3, value.getTitle());
+  47.           }
+  48. >         if (value.getImageFilename() == null) {
+  49.             stmt.bindNull(4);
+  50.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/weather/ForecastHourRowDAO_Impl.java:33: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  31.         @Override
+  32.         public void bind(SupportSQLiteStatement stmt, ForecastHourRow value) {
+  33. >         if (value.getUuid() == null) {
+  34.             stmt.bindNull(1);
+  35.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/feed/ActivityFeed_ViewBinding.java:35: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `ActivityFeed_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 35).
+  33.       ActivityFeed target = this.target;
+  34.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  35. >     this.target = null;
+  36.   
+  37.       target.feedView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity_ViewBinding.java:35: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `PlantListActivity_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 35).
+  33.       PlantListActivity target = this.target;
+  34.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  35. >     this.target = null;
+  36.   
+  37.       target.toolbar = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/DummyWebActivity_ViewBinding.java:36: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `DummyWebActivity_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 36).
+  34.       DummyWebActivity target = this.target;
+  35.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  36. >     this.target = null;
+  37.   
+  38.       target.view = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/PlantDetailView_ViewBinding.java:37: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `PlantDetailView_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 37).
+  35.       PlantDetailView target = this.target;
+  36.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  37. >     this.target = null;
+  38.   
+  39.       target.etPlantName = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/PlantProfileImageView_ViewBinding.java:37: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `PlantProfileImageView_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 37).
+  35.       PlantProfileImageView target = this.target;
+  36.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  37. >     this.target = null;
+  38.   
+  39.       target.ivPlantProfile = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/plant/PlantRowDAO_Impl.java:37: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  35.         @Override
+  36.         public void bind(SupportSQLiteStatement stmt, PlantRow value) {
+  37. >         if (value.getUuid() == null) {
+  38.             stmt.bindNull(1);
+  39.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/plant/PlantRowDAO_Impl.java:42: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  40.             stmt.bindString(1, value.getUuid());
+  41.           }
+  42. >         if (value.getName() == null) {
+  43.             stmt.bindNull(2);
+  44.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/plant/PlantRowDAO_Impl.java:47: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  45.             stmt.bindString(2, value.getName());
+  46.           }
+  47. >         if (value.getScientificName() == null) {
+  48.             stmt.bindNull(3);
+  49.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/AboutActivity_ViewBinding.java:39: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `AboutActivity_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 39).
+  37.       AboutActivity target = this.target;
+  38.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  39. >     this.target = null;
+  40.   
+  41.       target.toolbar = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity_ViewBinding.java:39: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `PlantDetailActivity_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 39).
+  37.       PlantDetailActivity target = this.target;
+  38.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  39. >     this.target = null;
+  40.   
+  41.       target.plantDetailView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/core/BaseColdsnapActivity.java:38: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `BaseColdsnapActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  36.       public void onCreate(Bundle savedInstanceState)
+  37.       {
+  38. >         super.onCreate(savedInstanceState);
+  39.   
+  40.           inject();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/core/BaseColdsnapActivity.java:38: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `BaseColdsnapActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  36.       public void onCreate(Bundle savedInstanceState)
+  37.       {
+  38. >         super.onCreate(savedInstanceState);
+  39.   
+  40.           inject();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/core/BaseColdsnapActivity.java:38: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `BaseColdsnapActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  36.       public void onCreate(Bundle savedInstanceState)
+  37.       {
+  38. >         super.onCreate(savedInstanceState);
+  39.   
+  40.           inject();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/service/AutoValue_ActionReply.java:47: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Object.equals(...)` needs a non-null value in parameter 1 but argument `that.getError()` can be null. (Origin: call to getError() at line 47).
+  45.         ActionReply that = (ActionReply) o;
+  46.         return (this.success == that.isSuccess())
+  47. >            && ((this.error == null) ? (that.getError() == null) : this.error.equals(that.getError()));
+  48.       }
+  49.       return false;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/job/ColdAlarm.java:43: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ColdAlarm.currentContext` is not initialized in the constructor and is not declared `@Nullable`.
+  41.   
+  42.   @Singleton
+  43. > public class ColdAlarm extends BroadcastReceiver implements ColdAlarmView
+  44.   {
+  45.       @Inject ColdAlarmPresenter coldAlarmPresenter;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:48: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 48).
+  46.       PlantListRecyclerViewAdapter.PlantItemHolder target = this.target;
+  47.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  48. >     this.target = null;
+  49.   
+  50.       target.plantName = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:57: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.view2131296423` can be null but is not declared `@Nullable`. (Origin: null constant at line 57).
+  55.   
+  56.       view2131296423.setOnClickListener(null);
+  57. >     view2131296423 = null;
+  58.     }
+  59.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:56: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View.setOnClickListener(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 56).
+  54.       target.plantProfileImage = null;
+  55.   
+  56. >     view2131296423.setOnClickListener(null);
+  57.       view2131296423 = null;
+  58.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/service/image/file/ImageFileServiceImpl.java:56: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ContentResolver.delete(...)` needs a non-null value in parameter 2 but argument `null` can be null. (Origin: null constant at line 56).
+  54.                       {
+  55.                           final Uri fileURI = FileProvider.getUriForFile(context, "com.yoxjames.coldsnap.provider", file);
+  56. >                         context.getContentResolver().delete(fileURI, null, null);
+  57.                       }
+  58.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/service/image/file/ImageFileServiceImpl.java:56: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ContentResolver.delete(...)` needs a non-null value in parameter 3 but argument `null` can be null. (Origin: null constant at line 56).
+  54.                       {
+  55.                           final Uri fileURI = FileProvider.getUriForFile(context, "com.yoxjames.coldsnap.provider", file);
+  56. >                         context.getContentResolver().delete(fileURI, null, null);
+  57.                       }
+  58.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/job/ColdService.java:49: warning: ERADICATE_INCONSISTENT_SUBCLASS_RETURN_ANNOTATION
+  Method `ColdService.onBind(...)` is annotated with `@Nullable` but overrides unannotated method `Service.onBind(...)`.
+  47.       @Override
+  48.       @Nullable
+  49. >     public IBinder onBind(Intent intent)
+  50.       {
+  51.           return null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/AboutActivity.java:49: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `AboutActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  47.       protected void onCreate(Bundle savedInstanceState)
+  48.       {
+  49. >         super.onCreate(savedInstanceState);
+  50.           setContentView(R.layout.activity_about);
+  51.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/AboutActivity.java:49: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `AboutActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  47.       protected void onCreate(Bundle savedInstanceState)
+  48.       {
+  49. >         super.onCreate(savedInstanceState);
+  50.           setContentView(R.layout.activity_about);
+  51.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/AboutActivity.java:49: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `AboutActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  47.       protected void onCreate(Bundle savedInstanceState)
+  48.       {
+  49. >         super.onCreate(savedInstanceState);
+  50.           setContentView(R.layout.activity_about);
+  51.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity.java:57: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Intent.putExtra(...)` needs a non-null value in parameter 2 but argument `plantUUID` can be null. (Origin: method parameter plantUUID).
+  55.       {
+  56.           return new Intent(context, PlantDetailActivity.class)
+  57. >             .putExtra(PLANT_UUID, plantUUID)
+  58.               .putExtra(IS_NEW_PLANT, isNewPlant);
+  59.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/plantimage/PlantProfileImageView.java:61: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ImageView.setImageBitmap(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 61).
+  59.                   .into(ivPlantProfile);
+  60.           else
+  61. >             ivPlantProfile.setImageBitmap(null);
+  62.   
+  63.           ibTakePhoto.setClickable(viewModel.isTakeImageAvailable());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/DummyWebActivity.java:57: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `DummyWebActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  55.       protected void onCreate(Bundle savedInstanceState)
+  56.       {
+  57. >         super.onCreate(savedInstanceState);
+  58.           setContentView(R.layout.activity_web);
+  59.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/DummyWebActivity.java:57: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `DummyWebActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  55.       protected void onCreate(Bundle savedInstanceState)
+  56.       {
+  57. >         super.onCreate(savedInstanceState);
+  58.           setContentView(R.layout.activity_web);
+  59.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/DummyWebActivity.java:57: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `DummyWebActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  55.       protected void onCreate(Bundle savedInstanceState)
+  56.       {
+  57. >         super.onCreate(savedInstanceState);
+  58.           setContentView(R.layout.activity_web);
+  59.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/prefs/TimePickerDialogPreference.java:61: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LayoutInflater.inflate(...)` needs a non-null value in parameter 2 but argument `null` can be null. (Origin: null constant at line 61).
+  59.       public View onCreateDialogView()
+  60.       {
+  61. >         View view = LayoutInflater.from(getContext()).inflate(R.layout.view_coldalarm_time, null);
+  62.           ButterKnife.bind(this, view);
+  63.           return view;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerView.java:60: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `adapter` of method `PlantListRecyclerView.setAdapter(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `RecyclerView.setAdapter(...)`.
+  58.       }
+  59.   
+  60. >     public void setAdapter(PlantListRecyclerViewAdapter adapter)
+  61.       {
+  62.           this.adapter = adapter;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/prefs/SettingsActivity.java:62: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `SettingsActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  60.       public void onCreate(Bundle savedInstanceState)
+  61.       {
+  62. >         super.onCreate(savedInstanceState);
+  63.           setContentView(R.layout.activity_settings);
+  64.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/prefs/SettingsActivity.java:62: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `SettingsActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  60.       public void onCreate(Bundle savedInstanceState)
+  61.       {
+  62. >         super.onCreate(savedInstanceState);
+  63.           setContentView(R.layout.activity_settings);
+  64.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/prefs/SettingsActivity.java:62: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `SettingsActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  60.       public void onCreate(Bundle savedInstanceState)
+  61.       {
+  62. >         super.onCreate(savedInstanceState);
+  63.           setContentView(R.layout.activity_settings);
+  64.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_DataSeries.java:64: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_DataSeries$Builder.data` is not initialized in the constructor and is not declared `@Nullable`.
+  62.       private List<DataValue> data;
+  63.       private Integer lineColor;
+  64. >     Builder() {
+  65.       }
+  66.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_DataSeries.java:64: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_DataSeries$Builder.lineColor` is not initialized in the constructor and is not declared `@Nullable`.
+  62.       private List<DataValue> data;
+  63.       private Integer lineColor;
+  64. >     Builder() {
+  65.       }
+  66.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/prefs/TemperaturePickerDialog.java:68: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LayoutInflater.inflate(...)` needs a non-null value in parameter 2 but argument `null` can be null. (Origin: null constant at line 68).
+  66.       public View onCreateDialogView()
+  67.       {
+  68. >         View view = LayoutInflater.from(getContext()).inflate(R.layout.view_fuzz, null);
+  69.           ButterKnife.bind(this, view);
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewUpdate.java:75: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantDetailViewUpdate$Builder.name` is not initialized in the constructor and is not declared `@Nullable`.
+  73.       private String scientificName;
+  74.       private Integer tempVal;
+  75. >     Builder() {
+  76.       }
+  77.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewUpdate.java:75: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantDetailViewUpdate$Builder.scientificName` is not initialized in the constructor and is not declared `@Nullable`.
+  73.       private String scientificName;
+  74.       private Integer tempVal;
+  75. >     Builder() {
+  76.       }
+  77.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewUpdate.java:75: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantDetailViewUpdate$Builder.tempVal` is not initialized in the constructor and is not declared `@Nullable`.
+  73.       private String scientificName;
+  74.       private Integer tempVal;
+  75. >     Builder() {
+  76.       }
+  77.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:89: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Function.equals(...)` needs a non-null value in parameter 1 but argument `that.getXFormatter()` can be null. (Origin: call to getXFormatter() at line 89).
+  87.              && (this.rangeLines.equals(that.getRangeLines()))
+  88.              && (this.dataSeries.equals(that.getDataSeries()))
+  89. >            && ((this.XFormatter == null) ? (that.getXFormatter() == null) : this.XFormatter.equals(that.getXFormatter()))
+  90.              && ((this.YFormatter == null) ? (that.getYFormatter() == null) : this.YFormatter.equals(that.getYFormatter()));
+  91.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:90: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Function.equals(...)` needs a non-null value in parameter 1 but argument `that.getYFormatter()` can be null. (Origin: call to getYFormatter() at line 90).
+  88.              && (this.dataSeries.equals(that.getDataSeries()))
+  89.              && ((this.XFormatter == null) ? (that.getXFormatter() == null) : this.XFormatter.equals(that.getXFormatter()))
+  90. >            && ((this.YFormatter == null) ? (that.getYFormatter() == null) : this.YFormatter.equals(that.getYFormatter()));
+  91.       }
+  92.       return false;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity.java:79: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `PlantListActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  77.   
+  78.       @Override
+  79. >     public void onCreate(Bundle savedInstanceState)
+  80.       {
+  81.           setContentView(R.layout.activity_plant_list);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity.java:79: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `PlantListActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  77.   
+  78.       @Override
+  79. >     public void onCreate(Bundle savedInstanceState)
+  80.       {
+  81.           setContentView(R.layout.activity_plant_list);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity.java:79: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `PlantListActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  77.   
+  78.       @Override
+  79. >     public void onCreate(Bundle savedInstanceState)
+  80.       {
+  81.           setContentView(R.layout.activity_plant_list);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_WeatherLocation.java:80: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_WeatherLocation$Builder.lat` is not initialized in the constructor and is not declared `@Nullable`.
+  78.       private Double lat;
+  79.       private Double lon;
+  80. >     Builder() {
+  81.       }
+  82.       private Builder(WeatherLocation source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_WeatherLocation.java:80: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_WeatherLocation$Builder.lon` is not initialized in the constructor and is not declared `@Nullable`.
+  78.       private Double lat;
+  79.       private Double lon;
+  80. >     Builder() {
+  81.       }
+  82.       private Builder(WeatherLocation source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_WeatherLocation.java:80: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_WeatherLocation$Builder.placeString` is not initialized in the constructor and is not declared `@Nullable`.
+  78.       private Double lat;
+  79.       private Double lon;
+  80. >     Builder() {
+  81.       }
+  82.       private Builder(WeatherLocation source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantProfileImageViewModel.java:82: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantProfileImageViewModel$Builder.imageURL` is not initialized in the constructor and is not declared `@Nullable`.
+  80.       private Boolean takeImageAvailable;
+  81.       private UUID plantUUID;
+  82. >     Builder() {
+  83.       }
+  84.       private Builder(PlantProfileImageViewModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantProfileImageViewModel.java:82: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantProfileImageViewModel$Builder.plantUUID` is not initialized in the constructor and is not declared `@Nullable`.
+  80.       private Boolean takeImageAvailable;
+  81.       private UUID plantUUID;
+  82. >     Builder() {
+  83.       }
+  84.       private Builder(PlantProfileImageViewModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantProfileImageViewModel.java:82: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantProfileImageViewModel$Builder.takeImageAvailable` is not initialized in the constructor and is not declared `@Nullable`.
+  80.       private Boolean takeImageAvailable;
+  81.       private UUID plantUUID;
+  82. >     Builder() {
+  83.       }
+  84.       private Builder(PlantProfileImageViewModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_WeatherData.java:83: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_WeatherData$Builder.forecastHours` is not initialized in the constructor and is not declared `@Nullable`.
+  81.       private List<ForecastHour> forecastHours;
+  82.       private WeatherLocation weatherLocation;
+  83. >     Builder() {
+  84.       }
+  85.       private Builder(WeatherData source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_WeatherData.java:83: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_WeatherData$Builder.syncInstant` is not initialized in the constructor and is not declared `@Nullable`.
+  81.       private List<ForecastHour> forecastHours;
+  82.       private WeatherLocation weatherLocation;
+  83. >     Builder() {
+  84.       }
+  85.       private Builder(WeatherData source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_WeatherData.java:83: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_WeatherData$Builder.weatherLocation` is not initialized in the constructor and is not declared `@Nullable`.
+  81.       private List<ForecastHour> forecastHours;
+  82.       private WeatherLocation weatherLocation;
+  83. >     Builder() {
+  84.       }
+  85.       private Builder(WeatherData source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity.java:84: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `PlantDetailActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  82.   
+  83.       @Override
+  84. >     public void onCreate(Bundle savedInstanceState)
+  85.       {
+  86.           setContentView(R.layout.activity_plant_detail);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity.java:84: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `PlantDetailActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  82.   
+  83.       @Override
+  84. >     public void onCreate(Bundle savedInstanceState)
+  85.       {
+  86.           setContentView(R.layout.activity_plant_detail);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity.java:84: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `PlantDetailActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  82.   
+  83.       @Override
+  84. >     public void onCreate(Bundle savedInstanceState)
+  85.       {
+  86.           setContentView(R.layout.activity_plant_detail);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity.java:91: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `getSupportActionBar()` in the call to `setDisplayHomeAsUpEnabled(...)` is nullable and is not locally checked for null. (Origin: call to getSupportActionBar() at line 91).
+  89.           super.onCreate(savedInstanceState);
+  90.   
+  91. >         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+  92.   
+  93.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/http/openweathermap/HTTPForecastServiceOWMImpl.java:90: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Optional.ofNullable(...)` needs a non-null value in parameter 1 but argument `owmForecast.list` can be null. (Origin: field OpenWeatherMapForecast.list at line 90).
+  88.       private WeatherData mapToPOJO(OpenWeatherMapForecast owmForecast, SimpleWeatherLocation simpleWeatherLocation)
+  89.       {
+  90. >         final List<ForecastHour> forecastHourList = Optional.ofNullable(owmForecast.list)
+  91.               .orElse(Collections.emptyList())
+  92.               .stream()
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_Plant.java:90: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_Plant$Builder.minimumTolerance` is not initialized in the constructor and is not declared `@Nullable`.
+  88.       private Temperature minimumTolerance;
+  89.       private UUID uuid;
+  90. >     Builder() {
+  91.       }
+  92.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_Plant.java:90: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_Plant$Builder.name` is not initialized in the constructor and is not declared `@Nullable`.
+  88.       private Temperature minimumTolerance;
+  89.       private UUID uuid;
+  90. >     Builder() {
+  91.       }
+  92.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_Plant.java:90: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_Plant$Builder.scientificName` is not initialized in the constructor and is not declared `@Nullable`.
+  88.       private Temperature minimumTolerance;
+  89.       private UUID uuid;
+  90. >     Builder() {
+  91.       }
+  92.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_Plant.java:90: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_Plant$Builder.uuid` is not initialized in the constructor and is not declared `@Nullable`.
+  88.       private Temperature minimumTolerance;
+  89.       private UUID uuid;
+  90. >     Builder() {
+  91.       }
+  92.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_ForecastHour$Builder.hour` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Windspeed windspeed;
+  90.       private UUID uuid;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_ForecastHour$Builder.temperature` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Windspeed windspeed;
+  90.       private UUID uuid;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_ForecastHour$Builder.uuid` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Windspeed windspeed;
+  90.       private UUID uuid;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_ForecastHour$Builder.windspeed` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Windspeed windspeed;
+  90.       private UUID uuid;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantDetailViewModel$Builder.name` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private TemperaturePickerViewModel temperaturePickerViewModel;
+  90.       private PlantProfileImageViewModel plantProfileImageViewModel;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantDetailViewModel$Builder.plantProfileImageViewModel` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private TemperaturePickerViewModel temperaturePickerViewModel;
+  90.       private PlantProfileImageViewModel plantProfileImageViewModel;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantDetailViewModel$Builder.scientificName` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private TemperaturePickerViewModel temperaturePickerViewModel;
+  90.       private PlantProfileImageViewModel plantProfileImageViewModel;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantDetailViewModel$Builder.temperaturePickerViewModel` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private TemperaturePickerViewModel temperaturePickerViewModel;
+  90.       private PlantProfileImageViewModel plantProfileImageViewModel;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImageSaveRequest$Builder.fileName` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Instant photoTime;
+  90.       private Boolean profilePicture;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImageSaveRequest$Builder.photoTime` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Instant photoTime;
+  90.       private Boolean profilePicture;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImageSaveRequest$Builder.plantUUID` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Instant photoTime;
+  90.       private Boolean profilePicture;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImageSaveRequest$Builder.profilePicture` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Instant photoTime;
+  90.       private Boolean profilePicture;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/image/PlantImageRowDAO_Impl.java:96: warning: ERADICATE_RETURN_NOT_NULLABLE
+  Method `getImageForPlant(...)` may return null but it is not annotated with `@Nullable`. (Origin: null constant at line 131).
+  94.   
+  95.     @Override
+  96. >   public PlantImageRow getImageForPlant(String plantUUID) {
+  97.       final String _sql = "SELECT * FROM plant_image WHERE plant_uuid = ?";
+  98.       final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_TemperaturePickerViewModel$Builder.format` is not initialized in the constructor and is not declared `@Nullable`.
+  94.       private Integer maxValue;
+  95.       private Integer format;
+  96. >     Builder() {
+  97.       }
+  98.       private Builder(TemperaturePickerViewModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_TemperaturePickerViewModel$Builder.maxValue` is not initialized in the constructor and is not declared `@Nullable`.
+  94.       private Integer maxValue;
+  95.       private Integer format;
+  96. >     Builder() {
+  97.       }
+  98.       private Builder(TemperaturePickerViewModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_TemperaturePickerViewModel$Builder.minValue` is not initialized in the constructor and is not declared `@Nullable`.
+  94.       private Integer maxValue;
+  95.       private Integer format;
+  96. >     Builder() {
+  97.       }
+  98.       private Builder(TemperaturePickerViewModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_TemperaturePickerViewModel$Builder.value` is not initialized in the constructor and is not declared `@Nullable`.
+  94.       private Integer maxValue;
+  95.       private Integer format;
+  96. >     Builder() {
+  97.       }
+  98.       private Builder(TemperaturePickerViewModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/job/ColdAlarm.java:130: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `NotificationCompat$Builder.setContentIntent(...)` needs a non-null value in parameter 1 but argument `resultPendingIntent` can be null. (Origin: call to getPendingIntent(...) at line 126).
+  128.                           PendingIntent.FLAG_UPDATE_CURRENT
+  129.                   );
+  130. >         mBuilder.setContentIntent(resultPendingIntent);
+  131.           NotificationManager mNotificationManager =
+  132.                   (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImage$Builder.fileName` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID imageUUID;
+  103.       private UUID plantUUID;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImage$Builder.imageDate` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID imageUUID;
+  103.       private UUID plantUUID;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImage$Builder.imageUUID` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID imageUUID;
+  103.       private UUID plantUUID;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImage$Builder.plantUUID` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID imageUUID;
+  103.       private UUID plantUUID;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImage$Builder.title` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID imageUUID;
+  103.       private UUID plantUUID;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantListItemViewModel$Builder.imageFileName` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID uuid;
+  103.       private String imageFileName;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantListItemViewModel$Builder.plantName` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID uuid;
+  103.       private String imageFileName;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantListItemViewModel$Builder.plantScientificName` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID uuid;
+  103.       private String imageFileName;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantListItemViewModel$Builder.plantStatus` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID uuid;
+  103.       private String imageFileName;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantListItemViewModel$Builder.uuid` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID uuid;
+  103.       private String imageFileName;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView.java:107: warning: ERADICATE_INCONSISTENT_SUBCLASS_RETURN_ANNOTATION
+  Method `TemperatureCardView$1.parseObject(...)` is annotated with `@Nullable` but overrides unannotated method `Format.parseObject(...)`.
+  105.   
+  106.               @Override @Nullable
+  107. >             public Object parseObject(String source, ParsePosition pos)
+  108.               {
+  109.                   return null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter.java:122: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ImageView.setImageBitmap(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 122).
+  120.                   Glide.with(itemView).load(vm.getImageFileName()).into(plantProfileImage);
+  121.               else
+  122. >                 plantProfileImage.setImageBitmap(null);
+  123.           }
+  124.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:114: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphConfig$Builder.domainLowerBound` is not initialized in the constructor and is not declared `@Nullable`.
+  112.       private Double rangeStep;
+  113.       private Double domainStep;
+  114. >     Builder() {
+  115.       }
+  116.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:114: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphConfig$Builder.domainStep` is not initialized in the constructor and is not declared `@Nullable`.
+  112.       private Double rangeStep;
+  113.       private Double domainStep;
+  114. >     Builder() {
+  115.       }
+  116.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:114: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphConfig$Builder.domainUpperBound` is not initialized in the constructor and is not declared `@Nullable`.
+  112.       private Double rangeStep;
+  113.       private Double domainStep;
+  114. >     Builder() {
+  115.       }
+  116.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:114: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphConfig$Builder.rangeLowerBound` is not initialized in the constructor and is not declared `@Nullable`.
+  112.       private Double rangeStep;
+  113.       private Double domainStep;
+  114. >     Builder() {
+  115.       }
+  116.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:114: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphConfig$Builder.rangeStep` is not initialized in the constructor and is not declared `@Nullable`.
+  112.       private Double rangeStep;
+  113.       private Double domainStep;
+  114. >     Builder() {
+  115.       }
+  116.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:114: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphConfig$Builder.rangeUpperBound` is not initialized in the constructor and is not declared `@Nullable`.
+  112.       private Double rangeStep;
+  113.       private Double domainStep;
+  114. >     Builder() {
+  115.       }
+  116.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:116: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferencesViewModel$Builder.coldAlarmTime` is not initialized in the constructor and is not declared `@Nullable`.
+  114.       private String temperatureScale;
+  115.       private String coldAlarmTime;
+  116. >     Builder() {
+  117.       }
+  118.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:116: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferencesViewModel$Builder.fuzzSummary` is not initialized in the constructor and is not declared `@Nullable`.
+  114.       private String temperatureScale;
+  115.       private String coldAlarmTime;
+  116. >     Builder() {
+  117.       }
+  118.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:116: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferencesViewModel$Builder.fuzzViewModel` is not initialized in the constructor and is not declared `@Nullable`.
+  114.       private String temperatureScale;
+  115.       private String coldAlarmTime;
+  116. >     Builder() {
+  117.       }
+  118.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:116: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferencesViewModel$Builder.temperatureScale` is not initialized in the constructor and is not declared `@Nullable`.
+  114.       private String temperatureScale;
+  115.       private String coldAlarmTime;
+  116. >     Builder() {
+  117.       }
+  118.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:116: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferencesViewModel$Builder.thresholdSummary` is not initialized in the constructor and is not declared `@Nullable`.
+  114.       private String temperatureScale;
+  115.       private String coldAlarmTime;
+  116. >     Builder() {
+  117.       }
+  118.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:116: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferencesViewModel$Builder.thresholdViewModel` is not initialized in the constructor and is not declared `@Nullable`.
+  114.       private String temperatureScale;
+  115.       private String coldAlarmTime;
+  116. >     Builder() {
+  117.       }
+  118.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:120: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphCardViewModel$Builder.XFormatter` is not initialized in the constructor and is not declared `@Nullable`.
+  118.       private Function<Double, String> XFormatter;
+  119.       private Function<Double, String> YFormatter;
+  120. >     Builder() {
+  121.       }
+  122.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:120: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphCardViewModel$Builder.YFormatter` is not initialized in the constructor and is not declared `@Nullable`.
+  118.       private Function<Double, String> XFormatter;
+  119.       private Function<Double, String> YFormatter;
+  120. >     Builder() {
+  121.       }
+  122.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:120: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphCardViewModel$Builder.dataSeries` is not initialized in the constructor and is not declared `@Nullable`.
+  118.       private Function<Double, String> XFormatter;
+  119.       private Function<Double, String> YFormatter;
+  120. >     Builder() {
+  121.       }
+  122.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:120: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphCardViewModel$Builder.graphConfig` is not initialized in the constructor and is not declared `@Nullable`.
+  118.       private Function<Double, String> XFormatter;
+  119.       private Function<Double, String> YFormatter;
+  120. >     Builder() {
+  121.       }
+  122.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:120: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphCardViewModel$Builder.rangeLines` is not initialized in the constructor and is not declared `@Nullable`.
+  118.       private Function<Double, String> XFormatter;
+  119.       private Function<Double, String> YFormatter;
+  120. >     Builder() {
+  121.       }
+  122.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:120: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphCardViewModel$Builder.title` is not initialized in the constructor and is not declared `@Nullable`.
+  118.       private Function<Double, String> XFormatter;
+  119.       private Function<Double, String> YFormatter;
+  120. >     Builder() {
+  121.       }
+  122.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity.java:154: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LocationManager.requestSingleUpdate(...)` needs a non-null value in parameter 3 but argument `null` can be null. (Origin: null constant at line 154).
+  152.                       if (location != null)
+  153.                           weatherLocationSubject.onNext(SimpleWeatherLocation.create(location.getLatitude(), location.getLongitude()));
+  154. >                     locationManager.requestSingleUpdate(LocationManager.GPS_PROVIDER, listener, null);
+  155.                   }
+  156.               else
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:124: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferenceModel$Builder.coldAlarmTime` is not initialized in the constructor and is not declared `@Nullable`.
+  122.       private String locationString;
+  123.       private SimpleWeatherLocation coords;
+  124. >     Builder() {
+  125.       }
+  126.       private Builder(PreferenceModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:124: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferenceModel$Builder.coords` is not initialized in the constructor and is not declared `@Nullable`.
+  122.       private String locationString;
+  123.       private SimpleWeatherLocation coords;
+  124. >     Builder() {
+  125.       }
+  126.       private Builder(PreferenceModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:124: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferenceModel$Builder.locationString` is not initialized in the constructor and is not declared `@Nullable`.
+  122.       private String locationString;
+  123.       private SimpleWeatherLocation coords;
+  124. >     Builder() {
+  125.       }
+  126.       private Builder(PreferenceModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:124: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferenceModel$Builder.temperatureFormat` is not initialized in the constructor and is not declared `@Nullable`.
+  122.       private String locationString;
+  123.       private SimpleWeatherLocation coords;
+  124. >     Builder() {
+  125.       }
+  126.       private Builder(PreferenceModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:124: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferenceModel$Builder.threshold` is not initialized in the constructor and is not declared `@Nullable`.
+  122.       private String locationString;
+  123.       private SimpleWeatherLocation coords;
+  124. >     Builder() {
+  125.       }
+  126.       private Builder(PreferenceModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:124: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferenceModel$Builder.weatherDataFuzz` is not initialized in the constructor and is not declared `@Nullable`.
+  122.       private String locationString;
+  123.       private SimpleWeatherLocation coords;
+  124. >     Builder() {
+  125.       }
+  126.       private Builder(PreferenceModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView.java:140: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LineAndPointFormatter(...)` needs a non-null value in parameter 2 but argument `null` can be null. (Origin: null constant at line 140).
+  138.       private LineAndPointFormatter mapDataSeriesToLineAndPointFormatter(DataSeries dataSeries)
+  139.       {
+  140. >         final LineAndPointFormatter lineAndPointFormatter = new LineAndPointFormatter(dataSeries.getLineColor(), null, null, null);
+  141.           lineAndPointFormatter.setInterpolationParams(
+  142.               new CatmullRomInterpolator.Params(10, CatmullRomInterpolator.Type.Centripetal));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView.java:140: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LineAndPointFormatter(...)` needs a non-null value in parameter 3 but argument `null` can be null. (Origin: null constant at line 140).
+  138.       private LineAndPointFormatter mapDataSeriesToLineAndPointFormatter(DataSeries dataSeries)
+  139.       {
+  140. >         final LineAndPointFormatter lineAndPointFormatter = new LineAndPointFormatter(dataSeries.getLineColor(), null, null, null);
+  141.           lineAndPointFormatter.setInterpolationParams(
+  142.               new CatmullRomInterpolator.Params(10, CatmullRomInterpolator.Type.Centripetal));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView.java:140: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LineAndPointFormatter(...)` needs a non-null value in parameter 4 but argument `null` can be null. (Origin: null constant at line 140).
+  138.       private LineAndPointFormatter mapDataSeriesToLineAndPointFormatter(DataSeries dataSeries)
+  139.       {
+  140. >         final LineAndPointFormatter lineAndPointFormatter = new LineAndPointFormatter(dataSeries.getLineColor(), null, null, null);
+  141.           lineAndPointFormatter.setInterpolationParams(
+  142.               new CatmullRomInterpolator.Params(10, CatmullRomInterpolator.Type.Centripetal));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/job/ColdAlarm.java:170: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `NotificationCompat$Builder.setContentIntent(...)` needs a non-null value in parameter 1 but argument `resultPendingIntent` can be null. (Origin: call to getPendingIntent(...) at line 166).
+  168.                           PendingIntent.FLAG_UPDATE_CURRENT
+  169.                   );
+  170. >         mBuilder.setContentIntent(resultPendingIntent);
+  171.           NotificationManager mNotificationManager =
+  172.                   (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView.java:163: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LineAndPointFormatter(...)` needs a non-null value in parameter 2 but argument `null` can be null. (Origin: null constant at line 163).
+  161.           xypTemperature.addSeries(
+  162.               new SimpleXYSeries(xVals, yVals, getContext().getString(R.string.cold_threshold)),
+  163. >             new LineAndPointFormatter(graphLine.getLineColor(), null, null, null));
+  164.       }
+  165.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView.java:163: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LineAndPointFormatter(...)` needs a non-null value in parameter 3 but argument `null` can be null. (Origin: null constant at line 163).
+  161.           xypTemperature.addSeries(
+  162.               new SimpleXYSeries(xVals, yVals, getContext().getString(R.string.cold_threshold)),
+  163. >             new LineAndPointFormatter(graphLine.getLineColor(), null, null, null));
+  164.       }
+  165.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView.java:163: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LineAndPointFormatter(...)` needs a non-null value in parameter 4 but argument `null` can be null. (Origin: null constant at line 163).
+  161.           xypTemperature.addSeries(
+  162.               new SimpleXYSeries(xVals, yVals, getContext().getString(R.string.cold_threshold)),
+  163. >             new LineAndPointFormatter(graphLine.getLineColor(), null, null, null));
+  164.       }
+  165.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/plant/PlantRowDAO_Impl.java:150: warning: ERADICATE_RETURN_NOT_NULLABLE
+  Method `call()` may return null but it is not annotated with `@Nullable`. (Origin: null constant at line 177).
+  148.       return RxRoom.createFlowable(__db, new String[]{"plant"}, new Callable<PlantRow>() {
+  149.         @Override
+  150. >       public PlantRow call() throws Exception {
+  151.           final Cursor _cursor = __db.query(_statement);
+  152.           try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:156: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `AutoValue_GraphCardViewModel$Builder.XFormatter` can be null but is not declared `@Nullable`. (Origin: method parameter XFormatter).
+  154.       @Override
+  155.       public GraphCardViewModel.Builder XFormatter(@Nullable Function<Double, String> XFormatter) {
+  156. >       this.XFormatter = XFormatter;
+  157.         return this;
+  158.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:161: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `AutoValue_GraphCardViewModel$Builder.YFormatter` can be null but is not declared `@Nullable`. (Origin: method parameter YFormatter).
+  159.       @Override
+  160.       public GraphCardViewModel.Builder YFormatter(@Nullable Function<Double, String> YFormatter) {
+  161. >       this.YFormatter = YFormatter;
+  162.         return this;
+  163.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity.java:238: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  Third parameter `data` of method `PlantDetailActivity.onActivityResult(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onActivityResult(...)`.
+  236.   
+  237.       @Override
+  238. >     protected void onActivityResult(int requestCode, int resultCode, Intent data)
+  239.       {
+  240.           if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK && !photoFileName.equals(""))
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/dagger/DaggerColdSnapInjector.java:257: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerColdSnapInjector$Builder.context` is not initialized in the constructor and is not declared `@Nullable`.
+  255.     }
+  256.   
+  257. >   private static final class Builder implements ColdSnapInjector.Builder {
+  258.       private Context context;
+  259.   
+
+Summary of the reports
+
+                       ERADICATE_FIELD_NOT_INITIALIZED: 73
+  ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION: 23
+                      ERADICATE_PARAMETER_NOT_NULLABLE: 23
+                          ERADICATE_FIELD_NOT_NULLABLE: 18
+                 ERADICATE_CONDITION_REDUNDANT_NONNULL: 8
+     ERADICATE_INCONSISTENT_SUBCLASS_RETURN_ANNOTATION: 2
+                         ERADICATE_RETURN_NOT_NULLABLE: 2
+                        ERADICATE_NULLABLE_DEREFERENCE: 1Found 150 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/service/AutoValue_ActionReply.java:17: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `AutoValue_ActionReply.error` can be null but is not declared `@Nullable`. (Origin: method parameter error).
+  15.         @Nullable Throwable error) {
+  16.       this.success = success;
+  17. >     this.error = error;
+  18.     }
+  19.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:30: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `AutoValue_GraphCardViewModel.XFormatter` can be null but is not declared `@Nullable`. (Origin: method parameter XFormatter).
+  28.       this.rangeLines = rangeLines;
+  29.       this.dataSeries = dataSeries;
+  30. >     this.XFormatter = XFormatter;
+  31.       this.YFormatter = YFormatter;
+  32.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:31: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `AutoValue_GraphCardViewModel.YFormatter` can be null but is not declared `@Nullable`. (Origin: method parameter YFormatter).
+  29.       this.dataSeries = dataSeries;
+  30.       this.XFormatter = XFormatter;
+  31. >     this.YFormatter = YFormatter;
+  32.     }
+  33.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/TemperaturePickerDialog_ViewBinding.java:29: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `TemperaturePickerDialog_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 29).
+  27.       TemperaturePickerDialog target = this.target;
+  28.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  29. >     this.target = null;
+  30.   
+  31.       target.tpvPicker = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/TimePickerDialogPreference_ViewBinding.java:29: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `TimePickerDialogPreference_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 29).
+  27.       TimePickerDialogPreference target = this.target;
+  28.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  29. >     this.target = null;
+  30.   
+  31.       target.timePicker = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/ColdSnapDatabase_Impl.java:30: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ColdSnapDatabase_Impl._forecastHourRowDAO` is not initialized in the constructor and is not declared `@Nullable`.
+  28.   
+  29.   @SuppressWarnings("unchecked")
+  30. > public class ColdSnapDatabase_Impl extends ColdSnapDatabase {
+  31.     private volatile PlantRowDAO _plantRowDAO;
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/ColdSnapDatabase_Impl.java:30: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ColdSnapDatabase_Impl._plantImageRowDAO` is not initialized in the constructor and is not declared `@Nullable`.
+  28.   
+  29.   @SuppressWarnings("unchecked")
+  30. > public class ColdSnapDatabase_Impl extends ColdSnapDatabase {
+  31.     private volatile PlantRowDAO _plantRowDAO;
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/ColdSnapDatabase_Impl.java:30: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ColdSnapDatabase_Impl._plantRowDAO` is not initialized in the constructor and is not declared `@Nullable`.
+  28.   
+  29.   @SuppressWarnings("unchecked")
+  30. > public class ColdSnapDatabase_Impl extends ColdSnapDatabase {
+  31.     private volatile PlantRowDAO _plantRowDAO;
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/feed/ActivityFeed.java:30: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `ActivityFeed.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  28.   
+  29.       @Override
+  30. >     public void onCreate(Bundle savedInstanceState)
+  31.       {
+  32.           setContentView(R.layout.activity_feed);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/feed/ActivityFeed.java:30: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `ActivityFeed.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  28.   
+  29.       @Override
+  30. >     public void onCreate(Bundle savedInstanceState)
+  31.       {
+  32.           setContentView(R.layout.activity_feed);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/feed/ActivityFeed.java:30: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `ActivityFeed.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  28.   
+  29.       @Override
+  30. >     public void onCreate(Bundle savedInstanceState)
+  31.       {
+  32.           setContentView(R.layout.activity_feed);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/core/BaseColdsnapActivity_ViewBinding.java:34: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `BaseColdsnapActivity_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 34).
+  32.       BaseColdsnapActivity target = this.target;
+  33.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  34. >     this.target = null;
+  35.   
+  36.       target.bnvNavigation = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView_ViewBinding.java:34: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `TemperatureCardView_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 34).
+  32.       TemperatureCardView target = this.target;
+  33.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  34. >     this.target = null;
+  35.   
+  36.       target.xypTemperature = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/service/image/file/ImageFileServiceImpl.java:35: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ContentResolver.delete(...)` needs a non-null value in parameter 2 but argument `null` can be null. (Origin: null constant at line 35).
+  33.                   "com.yoxjames.coldsnap.provider",
+  34.                   image);
+  35. >             context.getContentResolver().delete(photoURI, null, null);
+  36.               e.onNext(ActionReply.genericSuccess());
+  37.               e.onComplete();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/service/image/file/ImageFileServiceImpl.java:35: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ContentResolver.delete(...)` needs a non-null value in parameter 3 but argument `null` can be null. (Origin: null constant at line 35).
+  33.                   "com.yoxjames.coldsnap.provider",
+  34.                   image);
+  35. >             context.getContentResolver().delete(photoURI, null, null);
+  36.               e.onNext(ActionReply.genericSuccess());
+  37.               e.onComplete();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/image/PlantImageRowDAO_Impl.java:33: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  31.         @Override
+  32.         public void bind(SupportSQLiteStatement stmt, PlantImageRow value) {
+  33. >         if (value.getUuid() == null) {
+  34.             stmt.bindNull(1);
+  35.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/image/PlantImageRowDAO_Impl.java:38: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  36.             stmt.bindString(1, value.getUuid());
+  37.           }
+  38. >         if (value.getPlantUUID() == null) {
+  39.             stmt.bindNull(2);
+  40.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/image/PlantImageRowDAO_Impl.java:43: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  41.             stmt.bindString(2, value.getPlantUUID());
+  42.           }
+  43. >         if (value.getTitle() == null) {
+  44.             stmt.bindNull(3);
+  45.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/image/PlantImageRowDAO_Impl.java:48: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  46.             stmt.bindString(3, value.getTitle());
+  47.           }
+  48. >         if (value.getImageFilename() == null) {
+  49.             stmt.bindNull(4);
+  50.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/weather/ForecastHourRowDAO_Impl.java:33: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  31.         @Override
+  32.         public void bind(SupportSQLiteStatement stmt, ForecastHourRow value) {
+  33. >         if (value.getUuid() == null) {
+  34.             stmt.bindNull(1);
+  35.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/feed/ActivityFeed_ViewBinding.java:35: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `ActivityFeed_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 35).
+  33.       ActivityFeed target = this.target;
+  34.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  35. >     this.target = null;
+  36.   
+  37.       target.feedView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity_ViewBinding.java:35: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `PlantListActivity_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 35).
+  33.       PlantListActivity target = this.target;
+  34.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  35. >     this.target = null;
+  36.   
+  37.       target.toolbar = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/DummyWebActivity_ViewBinding.java:36: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `DummyWebActivity_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 36).
+  34.       DummyWebActivity target = this.target;
+  35.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  36. >     this.target = null;
+  37.   
+  38.       target.view = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/PlantDetailView_ViewBinding.java:37: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `PlantDetailView_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 37).
+  35.       PlantDetailView target = this.target;
+  36.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  37. >     this.target = null;
+  38.   
+  39.       target.etPlantName = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/PlantProfileImageView_ViewBinding.java:37: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `PlantProfileImageView_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 37).
+  35.       PlantProfileImageView target = this.target;
+  36.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  37. >     this.target = null;
+  38.   
+  39.       target.ivPlantProfile = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/plant/PlantRowDAO_Impl.java:37: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  35.         @Override
+  36.         public void bind(SupportSQLiteStatement stmt, PlantRow value) {
+  37. >         if (value.getUuid() == null) {
+  38.             stmt.bindNull(1);
+  39.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/plant/PlantRowDAO_Impl.java:42: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  40.             stmt.bindString(1, value.getUuid());
+  41.           }
+  42. >         if (value.getName() == null) {
+  43.             stmt.bindNull(2);
+  44.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/plant/PlantRowDAO_Impl.java:47: warning: ERADICATE_CONDITION_REDUNDANT_NONNULL
+  The condition lang.String(value)V is always false according to the existing annotations.
+  45.             stmt.bindString(2, value.getName());
+  46.           }
+  47. >         if (value.getScientificName() == null) {
+  48.             stmt.bindNull(3);
+  49.           } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/AboutActivity_ViewBinding.java:39: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `AboutActivity_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 39).
+  37.       AboutActivity target = this.target;
+  38.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  39. >     this.target = null;
+  40.   
+  41.       target.toolbar = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity_ViewBinding.java:39: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `PlantDetailActivity_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 39).
+  37.       PlantDetailActivity target = this.target;
+  38.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  39. >     this.target = null;
+  40.   
+  41.       target.plantDetailView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/core/BaseColdsnapActivity.java:38: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `BaseColdsnapActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  36.       public void onCreate(Bundle savedInstanceState)
+  37.       {
+  38. >         super.onCreate(savedInstanceState);
+  39.   
+  40.           inject();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/core/BaseColdsnapActivity.java:38: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `BaseColdsnapActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  36.       public void onCreate(Bundle savedInstanceState)
+  37.       {
+  38. >         super.onCreate(savedInstanceState);
+  39.   
+  40.           inject();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/core/BaseColdsnapActivity.java:38: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `BaseColdsnapActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  36.       public void onCreate(Bundle savedInstanceState)
+  37.       {
+  38. >         super.onCreate(savedInstanceState);
+  39.   
+  40.           inject();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/service/AutoValue_ActionReply.java:47: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Object.equals(...)` needs a non-null value in parameter 1 but argument `that.getError()` can be null. (Origin: call to getError() at line 47).
+  45.         ActionReply that = (ActionReply) o;
+  46.         return (this.success == that.isSuccess())
+  47. >            && ((this.error == null) ? (that.getError() == null) : this.error.equals(that.getError()));
+  48.       }
+  49.       return false;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/job/ColdAlarm.java:43: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ColdAlarm.currentContext` is not initialized in the constructor and is not declared `@Nullable`.
+  41.   
+  42.   @Singleton
+  43. > public class ColdAlarm extends BroadcastReceiver implements ColdAlarmView
+  44.   {
+  45.       @Inject ColdAlarmPresenter coldAlarmPresenter;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:48: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.target` can be null but is not declared `@Nullable`. (Origin: null constant at line 48).
+  46.       PlantListRecyclerViewAdapter.PlantItemHolder target = this.target;
+  47.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  48. >     this.target = null;
+  49.   
+  50.       target.plantName = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:57: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.view2131296423` can be null but is not declared `@Nullable`. (Origin: null constant at line 57).
+  55.   
+  56.       view2131296423.setOnClickListener(null);
+  57. >     view2131296423 = null;
+  58.     }
+  59.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:56: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View.setOnClickListener(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 56).
+  54.       target.plantProfileImage = null;
+  55.   
+  56. >     view2131296423.setOnClickListener(null);
+  57.       view2131296423 = null;
+  58.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/service/image/file/ImageFileServiceImpl.java:56: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ContentResolver.delete(...)` needs a non-null value in parameter 2 but argument `null` can be null. (Origin: null constant at line 56).
+  54.                       {
+  55.                           final Uri fileURI = FileProvider.getUriForFile(context, "com.yoxjames.coldsnap.provider", file);
+  56. >                         context.getContentResolver().delete(fileURI, null, null);
+  57.                       }
+  58.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/service/image/file/ImageFileServiceImpl.java:56: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ContentResolver.delete(...)` needs a non-null value in parameter 3 but argument `null` can be null. (Origin: null constant at line 56).
+  54.                       {
+  55.                           final Uri fileURI = FileProvider.getUriForFile(context, "com.yoxjames.coldsnap.provider", file);
+  56. >                         context.getContentResolver().delete(fileURI, null, null);
+  57.                       }
+  58.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/job/ColdService.java:49: warning: ERADICATE_INCONSISTENT_SUBCLASS_RETURN_ANNOTATION
+  Method `ColdService.onBind(...)` is annotated with `@Nullable` but overrides unannotated method `Service.onBind(...)`.
+  47.       @Override
+  48.       @Nullable
+  49. >     public IBinder onBind(Intent intent)
+  50.       {
+  51.           return null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/AboutActivity.java:49: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `AboutActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  47.       protected void onCreate(Bundle savedInstanceState)
+  48.       {
+  49. >         super.onCreate(savedInstanceState);
+  50.           setContentView(R.layout.activity_about);
+  51.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/AboutActivity.java:49: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `AboutActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  47.       protected void onCreate(Bundle savedInstanceState)
+  48.       {
+  49. >         super.onCreate(savedInstanceState);
+  50.           setContentView(R.layout.activity_about);
+  51.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/AboutActivity.java:49: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `AboutActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  47.       protected void onCreate(Bundle savedInstanceState)
+  48.       {
+  49. >         super.onCreate(savedInstanceState);
+  50.           setContentView(R.layout.activity_about);
+  51.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity.java:57: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Intent.putExtra(...)` needs a non-null value in parameter 2 but argument `plantUUID` can be null. (Origin: method parameter plantUUID).
+  55.       {
+  56.           return new Intent(context, PlantDetailActivity.class)
+  57. >             .putExtra(PLANT_UUID, plantUUID)
+  58.               .putExtra(IS_NEW_PLANT, isNewPlant);
+  59.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/plantimage/PlantProfileImageView.java:61: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ImageView.setImageBitmap(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 61).
+  59.                   .into(ivPlantProfile);
+  60.           else
+  61. >             ivPlantProfile.setImageBitmap(null);
+  62.   
+  63.           ibTakePhoto.setClickable(viewModel.isTakeImageAvailable());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/DummyWebActivity.java:57: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `DummyWebActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  55.       protected void onCreate(Bundle savedInstanceState)
+  56.       {
+  57. >         super.onCreate(savedInstanceState);
+  58.           setContentView(R.layout.activity_web);
+  59.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/DummyWebActivity.java:57: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `DummyWebActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  55.       protected void onCreate(Bundle savedInstanceState)
+  56.       {
+  57. >         super.onCreate(savedInstanceState);
+  58.           setContentView(R.layout.activity_web);
+  59.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/DummyWebActivity.java:57: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `DummyWebActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  55.       protected void onCreate(Bundle savedInstanceState)
+  56.       {
+  57. >         super.onCreate(savedInstanceState);
+  58.           setContentView(R.layout.activity_web);
+  59.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/prefs/TimePickerDialogPreference.java:61: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LayoutInflater.inflate(...)` needs a non-null value in parameter 2 but argument `null` can be null. (Origin: null constant at line 61).
+  59.       public View onCreateDialogView()
+  60.       {
+  61. >         View view = LayoutInflater.from(getContext()).inflate(R.layout.view_coldalarm_time, null);
+  62.           ButterKnife.bind(this, view);
+  63.           return view;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerView.java:60: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `adapter` of method `PlantListRecyclerView.setAdapter(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `RecyclerView.setAdapter(...)`.
+  58.       }
+  59.   
+  60. >     public void setAdapter(PlantListRecyclerViewAdapter adapter)
+  61.       {
+  62.           this.adapter = adapter;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/prefs/SettingsActivity.java:62: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `SettingsActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  60.       public void onCreate(Bundle savedInstanceState)
+  61.       {
+  62. >         super.onCreate(savedInstanceState);
+  63.           setContentView(R.layout.activity_settings);
+  64.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/prefs/SettingsActivity.java:62: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `SettingsActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  60.       public void onCreate(Bundle savedInstanceState)
+  61.       {
+  62. >         super.onCreate(savedInstanceState);
+  63.           setContentView(R.layout.activity_settings);
+  64.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/prefs/SettingsActivity.java:62: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `SettingsActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  60.       public void onCreate(Bundle savedInstanceState)
+  61.       {
+  62. >         super.onCreate(savedInstanceState);
+  63.           setContentView(R.layout.activity_settings);
+  64.           ButterKnife.bind(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_DataSeries.java:64: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_DataSeries$Builder.data` is not initialized in the constructor and is not declared `@Nullable`.
+  62.       private List<DataValue> data;
+  63.       private Integer lineColor;
+  64. >     Builder() {
+  65.       }
+  66.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_DataSeries.java:64: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_DataSeries$Builder.lineColor` is not initialized in the constructor and is not declared `@Nullable`.
+  62.       private List<DataValue> data;
+  63.       private Integer lineColor;
+  64. >     Builder() {
+  65.       }
+  66.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/prefs/TemperaturePickerDialog.java:68: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LayoutInflater.inflate(...)` needs a non-null value in parameter 2 but argument `null` can be null. (Origin: null constant at line 68).
+  66.       public View onCreateDialogView()
+  67.       {
+  68. >         View view = LayoutInflater.from(getContext()).inflate(R.layout.view_fuzz, null);
+  69.           ButterKnife.bind(this, view);
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewUpdate.java:75: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantDetailViewUpdate$Builder.name` is not initialized in the constructor and is not declared `@Nullable`.
+  73.       private String scientificName;
+  74.       private Integer tempVal;
+  75. >     Builder() {
+  76.       }
+  77.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewUpdate.java:75: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantDetailViewUpdate$Builder.scientificName` is not initialized in the constructor and is not declared `@Nullable`.
+  73.       private String scientificName;
+  74.       private Integer tempVal;
+  75. >     Builder() {
+  76.       }
+  77.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewUpdate.java:75: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantDetailViewUpdate$Builder.tempVal` is not initialized in the constructor and is not declared `@Nullable`.
+  73.       private String scientificName;
+  74.       private Integer tempVal;
+  75. >     Builder() {
+  76.       }
+  77.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:89: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Function.equals(...)` needs a non-null value in parameter 1 but argument `that.getXFormatter()` can be null. (Origin: call to getXFormatter() at line 89).
+  87.              && (this.rangeLines.equals(that.getRangeLines()))
+  88.              && (this.dataSeries.equals(that.getDataSeries()))
+  89. >            && ((this.XFormatter == null) ? (that.getXFormatter() == null) : this.XFormatter.equals(that.getXFormatter()))
+  90.              && ((this.YFormatter == null) ? (that.getYFormatter() == null) : this.YFormatter.equals(that.getYFormatter()));
+  91.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:90: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Function.equals(...)` needs a non-null value in parameter 1 but argument `that.getYFormatter()` can be null. (Origin: call to getYFormatter() at line 90).
+  88.              && (this.dataSeries.equals(that.getDataSeries()))
+  89.              && ((this.XFormatter == null) ? (that.getXFormatter() == null) : this.XFormatter.equals(that.getXFormatter()))
+  90. >            && ((this.YFormatter == null) ? (that.getYFormatter() == null) : this.YFormatter.equals(that.getYFormatter()));
+  91.       }
+  92.       return false;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity.java:79: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `PlantListActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  77.   
+  78.       @Override
+  79. >     public void onCreate(Bundle savedInstanceState)
+  80.       {
+  81.           setContentView(R.layout.activity_plant_list);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity.java:79: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `PlantListActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  77.   
+  78.       @Override
+  79. >     public void onCreate(Bundle savedInstanceState)
+  80.       {
+  81.           setContentView(R.layout.activity_plant_list);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity.java:79: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `PlantListActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  77.   
+  78.       @Override
+  79. >     public void onCreate(Bundle savedInstanceState)
+  80.       {
+  81.           setContentView(R.layout.activity_plant_list);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_WeatherLocation.java:80: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_WeatherLocation$Builder.lat` is not initialized in the constructor and is not declared `@Nullable`.
+  78.       private Double lat;
+  79.       private Double lon;
+  80. >     Builder() {
+  81.       }
+  82.       private Builder(WeatherLocation source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_WeatherLocation.java:80: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_WeatherLocation$Builder.lon` is not initialized in the constructor and is not declared `@Nullable`.
+  78.       private Double lat;
+  79.       private Double lon;
+  80. >     Builder() {
+  81.       }
+  82.       private Builder(WeatherLocation source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_WeatherLocation.java:80: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_WeatherLocation$Builder.placeString` is not initialized in the constructor and is not declared `@Nullable`.
+  78.       private Double lat;
+  79.       private Double lon;
+  80. >     Builder() {
+  81.       }
+  82.       private Builder(WeatherLocation source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantProfileImageViewModel.java:82: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantProfileImageViewModel$Builder.imageURL` is not initialized in the constructor and is not declared `@Nullable`.
+  80.       private Boolean takeImageAvailable;
+  81.       private UUID plantUUID;
+  82. >     Builder() {
+  83.       }
+  84.       private Builder(PlantProfileImageViewModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantProfileImageViewModel.java:82: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantProfileImageViewModel$Builder.plantUUID` is not initialized in the constructor and is not declared `@Nullable`.
+  80.       private Boolean takeImageAvailable;
+  81.       private UUID plantUUID;
+  82. >     Builder() {
+  83.       }
+  84.       private Builder(PlantProfileImageViewModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantProfileImageViewModel.java:82: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantProfileImageViewModel$Builder.takeImageAvailable` is not initialized in the constructor and is not declared `@Nullable`.
+  80.       private Boolean takeImageAvailable;
+  81.       private UUID plantUUID;
+  82. >     Builder() {
+  83.       }
+  84.       private Builder(PlantProfileImageViewModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_WeatherData.java:83: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_WeatherData$Builder.forecastHours` is not initialized in the constructor and is not declared `@Nullable`.
+  81.       private List<ForecastHour> forecastHours;
+  82.       private WeatherLocation weatherLocation;
+  83. >     Builder() {
+  84.       }
+  85.       private Builder(WeatherData source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_WeatherData.java:83: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_WeatherData$Builder.syncInstant` is not initialized in the constructor and is not declared `@Nullable`.
+  81.       private List<ForecastHour> forecastHours;
+  82.       private WeatherLocation weatherLocation;
+  83. >     Builder() {
+  84.       }
+  85.       private Builder(WeatherData source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_WeatherData.java:83: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_WeatherData$Builder.weatherLocation` is not initialized in the constructor and is not declared `@Nullable`.
+  81.       private List<ForecastHour> forecastHours;
+  82.       private WeatherLocation weatherLocation;
+  83. >     Builder() {
+  84.       }
+  85.       private Builder(WeatherData source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity.java:84: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `PlantDetailActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  82.   
+  83.       @Override
+  84. >     public void onCreate(Bundle savedInstanceState)
+  85.       {
+  86.           setContentView(R.layout.activity_plant_detail);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity.java:84: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `PlantDetailActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  82.   
+  83.       @Override
+  84. >     public void onCreate(Bundle savedInstanceState)
+  85.       {
+  86.           setContentView(R.layout.activity_plant_detail);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity.java:84: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `PlantDetailActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  82.   
+  83.       @Override
+  84. >     public void onCreate(Bundle savedInstanceState)
+  85.       {
+  86.           setContentView(R.layout.activity_plant_detail);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity.java:91: warning: ERADICATE_NULLABLE_DEREFERENCE
+  The value of `getSupportActionBar()` in the call to `setDisplayHomeAsUpEnabled(...)` is nullable and is not locally checked for null. (Origin: call to getSupportActionBar() at line 91).
+  89.           super.onCreate(savedInstanceState);
+  90.   
+  91. >         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+  92.   
+  93.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/http/openweathermap/HTTPForecastServiceOWMImpl.java:90: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Optional.ofNullable(...)` needs a non-null value in parameter 1 but argument `owmForecast.list` can be null. (Origin: field OpenWeatherMapForecast.list at line 90).
+  88.       private WeatherData mapToPOJO(OpenWeatherMapForecast owmForecast, SimpleWeatherLocation simpleWeatherLocation)
+  89.       {
+  90. >         final List<ForecastHour> forecastHourList = Optional.ofNullable(owmForecast.list)
+  91.               .orElse(Collections.emptyList())
+  92.               .stream()
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_Plant.java:90: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_Plant$Builder.minimumTolerance` is not initialized in the constructor and is not declared `@Nullable`.
+  88.       private Temperature minimumTolerance;
+  89.       private UUID uuid;
+  90. >     Builder() {
+  91.       }
+  92.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_Plant.java:90: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_Plant$Builder.name` is not initialized in the constructor and is not declared `@Nullable`.
+  88.       private Temperature minimumTolerance;
+  89.       private UUID uuid;
+  90. >     Builder() {
+  91.       }
+  92.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_Plant.java:90: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_Plant$Builder.scientificName` is not initialized in the constructor and is not declared `@Nullable`.
+  88.       private Temperature minimumTolerance;
+  89.       private UUID uuid;
+  90. >     Builder() {
+  91.       }
+  92.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_Plant.java:90: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_Plant$Builder.uuid` is not initialized in the constructor and is not declared `@Nullable`.
+  88.       private Temperature minimumTolerance;
+  89.       private UUID uuid;
+  90. >     Builder() {
+  91.       }
+  92.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_ForecastHour$Builder.hour` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Windspeed windspeed;
+  90.       private UUID uuid;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_ForecastHour$Builder.temperature` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Windspeed windspeed;
+  90.       private UUID uuid;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_ForecastHour$Builder.uuid` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Windspeed windspeed;
+  90.       private UUID uuid;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_ForecastHour$Builder.windspeed` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Windspeed windspeed;
+  90.       private UUID uuid;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantDetailViewModel$Builder.name` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private TemperaturePickerViewModel temperaturePickerViewModel;
+  90.       private PlantProfileImageViewModel plantProfileImageViewModel;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantDetailViewModel$Builder.plantProfileImageViewModel` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private TemperaturePickerViewModel temperaturePickerViewModel;
+  90.       private PlantProfileImageViewModel plantProfileImageViewModel;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantDetailViewModel$Builder.scientificName` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private TemperaturePickerViewModel temperaturePickerViewModel;
+  90.       private PlantProfileImageViewModel plantProfileImageViewModel;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantDetailViewModel$Builder.temperaturePickerViewModel` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private TemperaturePickerViewModel temperaturePickerViewModel;
+  90.       private PlantProfileImageViewModel plantProfileImageViewModel;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImageSaveRequest$Builder.fileName` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Instant photoTime;
+  90.       private Boolean profilePicture;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImageSaveRequest$Builder.photoTime` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Instant photoTime;
+  90.       private Boolean profilePicture;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImageSaveRequest$Builder.plantUUID` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Instant photoTime;
+  90.       private Boolean profilePicture;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:91: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImageSaveRequest$Builder.profilePicture` is not initialized in the constructor and is not declared `@Nullable`.
+  89.       private Instant photoTime;
+  90.       private Boolean profilePicture;
+  91. >     Builder() {
+  92.       }
+  93.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/image/PlantImageRowDAO_Impl.java:96: warning: ERADICATE_RETURN_NOT_NULLABLE
+  Method `getImageForPlant(...)` may return null but it is not annotated with `@Nullable`. (Origin: null constant at line 131).
+  94.   
+  95.     @Override
+  96. >   public PlantImageRow getImageForPlant(String plantUUID) {
+  97.       final String _sql = "SELECT * FROM plant_image WHERE plant_uuid = ?";
+  98.       final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_TemperaturePickerViewModel$Builder.format` is not initialized in the constructor and is not declared `@Nullable`.
+  94.       private Integer maxValue;
+  95.       private Integer format;
+  96. >     Builder() {
+  97.       }
+  98.       private Builder(TemperaturePickerViewModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_TemperaturePickerViewModel$Builder.maxValue` is not initialized in the constructor and is not declared `@Nullable`.
+  94.       private Integer maxValue;
+  95.       private Integer format;
+  96. >     Builder() {
+  97.       }
+  98.       private Builder(TemperaturePickerViewModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_TemperaturePickerViewModel$Builder.minValue` is not initialized in the constructor and is not declared `@Nullable`.
+  94.       private Integer maxValue;
+  95.       private Integer format;
+  96. >     Builder() {
+  97.       }
+  98.       private Builder(TemperaturePickerViewModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_TemperaturePickerViewModel$Builder.value` is not initialized in the constructor and is not declared `@Nullable`.
+  94.       private Integer maxValue;
+  95.       private Integer format;
+  96. >     Builder() {
+  97.       }
+  98.       private Builder(TemperaturePickerViewModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/job/ColdAlarm.java:130: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `NotificationCompat$Builder.setContentIntent(...)` needs a non-null value in parameter 1 but argument `resultPendingIntent` can be null. (Origin: call to getPendingIntent(...) at line 126).
+  128.                           PendingIntent.FLAG_UPDATE_CURRENT
+  129.                   );
+  130. >         mBuilder.setContentIntent(resultPendingIntent);
+  131.           NotificationManager mNotificationManager =
+  132.                   (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImage$Builder.fileName` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID imageUUID;
+  103.       private UUID plantUUID;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImage$Builder.imageDate` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID imageUUID;
+  103.       private UUID plantUUID;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImage$Builder.imageUUID` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID imageUUID;
+  103.       private UUID plantUUID;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImage$Builder.plantUUID` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID imageUUID;
+  103.       private UUID plantUUID;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantImage$Builder.title` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID imageUUID;
+  103.       private UUID plantUUID;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantListItemViewModel$Builder.imageFileName` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID uuid;
+  103.       private String imageFileName;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantListItemViewModel$Builder.plantName` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID uuid;
+  103.       private String imageFileName;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantListItemViewModel$Builder.plantScientificName` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID uuid;
+  103.       private String imageFileName;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantListItemViewModel$Builder.plantStatus` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID uuid;
+  103.       private String imageFileName;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:104: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PlantListItemViewModel$Builder.uuid` is not initialized in the constructor and is not declared `@Nullable`.
+  102.       private UUID uuid;
+  103.       private String imageFileName;
+  104. >     Builder() {
+  105.       }
+  106.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView.java:107: warning: ERADICATE_INCONSISTENT_SUBCLASS_RETURN_ANNOTATION
+  Method `TemperatureCardView$1.parseObject(...)` is annotated with `@Nullable` but overrides unannotated method `Format.parseObject(...)`.
+  105.   
+  106.               @Override @Nullable
+  107. >             public Object parseObject(String source, ParsePosition pos)
+  108.               {
+  109.                   return null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter.java:122: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `ImageView.setImageBitmap(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 122).
+  120.                   Glide.with(itemView).load(vm.getImageFileName()).into(plantProfileImage);
+  121.               else
+  122. >                 plantProfileImage.setImageBitmap(null);
+  123.           }
+  124.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:114: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphConfig$Builder.domainLowerBound` is not initialized in the constructor and is not declared `@Nullable`.
+  112.       private Double rangeStep;
+  113.       private Double domainStep;
+  114. >     Builder() {
+  115.       }
+  116.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:114: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphConfig$Builder.domainStep` is not initialized in the constructor and is not declared `@Nullable`.
+  112.       private Double rangeStep;
+  113.       private Double domainStep;
+  114. >     Builder() {
+  115.       }
+  116.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:114: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphConfig$Builder.domainUpperBound` is not initialized in the constructor and is not declared `@Nullable`.
+  112.       private Double rangeStep;
+  113.       private Double domainStep;
+  114. >     Builder() {
+  115.       }
+  116.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:114: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphConfig$Builder.rangeLowerBound` is not initialized in the constructor and is not declared `@Nullable`.
+  112.       private Double rangeStep;
+  113.       private Double domainStep;
+  114. >     Builder() {
+  115.       }
+  116.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:114: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphConfig$Builder.rangeStep` is not initialized in the constructor and is not declared `@Nullable`.
+  112.       private Double rangeStep;
+  113.       private Double domainStep;
+  114. >     Builder() {
+  115.       }
+  116.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:114: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphConfig$Builder.rangeUpperBound` is not initialized in the constructor and is not declared `@Nullable`.
+  112.       private Double rangeStep;
+  113.       private Double domainStep;
+  114. >     Builder() {
+  115.       }
+  116.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:116: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferencesViewModel$Builder.coldAlarmTime` is not initialized in the constructor and is not declared `@Nullable`.
+  114.       private String temperatureScale;
+  115.       private String coldAlarmTime;
+  116. >     Builder() {
+  117.       }
+  118.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:116: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferencesViewModel$Builder.fuzzSummary` is not initialized in the constructor and is not declared `@Nullable`.
+  114.       private String temperatureScale;
+  115.       private String coldAlarmTime;
+  116. >     Builder() {
+  117.       }
+  118.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:116: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferencesViewModel$Builder.fuzzViewModel` is not initialized in the constructor and is not declared `@Nullable`.
+  114.       private String temperatureScale;
+  115.       private String coldAlarmTime;
+  116. >     Builder() {
+  117.       }
+  118.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:116: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferencesViewModel$Builder.temperatureScale` is not initialized in the constructor and is not declared `@Nullable`.
+  114.       private String temperatureScale;
+  115.       private String coldAlarmTime;
+  116. >     Builder() {
+  117.       }
+  118.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:116: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferencesViewModel$Builder.thresholdSummary` is not initialized in the constructor and is not declared `@Nullable`.
+  114.       private String temperatureScale;
+  115.       private String coldAlarmTime;
+  116. >     Builder() {
+  117.       }
+  118.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:116: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferencesViewModel$Builder.thresholdViewModel` is not initialized in the constructor and is not declared `@Nullable`.
+  114.       private String temperatureScale;
+  115.       private String coldAlarmTime;
+  116. >     Builder() {
+  117.       }
+  118.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:120: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphCardViewModel$Builder.XFormatter` is not initialized in the constructor and is not declared `@Nullable`.
+  118.       private Function<Double, String> XFormatter;
+  119.       private Function<Double, String> YFormatter;
+  120. >     Builder() {
+  121.       }
+  122.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:120: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphCardViewModel$Builder.YFormatter` is not initialized in the constructor and is not declared `@Nullable`.
+  118.       private Function<Double, String> XFormatter;
+  119.       private Function<Double, String> YFormatter;
+  120. >     Builder() {
+  121.       }
+  122.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:120: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphCardViewModel$Builder.dataSeries` is not initialized in the constructor and is not declared `@Nullable`.
+  118.       private Function<Double, String> XFormatter;
+  119.       private Function<Double, String> YFormatter;
+  120. >     Builder() {
+  121.       }
+  122.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:120: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphCardViewModel$Builder.graphConfig` is not initialized in the constructor and is not declared `@Nullable`.
+  118.       private Function<Double, String> XFormatter;
+  119.       private Function<Double, String> YFormatter;
+  120. >     Builder() {
+  121.       }
+  122.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:120: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphCardViewModel$Builder.rangeLines` is not initialized in the constructor and is not declared `@Nullable`.
+  118.       private Function<Double, String> XFormatter;
+  119.       private Function<Double, String> YFormatter;
+  120. >     Builder() {
+  121.       }
+  122.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:120: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_GraphCardViewModel$Builder.title` is not initialized in the constructor and is not declared `@Nullable`.
+  118.       private Function<Double, String> XFormatter;
+  119.       private Function<Double, String> YFormatter;
+  120. >     Builder() {
+  121.       }
+  122.       @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity.java:154: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LocationManager.requestSingleUpdate(...)` needs a non-null value in parameter 3 but argument `null` can be null. (Origin: null constant at line 154).
+  152.                       if (location != null)
+  153.                           weatherLocationSubject.onNext(SimpleWeatherLocation.create(location.getLatitude(), location.getLongitude()));
+  154. >                     locationManager.requestSingleUpdate(LocationManager.GPS_PROVIDER, listener, null);
+  155.                   }
+  156.               else
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:124: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferenceModel$Builder.coldAlarmTime` is not initialized in the constructor and is not declared `@Nullable`.
+  122.       private String locationString;
+  123.       private SimpleWeatherLocation coords;
+  124. >     Builder() {
+  125.       }
+  126.       private Builder(PreferenceModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:124: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferenceModel$Builder.coords` is not initialized in the constructor and is not declared `@Nullable`.
+  122.       private String locationString;
+  123.       private SimpleWeatherLocation coords;
+  124. >     Builder() {
+  125.       }
+  126.       private Builder(PreferenceModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:124: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferenceModel$Builder.locationString` is not initialized in the constructor and is not declared `@Nullable`.
+  122.       private String locationString;
+  123.       private SimpleWeatherLocation coords;
+  124. >     Builder() {
+  125.       }
+  126.       private Builder(PreferenceModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:124: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferenceModel$Builder.temperatureFormat` is not initialized in the constructor and is not declared `@Nullable`.
+  122.       private String locationString;
+  123.       private SimpleWeatherLocation coords;
+  124. >     Builder() {
+  125.       }
+  126.       private Builder(PreferenceModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:124: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferenceModel$Builder.threshold` is not initialized in the constructor and is not declared `@Nullable`.
+  122.       private String locationString;
+  123.       private SimpleWeatherLocation coords;
+  124. >     Builder() {
+  125.       }
+  126.       private Builder(PreferenceModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:124: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AutoValue_PreferenceModel$Builder.weatherDataFuzz` is not initialized in the constructor and is not declared `@Nullable`.
+  122.       private String locationString;
+  123.       private SimpleWeatherLocation coords;
+  124. >     Builder() {
+  125.       }
+  126.       private Builder(PreferenceModel source) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView.java:140: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LineAndPointFormatter(...)` needs a non-null value in parameter 2 but argument `null` can be null. (Origin: null constant at line 140).
+  138.       private LineAndPointFormatter mapDataSeriesToLineAndPointFormatter(DataSeries dataSeries)
+  139.       {
+  140. >         final LineAndPointFormatter lineAndPointFormatter = new LineAndPointFormatter(dataSeries.getLineColor(), null, null, null);
+  141.           lineAndPointFormatter.setInterpolationParams(
+  142.               new CatmullRomInterpolator.Params(10, CatmullRomInterpolator.Type.Centripetal));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView.java:140: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LineAndPointFormatter(...)` needs a non-null value in parameter 3 but argument `null` can be null. (Origin: null constant at line 140).
+  138.       private LineAndPointFormatter mapDataSeriesToLineAndPointFormatter(DataSeries dataSeries)
+  139.       {
+  140. >         final LineAndPointFormatter lineAndPointFormatter = new LineAndPointFormatter(dataSeries.getLineColor(), null, null, null);
+  141.           lineAndPointFormatter.setInterpolationParams(
+  142.               new CatmullRomInterpolator.Params(10, CatmullRomInterpolator.Type.Centripetal));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView.java:140: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LineAndPointFormatter(...)` needs a non-null value in parameter 4 but argument `null` can be null. (Origin: null constant at line 140).
+  138.       private LineAndPointFormatter mapDataSeriesToLineAndPointFormatter(DataSeries dataSeries)
+  139.       {
+  140. >         final LineAndPointFormatter lineAndPointFormatter = new LineAndPointFormatter(dataSeries.getLineColor(), null, null, null);
+  141.           lineAndPointFormatter.setInterpolationParams(
+  142.               new CatmullRomInterpolator.Params(10, CatmullRomInterpolator.Type.Centripetal));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/job/ColdAlarm.java:170: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `NotificationCompat$Builder.setContentIntent(...)` needs a non-null value in parameter 1 but argument `resultPendingIntent` can be null. (Origin: call to getPendingIntent(...) at line 166).
+  168.                           PendingIntent.FLAG_UPDATE_CURRENT
+  169.                   );
+  170. >         mBuilder.setContentIntent(resultPendingIntent);
+  171.           NotificationManager mNotificationManager =
+  172.                   (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView.java:163: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LineAndPointFormatter(...)` needs a non-null value in parameter 2 but argument `null` can be null. (Origin: null constant at line 163).
+  161.           xypTemperature.addSeries(
+  162.               new SimpleXYSeries(xVals, yVals, getContext().getString(R.string.cold_threshold)),
+  163. >             new LineAndPointFormatter(graphLine.getLineColor(), null, null, null));
+  164.       }
+  165.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView.java:163: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LineAndPointFormatter(...)` needs a non-null value in parameter 3 but argument `null` can be null. (Origin: null constant at line 163).
+  161.           xypTemperature.addSeries(
+  162.               new SimpleXYSeries(xVals, yVals, getContext().getString(R.string.cold_threshold)),
+  163. >             new LineAndPointFormatter(graphLine.getLineColor(), null, null, null));
+  164.       }
+  165.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView.java:163: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LineAndPointFormatter(...)` needs a non-null value in parameter 4 but argument `null` can be null. (Origin: null constant at line 163).
+  161.           xypTemperature.addSeries(
+  162.               new SimpleXYSeries(xVals, yVals, getContext().getString(R.string.cold_threshold)),
+  163. >             new LineAndPointFormatter(graphLine.getLineColor(), null, null, null));
+  164.       }
+  165.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/plant/PlantRowDAO_Impl.java:150: warning: ERADICATE_RETURN_NOT_NULLABLE
+  Method `call()` may return null but it is not annotated with `@Nullable`. (Origin: null constant at line 177).
+  148.       return RxRoom.createFlowable(__db, new String[]{"plant"}, new Callable<PlantRow>() {
+  149.         @Override
+  150. >       public PlantRow call() throws Exception {
+  151.           final Cursor _cursor = __db.query(_statement);
+  152.           try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:156: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `AutoValue_GraphCardViewModel$Builder.XFormatter` can be null but is not declared `@Nullable`. (Origin: method parameter XFormatter).
+  154.       @Override
+  155.       public GraphCardViewModel.Builder XFormatter(@Nullable Function<Double, String> XFormatter) {
+  156. >       this.XFormatter = XFormatter;
+  157.         return this;
+  158.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:161: warning: ERADICATE_FIELD_NOT_NULLABLE
+  Field `AutoValue_GraphCardViewModel$Builder.YFormatter` can be null but is not declared `@Nullable`. (Origin: method parameter YFormatter).
+  159.       @Override
+  160.       public GraphCardViewModel.Builder YFormatter(@Nullable Function<Double, String> YFormatter) {
+  161. >       this.YFormatter = YFormatter;
+  162.         return this;
+  163.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity.java:238: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  Third parameter `data` of method `PlantDetailActivity.onActivityResult(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onActivityResult(...)`.
+  236.   
+  237.       @Override
+  238. >     protected void onActivityResult(int requestCode, int resultCode, Intent data)
+  239.       {
+  240.           if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK && !photoFileName.equals(""))
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/dagger/DaggerColdSnapInjector.java:257: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerColdSnapInjector$Builder.context` is not initialized in the constructor and is not declared `@Nullable`.
+  255.     }
+  256.   
+  257. >   private static final class Builder implements ColdSnapInjector.Builder {
+  258.       private Context context;
+  259.   
+
+Summary of the reports
+
+                       ERADICATE_FIELD_NOT_INITIALIZED: 73
+  ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION: 23
+                      ERADICATE_PARAMETER_NOT_NULLABLE: 23
+                          ERADICATE_FIELD_NOT_NULLABLE: 18
+                 ERADICATE_CONDITION_REDUNDANT_NONNULL: 8
+     ERADICATE_INCONSISTENT_SUBCLASS_RETURN_ANNOTATION: 2
+                         ERADICATE_RETURN_NOT_NULLABLE: 2
+                        ERADICATE_NULLABLE_DEREFERENCE: 1Found 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/test/java/com/yoxjames/coldsnap/model/TemperatureFormatterImplTest.java:35: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `TemperatureFormatterImplTest.csPreferences` is not initialized in the constructor and is not declared `@Nullable`.
+  33.   
+  34.   @RunWith(MockitoJUnitRunner.class)
+  35. > public class TemperatureFormatterImplTest
+  36.   {
+  37.       private @Mock CSPreferences csPreferences;
+
+Summary of the reports
+
+  ERADICATE_FIELD_NOT_INITIALIZED: 1Found 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/test/java/com/yoxjames/coldsnap/model/TemperatureFormatterImplTest.java:35: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `TemperatureFormatterImplTest.csPreferences` is not initialized in the constructor and is not declared `@Nullable`.
+  33.   
+  34.   @RunWith(MockitoJUnitRunner.class)
+  35. > public class TemperatureFormatterImplTest
+  36.   {
+  37.       private @Mock CSPreferences csPreferences;
+
+Summary of the reports
+
+  ERADICATE_FIELD_NOT_INITIALIZED: 1

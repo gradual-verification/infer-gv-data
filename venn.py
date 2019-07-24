@@ -29,6 +29,14 @@ repos = [
     'filesystem-generator',
     'butterknife',
     'picasso',
+    'RIBs',
+    'FloatingActionButtonSpeedDial',
+    'uLeak',
+    'QRContact',
+    'test-ribs',
+    'ColdSnap',
+    'OANDAFX',
+    'meal-planner',
 ]
 
 checkers = {

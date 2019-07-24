@@ -1,0 +1,405 @@
+Found 14 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:44: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `RelativeLayout(...)` needs a non-null value in parameter 2 but argument `attrs` can be null. (Origin: method parameter attrs).
+  42.   
+  43.       public SpeedDialOverlayLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+  44. >         super(context, attrs);
+  45.           init(context, attrs);
+  46.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:50: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `RelativeLayout(...)` needs a non-null value in parameter 2 but argument `attrs` can be null. (Origin: method parameter attrs).
+  48.       public SpeedDialOverlayLayout(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int
+  49.               defStyleAttr) {
+  50. >         super(context, attrs, defStyleAttr);
+  51.           init(context, attrs);
+  52.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:76: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LinearLayout(...)` needs a non-null value in parameter 2 but argument `attrs` can be null. (Origin: method parameter attrs).
+  74.   
+  75.       public FabWithLabelView(Context context, @Nullable AttributeSet attrs) {
+  76. >         super(context, attrs);
+  77.           init(context, attrs);
+  78.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:81: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LinearLayout(...)` needs a non-null value in parameter 2 but argument `attrs` can be null. (Origin: method parameter attrs).
+  79.   
+  80.       public FabWithLabelView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+  81. >         super(context, attrs, defStyleAttr);
+  82.           init(context, attrs);
+  83.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:99: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View.setOnClickListener(...)` needs a non-null value in parameter 1 but argument `clickListener` can be null. (Origin: method parameter clickListener).
+  97.       public void setOnClickListener(@Nullable OnClickListener clickListener) {
+  98.           mClickListener = clickListener;
+  99. >         super.setOnClickListener(hasClickableOverlay() ? clickListener : null);
+  100.       }
+  101.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:103: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Resources$Theme.obtainStyledAttributes(...)` needs a non-null value in parameter 1 but argument `attrs` can be null. (Origin: method parameter attrs).
+  101.   
+  102.       private void init(Context context, @Nullable AttributeSet attrs) {
+  103. >         TypedArray attr = context.getTheme().obtainStyledAttributes(attrs, R.styleable.SpeedDialOverlayLayout, 0, 0);
+  104.           int overlayColor = ResourcesCompat.getColor(getResources(), R.color.sd_overlay_color, context.getTheme());
+  105.           try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:126: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LinearLayout(...)` needs a non-null value in parameter 2 but argument `attrs` can be null. (Origin: method parameter attrs).
+  124.   
+  125.       public SpeedDialView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+  126. >         super(context, attrs, defStyleAttr);
+  127.           init(context, attrs);
+  128.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:237: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View.setOnClickListener(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 237).
+  235.               });
+  236.           } else {
+  237. >             getFab().setOnClickListener(null);
+  238.               getLabelBackground().setOnClickListener(null);
+  239.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:238: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View.setOnClickListener(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 238).
+  236.           } else {
+  237.               getFab().setOnClickListener(null);
+  238. >             getLabelBackground().setOnClickListener(null);
+  239.           }
+  240.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:261: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Context.obtainStyledAttributes(...)` needs a non-null value in parameter 1 but argument `attrs` can be null. (Origin: method parameter attrs).
+  259.           setClipToPadding(false);
+  260.   
+  261. >         TypedArray attr = context.obtainStyledAttributes(attrs,
+  262.                   R.styleable.FabWithLabelView, 0, 0);
+  263.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:269: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View.setOnClickListener(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 269).
+  267.       public void setOverlayLayout(@Nullable SpeedDialOverlayLayout overlayLayout) {
+  268.           if (mOverlayLayout != null) {
+  269. >             setOnClickListener(null);
+  270.           }
+  271.           mOverlayLayout = overlayLayout;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:336: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `TextUtils.isEmpty(...)` needs a non-null value in parameter 1 but argument `sequence` can be null. (Origin: method parameter sequence).
+  334.        */
+  335.       private void setLabel(@Nullable CharSequence sequence) {
+  336. >         if (!TextUtils.isEmpty(sequence)) {
+  337.               mLabelTextView.setText(sequence);
+  338.               setLabelEnabled(getOrientation() == HORIZONTAL);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:606: warning: ERADICATE_INCONSISTENT_SUBCLASS_RETURN_ANNOTATION
+  Method `SpeedDialView.onSaveInstanceState()` is annotated with `@Nullable` but overrides unannotated method `View.onSaveInstanceState()`.
+  604.       @Nullable
+  605.       @Override
+  606. >     protected Parcelable onSaveInstanceState() {
+  607.           Bundle bundle = new Bundle();
+  608.           mInstanceState.mSpeedDialActionItems = getActionItems();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:685: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Context.obtainStyledAttributes(...)` needs a non-null value in parameter 1 but argument `attrs` can be null. (Origin: method parameter attrs).
+  683.               setElevation(getResources().getDimension(R.dimen.sd_close_elevation));
+  684.           }
+  685. >         TypedArray styledAttrs = context.obtainStyledAttributes(attrs, R.styleable.SpeedDialView, 0, 0);
+  686.           try {
+  687.               setUseReverseAnimationOnClose(styledAttrs.getBoolean(R.styleable.SpeedDialView_sdUseReverseAnimationOnClose,
+
+Summary of the reports
+
+                   ERADICATE_PARAMETER_NOT_NULLABLE: 13
+  ERADICATE_INCONSISTENT_SUBCLASS_RETURN_ANNOTATION: 1Found 14 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:44: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `RelativeLayout(...)` needs a non-null value in parameter 2 but argument `attrs` can be null. (Origin: method parameter attrs).
+  42.   
+  43.       public SpeedDialOverlayLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+  44. >         super(context, attrs);
+  45.           init(context, attrs);
+  46.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:50: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `RelativeLayout(...)` needs a non-null value in parameter 2 but argument `attrs` can be null. (Origin: method parameter attrs).
+  48.       public SpeedDialOverlayLayout(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int
+  49.               defStyleAttr) {
+  50. >         super(context, attrs, defStyleAttr);
+  51.           init(context, attrs);
+  52.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:76: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LinearLayout(...)` needs a non-null value in parameter 2 but argument `attrs` can be null. (Origin: method parameter attrs).
+  74.   
+  75.       public FabWithLabelView(Context context, @Nullable AttributeSet attrs) {
+  76. >         super(context, attrs);
+  77.           init(context, attrs);
+  78.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:81: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LinearLayout(...)` needs a non-null value in parameter 2 but argument `attrs` can be null. (Origin: method parameter attrs).
+  79.   
+  80.       public FabWithLabelView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+  81. >         super(context, attrs, defStyleAttr);
+  82.           init(context, attrs);
+  83.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:99: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View.setOnClickListener(...)` needs a non-null value in parameter 1 but argument `clickListener` can be null. (Origin: method parameter clickListener).
+  97.       public void setOnClickListener(@Nullable OnClickListener clickListener) {
+  98.           mClickListener = clickListener;
+  99. >         super.setOnClickListener(hasClickableOverlay() ? clickListener : null);
+  100.       }
+  101.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:103: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Resources$Theme.obtainStyledAttributes(...)` needs a non-null value in parameter 1 but argument `attrs` can be null. (Origin: method parameter attrs).
+  101.   
+  102.       private void init(Context context, @Nullable AttributeSet attrs) {
+  103. >         TypedArray attr = context.getTheme().obtainStyledAttributes(attrs, R.styleable.SpeedDialOverlayLayout, 0, 0);
+  104.           int overlayColor = ResourcesCompat.getColor(getResources(), R.color.sd_overlay_color, context.getTheme());
+  105.           try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:126: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `LinearLayout(...)` needs a non-null value in parameter 2 but argument `attrs` can be null. (Origin: method parameter attrs).
+  124.   
+  125.       public SpeedDialView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+  126. >         super(context, attrs, defStyleAttr);
+  127.           init(context, attrs);
+  128.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:237: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View.setOnClickListener(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 237).
+  235.               });
+  236.           } else {
+  237. >             getFab().setOnClickListener(null);
+  238.               getLabelBackground().setOnClickListener(null);
+  239.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:238: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View.setOnClickListener(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 238).
+  236.           } else {
+  237.               getFab().setOnClickListener(null);
+  238. >             getLabelBackground().setOnClickListener(null);
+  239.           }
+  240.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:261: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Context.obtainStyledAttributes(...)` needs a non-null value in parameter 1 but argument `attrs` can be null. (Origin: method parameter attrs).
+  259.           setClipToPadding(false);
+  260.   
+  261. >         TypedArray attr = context.obtainStyledAttributes(attrs,
+  262.                   R.styleable.FabWithLabelView, 0, 0);
+  263.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:269: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `View.setOnClickListener(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 269).
+  267.       public void setOverlayLayout(@Nullable SpeedDialOverlayLayout overlayLayout) {
+  268.           if (mOverlayLayout != null) {
+  269. >             setOnClickListener(null);
+  270.           }
+  271.           mOverlayLayout = overlayLayout;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:336: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `TextUtils.isEmpty(...)` needs a non-null value in parameter 1 but argument `sequence` can be null. (Origin: method parameter sequence).
+  334.        */
+  335.       private void setLabel(@Nullable CharSequence sequence) {
+  336. >         if (!TextUtils.isEmpty(sequence)) {
+  337.               mLabelTextView.setText(sequence);
+  338.               setLabelEnabled(getOrientation() == HORIZONTAL);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:606: warning: ERADICATE_INCONSISTENT_SUBCLASS_RETURN_ANNOTATION
+  Method `SpeedDialView.onSaveInstanceState()` is annotated with `@Nullable` but overrides unannotated method `View.onSaveInstanceState()`.
+  604.       @Nullable
+  605.       @Override
+  606. >     protected Parcelable onSaveInstanceState() {
+  607.           Bundle bundle = new Bundle();
+  608.           mInstanceState.mSpeedDialActionItems = getActionItems();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:685: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Context.obtainStyledAttributes(...)` needs a non-null value in parameter 1 but argument `attrs` can be null. (Origin: method parameter attrs).
+  683.               setElevation(getResources().getDimension(R.dimen.sd_close_elevation));
+  684.           }
+  685. >         TypedArray styledAttrs = context.obtainStyledAttributes(attrs, R.styleable.SpeedDialView, 0, 0);
+  686.           try {
+  687.               setUseReverseAnimationOnClose(styledAttrs.getBoolean(R.styleable.SpeedDialView_sdUseReverseAnimationOnClose,
+
+Summary of the reports
+
+                   ERADICATE_PARAMETER_NOT_NULLABLE: 13
+  ERADICATE_INCONSISTENT_SUBCLASS_RETURN_ANNOTATION: 1Found 10 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/UseCasesActivity.java:32: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `UseCasesActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  30.       @Override
+  31.       protected void onCreate(Bundle savedInstanceState) {
+  32. >         super.onCreate(savedInstanceState);
+  33.           setContentView(R.layout.activity_use_cases);
+  34.           Toolbar toolbar = findViewById(R.id.toolbar);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/UseCasesActivity.java:32: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `UseCasesActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  30.       @Override
+  31.       protected void onCreate(Bundle savedInstanceState) {
+  32. >         super.onCreate(savedInstanceState);
+  33.           setContentView(R.layout.activity_use_cases);
+  34.           Toolbar toolbar = findViewById(R.id.toolbar);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/UseCasesActivity.java:32: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `UseCasesActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  30.       @Override
+  31.       protected void onCreate(Bundle savedInstanceState) {
+  32. >         super.onCreate(savedInstanceState);
+  33.           setContentView(R.layout.activity_use_cases);
+  34.           Toolbar toolbar = findViewById(R.id.toolbar);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/BaseUseCaseActivity.java:43: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `BaseUseCaseActivity.mCustomAdapter` is not initialized in the constructor and is not declared `@Nullable`.
+  41.   import com.leinardi.android.speeddial.sample.R;
+  42.   
+  43. > public abstract class BaseUseCaseActivity extends AppCompatActivity {
+  44.       private static final int DATASET_COUNT = 60;
+  45.       private String[] mDataset;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/BaseUseCaseActivity.java:43: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `BaseUseCaseActivity.mSnackbar` is not initialized in the constructor and is not declared `@Nullable`.
+  41.   import com.leinardi.android.speeddial.sample.R;
+  42.   
+  43. > public abstract class BaseUseCaseActivity extends AppCompatActivity {
+  44.       private static final int DATASET_COUNT = 60;
+  45.       private String[] mDataset;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/BaseUseCaseActivity.java:43: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `BaseUseCaseActivity.mToast` is not initialized in the constructor and is not declared `@Nullable`.
+  41.   import com.leinardi.android.speeddial.sample.R;
+  42.   
+  43. > public abstract class BaseUseCaseActivity extends AppCompatActivity {
+  44.       private static final int DATASET_COUNT = 60;
+  45.       private String[] mDataset;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/MainActivity.java:46: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `MainActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           initSpeedDial(savedInstanceState == null);
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/MainActivity.java:46: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `MainActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `BaseUseCaseActivity.onCreate(...)`.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           initSpeedDial(savedInstanceState == null);
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/MainActivity.java:46: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `MainActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           initSpeedDial(savedInstanceState == null);
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/MainActivity.java:46: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `MainActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           initSpeedDial(savedInstanceState == null);
+  48.   
+
+Summary of the reports
+
+  ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION: 7
+                       ERADICATE_FIELD_NOT_INITIALIZED: 3Found 10 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/UseCasesActivity.java:32: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `UseCasesActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  30.       @Override
+  31.       protected void onCreate(Bundle savedInstanceState) {
+  32. >         super.onCreate(savedInstanceState);
+  33.           setContentView(R.layout.activity_use_cases);
+  34.           Toolbar toolbar = findViewById(R.id.toolbar);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/UseCasesActivity.java:32: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `UseCasesActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  30.       @Override
+  31.       protected void onCreate(Bundle savedInstanceState) {
+  32. >         super.onCreate(savedInstanceState);
+  33.           setContentView(R.layout.activity_use_cases);
+  34.           Toolbar toolbar = findViewById(R.id.toolbar);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/UseCasesActivity.java:32: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `UseCasesActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  30.       @Override
+  31.       protected void onCreate(Bundle savedInstanceState) {
+  32. >         super.onCreate(savedInstanceState);
+  33.           setContentView(R.layout.activity_use_cases);
+  34.           Toolbar toolbar = findViewById(R.id.toolbar);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/BaseUseCaseActivity.java:43: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `BaseUseCaseActivity.mCustomAdapter` is not initialized in the constructor and is not declared `@Nullable`.
+  41.   import com.leinardi.android.speeddial.sample.R;
+  42.   
+  43. > public abstract class BaseUseCaseActivity extends AppCompatActivity {
+  44.       private static final int DATASET_COUNT = 60;
+  45.       private String[] mDataset;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/BaseUseCaseActivity.java:43: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `BaseUseCaseActivity.mSnackbar` is not initialized in the constructor and is not declared `@Nullable`.
+  41.   import com.leinardi.android.speeddial.sample.R;
+  42.   
+  43. > public abstract class BaseUseCaseActivity extends AppCompatActivity {
+  44.       private static final int DATASET_COUNT = 60;
+  45.       private String[] mDataset;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/BaseUseCaseActivity.java:43: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `BaseUseCaseActivity.mToast` is not initialized in the constructor and is not declared `@Nullable`.
+  41.   import com.leinardi.android.speeddial.sample.R;
+  42.   
+  43. > public abstract class BaseUseCaseActivity extends AppCompatActivity {
+  44.       private static final int DATASET_COUNT = 60;
+  45.       private String[] mDataset;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/MainActivity.java:46: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `MainActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           initSpeedDial(savedInstanceState == null);
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/MainActivity.java:46: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `MainActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `BaseUseCaseActivity.onCreate(...)`.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           initSpeedDial(savedInstanceState == null);
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/MainActivity.java:46: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `MainActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           initSpeedDial(savedInstanceState == null);
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/MainActivity.java:46: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `MainActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           initSpeedDial(savedInstanceState == null);
+  48.   
+
+Summary of the reports
+
+  ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION: 7
+                       ERADICATE_FIELD_NOT_INITIALIZED: 3

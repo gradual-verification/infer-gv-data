@@ -1,0 +1,1931 @@
+Found 120 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/TemperaturePickerDialog_ViewBinding.java:31: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `TemperaturePickerDialog.tpvPicker` should be annotated with `@Nullable`.
+  29.       this.target = null;
+  30.   
+  31. >     target.tpvPicker = null;
+  32.     }
+  33.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/TemperaturePickerDialog_ViewBinding.java:29: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  27.       TemperaturePickerDialog target = this.target;
+  28.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  29. >     this.target = null;
+  30.   
+  31.       target.tpvPicker = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/TimePickerDialogPreference_ViewBinding.java:31: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `TimePickerDialogPreference.timePicker` should be annotated with `@Nullable`.
+  29.       this.target = null;
+  30.   
+  31. >     target.timePicker = null;
+  32.     }
+  33.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/TimePickerDialogPreference_ViewBinding.java:29: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  27.       TimePickerDialogPreference target = this.target;
+  28.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  29. >     this.target = null;
+  30.   
+  31.       target.timePicker = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/core/BaseColdsnapActivity_ViewBinding.java:36: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `BaseColdsnapActivity.bnvNavigation` should be annotated with `@Nullable`.
+  34.       this.target = null;
+  35.   
+  36. >     target.bnvNavigation = null;
+  37.     }
+  38.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/core/BaseColdsnapActivity_ViewBinding.java:34: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  32.       BaseColdsnapActivity target = this.target;
+  33.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  34. >     this.target = null;
+  35.   
+  36.       target.bnvNavigation = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView_ViewBinding.java:36: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `TemperatureCardView.xypTemperature` should be annotated with `@Nullable`.
+  34.       this.target = null;
+  35.   
+  36. >     target.xypTemperature = null;
+  37.     }
+  38.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView_ViewBinding.java:34: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  32.       TemperatureCardView target = this.target;
+  33.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  34. >     this.target = null;
+  35.   
+  36.       target.xypTemperature = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/feed/ActivityFeed_ViewBinding.java:37: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `ActivityFeed.feedView` should be annotated with `@Nullable`.
+  35.       this.target = null;
+  36.   
+  37. >     target.feedView = null;
+  38.       target.toolbar = null;
+  39.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/feed/ActivityFeed_ViewBinding.java:38: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `ActivityFeed.toolbar` should be annotated with `@Nullable`.
+  36.   
+  37.       target.feedView = null;
+  38. >     target.toolbar = null;
+  39.   
+  40.       super.unbind();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/feed/ActivityFeed_ViewBinding.java:35: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  33.       ActivityFeed target = this.target;
+  34.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  35. >     this.target = null;
+  36.   
+  37.       target.feedView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity_ViewBinding.java:38: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantListActivity.plantListView` should be annotated with `@Nullable`.
+  36.   
+  37.       target.toolbar = null;
+  38. >     target.plantListView = null;
+  39.   
+  40.       super.unbind();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity_ViewBinding.java:37: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantListActivity.toolbar` should be annotated with `@Nullable`.
+  35.       this.target = null;
+  36.   
+  37. >     target.toolbar = null;
+  38.       target.plantListView = null;
+  39.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity_ViewBinding.java:35: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  33.       PlantListActivity target = this.target;
+  34.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  35. >     this.target = null;
+  36.   
+  37.       target.toolbar = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/DummyWebActivity_ViewBinding.java:39: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `DummyWebActivity.toolbar` should be annotated with `@Nullable`.
+  37.   
+  38.       target.view = null;
+  39. >     target.toolbar = null;
+  40.     }
+  41.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/DummyWebActivity_ViewBinding.java:38: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `DummyWebActivity.view` should be annotated with `@Nullable`.
+  36.       this.target = null;
+  37.   
+  38. >     target.view = null;
+  39.       target.toolbar = null;
+  40.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/DummyWebActivity_ViewBinding.java:36: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  34.       DummyWebActivity target = this.target;
+  35.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  36. >     this.target = null;
+  37.   
+  38.       target.view = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/PlantDetailView_ViewBinding.java:39: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantDetailView.etPlantName` should be annotated with `@Nullable`.
+  37.       this.target = null;
+  38.   
+  39. >     target.etPlantName = null;
+  40.       target.etScientificName = null;
+  41.       target.tpvColdTemperature = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/PlantDetailView_ViewBinding.java:40: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantDetailView.etScientificName` should be annotated with `@Nullable`.
+  38.   
+  39.       target.etPlantName = null;
+  40. >     target.etScientificName = null;
+  41.       target.tpvColdTemperature = null;
+  42.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/PlantDetailView_ViewBinding.java:41: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantDetailView.tpvColdTemperature` should be annotated with `@Nullable`.
+  39.       target.etPlantName = null;
+  40.       target.etScientificName = null;
+  41. >     target.tpvColdTemperature = null;
+  42.     }
+  43.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/PlantDetailView_ViewBinding.java:37: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  35.       PlantDetailView target = this.target;
+  36.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  37. >     this.target = null;
+  38.   
+  39.       target.etPlantName = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/PlantProfileImageView_ViewBinding.java:41: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantProfileImageView.ibDeletePhoto` should be annotated with `@Nullable`.
+  39.       target.ivPlantProfile = null;
+  40.       target.ibTakePhoto = null;
+  41. >     target.ibDeletePhoto = null;
+  42.     }
+  43.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/PlantProfileImageView_ViewBinding.java:40: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantProfileImageView.ibTakePhoto` should be annotated with `@Nullable`.
+  38.   
+  39.       target.ivPlantProfile = null;
+  40. >     target.ibTakePhoto = null;
+  41.       target.ibDeletePhoto = null;
+  42.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/PlantProfileImageView_ViewBinding.java:39: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantProfileImageView.ivPlantProfile` should be annotated with `@Nullable`.
+  37.       this.target = null;
+  38.   
+  39. >     target.ivPlantProfile = null;
+  40.       target.ibTakePhoto = null;
+  41.       target.ibDeletePhoto = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/PlantProfileImageView_ViewBinding.java:37: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  35.       PlantProfileImageView target = this.target;
+  36.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  37. >     this.target = null;
+  38.   
+  39.       target.ivPlantProfile = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/AboutActivity_ViewBinding.java:42: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `AboutActivity.coldSnap` should be annotated with `@Nullable`.
+  40.   
+  41.       target.toolbar = null;
+  42. >     target.coldSnap = null;
+  43.       target.licence = null;
+  44.       target.viewSource = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/AboutActivity_ViewBinding.java:45: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `AboutActivity.help` should be annotated with `@Nullable`.
+  43.       target.licence = null;
+  44.       target.viewSource = null;
+  45. >     target.help = null;
+  46.     }
+  47.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/AboutActivity_ViewBinding.java:43: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `AboutActivity.licence` should be annotated with `@Nullable`.
+  41.       target.toolbar = null;
+  42.       target.coldSnap = null;
+  43. >     target.licence = null;
+  44.       target.viewSource = null;
+  45.       target.help = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/AboutActivity_ViewBinding.java:41: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `AboutActivity.toolbar` should be annotated with `@Nullable`.
+  39.       this.target = null;
+  40.   
+  41. >     target.toolbar = null;
+  42.       target.coldSnap = null;
+  43.       target.licence = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/AboutActivity_ViewBinding.java:44: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `AboutActivity.viewSource` should be annotated with `@Nullable`.
+  42.       target.coldSnap = null;
+  43.       target.licence = null;
+  44. >     target.viewSource = null;
+  45.       target.help = null;
+  46.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/AboutActivity_ViewBinding.java:39: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  37.       AboutActivity target = this.target;
+  38.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  39. >     this.target = null;
+  40.   
+  41.       target.toolbar = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity_ViewBinding.java:42: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantDetailActivity.clPlantDetail` should be annotated with `@Nullable`.
+  40.   
+  41.       target.plantDetailView = null;
+  42. >     target.clPlantDetail = null;
+  43.       target.ppivPlantProfileImageView = null;
+  44.       target.toolbar = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity_ViewBinding.java:41: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantDetailActivity.plantDetailView` should be annotated with `@Nullable`.
+  39.       this.target = null;
+  40.   
+  41. >     target.plantDetailView = null;
+  42.       target.clPlantDetail = null;
+  43.       target.ppivPlantProfileImageView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity_ViewBinding.java:43: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantDetailActivity.ppivPlantProfileImageView` should be annotated with `@Nullable`.
+  41.       target.plantDetailView = null;
+  42.       target.clPlantDetail = null;
+  43. >     target.ppivPlantProfileImageView = null;
+  44.       target.toolbar = null;
+  45.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity_ViewBinding.java:44: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantDetailActivity.toolbar` should be annotated with `@Nullable`.
+  42.       target.clPlantDetail = null;
+  43.       target.ppivPlantProfileImageView = null;
+  44. >     target.toolbar = null;
+  45.   
+  46.       super.unbind();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity_ViewBinding.java:39: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  37.       PlantDetailActivity target = this.target;
+  38.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  39. >     this.target = null;
+  40.   
+  41.       target.plantDetailView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/service/AutoValue_ActionReply.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `error` should be annotated with `@Nullable`.
+  44.       if (o instanceof ActionReply) {
+  45.         ActionReply that = (ActionReply) o;
+  46. >       return (this.success == that.isSuccess())
+  47.              && ((this.error == null) ? (that.getError() == null) : this.error.equals(that.getError()));
+  48.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:50: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantListRecyclerViewAdapter$PlantItemHolder.plantName` should be annotated with `@Nullable`.
+  48.       this.target = null;
+  49.   
+  50. >     target.plantName = null;
+  51.       target.scientificName = null;
+  52.       target.status = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:54: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantListRecyclerViewAdapter$PlantItemHolder.plantProfileImage` should be annotated with `@Nullable`.
+  52.       target.status = null;
+  53.       target.progress = null;
+  54. >     target.plantProfileImage = null;
+  55.   
+  56.       view2131296423.setOnClickListener(null);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:53: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantListRecyclerViewAdapter$PlantItemHolder.progress` should be annotated with `@Nullable`.
+  51.       target.scientificName = null;
+  52.       target.status = null;
+  53. >     target.progress = null;
+  54.       target.plantProfileImage = null;
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:51: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantListRecyclerViewAdapter$PlantItemHolder.scientificName` should be annotated with `@Nullable`.
+  49.   
+  50.       target.plantName = null;
+  51. >     target.scientificName = null;
+  52.       target.status = null;
+  53.       target.progress = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:52: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantListRecyclerViewAdapter$PlantItemHolder.status` should be annotated with `@Nullable`.
+  50.       target.plantName = null;
+  51.       target.scientificName = null;
+  52. >     target.status = null;
+  53.       target.progress = null;
+  54.       target.plantProfileImage = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:48: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  46.       PlantListRecyclerViewAdapter.PlantItemHolder target = this.target;
+  47.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  48. >     this.target = null;
+  49.   
+  50.       target.plantName = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:57: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `view2131296423` should be annotated with `@Nullable`.
+  55.   
+  56.       view2131296423.setOnClickListener(null);
+  57. >     view2131296423 = null;
+  58.     }
+  59.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/service/AutoValue_ActionReply.java:58: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `error` should be annotated with `@Nullable`.
+  56.       h$ ^= success ? 1231 : 1237;
+  57.       h$ *= 1000003;
+  58. >     h$ ^= (error == null) ? 0 : error.hashCode();
+  59.       return h$;
+  60.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:88: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `XFormatter` should be annotated with `@Nullable`.
+  86.              && (this.graphConfig.equals(that.getGraphConfig()))
+  87.              && (this.rangeLines.equals(that.getRangeLines()))
+  88. >            && (this.dataSeries.equals(that.getDataSeries()))
+  89.              && ((this.XFormatter == null) ? (that.getXFormatter() == null) : this.XFormatter.equals(that.getXFormatter()))
+  90.              && ((this.YFormatter == null) ? (that.getYFormatter() == null) : this.YFormatter.equals(that.getYFormatter()));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:89: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `YFormatter` should be annotated with `@Nullable`.
+  87.              && (this.rangeLines.equals(that.getRangeLines()))
+  88.              && (this.dataSeries.equals(that.getDataSeries()))
+  89. >            && ((this.XFormatter == null) ? (that.getXFormatter() == null) : this.XFormatter.equals(that.getXFormatter()))
+  90.              && ((this.YFormatter == null) ? (that.getYFormatter() == null) : this.YFormatter.equals(that.getYFormatter()));
+  91.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_DataSeries.java:82: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `data` should be annotated with `@Nullable`.
+  80.       public DataSeries build() {
+  81.         String missing = "";
+  82. >       if (this.data == null) {
+  83.           missing += " data";
+  84.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_DataSeries.java:85: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `lineColor` should be annotated with `@Nullable`.
+  83.           missing += " data";
+  84.         }
+  85. >       if (this.lineColor == null) {
+  86.           missing += " lineColor";
+  87.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity.java:91: error: NULLSAFE_NULLABLE_DEREFERENCE
+  The return value of `AppCompatActivity.getSupportActionBar()` is annotated with `@Nullable` and is dereferenced without being checked for null at line 91.
+  89.           super.onCreate(savedInstanceState);
+  90.   
+  91. >         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+  92.   
+  93.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:107: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `XFormatter` should be annotated with `@Nullable`.
+  105.       h$ ^= dataSeries.hashCode();
+  106.       h$ *= 1000003;
+  107. >     h$ ^= (XFormatter == null) ? 0 : XFormatter.hashCode();
+  108.       h$ *= 1000003;
+  109.       h$ ^= (YFormatter == null) ? 0 : YFormatter.hashCode();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:109: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `YFormatter` should be annotated with `@Nullable`.
+  107.       h$ ^= (XFormatter == null) ? 0 : XFormatter.hashCode();
+  108.       h$ *= 1000003;
+  109. >     h$ ^= (YFormatter == null) ? 0 : YFormatter.hashCode();
+  110.       return h$;
+  111.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewUpdate.java:101: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `name` should be annotated with `@Nullable`.
+  99.       PlantDetailViewUpdate build() {
+  100.         String missing = "";
+  101. >       if (this.name == null) {
+  102.           missing += " name";
+  103.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewUpdate.java:104: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `scientificName` should be annotated with `@Nullable`.
+  102.           missing += " name";
+  103.         }
+  104. >       if (this.scientificName == null) {
+  105.           missing += " scientificName";
+  106.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewUpdate.java:107: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `tempVal` should be annotated with `@Nullable`.
+  105.           missing += " scientificName";
+  106.         }
+  107. >       if (this.tempVal == null) {
+  108.           missing += " tempVal";
+  109.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_WeatherLocation.java:111: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `lat` should be annotated with `@Nullable`.
+  109.           missing += " placeString";
+  110.         }
+  111. >       if (this.lat == null) {
+  112.           missing += " lat";
+  113.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_WeatherLocation.java:114: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `lon` should be annotated with `@Nullable`.
+  112.           missing += " lat";
+  113.         }
+  114. >       if (this.lon == null) {
+  115.           missing += " lon";
+  116.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_WeatherLocation.java:108: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `placeString` should be annotated with `@Nullable`.
+  106.       public WeatherLocation build() {
+  107.         String missing = "";
+  108. >       if (this.placeString == null) {
+  109.           missing += " placeString";
+  110.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantProfileImageViewModel.java:113: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `imageURL` should be annotated with `@Nullable`.
+  111.       public PlantProfileImageViewModel build() {
+  112.         String missing = "";
+  113. >       if (this.imageURL == null) {
+  114.           missing += " imageURL";
+  115.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantProfileImageViewModel.java:119: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `plantUUID` should be annotated with `@Nullable`.
+  117.           missing += " takeImageAvailable";
+  118.         }
+  119. >       if (this.plantUUID == null) {
+  120.           missing += " plantUUID";
+  121.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantProfileImageViewModel.java:116: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `takeImageAvailable` should be annotated with `@Nullable`.
+  114.           missing += " imageURL";
+  115.         }
+  116. >       if (this.takeImageAvailable == null) {
+  117.           missing += " takeImageAvailable";
+  118.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_WeatherData.java:120: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `forecastHours` should be annotated with `@Nullable`.
+  118.           missing += " syncInstant";
+  119.         }
+  120. >       if (this.forecastHours == null) {
+  121.           missing += " forecastHours";
+  122.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_WeatherData.java:117: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `syncInstant` should be annotated with `@Nullable`.
+  115.       public WeatherData build() {
+  116.         String missing = "";
+  117. >       if (this.syncInstant == null) {
+  118.           missing += " syncInstant";
+  119.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_WeatherData.java:123: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `weatherLocation` should be annotated with `@Nullable`.
+  121.           missing += " forecastHours";
+  122.         }
+  123. >       if (this.weatherLocation == null) {
+  124.           missing += " weatherLocation";
+  125.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:125: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `fileName` should be annotated with `@Nullable`.
+  123.       public PlantImageSaveRequest build() {
+  124.         String missing = "";
+  125. >       if (this.fileName == null) {
+  126.           missing += " fileName";
+  127.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:131: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `photoTime` should be annotated with `@Nullable`.
+  129.           missing += " plantUUID";
+  130.         }
+  131. >       if (this.photoTime == null) {
+  132.           missing += " photoTime";
+  133.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:128: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `plantUUID` should be annotated with `@Nullable`.
+  126.           missing += " fileName";
+  127.         }
+  128. >       if (this.plantUUID == null) {
+  129.           missing += " plantUUID";
+  130.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:134: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `profilePicture` should be annotated with `@Nullable`.
+  132.           missing += " photoTime";
+  133.         }
+  134. >       if (this.profilePicture == null) {
+  135.           missing += " profilePicture";
+  136.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_Plant.java:133: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `minimumTolerance` should be annotated with `@Nullable`.
+  131.           missing += " scientificName";
+  132.         }
+  133. >       if (this.minimumTolerance == null) {
+  134.           missing += " minimumTolerance";
+  135.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_Plant.java:127: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `name` should be annotated with `@Nullable`.
+  125.       public Plant build() {
+  126.         String missing = "";
+  127. >       if (this.name == null) {
+  128.           missing += " name";
+  129.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_Plant.java:130: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `scientificName` should be annotated with `@Nullable`.
+  128.           missing += " name";
+  129.         }
+  130. >       if (this.scientificName == null) {
+  131.           missing += " scientificName";
+  132.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_Plant.java:136: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `uuid` should be annotated with `@Nullable`.
+  134.           missing += " minimumTolerance";
+  135.         }
+  136. >       if (this.uuid == null) {
+  137.           missing += " uuid";
+  138.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:136: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `format` should be annotated with `@Nullable`.
+  134.           missing += " maxValue";
+  135.         }
+  136. >       if (this.format == null) {
+  137.           missing += " format";
+  138.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:133: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `maxValue` should be annotated with `@Nullable`.
+  131.           missing += " minValue";
+  132.         }
+  133. >       if (this.maxValue == null) {
+  134.           missing += " maxValue";
+  135.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:130: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `minValue` should be annotated with `@Nullable`.
+  128.           missing += " value";
+  129.         }
+  130. >       if (this.minValue == null) {
+  131.           missing += " minValue";
+  132.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:127: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `value` should be annotated with `@Nullable`.
+  125.       public TemperaturePickerViewModel build() {
+  126.         String missing = "";
+  127. >       if (this.value == null) {
+  128.           missing += " value";
+  129.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:128: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `hour` should be annotated with `@Nullable`.
+  126.       public ForecastHour build() {
+  127.         String missing = "";
+  128. >       if (this.hour == null) {
+  129.           missing += " hour";
+  130.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:131: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `temperature` should be annotated with `@Nullable`.
+  129.           missing += " hour";
+  130.         }
+  131. >       if (this.temperature == null) {
+  132.           missing += " temperature";
+  133.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:137: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `uuid` should be annotated with `@Nullable`.
+  135.           missing += " windspeed";
+  136.         }
+  137. >       if (this.uuid == null) {
+  138.           missing += " uuid";
+  139.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:134: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `windspeed` should be annotated with `@Nullable`.
+  132.           missing += " temperature";
+  133.         }
+  134. >       if (this.windspeed == null) {
+  135.           missing += " windspeed";
+  136.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:128: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `name` should be annotated with `@Nullable`.
+  126.       public PlantDetailViewModel build() {
+  127.         String missing = "";
+  128. >       if (this.name == null) {
+  129.           missing += " name";
+  130.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:137: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `plantProfileImageViewModel` should be annotated with `@Nullable`.
+  135.           missing += " temperaturePickerViewModel";
+  136.         }
+  137. >       if (this.plantProfileImageViewModel == null) {
+  138.           missing += " plantProfileImageViewModel";
+  139.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:131: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `scientificName` should be annotated with `@Nullable`.
+  129.           missing += " name";
+  130.         }
+  131. >       if (this.scientificName == null) {
+  132.           missing += " scientificName";
+  133.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:134: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `temperaturePickerViewModel` should be annotated with `@Nullable`.
+  132.           missing += " scientificName";
+  133.         }
+  134. >       if (this.temperaturePickerViewModel == null) {
+  135.           missing += " temperaturePickerViewModel";
+  136.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:158: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `imageFileName` should be annotated with `@Nullable`.
+  156.           missing += " uuid";
+  157.         }
+  158. >       if (this.imageFileName == null) {
+  159.           missing += " imageFileName";
+  160.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:146: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `plantName` should be annotated with `@Nullable`.
+  144.       public PlantListItemViewModel build() {
+  145.         String missing = "";
+  146. >       if (this.plantName == null) {
+  147.           missing += " plantName";
+  148.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:149: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `plantScientificName` should be annotated with `@Nullable`.
+  147.           missing += " plantName";
+  148.         }
+  149. >       if (this.plantScientificName == null) {
+  150.           missing += " plantScientificName";
+  151.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:152: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `plantStatus` should be annotated with `@Nullable`.
+  150.           missing += " plantScientificName";
+  151.         }
+  152. >       if (this.plantStatus == null) {
+  153.           missing += " plantStatus";
+  154.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:155: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `uuid` should be annotated with `@Nullable`.
+  153.           missing += " plantStatus";
+  154.         }
+  155. >       if (this.uuid == null) {
+  156.           missing += " uuid";
+  157.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:155: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `fileName` should be annotated with `@Nullable`.
+  153.           missing += " imageDate";
+  154.         }
+  155. >       if (this.fileName == null) {
+  156.           missing += " fileName";
+  157.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:152: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `imageDate` should be annotated with `@Nullable`.
+  150.           missing += " title";
+  151.         }
+  152. >       if (this.imageDate == null) {
+  153.           missing += " imageDate";
+  154.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:158: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `imageUUID` should be annotated with `@Nullable`.
+  156.           missing += " fileName";
+  157.         }
+  158. >       if (this.imageUUID == null) {
+  159.           missing += " imageUUID";
+  160.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:161: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `plantUUID` should be annotated with `@Nullable`.
+  159.           missing += " imageUUID";
+  160.         }
+  161. >       if (this.plantUUID == null) {
+  162.           missing += " plantUUID";
+  163.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:149: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `title` should be annotated with `@Nullable`.
+  147.       public PlantImage build() {
+  148.         String missing = "";
+  149. >       if (this.title == null) {
+  150.           missing += " title";
+  151.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:155: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `domainLowerBound` should be annotated with `@Nullable`.
+  153.           missing += " rangeUpperBound";
+  154.         }
+  155. >       if (this.domainLowerBound == null) {
+  156.           missing += " domainLowerBound";
+  157.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:164: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `domainStep` should be annotated with `@Nullable`.
+  162.           missing += " rangeStep";
+  163.         }
+  164. >       if (this.domainStep == null) {
+  165.           missing += " domainStep";
+  166.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:158: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `domainUpperBound` should be annotated with `@Nullable`.
+  156.           missing += " domainLowerBound";
+  157.         }
+  158. >       if (this.domainUpperBound == null) {
+  159.           missing += " domainUpperBound";
+  160.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:149: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `rangeLowerBound` should be annotated with `@Nullable`.
+  147.       public GraphConfig build() {
+  148.         String missing = "";
+  149. >       if (this.rangeLowerBound == null) {
+  150.           missing += " rangeLowerBound";
+  151.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:161: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `rangeStep` should be annotated with `@Nullable`.
+  159.           missing += " domainUpperBound";
+  160.         }
+  161. >       if (this.rangeStep == null) {
+  162.           missing += " rangeStep";
+  163.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:152: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `rangeUpperBound` should be annotated with `@Nullable`.
+  150.           missing += " rangeLowerBound";
+  151.         }
+  152. >       if (this.rangeUpperBound == null) {
+  153.           missing += " rangeUpperBound";
+  154.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/ColdSnapDatabase_Impl.java:168: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `_plantRowDAO` should be annotated with `@Nullable`.
+  166.       } else {
+  167.         synchronized(this) {
+  168. >         if(_plantRowDAO == null) {
+  169.             _plantRowDAO = new PlantRowDAO_Impl(this);
+  170.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:176: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `dataSeries` should be annotated with `@Nullable`.
+  174.           missing += " rangeLines";
+  175.         }
+  176. >       if (this.dataSeries == null) {
+  177.           missing += " dataSeries";
+  178.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:170: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `graphConfig` should be annotated with `@Nullable`.
+  168.           missing += " title";
+  169.         }
+  170. >       if (this.graphConfig == null) {
+  171.           missing += " graphConfig";
+  172.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:173: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `rangeLines` should be annotated with `@Nullable`.
+  171.           missing += " graphConfig";
+  172.         }
+  173. >       if (this.rangeLines == null) {
+  174.           missing += " rangeLines";
+  175.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:167: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `title` should be annotated with `@Nullable`.
+  165.       public GraphCardViewModel build() {
+  166.         String missing = "";
+  167. >       if (this.title == null) {
+  168.           missing += " title";
+  169.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:184: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `coldAlarmTime` should be annotated with `@Nullable`.
+  182.           missing += " temperatureScale";
+  183.         }
+  184. >       if (this.coldAlarmTime == null) {
+  185.           missing += " coldAlarmTime";
+  186.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:178: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `fuzzSummary` should be annotated with `@Nullable`.
+  176.           missing += " thresholdSummary";
+  177.         }
+  178. >       if (this.fuzzSummary == null) {
+  179.           missing += " fuzzSummary";
+  180.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:172: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `fuzzViewModel` should be annotated with `@Nullable`.
+  170.           missing += " thresholdViewModel";
+  171.         }
+  172. >       if (this.fuzzViewModel == null) {
+  173.           missing += " fuzzViewModel";
+  174.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:181: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `temperatureScale` should be annotated with `@Nullable`.
+  179.           missing += " fuzzSummary";
+  180.         }
+  181. >       if (this.temperatureScale == null) {
+  182.           missing += " temperatureScale";
+  183.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:175: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `thresholdSummary` should be annotated with `@Nullable`.
+  173.           missing += " fuzzViewModel";
+  174.         }
+  175. >       if (this.thresholdSummary == null) {
+  176.           missing += " thresholdSummary";
+  177.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:169: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `thresholdViewModel` should be annotated with `@Nullable`.
+  167.       public PreferencesViewModel build() {
+  168.         String missing = "";
+  169. >       if (this.thresholdViewModel == null) {
+  170.           missing += " thresholdViewModel";
+  171.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:188: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `coldAlarmTime` should be annotated with `@Nullable`.
+  186.           missing += " weatherDataFuzz";
+  187.         }
+  188. >       if (this.coldAlarmTime == null) {
+  189.           missing += " coldAlarmTime";
+  190.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:194: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `coords` should be annotated with `@Nullable`.
+  192.           missing += " locationString";
+  193.         }
+  194. >       if (this.coords == null) {
+  195.           missing += " coords";
+  196.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:191: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `locationString` should be annotated with `@Nullable`.
+  189.           missing += " coldAlarmTime";
+  190.         }
+  191. >       if (this.locationString == null) {
+  192.           missing += " locationString";
+  193.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:182: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `temperatureFormat` should be annotated with `@Nullable`.
+  180.           missing += " threshold";
+  181.         }
+  182. >       if (this.temperatureFormat == null) {
+  183.           missing += " temperatureFormat";
+  184.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:179: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `threshold` should be annotated with `@Nullable`.
+  177.       public PreferenceModel build() {
+  178.         String missing = "";
+  179. >       if (this.threshold == null) {
+  180.           missing += " threshold";
+  181.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:185: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `weatherDataFuzz` should be annotated with `@Nullable`.
+  183.           missing += " temperatureFormat";
+  184.         }
+  185. >       if (this.weatherDataFuzz == null) {
+  186.           missing += " weatherDataFuzz";
+  187.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/ColdSnapDatabase_Impl.java:182: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `_plantImageRowDAO` should be annotated with `@Nullable`.
+  180.       } else {
+  181.         synchronized(this) {
+  182. >         if(_plantImageRowDAO == null) {
+  183.             _plantImageRowDAO = new PlantImageRowDAO_Impl(this);
+  184.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/db/ColdSnapDatabase_Impl.java:196: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `_forecastHourRowDAO` should be annotated with `@Nullable`.
+  194.       } else {
+  195.         synchronized(this) {
+  196. >         if(_forecastHourRowDAO == null) {
+  197.             _forecastHourRowDAO = new ForecastHourRowDAO_Impl(this);
+  198.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/debug/com/yoxjames/coldsnap/dagger/DaggerColdSnapInjector.java:262: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `context` should be annotated with `@Nullable`.
+  260.       @Override
+  261.       public ColdSnapInjector build() {
+  262. >       if (context == null) {
+  263.           throw new IllegalStateException(Context.class.getCanonicalName() + " must be set");
+  264.         }
+
+Summary of the reports
+
+    NULLSAFE_FIELD_NOT_NULLABLE: 119
+  NULLSAFE_NULLABLE_DEREFERENCE: 1Found 120 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/TemperaturePickerDialog_ViewBinding.java:31: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `TemperaturePickerDialog.tpvPicker` should be annotated with `@Nullable`.
+  29.       this.target = null;
+  30.   
+  31. >     target.tpvPicker = null;
+  32.     }
+  33.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/TemperaturePickerDialog_ViewBinding.java:29: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  27.       TemperaturePickerDialog target = this.target;
+  28.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  29. >     this.target = null;
+  30.   
+  31.       target.tpvPicker = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/TimePickerDialogPreference_ViewBinding.java:31: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `TimePickerDialogPreference.timePicker` should be annotated with `@Nullable`.
+  29.       this.target = null;
+  30.   
+  31. >     target.timePicker = null;
+  32.     }
+  33.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/TimePickerDialogPreference_ViewBinding.java:29: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  27.       TimePickerDialogPreference target = this.target;
+  28.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  29. >     this.target = null;
+  30.   
+  31.       target.timePicker = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/core/BaseColdsnapActivity_ViewBinding.java:36: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `BaseColdsnapActivity.bnvNavigation` should be annotated with `@Nullable`.
+  34.       this.target = null;
+  35.   
+  36. >     target.bnvNavigation = null;
+  37.     }
+  38.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/core/BaseColdsnapActivity_ViewBinding.java:34: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  32.       BaseColdsnapActivity target = this.target;
+  33.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  34. >     this.target = null;
+  35.   
+  36.       target.bnvNavigation = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView_ViewBinding.java:36: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `TemperatureCardView.xypTemperature` should be annotated with `@Nullable`.
+  34.       this.target = null;
+  35.   
+  36. >     target.xypTemperature = null;
+  37.     }
+  38.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/temperature/TemperatureCardView_ViewBinding.java:34: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  32.       TemperatureCardView target = this.target;
+  33.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  34. >     this.target = null;
+  35.   
+  36.       target.xypTemperature = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/feed/ActivityFeed_ViewBinding.java:37: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `ActivityFeed.feedView` should be annotated with `@Nullable`.
+  35.       this.target = null;
+  36.   
+  37. >     target.feedView = null;
+  38.       target.toolbar = null;
+  39.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/feed/ActivityFeed_ViewBinding.java:38: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `ActivityFeed.toolbar` should be annotated with `@Nullable`.
+  36.   
+  37.       target.feedView = null;
+  38. >     target.toolbar = null;
+  39.   
+  40.       super.unbind();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/feed/ActivityFeed_ViewBinding.java:35: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  33.       ActivityFeed target = this.target;
+  34.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  35. >     this.target = null;
+  36.   
+  37.       target.feedView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity_ViewBinding.java:38: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantListActivity.plantListView` should be annotated with `@Nullable`.
+  36.   
+  37.       target.toolbar = null;
+  38. >     target.plantListView = null;
+  39.   
+  40.       super.unbind();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity_ViewBinding.java:37: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantListActivity.toolbar` should be annotated with `@Nullable`.
+  35.       this.target = null;
+  36.   
+  37. >     target.toolbar = null;
+  38.       target.plantListView = null;
+  39.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/PlantListActivity_ViewBinding.java:35: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  33.       PlantListActivity target = this.target;
+  34.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  35. >     this.target = null;
+  36.   
+  37.       target.toolbar = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/DummyWebActivity_ViewBinding.java:39: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `DummyWebActivity.toolbar` should be annotated with `@Nullable`.
+  37.   
+  38.       target.view = null;
+  39. >     target.toolbar = null;
+  40.     }
+  41.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/DummyWebActivity_ViewBinding.java:38: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `DummyWebActivity.view` should be annotated with `@Nullable`.
+  36.       this.target = null;
+  37.   
+  38. >     target.view = null;
+  39.       target.toolbar = null;
+  40.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/DummyWebActivity_ViewBinding.java:36: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  34.       DummyWebActivity target = this.target;
+  35.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  36. >     this.target = null;
+  37.   
+  38.       target.view = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/PlantDetailView_ViewBinding.java:39: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantDetailView.etPlantName` should be annotated with `@Nullable`.
+  37.       this.target = null;
+  38.   
+  39. >     target.etPlantName = null;
+  40.       target.etScientificName = null;
+  41.       target.tpvColdTemperature = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/PlantDetailView_ViewBinding.java:40: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantDetailView.etScientificName` should be annotated with `@Nullable`.
+  38.   
+  39.       target.etPlantName = null;
+  40. >     target.etScientificName = null;
+  41.       target.tpvColdTemperature = null;
+  42.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/PlantDetailView_ViewBinding.java:41: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantDetailView.tpvColdTemperature` should be annotated with `@Nullable`.
+  39.       target.etPlantName = null;
+  40.       target.etScientificName = null;
+  41. >     target.tpvColdTemperature = null;
+  42.     }
+  43.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/PlantDetailView_ViewBinding.java:37: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  35.       PlantDetailView target = this.target;
+  36.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  37. >     this.target = null;
+  38.   
+  39.       target.etPlantName = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/PlantProfileImageView_ViewBinding.java:41: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantProfileImageView.ibDeletePhoto` should be annotated with `@Nullable`.
+  39.       target.ivPlantProfile = null;
+  40.       target.ibTakePhoto = null;
+  41. >     target.ibDeletePhoto = null;
+  42.     }
+  43.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/PlantProfileImageView_ViewBinding.java:40: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantProfileImageView.ibTakePhoto` should be annotated with `@Nullable`.
+  38.   
+  39.       target.ivPlantProfile = null;
+  40. >     target.ibTakePhoto = null;
+  41.       target.ibDeletePhoto = null;
+  42.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/PlantProfileImageView_ViewBinding.java:39: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantProfileImageView.ivPlantProfile` should be annotated with `@Nullable`.
+  37.       this.target = null;
+  38.   
+  39. >     target.ivPlantProfile = null;
+  40.       target.ibTakePhoto = null;
+  41.       target.ibDeletePhoto = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/PlantProfileImageView_ViewBinding.java:37: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  35.       PlantProfileImageView target = this.target;
+  36.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  37. >     this.target = null;
+  38.   
+  39.       target.ivPlantProfile = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/AboutActivity_ViewBinding.java:42: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `AboutActivity.coldSnap` should be annotated with `@Nullable`.
+  40.   
+  41.       target.toolbar = null;
+  42. >     target.coldSnap = null;
+  43.       target.licence = null;
+  44.       target.viewSource = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/AboutActivity_ViewBinding.java:45: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `AboutActivity.help` should be annotated with `@Nullable`.
+  43.       target.licence = null;
+  44.       target.viewSource = null;
+  45. >     target.help = null;
+  46.     }
+  47.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/AboutActivity_ViewBinding.java:43: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `AboutActivity.licence` should be annotated with `@Nullable`.
+  41.       target.toolbar = null;
+  42.       target.coldSnap = null;
+  43. >     target.licence = null;
+  44.       target.viewSource = null;
+  45.       target.help = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/AboutActivity_ViewBinding.java:41: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `AboutActivity.toolbar` should be annotated with `@Nullable`.
+  39.       this.target = null;
+  40.   
+  41. >     target.toolbar = null;
+  42.       target.coldSnap = null;
+  43.       target.licence = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/AboutActivity_ViewBinding.java:44: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `AboutActivity.viewSource` should be annotated with `@Nullable`.
+  42.       target.coldSnap = null;
+  43.       target.licence = null;
+  44. >     target.viewSource = null;
+  45.       target.help = null;
+  46.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/AboutActivity_ViewBinding.java:39: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  37.       AboutActivity target = this.target;
+  38.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  39. >     this.target = null;
+  40.   
+  41.       target.toolbar = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity_ViewBinding.java:42: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantDetailActivity.clPlantDetail` should be annotated with `@Nullable`.
+  40.   
+  41.       target.plantDetailView = null;
+  42. >     target.clPlantDetail = null;
+  43.       target.ppivPlantProfileImageView = null;
+  44.       target.toolbar = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity_ViewBinding.java:41: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantDetailActivity.plantDetailView` should be annotated with `@Nullable`.
+  39.       this.target = null;
+  40.   
+  41. >     target.plantDetailView = null;
+  42.       target.clPlantDetail = null;
+  43.       target.ppivPlantProfileImageView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity_ViewBinding.java:43: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantDetailActivity.ppivPlantProfileImageView` should be annotated with `@Nullable`.
+  41.       target.plantDetailView = null;
+  42.       target.clPlantDetail = null;
+  43. >     target.ppivPlantProfileImageView = null;
+  44.       target.toolbar = null;
+  45.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity_ViewBinding.java:44: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantDetailActivity.toolbar` should be annotated with `@Nullable`.
+  42.       target.clPlantDetail = null;
+  43.       target.ppivPlantProfileImageView = null;
+  44. >     target.toolbar = null;
+  45.   
+  46.       super.unbind();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity_ViewBinding.java:39: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  37.       PlantDetailActivity target = this.target;
+  38.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  39. >     this.target = null;
+  40.   
+  41.       target.plantDetailView = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/service/AutoValue_ActionReply.java:46: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `error` should be annotated with `@Nullable`.
+  44.       if (o instanceof ActionReply) {
+  45.         ActionReply that = (ActionReply) o;
+  46. >       return (this.success == that.isSuccess())
+  47.              && ((this.error == null) ? (that.getError() == null) : this.error.equals(that.getError()));
+  48.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:50: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantListRecyclerViewAdapter$PlantItemHolder.plantName` should be annotated with `@Nullable`.
+  48.       this.target = null;
+  49.   
+  50. >     target.plantName = null;
+  51.       target.scientificName = null;
+  52.       target.status = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:54: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantListRecyclerViewAdapter$PlantItemHolder.plantProfileImage` should be annotated with `@Nullable`.
+  52.       target.status = null;
+  53.       target.progress = null;
+  54. >     target.plantProfileImage = null;
+  55.   
+  56.       view2131296423.setOnClickListener(null);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:53: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantListRecyclerViewAdapter$PlantItemHolder.progress` should be annotated with `@Nullable`.
+  51.       target.scientificName = null;
+  52.       target.status = null;
+  53. >     target.progress = null;
+  54.       target.plantProfileImage = null;
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:51: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantListRecyclerViewAdapter$PlantItemHolder.scientificName` should be annotated with `@Nullable`.
+  49.   
+  50.       target.plantName = null;
+  51. >     target.scientificName = null;
+  52.       target.status = null;
+  53.       target.progress = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:52: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `PlantListRecyclerViewAdapter$PlantItemHolder.status` should be annotated with `@Nullable`.
+  50.       target.plantName = null;
+  51.       target.scientificName = null;
+  52. >     target.status = null;
+  53.       target.progress = null;
+  54.       target.plantProfileImage = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:48: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `target` should be annotated with `@Nullable`.
+  46.       PlantListRecyclerViewAdapter.PlantItemHolder target = this.target;
+  47.       if (target == null) throw new IllegalStateException("Bindings already cleared.");
+  48. >     this.target = null;
+  49.   
+  50.       target.plantName = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/PlantListRecyclerViewAdapter$PlantItemHolder_ViewBinding.java:57: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `view2131296423` should be annotated with `@Nullable`.
+  55.   
+  56.       view2131296423.setOnClickListener(null);
+  57. >     view2131296423 = null;
+  58.     }
+  59.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/service/AutoValue_ActionReply.java:58: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `error` should be annotated with `@Nullable`.
+  56.       h$ ^= success ? 1231 : 1237;
+  57.       h$ *= 1000003;
+  58. >     h$ ^= (error == null) ? 0 : error.hashCode();
+  59.       return h$;
+  60.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:88: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `XFormatter` should be annotated with `@Nullable`.
+  86.              && (this.graphConfig.equals(that.getGraphConfig()))
+  87.              && (this.rangeLines.equals(that.getRangeLines()))
+  88. >            && (this.dataSeries.equals(that.getDataSeries()))
+  89.              && ((this.XFormatter == null) ? (that.getXFormatter() == null) : this.XFormatter.equals(that.getXFormatter()))
+  90.              && ((this.YFormatter == null) ? (that.getYFormatter() == null) : this.YFormatter.equals(that.getYFormatter()));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:89: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `YFormatter` should be annotated with `@Nullable`.
+  87.              && (this.rangeLines.equals(that.getRangeLines()))
+  88.              && (this.dataSeries.equals(that.getDataSeries()))
+  89. >            && ((this.XFormatter == null) ? (that.getXFormatter() == null) : this.XFormatter.equals(that.getXFormatter()))
+  90.              && ((this.YFormatter == null) ? (that.getYFormatter() == null) : this.YFormatter.equals(that.getYFormatter()));
+  91.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_DataSeries.java:82: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `data` should be annotated with `@Nullable`.
+  80.       public DataSeries build() {
+  81.         String missing = "";
+  82. >       if (this.data == null) {
+  83.           missing += " data";
+  84.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_DataSeries.java:85: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `lineColor` should be annotated with `@Nullable`.
+  83.           missing += " data";
+  84.         }
+  85. >       if (this.lineColor == null) {
+  86.           missing += " lineColor";
+  87.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/src/main/java/com/yoxjames/coldsnap/ui/detail/PlantDetailActivity.java:91: error: NULLSAFE_NULLABLE_DEREFERENCE
+  The return value of `AppCompatActivity.getSupportActionBar()` is annotated with `@Nullable` and is dereferenced without being checked for null at line 91.
+  89.           super.onCreate(savedInstanceState);
+  90.   
+  91. >         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+  92.   
+  93.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:107: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `XFormatter` should be annotated with `@Nullable`.
+  105.       h$ ^= dataSeries.hashCode();
+  106.       h$ *= 1000003;
+  107. >     h$ ^= (XFormatter == null) ? 0 : XFormatter.hashCode();
+  108.       h$ *= 1000003;
+  109.       h$ ^= (YFormatter == null) ? 0 : YFormatter.hashCode();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:109: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `YFormatter` should be annotated with `@Nullable`.
+  107.       h$ ^= (XFormatter == null) ? 0 : XFormatter.hashCode();
+  108.       h$ *= 1000003;
+  109. >     h$ ^= (YFormatter == null) ? 0 : YFormatter.hashCode();
+  110.       return h$;
+  111.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewUpdate.java:101: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `name` should be annotated with `@Nullable`.
+  99.       PlantDetailViewUpdate build() {
+  100.         String missing = "";
+  101. >       if (this.name == null) {
+  102.           missing += " name";
+  103.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewUpdate.java:104: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `scientificName` should be annotated with `@Nullable`.
+  102.           missing += " name";
+  103.         }
+  104. >       if (this.scientificName == null) {
+  105.           missing += " scientificName";
+  106.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewUpdate.java:107: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `tempVal` should be annotated with `@Nullable`.
+  105.           missing += " scientificName";
+  106.         }
+  107. >       if (this.tempVal == null) {
+  108.           missing += " tempVal";
+  109.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_WeatherLocation.java:111: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `lat` should be annotated with `@Nullable`.
+  109.           missing += " placeString";
+  110.         }
+  111. >       if (this.lat == null) {
+  112.           missing += " lat";
+  113.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_WeatherLocation.java:114: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `lon` should be annotated with `@Nullable`.
+  112.           missing += " lat";
+  113.         }
+  114. >       if (this.lon == null) {
+  115.           missing += " lon";
+  116.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_WeatherLocation.java:108: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `placeString` should be annotated with `@Nullable`.
+  106.       public WeatherLocation build() {
+  107.         String missing = "";
+  108. >       if (this.placeString == null) {
+  109.           missing += " placeString";
+  110.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantProfileImageViewModel.java:113: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `imageURL` should be annotated with `@Nullable`.
+  111.       public PlantProfileImageViewModel build() {
+  112.         String missing = "";
+  113. >       if (this.imageURL == null) {
+  114.           missing += " imageURL";
+  115.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantProfileImageViewModel.java:119: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `plantUUID` should be annotated with `@Nullable`.
+  117.           missing += " takeImageAvailable";
+  118.         }
+  119. >       if (this.plantUUID == null) {
+  120.           missing += " plantUUID";
+  121.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantProfileImageViewModel.java:116: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `takeImageAvailable` should be annotated with `@Nullable`.
+  114.           missing += " imageURL";
+  115.         }
+  116. >       if (this.takeImageAvailable == null) {
+  117.           missing += " takeImageAvailable";
+  118.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_WeatherData.java:120: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `forecastHours` should be annotated with `@Nullable`.
+  118.           missing += " syncInstant";
+  119.         }
+  120. >       if (this.forecastHours == null) {
+  121.           missing += " forecastHours";
+  122.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_WeatherData.java:117: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `syncInstant` should be annotated with `@Nullable`.
+  115.       public WeatherData build() {
+  116.         String missing = "";
+  117. >       if (this.syncInstant == null) {
+  118.           missing += " syncInstant";
+  119.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_WeatherData.java:123: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `weatherLocation` should be annotated with `@Nullable`.
+  121.           missing += " forecastHours";
+  122.         }
+  123. >       if (this.weatherLocation == null) {
+  124.           missing += " weatherLocation";
+  125.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:125: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `fileName` should be annotated with `@Nullable`.
+  123.       public PlantImageSaveRequest build() {
+  124.         String missing = "";
+  125. >       if (this.fileName == null) {
+  126.           missing += " fileName";
+  127.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:131: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `photoTime` should be annotated with `@Nullable`.
+  129.           missing += " plantUUID";
+  130.         }
+  131. >       if (this.photoTime == null) {
+  132.           missing += " photoTime";
+  133.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:128: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `plantUUID` should be annotated with `@Nullable`.
+  126.           missing += " fileName";
+  127.         }
+  128. >       if (this.plantUUID == null) {
+  129.           missing += " plantUUID";
+  130.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantimage/AutoValue_PlantImageSaveRequest.java:134: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `profilePicture` should be annotated with `@Nullable`.
+  132.           missing += " photoTime";
+  133.         }
+  134. >       if (this.profilePicture == null) {
+  135.           missing += " profilePicture";
+  136.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_Plant.java:133: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `minimumTolerance` should be annotated with `@Nullable`.
+  131.           missing += " scientificName";
+  132.         }
+  133. >       if (this.minimumTolerance == null) {
+  134.           missing += " minimumTolerance";
+  135.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_Plant.java:127: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `name` should be annotated with `@Nullable`.
+  125.       public Plant build() {
+  126.         String missing = "";
+  127. >       if (this.name == null) {
+  128.           missing += " name";
+  129.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_Plant.java:130: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `scientificName` should be annotated with `@Nullable`.
+  128.           missing += " name";
+  129.         }
+  130. >       if (this.scientificName == null) {
+  131.           missing += " scientificName";
+  132.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_Plant.java:136: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `uuid` should be annotated with `@Nullable`.
+  134.           missing += " minimumTolerance";
+  135.         }
+  136. >       if (this.uuid == null) {
+  137.           missing += " uuid";
+  138.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:136: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `format` should be annotated with `@Nullable`.
+  134.           missing += " maxValue";
+  135.         }
+  136. >       if (this.format == null) {
+  137.           missing += " format";
+  138.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:133: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `maxValue` should be annotated with `@Nullable`.
+  131.           missing += " minValue";
+  132.         }
+  133. >       if (this.maxValue == null) {
+  134.           missing += " maxValue";
+  135.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:130: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `minValue` should be annotated with `@Nullable`.
+  128.           missing += " value";
+  129.         }
+  130. >       if (this.minValue == null) {
+  131.           missing += " minValue";
+  132.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/controls/temperaturepicker/AutoValue_TemperaturePickerViewModel.java:127: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `value` should be annotated with `@Nullable`.
+  125.       public TemperaturePickerViewModel build() {
+  126.         String missing = "";
+  127. >       if (this.value == null) {
+  128.           missing += " value";
+  129.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:128: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `hour` should be annotated with `@Nullable`.
+  126.       public ForecastHour build() {
+  127.         String missing = "";
+  128. >       if (this.hour == null) {
+  129.           missing += " hour";
+  130.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:131: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `temperature` should be annotated with `@Nullable`.
+  129.           missing += " hour";
+  130.         }
+  131. >       if (this.temperature == null) {
+  132.           missing += " temperature";
+  133.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:137: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `uuid` should be annotated with `@Nullable`.
+  135.           missing += " windspeed";
+  136.         }
+  137. >       if (this.uuid == null) {
+  138.           missing += " uuid";
+  139.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_ForecastHour.java:134: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `windspeed` should be annotated with `@Nullable`.
+  132.           missing += " temperature";
+  133.         }
+  134. >       if (this.windspeed == null) {
+  135.           missing += " windspeed";
+  136.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:128: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `name` should be annotated with `@Nullable`.
+  126.       public PlantDetailViewModel build() {
+  127.         String missing = "";
+  128. >       if (this.name == null) {
+  129.           missing += " name";
+  130.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:137: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `plantProfileImageViewModel` should be annotated with `@Nullable`.
+  135.           missing += " temperaturePickerViewModel";
+  136.         }
+  137. >       if (this.plantProfileImageViewModel == null) {
+  138.           missing += " plantProfileImageViewModel";
+  139.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:131: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `scientificName` should be annotated with `@Nullable`.
+  129.           missing += " name";
+  130.         }
+  131. >       if (this.scientificName == null) {
+  132.           missing += " scientificName";
+  133.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/detail/AutoValue_PlantDetailViewModel.java:134: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `temperaturePickerViewModel` should be annotated with `@Nullable`.
+  132.           missing += " scientificName";
+  133.         }
+  134. >       if (this.temperaturePickerViewModel == null) {
+  135.           missing += " temperaturePickerViewModel";
+  136.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:158: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `imageFileName` should be annotated with `@Nullable`.
+  156.           missing += " uuid";
+  157.         }
+  158. >       if (this.imageFileName == null) {
+  159.           missing += " imageFileName";
+  160.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:146: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `plantName` should be annotated with `@Nullable`.
+  144.       public PlantListItemViewModel build() {
+  145.         String missing = "";
+  146. >       if (this.plantName == null) {
+  147.           missing += " plantName";
+  148.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:149: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `plantScientificName` should be annotated with `@Nullable`.
+  147.           missing += " plantName";
+  148.         }
+  149. >       if (this.plantScientificName == null) {
+  150.           missing += " plantScientificName";
+  151.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:152: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `plantStatus` should be annotated with `@Nullable`.
+  150.           missing += " plantScientificName";
+  151.         }
+  152. >       if (this.plantStatus == null) {
+  153.           missing += " plantStatus";
+  154.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/plantlist/AutoValue_PlantListItemViewModel.java:155: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `uuid` should be annotated with `@Nullable`.
+  153.           missing += " plantStatus";
+  154.         }
+  155. >       if (this.uuid == null) {
+  156.           missing += " uuid";
+  157.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:155: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `fileName` should be annotated with `@Nullable`.
+  153.           missing += " imageDate";
+  154.         }
+  155. >       if (this.fileName == null) {
+  156.           missing += " fileName";
+  157.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:152: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `imageDate` should be annotated with `@Nullable`.
+  150.           missing += " title";
+  151.         }
+  152. >       if (this.imageDate == null) {
+  153.           missing += " imageDate";
+  154.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:158: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `imageUUID` should be annotated with `@Nullable`.
+  156.           missing += " fileName";
+  157.         }
+  158. >       if (this.imageUUID == null) {
+  159.           missing += " imageUUID";
+  160.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:161: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `plantUUID` should be annotated with `@Nullable`.
+  159.           missing += " imageUUID";
+  160.         }
+  161. >       if (this.plantUUID == null) {
+  162.           missing += " plantUUID";
+  163.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/model/AutoValue_PlantImage.java:149: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `title` should be annotated with `@Nullable`.
+  147.       public PlantImage build() {
+  148.         String missing = "";
+  149. >       if (this.title == null) {
+  150.           missing += " title";
+  151.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:155: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `domainLowerBound` should be annotated with `@Nullable`.
+  153.           missing += " rangeUpperBound";
+  154.         }
+  155. >       if (this.domainLowerBound == null) {
+  156.           missing += " domainLowerBound";
+  157.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:164: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `domainStep` should be annotated with `@Nullable`.
+  162.           missing += " rangeStep";
+  163.         }
+  164. >       if (this.domainStep == null) {
+  165.           missing += " domainStep";
+  166.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:158: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `domainUpperBound` should be annotated with `@Nullable`.
+  156.           missing += " domainLowerBound";
+  157.         }
+  158. >       if (this.domainUpperBound == null) {
+  159.           missing += " domainUpperBound";
+  160.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:149: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `rangeLowerBound` should be annotated with `@Nullable`.
+  147.       public GraphConfig build() {
+  148.         String missing = "";
+  149. >       if (this.rangeLowerBound == null) {
+  150.           missing += " rangeLowerBound";
+  151.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:161: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `rangeStep` should be annotated with `@Nullable`.
+  159.           missing += " domainUpperBound";
+  160.         }
+  161. >       if (this.rangeStep == null) {
+  162.           missing += " rangeStep";
+  163.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphConfig.java:152: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `rangeUpperBound` should be annotated with `@Nullable`.
+  150.           missing += " rangeLowerBound";
+  151.         }
+  152. >       if (this.rangeUpperBound == null) {
+  153.           missing += " rangeUpperBound";
+  154.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/ColdSnapDatabase_Impl.java:168: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `_plantRowDAO` should be annotated with `@Nullable`.
+  166.       } else {
+  167.         synchronized(this) {
+  168. >         if(_plantRowDAO == null) {
+  169.             _plantRowDAO = new PlantRowDAO_Impl(this);
+  170.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:176: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `dataSeries` should be annotated with `@Nullable`.
+  174.           missing += " rangeLines";
+  175.         }
+  176. >       if (this.dataSeries == null) {
+  177.           missing += " dataSeries";
+  178.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:170: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `graphConfig` should be annotated with `@Nullable`.
+  168.           missing += " title";
+  169.         }
+  170. >       if (this.graphConfig == null) {
+  171.           missing += " graphConfig";
+  172.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:173: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `rangeLines` should be annotated with `@Nullable`.
+  171.           missing += " graphConfig";
+  172.         }
+  173. >       if (this.rangeLines == null) {
+  174.           missing += " rangeLines";
+  175.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/cards/graph/AutoValue_GraphCardViewModel.java:167: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `title` should be annotated with `@Nullable`.
+  165.       public GraphCardViewModel build() {
+  166.         String missing = "";
+  167. >       if (this.title == null) {
+  168.           missing += " title";
+  169.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:184: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `coldAlarmTime` should be annotated with `@Nullable`.
+  182.           missing += " temperatureScale";
+  183.         }
+  184. >       if (this.coldAlarmTime == null) {
+  185.           missing += " coldAlarmTime";
+  186.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:178: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `fuzzSummary` should be annotated with `@Nullable`.
+  176.           missing += " thresholdSummary";
+  177.         }
+  178. >       if (this.fuzzSummary == null) {
+  179.           missing += " fuzzSummary";
+  180.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:172: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `fuzzViewModel` should be annotated with `@Nullable`.
+  170.           missing += " thresholdViewModel";
+  171.         }
+  172. >       if (this.fuzzViewModel == null) {
+  173.           missing += " fuzzViewModel";
+  174.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:181: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `temperatureScale` should be annotated with `@Nullable`.
+  179.           missing += " fuzzSummary";
+  180.         }
+  181. >       if (this.temperatureScale == null) {
+  182.           missing += " temperatureScale";
+  183.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:175: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `thresholdSummary` should be annotated with `@Nullable`.
+  173.           missing += " fuzzViewModel";
+  174.         }
+  175. >       if (this.thresholdSummary == null) {
+  176.           missing += " thresholdSummary";
+  177.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/ui/prefs/AutoValue_PreferencesViewModel.java:169: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `thresholdViewModel` should be annotated with `@Nullable`.
+  167.       public PreferencesViewModel build() {
+  168.         String missing = "";
+  169. >       if (this.thresholdViewModel == null) {
+  170.           missing += " thresholdViewModel";
+  171.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:188: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `coldAlarmTime` should be annotated with `@Nullable`.
+  186.           missing += " weatherDataFuzz";
+  187.         }
+  188. >       if (this.coldAlarmTime == null) {
+  189.           missing += " coldAlarmTime";
+  190.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:194: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `coords` should be annotated with `@Nullable`.
+  192.           missing += " locationString";
+  193.         }
+  194. >       if (this.coords == null) {
+  195.           missing += " coords";
+  196.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:191: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `locationString` should be annotated with `@Nullable`.
+  189.           missing += " coldAlarmTime";
+  190.         }
+  191. >       if (this.locationString == null) {
+  192.           missing += " locationString";
+  193.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:182: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `temperatureFormat` should be annotated with `@Nullable`.
+  180.           missing += " threshold";
+  181.         }
+  182. >       if (this.temperatureFormat == null) {
+  183.           missing += " temperatureFormat";
+  184.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:179: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `threshold` should be annotated with `@Nullable`.
+  177.       public PreferenceModel build() {
+  178.         String missing = "";
+  179. >       if (this.threshold == null) {
+  180.           missing += " threshold";
+  181.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/prefs/AutoValue_PreferenceModel.java:185: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `weatherDataFuzz` should be annotated with `@Nullable`.
+  183.           missing += " temperatureFormat";
+  184.         }
+  185. >       if (this.weatherDataFuzz == null) {
+  186.           missing += " weatherDataFuzz";
+  187.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/ColdSnapDatabase_Impl.java:182: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `_plantImageRowDAO` should be annotated with `@Nullable`.
+  180.       } else {
+  181.         synchronized(this) {
+  182. >         if(_plantImageRowDAO == null) {
+  183.             _plantImageRowDAO = new PlantImageRowDAO_Impl(this);
+  184.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/db/ColdSnapDatabase_Impl.java:196: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `_forecastHourRowDAO` should be annotated with `@Nullable`.
+  194.       } else {
+  195.         synchronized(this) {
+  196. >         if(_forecastHourRowDAO == null) {
+  197.             _forecastHourRowDAO = new ForecastHourRowDAO_Impl(this);
+  198.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/ColdSnap/app/build/generated/source/apt/release/com/yoxjames/coldsnap/dagger/DaggerColdSnapInjector.java:262: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `context` should be annotated with `@Nullable`.
+  260.       @Override
+  261.       public ColdSnapInjector build() {
+  262. >       if (context == null) {
+  263.           throw new IllegalStateException(Context.class.getCanonicalName() + " must be set");
+  264.         }
+
+Summary of the reports
+
+    NULLSAFE_FIELD_NOT_NULLABLE: 119
+  NULLSAFE_NULLABLE_DEREFERENCE: 1No issues foundNo issues found

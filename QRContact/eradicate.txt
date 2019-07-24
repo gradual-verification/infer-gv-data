@@ -1,0 +1,75 @@
+Found 4 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:46: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `MainActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           setContentView(R.layout.activity_main);
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:46: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `MainActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           setContentView(R.layout.activity_main);
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:46: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `MainActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           setContentView(R.layout.activity_main);
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:207: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `SharedPreferences.getString(...)` needs a non-null value in parameter 2 but argument `null` can be null. (Origin: null constant at line 207).
+  205.               SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+  206.               Gson gson = new Gson();
+  207. >             String json = sharedPreferences.getString("task list", null);
+  208.               Type type = new TypeToken<ArrayList<Profile>>() {}.getType();
+  209.               profileArrayList = gson.fromJson(json, type);
+
+Summary of the reports
+
+  ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION: 3
+                      ERADICATE_PARAMETER_NOT_NULLABLE: 1Found 4 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:46: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `MainActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `AppCompatActivity.onCreate(...)`.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           setContentView(R.layout.activity_main);
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:46: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `MainActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `FragmentActivity.onCreate(...)`.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           setContentView(R.layout.activity_main);
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:46: warning: ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION
+  First parameter `savedInstanceState` of method `MainActivity.onCreate(...)` is not `@Nullable` but is declared `@Nullable`in the parent class method `SupportActivity.onCreate(...)`.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           setContentView(R.layout.activity_main);
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:207: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `SharedPreferences.getString(...)` needs a non-null value in parameter 2 but argument `null` can be null. (Origin: null constant at line 207).
+  205.               SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+  206.               Gson gson = new Gson();
+  207. >             String json = sharedPreferences.getString("task list", null);
+  208.               Type type = new TypeToken<ArrayList<Profile>>() {}.getType();
+  209.               profileArrayList = gson.fromJson(json, type);
+
+Summary of the reports
+
+  ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION: 3
+                      ERADICATE_PARAMETER_NOT_NULLABLE: 1No issues foundNo issues found

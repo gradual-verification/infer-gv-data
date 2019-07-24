@@ -1,0 +1,65 @@
+Found 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:620: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `SpeedDialView$InstanceState.mSpeedDialActionItems` should be annotated with `@Nullable`.
+  618.               InstanceState instanceState = bundle.getParcelable(InstanceState.class.getName());
+  619.               if (instanceState != null
+  620. >                     && instanceState.mSpeedDialActionItems != null
+  621.                       && !instanceState.mSpeedDialActionItems.isEmpty()) {
+  622.                   setUseReverseAnimationOnClose(instanceState.mUseReverseAnimationOnClose);
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 1Found 1 issue
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:620: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `SpeedDialView$InstanceState.mSpeedDialActionItems` should be annotated with `@Nullable`.
+  618.               InstanceState instanceState = bundle.getParcelable(InstanceState.class.getName());
+  619.               if (instanceState != null
+  620. >                     && instanceState.mSpeedDialActionItems != null
+  621.                       && !instanceState.mSpeedDialActionItems.isEmpty()) {
+  622.                   setUseReverseAnimationOnClose(instanceState.mUseReverseAnimationOnClose);
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 1Found 2 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/BaseUseCaseActivity.java:160: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `mRecyclerView` should be annotated with `@Nullable`.
+  158.           initDataset();
+  159.           mRecyclerView = findViewById(R.id.recyclerView);
+  160. >         if (mRecyclerView != null) {
+  161.               mCustomAdapter = new CustomAdapter(mDataset);
+  162.               // Set CustomAdapter as the adapter for RecyclerView.
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/BaseUseCaseActivity.java:170: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `mToast` should be annotated with `@Nullable`.
+  168.   
+  169.       protected void showToast(String text) {
+  170. >         if (mToast != null) {
+  171.               mToast.cancel();
+  172.           }
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 2Found 2 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/BaseUseCaseActivity.java:160: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `mRecyclerView` should be annotated with `@Nullable`.
+  158.           initDataset();
+  159.           mRecyclerView = findViewById(R.id.recyclerView);
+  160. >         if (mRecyclerView != null) {
+  161.               mCustomAdapter = new CustomAdapter(mDataset);
+  162.               // Set CustomAdapter as the adapter for RecyclerView.
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/FloatingActionButtonSpeedDial/sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/BaseUseCaseActivity.java:170: warning: NULLSAFE_FIELD_NOT_NULLABLE
+  Field `mToast` should be annotated with `@Nullable`.
+  168.   
+  169.       protected void showToast(String text) {
+  170. >         if (mToast != null) {
+  171.               mToast.cancel();
+  172.           }
+
+Summary of the reports
+
+  NULLSAFE_FIELD_NOT_NULLABLE: 2

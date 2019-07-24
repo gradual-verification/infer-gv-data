@@ -1,0 +1,185 @@
+Found 11 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:83: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerRootBuilder_Component$Builder.interactor` is not initialized in the constructor and is not declared `@Nullable`.
+  81.     }
+  82.   
+  83. >   private static final class Builder implements RootBuilder.Component.Builder {
+  84.       private RootBuilder.ParentComponent parentComponent;
+  85.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:83: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerRootBuilder_Component$Builder.parentComponent` is not initialized in the constructor and is not declared `@Nullable`.
+  81.     }
+  82.   
+  83. >   private static final class Builder implements RootBuilder.Component.Builder {
+  84.       private RootBuilder.ParentComponent parentComponent;
+  85.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:83: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerRootBuilder_Component$Builder.provideContext` is not initialized in the constructor and is not declared `@Nullable`.
+  81.     }
+  82.   
+  83. >   private static final class Builder implements RootBuilder.Component.Builder {
+  84.       private RootBuilder.ParentComponent parentComponent;
+  85.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:83: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerRootBuilder_Component$Builder.view` is not initialized in the constructor and is not declared `@Nullable`.
+  81.     }
+  82.   
+  83. >   private static final class Builder implements RootBuilder.Component.Builder {
+  84.       private RootBuilder.ParentComponent parentComponent;
+  85.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerInstrumentBuilder_Component$Builder.accountId` is not initialized in the constructor and is not declared `@Nullable`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements InstrumentBuilder.Component.Builder {
+  97.       private InstrumentBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerInstrumentBuilder_Component$Builder.interactor` is not initialized in the constructor and is not declared `@Nullable`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements InstrumentBuilder.Component.Builder {
+  97.       private InstrumentBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerInstrumentBuilder_Component$Builder.parentComponent` is not initialized in the constructor and is not declared `@Nullable`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements InstrumentBuilder.Component.Builder {
+  97.       private InstrumentBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerInstrumentBuilder_Component$Builder.view` is not initialized in the constructor and is not declared `@Nullable`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements InstrumentBuilder.Component.Builder {
+  97.       private InstrumentBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerLoginBuilder_Component$Builder.interactor` is not initialized in the constructor and is not declared `@Nullable`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements LoginBuilder.Component.Builder {
+  97.       private LoginBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerLoginBuilder_Component$Builder.parentComponent` is not initialized in the constructor and is not declared `@Nullable`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements LoginBuilder.Component.Builder {
+  97.       private LoginBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerLoginBuilder_Component$Builder.view` is not initialized in the constructor and is not declared `@Nullable`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements LoginBuilder.Component.Builder {
+  97.       private LoginBuilder.ParentComponent parentComponent;
+  98.   
+
+Summary of the reports
+
+  ERADICATE_FIELD_NOT_INITIALIZED: 11Found 11 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:83: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerRootBuilder_Component$Builder.interactor` is not initialized in the constructor and is not declared `@Nullable`.
+  81.     }
+  82.   
+  83. >   private static final class Builder implements RootBuilder.Component.Builder {
+  84.       private RootBuilder.ParentComponent parentComponent;
+  85.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:83: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerRootBuilder_Component$Builder.parentComponent` is not initialized in the constructor and is not declared `@Nullable`.
+  81.     }
+  82.   
+  83. >   private static final class Builder implements RootBuilder.Component.Builder {
+  84.       private RootBuilder.ParentComponent parentComponent;
+  85.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:83: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerRootBuilder_Component$Builder.provideContext` is not initialized in the constructor and is not declared `@Nullable`.
+  81.     }
+  82.   
+  83. >   private static final class Builder implements RootBuilder.Component.Builder {
+  84.       private RootBuilder.ParentComponent parentComponent;
+  85.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:83: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerRootBuilder_Component$Builder.view` is not initialized in the constructor and is not declared `@Nullable`.
+  81.     }
+  82.   
+  83. >   private static final class Builder implements RootBuilder.Component.Builder {
+  84.       private RootBuilder.ParentComponent parentComponent;
+  85.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerInstrumentBuilder_Component$Builder.accountId` is not initialized in the constructor and is not declared `@Nullable`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements InstrumentBuilder.Component.Builder {
+  97.       private InstrumentBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerInstrumentBuilder_Component$Builder.interactor` is not initialized in the constructor and is not declared `@Nullable`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements InstrumentBuilder.Component.Builder {
+  97.       private InstrumentBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerInstrumentBuilder_Component$Builder.parentComponent` is not initialized in the constructor and is not declared `@Nullable`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements InstrumentBuilder.Component.Builder {
+  97.       private InstrumentBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerInstrumentBuilder_Component$Builder.view` is not initialized in the constructor and is not declared `@Nullable`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements InstrumentBuilder.Component.Builder {
+  97.       private InstrumentBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerLoginBuilder_Component$Builder.interactor` is not initialized in the constructor and is not declared `@Nullable`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements LoginBuilder.Component.Builder {
+  97.       private LoginBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerLoginBuilder_Component$Builder.parentComponent` is not initialized in the constructor and is not declared `@Nullable`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements LoginBuilder.Component.Builder {
+  97.       private LoginBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:96: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `DaggerLoginBuilder_Component$Builder.view` is not initialized in the constructor and is not declared `@Nullable`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements LoginBuilder.Component.Builder {
+  97.       private LoginBuilder.ParentComponent parentComponent;
+  98.   
+
+Summary of the reports
+
+  ERADICATE_FIELD_NOT_INITIALIZED: 11

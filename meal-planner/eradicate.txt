@@ -1,0 +1,211 @@
+Found 4 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:33: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `String.valueOf(...)` needs a non-null value in parameter 1 but argument `article.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 33).
+  31.   
+  32.       Map<String, Object> article = (Map<String, Object>) metadata.getOrDefault("article", "");
+  33. >     this.name = String.valueOf(article.get("name"));
+  34.     }
+  35.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:58: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Optional.ofNullable(...)` needs a non-null value in parameter 1 but argument `IngredientUnitLookup.byShorthand.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 58).
+  56.      */
+  57.     public Optional<IngredientUnit> byShorthand(final String shorthand) {
+  58. >     return Optional.ofNullable(byShorthand.get(shorthand));
+  59.     }
+  60.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:68: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Optional.ofNullable(...)` needs a non-null value in parameter 1 but argument `IngredientUnitLookup.byPlural.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 68).
+  66.      */
+  67.     public Optional<IngredientUnit> byPlural(final String plural) {
+  68. >     return Optional.ofNullable(byPlural.get(plural));
+  69.     }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:97: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `Optional.ofNullable(...)` needs a non-null value in parameter 1 but argument `IngredientUnitLookup.bySingular.get(...)` can be null. (Origin: call to get(...) modelled in modelTables.ml at line 97).
+  95.      */
+  96.     public Optional<IngredientUnit> bySingular(final String search) {
+  97. >     return Optional.ofNullable(bySingular.get(search));
+  98.     }
+  99.   }
+
+Summary of the reports
+
+  ERADICATE_PARAMETER_NOT_NULLABLE: 4Found 21 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/algorithms/AmountParserTest.java:9: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `AmountParserTest.instance` is not initialized in the constructor and is not declared `@Nullable`.
+  7.   
+  8.   /** */
+  9. > public class AmountParserTest {
+  10.   
+  11.     private AmountParser instance;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/algorithms/IngredientMatcherTest.java:10: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `IngredientMatcherTest.matcher` is not initialized in the constructor and is not declared `@Nullable`.
+  8.   
+  9.   /** */
+  10. > public class IngredientMatcherTest {
+  11.   
+  12.     private IngredientMatcher matcher;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookupTest.java:12: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `IngredientUnitLookupTest.instance` is not initialized in the constructor and is not declared `@Nullable`.
+  10.   
+  11.   /** */
+  12. > public class IngredientUnitLookupTest {
+  13.   
+  14.     private IngredientUnitLookup instance;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/algorithms/PlainTextIngredientScannerTest.java:14: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `PlainTextIngredientScannerTest.ingredientScanner` is not initialized in the constructor and is not declared `@Nullable`.
+  12.   import org.junit.Test;
+  13.   
+  14. > public class PlainTextIngredientScannerTest {
+  15.   
+  16.     private PlainTextIngredientScanner ingredientScanner;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/controller/PinterestExplorerTest.java:18: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `PinterestExplorerTest.testRestTemplate` is not initialized in the constructor and is not declared `@Nullable`.
+  16.     webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
+  17.   )
+  18. > public class PinterestExplorerTest {
+  19.   
+  20.     @LocalServerPort private int port;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgParserTest.java:19: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `SchemaOrgParserTest.expectedRecipe` is not initialized in the constructor and is not declared `@Nullable`.
+  17.   /** */
+  18.   @RunWith(Parameterized.class)
+  19. > public class SchemaOrgParserTest extends FixtureBasedTest {
+  20.   
+  21.     /** The base path to the recipe fixtures. */
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgParserTest.java:19: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `SchemaOrgParserTest.inputRecipePath` is not initialized in the constructor and is not declared `@Nullable`.
+  17.   /** */
+  18.   @RunWith(Parameterized.class)
+  19. > public class SchemaOrgParserTest extends FixtureBasedTest {
+  20.   
+  21.     /** The base path to the recipe fixtures. */
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParserTest.java:20: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `SchemaOrgQuirksModeParserTest.expectedRecipe` is not initialized in the constructor and is not declared `@Nullable`.
+  18.   /** */
+  19.   @RunWith(Parameterized.class)
+  20. > public class SchemaOrgQuirksModeParserTest extends FixtureBasedTest {
+  21.   
+  22.     /** The base path to the recipe fixtures. */
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParserTest.java:20: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `SchemaOrgQuirksModeParserTest.recipeSourcePath` is not initialized in the constructor and is not declared `@Nullable`.
+  18.   /** */
+  19.   @RunWith(Parameterized.class)
+  20. > public class SchemaOrgQuirksModeParserTest extends FixtureBasedTest {
+  21.   
+  22.     /** The base path to the recipe fixtures. */
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/SSLUtil.java:22: warning: ERADICATE_RETURN_NOT_NULLABLE
+  Method `getAcceptedIssuers()` may return null but it is not annotated with `@Nullable`. (Origin: null constant at line 23).
+  20.           new X509TrustManager() {
+  21.             @Override
+  22. >           public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+  23.               return null;
+  24.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/pinterest/services/BoardServicePinsTest.java:25: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `BoardServicePinsTest.service` is not initialized in the constructor and is not declared `@Nullable`.
+  23.   
+  24.   /** */
+  25. > public class BoardServicePinsTest extends FixtureBasedTest {
+  26.   
+  27.     private IBoardService service;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/controller/ParseTest.java:27: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `ParseTest.testRestTemplate` is not initialized in the constructor and is not declared `@Nullable`.
+  25.     webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
+  26.   )
+  27. > public class ParseTest {
+  28.   
+  29.     @LocalServerPort private int port;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/pinterest/services/BoardServiceCachingTest.java:28: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `BoardServiceCachingTest.boardService` is not initialized in the constructor and is not declared `@Nullable`.
+  26.   @ContextConfiguration(classes = {ContextConfigurationTest.class})
+  27.   @ActiveProfiles("testing")
+  28. > public class BoardServiceCachingTest {
+  29.   
+  30.     @Autowired private OAuth2RestOperations restTemplateToMock;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/pinterest/services/BoardServiceCachingTest.java:28: warning: ERADICATE_FIELD_NOT_INITIALIZED
+  Field `BoardServiceCachingTest.restTemplateToMock` is not initialized in the constructor and is not declared `@Nullable`.
+  26.   @ContextConfiguration(classes = {ContextConfigurationTest.class})
+  27.   @ActiveProfiles("testing")
+  28. > public class BoardServiceCachingTest {
+  29.   
+  30.     @Autowired private OAuth2RestOperations restTemplateToMock;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/algorithms/RecipeServiceTest.java:42: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `RecipeServiceTest.getMockedParserFactory(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 42).
+  40.       when(mockedFetcherService.fetchByURL(anyString())).thenThrow(new IOException());
+  41.   
+  42. >     RecipeParserFactory factory = getMockedParserFactory(null);
+  43.       RecipeService service = new RecipeService(factory, mockedFetcherService);
+  44.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/SSLUtil.java:41: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `SSLContext.init(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 41).
+  39.       // Install the all-trusting trust manager
+  40.       final SSLContext sc = SSLContext.getInstance("SSL");
+  41. >     sc.init(null, SSLUtil.UNQUESTIONING_TRUST_MANAGER, null);
+  42.       HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+  43.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/SSLUtil.java:41: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `SSLContext.init(...)` needs a non-null value in parameter 3 but argument `null` can be null. (Origin: null constant at line 41).
+  39.       // Install the all-trusting trust manager
+  40.       final SSLContext sc = SSLContext.getInstance("SSL");
+  41. >     sc.init(null, SSLUtil.UNQUESTIONING_TRUST_MANAGER, null);
+  42.       HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+  43.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/SSLUtil.java:47: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `SSLContext.init(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 47).
+  45.     public static void turnOnSslChecking() throws KeyManagementException, NoSuchAlgorithmException {
+  46.       // Return it to the initial state (discovered by reflection, now hardcoded)
+  47. >     SSLContext.getInstance("SSL").init(null, null, null);
+  48.     }
+  49.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/SSLUtil.java:47: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `SSLContext.init(...)` needs a non-null value in parameter 2 but argument `null` can be null. (Origin: null constant at line 47).
+  45.     public static void turnOnSslChecking() throws KeyManagementException, NoSuchAlgorithmException {
+  46.       // Return it to the initial state (discovered by reflection, now hardcoded)
+  47. >     SSLContext.getInstance("SSL").init(null, null, null);
+  48.     }
+  49.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/SSLUtil.java:47: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `SSLContext.init(...)` needs a non-null value in parameter 3 but argument `null` can be null. (Origin: null constant at line 47).
+  45.     public static void turnOnSslChecking() throws KeyManagementException, NoSuchAlgorithmException {
+  46.       // Return it to the initial state (discovered by reflection, now hardcoded)
+  47. >     SSLContext.getInstance("SSL").init(null, null, null);
+  48.     }
+  49.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/algorithms/AmountParserTest.java:46: warning: ERADICATE_PARAMETER_NOT_NULLABLE
+  `AmountParser.parseAmount(...)` needs a non-null value in parameter 1 but argument `null` can be null. (Origin: null constant at line 46).
+  44.     @Test
+  45.     public void returnsZeroIfEmptyStringOrNull() {
+  46. >     assertThat(instance.parseAmount(null)).isEqualTo(0f);
+  47.       assertThat(instance.parseAmount("")).isEqualTo(0f);
+  48.     }
+
+Summary of the reports
+
+   ERADICATE_FIELD_NOT_INITIALIZED: 13
+  ERADICATE_PARAMETER_NOT_NULLABLE: 7
+     ERADICATE_RETURN_NOT_NULLABLE: 1
