@@ -1,0 +1,2983 @@
+Found 120 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingCompletableObserverImpl.java:45: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposingCompletableObserverImpl$1.this$0`.
+  43.   
+  44.     @Override public void onSubscribe(final Disposable d) {
+  45. >     DisposableCompletableObserver o = new DisposableCompletableObserver() {
+  46.         @Override public void onError(Throwable e) {
+  47.           scopeDisposable.lazySet(AutoDisposableHelper.DISPOSED);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingMaybeObserverImpl.java:45: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposingMaybeObserverImpl$1.this$0`.
+  43.   
+  44.     @Override public void onSubscribe(final Disposable d) {
+  45. >     DisposableCompletableObserver o = new DisposableCompletableObserver() {
+  46.         @Override public void onError(Throwable e) {
+  47.           scopeDisposable.lazySet(AutoDisposableHelper.DISPOSED);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingObserverImpl.java:47: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposingObserverImpl$1.this$0`.
+  45.   
+  46.     @Override public void onSubscribe(final Disposable d) {
+  47. >     DisposableCompletableObserver o = new DisposableCompletableObserver() {
+  48.         @Override public void onError(Throwable e) {
+  49.           scopeDisposable.lazySet(AutoDisposableHelper.DISPOSED);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingSingleObserverImpl.java:45: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposingSingleObserverImpl$1.this$0`.
+  43.   
+  44.     @Override public void onSubscribe(final Disposable d) {
+  45. >     DisposableCompletableObserver o = new DisposableCompletableObserver() {
+  46.         @Override public void onError(Throwable e) {
+  47.           scopeDisposable.lazySet(AutoDisposableHelper.DISPOSED);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingSubscriberImpl.java:51: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposingSubscriberImpl$1.this$0`.
+  49.   
+  50.     @Override public void onSubscribe(final Subscription s) {
+  51. >     DisposableCompletableObserver o = new DisposableCompletableObserver() {
+  52.         @Override public void onError(Throwable e) {
+  53.           scopeDisposable.lazySet(AutoDisposableHelper.DISPOSED);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:158: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDispose$1$2.this$0`.
+  156.   
+  157.         @Override public FlowableSubscribeProxy<T> apply(final Flowable<T> upstream) {
+  158. >         return new FlowableSubscribeProxy<T>() {
+  159.             @Override public Disposable subscribe() {
+  160.               return new AutoDisposeFlowable<>(upstream, scope).subscribe();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:158: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDispose$1$2.val$upstream`.
+  156.   
+  157.         @Override public FlowableSubscribeProxy<T> apply(final Flowable<T> upstream) {
+  158. >         return new FlowableSubscribeProxy<T>() {
+  159.             @Override public Disposable subscribe() {
+  160.               return new AutoDisposeFlowable<>(upstream, scope).subscribe();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeParallelFlowable.java:14: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposeParallelFlowable.scope`.
+  12.     AutoDisposeParallelFlowable(ParallelFlowable<T> source, CompletableSource scope) {
+  13.       this.source = source;
+  14. >     this.scope = scope;
+  15.     }
+  16.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeParallelFlowable.java:13: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposeParallelFlowable.source`.
+  11.   
+  12.     AutoDisposeParallelFlowable(ParallelFlowable<T> source, CompletableSource scope) {
+  13. >     this.source = source;
+  14.       this.scope = scope;
+  15.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeParallelFlowable.java:27: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `newSubscribers` passed to nonnull parameter.
+  25.         newSubscribers[i] = subscriber;
+  26.       }
+  27. >     source.subscribe(newSubscribers);
+  28.     }
+  29.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeParallelFlowable.java:18: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `subscribers` passed to nonnull parameter.
+  16.   
+  17.     @Override public void subscribe(Subscriber<? super T>[] subscribers) {
+  18. >     if (!validate(subscribers)) {
+  19.         return;
+  20.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeParallelFlowable.java:24: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `subscribers`.
+  22.       @SuppressWarnings("unchecked") Subscriber<? super T>[] newSubscribers = new Subscriber[subscribers.length];
+  23.       for (int i = 0; i < subscribers.length; i++) {
+  24. >       AutoDisposingSubscriberImpl<? super T> subscriber = new AutoDisposingSubscriberImpl<>(scope, subscribers[i]);
+  25.         newSubscribers[i] = subscriber;
+  26.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeCompletable.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposeCompletable.scope`.
+  28.     AutoDisposeCompletable(Completable source, CompletableSource scope) {
+  29.       this.source = source;
+  30. >     this.scope = scope;
+  31.     }
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeCompletable.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposeCompletable.source`.
+  27.   
+  28.     AutoDisposeCompletable(Completable source, CompletableSource scope) {
+  29. >     this.source = source;
+  30.       this.scope = scope;
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeFlowable.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposeFlowable.scope`.
+  28.     AutoDisposeFlowable(Publisher<T> source, CompletableSource scope) {
+  29.       this.source = source;
+  30. >     this.scope = scope;
+  31.     }
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeFlowable.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposeFlowable.source`.
+  27.   
+  28.     AutoDisposeFlowable(Publisher<T> source, CompletableSource scope) {
+  29. >     this.source = source;
+  30.       this.scope = scope;
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeSingle.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposeSingle.scope`.
+  28.     AutoDisposeSingle(SingleSource<T> source, CompletableSource scope) {
+  29.       this.source = source;
+  30. >     this.scope = scope;
+  31.     }
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeSingle.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposeSingle.source`.
+  27.   
+  28.     AutoDisposeSingle(SingleSource<T> source, CompletableSource scope) {
+  29. >     this.source = source;
+  30.       this.scope = scope;
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeMaybe.java:31: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposeMaybe.scope`.
+  29.     AutoDisposeMaybe(MaybeSource<T> source, CompletableSource scope) {
+  30.       this.source = source;
+  31. >     this.scope = scope;
+  32.     }
+  33.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeMaybe.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposeMaybe.source`.
+  28.   
+  29.     AutoDisposeMaybe(MaybeSource<T> source, CompletableSource scope) {
+  30. >     this.source = source;
+  31.       this.scope = scope;
+  32.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeObservable.java:31: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposeObservable.scope`.
+  29.     AutoDisposeObservable(ObservableSource<T> source, CompletableSource scope) {
+  30.       this.source = source;
+  31. >     this.scope = scope;
+  32.     }
+  33.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeObservable.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposeObservable.source`.
+  28.   
+  29.     AutoDisposeObservable(ObservableSource<T> source, CompletableSource scope) {
+  30. >     this.source = source;
+  31.       this.scope = scope;
+  32.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingCompletableObserverImpl.java:37: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposingCompletableObserverImpl.delegate`.
+  35.     AutoDisposingCompletableObserverImpl(CompletableSource scope, CompletableObserver delegate) {
+  36.       this.scope = scope;
+  37. >     this.delegate = delegate;
+  38.     }
+  39.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingCompletableObserverImpl.java:36: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposingCompletableObserverImpl.scope`.
+  34.   
+  35.     AutoDisposingCompletableObserverImpl(CompletableSource scope, CompletableObserver delegate) {
+  36. >     this.scope = scope;
+  37.       this.delegate = delegate;
+  38.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingMaybeObserverImpl.java:37: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposingMaybeObserverImpl.delegate`.
+  35.     AutoDisposingMaybeObserverImpl(CompletableSource scope, MaybeObserver<? super T> delegate) {
+  36.       this.scope = scope;
+  37. >     this.delegate = delegate;
+  38.     }
+  39.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingMaybeObserverImpl.java:36: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposingMaybeObserverImpl.scope`.
+  34.   
+  35.     AutoDisposingMaybeObserverImpl(CompletableSource scope, MaybeObserver<? super T> delegate) {
+  36. >     this.scope = scope;
+  37.       this.delegate = delegate;
+  38.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingSingleObserverImpl.java:37: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposingSingleObserverImpl.delegate`.
+  35.     AutoDisposingSingleObserverImpl(CompletableSource scope, SingleObserver<? super T> delegate) {
+  36.       this.scope = scope;
+  37. >     this.delegate = delegate;
+  38.     }
+  39.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingSingleObserverImpl.java:36: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposingSingleObserverImpl.scope`.
+  34.   
+  35.     AutoDisposingSingleObserverImpl(CompletableSource scope, SingleObserver<? super T> delegate) {
+  36. >     this.scope = scope;
+  37.       this.delegate = delegate;
+  38.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposableHelper.java:38: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  36.      */
+  37.     static boolean dispose(AtomicReference<Disposable> field) {
+  38. >     Disposable current = field.get();
+  39.       Disposable d = DISPOSED;
+  40.       if (current != d) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposableHelper.java:41: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  39.       Disposable d = DISPOSED;
+  40.       if (current != d) {
+  41. >       current = field.getAndSet(d);
+  42.         if (current != d) {
+  43.           if (current != null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingObserverImpl.java:39: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposingObserverImpl.delegate`.
+  37.     AutoDisposingObserverImpl(CompletableSource scope, Observer<? super T> delegate) {
+  38.       this.scope = scope;
+  39. >     this.delegate = delegate;
+  40.     }
+  41.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingObserverImpl.java:38: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposingObserverImpl.scope`.
+  36.   
+  37.     AutoDisposingObserverImpl(CompletableSource scope, Observer<? super T> delegate) {
+  38. >     this.scope = scope;
+  39.       this.delegate = delegate;
+  40.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/ExceptionHelper.java:50: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `boolean ExceptionHelper.addThrowable(AtomicReference,Throwable)`.
+  48.         Throwable update;
+  49.         if (current == null) {
+  50. >         update = exception;
+  51.         } else {
+  52.           update = new CompositeException(current, exception);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/ExceptionHelper.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  40.     static boolean addThrowable(AtomicReference<Throwable> field, Throwable exception) {
+  41.       for (; ; ) {
+  42. >       Throwable current = field.get();
+  43.   
+  44.         if (current == TERMINATED) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/ExceptionHelper.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  53.         }
+  54.   
+  55. >       if (field.compareAndSet(current, update)) {
+  56.           return true;
+  57.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingSubscriberImpl.java:43: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposingSubscriberImpl.delegate`.
+  41.     AutoDisposingSubscriberImpl(CompletableSource scope, Subscriber<? super T> delegate) {
+  42.       this.scope = scope;
+  43. >     this.delegate = delegate;
+  44.     }
+  45.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingSubscriberImpl.java:42: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposingSubscriberImpl.scope`.
+  40.   
+  41.     AutoDisposingSubscriberImpl(CompletableSource scope, Subscriber<? super T> delegate) {
+  42. >     this.scope = scope;
+  43.       this.delegate = delegate;
+  44.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeEndConsumerHelper.java:51: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `next` passed to nonnull parameter.
+  49.      */
+  50.     public static boolean setOnce(AtomicReference<Disposable> upstream, Disposable next, Class<?> observer) {
+  51. >     AutoDisposeUtil.checkNotNull(next, "next is null");
+  52.       if (!upstream.compareAndSet(null, next)) {
+  53.         next.dispose();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeEndConsumerHelper.java:53: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `next`.
+  51.       AutoDisposeUtil.checkNotNull(next, "next is null");
+  52.       if (!upstream.compareAndSet(null, next)) {
+  53. >       next.dispose();
+  54.         if (upstream.get() != AutoDisposableHelper.DISPOSED) {
+  55.           reportDoubleSubscription(observer);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeEndConsumerHelper.java:52: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `upstream`.
+  50.     public static boolean setOnce(AtomicReference<Disposable> upstream, Disposable next, Class<?> observer) {
+  51.       AutoDisposeUtil.checkNotNull(next, "next is null");
+  52. >     if (!upstream.compareAndSet(null, next)) {
+  53.         next.dispose();
+  54.         if (upstream.get() != AutoDisposableHelper.DISPOSED) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeEndConsumerHelper.java:54: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `upstream`.
+  52.       if (!upstream.compareAndSet(null, next)) {
+  53.         next.dispose();
+  54. >       if (upstream.get() != AutoDisposableHelper.DISPOSED) {
+  55.           reportDoubleSubscription(observer);
+  56.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:57: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `error`.
+  55.         subscriber.onNext(value);
+  56.         if (wip.decrementAndGet() != 0) {
+  57. >         Throwable ex = error.terminate();
+  58.           if (ex != null) {
+  59.             subscriber.onError(ex);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `subscriber`.
+  53.         AtomicThrowable error) {
+  54.       if (wip.get() == 0 && wip.compareAndSet(0, 1)) {
+  55. >       subscriber.onNext(value);
+  56.         if (wip.decrementAndGet() != 0) {
+  57.           Throwable ex = error.terminate();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:59: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `subscriber`.
+  57.           Throwable ex = error.terminate();
+  58.           if (ex != null) {
+  59. >           subscriber.onError(ex);
+  60.           } else {
+  61.             subscriber.onComplete();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:61: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `subscriber`.
+  59.             subscriber.onError(ex);
+  60.           } else {
+  61. >           subscriber.onComplete();
+  62.           }
+  63.           return true;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:54: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `wip`.
+  52.         AtomicInteger wip,
+  53.         AtomicThrowable error) {
+  54. >     if (wip.get() == 0 && wip.compareAndSet(0, 1)) {
+  55.         subscriber.onNext(value);
+  56.         if (wip.decrementAndGet() != 0) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:56: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `wip`.
+  54.       if (wip.get() == 0 && wip.compareAndSet(0, 1)) {
+  55.         subscriber.onNext(value);
+  56. >       if (wip.decrementAndGet() != 0) {
+  57.           Throwable ex = error.terminate();
+  58.           if (ex != null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/TestScopeProvider.java:53: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `delegate`.
+  51.     @SuppressWarnings("AutoDisposeUsage")
+  52.     private TestScopeProvider(Completable delegate) {
+  53. >     delegate.subscribe(innerScope);
+  54.     }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeBackpressureHelper.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `requested`.
+  53.     static long add(AtomicLong requested, long n) {
+  54.       for (; ; ) {
+  55. >       long r = requested.get();
+  56.         if (r == Long.MAX_VALUE) {
+  57.           return Long.MAX_VALUE;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeBackpressureHelper.java:60: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `requested`.
+  58.         }
+  59.         long u = addCap(r, n);
+  60. >       if (requested.compareAndSet(r, u)) {
+  61.           return r;
+  62.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/ExceptionHelper.java:62: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  60.   
+  61.     @Nullable static Throwable terminate(AtomicReference<Throwable> field) {
+  62. >     Throwable current = field.get();
+  63.       if (current != TERMINATED) {
+  64.         current = field.getAndSet(TERMINATED);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/ExceptionHelper.java:64: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  62.       Throwable current = field.get();
+  63.       if (current != TERMINATED) {
+  64. >       current = field.getAndSet(TERMINATED);
+  65.       }
+  66.       return current;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingMaybeObserverImpl.java:76: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `value` passed to nonnull parameter.
+  74.         mainDisposable.lazySet(AutoDisposableHelper.DISPOSED);
+  75.         AutoDisposableHelper.dispose(scopeDisposable);
+  76. >       delegate.onSuccess(value);
+  77.       }
+  78.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingSingleObserverImpl.java:76: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `value` passed to nonnull parameter.
+  74.         mainDisposable.lazySet(AutoDisposableHelper.DISPOSED);
+  75.         AutoDisposableHelper.dispose(scopeDisposable);
+  76. >       delegate.onSuccess(value);
+  77.       }
+  78.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeEndConsumerHelper.java:74: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `next` passed to nonnull parameter.
+  72.      */
+  73.     public static boolean setOnce(AtomicReference<Subscription> upstream, Subscription next, Class<?> subscriber) {
+  74. >     AutoDisposeUtil.checkNotNull(next, "next is null");
+  75.       if (!upstream.compareAndSet(null, next)) {
+  76.         next.cancel();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeEndConsumerHelper.java:76: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `next`.
+  74.       AutoDisposeUtil.checkNotNull(next, "next is null");
+  75.       if (!upstream.compareAndSet(null, next)) {
+  76. >       next.cancel();
+  77.         if (upstream.get() != AutoSubscriptionHelper.CANCELLED) {
+  78.           reportDoubleSubscription(subscriber);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeEndConsumerHelper.java:75: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `upstream`.
+  73.     public static boolean setOnce(AtomicReference<Subscription> upstream, Subscription next, Class<?> subscriber) {
+  74.       AutoDisposeUtil.checkNotNull(next, "next is null");
+  75. >     if (!upstream.compareAndSet(null, next)) {
+  76.         next.cancel();
+  77.         if (upstream.get() != AutoSubscriptionHelper.CANCELLED) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeEndConsumerHelper.java:77: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `upstream`.
+  75.       if (!upstream.compareAndSet(null, next)) {
+  76.         next.cancel();
+  77. >       if (upstream.get() != AutoSubscriptionHelper.CANCELLED) {
+  78.           reportDoubleSubscription(subscriber);
+  79.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:80: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `provider` passed to nonnull parameter.
+  78.      */
+  79.     public static <T> AutoDisposeConverter<T> autoDisposable(final ScopeProvider provider) {
+  80. >     checkNotNull(provider, "provider == null");
+  81.       return autoDisposable(Completable.defer(() -> {
+  82.         try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:85: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `ex` passed to nonnull parameter.
+  83.         }
+  84.       } else {
+  85. >       RxJavaPlugins.onError(ex);
+  86.       }
+  87.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:80: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `error`.
+  78.      */
+  79.     public static void onError(Subscriber<?> subscriber, Throwable ex, AtomicInteger wip, AtomicThrowable error) {
+  80. >     if (error.addThrowable(ex)) {
+  81.         if (wip.getAndIncrement() == 0) {
+  82.           subscriber.onError(error.terminate());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:82: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `error`.
+  80.       if (error.addThrowable(ex)) {
+  81.         if (wip.getAndIncrement() == 0) {
+  82. >         subscriber.onError(error.terminate());
+  83.         }
+  84.       } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:82: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `subscriber`.
+  80.       if (error.addThrowable(ex)) {
+  81.         if (wip.getAndIncrement() == 0) {
+  82. >         subscriber.onError(error.terminate());
+  83.         }
+  84.       } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:81: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `wip`.
+  79.     public static void onError(Subscriber<?> subscriber, Throwable ex, AtomicInteger wip, AtomicThrowable error) {
+  80.       if (error.addThrowable(ex)) {
+  81. >       if (wip.getAndIncrement() == 0) {
+  82.           subscriber.onError(error.terminate());
+  83.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingCompletableObserverImpl.java:84: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `e` passed to nonnull parameter.
+  82.         mainDisposable.lazySet(AutoDisposableHelper.DISPOSED);
+  83.         AutoDisposableHelper.dispose(scopeDisposable);
+  84. >       delegate.onError(e);
+  85.       }
+  86.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingMaybeObserverImpl.java:84: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `e` passed to nonnull parameter.
+  82.         mainDisposable.lazySet(AutoDisposableHelper.DISPOSED);
+  83.         AutoDisposableHelper.dispose(scopeDisposable);
+  84. >       delegate.onError(e);
+  85.       }
+  86.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposingSingleObserverImpl.java:84: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `e` passed to nonnull parameter.
+  82.         mainDisposable.lazySet(AutoDisposableHelper.DISPOSED);
+  83.         AutoDisposableHelper.dispose(scopeDisposable);
+  84. >       delegate.onError(e);
+  85.       }
+  86.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:84: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `CompletableSource AutoDispose.lambda$autoDisposable$0(ScopeProvider)`.
+  82.         try {
+  83.           return provider.requestScope();
+  84. >       } catch (OutsideScopeException e) {
+  85.           Consumer<? super OutsideScopeException> handler = AutoDisposePlugins.getOutsideScopeHandler();
+  86.           if (handler != null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:83: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `provider`.
+  81.       return autoDisposable(Completable.defer(() -> {
+  82.         try {
+  83. >         return provider.requestScope();
+  84.         } catch (OutsideScopeException e) {
+  85.           Consumer<? super OutsideScopeException> handler = AutoDisposePlugins.getOutsideScopeHandler();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:84: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `CompletableSource AutoDispose.lambda$autoDisposable$0(ScopeProvider)`.
+  82.         try {
+  83.           return provider.requestScope();
+  84. >       } catch (OutsideScopeException e) {
+  85.           Consumer<? super OutsideScopeException> handler = AutoDisposePlugins.getOutsideScopeHandler();
+  86.           if (handler != null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposePlugins.java:90: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDisposePlugins.fillInOutsideScopeExceptionStacktraces`.
+  88.         throw new IllegalStateException("Plugins can't be changed anymore");
+  89.       }
+  90. >     fillInOutsideScopeExceptionStacktraces = fillInStacktrace;
+  91.     }
+  92.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposePlugins.java:97: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  95.      */
+  96.     public static void reset() {
+  97. >     setOutsideScopeHandler(null);
+  98.     }
+  99.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:99: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `error`.
+  97.     public static void onComplete(Subscriber<?> subscriber, AtomicInteger wip, AtomicThrowable error) {
+  98.       if (wip.getAndIncrement() == 0) {
+  99. >       Throwable ex = error.terminate();
+  100.         if (ex != null) {
+  101.           subscriber.onError(ex);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:101: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `subscriber`.
+  99.         Throwable ex = error.terminate();
+  100.         if (ex != null) {
+  101. >         subscriber.onError(ex);
+  102.         } else {
+  103.           subscriber.onComplete();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:103: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `subscriber`.
+  101.           subscriber.onError(ex);
+  102.         } else {
+  103. >         subscriber.onComplete();
+  104.         }
+  105.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:98: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `wip`.
+  96.      */
+  97.     public static void onComplete(Subscriber<?> subscriber, AtomicInteger wip, AtomicThrowable error) {
+  98. >     if (wip.getAndIncrement() == 0) {
+  99.         Throwable ex = error.terminate();
+  100.         if (ex != null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:119: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDispose$1$1.this$0`.
+  117.   
+  118.         @Override public CompletableSubscribeProxy apply(final Completable upstream) {
+  119. >         return new CompletableSubscribeProxy() {
+  120.             @Override public Disposable subscribe() {
+  121.               return new AutoDisposeCompletable(upstream, scope).subscribe();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:119: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDispose$1$1.val$upstream`.
+  117.   
+  118.         @Override public CompletableSubscribeProxy apply(final Completable upstream) {
+  119. >         return new CompletableSubscribeProxy() {
+  120.             @Override public Disposable subscribe() {
+  121.               return new AutoDisposeCompletable(upstream, scope).subscribe();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:113: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDispose$1.val$scope`.
+  111.     public static <T> AutoDisposeConverter<T> autoDisposable(final CompletableSource scope) {
+  112.       checkNotNull(scope, "scope == null");
+  113. >     return new AutoDisposeConverter<T>() {
+  114.         @Override public ParallelFlowableSubscribeProxy<T> apply(final ParallelFlowable<T> upstream) {
+  115.           return subscribers -> new AutoDisposeParallelFlowable<>(upstream, scope).subscribe(subscribers);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDisposeEndConsumerHelper.java:108: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `consumer`.
+  106.      */
+  107.     public static void reportDoubleSubscription(Class<?> consumer) {
+  108. >     RxJavaPlugins.onError(new ProtocolViolationException(composeMessage(consumer.getName())));
+  109.     }
+  110.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:112: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `scope` passed to nonnull parameter.
+  110.      */
+  111.     public static <T> AutoDisposeConverter<T> autoDisposable(final CompletableSource scope) {
+  112. >     checkNotNull(scope, "scope == null");
+  113.       return new AutoDisposeConverter<T>() {
+  114.         @Override public ParallelFlowableSubscribeProxy<T> apply(final ParallelFlowable<T> upstream) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:120: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  118.     static boolean set(AtomicReference<Subscription> field, @Nullable Subscription s) {
+  119.       for (; ; ) {
+  120. >       Subscription current = field.get();
+  121.         if (current == CANCELLED) {
+  122.           if (s != null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:127: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  125.           return false;
+  126.         }
+  127. >       if (field.compareAndSet(current, s)) {
+  128.           if (current != null) {
+  129.             current.cancel();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:121: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `value` passed to nonnull parameter.
+  119.     public static <T> boolean onNext(Observer<? super T> observer, T value, AtomicInteger wip, AtomicThrowable error) {
+  120.       if (wip.get() == 0 && wip.compareAndSet(0, 1)) {
+  121. >       observer.onNext(value);
+  122.         if (wip.decrementAndGet() != 0) {
+  123.           Throwable ex = error.terminate();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:123: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `error`.
+  121.         observer.onNext(value);
+  122.         if (wip.decrementAndGet() != 0) {
+  123. >         Throwable ex = error.terminate();
+  124.           if (ex != null) {
+  125.             observer.onError(ex);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:121: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  119.     public static <T> boolean onNext(Observer<? super T> observer, T value, AtomicInteger wip, AtomicThrowable error) {
+  120.       if (wip.get() == 0 && wip.compareAndSet(0, 1)) {
+  121. >       observer.onNext(value);
+  122.         if (wip.decrementAndGet() != 0) {
+  123.           Throwable ex = error.terminate();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:125: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  123.           Throwable ex = error.terminate();
+  124.           if (ex != null) {
+  125. >           observer.onError(ex);
+  126.           } else {
+  127.             observer.onComplete();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:127: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  125.             observer.onError(ex);
+  126.           } else {
+  127. >           observer.onComplete();
+  128.           }
+  129.           return true;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:120: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `wip`.
+  118.      */
+  119.     public static <T> boolean onNext(Observer<? super T> observer, T value, AtomicInteger wip, AtomicThrowable error) {
+  120. >     if (wip.get() == 0 && wip.compareAndSet(0, 1)) {
+  121.         observer.onNext(value);
+  122.         if (wip.decrementAndGet() != 0) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:122: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `wip`.
+  120.       if (wip.get() == 0 && wip.compareAndSet(0, 1)) {
+  121.         observer.onNext(value);
+  122. >       if (wip.decrementAndGet() != 0) {
+  123.           Throwable ex = error.terminate();
+  124.           if (ex != null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:146: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `s` passed to nonnull parameter.
+  144.      */
+  145.     static boolean setOnce(AtomicReference<Subscription> field, Subscription s) {
+  146. >     AutoDisposeUtil.checkNotNull(s, "s is null");
+  147.       if (!field.compareAndSet(null, s)) {
+  148.         s.cancel();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:147: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  145.     static boolean setOnce(AtomicReference<Subscription> field, Subscription s) {
+  146.       AutoDisposeUtil.checkNotNull(s, "s is null");
+  147. >     if (!field.compareAndSet(null, s)) {
+  148.         s.cancel();
+  149.         if (field.get() != CANCELLED) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:149: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  147.       if (!field.compareAndSet(null, s)) {
+  148.         s.cancel();
+  149. >       if (field.get() != CANCELLED) {
+  150.           reportSubscriptionSet();
+  151.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:148: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `s`.
+  146.       AutoDisposeUtil.checkNotNull(s, "s is null");
+  147.       if (!field.compareAndSet(null, s)) {
+  148. >       s.cancel();
+  149.         if (field.get() != CANCELLED) {
+  150.           reportSubscriptionSet();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:151: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `ex` passed to nonnull parameter.
+  149.         }
+  150.       } else {
+  151. >       RxJavaPlugins.onError(ex);
+  152.       }
+  153.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:146: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `error`.
+  144.      */
+  145.     public static void onError(Observer<?> observer, Throwable ex, AtomicInteger wip, AtomicThrowable error) {
+  146. >     if (error.addThrowable(ex)) {
+  147.         if (wip.getAndIncrement() == 0) {
+  148.           observer.onError(error.terminate());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:148: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `error`.
+  146.       if (error.addThrowable(ex)) {
+  147.         if (wip.getAndIncrement() == 0) {
+  148. >         observer.onError(error.terminate());
+  149.         }
+  150.       } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:148: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  146.       if (error.addThrowable(ex)) {
+  147.         if (wip.getAndIncrement() == 0) {
+  148. >         observer.onError(error.terminate());
+  149.         }
+  150.       } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:147: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `wip`.
+  145.     public static void onError(Observer<?> observer, Throwable ex, AtomicInteger wip, AtomicThrowable error) {
+  146.       if (error.addThrowable(ex)) {
+  147. >       if (wip.getAndIncrement() == 0) {
+  148.           observer.onError(error.terminate());
+  149.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:165: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `error`.
+  163.     public static void onComplete(Observer<?> observer, AtomicInteger wip, AtomicThrowable error) {
+  164.       if (wip.getAndIncrement() == 0) {
+  165. >       Throwable ex = error.terminate();
+  166.         if (ex != null) {
+  167.           observer.onError(ex);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:167: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  165.         Throwable ex = error.terminate();
+  166.         if (ex != null) {
+  167. >         observer.onError(ex);
+  168.         } else {
+  169.           observer.onComplete();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:169: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  167.           observer.onError(ex);
+  168.         } else {
+  169. >         observer.onComplete();
+  170.         }
+  171.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:164: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `wip`.
+  162.      */
+  163.     public static void onComplete(Observer<?> observer, AtomicInteger wip, AtomicThrowable error) {
+  164. >     if (wip.getAndIncrement() == 0) {
+  165.         Throwable ex = error.terminate();
+  166.         if (ex != null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:166: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `s` passed to nonnull parameter.
+  164.      */
+  165.     static boolean setIfNotSet(AtomicReference<Subscription> field, Subscription s) {
+  166. >     AutoDisposeUtil.checkNotNull(s, "s is null");
+  167.       return field.compareAndSet(null, s);
+  168.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:167: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  165.     static boolean setIfNotSet(AtomicReference<Subscription> field, Subscription s) {
+  166.       AutoDisposeUtil.checkNotNull(s, "s is null");
+  167. >     return field.compareAndSet(null, s);
+  168.     }
+  169.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:182: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  180.     static boolean replace(AtomicReference<Subscription> field, @Nullable Subscription s) {
+  181.       for (; ; ) {
+  182. >       Subscription current = field.get();
+  183.         if (current == CANCELLED) {
+  184.           if (s != null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:189: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  187.           return false;
+  188.         }
+  189. >       if (field.compareAndSet(current, s)) {
+  190.           return true;
+  191.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:205: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  203.      */
+  204.     static boolean cancel(AtomicReference<Subscription> field) {
+  205. >     Subscription current = field.get();
+  206.       if (current != CANCELLED) {
+  207.         current = field.getAndSet(CANCELLED);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:207: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  205.       Subscription current = field.get();
+  206.       if (current != CANCELLED) {
+  207. >       current = field.getAndSet(CANCELLED);
+  208.         if (current != CANCELLED) {
+  209.           if (current != null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:216: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDispose$1$3.this$0`.
+  214.   
+  215.         @Override public MaybeSubscribeProxy<T> apply(final Maybe<T> upstream) {
+  216. >         return new MaybeSubscribeProxy<T>() {
+  217.             @Override public Disposable subscribe() {
+  218.               return new AutoDisposeMaybe<>(upstream, scope).subscribe();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:216: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDispose$1$3.val$upstream`.
+  214.   
+  215.         @Override public MaybeSubscribeProxy<T> apply(final Maybe<T> upstream) {
+  216. >         return new MaybeSubscribeProxy<T>() {
+  217.             @Override public Disposable subscribe() {
+  218.               return new AutoDisposeMaybe<>(upstream, scope).subscribe();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:229: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `requested`.
+  227.     static boolean deferredSetOnce(AtomicReference<Subscription> field, AtomicLong requested, Subscription s) {
+  228.       if (AutoSubscriptionHelper.setOnce(field, s)) {
+  229. >       long r = requested.getAndSet(0L);
+  230.         if (r != 0L) {
+  231.           s.request(r);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:231: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `s`.
+  229.         long r = requested.getAndSet(0L);
+  230.         if (r != 0L) {
+  231. >         s.request(r);
+  232.         }
+  233.         return true;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:247: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  245.      */
+  246.     static void deferredRequest(AtomicReference<Subscription> field, AtomicLong requested, long n) {
+  247. >     Subscription s = field.get();
+  248.       if (s != null) {
+  249.         s.request(n);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:254: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `field`.
+  252.           AutoDisposeBackpressureHelper.add(requested, n);
+  253.   
+  254. >         s = field.get();
+  255.           if (s != null) {
+  256.             long r = requested.getAndSet(0L);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoSubscriptionHelper.java:256: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `requested`.
+  254.           s = field.get();
+  255.           if (s != null) {
+  256. >           long r = requested.getAndSet(0L);
+  257.             if (r != 0L) {
+  258.               s.request(r);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:261: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDispose$1$4.this$0`.
+  259.   
+  260.         @Override public ObservableSubscribeProxy<T> apply(final Observable<T> upstream) {
+  261. >         return new ObservableSubscribeProxy<T>() {
+  262.             @Override public Disposable subscribe() {
+  263.               return new AutoDisposeObservable<>(upstream, scope).subscribe();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:261: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDispose$1$4.val$upstream`.
+  259.   
+  260.         @Override public ObservableSubscribeProxy<T> apply(final Observable<T> upstream) {
+  261. >         return new ObservableSubscribeProxy<T>() {
+  262.             @Override public Disposable subscribe() {
+  263.               return new AutoDisposeObservable<>(upstream, scope).subscribe();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:313: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDispose$1$5.this$0`.
+  311.   
+  312.         @Override public SingleSubscribeProxy<T> apply(final Single<T> upstream) {
+  313. >         return new SingleSubscribeProxy<T>() {
+  314.             @Override public Disposable subscribe() {
+  315.               return new AutoDisposeSingle<>(upstream, scope).subscribe();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/main/java/com/uber/autodispose/AutoDispose.java:313: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.AutoDispose$1$5.val$upstream`.
+  311.   
+  312.         @Override public SingleSubscribeProxy<T> apply(final Single<T> upstream) {
+  313. >         return new SingleSubscribeProxy<T>() {
+  314.             @Override public Disposable subscribe() {
+  315.               return new AutoDisposeSingle<>(upstream, scope).subscribe();
+
+Summary of the reports
+
+     GRADUAL_CHECK: 61
+  GRADUAL_BOUNDARY: 57
+    GRADUAL_STATIC: 2Found 17 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RecordingObserver.java:42: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.test.RecordingObserver.logger`.
+  40.   
+  41.     public RecordingObserver(Logger logger) {
+  42. >     this.logger = logger;
+  43.     }
+  44.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RxErrorsRule.java:46: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  44.   
+  45.     @Override protected void finished(Description description) {
+  46. >     RxJavaPlugins.setErrorHandler(null);
+  47.     }
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RxErrorsRule.java:57: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `Throwable RxErrorsRule.take()`.
+  55.       try {
+  56.         error = errors.pollFirst(1, TimeUnit.SECONDS);
+  57. >     } catch (InterruptedException e) {
+  58.         throw new RuntimeException(e);
+  59.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RxErrorsRule.java:57: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `Throwable RxErrorsRule.take()`.
+  55.       try {
+  56.         error = errors.pollFirst(1, TimeUnit.SECONDS);
+  57. >     } catch (InterruptedException e) {
+  58.         throw new RuntimeException(e);
+  59.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RecordingObserver.java:74: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `Object RecordingObserver.takeEvent(Class)`.
+  72.       try {
+  73.         event = events.pollFirst(1, TimeUnit.SECONDS);
+  74. >     } catch (InterruptedException e) {
+  75.         throw new RuntimeException(e);
+  76.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RecordingObserver.java:78: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `wanted`.
+  76.       }
+  77.       if (event == null) {
+  78. >       throw new NoSuchElementException("No event found while waiting for " + wanted.getSimpleName());
+  79.       }
+  80.       assertThat(event).isInstanceOf(wanted);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RecordingObserver.java:81: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `wanted`.
+  79.       }
+  80.       assertThat(event).isInstanceOf(wanted);
+  81. >     return wanted.cast(event);
+  82.     }
+  83.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RecordingObserver.java:74: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `Object RecordingObserver.takeEvent(Class)`.
+  72.       try {
+  73.         event = events.pollFirst(1, TimeUnit.SECONDS);
+  74. >     } catch (InterruptedException e) {
+  75.         throw new RuntimeException(e);
+  76.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RecordingObserver.java:88: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `boolean RecordingObserver.hasNextEvent()`.
+  86.       try {
+  87.         event = events.pollFirst(0, TimeUnit.SECONDS);
+  88. >     } catch (InterruptedException e) {
+  89.         throw new RuntimeException(e);
+  90.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RecordingObserver.java:88: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `boolean RecordingObserver.hasNextEvent()`.
+  86.       try {
+  87.         event = events.pollFirst(0, TimeUnit.SECONDS);
+  88. >     } catch (InterruptedException e) {
+  89.         throw new RuntimeException(e);
+  90.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RecordingObserver.java:120: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void RecordingObserver.assertNoMoreEvents()`.
+  118.         Object event = takeEvent(Object.class);
+  119.         throw new IllegalStateException("Expected no more events but got " + event);
+  120. >     } catch (NoSuchElementException ignored) {
+  121.       }
+  122.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RecordingObserver.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.test.RecordingObserver$OnNext.this$0`.
+  126.   
+  127.       /* private */
+  128. >     OnNext(T value) {
+  129.         this.value = value;
+  130.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RecordingObserver.java:129: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.test.RecordingObserver$OnNext.value`.
+  127.       /* private */
+  128.       OnNext(T value) {
+  129. >       this.value = value;
+  130.       }
+  131.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RecordingObserver.java:149: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.test.RecordingObserver$OnError.throwable`.
+  147.       /* private */
+  148.       OnError(Throwable throwable) {
+  149. >       this.throwable = throwable;
+  150.       }
+  151.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RecordingObserver.java:163: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.test.RecordingObserver$OnSubscribe.disposable`.
+  161.       /* private */
+  162.       OnSubscribe(Disposable disposable) {
+  163. >       this.disposable = disposable;
+  164.       }
+  165.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RecordingObserver.java:176: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.test.RecordingObserver$OnSuccess.this$0`.
+  174.   
+  175.       /* private */
+  176. >     OnSuccess(T value) {
+  177.         this.value = value;
+  178.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/test-utils/src/main/java/com/uber/autodispose/test/RecordingObserver.java:177: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.test.RecordingObserver$OnSuccess.value`.
+  175.       /* private */
+  176.       OnSuccess(T value) {
+  177. >       this.value = value;
+  178.       }
+  179.   
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 10
+    GRADUAL_STATIC: 5
+     GRADUAL_CHECK: 2Found 59 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/TestUtil.java:32: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `CompletableSource TestUtil.lambda$makeProvider$1(CompletableSubject)`.
+  30.   
+  31.     static ScopeProvider makeProvider(final CompletableSubject scope) {
+  32. >     return () -> scope;
+  33.     }
+  34.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:151: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AutoDisposeObserverTest.verifyObserverDelegate()`.
+  149.             atomicObserver.get());
+  150.       } finally {
+  151. >       RxJavaPlugins.reset();
+  152.       }
+  153.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:157: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AutoDisposeSubscriberTest.verifySubscriberDelegate()`.
+  155.             atomicSubscriber.get());
+  156.       } finally {
+  157. >       RxJavaPlugins.reset();
+  158.       }
+  159.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeCompletableObserverTest.java:155: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AutoDisposeCompletableObserverTest.verifyObserverDelegate()`.
+  153.             atomicObserver.get());
+  154.       } finally {
+  155. >       RxJavaPlugins.reset();
+  156.       }
+  157.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:139: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `Observer AutoDisposeObserverTest.lambda$verifyObserverDelegate$2(AtomicReference,AtomicReference,Observable,Observer)`.
+  137.             RxJavaPlugins.setOnObservableSubscribe(null);
+  138.           }
+  139. >         return observer;
+  140.         });
+  141.         Observable.just(1)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:135: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicAutoDisposingObserver`.
+  133.           if (atomicObserver.get() == null) {
+  134.             atomicObserver.set(observer);
+  135. >         } else if (atomicAutoDisposingObserver.get() == null) {
+  136.             atomicAutoDisposingObserver.set(observer);
+  137.             RxJavaPlugins.setOnObservableSubscribe(null);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:136: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicAutoDisposingObserver`.
+  134.             atomicObserver.set(observer);
+  135.           } else if (atomicAutoDisposingObserver.get() == null) {
+  136. >           atomicAutoDisposingObserver.set(observer);
+  137.             RxJavaPlugins.setOnObservableSubscribe(null);
+  138.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:133: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicObserver`.
+  131.       try {
+  132.         RxJavaPlugins.setOnObservableSubscribe((source, observer) -> {
+  133. >         if (atomicObserver.get() == null) {
+  134.             atomicObserver.set(observer);
+  135.           } else if (atomicAutoDisposingObserver.get() == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:134: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicObserver`.
+  132.         RxJavaPlugins.setOnObservableSubscribe((source, observer) -> {
+  133.           if (atomicObserver.get() == null) {
+  134. >           atomicObserver.set(observer);
+  135.           } else if (atomicAutoDisposingObserver.get() == null) {
+  136.             atomicAutoDisposingObserver.set(observer);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:137: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  135.           } else if (atomicAutoDisposingObserver.get() == null) {
+  136.             atomicAutoDisposingObserver.set(observer);
+  137. >           RxJavaPlugins.setOnObservableSubscribe(null);
+  138.           }
+  139.           return observer;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:145: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `Subscriber AutoDisposeSubscriberTest.lambda$verifySubscriberDelegate$1(AtomicReference,AtomicReference,Flowable,Subscriber)`.
+  143.             RxJavaPlugins.setOnFlowableSubscribe(null);
+  144.           }
+  145. >         return subscriber;
+  146.         });
+  147.         Flowable.just(1)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:139: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicAutoDisposingSubscriber`.
+  137.                 .toString());
+  138.             atomicSubscriber.set(subscriber);
+  139. >         } else if (atomicAutoDisposingSubscriber.get() == null) {
+  140.             System.out.println(subscriber.getClass()
+  141.                 .toString());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:142: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicAutoDisposingSubscriber`.
+  140.             System.out.println(subscriber.getClass()
+  141.                 .toString());
+  142. >           atomicAutoDisposingSubscriber.set(subscriber);
+  143.             RxJavaPlugins.setOnFlowableSubscribe(null);
+  144.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:135: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicSubscriber`.
+  133.       try {
+  134.         RxJavaPlugins.setOnFlowableSubscribe((source, subscriber) -> {
+  135. >         if (atomicSubscriber.get() == null) {
+  136.             System.out.println(subscriber.getClass()
+  137.                 .toString());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:138: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicSubscriber`.
+  136.             System.out.println(subscriber.getClass()
+  137.                 .toString());
+  138. >           atomicSubscriber.set(subscriber);
+  139.           } else if (atomicAutoDisposingSubscriber.get() == null) {
+  140.             System.out.println(subscriber.getClass()
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:136: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `subscriber`.
+  134.         RxJavaPlugins.setOnFlowableSubscribe((source, subscriber) -> {
+  135.           if (atomicSubscriber.get() == null) {
+  136. >           System.out.println(subscriber.getClass()
+  137.                 .toString());
+  138.             atomicSubscriber.set(subscriber);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:140: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `subscriber`.
+  138.             atomicSubscriber.set(subscriber);
+  139.           } else if (atomicAutoDisposingSubscriber.get() == null) {
+  140. >           System.out.println(subscriber.getClass()
+  141.                 .toString());
+  142.             atomicAutoDisposingSubscriber.set(subscriber);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:143: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  141.                 .toString());
+  142.             atomicAutoDisposingSubscriber.set(subscriber);
+  143. >           RxJavaPlugins.setOnFlowableSubscribe(null);
+  144.           }
+  145.           return subscriber;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeCompletableObserverTest.java:143: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `CompletableObserver AutoDisposeCompletableObserverTest.lambda$verifyObserverDelegate$1(AtomicReference,AtomicReference,Completable,CompletableObserver)`.
+  141.             RxJavaPlugins.setOnObservableSubscribe(null);
+  142.           }
+  143. >         return observer;
+  144.         });
+  145.         Completable.complete()
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeCompletableObserverTest.java:139: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicAutoDisposingObserver`.
+  137.           if (atomicObserver.get() == null) {
+  138.             atomicObserver.set(observer);
+  139. >         } else if (atomicAutoDisposingObserver.get() == null) {
+  140.             atomicAutoDisposingObserver.set(observer);
+  141.             RxJavaPlugins.setOnObservableSubscribe(null);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeCompletableObserverTest.java:140: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicAutoDisposingObserver`.
+  138.             atomicObserver.set(observer);
+  139.           } else if (atomicAutoDisposingObserver.get() == null) {
+  140. >           atomicAutoDisposingObserver.set(observer);
+  141.             RxJavaPlugins.setOnObservableSubscribe(null);
+  142.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeCompletableObserverTest.java:137: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicObserver`.
+  135.       try {
+  136.         RxJavaPlugins.setOnCompletableSubscribe((source, observer) -> {
+  137. >         if (atomicObserver.get() == null) {
+  138.             atomicObserver.set(observer);
+  139.           } else if (atomicAutoDisposingObserver.get() == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeCompletableObserverTest.java:138: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicObserver`.
+  136.         RxJavaPlugins.setOnCompletableSubscribe((source, observer) -> {
+  137.           if (atomicObserver.get() == null) {
+  138. >           atomicObserver.set(observer);
+  139.           } else if (atomicAutoDisposingObserver.get() == null) {
+  140.             atomicAutoDisposingObserver.set(observer);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeCompletableObserverTest.java:141: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  139.           } else if (atomicAutoDisposingObserver.get() == null) {
+  140.             atomicAutoDisposingObserver.set(observer);
+  141. >           RxJavaPlugins.setOnObservableSubscribe(null);
+  142.           }
+  143.           return observer;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSingleObserverTest.java:164: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AutoDisposeSingleObserverTest.verifyObserverDelegate()`.
+  162.             atomicObserver.get());
+  163.       } finally {
+  164. >       RxJavaPlugins.reset();
+  165.       }
+  166.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSingleObserverTest.java:152: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `SingleObserver AutoDisposeSingleObserverTest.lambda$verifyObserverDelegate$2(AtomicReference,AtomicReference,Single,SingleObserver)`.
+  150.             RxJavaPlugins.setOnObservableSubscribe(null);
+  151.           }
+  152. >         return observer;
+  153.         });
+  154.         Single.just(1)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSingleObserverTest.java:148: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicAutoDisposingObserver`.
+  146.           if (atomicObserver.get() == null) {
+  147.             atomicObserver.set(observer);
+  148. >         } else if (atomicAutoDisposingObserver.get() == null) {
+  149.             atomicAutoDisposingObserver.set(observer);
+  150.             RxJavaPlugins.setOnObservableSubscribe(null);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSingleObserverTest.java:149: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicAutoDisposingObserver`.
+  147.             atomicObserver.set(observer);
+  148.           } else if (atomicAutoDisposingObserver.get() == null) {
+  149. >           atomicAutoDisposingObserver.set(observer);
+  150.             RxJavaPlugins.setOnObservableSubscribe(null);
+  151.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSingleObserverTest.java:146: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicObserver`.
+  144.       try {
+  145.         RxJavaPlugins.setOnSingleSubscribe((source, observer) -> {
+  146. >         if (atomicObserver.get() == null) {
+  147.             atomicObserver.set(observer);
+  148.           } else if (atomicAutoDisposingObserver.get() == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSingleObserverTest.java:147: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicObserver`.
+  145.         RxJavaPlugins.setOnSingleSubscribe((source, observer) -> {
+  146.           if (atomicObserver.get() == null) {
+  147. >           atomicObserver.set(observer);
+  148.           } else if (atomicAutoDisposingObserver.get() == null) {
+  149.             atomicAutoDisposingObserver.set(observer);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSingleObserverTest.java:150: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  148.           } else if (atomicAutoDisposingObserver.get() == null) {
+  149.             atomicAutoDisposingObserver.set(observer);
+  150. >           RxJavaPlugins.setOnObservableSubscribe(null);
+  151.           }
+  152.           return observer;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:170: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `*(emitter)[_]`.
+  168.       assertThat(scope.hasObservers()).isTrue();
+  169.   
+  170. >     emitter[0].onNext(1);
+  171.   
+  172.       scope.onComplete();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:173: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `*(emitter)[_]`.
+  171.   
+  172.       scope.onComplete();
+  173. >     emitter[0].onNext(2);
+  174.   
+  175.       // Verify cancellation was called
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:161: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `emitter`.
+  159.       Observable<Integer> source = Observable.create(e -> {
+  160.         e.setCancellable(i::incrementAndGet);
+  161. >       emitter[0] = e;
+  162.       });
+  163.       CompletableSubject scope = CompletableSubject.create();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:160: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  158.       final ObservableEmitter<Integer>[] emitter = new ObservableEmitter[1];
+  159.       Observable<Integer> source = Observable.create(e -> {
+  160. >       e.setCancellable(i::incrementAndGet);
+  161.         emitter[0] = e;
+  162.       });
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:160: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `i`.
+  158.       final ObservableEmitter<Integer>[] emitter = new ObservableEmitter[1];
+  159.       Observable<Integer> source = Observable.create(e -> {
+  160. >       e.setCancellable(i::incrementAndGet);
+  161.         emitter[0] = e;
+  162.       });
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:176: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `*(emitter)[_]`.
+  174.       assertThat(scope.hasObservers()).isTrue();
+  175.   
+  176. >     emitter[0].onNext(1);
+  177.   
+  178.       scope.onComplete();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:179: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `*(emitter)[_]`.
+  177.   
+  178.       scope.onComplete();
+  179. >     emitter[0].onNext(2);
+  180.   
+  181.       // Verify cancellation was called
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeCompletableObserverTest.java:162: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  160.       final AtomicInteger i = new AtomicInteger();
+  161.       //noinspection unchecked because Java
+  162. >     Completable source = Completable.create(e -> e.setCancellable(i::incrementAndGet));
+  163.       CompletableSubject scope = CompletableSubject.create();
+  164.       source.as(autoDisposable(scope))
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeCompletableObserverTest.java:162: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `i`.
+  160.       final AtomicInteger i = new AtomicInteger();
+  161.       //noinspection unchecked because Java
+  162. >     Completable source = Completable.create(e -> e.setCancellable(i::incrementAndGet));
+  163.       CompletableSubject scope = CompletableSubject.create();
+  164.       source.as(autoDisposable(scope))
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeMaybeObserverTest.java:188: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AutoDisposeMaybeObserverTest.verifyObserverDelegate()`.
+  186.             atomicObserver.get());
+  187.       } finally {
+  188. >       RxJavaPlugins.reset();
+  189.       }
+  190.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:167: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `emitter`.
+  165.       Flowable<Integer> source = Flowable.create(e -> {
+  166.         e.setCancellable(i::incrementAndGet);
+  167. >       emitter[0] = e;
+  168.       }, BackpressureStrategy.LATEST);
+  169.       CompletableSubject scope = CompletableSubject.create();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:166: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  164.       final FlowableEmitter<Integer>[] emitter = new FlowableEmitter[1];
+  165.       Flowable<Integer> source = Flowable.create(e -> {
+  166. >       e.setCancellable(i::incrementAndGet);
+  167.         emitter[0] = e;
+  168.       }, BackpressureStrategy.LATEST);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:166: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `i`.
+  164.       final FlowableEmitter<Integer>[] emitter = new FlowableEmitter[1];
+  165.       Flowable<Integer> source = Flowable.create(e -> {
+  166. >       e.setCancellable(i::incrementAndGet);
+  167.         emitter[0] = e;
+  168.       }, BackpressureStrategy.LATEST);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeMaybeObserverTest.java:176: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `MaybeObserver AutoDisposeMaybeObserverTest.lambda$verifyObserverDelegate$3(AtomicReference,AtomicReference,Maybe,MaybeObserver)`.
+  174.             RxJavaPlugins.setOnObservableSubscribe(null);
+  175.           }
+  176. >         return observer;
+  177.         });
+  178.         Maybe.just(1)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeMaybeObserverTest.java:172: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicAutoDisposingObserver`.
+  170.           if (atomicObserver.get() == null) {
+  171.             atomicObserver.set(observer);
+  172. >         } else if (atomicAutoDisposingObserver.get() == null) {
+  173.             atomicAutoDisposingObserver.set(observer);
+  174.             RxJavaPlugins.setOnObservableSubscribe(null);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeMaybeObserverTest.java:173: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicAutoDisposingObserver`.
+  171.             atomicObserver.set(observer);
+  172.           } else if (atomicAutoDisposingObserver.get() == null) {
+  173. >           atomicAutoDisposingObserver.set(observer);
+  174.             RxJavaPlugins.setOnObservableSubscribe(null);
+  175.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeMaybeObserverTest.java:170: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicObserver`.
+  168.       try {
+  169.         RxJavaPlugins.setOnMaybeSubscribe((source, observer) -> {
+  170. >         if (atomicObserver.get() == null) {
+  171.             atomicObserver.set(observer);
+  172.           } else if (atomicAutoDisposingObserver.get() == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeMaybeObserverTest.java:171: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `atomicObserver`.
+  169.         RxJavaPlugins.setOnMaybeSubscribe((source, observer) -> {
+  170.           if (atomicObserver.get() == null) {
+  171. >           atomicObserver.set(observer);
+  172.           } else if (atomicAutoDisposingObserver.get() == null) {
+  173.             atomicAutoDisposingObserver.set(observer);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeMaybeObserverTest.java:174: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  172.           } else if (atomicAutoDisposingObserver.get() == null) {
+  173.             atomicAutoDisposingObserver.set(observer);
+  174. >           RxJavaPlugins.setOnObservableSubscribe(null);
+  175.           }
+  176.           return observer;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSingleObserverTest.java:171: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  169.       final AtomicInteger i = new AtomicInteger();
+  170.       //noinspection unchecked because Java
+  171. >     Single<Integer> source = Single.create(e -> e.setCancellable(i::incrementAndGet));
+  172.       CompletableSubject scope = CompletableSubject.create();
+  173.       source.as(autoDisposable(scope))
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSingleObserverTest.java:171: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `i`.
+  169.       final AtomicInteger i = new AtomicInteger();
+  170.       //noinspection unchecked because Java
+  171. >     Single<Integer> source = Single.create(e -> e.setCancellable(i::incrementAndGet));
+  172.       CompletableSubject scope = CompletableSubject.create();
+  173.       source.as(autoDisposable(scope))
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeMaybeObserverTest.java:195: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  193.       final AtomicInteger i = new AtomicInteger();
+  194.       //noinspection unchecked because Java
+  195. >     Maybe<Integer> source = Maybe.create(e -> e.setCancellable(i::incrementAndGet));
+  196.       CompletableSubject scope = CompletableSubject.create();
+  197.       source.as(autoDisposable(scope))
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeMaybeObserverTest.java:195: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `i`.
+  193.       final AtomicInteger i = new AtomicInteger();
+  194.       //noinspection unchecked because Java
+  195. >     Maybe<Integer> source = Maybe.create(e -> e.setCancellable(i::incrementAndGet));
+  196.       CompletableSubject scope = CompletableSubject.create();
+  197.       source.as(autoDisposable(scope))
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeCompletableObserverTest.java:221: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `throwable`.
+  219.       o.assertNoValues();
+  220.       o.assertError(throwable -> throwable instanceof IllegalStateException
+  221. >         && throwable.getCause() instanceof OutsideScopeException);
+  222.     }
+  223.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeObserverTest.java:224: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `throwable`.
+  222.       o.assertNoValues();
+  223.       o.assertError(throwable -> throwable instanceof IllegalStateException
+  224. >         && throwable.getCause() instanceof OutsideScopeException);
+  225.     }
+  226.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSingleObserverTest.java:229: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `throwable`.
+  227.       o.assertNoValues();
+  228.       o.assertError(throwable -> throwable instanceof IllegalStateException
+  229. >         && throwable.getCause() instanceof OutsideScopeException);
+  230.     }
+  231.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeSubscriberTest.java:230: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `throwable`.
+  228.       o.assertNoValues();
+  229.       o.assertError(throwable -> throwable instanceof IllegalStateException
+  230. >         && throwable.getCause() instanceof OutsideScopeException);
+  231.     }
+  232.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose/src/test/java/com/uber/autodispose/AutoDisposeMaybeObserverTest.java:253: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `throwable`.
+  251.       o.assertNoValues();
+  252.       o.assertError(throwable -> throwable instanceof IllegalStateException
+  253. >         && throwable.getCause() instanceof OutsideScopeException);
+  254.     }
+  255.   }
+
+Summary of the reports
+
+     GRADUAL_CHECK: 43
+    GRADUAL_STATIC: 10
+  GRADUAL_BOUNDARY: 6Found 5 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose-rxlifecycle/src/main/java/com/ubercab/autodispose/rxlifecycle/RxLifecycleInterop.java:51: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `provider`.
+  49.      */
+  50.     public static <E> ScopeProvider from(final LifecycleProvider<E> provider) {
+  51. >     return () -> provider.lifecycle()
+  52.           .compose(provider.bindToLifecycle())
+  53.           .ignoreElements();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose-rxlifecycle/src/main/java/com/ubercab/autodispose/rxlifecycle/RxLifecycleInterop.java:52: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `provider`.
+  50.     public static <E> ScopeProvider from(final LifecycleProvider<E> provider) {
+  51.       return () -> provider.lifecycle()
+  52. >         .compose(provider.bindToLifecycle())
+  53.           .ignoreElements();
+  54.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose-rxlifecycle/src/main/java/com/ubercab/autodispose/rxlifecycle/RxLifecycleInterop.java:73: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `event` passed to nonnull parameter.
+  71.     public static <E> ScopeProvider from(final LifecycleProvider<E> provider, final E event) {
+  72.       return () -> provider.lifecycle()
+  73. >         .compose(provider.bindUntilEvent(event))
+  74.           .ignoreElements();
+  75.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose-rxlifecycle/src/main/java/com/ubercab/autodispose/rxlifecycle/RxLifecycleInterop.java:72: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `provider`.
+  70.      */
+  71.     public static <E> ScopeProvider from(final LifecycleProvider<E> provider, final E event) {
+  72. >     return () -> provider.lifecycle()
+  73.           .compose(provider.bindUntilEvent(event))
+  74.           .ignoreElements();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose-rxlifecycle/src/main/java/com/ubercab/autodispose/rxlifecycle/RxLifecycleInterop.java:73: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `provider`.
+  71.     public static <E> ScopeProvider from(final LifecycleProvider<E> provider, final E event) {
+  72.       return () -> provider.lifecycle()
+  73. >         .compose(provider.bindUntilEvent(event))
+  74.           .ignoreElements();
+  75.     }
+
+Summary of the reports
+
+     GRADUAL_CHECK: 4
+  GRADUAL_BOUNDARY: 1Found 3 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose-rxlifecycle/src/test/java/com/ubercab/autodispose/rxlifecycle/TestLifecycleProvider.java:30: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `event`.
+  28.   
+  29.     private static final Function<Event, Event> CORRESPONDING_EVENTS = event -> {
+  30. >     switch (event) {
+  31.         case CREATE:
+  32.           return Event.DESTROY;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose-rxlifecycle/src/test/java/com/ubercab/autodispose/rxlifecycle/TestLifecycleProvider.java:30: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void TestLifecycleProvider$1.<clinit>()`.
+  28.   
+  29.     private static final Function<Event, Event> CORRESPONDING_EVENTS = event -> {
+  30. >     switch (event) {
+  31.         case CREATE:
+  32.           return Event.DESTROY;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/autodispose-rxlifecycle/src/test/java/com/ubercab/autodispose/rxlifecycle/TestLifecycleProvider.java:45: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `event` passed to nonnull parameter.
+  43.   
+  44.     @Override public <T> LifecycleTransformer<T> bindUntilEvent(Event event) {
+  45. >     return RxLifecycle.bindUntilEvent(lifecycle, event);
+  46.     }
+  47.   
+
+Summary of the reports
+
+    GRADUAL_STATIC: 1
+  GRADUAL_BOUNDARY: 1
+     GRADUAL_CHECK: 1Found 16 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/TestLifecycleScopeProvider.java:47: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  45.      */
+  46.     public static TestLifecycleScopeProvider create() {
+  47. >     return new TestLifecycleScopeProvider(null);
+  48.     }
+  49.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/TestLifecycleScopeProvider.java:58: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `initialValue` passed to nonnull parameter.
+  56.      */
+  57.     public static TestLifecycleScopeProvider createInitial(TestLifecycle initialValue) {
+  58. >     return new TestLifecycleScopeProvider(initialValue);
+  59.     }
+  60.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/TestLifecycleScopeProvider.java:67: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `testLifecycle`.
+  65.     @Override public CorrespondingEventsFunction<TestLifecycle> correspondingEvents() {
+  66.       return testLifecycle -> {
+  67. >       switch (testLifecycle) {
+  68.           case STARTED:
+  69.             return TestLifecycle.STOPPED;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/TestLifecycleScopeProvider.java:67: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void TestLifecycleScopeProvider$1.<clinit>()`.
+  65.     @Override public CorrespondingEventsFunction<TestLifecycle> correspondingEvents() {
+  66.       return testLifecycle -> {
+  67. >       switch (testLifecycle) {
+  68.           case STARTED:
+  69.             return TestLifecycle.STOPPED;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/LifecycleScopes.java:88: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `CompletableSource LifecycleScopes.resolveScopeFromLifecycle(LifecycleScopeProvider,boolean)`.
+  86.       try {
+  87.         endEvent = eventsFunction.apply(lastEvent);
+  88. >     } catch (Exception e) {
+  89.         if (checkEndBoundary && e instanceof LifecycleEndedException) {
+  90.           Consumer<? super OutsideScopeException> handler = AutoDisposePlugins.getOutsideScopeHandler();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/LifecycleScopes.java:97: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `CompletableSource LifecycleScopes.resolveScopeFromLifecycle(LifecycleScopeProvider,boolean)`.
+  95.               // Swallowed the end exception, just silently dispose immediately.
+  96.               return Completable.complete();
+  97. >           } catch (Exception e1) {
+  98.               return Completable.error(e1);
+  99.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/LifecycleScopes.java:80: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `provider`.
+  78.     public static <E> CompletableSource resolveScopeFromLifecycle(final LifecycleScopeProvider<E> provider,
+  79.         final boolean checkEndBoundary) throws OutsideScopeException {
+  80. >     E lastEvent = provider.peekLifecycle();
+  81.       CorrespondingEventsFunction<E> eventsFunction = provider.correspondingEvents();
+  82.       if (lastEvent == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/LifecycleScopes.java:81: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `provider`.
+  79.         final boolean checkEndBoundary) throws OutsideScopeException {
+  80.       E lastEvent = provider.peekLifecycle();
+  81. >     CorrespondingEventsFunction<E> eventsFunction = provider.correspondingEvents();
+  82.       if (lastEvent == null) {
+  83.         throw new LifecycleNotStartedException();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/LifecycleScopes.java:105: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `provider`.
+  103.         return Completable.error(e);
+  104.       }
+  105. >     return resolveScopeFromLifecycle(provider.lifecycle(), endEvent);
+  106.     }
+  107.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/LifecycleScopes.java:88: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `CompletableSource LifecycleScopes.resolveScopeFromLifecycle(LifecycleScopeProvider,boolean)`.
+  86.       try {
+  87.         endEvent = eventsFunction.apply(lastEvent);
+  88. >     } catch (Exception e) {
+  89.         if (checkEndBoundary && e instanceof LifecycleEndedException) {
+  90.           Consumer<? super OutsideScopeException> handler = AutoDisposePlugins.getOutsideScopeHandler();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/LifecycleScopes.java:97: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `CompletableSource LifecycleScopes.resolveScopeFromLifecycle(LifecycleScopeProvider,boolean)`.
+  95.               // Swallowed the end exception, just silently dispose immediately.
+  96.               return Completable.complete();
+  97. >           } catch (Exception e1) {
+  98.               return Completable.error(e1);
+  99.             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/LifecycleScopes.java:120: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `lifecycle` passed to nonnull parameter,check ambiguous argument `endEvent` passed to nonnull parameter.
+  118.         comparator = (Comparator<E>) COMPARABLE_COMPARATOR;
+  119.       }
+  120. >     return resolveScopeFromLifecycle(lifecycle, endEvent, comparator);
+  121.     }
+  122.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/LifecycleScopes.java:120: error: GRADUAL_STATIC
+  possibly-null argument `comparator` passed to nonnull parameter.
+  118.         comparator = (Comparator<E>) COMPARABLE_COMPARATOR;
+  119.       }
+  120. >     return resolveScopeFromLifecycle(lifecycle, endEvent, comparator);
+  121.     }
+  122.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/LifecycleScopes.java:115: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `CompletableSource LifecycleScopes.resolveScopeFromLifecycle(Observable,Object)`.
+  113.      */
+  114.     public static <E> CompletableSource resolveScopeFromLifecycle(Observable<E> lifecycle, final E endEvent) {
+  115. >     @Nullable Comparator<E> comparator = null;
+  116.       if (endEvent instanceof Comparable) {
+  117.         //noinspection unchecked
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/LifecycleScopes.java:135: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `comparator`.
+  133.       Predicate<E> equalityPredicate;
+  134.       if (comparator != null) {
+  135. >       equalityPredicate = e -> comparator.compare(e, endEvent) >= 0;
+  136.       } else {
+  137.         equalityPredicate = e -> e.equals(endEvent);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/main/java/com/uber/autodispose/lifecycle/LifecycleScopes.java:137: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  135.         equalityPredicate = e -> comparator.compare(e, endEvent) >= 0;
+  136.       } else {
+  137. >       equalityPredicate = e -> e.equals(endEvent);
+  138.       }
+  139.       return lifecycle.skip(1)
+
+Summary of the reports
+
+    GRADUAL_STATIC: 6
+     GRADUAL_CHECK: 6
+  GRADUAL_BOUNDARY: 4Found 11 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/DetachEventCompletable.java:35: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.DetachEventCompletable.view`.
+  33.   
+  34.     DetachEventCompletable(View view) {
+  35. >     this.view = view;
+  36.     }
+  37.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/DetachEventCompletable.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  38.     @Override public void subscribe(CompletableObserver observer) {
+  39.       Listener listener = new Listener(view, observer);
+  40. >     observer.onSubscribe(listener);
+  41.   
+  42.       // Check we're on the main thread.
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/DetachEventCompletable.java:44: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  42.       // Check we're on the main thread.
+  43.       if (!isMainThread()) {
+  44. >       observer.onError(new IllegalStateException("Views can only be bound to on the main thread!"));
+  45.         return;
+  46.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/DetachEventCompletable.java:52: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  50.           || view.getWindowToken() != null;
+  51.       if (!isAttached) {
+  52. >       observer.onError(new OutsideScopeException("View is not attached!"));
+  53.         return;
+  54.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/ViewScopeProvider.java:50: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.ViewScopeProvider.view`.
+  48.   
+  49.     private ViewScopeProvider(final View view) {
+  50. >     this.view = view;
+  51.     }
+  52.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/DetachEventCompletable.java:68: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.DetachEventCompletable$Listener.observer`.
+  66.       Listener(View view, CompletableObserver observer) {
+  67.         this.view = view;
+  68. >       this.observer = observer;
+  69.       }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/DetachEventCompletable.java:67: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.DetachEventCompletable$Listener.view`.
+  65.   
+  66.       Listener(View view, CompletableObserver observer) {
+  67. >       this.view = view;
+  68.         this.observer = observer;
+  69.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/AutoDisposeAndroidPlugins.java:96: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `ex` passed to nonnull parameter.
+  94.         }
+  95.       } catch (Exception ex) {
+  96. >       throw Exceptions.propagate(ex);
+  97.       }
+  98.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/AutoDisposeAndroidPlugins.java:95: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `boolean AutoDisposeAndroidPlugins.onCheckMainThread(BooleanSupplier)`.
+  93.           return current.getAsBoolean();
+  94.         }
+  95. >     } catch (Exception ex) {
+  96.         throw Exceptions.propagate(ex);
+  97.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/AutoDisposeAndroidPlugins.java:95: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `boolean AutoDisposeAndroidPlugins.onCheckMainThread(BooleanSupplier)`.
+  93.           return current.getAsBoolean();
+  94.         }
+  95. >     } catch (Exception ex) {
+  96.         throw Exceptions.propagate(ex);
+  97.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/AutoDisposeAndroidPlugins.java:104: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  102.      */
+  103.     public static void reset() {
+  104. >     setOnCheckMainThread(null);
+  105.     }
+  106.   }
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 6
+     GRADUAL_CHECK: 3
+    GRADUAL_STATIC: 2Found 17 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/build/generated/source/apt/debug/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable_ArchLifecycleObserver_LifecycleAdapter.java:13: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.lifecycle.LifecycleEventsObservable_ArchLifecycleObserver_LifecycleAdapter.mReceiver`.
+  11.   
+  12.     LifecycleEventsObservable_ArchLifecycleObserver_LifecycleAdapter(LifecycleEventsObservable.ArchLifecycleObserver receiver) {
+  13. >     this.mReceiver = receiver;
+  14.     }
+  15.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:53: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `lastEvent` passed to nonnull parameter.
+  51.             case ON_DESTROY:
+  52.             default:
+  53. >             throw new LifecycleEndedException("Lifecycle has ended! Last event was " + lastEvent);
+  54.           }
+  55.         };
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:41: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `lastEvent`.
+  39.     private static final CorrespondingEventsFunction<Lifecycle.Event> DEFAULT_CORRESPONDING_EVENTS =
+  40.         lastEvent -> {
+  41. >         switch (lastEvent) {
+  42.             case ON_CREATE:
+  43.               return Lifecycle.Event.ON_DESTROY;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:41: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AndroidLifecycleScopeProvider$1.<clinit>()`.
+  39.     private static final CorrespondingEventsFunction<Lifecycle.Event> DEFAULT_CORRESPONDING_EVENTS =
+  40.         lastEvent -> {
+  41. >         switch (lastEvent) {
+  42.             case ON_CREATE:
+  43.               return Lifecycle.Event.ON_DESTROY;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:45: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.lifecycle.LifecycleEventsObservable.lifecycle`.
+  43.   
+  44.     @SuppressWarnings("CheckReturnValue") LifecycleEventsObservable(Lifecycle lifecycle) {
+  45. >     this.lifecycle = lifecycle;
+  46.     }
+  47.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:59: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void LifecycleEventsObservable$1.<clinit>()`.
+  57.     void backfillEvents() {
+  58.       @Nullable Lifecycle.Event correspondingEvent;
+  59. >     switch (lifecycle.getCurrentState()) {
+  60.         case INITIALIZED:
+  61.           correspondingEvent = ON_CREATE;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:66: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `owner`.
+  64.      */
+  65.     public static AndroidLifecycleScopeProvider from(LifecycleOwner owner) {
+  66. >     return from(owner.getLifecycle());
+  67.     }
+  68.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:77: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `owner`.
+  75.      */
+  76.     public static AndroidLifecycleScopeProvider from(LifecycleOwner owner, Lifecycle.Event untilEvent) {
+  77. >     return from(owner.getLifecycle(), untilEvent);
+  78.     }
+  79.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:80: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  78.     @Override protected void subscribeActual(Observer<? super Event> observer) {
+  79.       ArchLifecycleObserver archObserver = new ArchLifecycleObserver(lifecycle, observer, eventsObservable);
+  80. >     observer.onSubscribe(archObserver);
+  81.       if (!isMainThread()) {
+  82.         observer.onError(new IllegalStateException("Lifecycles can only be bound to on the main thread!"));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:82: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  80.       observer.onSubscribe(archObserver);
+  81.       if (!isMainThread()) {
+  82. >       observer.onError(new IllegalStateException("Lifecycles can only be bound to on the main thread!"));
+  83.         return;
+  84.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:101: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.lifecycle.LifecycleEventsObservable$ArchLifecycleObserver.eventsObservable`.
+  99.         this.lifecycle = lifecycle;
+  100.         this.observer = observer;
+  101. >       this.eventsObservable = eventsObservable;
+  102.       }
+  103.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:99: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.lifecycle.LifecycleEventsObservable$ArchLifecycleObserver.lifecycle`.
+  97.           Observer<? super Event> observer,
+  98.           BehaviorSubject<Event> eventsObservable) {
+  99. >       this.lifecycle = lifecycle;
+  100.         this.observer = observer;
+  101.         this.eventsObservable = eventsObservable;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:100: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.lifecycle.LifecycleEventsObservable$ArchLifecycleObserver.observer`.
+  98.           BehaviorSubject<Event> eventsObservable) {
+  99.         this.lifecycle = lifecycle;
+  100. >       this.observer = observer;
+  101.         this.eventsObservable = eventsObservable;
+  102.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:115: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `event` passed to nonnull parameter.
+  113.             eventsObservable.onNext(event);
+  114.           }
+  115. >         observer.onNext(event);
+  116.         }
+  117.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:110: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `owner`.
+  108.     public static AndroidLifecycleScopeProvider from(LifecycleOwner owner,
+  109.         CorrespondingEventsFunction<Lifecycle.Event> boundaryResolver) {
+  110. >     return from(owner.getLifecycle(), boundaryResolver);
+  111.     }
+  112.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:130: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider.boundaryResolver`.
+  128.         CorrespondingEventsFunction<Lifecycle.Event> boundaryResolver) {
+  129.       this.lifecycleObservable = new LifecycleEventsObservable(lifecycle);
+  130. >     this.boundaryResolver = boundaryResolver;
+  131.     }
+  132.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:154: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider$UntilEventFunction.untilEvent`.
+  152.   
+  153.       UntilEventFunction(Lifecycle.Event untilEvent) {
+  154. >       this.untilEvent = untilEvent;
+  155.       }
+  156.   
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 9
+     GRADUAL_CHECK: 6
+    GRADUAL_STATIC: 2Found 22 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/androidx/recyclerview/widget/BindAwareViewHolder.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `itemView` passed to nonnull parameter.
+  28.   
+  29.     public BindAwareViewHolder(View itemView) {
+  30. >     super(itemView);
+  31.     }
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeViewHolder.java:44: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `viewHolderEvent`.
+  42.   
+  43.     private static final CorrespondingEventsFunction<ViewHolderEvent> CORRESPONDING_EVENTS = viewHolderEvent -> {
+  44. >     switch (viewHolderEvent) {
+  45.         case BIND:
+  46.           return ViewHolderEvent.UNBIND;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeViewHolder.java:44: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AutoDisposeViewHolder$1.<clinit>()`.
+  42.   
+  43.     private static final CorrespondingEventsFunction<ViewHolderEvent> CORRESPONDING_EVENTS = viewHolderEvent -> {
+  44. >     switch (viewHolderEvent) {
+  45.         case BIND:
+  46.           return ViewHolderEvent.UNBIND;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:47: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `viewEvent`.
+  45.      */
+  46.     private static final CorrespondingEventsFunction<ViewEvent> CORRESPONDING_EVENTS = viewEvent -> {
+  47. >     switch (viewEvent) {
+  48.         case ATTACH:
+  49.           return ViewEvent.DETACH;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:47: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AutoDisposeView$1.<clinit>()`.
+  45.      */
+  46.     private static final CorrespondingEventsFunction<ViewEvent> CORRESPONDING_EVENTS = viewEvent -> {
+  47. >     switch (viewEvent) {
+  48.         case ATTACH:
+  49.           return ViewEvent.DETACH;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeActivity.java:49: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `activityEvent`.
+  47.      */
+  48.     private static final CorrespondingEventsFunction<ActivityEvent> CORRESPONDING_EVENTS = activityEvent -> {
+  49. >     switch (activityEvent) {
+  50.         case CREATE:
+  51.           return ActivityEvent.DESTROY;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeActivity.java:49: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AutoDisposeActivity$1.<clinit>()`.
+  47.      */
+  48.     private static final CorrespondingEventsFunction<ActivityEvent> CORRESPONDING_EVENTS = activityEvent -> {
+  49. >     switch (activityEvent) {
+  50.         case CREATE:
+  51.           return ActivityEvent.DESTROY;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeFragment.java:51: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `event`.
+  49.      */
+  50.     private static final CorrespondingEventsFunction<FragmentEvent> CORRESPONDING_EVENTS = event -> {
+  51. >     switch (event) {
+  52.         case ATTACH:
+  53.           return FragmentEvent.DETACH;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeFragment.java:51: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AutoDisposeFragment$1.<clinit>()`.
+  49.      */
+  50.     private static final CorrespondingEventsFunction<FragmentEvent> CORRESPONDING_EVENTS = event -> {
+  51. >     switch (event) {
+  52.         case ATTACH:
+  53.           return FragmentEvent.DETACH;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaActivity.java:51: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  49.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onCreate()"))
+  50.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this)))
+  51. >         .subscribe(num -> Log.i(TAG, "Started in onCreate(), running until onDestroy(): " + num));
+  52.   
+  53.       getSupportFragmentManager().beginTransaction()
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaFragment.java:52: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  50.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onCreate()"))
+  51.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this)))
+  52. >         .subscribe(num -> Log.i(TAG, "Started in onCreate(), running until onDestroy(): " + num));
+  53.     }
+  54.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:58: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `context` passed to nonnull parameter.
+  56.   
+  57.     public AutoDisposeView(Context context) {
+  58. >     this(context, null);
+  59.     }
+  60.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:58: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  56.   
+  57.     public AutoDisposeView(Context context) {
+  58. >     this(context, null);
+  59.     }
+  60.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:55: error: GRADUAL_STATIC
+  possibly-null assignment to nonnull field `com.uber.autodispose.recipes.AutoDisposeView.lifecycleEvents`.
+  53.     };
+  54.   
+  55. >   @Nullable private BehaviorSubject<ViewEvent> lifecycleEvents = null;
+  56.   
+  57.     public AutoDisposeView(Context context) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaActivity.java:68: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  66.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onStart()"))
+  67.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this)))
+  68. >         .subscribe(num -> Log.i(TAG, "Started in onStart(), running until in onStop(): " + num));
+  69.     }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:55: error: GRADUAL_STATIC
+  possibly-null assignment to nonnull field `com.uber.autodispose.recipes.AutoDisposeView.lifecycleEvents`.
+  53.     };
+  54.   
+  55. >   @Nullable private BehaviorSubject<ViewEvent> lifecycleEvents = null;
+  56.   
+  57.     public AutoDisposeView(Context context) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaFragment.java:71: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  69.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onViewCreated()"))
+  70.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(getViewLifecycleOwner())))
+  71. >         .subscribe(num -> Log.i(
+  72.               TAG,
+  73.               "Started in onViewCreated(), running until onDestroyView(): " + num));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaActivity.java:81: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  79.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onResume()"))
+  80.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this)))
+  81. >         .subscribe(num -> Log.i(TAG, "Started in onResume(), running until in onPause(): " + num));
+  82.   
+  83.       // Setting a specific untilEvent, this should dispose in onDestroy.
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaFragment.java:86: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  84.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onStart()"))
+  85.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this)))
+  86. >         .subscribe(num -> Log.i(TAG, "Started in onStart(), running until in onStop(): " + num));
+  87.     }
+  88.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaActivity.java:87: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  85.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onResume() with untilEvent ON_DESTROY"))
+  86.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this, Lifecycle.Event.ON_DESTROY)))
+  87. >         .subscribe(num -> Log.i(TAG, "Started in onResume(), running until in onDestroy(): " + num));
+  88.     }
+  89.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaFragment.java:99: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  97.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onResume()"))
+  98.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this)))
+  99. >         .subscribe(num -> Log.i(TAG, "Started in onResume(), running until in onPause(): " + num));
+  100.   
+  101.       // Setting a specific untilEvent, this should dispose in onDestroy.
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaFragment.java:107: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  105.               "Disposing subscription from onResume() with untilEvent ON_DESTROY"))
+  106.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this, Lifecycle.Event.ON_DESTROY)))
+  107. >         .subscribe(num -> Log.i(
+  108.               TAG,
+  109.               "Started in onResume(), running until in onDestroy(): " + num));
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 11
+    GRADUAL_STATIC: 7
+     GRADUAL_CHECK: 4Found 11 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/DetachEventCompletable.java:35: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.DetachEventCompletable.view`.
+  33.   
+  34.     DetachEventCompletable(View view) {
+  35. >     this.view = view;
+  36.     }
+  37.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/DetachEventCompletable.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  38.     @Override public void subscribe(CompletableObserver observer) {
+  39.       Listener listener = new Listener(view, observer);
+  40. >     observer.onSubscribe(listener);
+  41.   
+  42.       // Check we're on the main thread.
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/DetachEventCompletable.java:44: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  42.       // Check we're on the main thread.
+  43.       if (!isMainThread()) {
+  44. >       observer.onError(new IllegalStateException("Views can only be bound to on the main thread!"));
+  45.         return;
+  46.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/DetachEventCompletable.java:52: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  50.           || view.getWindowToken() != null;
+  51.       if (!isAttached) {
+  52. >       observer.onError(new OutsideScopeException("View is not attached!"));
+  53.         return;
+  54.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/ViewScopeProvider.java:50: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.ViewScopeProvider.view`.
+  48.   
+  49.     private ViewScopeProvider(final View view) {
+  50. >     this.view = view;
+  51.     }
+  52.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/DetachEventCompletable.java:68: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.DetachEventCompletable$Listener.observer`.
+  66.       Listener(View view, CompletableObserver observer) {
+  67.         this.view = view;
+  68. >       this.observer = observer;
+  69.       }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/DetachEventCompletable.java:67: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.DetachEventCompletable$Listener.view`.
+  65.   
+  66.       Listener(View view, CompletableObserver observer) {
+  67. >       this.view = view;
+  68.         this.observer = observer;
+  69.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/AutoDisposeAndroidPlugins.java:96: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `ex` passed to nonnull parameter.
+  94.         }
+  95.       } catch (Exception ex) {
+  96. >       throw Exceptions.propagate(ex);
+  97.       }
+  98.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/AutoDisposeAndroidPlugins.java:95: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `boolean AutoDisposeAndroidPlugins.onCheckMainThread(BooleanSupplier)`.
+  93.           return current.getAsBoolean();
+  94.         }
+  95. >     } catch (Exception ex) {
+  96.         throw Exceptions.propagate(ex);
+  97.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/AutoDisposeAndroidPlugins.java:95: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `boolean AutoDisposeAndroidPlugins.onCheckMainThread(BooleanSupplier)`.
+  93.           return current.getAsBoolean();
+  94.         }
+  95. >     } catch (Exception ex) {
+  96.         throw Exceptions.propagate(ex);
+  97.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/main/java/com/uber/autodispose/android/AutoDisposeAndroidPlugins.java:104: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  102.      */
+  103.     public static void reset() {
+  104. >     setOnCheckMainThread(null);
+  105.     }
+  106.   }
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 6
+     GRADUAL_CHECK: 3
+    GRADUAL_STATIC: 2Found 17 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/build/generated/source/apt/release/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable_ArchLifecycleObserver_LifecycleAdapter.java:13: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.lifecycle.LifecycleEventsObservable_ArchLifecycleObserver_LifecycleAdapter.mReceiver`.
+  11.   
+  12.     LifecycleEventsObservable_ArchLifecycleObserver_LifecycleAdapter(LifecycleEventsObservable.ArchLifecycleObserver receiver) {
+  13. >     this.mReceiver = receiver;
+  14.     }
+  15.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:53: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `lastEvent` passed to nonnull parameter.
+  51.             case ON_DESTROY:
+  52.             default:
+  53. >             throw new LifecycleEndedException("Lifecycle has ended! Last event was " + lastEvent);
+  54.           }
+  55.         };
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:41: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `lastEvent`.
+  39.     private static final CorrespondingEventsFunction<Lifecycle.Event> DEFAULT_CORRESPONDING_EVENTS =
+  40.         lastEvent -> {
+  41. >         switch (lastEvent) {
+  42.             case ON_CREATE:
+  43.               return Lifecycle.Event.ON_DESTROY;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:41: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AndroidLifecycleScopeProvider$1.<clinit>()`.
+  39.     private static final CorrespondingEventsFunction<Lifecycle.Event> DEFAULT_CORRESPONDING_EVENTS =
+  40.         lastEvent -> {
+  41. >         switch (lastEvent) {
+  42.             case ON_CREATE:
+  43.               return Lifecycle.Event.ON_DESTROY;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:45: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.lifecycle.LifecycleEventsObservable.lifecycle`.
+  43.   
+  44.     @SuppressWarnings("CheckReturnValue") LifecycleEventsObservable(Lifecycle lifecycle) {
+  45. >     this.lifecycle = lifecycle;
+  46.     }
+  47.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:59: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void LifecycleEventsObservable$1.<clinit>()`.
+  57.     void backfillEvents() {
+  58.       @Nullable Lifecycle.Event correspondingEvent;
+  59. >     switch (lifecycle.getCurrentState()) {
+  60.         case INITIALIZED:
+  61.           correspondingEvent = ON_CREATE;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:66: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `owner`.
+  64.      */
+  65.     public static AndroidLifecycleScopeProvider from(LifecycleOwner owner) {
+  66. >     return from(owner.getLifecycle());
+  67.     }
+  68.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:77: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `owner`.
+  75.      */
+  76.     public static AndroidLifecycleScopeProvider from(LifecycleOwner owner, Lifecycle.Event untilEvent) {
+  77. >     return from(owner.getLifecycle(), untilEvent);
+  78.     }
+  79.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:80: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  78.     @Override protected void subscribeActual(Observer<? super Event> observer) {
+  79.       ArchLifecycleObserver archObserver = new ArchLifecycleObserver(lifecycle, observer, eventsObservable);
+  80. >     observer.onSubscribe(archObserver);
+  81.       if (!isMainThread()) {
+  82.         observer.onError(new IllegalStateException("Lifecycles can only be bound to on the main thread!"));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:82: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `observer`.
+  80.       observer.onSubscribe(archObserver);
+  81.       if (!isMainThread()) {
+  82. >       observer.onError(new IllegalStateException("Lifecycles can only be bound to on the main thread!"));
+  83.         return;
+  84.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:101: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.lifecycle.LifecycleEventsObservable$ArchLifecycleObserver.eventsObservable`.
+  99.         this.lifecycle = lifecycle;
+  100.         this.observer = observer;
+  101. >       this.eventsObservable = eventsObservable;
+  102.       }
+  103.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:99: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.lifecycle.LifecycleEventsObservable$ArchLifecycleObserver.lifecycle`.
+  97.           Observer<? super Event> observer,
+  98.           BehaviorSubject<Event> eventsObservable) {
+  99. >       this.lifecycle = lifecycle;
+  100.         this.observer = observer;
+  101.         this.eventsObservable = eventsObservable;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:100: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.lifecycle.LifecycleEventsObservable$ArchLifecycleObserver.observer`.
+  98.           BehaviorSubject<Event> eventsObservable) {
+  99.         this.lifecycle = lifecycle;
+  100. >       this.observer = observer;
+  101.         this.eventsObservable = eventsObservable;
+  102.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/LifecycleEventsObservable.java:115: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `event` passed to nonnull parameter.
+  113.             eventsObservable.onNext(event);
+  114.           }
+  115. >         observer.onNext(event);
+  116.         }
+  117.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:110: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `owner`.
+  108.     public static AndroidLifecycleScopeProvider from(LifecycleOwner owner,
+  109.         CorrespondingEventsFunction<Lifecycle.Event> boundaryResolver) {
+  110. >     return from(owner.getLifecycle(), boundaryResolver);
+  111.     }
+  112.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:130: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider.boundaryResolver`.
+  128.         CorrespondingEventsFunction<Lifecycle.Event> boundaryResolver) {
+  129.       this.lifecycleObservable = new LifecycleEventsObservable(lifecycle);
+  130. >     this.boundaryResolver = boundaryResolver;
+  131.     }
+  132.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents/src/main/java/com/uber/autodispose/android/lifecycle/AndroidLifecycleScopeProvider.java:154: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider$UntilEventFunction.untilEvent`.
+  152.   
+  153.       UntilEventFunction(Lifecycle.Event untilEvent) {
+  154. >       this.untilEvent = untilEvent;
+  155.       }
+  156.   
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 9
+     GRADUAL_CHECK: 6
+    GRADUAL_STATIC: 2Found 22 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/androidx/recyclerview/widget/BindAwareViewHolder.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `itemView` passed to nonnull parameter.
+  28.   
+  29.     public BindAwareViewHolder(View itemView) {
+  30. >     super(itemView);
+  31.     }
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeViewHolder.java:44: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `viewHolderEvent`.
+  42.   
+  43.     private static final CorrespondingEventsFunction<ViewHolderEvent> CORRESPONDING_EVENTS = viewHolderEvent -> {
+  44. >     switch (viewHolderEvent) {
+  45.         case BIND:
+  46.           return ViewHolderEvent.UNBIND;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeViewHolder.java:44: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AutoDisposeViewHolder$1.<clinit>()`.
+  42.   
+  43.     private static final CorrespondingEventsFunction<ViewHolderEvent> CORRESPONDING_EVENTS = viewHolderEvent -> {
+  44. >     switch (viewHolderEvent) {
+  45.         case BIND:
+  46.           return ViewHolderEvent.UNBIND;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:47: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `viewEvent`.
+  45.      */
+  46.     private static final CorrespondingEventsFunction<ViewEvent> CORRESPONDING_EVENTS = viewEvent -> {
+  47. >     switch (viewEvent) {
+  48.         case ATTACH:
+  49.           return ViewEvent.DETACH;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:47: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AutoDisposeView$1.<clinit>()`.
+  45.      */
+  46.     private static final CorrespondingEventsFunction<ViewEvent> CORRESPONDING_EVENTS = viewEvent -> {
+  47. >     switch (viewEvent) {
+  48.         case ATTACH:
+  49.           return ViewEvent.DETACH;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeActivity.java:49: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `activityEvent`.
+  47.      */
+  48.     private static final CorrespondingEventsFunction<ActivityEvent> CORRESPONDING_EVENTS = activityEvent -> {
+  49. >     switch (activityEvent) {
+  50.         case CREATE:
+  51.           return ActivityEvent.DESTROY;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeActivity.java:49: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AutoDisposeActivity$1.<clinit>()`.
+  47.      */
+  48.     private static final CorrespondingEventsFunction<ActivityEvent> CORRESPONDING_EVENTS = activityEvent -> {
+  49. >     switch (activityEvent) {
+  50.         case CREATE:
+  51.           return ActivityEvent.DESTROY;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeFragment.java:51: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `event`.
+  49.      */
+  50.     private static final CorrespondingEventsFunction<FragmentEvent> CORRESPONDING_EVENTS = event -> {
+  51. >     switch (event) {
+  52.         case ATTACH:
+  53.           return FragmentEvent.DETACH;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeFragment.java:51: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AutoDisposeFragment$1.<clinit>()`.
+  49.      */
+  50.     private static final CorrespondingEventsFunction<FragmentEvent> CORRESPONDING_EVENTS = event -> {
+  51. >     switch (event) {
+  52.         case ATTACH:
+  53.           return FragmentEvent.DETACH;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaActivity.java:51: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  49.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onCreate()"))
+  50.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this)))
+  51. >         .subscribe(num -> Log.i(TAG, "Started in onCreate(), running until onDestroy(): " + num));
+  52.   
+  53.       getSupportFragmentManager().beginTransaction()
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaFragment.java:52: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  50.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onCreate()"))
+  51.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this)))
+  52. >         .subscribe(num -> Log.i(TAG, "Started in onCreate(), running until onDestroy(): " + num));
+  53.     }
+  54.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:58: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `context` passed to nonnull parameter.
+  56.   
+  57.     public AutoDisposeView(Context context) {
+  58. >     this(context, null);
+  59.     }
+  60.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:58: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  56.   
+  57.     public AutoDisposeView(Context context) {
+  58. >     this(context, null);
+  59.     }
+  60.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:55: error: GRADUAL_STATIC
+  possibly-null assignment to nonnull field `com.uber.autodispose.recipes.AutoDisposeView.lifecycleEvents`.
+  53.     };
+  54.   
+  55. >   @Nullable private BehaviorSubject<ViewEvent> lifecycleEvents = null;
+  56.   
+  57.     public AutoDisposeView(Context context) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaActivity.java:68: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  66.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onStart()"))
+  67.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this)))
+  68. >         .subscribe(num -> Log.i(TAG, "Started in onStart(), running until in onStop(): " + num));
+  69.     }
+  70.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:55: error: GRADUAL_STATIC
+  possibly-null assignment to nonnull field `com.uber.autodispose.recipes.AutoDisposeView.lifecycleEvents`.
+  53.     };
+  54.   
+  55. >   @Nullable private BehaviorSubject<ViewEvent> lifecycleEvents = null;
+  56.   
+  57.     public AutoDisposeView(Context context) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaFragment.java:71: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  69.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onViewCreated()"))
+  70.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(getViewLifecycleOwner())))
+  71. >         .subscribe(num -> Log.i(
+  72.               TAG,
+  73.               "Started in onViewCreated(), running until onDestroyView(): " + num));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaActivity.java:81: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  79.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onResume()"))
+  80.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this)))
+  81. >         .subscribe(num -> Log.i(TAG, "Started in onResume(), running until in onPause(): " + num));
+  82.   
+  83.       // Setting a specific untilEvent, this should dispose in onDestroy.
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaFragment.java:86: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  84.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onStart()"))
+  85.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this)))
+  86. >         .subscribe(num -> Log.i(TAG, "Started in onStart(), running until in onStop(): " + num));
+  87.     }
+  88.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaActivity.java:87: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  85.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onResume() with untilEvent ON_DESTROY"))
+  86.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this, Lifecycle.Event.ON_DESTROY)))
+  87. >         .subscribe(num -> Log.i(TAG, "Started in onResume(), running until in onDestroy(): " + num));
+  88.     }
+  89.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaFragment.java:99: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  97.           .doOnDispose(() -> Log.i(TAG, "Disposing subscription from onResume()"))
+  98.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this)))
+  99. >         .subscribe(num -> Log.i(TAG, "Started in onResume(), running until in onPause(): " + num));
+  100.   
+  101.       // Setting a specific untilEvent, this should dispose in onDestroy.
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/sample/src/main/java/com/uber/autodispose/sample/JavaFragment.java:107: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `num` passed to nonnull parameter.
+  105.               "Disposing subscription from onResume() with untilEvent ON_DESTROY"))
+  106.           .as(autoDisposable(AndroidLifecycleScopeProvider.from(this, Lifecycle.Event.ON_DESTROY)))
+  107. >         .subscribe(num -> Log.i(
+  108.               TAG,
+  109.               "Started in onResume(), running until in onDestroy(): " + num));
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 11
+    GRADUAL_STATIC: 7
+     GRADUAL_CHECK: 4Found 6 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/test/java/com/uber/autodispose/android/internal/MainThreadDisposableTest.java:46: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.internal.MainThreadDisposableTest$2.this$0`.
+  44.     @Test public void onDisposeFailsWhenMainThreadCheckNotSet() {
+  45.       try {
+  46. >       new MainThreadDisposable() {
+  47.           @Override protected void onDispose() { }
+  48.         }.dispose();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/test/java/com/uber/autodispose/android/AutoDisposeAndroidPluginsTest.java:47: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  45.   
+  46.       // Now reset and confirm we're back to normal
+  47. >     AutoDisposeAndroidPlugins.setOnCheckMainThread(null);
+  48.       expectLooperError();
+  49.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/test/java/com/uber/autodispose/android/internal/MainThreadDisposableTest.java:35: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.internal.MainThreadDisposableTest$1.this$0`.
+  33.       final AtomicBoolean called = new AtomicBoolean();
+  34.   
+  35. >     new MainThreadDisposable() {
+  36.         @Override protected void onDispose() {
+  37.           called.set(true);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/test/java/com/uber/autodispose/android/internal/MainThreadDisposableTest.java:35: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.internal.MainThreadDisposableTest$1.val$called`.
+  33.       final AtomicBoolean called = new AtomicBoolean();
+  34.   
+  35. >     new MainThreadDisposable() {
+  36.         @Override protected void onDispose() {
+  37.           called.set(true);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/test/java/com/uber/autodispose/android/internal/MainThreadDisposableTest.java:50: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void MainThreadDisposableTest.onDisposeFailsWhenMainThreadCheckNotSet()`.
+  48.         }.dispose();
+  49.         throw new AssertionError("Expected to fail before this due to Looper not being stubbed!");
+  50. >     } catch (RuntimeException e) {
+  51.         // "Method myLooper in android.os.Looper not mocked..."
+  52.         // Not testing this exact message as it's an implementation detail of the test framework.
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/test/java/com/uber/autodispose/android/AutoDisposeAndroidPluginsTest.java:57: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AutoDisposeAndroidPluginsTest.expectLooperError()`.
+  55.         AutoDisposeAndroidUtil.isMainThread();
+  56.         throw new AssertionError("Expected to fail before this due to Looper not being stubbed!");
+  57. >     } catch (Exception e) {
+  58.         // "Method myLooper in android.os.Looper not mocked..."
+  59.         // Not testing this exact message as it's an implementation detail of the test framework.
+
+Summary of the reports
+
+    GRADUAL_STATIC: 3
+  GRADUAL_BOUNDARY: 3Found 6 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/test/java/com/uber/autodispose/android/internal/MainThreadDisposableTest.java:46: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.internal.MainThreadDisposableTest$2.this$0`.
+  44.     @Test public void onDisposeFailsWhenMainThreadCheckNotSet() {
+  45.       try {
+  46. >       new MainThreadDisposable() {
+  47.           @Override protected void onDispose() { }
+  48.         }.dispose();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/test/java/com/uber/autodispose/android/AutoDisposeAndroidPluginsTest.java:47: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  45.   
+  46.       // Now reset and confirm we're back to normal
+  47. >     AutoDisposeAndroidPlugins.setOnCheckMainThread(null);
+  48.       expectLooperError();
+  49.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/test/java/com/uber/autodispose/android/internal/MainThreadDisposableTest.java:35: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.internal.MainThreadDisposableTest$1.this$0`.
+  33.       final AtomicBoolean called = new AtomicBoolean();
+  34.   
+  35. >     new MainThreadDisposable() {
+  36.         @Override protected void onDispose() {
+  37.           called.set(true);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/test/java/com/uber/autodispose/android/internal/MainThreadDisposableTest.java:35: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.android.internal.MainThreadDisposableTest$1.val$called`.
+  33.       final AtomicBoolean called = new AtomicBoolean();
+  34.   
+  35. >     new MainThreadDisposable() {
+  36.         @Override protected void onDispose() {
+  37.           called.set(true);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/test/java/com/uber/autodispose/android/internal/MainThreadDisposableTest.java:50: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void MainThreadDisposableTest.onDisposeFailsWhenMainThreadCheckNotSet()`.
+  48.         }.dispose();
+  49.         throw new AssertionError("Expected to fail before this due to Looper not being stubbed!");
+  50. >     } catch (RuntimeException e) {
+  51.         // "Method myLooper in android.os.Looper not mocked..."
+  52.         // Not testing this exact message as it's an implementation detail of the test framework.
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android/src/test/java/com/uber/autodispose/android/AutoDisposeAndroidPluginsTest.java:57: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void AutoDisposeAndroidPluginsTest.expectLooperError()`.
+  55.         AutoDisposeAndroidUtil.isMainThread();
+  56.         throw new AssertionError("Expected to fail before this due to Looper not being stubbed!");
+  57. >     } catch (Exception e) {
+  58.         // "Method myLooper in android.os.Looper not mocked..."
+  59.         // Not testing this exact message as it's an implementation detail of the test framework.
+
+Summary of the reports
+
+    GRADUAL_STATIC: 3
+  GRADUAL_BOUNDARY: 3No issues foundNo issues foundFound 3 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents-test/src/main/java/com/uber/autodispose/android/lifecycle/test/TestLifecycleOwner.java:40: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  38.      */
+  39.     public static TestLifecycleOwner create() {
+  40. >     return new TestLifecycleOwner(null);
+  41.     }
+  42.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents-test/src/main/java/com/uber/autodispose/android/lifecycle/test/TestLifecycleOwner.java:48: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `registry` passed to nonnull parameter.
+  46.      */
+  47.     public static TestLifecycleOwner create(LifecycleRegistry registry) {
+  48. >     return new TestLifecycleOwner(registry);
+  49.     }
+  50.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents-test/src/main/java/com/uber/autodispose/android/lifecycle/test/TestLifecycleOwner.java:66: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `event` passed to nonnull parameter.
+  64.      */
+  65.     public void emit(Lifecycle.Event event) {
+  66. >     registry.handleLifecycleEvent(event);
+  67.     }
+  68.   }
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 2
+    GRADUAL_STATIC: 1Found 3 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents-test/src/main/java/com/uber/autodispose/android/lifecycle/test/TestLifecycleOwner.java:40: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  38.      */
+  39.     public static TestLifecycleOwner create() {
+  40. >     return new TestLifecycleOwner(null);
+  41.     }
+  42.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents-test/src/main/java/com/uber/autodispose/android/lifecycle/test/TestLifecycleOwner.java:48: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `registry` passed to nonnull parameter.
+  46.      */
+  47.     public static TestLifecycleOwner create(LifecycleRegistry registry) {
+  48. >     return new TestLifecycleOwner(registry);
+  49.     }
+  50.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/android/autodispose-android-archcomponents-test/src/main/java/com/uber/autodispose/android/lifecycle/test/TestLifecycleOwner.java:66: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `event` passed to nonnull parameter.
+  64.      */
+  65.     public void emit(Lifecycle.Event event) {
+  66. >     registry.handleLifecycleEvent(event);
+  67.     }
+  68.   }
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 2
+    GRADUAL_STATIC: 1No issues foundNo issues foundNo issues foundNo issues foundFound 20 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/TestUtil.java:25: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `lastEvent`.
+  23.   final class TestUtil {
+  24.     private static final CorrespondingEventsFunction<Integer> CORRESPONDING_EVENTS = lastEvent -> {
+  25. >     switch (lastEvent) {
+  26.         case 0:
+  27.           return 3;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/TestUtil.java:40: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.lifecycle.TestUtil$1.val$lifecycle`.
+  38.   
+  39.     static LifecycleScopeProvider<Integer> makeLifecycleProvider(final BehaviorSubject<Integer> lifecycle) {
+  40. >     return new LifecycleScopeProvider<Integer>() {
+  41.         @Override public Observable<Integer> lifecycle() {
+  42.           return lifecycle;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopesTest.java:44: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void LifecycleScopesTest.lifecycleDefault_shouldFailIfNotStarted()`.
+  42.         throw new AssertionError("Lifecycle resolution should have failed due to missing start "
+  43.             + "event");
+  44. >     } catch (LifecycleNotStartedException ignored) {
+  45.   
+  46.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopesTest.java:55: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void LifecycleScopesTest.lifecycleDefault_withStart_shouldFailIfEnded()`.
+  53.         testSource(resolveScopeFromLifecycle(lifecycle));
+  54.         throw new AssertionError("Lifecycle resolution should have failed due to it being ended.");
+  55. >     } catch (LifecycleEndedException ignored) {
+  56.   
+  57.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopesTest.java:66: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void LifecycleScopesTest.lifecycleCheckEnd_shouldFailIfEndedWithNoHandler()`.
+  64.         testSource(resolveScopeFromLifecycle(lifecycle, true));
+  65.         throw new AssertionError("Lifecycle resolution should have failed due to it being ended.");
+  66. >     } catch (LifecycleEndedException ignored) {
+  67.   
+  68.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopesTest.java:123: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.lifecycle.LifecycleScopesTest$IntHolder.value`.
+  121.   
+  122.       IntHolder(int value) {
+  123. >       this.value = value;
+  124.       }
+  125.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopesTest.java:130: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `boolean LifecycleScopesTest$IntHolder.equals(Object)`.
+  128.         if (!(o instanceof IntHolder)) return false;
+  129.   
+  130. >       IntHolder intHolder = (IntHolder) o;
+  131.   
+  132.         return value == intHolder.value;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopesTest.java:132: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `intHolder`.
+  130.         IntHolder intHolder = (IntHolder) o;
+  131.   
+  132. >       return value == intHolder.value;
+  133.       }
+  134.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopeProviderSubscriberTest.java:150: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `throwable`.
+  148.       o.assertNoValues();
+  149.       o.assertError(throwable -> throwable instanceof IllegalStateException
+  150. >         && throwable.getCause() instanceof OutsideScopeException);
+  151.     }
+  152.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopeProviderObservableTest.java:153: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `throwable`.
+  151.       o.assertNoValues();
+  152.       o.assertError(throwable -> throwable instanceof IllegalStateException
+  153. >         && throwable.getCause() instanceof OutsideScopeException);
+  154.     }
+  155.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopesTest.java:167: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.autodispose.lifecycle.LifecycleScopesTest$NegativeComparableInteger.value`.
+  165.   
+  166.       NegativeComparableInteger(int value) {
+  167. >       this.value = value;
+  168.       }
+  169.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopesTest.java:171: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `o`.
+  169.   
+  170.       @Override public int compareTo(NegativeComparableInteger o) {
+  171. >       return Integer.compare(-value, o.value);
+  172.       }
+  173.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopeProviderCompletableTest.java:176: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `throwable`.
+  174.       o.assertNoValues();
+  175.       o.assertError(throwable -> throwable instanceof IllegalStateException
+  176. >         && throwable.getCause() instanceof OutsideScopeException);
+  177.     }
+  178.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopeProviderMaybeTest.java:176: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `throwable`.
+  174.       o.assertNoValues();
+  175.       o.assertError(throwable -> throwable instanceof IllegalStateException
+  176. >         && throwable.getCause() instanceof OutsideScopeException);
+  177.     }
+  178.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopeProviderSingleTest.java:176: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `throwable`.
+  174.       o.assertNoValues();
+  175.       o.assertError(throwable -> throwable instanceof IllegalStateException
+  176. >         && throwable.getCause() instanceof OutsideScopeException);
+  177.     }
+  178.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopesTest.java:196: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `o1`.
+  194.       PublishSubject<Integer> lifecycle = PublishSubject.create();
+  195.   
+  196. >     Comparator<Integer> comparator = (o1, o2) -> Integer.compare(-o1, o2);
+  197.   
+  198.       TestObserver<?> o = testSource(resolveScopeFromLifecycle(lifecycle, 3, comparator));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopesTest.java:196: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `o2`.
+  194.       PublishSubject<Integer> lifecycle = PublishSubject.create();
+  195.   
+  196. >     Comparator<Integer> comparator = (o1, o2) -> Integer.compare(-o1, o2);
+  197.   
+  198.       TestObserver<?> o = testSource(resolveScopeFromLifecycle(lifecycle, 3, comparator));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopeProviderParallelFlowableTest.java:204: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `throwable`.
+  202.       firstSubscriber.assertNoValues();
+  203.       firstSubscriber.assertError(throwable -> throwable instanceof IllegalStateException
+  204. >         && throwable.getCause() instanceof OutsideScopeException);
+  205.       secondSubscriber.assertNoValues();
+  206.       secondSubscriber.assertError(throwable -> throwable instanceof IllegalStateException
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopeProviderParallelFlowableTest.java:207: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `throwable`.
+  205.       secondSubscriber.assertNoValues();
+  206.       secondSubscriber.assertError(throwable -> throwable instanceof IllegalStateException
+  207. >         && throwable.getCause() instanceof OutsideScopeException);
+  208.     }
+  209.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle/src/test/java/com/uber/autodispose/lifecycle/LifecycleScopesTest.java:270: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `source`.
+  268.     private static TestObserver<Object> testSource(CompletableSource source) {
+  269.       TestObserver<Object> o = new TestObserver<>();
+  270. >     source.subscribe(o);
+  271.       return o;
+  272.     }
+
+Summary of the reports
+
+     GRADUAL_CHECK: 13
+  GRADUAL_BOUNDARY: 4
+    GRADUAL_STATIC: 3No issues foundFound 2 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle-jdk8/src/test/java/com/uber/autodispose/lifecycle/jdk8/DefaultLifecycleScopeProviderTest.java:49: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `event`.
+  47.       @Override public CorrespondingEventsFunction<LifecycleEvent> correspondingEvents() {
+  48.         return event -> {
+  49. >         switch (event) {
+  50.             case START:
+  51.               return LifecycleEvent.STOP;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/AutoDispose/lifecycle/autodispose-lifecycle-jdk8/src/test/java/com/uber/autodispose/lifecycle/jdk8/DefaultLifecycleScopeProviderTest.java:49: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void DefaultLifecycleScopeProviderTest$1.<clinit>()`.
+  47.       @Override public CorrespondingEventsFunction<LifecycleEvent> correspondingEvents() {
+  48.         return event -> {
+  49. >         switch (event) {
+  50.             case START:
+  51.               return LifecycleEvent.STOP;
+
+Summary of the reports
+
+  GRADUAL_STATIC: 1
+   GRADUAL_CHECK: 1No issues found

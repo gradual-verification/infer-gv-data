@@ -57,11 +57,10 @@ for repo in repos:
     plt.savefig('{}/{}.png'.format(dir, repo))
     plt.clf()
 
-
 modes = {
     'dereferences': ['GRADUAL_DEREFERENCE'],
-    'unannotated': ['GRADUAL_CHECK', 'GRADUAL_BOUNDARY'],
-    'gradual': ['GRADUAL_CHECK', 'GRADUAL_BOUNDARY'],
+    'unannotated': ['GRADUAL_CHECK'],
+    'limit': ['GRADUAL_CHECK'],
 }
 
 for repo in repos:
@@ -72,8 +71,7 @@ for repo in repos:
             filename = '{}/{}.txt'.format(repo, name)
             for issuetype in issuetypes:
                 the_set |= lines(filename, issuetype)
-            k = 'annotated' if name == 'gradual' else name
-            sets[k] = the_set
+            sets[name] = the_set
         keys = sets.keys()
         venn3([sets[k] for k in keys], set_labels=keys)
         plt.title(repo)

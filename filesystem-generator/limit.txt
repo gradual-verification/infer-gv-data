@@ -1,0 +1,54 @@
+Found 6 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:35: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.fsgenerator.FSGenerator.lastFileTouched`.
+  33.     protected FSGenerator(final File rootFolder, final File lastFileTouched) {
+  34.       this.rootFolder = rootFolder;
+  35. >     this.lastFileTouched = lastFileTouched;
+  36.     }
+  37.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:34: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.fsgenerator.FSGenerator.rootFolder`.
+  32.   
+  33.     protected FSGenerator(final File rootFolder, final File lastFileTouched) {
+  34. >     this.rootFolder = rootFolder;
+  35.       this.lastFileTouched = lastFileTouched;
+  36.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:48: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `FSGenerator FSGenerator.createFile(String)`.
+  46.           lastFileTouched = file;
+  47.         }
+  48. >     } catch (final IOException e) {
+  49.         throw new RuntimeException(e);
+  50.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:48: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `FSGenerator FSGenerator.createFile(String)`.
+  46.           lastFileTouched = file;
+  47.         }
+  48. >     } catch (final IOException e) {
+  49.         throw new RuntimeException(e);
+  50.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:71: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `FSGenerator FSGenerator.rename(String,String)`.
+  69.         final Path move = Files.move(toBeRenamed, newPath);
+  70.         lastFileTouched = move.toFile();
+  71. >     } catch (final IOException e) {
+  72.         throw new RuntimeException(e);
+  73.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/filesystem-generator/src/main/java/de/zuellich/fsgenerator/FSGenerator.java:71: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `FSGenerator FSGenerator.rename(String,String)`.
+  69.         final Path move = Files.move(toBeRenamed, newPath);
+  70.         lastFileTouched = move.toFile();
+  71. >     } catch (final IOException e) {
+  72.         throw new RuntimeException(e);
+  73.       }
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 4
+    GRADUAL_STATIC: 2No issues found

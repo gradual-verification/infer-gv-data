@@ -1,0 +1,809 @@
+Found 55 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/yaml/SkaffoldYamlGenerator.java:36: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.google.cloud.tools.skaffold.yaml.SkaffoldYamlGenerator.manifestPaths`.
+  34.     public SkaffoldYamlGenerator(ImmutableList<String> manifestPaths) {
+  35.       Preconditions.checkArgument(manifestPaths.size() > 0);
+  36. >     this.manifestPaths = manifestPaths;
+  37.     }
+  38.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/yaml/SkaffoldYamlGenerator.java:35: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `manifestPaths`.
+  33.      */
+  34.     public SkaffoldYamlGenerator(ImmutableList<String> manifestPaths) {
+  35. >     Preconditions.checkArgument(manifestPaths.size() > 0);
+  36.       this.manifestPaths = manifestPaths;
+  37.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/filesystem/OperatingSystem.java:38: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `properties`.
+  36.   
+  37.     static OperatingSystem resolve(Properties properties) {
+  38. >     String rawOsName = properties.getProperty("os.name");
+  39.       String osName = rawOsName.toLowerCase(Locale.ENGLISH);
+  40.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/filesystem/FilePermissions.java:50: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `boolean FilePermissions.makeExecutable(Path)`.
+  48.         return true;
+  49.   
+  50. >     } catch (UnsupportedOperationException ex) {
+  51.         // File system does not support POSIX.
+  52.         return false;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/filesystem/FilePermissions.java:50: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `boolean FilePermissions.makeExecutable(Path)`.
+  48.         return true;
+  49.   
+  50. >     } catch (UnsupportedOperationException ex) {
+  51.         // File system does not support POSIX.
+  52.         return false;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/yaml/SkaffoldYamlGenerator.java:53: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$20`.
+  51.       // Add manifests
+  52.       output.append("    manifests:\n");
+  53. >     for (String manifestPath : manifestPaths) {
+  54.         output.append("    - ");
+  55.         output.append(manifestPath);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/yaml/SkaffoldYamlGenerator.java:54: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `output`.
+  52.       output.append("    manifests:\n");
+  53.       for (String manifestPath : manifestPaths) {
+  54. >       output.append("    - ");
+  55.         output.append(manifestPath);
+  56.         output.append("\n");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/yaml/SkaffoldYamlGenerator.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `output`.
+  53.       for (String manifestPath : manifestPaths) {
+  54.         output.append("    - ");
+  55. >       output.append(manifestPath);
+  56.         output.append("\n");
+  57.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/yaml/SkaffoldYamlGenerator.java:56: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `output`.
+  54.         output.append("    - ");
+  55.         output.append(manifestPath);
+  56. >       output.append("\n");
+  57.       }
+  58.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/yaml/SkaffoldYamlGenerator.java:59: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `output`.
+  57.       }
+  58.   
+  59. >     return output.toString();
+  60.     }
+  61.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/downloader/Downloader.java:60: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `long Downloader.download(URL,Path,long)`.
+  58.                   + fileChannel.transferFrom(urlChannel, fileChannel.position(), chunkSize));
+  59.         }
+  60. >       return totalSize;
+  61.       }
+  62.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/downloader/Downloader.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `fileChannel`.
+  53.           ReadableByteChannel urlChannel = Channels.newChannel(connectionInputStream)) {
+  54.         long totalSize = connection.getContentLengthLong();
+  55. >       while (fileChannel.position() < totalSize) {
+  56.           fileChannel.position(
+  57.               fileChannel.position()
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/downloader/Downloader.java:56: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `fileChannel`.
+  54.         long totalSize = connection.getContentLengthLong();
+  55.         while (fileChannel.position() < totalSize) {
+  56. >         fileChannel.position(
+  57.               fileChannel.position()
+  58.                   + fileChannel.transferFrom(urlChannel, fileChannel.position(), chunkSize));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/downloader/Downloader.java:57: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `fileChannel`.
+  55.         while (fileChannel.position() < totalSize) {
+  56.           fileChannel.position(
+  57. >             fileChannel.position()
+  58.                   + fileChannel.transferFrom(urlChannel, fileChannel.position(), chunkSize));
+  59.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/downloader/Downloader.java:58: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `fileChannel`.
+  56.           fileChannel.position(
+  57.               fileChannel.position()
+  58. >                 + fileChannel.transferFrom(urlChannel, fileChannel.position(), chunkSize));
+  59.         }
+  60.         return totalSize;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/downloader/Downloader.java:61: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$149`.
+  59.         }
+  60.         return totalSize;
+  61. >     }
+  62.     }
+  63.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/downloader/Downloader.java:49: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `url`.
+  47.     @VisibleForTesting
+  48.     static long download(URL url, Path destination, long chunkSize) throws IOException {
+  49. >     URLConnection connection = url.openConnection();
+  50.       try (FileChannel fileChannel =
+  51.               FileChannel.open(destination, StandardOpenOption.WRITE, StandardOpenOption.CREATE);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/downloader/Downloader.java:50: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `long Downloader.download(URL,Path,long)`.
+  48.     static long download(URL url, Path destination, long chunkSize) throws IOException {
+  49.       URLConnection connection = url.openConnection();
+  50. >     try (FileChannel fileChannel =
+  51.               FileChannel.open(destination, StandardOpenOption.WRITE, StandardOpenOption.CREATE);
+  52.           InputStream connectionInputStream = new BufferedInputStream(connection.getInputStream());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/downloader/Downloader.java:61: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `long Downloader.download(URL,Path,long)`.
+  59.         }
+  60.         return totalSize;
+  61. >     }
+  62.     }
+  63.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/image/DescriptorDigest.java:50: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `hash`.
+  48.      */
+  49.     public static DescriptorDigest fromHash(String hash) throws DigestException {
+  50. >     if (!hash.matches(HASH_REGEX)) {
+  51.         throw new DigestException("Invalid hash: " + hash);
+  52.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:52: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `executablePath`.
+  50.      */
+  51.     public static Skaffold atPath(Path executablePath) {
+  52. >     return new Skaffold(getListeningExecutorService(), executablePath.toString());
+  53.     }
+  54.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/filesystem/FilePermissions.java:58: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `filesystem`.
+  56.     @VisibleForTesting
+  57.     public static boolean isFilesystemPosix(FileSystem filesystem) {
+  58. >     return filesystem.supportedFileAttributeViews().contains("posix");
+  59.     }
+  60.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/filesystem/UserCacheHome.java:62: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `environment`.
+  60.     static Path getCacheHome(Properties properties, Map<String, String> environment) {
+  61.       // Use environment variable $XDG_CACHE_HOME if set and not empty.
+  62. >     String xdgCacheHome = environment.get("XDG_CACHE_HOME");
+  63.       if (xdgCacheHome != null && !xdgCacheHome.trim().isEmpty()) {
+  64.         return Paths.get(xdgCacheHome);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/filesystem/UserCacheHome.java:80: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `environment`.
+  78.         case WINDOWS:
+  79.           // Use %LOCALAPPDATA% for Windows.
+  80. >         String localAppDataEnv = environment.get("LOCALAPPDATA");
+  81.           if (localAppDataEnv == null || localAppDataEnv.trim().isEmpty()) {
+  82.             logger.warning("LOCALAPPDATA environment is invalid or missing");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/filesystem/UserCacheHome.java:67: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `properties`.
+  65.       }
+  66.   
+  67. >     String userHome = properties.getProperty("user.home");
+  68.   
+  69.       Path userHomeDirectory = Paths.get(userHome);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:62: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `ExecutorService Skaffold.lambda$setExecutorService$0(ExecutorService)`.
+  60.      */
+  61.     public static void setExecutorService(ExecutorService executorService) {
+  62. >     Skaffold.executorServiceSupplier = () -> executorService;
+  63.     }
+  64.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/image/DescriptorDigest.java:65: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `digest`.
+  63.      */
+  64.     public static DescriptorDigest fromDigest(String digest) throws DigestException {
+  65. >     if (!digest.matches(DIGEST_REGEX)) {
+  66.         throw new DigestException("Invalid digest: " + digest);
+  67.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/image/DescriptorDigest.java:70: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `digest`.
+  68.   
+  69.       // Extracts the hash portion of the digest.
+  70. >     String hash = digest.substring(DIGEST_PREFIX.length());
+  71.       return new DescriptorDigest(hash);
+  72.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:73: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `Void Skaffold.lambda$redirect$1(InputStream,OutputStream)`.
+  71.       return () -> {
+  72.         ByteStreams.copy(inputStream, outputStream);
+  73. >       return null;
+  74.       };
+  75.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/filesystem/UserCacheHome.java:74: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void UserCacheHome$1.<clinit>()`.
+  72.       OperatingSystem operatingSystem = OperatingSystem.resolve(properties);
+  73.   
+  74. >     switch (operatingSystem) {
+  75.         case LINUX:
+  76.           return xdgPath;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/image/DescriptorDigest.java:75: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.google.cloud.tools.skaffold.image.DescriptorDigest.hash`.
+  73.   
+  74.     private DescriptorDigest(String hash) {
+  75. >     this.hash = hash;
+  76.     }
+  77.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:89: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.google.cloud.tools.skaffold.command.Skaffold.listeningExecutorService`.
+  87.     @VisibleForTesting
+  88.     Skaffold(ListeningExecutorService listeningExecutorService, String... initialTokens) {
+  89. >     this.listeningExecutorService = listeningExecutorService;
+  90.       this.initialTokens = Arrays.asList(initialTokens);
+  91.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/downloader/SkaffoldDownloader.java:92: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `operatingSystem`.
+  90.       String base = "https://storage.googleapis.com/skaffold/releases/" + version + "/";
+  91.   
+  92. >     switch (operatingSystem) {
+  93.         case LINUX:
+  94.           return base + "skaffold-linux-amd64";
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/downloader/SkaffoldDownloader.java:92: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void SkaffoldDownloader$1.<clinit>()`.
+  90.       String base = "https://storage.googleapis.com/skaffold/releases/" + version + "/";
+  91.   
+  92. >     switch (operatingSystem) {
+  93.         case LINUX:
+  94.           return base + "skaffold-linux-amd64";
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:94: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.google.cloud.tools.skaffold.command.Skaffold.skaffoldYaml`.
+  92.   
+  93.     public Skaffold setSkaffoldYaml(Path skaffoldYaml) {
+  94. >     this.skaffoldYaml = skaffoldYaml;
+  95.       return this;
+  96.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/image/DescriptorDigest.java:97: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `obj`.
+  95.     public boolean equals(Object obj) {
+  96.       if (obj instanceof DescriptorDigest) {
+  97. >       return hash.equals(((DescriptorDigest) obj).hash);
+  98.       }
+  99.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:99: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.google.cloud.tools.skaffold.command.Skaffold.profile`.
+  97.   
+  98.     public Skaffold setProfile(String profile) {
+  99. >     this.profile = profile;
+  100.       return this;
+  101.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:110: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.google.cloud.tools.skaffold.command.Skaffold.stdinInputStream`.
+  108.      */
+  109.     public Skaffold redirectToStdin(InputStream stdinInputStream) {
+  110. >     this.stdinInputStream = stdinInputStream;
+  111.       return this;
+  112.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:121: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.google.cloud.tools.skaffold.command.Skaffold.stdoutOutputStream`.
+  119.      */
+  120.     public Skaffold redirectStdoutTo(OutputStream stdoutOutputStream) {
+  121. >     this.stdoutOutputStream = stdoutOutputStream;
+  122.       return this;
+  123.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:132: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.google.cloud.tools.skaffold.command.Skaffold.stderrOutputStream`.
+  130.      */
+  131.     public Skaffold redirectStderrTo(OutputStream stderrOutputStream) {
+  132. >     this.stderrOutputStream = stderrOutputStream;
+  133.       return this;
+  134.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:171: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$110`.
+  169.         }
+  170.   
+  171. >       for (ListenableFuture<Void> listenableFuture : listenableFutures) {
+  172.           listenableFuture.get();
+  173.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:155: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$190`.
+  153.         try (OutputStream stdin = skaffoldProcess.getOutputStream()) {
+  154.           ByteStreams.copy(stdinInputStream, stdin);
+  155. >       }
+  156.       }
+  157.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:174: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$190`.
+  172.           listenableFuture.get();
+  173.         }
+  174. >     }
+  175.   
+  176.       return skaffoldProcess.waitFor();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:176: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `skaffoldProcess`.
+  174.       }
+  175.   
+  176. >     return skaffoldProcess.waitFor();
+  177.     }
+  178.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:153: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `int Skaffold.deploy()`.
+  151.   
+  152.       if (stdinInputStream != null) {
+  153. >       try (OutputStream stdin = skaffoldProcess.getOutputStream()) {
+  154.           ByteStreams.copy(stdinInputStream, stdin);
+  155.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:155: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `int Skaffold.deploy()`.
+  153.         try (OutputStream stdin = skaffoldProcess.getOutputStream()) {
+  154.           ByteStreams.copy(stdinInputStream, stdin);
+  155. >       }
+  156.       }
+  157.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:160: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `int Skaffold.deploy()`.
+  158.       List<ListenableFuture<Void>> listenableFutures = new ArrayList<>();
+  159.   
+  160. >     try (InputStream stdout = skaffoldProcess.getInputStream();
+  161.           InputStream stderr = skaffoldProcess.getErrorStream()) {
+  162.         if (stdoutOutputStream != null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:174: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `int Skaffold.deploy()`.
+  172.           listenableFuture.get();
+  173.         }
+  174. >     }
+  175.   
+  176.       return skaffoldProcess.waitFor();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/image/ImageReference.java:158: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `registry`.
+  156.      */
+  157.     public static boolean isValidRegistry(String registry) {
+  158. >     return registry.matches(REGISTRY_REGEX);
+  159.     }
+  160.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/image/ImageReference.java:166: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `repository`.
+  164.      */
+  165.     public static boolean isValidRepository(String repository) {
+  166. >     return repository.matches(REPOSITORY_REGEX);
+  167.     }
+  168.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/image/ImageReference.java:174: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `tag`.
+  172.      */
+  173.     public static boolean isValidTag(String tag) {
+  174. >     return tag.matches(TAG_REGEX);
+  175.     }
+  176.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:181: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.google.cloud.tools.skaffold.command.Skaffold.processBuilderFactory`.
+  179.     @VisibleForTesting
+  180.     Skaffold setProcessBuilderFactory(Function<List<String>, ProcessBuilder> processBuilderFactory) {
+  181. >     this.processBuilderFactory = processBuilderFactory;
+  182.       return this;
+  183.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/image/ImageReference.java:183: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.google.cloud.tools.skaffold.image.ImageReference.registry`.
+  181.     /** Use {@link #parse} to construct. */
+  182.     private ImageReference(String registry, String repository, String tag) {
+  183. >     this.registry = registry;
+  184.       this.repository = repository;
+  185.       this.tag = tag;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/image/ImageReference.java:184: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.google.cloud.tools.skaffold.image.ImageReference.repository`.
+  182.     private ImageReference(String registry, String repository, String tag) {
+  183.       this.registry = registry;
+  184. >     this.repository = repository;
+  185.       this.tag = tag;
+  186.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/image/ImageReference.java:185: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.google.cloud.tools.skaffold.image.ImageReference.tag`.
+  183.       this.registry = registry;
+  184.       this.repository = repository;
+  185. >     this.tag = tag;
+  186.     }
+  187.   
+
+Summary of the reports
+
+     GRADUAL_CHECK: 30
+  GRADUAL_BOUNDARY: 15
+    GRADUAL_STATIC: 10Found 42 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:45: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void DescriptorDigestTest.testCreateFromHash_fail()`.
+  43.         DescriptorDigest.fromHash(badHash);
+  44.         Assert.fail("Invalid hash should have caused digest creation failure.");
+  45. >     } catch (DigestException ex) {
+  46.         Assert.assertEquals("Invalid hash: " + badHash, ex.getMessage());
+  47.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:46: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `ex`.
+  44.         Assert.fail("Invalid hash should have caused digest creation failure.");
+  45.       } catch (DigestException ex) {
+  46. >       Assert.assertEquals("Invalid hash: " + badHash, ex.getMessage());
+  47.       }
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:45: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void DescriptorDigestTest.testCreateFromHash_fail()`.
+  43.         DescriptorDigest.fromHash(badHash);
+  44.         Assert.fail("Invalid hash should have caused digest creation failure.");
+  45. >     } catch (DigestException ex) {
+  46.         Assert.assertEquals("Invalid hash: " + badHash, ex.getMessage());
+  47.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/filesystem/FilePermissionsTest.java:64: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$147`.
+  62.           InputStreamReader stdoutReader = new InputStreamReader(stdout, StandardCharsets.UTF_8)) {
+  63.         Assert.assertEquals("hello\n", CharStreams.toString(stdoutReader));
+  64. >     }
+  65.       Assert.assertEquals(0, process.waitFor());
+  66.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/filesystem/FilePermissionsTest.java:52: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void FilePermissionsTest.testMakeExecutable()`.
+  50.         Assert.fail("executing non-executable should fail");
+  51.   
+  52. >     } catch (IOException ex) {
+  53.         // pass
+  54.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/filesystem/FilePermissionsTest.java:61: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void FilePermissionsTest.testMakeExecutable()`.
+  59.   
+  60.       Process process = new ProcessBuilder(executableSh.toString()).start();
+  61. >     try (InputStream stdout = process.getInputStream();
+  62.           InputStreamReader stdoutReader = new InputStreamReader(stdout, StandardCharsets.UTF_8)) {
+  63.         Assert.assertEquals("hello\n", CharStreams.toString(stdoutReader));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/filesystem/FilePermissionsTest.java:64: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void FilePermissionsTest.testMakeExecutable()`.
+  62.           InputStreamReader stdoutReader = new InputStreamReader(stdout, StandardCharsets.UTF_8)) {
+  63.         Assert.assertEquals("hello\n", CharStreams.toString(stdoutReader));
+  64. >     }
+  65.       Assert.assertEquals(0, process.waitFor());
+  66.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:57: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void DescriptorDigestTest.testCreateFromHash_failIncorrectLength()`.
+  55.         DescriptorDigest.fromHash(badHash);
+  56.         Assert.fail("Invalid hash should have caused digest creation failure.");
+  57. >     } catch (DigestException ex) {
+  58.         Assert.assertEquals("Invalid hash: " + badHash, ex.getMessage());
+  59.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:58: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `ex`.
+  56.         Assert.fail("Invalid hash should have caused digest creation failure.");
+  57.       } catch (DigestException ex) {
+  58. >       Assert.assertEquals("Invalid hash: " + badHash, ex.getMessage());
+  59.       }
+  60.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:57: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void DescriptorDigestTest.testCreateFromHash_failIncorrectLength()`.
+  55.         DescriptorDigest.fromHash(badHash);
+  56.         Assert.fail("Invalid hash should have caused digest creation failure.");
+  57. >     } catch (DigestException ex) {
+  58.         Assert.assertEquals("Invalid hash: " + badHash, ex.getMessage());
+  59.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:53: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$14`.
+  51.     public void testParse_pass() throws InvalidImageReferenceException {
+  52.       for (String goodRegistry : goodRegistries) {
+  53. >       for (String goodRepository : goodRepositories) {
+  54.           for (String goodTag : goodTags) {
+  55.             verifyParse(goodRegistry, goodRepository, ":", goodTag);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:54: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$26`.
+  52.       for (String goodRegistry : goodRegistries) {
+  53.         for (String goodRepository : goodRepositories) {
+  54. >         for (String goodTag : goodTags) {
+  55.             verifyParse(goodRegistry, goodRepository, ":", goodTag);
+  56.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:52: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$2`.
+  50.     @Test
+  51.     public void testParse_pass() throws InvalidImageReferenceException {
+  52. >     for (String goodRegistry : goodRegistries) {
+  53.         for (String goodRepository : goodRepositories) {
+  54.           for (String goodTag : goodTags) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:57: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$43`.
+  55.             verifyParse(goodRegistry, goodRepository, ":", goodTag);
+  56.           }
+  57. >         for (String goodDigest : goodDigests) {
+  58.             verifyParse(goodRegistry, goodRepository, "@", goodDigest);
+  59.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/downloader/DownloaderTest.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void DownloaderTest.downloadToFile(Path)`.
+  54.     private void downloadToFile(Path destination) throws IOException {
+  55.       byte[] expectedDownloadContents = new byte[] {0x11, 0x22, 0x33, 0x44, 0x55};
+  56. >     long expectedSize = expectedDownloadContents.length;
+  57.       InputStream fakeInputStream = new ByteArrayInputStream(expectedDownloadContents);
+  58.       Mockito.when(mockURL.openConnection()).thenReturn(mockURLConnection);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/filesystem/OperatingSystemTest.java:62: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void OperatingSystemTest.testUnknown()`.
+  60.         Assert.fail("Resolve should have failed");
+  61.   
+  62. >     } catch (IllegalStateException ex) {
+  63.         Assert.assertEquals("Unknown OS: UnKnOwN", ex.getMessage());
+  64.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/filesystem/OperatingSystemTest.java:63: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `ex`.
+  61.   
+  62.       } catch (IllegalStateException ex) {
+  63. >       Assert.assertEquals("Unknown OS: UnKnOwN", ex.getMessage());
+  64.       }
+  65.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/filesystem/OperatingSystemTest.java:62: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void OperatingSystemTest.testUnknown()`.
+  60.         Assert.fail("Resolve should have failed");
+  61.   
+  62. >     } catch (IllegalStateException ex) {
+  63.         Assert.assertEquals("Unknown OS: UnKnOwN", ex.getMessage());
+  64.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:80: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void DescriptorDigestTest.testCreateFromDigest_fail()`.
+  78.         DescriptorDigest.fromDigest(badDigest);
+  79.         Assert.fail("Invalid digest should have caused digest creation failure.");
+  80. >     } catch (DigestException ex) {
+  81.         Assert.assertEquals("Invalid digest: " + badDigest, ex.getMessage());
+  82.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:81: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `ex`.
+  79.         Assert.fail("Invalid digest should have caused digest creation failure.");
+  80.       } catch (DigestException ex) {
+  81. >       Assert.assertEquals("Invalid digest: " + badDigest, ex.getMessage());
+  82.       }
+  83.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:80: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void DescriptorDigestTest.testCreateFromDigest_fail()`.
+  78.         DescriptorDigest.fromDigest(badDigest);
+  79.         Assert.fail("Invalid digest should have caused digest creation failure.");
+  80. >     } catch (DigestException ex) {
+  81.         Assert.assertEquals("Invalid digest: " + badDigest, ex.getMessage());
+  82.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:91: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void ImageReferenceTest.testParse_invalid()`.
+  89.           Assert.fail(badImageReference + " should not be a valid image reference");
+  90.   
+  91. >       } catch (InvalidImageReferenceException ex) {
+  92.           Assert.assertThat(ex.getMessage(), CoreMatchers.containsString(badImageReference));
+  93.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:92: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `ex`.
+  90.   
+  91.         } catch (InvalidImageReferenceException ex) {
+  92. >         Assert.assertThat(ex.getMessage(), CoreMatchers.containsString(badImageReference));
+  93.         }
+  94.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:86: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$2`.
+  84.     @Test
+  85.     public void testParse_invalid() {
+  86. >     for (String badImageReference : badImageReferences) {
+  87.         try {
+  88.           ImageReference.parse(badImageReference);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:91: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void ImageReferenceTest.testParse_invalid()`.
+  89.           Assert.fail(badImageReference + " should not be a valid image reference");
+  90.   
+  91. >       } catch (InvalidImageReferenceException ex) {
+  92.           Assert.assertThat(ex.getMessage(), CoreMatchers.containsString(badImageReference));
+  93.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:113: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  111.       Assert.assertEquals(
+  112.           "registry.hub.docker.com",
+  113. >         ImageReference.of(null, expectedRepository, expectedTag).getRegistry());
+  114.       Assert.assertEquals(
+  115.           "registry.hub.docker.com", ImageReference.of(null, expectedRepository, null).getRegistry());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:117: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  115.           "registry.hub.docker.com", ImageReference.of(null, expectedRepository, null).getRegistry());
+  116.       Assert.assertEquals(
+  117. >         "latest", ImageReference.of(expectedRegistry, expectedRepository, null).getTag());
+  118.       Assert.assertEquals("latest", ImageReference.of(null, expectedRepository, null).getTag());
+  119.       Assert.assertEquals(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:115: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter,possibly-null argument `null` passed to nonnull parameter.
+  113.           ImageReference.of(null, expectedRepository, expectedTag).getRegistry());
+  114.       Assert.assertEquals(
+  115. >         "registry.hub.docker.com", ImageReference.of(null, expectedRepository, null).getRegistry());
+  116.       Assert.assertEquals(
+  117.           "latest", ImageReference.of(expectedRegistry, expectedRepository, null).getTag());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:118: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter,possibly-null argument `null` passed to nonnull parameter.
+  116.       Assert.assertEquals(
+  117.           "latest", ImageReference.of(expectedRegistry, expectedRepository, null).getTag());
+  118. >     Assert.assertEquals("latest", ImageReference.of(null, expectedRepository, null).getTag());
+  119.       Assert.assertEquals(
+  120.           expectedRepository, ImageReference.of(null, expectedRepository, null).getRepository());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:120: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter,possibly-null argument `null` passed to nonnull parameter.
+  118.       Assert.assertEquals("latest", ImageReference.of(null, expectedRepository, null).getTag());
+  119.       Assert.assertEquals(
+  120. >         expectedRepository, ImageReference.of(null, expectedRepository, null).getRepository());
+  121.     }
+  122.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:124: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `goodHashBuffer`.
+  122.       StringBuilder goodHashBuffer = new StringBuilder(64);
+  123.       for (int i = 0; i < 64; i++) {
+  124. >       goodHashBuffer.append(character);
+  125.       }
+  126.       return goodHashBuffer.toString();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:126: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `goodHashBuffer`.
+  124.         goodHashBuffer.append(character);
+  125.       }
+  126. >     return goodHashBuffer.toString();
+  127.     }
+  128.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:131: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  129.       Assert.assertEquals(
+  130.           "someregistry/someotherimage",
+  131. >         ImageReference.of("someregistry", "someotherimage", null).toString());
+  132.       Assert.assertEquals(
+  133.           "anotherregistry/anotherimage:sometag",
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:125: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter,possibly-null argument `null` passed to nonnull parameter.
+  123.     @Test
+  124.     public void testToString() {
+  125. >     Assert.assertEquals("someimage", ImageReference.of(null, "someimage", null).toString());
+  126.       Assert.assertEquals("someimage", ImageReference.of("", "someimage", "").toString());
+  127.       Assert.assertEquals(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:128: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter,possibly-null argument `null` passed to nonnull parameter.
+  126.       Assert.assertEquals("someimage", ImageReference.of("", "someimage", "").toString());
+  127.       Assert.assertEquals(
+  128. >         "someotherimage", ImageReference.of(null, "library/someotherimage", null).toString());
+  129.       Assert.assertEquals(
+  130.           "someregistry/someotherimage",
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:148: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  146.       Assert.assertEquals(
+  147.           "someregistry/someotherimage:latest",
+  148. >         ImageReference.of("someregistry", "someotherimage", null).toStringWithTag());
+  149.       Assert.assertEquals(
+  150.           "anotherregistry/anotherimage:sometag",
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:140: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter,possibly-null argument `null` passed to nonnull parameter.
+  138.     public void testToStringWithTag() {
+  139.       Assert.assertEquals(
+  140. >         "someimage:latest", ImageReference.of(null, "someimage", null).toStringWithTag());
+  141.       Assert.assertEquals(
+  142.           "someimage:latest", ImageReference.of("", "someimage", "").toStringWithTag());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:145: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter,possibly-null argument `null` passed to nonnull parameter.
+  143.       Assert.assertEquals(
+  144.           "someotherimage:latest",
+  145. >         ImageReference.of(null, "library/someotherimage", null).toStringWithTag());
+  146.       Assert.assertEquals(
+  147.           "someregistry/someotherimage:latest",
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:157: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void ImageReferenceTest.verifyParse(String,String,String,String)`.
+  155.         throws InvalidImageReferenceException {
+  156.       // Gets the expected parsed components.
+  157. >     String expectedRegistry = registry;
+  158.       if (Strings.isNullOrEmpty(expectedRegistry)) {
+  159.         expectedRegistry = "registry.hub.docker.com";
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:161: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void ImageReferenceTest.verifyParse(String,String,String,String)`.
+  159.         expectedRegistry = "registry.hub.docker.com";
+  160.       }
+  161. >     String expectedRepository = repository;
+  162.       if ("registry.hub.docker.com".equals(expectedRegistry) && repository.indexOf('/') < 0) {
+  163.         expectedRepository = "library/" + expectedRepository;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:165: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void ImageReferenceTest.verifyParse(String,String,String,String)`.
+  163.         expectedRepository = "library/" + expectedRepository;
+  164.       }
+  165. >     String expectedTag = tag;
+  166.       if (Strings.isNullOrEmpty(expectedTag)) {
+  167.         expectedTag = "latest";
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/ImageReferenceTest.java:162: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `repository`.
+  160.       }
+  161.       String expectedRepository = repository;
+  162. >     if ("registry.hub.docker.com".equals(expectedRegistry) && repository.indexOf('/') < 0) {
+  163.         expectedRepository = "library/" + expectedRepository;
+  164.       }
+
+Summary of the reports
+
+    GRADUAL_STATIC: 19
+     GRADUAL_CHECK: 14
+  GRADUAL_BOUNDARY: 9Found 2 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/integration-test/java/com/google/cloud/tools/skaffold/downloader/DownloaderIntegationTest.java:44: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `destination`.
+  42.       // Downloads a script that says "hello".
+  43.       Downloader.download(url, destination, 1);
+  44. >     Assert.assertTrue(destination.toFile().setExecutable(true));
+  45.   
+  46.       // Runs the downloaded script.
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/skaffold-tools-for-java/skaffold-plugins-core/src/integration-test/java/com/google/cloud/tools/skaffold/downloader/DownloaderIntegationTest.java:48: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `destination`.
+  46.       // Runs the downloaded script.
+  47.       List<String> commandList = new ArrayList<>(Arrays.asList(command));
+  48. >     commandList.add(destination.toString());
+  49.       Process process = new ProcessBuilder(commandList).start();
+  50.       String stdout =
+
+Summary of the reports
+
+  GRADUAL_CHECK: 2

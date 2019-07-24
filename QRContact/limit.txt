@@ -1,0 +1,1277 @@
+Found 79 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Help.java:21: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Help$1.this$0`.
+  19.           MenuItem menuItem = menu.getItem(2);
+  20.           menuItem.setChecked(true);
+  21. >         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  22.               @Override
+  23.               public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:38: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `x0`.
+  36.   import ezvcard.property.StructuredName;
+  37.   
+  38. > public class Make extends AppCompatActivity {
+  39.       final String[] VCardTags = {"VERSION", "PRODID", "N:", "EMAIL", "TEL", "END"};
+  40.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:46: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `savedInstanceState` passed to nonnull parameter.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           setContentView(R.layout.activity_main);
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$1.this$0`.
+  54.           final EditText profileName = findViewById(R.id.profileName);
+  55.   
+  56. >         refresh.setOnClickListener(new View.OnClickListener() {
+  57.               @Override
+  58.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$1.val$email`.
+  54.           final EditText profileName = findViewById(R.id.profileName);
+  55.   
+  56. >         refresh.setOnClickListener(new View.OnClickListener() {
+  57.               @Override
+  58.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$1.val$firstName`.
+  54.           final EditText profileName = findViewById(R.id.profileName);
+  55.   
+  56. >         refresh.setOnClickListener(new View.OnClickListener() {
+  57.               @Override
+  58.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$1.val$imageView`.
+  54.           final EditText profileName = findViewById(R.id.profileName);
+  55.   
+  56. >         refresh.setOnClickListener(new View.OnClickListener() {
+  57.               @Override
+  58.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$1.val$lastName`.
+  54.           final EditText profileName = findViewById(R.id.profileName);
+  55.   
+  56. >         refresh.setOnClickListener(new View.OnClickListener() {
+  57.               @Override
+  58.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$1.val$phone`.
+  54.           final EditText profileName = findViewById(R.id.profileName);
+  55.   
+  56. >         refresh.setOnClickListener(new View.OnClickListener() {
+  57.               @Override
+  58.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:58: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.MainActivity$1.this$0`.
+  56.   
+  57.   
+  58. >         surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
+  59.               @Override
+  60.               public void surfaceCreated(SurfaceHolder holder) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:67: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void MainActivity$1.surfaceCreated(SurfaceHolder)`.
+  65.                   {
+  66.                       cameraSource.start(holder);
+  67. >                 } catch(IOException e)
+  68.                   {
+  69.                       e.printStackTrace();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:69: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  67.                   } catch(IOException e)
+  68.                   {
+  69. >                     e.printStackTrace();
+  70.                   }
+  71.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:67: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void MainActivity$1.surfaceCreated(SurfaceHolder)`.
+  65.                   {
+  66.                       cameraSource.start(holder);
+  67. >                 } catch(IOException e)
+  68.                   {
+  69.                       e.printStackTrace();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$5.this$0`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$5.val$email`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$5.val$firstName`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$5.val$lastName`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$5.val$phone`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$5.val$profileArrayList`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$5.val$profileName`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:78: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$2.this$0`.
+  76.           MenuItem menuItem = menu.getItem(1);
+  77.           menuItem.setChecked(true);
+  78. >         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  79.               @Override
+  80.               public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:86: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.MainActivity$2.this$0`.
+  84.           });
+  85.   
+  86. >         barcodeDetector.setProcessor(new Detector.Processor<Barcode>() {
+  87.               @Override
+  88.               public void release() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:114: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$3.this$0`.
+  112.           profileList.setAdapter(arrayAdapter);
+  113.   
+  114. >         chooseProfile.setOnClickListener(new View.OnClickListener() {
+  115.               @Override
+  116.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:114: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$3.val$bottomNavigationView`.
+  112.           profileList.setAdapter(arrayAdapter);
+  113.   
+  114. >         chooseProfile.setOnClickListener(new View.OnClickListener() {
+  115.               @Override
+  116.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:114: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$3.val$imageView`.
+  112.           profileList.setAdapter(arrayAdapter);
+  113.   
+  114. >         chooseProfile.setOnClickListener(new View.OnClickListener() {
+  115.               @Override
+  116.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:114: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$3.val$profileArrayList`.
+  112.           profileList.setAdapter(arrayAdapter);
+  113.   
+  114. >         chooseProfile.setOnClickListener(new View.OnClickListener() {
+  115.               @Override
+  116.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:114: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$3.val$profileLayout`.
+  112.           profileList.setAdapter(arrayAdapter);
+  113.   
+  114. >         chooseProfile.setOnClickListener(new View.OnClickListener() {
+  115.               @Override
+  116.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:114: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$3.val$profileList`.
+  112.           profileList.setAdapter(arrayAdapter);
+  113.   
+  114. >         chooseProfile.setOnClickListener(new View.OnClickListener() {
+  115.               @Override
+  116.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:94: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `detections`.
+  92.               @Override
+  93.               public void receiveDetections(Detector.Detections<Barcode> detections) {
+  94. >                 final SparseArray<Barcode> qrCodes = detections.getDetectedItems();
+  95.   
+  96.                   if(qrCodes.size() != 0) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:97: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.MainActivity$2$1.this$1`.
+  95.   
+  96.                   if(qrCodes.size() != 0) {
+  97. >                     textView.post(new Runnable() {
+  98.                           @Override
+  99.                           public void run() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:97: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.MainActivity$2$1.val$qrCodes`.
+  95.   
+  96.                   if(qrCodes.size() != 0) {
+  97. >                     textView.post(new Runnable() {
+  98.                           @Override
+  99.                           public void run() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:107: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void MainActivity$2$1.run()`.
+  105.   
+  106.                                   }
+  107. >                             } catch (Exception e) {
+  108.                                   Log.d("ScanTest", e.toString());
+  109.                               }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:108: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  106.                                   }
+  107.                               } catch (Exception e) {
+  108. >                                 Log.d("ScanTest", e.toString());
+  109.                               }
+  110.                               textView.setText(qrCodes.valueAt(0).rawValue);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:107: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void MainActivity$2$1.run()`.
+  105.   
+  106.                                   }
+  107. >                             } catch (Exception e) {
+  108.                                   Log.d("ScanTest", e.toString());
+  109.                               }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:126: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.MainActivity$3.this$0`.
+  124.           MenuItem menuItem = menu.getItem(0);
+  125.           menuItem.setChecked(true);
+  126. >         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  127.               @Override
+  128.               public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.this$0`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$bottomNavigationView`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$email`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$firstName`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$imageView`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$lastName`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$phone`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$profileArrayList`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$profileLayout`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$profileList`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$profileName`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:160: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$42`.
+  158.                   }
+  159.   
+  160. >                 for (Profile profile : profileArrayList) {
+  161.                       if (profile.equals(toAddToList) || toAddToList.getProfileName().equals(profile.getProfileName())) {
+  162.                           isThereACopy = true;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:161: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `toAddToList`.
+  159.   
+  160.                   for (Profile profile : profileArrayList) {
+  161. >                     if (profile.equals(toAddToList) || toAddToList.getProfileName().equals(profile.getProfileName())) {
+  162.                           isThereACopy = true;
+  163.                           break;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:216: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `ArrayList Make.loadData()`.
+  214.   
+  215.               return profileArrayList;
+  216. >         } catch (Exception e) {
+  217.               Log.d("Persistence", e.toString());
+  218.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:217: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  215.               return profileArrayList;
+  216.           } catch (Exception e) {
+  217. >             Log.d("Persistence", e.toString());
+  218.           }
+  219.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:207: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  205.               SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+  206.               Gson gson = new Gson();
+  207. >             String json = sharedPreferences.getString("task list", null);
+  208.               Type type = new TypeToken<ArrayList<Profile>>() {}.getType();
+  209.               profileArrayList = gson.fromJson(json, type);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:216: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `ArrayList Make.loadData()`.
+  214.   
+  215.               return profileArrayList;
+  216. >         } catch (Exception e) {
+  217.               Log.d("Persistence", e.toString());
+  218.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:208: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$6.this$0`.
+  206.               Gson gson = new Gson();
+  207.               String json = sharedPreferences.getString("task list", null);
+  208. >             Type type = new TypeToken<ArrayList<Profile>>() {}.getType();
+  209.               profileArrayList = gson.fromJson(json, type);
+  210.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:228: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `*(this->com.example.emily.qrcontact.Make.VCardTags)[_]` passed to nonnull parameter.
+  226.   
+  227.           for (int x = 0; x < VCardTags.length; x++) {
+  228. >             if (newFullContact.contains(VCardTags[x])) {
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:229: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `*(this->com.example.emily.qrcontact.Make.VCardTags)[_]` passed to nonnull parameter.
+  227.           for (int x = 0; x < VCardTags.length; x++) {
+  228.               if (newFullContact.contains(VCardTags[x])) {
+  229. >                 int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+  231.                       parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:231: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `*(this->com.example.emily.qrcontact.Make.VCardTags)[_]` passed to nonnull parameter.
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+  231. >                     parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+  232.                   }
+  233.                   try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:236: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `String Make.getUrlVCard(VCard)`.
+  234.                       newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235.                               + newFullContact.substring(parseStop);
+  236. >                 } catch (Exception e) {
+  237.                       Log.d("out of bounds", e.toString() + " " + parseStop);
+  238.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:245: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `String Make.getUrlVCard(VCard)`.
+  243.   
+  244.           Log.d("test", newFullContact);
+  245. >         return newFullContact;
+  246.   
+  247.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:230: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `*(this->com.example.emily.qrcontact.Make.VCardTags)[_]`.
+  228.               if (newFullContact.contains(VCardTags[x])) {
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230. >                 if (VCardTags[x].equals("N:")) {
+  231.                       parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+  232.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:237: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237. >                     Log.d("out of bounds", e.toString() + " " + parseStop);
+  238.   
+  239.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:228: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`.
+  226.   
+  227.           for (int x = 0; x < VCardTags.length; x++) {
+  228. >             if (newFullContact.contains(VCardTags[x])) {
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:229: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`.
+  227.           for (int x = 0; x < VCardTags.length; x++) {
+  228.               if (newFullContact.contains(VCardTags[x])) {
+  229. >                 int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+  231.                       parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:231: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`.
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+  231. >                     parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+  232.                   }
+  233.                   try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:234: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`.
+  232.                   }
+  233.                   try {
+  234. >                     newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:235: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`.
+  233.                   try {
+  234.                       newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235. >                             + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237.                       Log.d("out of bounds", e.toString() + " " + parseStop);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:236: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `String Make.getUrlVCard(VCard)`.
+  234.                       newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235.                               + newFullContact.substring(parseStop);
+  236. >                 } catch (Exception e) {
+  237.                       Log.d("out of bounds", e.toString() + " " + parseStop);
+  238.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:264: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `email`.
+  262.           fullName.setGiven(String.valueOf(firstName.getText()));
+  263.           vcard.setStructuredName(fullName);
+  264. >         vcard.addEmail(String.valueOf(email.getText()), EmailType.WORK);
+  265.           vcard.addTelephoneNumber(String.valueOf(phone.getText()));
+  266.           return vcard;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:262: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `firstName`.
+  260.           StructuredName fullName = new StructuredName();
+  261.           fullName.setFamily(String.valueOf(lastName.getText()));
+  262. >         fullName.setGiven(String.valueOf(firstName.getText()));
+  263.           vcard.setStructuredName(fullName);
+  264.           vcard.addEmail(String.valueOf(email.getText()), EmailType.WORK);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:261: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `lastName`.
+  259.           VCard vcard = new VCard();
+  260.           StructuredName fullName = new StructuredName();
+  261. >         fullName.setFamily(String.valueOf(lastName.getText()));
+  262.           fullName.setGiven(String.valueOf(firstName.getText()));
+  263.           vcard.setStructuredName(fullName);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:265: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `phone`.
+  263.           vcard.setStructuredName(fullName);
+  264.           vcard.addEmail(String.valueOf(email.getText()), EmailType.WORK);
+  265. >         vcard.addTelephoneNumber(String.valueOf(phone.getText()));
+  266.           return vcard;
+  267.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:284: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$Profile.profileName`.
+  282.           public Profile(VCard toVCard, String toProfileName) {
+  283.               vCard = toVCard;
+  284. >             profileName = toProfileName;
+  285.           }
+  286.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:282: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$Profile.this$0`.
+  280.           }
+  281.   
+  282. >         public Profile(VCard toVCard, String toProfileName) {
+  283.               vCard = toVCard;
+  284.               profileName = toProfileName;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:283: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$Profile.vCard`.
+  281.   
+  282.           public Profile(VCard toVCard, String toProfileName) {
+  283. >             vCard = toVCard;
+  284.               profileName = toProfileName;
+  285.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:292: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `boolean Make$Profile.equals(Object)`.
+  290.               }
+  291.   
+  292. >             Profile newCompare = (Profile) toCompare;
+  293.               String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:294: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  292.               Profile newCompare = (Profile) toCompare;
+  293.               String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294. >             String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:296: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296. >             String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:298: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298. >             String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:300: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300. >             String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+  302.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:307: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  305.   
+  306.               return (firstName.equals(toCompareFirstName) && lastName.equals(toCompareLastName) && email.equals(toCompareEmail)
+  307. >                     && phone.equals(toComparePhone) && profileName.equals(newCompare.getProfileName()));
+  308.   
+  309.           }
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 51
+     GRADUAL_CHECK: 23
+    GRADUAL_STATIC: 5Found 79 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Help.java:21: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Help$1.this$0`.
+  19.           MenuItem menuItem = menu.getItem(2);
+  20.           menuItem.setChecked(true);
+  21. >         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  22.               @Override
+  23.               public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:38: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `x0`.
+  36.   import ezvcard.property.StructuredName;
+  37.   
+  38. > public class Make extends AppCompatActivity {
+  39.       final String[] VCardTags = {"VERSION", "PRODID", "N:", "EMAIL", "TEL", "END"};
+  40.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:46: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `savedInstanceState` passed to nonnull parameter.
+  44.       @Override
+  45.       protected void onCreate(Bundle savedInstanceState) {
+  46. >         super.onCreate(savedInstanceState);
+  47.           setContentView(R.layout.activity_main);
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$1.this$0`.
+  54.           final EditText profileName = findViewById(R.id.profileName);
+  55.   
+  56. >         refresh.setOnClickListener(new View.OnClickListener() {
+  57.               @Override
+  58.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$1.val$email`.
+  54.           final EditText profileName = findViewById(R.id.profileName);
+  55.   
+  56. >         refresh.setOnClickListener(new View.OnClickListener() {
+  57.               @Override
+  58.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$1.val$firstName`.
+  54.           final EditText profileName = findViewById(R.id.profileName);
+  55.   
+  56. >         refresh.setOnClickListener(new View.OnClickListener() {
+  57.               @Override
+  58.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$1.val$imageView`.
+  54.           final EditText profileName = findViewById(R.id.profileName);
+  55.   
+  56. >         refresh.setOnClickListener(new View.OnClickListener() {
+  57.               @Override
+  58.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$1.val$lastName`.
+  54.           final EditText profileName = findViewById(R.id.profileName);
+  55.   
+  56. >         refresh.setOnClickListener(new View.OnClickListener() {
+  57.               @Override
+  58.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$1.val$phone`.
+  54.           final EditText profileName = findViewById(R.id.profileName);
+  55.   
+  56. >         refresh.setOnClickListener(new View.OnClickListener() {
+  57.               @Override
+  58.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:58: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.MainActivity$1.this$0`.
+  56.   
+  57.   
+  58. >         surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
+  59.               @Override
+  60.               public void surfaceCreated(SurfaceHolder holder) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:67: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void MainActivity$1.surfaceCreated(SurfaceHolder)`.
+  65.                   {
+  66.                       cameraSource.start(holder);
+  67. >                 } catch(IOException e)
+  68.                   {
+  69.                       e.printStackTrace();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:69: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  67.                   } catch(IOException e)
+  68.                   {
+  69. >                     e.printStackTrace();
+  70.                   }
+  71.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:67: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void MainActivity$1.surfaceCreated(SurfaceHolder)`.
+  65.                   {
+  66.                       cameraSource.start(holder);
+  67. >                 } catch(IOException e)
+  68.                   {
+  69.                       e.printStackTrace();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$5.this$0`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$5.val$email`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$5.val$firstName`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$5.val$lastName`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$5.val$phone`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$5.val$profileArrayList`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:147: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$5.val$profileName`.
+  145.           });
+  146.   
+  147. >         saveProfile.setOnClickListener(new View.OnClickListener() {
+  148.               @Override
+  149.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:78: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$2.this$0`.
+  76.           MenuItem menuItem = menu.getItem(1);
+  77.           menuItem.setChecked(true);
+  78. >         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  79.               @Override
+  80.               public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:86: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.MainActivity$2.this$0`.
+  84.           });
+  85.   
+  86. >         barcodeDetector.setProcessor(new Detector.Processor<Barcode>() {
+  87.               @Override
+  88.               public void release() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:114: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$3.this$0`.
+  112.           profileList.setAdapter(arrayAdapter);
+  113.   
+  114. >         chooseProfile.setOnClickListener(new View.OnClickListener() {
+  115.               @Override
+  116.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:114: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$3.val$bottomNavigationView`.
+  112.           profileList.setAdapter(arrayAdapter);
+  113.   
+  114. >         chooseProfile.setOnClickListener(new View.OnClickListener() {
+  115.               @Override
+  116.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:114: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$3.val$imageView`.
+  112.           profileList.setAdapter(arrayAdapter);
+  113.   
+  114. >         chooseProfile.setOnClickListener(new View.OnClickListener() {
+  115.               @Override
+  116.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:114: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$3.val$profileArrayList`.
+  112.           profileList.setAdapter(arrayAdapter);
+  113.   
+  114. >         chooseProfile.setOnClickListener(new View.OnClickListener() {
+  115.               @Override
+  116.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:114: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$3.val$profileLayout`.
+  112.           profileList.setAdapter(arrayAdapter);
+  113.   
+  114. >         chooseProfile.setOnClickListener(new View.OnClickListener() {
+  115.               @Override
+  116.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:114: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$3.val$profileList`.
+  112.           profileList.setAdapter(arrayAdapter);
+  113.   
+  114. >         chooseProfile.setOnClickListener(new View.OnClickListener() {
+  115.               @Override
+  116.               public void onClick(View v) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:94: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `detections`.
+  92.               @Override
+  93.               public void receiveDetections(Detector.Detections<Barcode> detections) {
+  94. >                 final SparseArray<Barcode> qrCodes = detections.getDetectedItems();
+  95.   
+  96.                   if(qrCodes.size() != 0) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:97: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.MainActivity$2$1.this$1`.
+  95.   
+  96.                   if(qrCodes.size() != 0) {
+  97. >                     textView.post(new Runnable() {
+  98.                           @Override
+  99.                           public void run() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:97: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.MainActivity$2$1.val$qrCodes`.
+  95.   
+  96.                   if(qrCodes.size() != 0) {
+  97. >                     textView.post(new Runnable() {
+  98.                           @Override
+  99.                           public void run() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:107: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void MainActivity$2$1.run()`.
+  105.   
+  106.                                   }
+  107. >                             } catch (Exception e) {
+  108.                                   Log.d("ScanTest", e.toString());
+  109.                               }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:108: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  106.                                   }
+  107.                               } catch (Exception e) {
+  108. >                                 Log.d("ScanTest", e.toString());
+  109.                               }
+  110.                               textView.setText(qrCodes.valueAt(0).rawValue);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:107: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void MainActivity$2$1.run()`.
+  105.   
+  106.                                   }
+  107. >                             } catch (Exception e) {
+  108.                                   Log.d("ScanTest", e.toString());
+  109.                               }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/MainActivity.java:126: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.MainActivity$3.this$0`.
+  124.           MenuItem menuItem = menu.getItem(0);
+  125.           menuItem.setChecked(true);
+  126. >         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+  127.               @Override
+  128.               public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.this$0`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$bottomNavigationView`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$email`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$firstName`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$imageView`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$lastName`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$phone`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$profileArrayList`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$profileLayout`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$profileList`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:128: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$4.val$profileName`.
+  126.           });
+  127.   
+  128. >         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+  129.               @Override
+  130.               public void onItemClick(AdapterView parent, View view, int position, long id) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:160: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$42`.
+  158.                   }
+  159.   
+  160. >                 for (Profile profile : profileArrayList) {
+  161.                       if (profile.equals(toAddToList) || toAddToList.getProfileName().equals(profile.getProfileName())) {
+  162.                           isThereACopy = true;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:161: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `toAddToList`.
+  159.   
+  160.                   for (Profile profile : profileArrayList) {
+  161. >                     if (profile.equals(toAddToList) || toAddToList.getProfileName().equals(profile.getProfileName())) {
+  162.                           isThereACopy = true;
+  163.                           break;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:216: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `ArrayList Make.loadData()`.
+  214.   
+  215.               return profileArrayList;
+  216. >         } catch (Exception e) {
+  217.               Log.d("Persistence", e.toString());
+  218.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:217: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  215.               return profileArrayList;
+  216.           } catch (Exception e) {
+  217. >             Log.d("Persistence", e.toString());
+  218.           }
+  219.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:207: error: GRADUAL_STATIC
+  possibly-null argument `null` passed to nonnull parameter.
+  205.               SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+  206.               Gson gson = new Gson();
+  207. >             String json = sharedPreferences.getString("task list", null);
+  208.               Type type = new TypeToken<ArrayList<Profile>>() {}.getType();
+  209.               profileArrayList = gson.fromJson(json, type);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:216: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `ArrayList Make.loadData()`.
+  214.   
+  215.               return profileArrayList;
+  216. >         } catch (Exception e) {
+  217.               Log.d("Persistence", e.toString());
+  218.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:208: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$6.this$0`.
+  206.               Gson gson = new Gson();
+  207.               String json = sharedPreferences.getString("task list", null);
+  208. >             Type type = new TypeToken<ArrayList<Profile>>() {}.getType();
+  209.               profileArrayList = gson.fromJson(json, type);
+  210.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:228: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `*(this->com.example.emily.qrcontact.Make.VCardTags)[_]` passed to nonnull parameter.
+  226.   
+  227.           for (int x = 0; x < VCardTags.length; x++) {
+  228. >             if (newFullContact.contains(VCardTags[x])) {
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:229: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `*(this->com.example.emily.qrcontact.Make.VCardTags)[_]` passed to nonnull parameter.
+  227.           for (int x = 0; x < VCardTags.length; x++) {
+  228.               if (newFullContact.contains(VCardTags[x])) {
+  229. >                 int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+  231.                       parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:231: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `*(this->com.example.emily.qrcontact.Make.VCardTags)[_]` passed to nonnull parameter.
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+  231. >                     parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+  232.                   }
+  233.                   try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:236: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `String Make.getUrlVCard(VCard)`.
+  234.                       newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235.                               + newFullContact.substring(parseStop);
+  236. >                 } catch (Exception e) {
+  237.                       Log.d("out of bounds", e.toString() + " " + parseStop);
+  238.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:245: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `String Make.getUrlVCard(VCard)`.
+  243.   
+  244.           Log.d("test", newFullContact);
+  245. >         return newFullContact;
+  246.   
+  247.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:230: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `*(this->com.example.emily.qrcontact.Make.VCardTags)[_]`.
+  228.               if (newFullContact.contains(VCardTags[x])) {
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230. >                 if (VCardTags[x].equals("N:")) {
+  231.                       parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+  232.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:237: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237. >                     Log.d("out of bounds", e.toString() + " " + parseStop);
+  238.   
+  239.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:228: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`.
+  226.   
+  227.           for (int x = 0; x < VCardTags.length; x++) {
+  228. >             if (newFullContact.contains(VCardTags[x])) {
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:229: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`.
+  227.           for (int x = 0; x < VCardTags.length; x++) {
+  228.               if (newFullContact.contains(VCardTags[x])) {
+  229. >                 int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+  231.                       parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:231: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`.
+  229.                   int parseStop = newFullContact.indexOf(VCardTags[x]);
+  230.                   if (VCardTags[x].equals("N:")) {
+  231. >                     parseStop = newFullContact.indexOf(VCardTags[x], newFullContact.indexOf(VCardTags[x - 1]));
+  232.                   }
+  233.                   try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:234: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`.
+  232.                   }
+  233.                   try {
+  234. >                     newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235.                               + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:235: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newFullContact`.
+  233.                   try {
+  234.                       newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235. >                             + newFullContact.substring(parseStop);
+  236.                   } catch (Exception e) {
+  237.                       Log.d("out of bounds", e.toString() + " " + parseStop);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:236: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `String Make.getUrlVCard(VCard)`.
+  234.                       newFullContact = newFullContact.substring(0, parseStop) + "%0A"
+  235.                               + newFullContact.substring(parseStop);
+  236. >                 } catch (Exception e) {
+  237.                       Log.d("out of bounds", e.toString() + " " + parseStop);
+  238.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:264: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `email`.
+  262.           fullName.setGiven(String.valueOf(firstName.getText()));
+  263.           vcard.setStructuredName(fullName);
+  264. >         vcard.addEmail(String.valueOf(email.getText()), EmailType.WORK);
+  265.           vcard.addTelephoneNumber(String.valueOf(phone.getText()));
+  266.           return vcard;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:262: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `firstName`.
+  260.           StructuredName fullName = new StructuredName();
+  261.           fullName.setFamily(String.valueOf(lastName.getText()));
+  262. >         fullName.setGiven(String.valueOf(firstName.getText()));
+  263.           vcard.setStructuredName(fullName);
+  264.           vcard.addEmail(String.valueOf(email.getText()), EmailType.WORK);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:261: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `lastName`.
+  259.           VCard vcard = new VCard();
+  260.           StructuredName fullName = new StructuredName();
+  261. >         fullName.setFamily(String.valueOf(lastName.getText()));
+  262.           fullName.setGiven(String.valueOf(firstName.getText()));
+  263.           vcard.setStructuredName(fullName);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:265: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `phone`.
+  263.           vcard.setStructuredName(fullName);
+  264.           vcard.addEmail(String.valueOf(email.getText()), EmailType.WORK);
+  265. >         vcard.addTelephoneNumber(String.valueOf(phone.getText()));
+  266.           return vcard;
+  267.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:284: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$Profile.profileName`.
+  282.           public Profile(VCard toVCard, String toProfileName) {
+  283.               vCard = toVCard;
+  284. >             profileName = toProfileName;
+  285.           }
+  286.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:282: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$Profile.this$0`.
+  280.           }
+  281.   
+  282. >         public Profile(VCard toVCard, String toProfileName) {
+  283.               vCard = toVCard;
+  284.               profileName = toProfileName;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:283: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.example.emily.qrcontact.Make$Profile.vCard`.
+  281.   
+  282.           public Profile(VCard toVCard, String toProfileName) {
+  283. >             vCard = toVCard;
+  284.               profileName = toProfileName;
+  285.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:292: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `boolean Make$Profile.equals(Object)`.
+  290.               }
+  291.   
+  292. >             Profile newCompare = (Profile) toCompare;
+  293.               String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:294: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  292.               Profile newCompare = (Profile) toCompare;
+  293.               String firstName = nullToEmpty(vCard.getStructuredName().getGiven());
+  294. >             String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:296: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  294.               String toCompareFirstName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  295.               String lastName = nullToEmpty(vCard.getStructuredName().getFamily());
+  296. >             String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:298: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  296.               String toCompareLastName = nullToEmpty(newCompare.getvCard().getStructuredName().getGiven());
+  297.               String email = nullToEmpty(vCard.getEmails().get(0).getValue());
+  298. >             String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300.               String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:300: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  298.               String toCompareEmail = nullToEmpty(newCompare.getvCard().getEmails().get(0).getValue());
+  299.               String phone = nullToEmpty(vCard.getTelephoneNumbers().get(0).getText());
+  300. >             String toComparePhone = nullToEmpty(newCompare.getvCard().getTelephoneNumbers().get(0).getText());
+  301.   
+  302.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/QRContact/app/src/main/java/com/example/emily/qrcontact/Make.java:307: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `newCompare`.
+  305.   
+  306.               return (firstName.equals(toCompareFirstName) && lastName.equals(toCompareLastName) && email.equals(toCompareEmail)
+  307. >                     && phone.equals(toComparePhone) && profileName.equals(newCompare.getProfileName()));
+  308.   
+  309.           }
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 51
+     GRADUAL_CHECK: 23
+    GRADUAL_STATIC: 5No issues foundNo issues found

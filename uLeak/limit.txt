@@ -1,0 +1,1095 @@
+Found 63 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:145: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker$1.this$0`.
+  143.         disposable =
+  144.             observableInterval.subscribe(
+  145. >               new Consumer<Long>() {
+  146.                   @Override
+  147.                   public void accept(Long aLong) throws Exception {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:187: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker$2.this$0`.
+  185.                   }
+  186.                 },
+  187. >               new Consumer<Throwable>() {
+  188.                   @Override
+  189.                   public void accept(Throwable throwable) throws Exception {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/NoOpTracker.java:25: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `events`.
+  23.     @Override
+  24.     public void flushAllQueuedReferences(ConcurrentLinkedQueue<ULeak.QueuedLeakEvent> events) {
+  25. >     events.clear();
+  26.     }
+  27.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ReferenceInfo.java:32: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ReferenceInfo.timeCreatedMs`.
+  30.     ReferenceInfo(WeakReference<?> weakReference, long timeCreatedMs) {
+  31.       this.weakReference = weakReference;
+  32. >     this.timeCreatedMs = timeCreatedMs;
+  33.     }
+  34.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ReferenceInfo.java:31: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ReferenceInfo.weakReference`.
+  29.   
+  30.     ReferenceInfo(WeakReference<?> weakReference, long timeCreatedMs) {
+  31. >     this.weakReference = weakReference;
+  32.       this.timeCreatedMs = timeCreatedMs;
+  33.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:36: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker.disposable`.
+  34.   import io.reactivex.subjects.PublishSubject;
+  35.   
+  36. > class ActiveTracker implements LeakInstanceTracker {
+  37.   
+  38.     @VisibleForTesting
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:36: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `Disposable ActiveTracker.access$702(ActiveTracker,Disposable)`.
+  34.   import io.reactivex.subjects.PublishSubject;
+  35.   
+  36. > class ActiveTracker implements LeakInstanceTracker {
+  37.   
+  38.     @VisibleForTesting
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:36: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  34.   import io.reactivex.subjects.PublishSubject;
+  35.   
+  36. > class ActiveTracker implements LeakInstanceTracker {
+  37.   
+  38.     @VisibleForTesting
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:36: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `x0`.
+  34.   import io.reactivex.subjects.PublishSubject;
+  35.   
+  36. > class ActiveTracker implements LeakInstanceTracker {
+  37.   
+  38.     @VisibleForTesting
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ULeak.java:44: error: GRADUAL_STATIC
+  possibly-null assignment to nonnull field `com.uber.uleak.ULeak.trackerSingleton`.
+  42.   
+  43.     @Nullable
+  44. >   private static LeakInstanceTracker trackerSingleton = null;
+  45.   
+  46.     private ULeak() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LeakTracker.java:50: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.LeakTracker.eventClass`.
+  48.         String name,
+  49.         final LeakType leakType) {
+  50. >     this.eventClass = eventClass;
+  51.       this.weakReferenceGenerator = weakReferenceGenerator;
+  52.       this.name = name;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LeakTracker.java:53: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.LeakTracker.leakType`.
+  51.       this.weakReferenceGenerator = weakReferenceGenerator;
+  52.       this.name = name;
+  53. >     this.leakType = leakType;
+  54.     }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LeakTracker.java:52: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.LeakTracker.name`.
+  50.       this.eventClass = eventClass;
+  51.       this.weakReferenceGenerator = weakReferenceGenerator;
+  52. >     this.name = name;
+  53.       this.leakType = leakType;
+  54.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LeakTracker.java:51: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.LeakTracker.weakReferenceGenerator`.
+  49.         final LeakType leakType) {
+  50.       this.eventClass = eventClass;
+  51. >     this.weakReferenceGenerator = weakReferenceGenerator;
+  52.       this.name = name;
+  53.       this.leakType = leakType;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:73: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `refGeneratorFactory`.
+  71.         LeakTracker tracker =
+  72.             LeakTrackerFactory.getTracker(
+  73. >               clazz, refGeneratorFactory.createGenerator(), className, leakType);
+  74.         addTracker(tracker);
+  75.         return tracker;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:90: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker.configuration`.
+  88.               TimeUnit.MILLISECONDS,
+  89.               Schedulers.io());
+  90. >     this.configuration = configuration;
+  91.       this.gcCallWrapper = gcCallWrapper;
+  92.       this.random = random;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:81: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker.errorRelay`.
+  79.         Random random,
+  80.         PublishSubject<Throwable> errorRelay) {
+  81. >     this.errorRelay = errorRelay;
+  82.       this.reporter = reporter;
+  83.       long leakCheckFrequencyMillis = configuration.leakCheckFrequencyMs;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:91: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker.gcCallWrapper`.
+  89.               Schedulers.io());
+  90.       this.configuration = configuration;
+  91. >     this.gcCallWrapper = gcCallWrapper;
+  92.       this.random = random;
+  93.       this.refGeneratorFactory = refGeneratorFactory;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:92: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker.random`.
+  90.       this.configuration = configuration;
+  91.       this.gcCallWrapper = gcCallWrapper;
+  92. >     this.random = random;
+  93.       this.refGeneratorFactory = refGeneratorFactory;
+  94.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:93: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker.refGeneratorFactory`.
+  91.       this.gcCallWrapper = gcCallWrapper;
+  92.       this.random = random;
+  93. >     this.refGeneratorFactory = refGeneratorFactory;
+  94.     }
+  95.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:82: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker.reporter`.
+  80.         PublishSubject<Throwable> errorRelay) {
+  81.       this.errorRelay = errorRelay;
+  82. >     this.reporter = reporter;
+  83.       long leakCheckFrequencyMillis = configuration.leakCheckFrequencyMs;
+  84.       observableInterval =
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:83: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `configuration`.
+  81.       this.errorRelay = errorRelay;
+  82.       this.reporter = reporter;
+  83. >     long leakCheckFrequencyMillis = configuration.leakCheckFrequencyMs;
+  84.       observableInterval =
+  85.           new ObservableInterval(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LifecycleInstanceTracker.java:80: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `long LifecycleInstanceTracker.getLatestReferenceRegistrationTimeMs()`.
+  78.         oldestReferenceTime = Math.max(referenceInfo.getTimeCreatedMs(), oldestReferenceTime);
+  79.       }
+  80. >     return oldestReferenceTime;
+  81.     }
+  82.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LifecycleInstanceTracker.java:77: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  75.     long getLatestReferenceRegistrationTimeMs() {
+  76.       long oldestReferenceTime = 0L;
+  77. >     for (ReferenceInfo referenceInfo : allocations) {
+  78.         oldestReferenceTime = Math.max(referenceInfo.getTimeCreatedMs(), oldestReferenceTime);
+  79.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LeakTracker.java:83: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `weakReference`.
+  81.   
+  82.     final boolean isValidTrackEvent(WeakReference<?> weakReference) {
+  83. >     Object materialized = weakReference.get();
+  84.       if (materialized == null || this.getEventClass() != materialized.getClass()) {
+  85.         return false;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:85: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTracker`.
+  83.      */
+  84.     private void addTracker(LeakTracker leakTracker) {
+  85. >     if (leakTrackerMultiMap.containsKey(leakTracker.getEventClass())) {
+  86.         Map<LeakType, LeakTracker> trackers = leakTrackerMultiMap.get(leakTracker.getEventClass());
+  87.         // Never expect this scenario to occur because if the map contains the class key, then it must
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:86: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTracker`.
+  84.     private void addTracker(LeakTracker leakTracker) {
+  85.       if (leakTrackerMultiMap.containsKey(leakTracker.getEventClass())) {
+  86. >       Map<LeakType, LeakTracker> trackers = leakTrackerMultiMap.get(leakTracker.getEventClass());
+  87.         // Never expect this scenario to occur because if the map contains the class key, then it must
+  88.         // have a
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:93: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTracker`.
+  91.           return;
+  92.         }
+  93. >       if (!trackers.containsKey(leakTracker.getLeakType())) {
+  94.           trackers.put(leakTracker.getLeakType(), leakTracker);
+  95.           leakTrackerMultiMap.put(leakTracker.getEventClass(), trackers);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:94: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTracker`.
+  92.         }
+  93.         if (!trackers.containsKey(leakTracker.getLeakType())) {
+  94. >         trackers.put(leakTracker.getLeakType(), leakTracker);
+  95.           leakTrackerMultiMap.put(leakTracker.getEventClass(), trackers);
+  96.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:95: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTracker`.
+  93.         if (!trackers.containsKey(leakTracker.getLeakType())) {
+  94.           trackers.put(leakTracker.getLeakType(), leakTracker);
+  95. >         leakTrackerMultiMap.put(leakTracker.getEventClass(), trackers);
+  96.         }
+  97.       } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:99: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTracker`.
+  97.       } else {
+  98.         Map<LeakType, LeakTracker> trackers = new HashMap<>();
+  99. >       trackers.put(leakTracker.getLeakType(), leakTracker);
+  100.         leakTrackerMultiMap.put(leakTracker.getEventClass(), trackers);
+  101.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:100: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTracker`.
+  98.         Map<LeakType, LeakTracker> trackers = new HashMap<>();
+  99.         trackers.put(leakTracker.getLeakType(), leakTracker);
+  100. >       leakTrackerMultiMap.put(leakTracker.getEventClass(), trackers);
+  101.       }
+  102.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/SingleInstanceTracker.java:99: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `long SingleInstanceTracker.getLatestReferenceRegistrationTimeMs()`.
+  97.         oldestReferenceTime = Math.max(referenceInfo.getTimeCreatedMs(), oldestReferenceTime);
+  98.       }
+  99. >     return oldestReferenceTime;
+  100.     }
+  101.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/SingleInstanceTracker.java:96: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  94.     long getLatestReferenceRegistrationTimeMs() {
+  95.       long oldestReferenceTime = 0L;
+  96. >     for (ReferenceInfo referenceInfo : allocations) {
+  97.         oldestReferenceTime = Math.max(referenceInfo.getTimeCreatedMs(), oldestReferenceTime);
+  98.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LeakTracker.java:96: error: GRADUAL_STATIC
+  possibly-null assignment to nonnull field `com.uber.uleak.LeakTracker.gcIndicatorWeakReference`.
+  94.     @CallSuper
+  95.     protected void clearTrackingData() {
+  96. >     gcIndicatorWeakReference = null;
+  97.     }
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:115: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void ActiveTracker.flushAllQueuedReferences(ConcurrentLinkedQueue)`.
+  113.           shouldStartTracking = shouldStartTracking || tracker.requiresTracking();
+  114.         }
+  115. >     }
+  116.       if (shouldStartTracking && disposable == null) {
+  117.         startTracking();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:101: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `events`.
+  99.       boolean shouldStartTracking = false;
+  100.       synchronized (trackedReferences) {
+  101. >       while ((queuedLeakEvent = events.poll()) != null) {
+  102.           Object object = queuedLeakEvent.weakReference.get();
+  103.           if (object == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:115: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void ActiveTracker.flushAllQueuedReferences(ConcurrentLinkedQueue)`.
+  113.           shouldStartTracking = shouldStartTracking || tracker.requiresTracking();
+  114.         }
+  115. >     }
+  116.       if (shouldStartTracking && disposable == null) {
+  117.         startTracking();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LifecycleInstanceTracker.java:100: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$13`.
+  98.       tempCollection.clear();
+  99.       allocations.drainTo(tempCollection);
+  100. >     for (ReferenceInfo referenceInfo : tempCollection) {
+  101.         if (referenceInfo.getWeakReference().get() != null) {
+  102.           allocations.add(referenceInfo);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ULeak.java:109: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `type`.
+  107.         return;
+  108.       }
+  109. >     switch (type) {
+  110.         case ACTIVE_REPORTING:
+  111.           trackerSingleton = new ActiveTracker(reporter, configuration, ERROR_RELAY);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/SingleInstanceTracker.java:111: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$13`.
+  109.       tempCollection.clear();
+  110.       allocations.drainTo(tempCollection);
+  111. >     for (ReferenceInfo referenceInfo : tempCollection) {
+  112.         if (referenceInfo.getWeakReference().get() != null) {
+  113.           allocations.add(referenceInfo);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:114: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `List TrackedReferences.getAllLeakTrackers()`.
+  112.         leakTrackers.addAll(trackers.values());
+  113.       }
+  114. >     return leakTrackers;
+  115.     }
+  116.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:112: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTrackers`.
+  110.       List<LeakTracker> leakTrackers = new ArrayList<>();
+  111.       for (Map<LeakType, LeakTracker> trackers : leakTrackerMultiMap.values()) {
+  112. >       leakTrackers.addAll(trackers.values());
+  113.       }
+  114.       return leakTrackers;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:111: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$8`.
+  109.     List<LeakTracker> getAllLeakTrackers() {
+  110.       List<LeakTracker> leakTrackers = new ArrayList<>();
+  111. >     for (Map<LeakType, LeakTracker> trackers : leakTrackerMultiMap.values()) {
+  112.         leakTrackers.addAll(trackers.values());
+  113.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ULeak.java:109: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void ULeak$1.<clinit>()`.
+  107.         return;
+  108.       }
+  109. >     switch (type) {
+  110.         case ACTIVE_REPORTING:
+  111.           trackerSingleton = new ActiveTracker(reporter, configuration, ERROR_RELAY);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:135: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void ActiveTracker.registerNewReference(Object,String,long,LeakType)`.
+  133.           startTracking();
+  134.         }
+  135. >     }
+  136.     }
+  137.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:124: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `object`.
+  122.     public void registerNewReference(
+  123.         Object object, String className, final long timeCreatedMs, final LeakType leakType) {
+  124. >     Class<?> clazz = object.getClass();
+  125.       LeakTracker tracker;
+  126.       synchronized (trackedReferences) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:135: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void ActiveTracker.registerNewReference(Object,String,long,LeakType)`.
+  133.           startTracking();
+  134.         }
+  135. >     }
+  136.     }
+  137.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:194: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void ActiveTracker.startTracking()`.
+  192.                   }
+  193.                 });
+  194. >     }
+  195.     }
+  196.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:194: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void ActiveTracker.startTracking()`.
+  192.                   }
+  193.                 });
+  194. >     }
+  195.     }
+  196.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ULeak.java:145: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ULeak$QueuedLeakEvent.className`.
+  143.           WeakReference<Object> weakReference, String className, final long timeEventRegisteredMs) {
+  144.         this.weakReference = weakReference;
+  145. >       this.className = className;
+  146.         this.timeEventRegisteredMs = timeEventRegisteredMs;
+  147.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ULeak.java:146: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ULeak$QueuedLeakEvent.timeEventRegisteredMs`.
+  144.         this.weakReference = weakReference;
+  145.         this.className = className;
+  146. >       this.timeEventRegisteredMs = timeEventRegisteredMs;
+  147.       }
+  148.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ULeak.java:144: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ULeak$QueuedLeakEvent.weakReference`.
+  142.       QueuedLeakEvent(
+  143.           WeakReference<Object> weakReference, String className, final long timeEventRegisteredMs) {
+  144. >       this.weakReference = weakReference;
+  145.         this.className = className;
+  146.         this.timeEventRegisteredMs = timeEventRegisteredMs;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:168: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void ActiveTracker$1.accept(Long)`.
+  166.                         continueTracking = continueTracking || tracker.requiresTracking();
+  167.                       }
+  168. >                   }
+  169.                     if (!continueTracking) {
+  170.                       // stop the interval if there isn't anything to track.
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:176: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void ActiveTracker$1.accept(Long)`.
+  174.                           disposable = null;
+  175.                         }
+  176. >                     }
+  177.                       return;
+  178.                     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:154: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$40`.
+  152.                     boolean callExplicitGC = false;
+  153.                     synchronized (trackedReferences) {
+  154. >                     for (LeakTracker tracker : trackedReferences.getAllLeakTrackers()) {
+  155.                         if (tracker.hasViolation()) {
+  156.                           reporter.reportEvent(createReportingEvent(tracker));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:174: error: GRADUAL_STATIC
+  possibly-null assignment to nonnull field `com.uber.uleak.ActiveTracker.disposable`.
+  172.                         if (disposable != null) {
+  173.                           disposable.dispose();
+  174. >                         disposable = null;
+  175.                         }
+  176.                       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:168: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void ActiveTracker$1.accept(Long)`.
+  166.                         continueTracking = continueTracking || tracker.requiresTracking();
+  167.                       }
+  168. >                   }
+  169.                     if (!continueTracking) {
+  170.                       // stop the interval if there isn't anything to track.
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:176: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void ActiveTracker$1.accept(Long)`.
+  174.                           disposable = null;
+  175.                         }
+  176. >                     }
+  177.                       return;
+  178.                     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:205: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `tracker`.
+  203.     private ULeakEvent createReportingEvent(final LeakTracker tracker) {
+  204.       ULeakEvent reporterEvent = new ULeakEvent();
+  205. >     reporterEvent.addDimension(CLASS_DIMENSION_KEY_NAME, tracker.getTrackerName());
+  206.       reporterEvent.addDimension(
+  207.           GC_TYPE_DIMENSION_KEY_NAME,
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:211: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `tracker`.
+  209.               ? ViolationType.EXPLICIT_GC_VIOLATION.name()
+  210.               : ViolationType.IMPLICIT_GC_VIOLATION.name());
+  211. >     reporterEvent.addDimension(LEAK_TYPE_KEY_NAME, tracker.getLeakType().name());
+  212.       reporterEvent.addMetric(
+  213.           INSTANCES_COUNT_METRIC_KEY_NAME, tracker.getCurrentNumInMemoryInstances());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:213: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `tracker`.
+  211.       reporterEvent.addDimension(LEAK_TYPE_KEY_NAME, tracker.getLeakType().name());
+  212.       reporterEvent.addMetric(
+  213. >         INSTANCES_COUNT_METRIC_KEY_NAME, tracker.getCurrentNumInMemoryInstances());
+  214.       reporterEvent.addMetric(
+  215.           LAST_LEAK_CREATED_TIME_MS, tracker.getLatestReferenceRegistrationTimeMs());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:215: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `tracker`.
+  213.           INSTANCES_COUNT_METRIC_KEY_NAME, tracker.getCurrentNumInMemoryInstances());
+  214.       reporterEvent.addMetric(
+  215. >         LAST_LEAK_CREATED_TIME_MS, tracker.getLatestReferenceRegistrationTimeMs());
+  216.       return reporterEvent;
+  217.     }
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 27
+     GRADUAL_CHECK: 27
+    GRADUAL_STATIC: 9Found 63 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:145: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker$1.this$0`.
+  143.         disposable =
+  144.             observableInterval.subscribe(
+  145. >               new Consumer<Long>() {
+  146.                   @Override
+  147.                   public void accept(Long aLong) throws Exception {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:187: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker$2.this$0`.
+  185.                   }
+  186.                 },
+  187. >               new Consumer<Throwable>() {
+  188.                   @Override
+  189.                   public void accept(Throwable throwable) throws Exception {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/NoOpTracker.java:25: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `events`.
+  23.     @Override
+  24.     public void flushAllQueuedReferences(ConcurrentLinkedQueue<ULeak.QueuedLeakEvent> events) {
+  25. >     events.clear();
+  26.     }
+  27.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ReferenceInfo.java:32: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ReferenceInfo.timeCreatedMs`.
+  30.     ReferenceInfo(WeakReference<?> weakReference, long timeCreatedMs) {
+  31.       this.weakReference = weakReference;
+  32. >     this.timeCreatedMs = timeCreatedMs;
+  33.     }
+  34.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ReferenceInfo.java:31: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ReferenceInfo.weakReference`.
+  29.   
+  30.     ReferenceInfo(WeakReference<?> weakReference, long timeCreatedMs) {
+  31. >     this.weakReference = weakReference;
+  32.       this.timeCreatedMs = timeCreatedMs;
+  33.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:36: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker.disposable`.
+  34.   import io.reactivex.subjects.PublishSubject;
+  35.   
+  36. > class ActiveTracker implements LeakInstanceTracker {
+  37.   
+  38.     @VisibleForTesting
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:36: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `Disposable ActiveTracker.access$702(ActiveTracker,Disposable)`.
+  34.   import io.reactivex.subjects.PublishSubject;
+  35.   
+  36. > class ActiveTracker implements LeakInstanceTracker {
+  37.   
+  38.     @VisibleForTesting
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:36: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  34.   import io.reactivex.subjects.PublishSubject;
+  35.   
+  36. > class ActiveTracker implements LeakInstanceTracker {
+  37.   
+  38.     @VisibleForTesting
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:36: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `x0`.
+  34.   import io.reactivex.subjects.PublishSubject;
+  35.   
+  36. > class ActiveTracker implements LeakInstanceTracker {
+  37.   
+  38.     @VisibleForTesting
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ULeak.java:44: error: GRADUAL_STATIC
+  possibly-null assignment to nonnull field `com.uber.uleak.ULeak.trackerSingleton`.
+  42.   
+  43.     @Nullable
+  44. >   private static LeakInstanceTracker trackerSingleton = null;
+  45.   
+  46.     private ULeak() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LeakTracker.java:50: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.LeakTracker.eventClass`.
+  48.         String name,
+  49.         final LeakType leakType) {
+  50. >     this.eventClass = eventClass;
+  51.       this.weakReferenceGenerator = weakReferenceGenerator;
+  52.       this.name = name;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LeakTracker.java:53: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.LeakTracker.leakType`.
+  51.       this.weakReferenceGenerator = weakReferenceGenerator;
+  52.       this.name = name;
+  53. >     this.leakType = leakType;
+  54.     }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LeakTracker.java:52: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.LeakTracker.name`.
+  50.       this.eventClass = eventClass;
+  51.       this.weakReferenceGenerator = weakReferenceGenerator;
+  52. >     this.name = name;
+  53.       this.leakType = leakType;
+  54.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LeakTracker.java:51: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.LeakTracker.weakReferenceGenerator`.
+  49.         final LeakType leakType) {
+  50.       this.eventClass = eventClass;
+  51. >     this.weakReferenceGenerator = weakReferenceGenerator;
+  52.       this.name = name;
+  53.       this.leakType = leakType;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:73: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `refGeneratorFactory`.
+  71.         LeakTracker tracker =
+  72.             LeakTrackerFactory.getTracker(
+  73. >               clazz, refGeneratorFactory.createGenerator(), className, leakType);
+  74.         addTracker(tracker);
+  75.         return tracker;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:90: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker.configuration`.
+  88.               TimeUnit.MILLISECONDS,
+  89.               Schedulers.io());
+  90. >     this.configuration = configuration;
+  91.       this.gcCallWrapper = gcCallWrapper;
+  92.       this.random = random;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:81: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker.errorRelay`.
+  79.         Random random,
+  80.         PublishSubject<Throwable> errorRelay) {
+  81. >     this.errorRelay = errorRelay;
+  82.       this.reporter = reporter;
+  83.       long leakCheckFrequencyMillis = configuration.leakCheckFrequencyMs;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:91: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker.gcCallWrapper`.
+  89.               Schedulers.io());
+  90.       this.configuration = configuration;
+  91. >     this.gcCallWrapper = gcCallWrapper;
+  92.       this.random = random;
+  93.       this.refGeneratorFactory = refGeneratorFactory;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:92: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker.random`.
+  90.       this.configuration = configuration;
+  91.       this.gcCallWrapper = gcCallWrapper;
+  92. >     this.random = random;
+  93.       this.refGeneratorFactory = refGeneratorFactory;
+  94.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:93: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker.refGeneratorFactory`.
+  91.       this.gcCallWrapper = gcCallWrapper;
+  92.       this.random = random;
+  93. >     this.refGeneratorFactory = refGeneratorFactory;
+  94.     }
+  95.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:82: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTracker.reporter`.
+  80.         PublishSubject<Throwable> errorRelay) {
+  81.       this.errorRelay = errorRelay;
+  82. >     this.reporter = reporter;
+  83.       long leakCheckFrequencyMillis = configuration.leakCheckFrequencyMs;
+  84.       observableInterval =
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:83: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `configuration`.
+  81.       this.errorRelay = errorRelay;
+  82.       this.reporter = reporter;
+  83. >     long leakCheckFrequencyMillis = configuration.leakCheckFrequencyMs;
+  84.       observableInterval =
+  85.           new ObservableInterval(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LifecycleInstanceTracker.java:80: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `long LifecycleInstanceTracker.getLatestReferenceRegistrationTimeMs()`.
+  78.         oldestReferenceTime = Math.max(referenceInfo.getTimeCreatedMs(), oldestReferenceTime);
+  79.       }
+  80. >     return oldestReferenceTime;
+  81.     }
+  82.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LifecycleInstanceTracker.java:77: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  75.     long getLatestReferenceRegistrationTimeMs() {
+  76.       long oldestReferenceTime = 0L;
+  77. >     for (ReferenceInfo referenceInfo : allocations) {
+  78.         oldestReferenceTime = Math.max(referenceInfo.getTimeCreatedMs(), oldestReferenceTime);
+  79.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LeakTracker.java:83: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `weakReference`.
+  81.   
+  82.     final boolean isValidTrackEvent(WeakReference<?> weakReference) {
+  83. >     Object materialized = weakReference.get();
+  84.       if (materialized == null || this.getEventClass() != materialized.getClass()) {
+  85.         return false;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:85: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTracker`.
+  83.      */
+  84.     private void addTracker(LeakTracker leakTracker) {
+  85. >     if (leakTrackerMultiMap.containsKey(leakTracker.getEventClass())) {
+  86.         Map<LeakType, LeakTracker> trackers = leakTrackerMultiMap.get(leakTracker.getEventClass());
+  87.         // Never expect this scenario to occur because if the map contains the class key, then it must
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:86: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTracker`.
+  84.     private void addTracker(LeakTracker leakTracker) {
+  85.       if (leakTrackerMultiMap.containsKey(leakTracker.getEventClass())) {
+  86. >       Map<LeakType, LeakTracker> trackers = leakTrackerMultiMap.get(leakTracker.getEventClass());
+  87.         // Never expect this scenario to occur because if the map contains the class key, then it must
+  88.         // have a
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:93: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTracker`.
+  91.           return;
+  92.         }
+  93. >       if (!trackers.containsKey(leakTracker.getLeakType())) {
+  94.           trackers.put(leakTracker.getLeakType(), leakTracker);
+  95.           leakTrackerMultiMap.put(leakTracker.getEventClass(), trackers);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:94: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTracker`.
+  92.         }
+  93.         if (!trackers.containsKey(leakTracker.getLeakType())) {
+  94. >         trackers.put(leakTracker.getLeakType(), leakTracker);
+  95.           leakTrackerMultiMap.put(leakTracker.getEventClass(), trackers);
+  96.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:95: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTracker`.
+  93.         if (!trackers.containsKey(leakTracker.getLeakType())) {
+  94.           trackers.put(leakTracker.getLeakType(), leakTracker);
+  95. >         leakTrackerMultiMap.put(leakTracker.getEventClass(), trackers);
+  96.         }
+  97.       } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:99: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTracker`.
+  97.       } else {
+  98.         Map<LeakType, LeakTracker> trackers = new HashMap<>();
+  99. >       trackers.put(leakTracker.getLeakType(), leakTracker);
+  100.         leakTrackerMultiMap.put(leakTracker.getEventClass(), trackers);
+  101.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:100: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTracker`.
+  98.         Map<LeakType, LeakTracker> trackers = new HashMap<>();
+  99.         trackers.put(leakTracker.getLeakType(), leakTracker);
+  100. >       leakTrackerMultiMap.put(leakTracker.getEventClass(), trackers);
+  101.       }
+  102.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/SingleInstanceTracker.java:99: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `long SingleInstanceTracker.getLatestReferenceRegistrationTimeMs()`.
+  97.         oldestReferenceTime = Math.max(referenceInfo.getTimeCreatedMs(), oldestReferenceTime);
+  98.       }
+  99. >     return oldestReferenceTime;
+  100.     }
+  101.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/SingleInstanceTracker.java:96: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  94.     long getLatestReferenceRegistrationTimeMs() {
+  95.       long oldestReferenceTime = 0L;
+  96. >     for (ReferenceInfo referenceInfo : allocations) {
+  97.         oldestReferenceTime = Math.max(referenceInfo.getTimeCreatedMs(), oldestReferenceTime);
+  98.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LeakTracker.java:96: error: GRADUAL_STATIC
+  possibly-null assignment to nonnull field `com.uber.uleak.LeakTracker.gcIndicatorWeakReference`.
+  94.     @CallSuper
+  95.     protected void clearTrackingData() {
+  96. >     gcIndicatorWeakReference = null;
+  97.     }
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:115: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void ActiveTracker.flushAllQueuedReferences(ConcurrentLinkedQueue)`.
+  113.           shouldStartTracking = shouldStartTracking || tracker.requiresTracking();
+  114.         }
+  115. >     }
+  116.       if (shouldStartTracking && disposable == null) {
+  117.         startTracking();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:101: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `events`.
+  99.       boolean shouldStartTracking = false;
+  100.       synchronized (trackedReferences) {
+  101. >       while ((queuedLeakEvent = events.poll()) != null) {
+  102.           Object object = queuedLeakEvent.weakReference.get();
+  103.           if (object == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:115: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void ActiveTracker.flushAllQueuedReferences(ConcurrentLinkedQueue)`.
+  113.           shouldStartTracking = shouldStartTracking || tracker.requiresTracking();
+  114.         }
+  115. >     }
+  116.       if (shouldStartTracking && disposable == null) {
+  117.         startTracking();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/LifecycleInstanceTracker.java:100: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$13`.
+  98.       tempCollection.clear();
+  99.       allocations.drainTo(tempCollection);
+  100. >     for (ReferenceInfo referenceInfo : tempCollection) {
+  101.         if (referenceInfo.getWeakReference().get() != null) {
+  102.           allocations.add(referenceInfo);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ULeak.java:109: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `type`.
+  107.         return;
+  108.       }
+  109. >     switch (type) {
+  110.         case ACTIVE_REPORTING:
+  111.           trackerSingleton = new ActiveTracker(reporter, configuration, ERROR_RELAY);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/SingleInstanceTracker.java:111: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$13`.
+  109.       tempCollection.clear();
+  110.       allocations.drainTo(tempCollection);
+  111. >     for (ReferenceInfo referenceInfo : tempCollection) {
+  112.         if (referenceInfo.getWeakReference().get() != null) {
+  113.           allocations.add(referenceInfo);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:114: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `List TrackedReferences.getAllLeakTrackers()`.
+  112.         leakTrackers.addAll(trackers.values());
+  113.       }
+  114. >     return leakTrackers;
+  115.     }
+  116.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:112: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `leakTrackers`.
+  110.       List<LeakTracker> leakTrackers = new ArrayList<>();
+  111.       for (Map<LeakType, LeakTracker> trackers : leakTrackerMultiMap.values()) {
+  112. >       leakTrackers.addAll(trackers.values());
+  113.       }
+  114.       return leakTrackers;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/TrackedReferences.java:111: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$8`.
+  109.     List<LeakTracker> getAllLeakTrackers() {
+  110.       List<LeakTracker> leakTrackers = new ArrayList<>();
+  111. >     for (Map<LeakType, LeakTracker> trackers : leakTrackerMultiMap.values()) {
+  112.         leakTrackers.addAll(trackers.values());
+  113.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ULeak.java:109: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void ULeak$1.<clinit>()`.
+  107.         return;
+  108.       }
+  109. >     switch (type) {
+  110.         case ACTIVE_REPORTING:
+  111.           trackerSingleton = new ActiveTracker(reporter, configuration, ERROR_RELAY);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:135: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void ActiveTracker.registerNewReference(Object,String,long,LeakType)`.
+  133.           startTracking();
+  134.         }
+  135. >     }
+  136.     }
+  137.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:124: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `object`.
+  122.     public void registerNewReference(
+  123.         Object object, String className, final long timeCreatedMs, final LeakType leakType) {
+  124. >     Class<?> clazz = object.getClass();
+  125.       LeakTracker tracker;
+  126.       synchronized (trackedReferences) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:135: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void ActiveTracker.registerNewReference(Object,String,long,LeakType)`.
+  133.           startTracking();
+  134.         }
+  135. >     }
+  136.     }
+  137.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:194: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void ActiveTracker.startTracking()`.
+  192.                   }
+  193.                 });
+  194. >     }
+  195.     }
+  196.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:194: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void ActiveTracker.startTracking()`.
+  192.                   }
+  193.                 });
+  194. >     }
+  195.     }
+  196.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ULeak.java:145: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ULeak$QueuedLeakEvent.className`.
+  143.           WeakReference<Object> weakReference, String className, final long timeEventRegisteredMs) {
+  144.         this.weakReference = weakReference;
+  145. >       this.className = className;
+  146.         this.timeEventRegisteredMs = timeEventRegisteredMs;
+  147.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ULeak.java:146: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ULeak$QueuedLeakEvent.timeEventRegisteredMs`.
+  144.         this.weakReference = weakReference;
+  145.         this.className = className;
+  146. >       this.timeEventRegisteredMs = timeEventRegisteredMs;
+  147.       }
+  148.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ULeak.java:144: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ULeak$QueuedLeakEvent.weakReference`.
+  142.       QueuedLeakEvent(
+  143.           WeakReference<Object> weakReference, String className, final long timeEventRegisteredMs) {
+  144. >       this.weakReference = weakReference;
+  145.         this.className = className;
+  146.         this.timeEventRegisteredMs = timeEventRegisteredMs;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:168: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void ActiveTracker$1.accept(Long)`.
+  166.                         continueTracking = continueTracking || tracker.requiresTracking();
+  167.                       }
+  168. >                   }
+  169.                     if (!continueTracking) {
+  170.                       // stop the interval if there isn't anything to track.
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:176: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void ActiveTracker$1.accept(Long)`.
+  174.                           disposable = null;
+  175.                         }
+  176. >                     }
+  177.                       return;
+  178.                     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:154: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$40`.
+  152.                     boolean callExplicitGC = false;
+  153.                     synchronized (trackedReferences) {
+  154. >                     for (LeakTracker tracker : trackedReferences.getAllLeakTrackers()) {
+  155.                         if (tracker.hasViolation()) {
+  156.                           reporter.reportEvent(createReportingEvent(tracker));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:174: error: GRADUAL_STATIC
+  possibly-null assignment to nonnull field `com.uber.uleak.ActiveTracker.disposable`.
+  172.                         if (disposable != null) {
+  173.                           disposable.dispose();
+  174. >                         disposable = null;
+  175.                         }
+  176.                       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:168: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void ActiveTracker$1.accept(Long)`.
+  166.                         continueTracking = continueTracking || tracker.requiresTracking();
+  167.                       }
+  168. >                   }
+  169.                     if (!continueTracking) {
+  170.                       // stop the interval if there isn't anything to track.
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:176: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `void ActiveTracker$1.accept(Long)`.
+  174.                           disposable = null;
+  175.                         }
+  176. >                     }
+  177.                       return;
+  178.                     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:205: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `tracker`.
+  203.     private ULeakEvent createReportingEvent(final LeakTracker tracker) {
+  204.       ULeakEvent reporterEvent = new ULeakEvent();
+  205. >     reporterEvent.addDimension(CLASS_DIMENSION_KEY_NAME, tracker.getTrackerName());
+  206.       reporterEvent.addDimension(
+  207.           GC_TYPE_DIMENSION_KEY_NAME,
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:211: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `tracker`.
+  209.               ? ViolationType.EXPLICIT_GC_VIOLATION.name()
+  210.               : ViolationType.IMPLICIT_GC_VIOLATION.name());
+  211. >     reporterEvent.addDimension(LEAK_TYPE_KEY_NAME, tracker.getLeakType().name());
+  212.       reporterEvent.addMetric(
+  213.           INSTANCES_COUNT_METRIC_KEY_NAME, tracker.getCurrentNumInMemoryInstances());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:213: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `tracker`.
+  211.       reporterEvent.addDimension(LEAK_TYPE_KEY_NAME, tracker.getLeakType().name());
+  212.       reporterEvent.addMetric(
+  213. >         INSTANCES_COUNT_METRIC_KEY_NAME, tracker.getCurrentNumInMemoryInstances());
+  214.       reporterEvent.addMetric(
+  215.           LAST_LEAK_CREATED_TIME_MS, tracker.getLatestReferenceRegistrationTimeMs());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/main/java/com/uber/uleak/ActiveTracker.java:215: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `tracker`.
+  213.           INSTANCES_COUNT_METRIC_KEY_NAME, tracker.getCurrentNumInMemoryInstances());
+  214.       reporterEvent.addMetric(
+  215. >         LAST_LEAK_CREATED_TIME_MS, tracker.getLatestReferenceRegistrationTimeMs());
+  216.       return reporterEvent;
+  217.     }
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 27
+     GRADUAL_CHECK: 27
+    GRADUAL_STATIC: 9Found 4 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:90: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTrackerTest$1.this$0`.
+  88.       MockitoAnnotations.initMocks(this);
+  89.       scheduler = new TestScheduler();
+  90. >     RxJavaPlugins.setIoSchedulerHandler(new Function<Scheduler, Scheduler>() {
+  91.         @Override
+  92.         public Scheduler apply(Scheduler scheduler) throws Exception {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:123: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.LifecycleInstanceTrackerTest$TestWeakRedGenerator.this$0`.
+  121.     }
+  122.   
+  123. >   private class TestWeakRedGenerator extends WeakReferenceGenerator {
+  124.   
+  125.       @NonNull
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:143: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.SingleInstanceTrackerTest$TestWeakRefGenerator.this$0`.
+  141.     }
+  142.   
+  143. >   private class TestWeakRefGenerator extends WeakReferenceGenerator {
+  144.   
+  145.       @NonNull
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 3
+     GRADUAL_CHECK: 1Found 4 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  57.   import io.reactivex.subjects.PublishSubject;
+  58.   
+  59. > public class ActiveTrackerTest {
+  60.   
+  61.     @Mock
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:90: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.ActiveTrackerTest$1.this$0`.
+  88.       MockitoAnnotations.initMocks(this);
+  89.       scheduler = new TestScheduler();
+  90. >     RxJavaPlugins.setIoSchedulerHandler(new Function<Scheduler, Scheduler>() {
+  91.         @Override
+  92.         public Scheduler apply(Scheduler scheduler) throws Exception {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:123: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.LifecycleInstanceTrackerTest$TestWeakRedGenerator.this$0`.
+  121.     }
+  122.   
+  123. >   private class TestWeakRedGenerator extends WeakReferenceGenerator {
+  124.   
+  125.       @NonNull
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/uLeak/uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:143: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.uber.uleak.SingleInstanceTrackerTest$TestWeakRefGenerator.this$0`.
+  141.     }
+  142.   
+  143. >   private class TestWeakRefGenerator extends WeakReferenceGenerator {
+  144.   
+  145.       @NonNull
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 3
+     GRADUAL_CHECK: 1

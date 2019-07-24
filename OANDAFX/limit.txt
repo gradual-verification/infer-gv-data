@@ -1,0 +1,1435 @@
+Found 89 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/TestRootInteractor.java:9: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootInteractor.presenter`.
+  7.     public static RootInteractor create(final RootInteractor.RootPresenter presenter) {
+  8.       RootInteractor interactor = new RootInteractor();
+  9. >     interactor.presenter = presenter;
+  10.       return interactor;
+  11.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/TestLoginInteractor.java:14: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.accountNetworkRepository`.
+  12.       LoginInteractor interactor = new LoginInteractor();
+  13.       interactor.presenter = presenter;
+  14. >     interactor.accountNetworkRepository = accountNetworkRepository;
+  15.       interactor.listener = listener;
+  16.       return interactor;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/TestLoginInteractor.java:15: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.listener`.
+  13.       interactor.presenter = presenter;
+  14.       interactor.accountNetworkRepository = accountNetworkRepository;
+  15. >     interactor.listener = listener;
+  16.       return interactor;
+  17.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/TestLoginInteractor.java:13: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.presenter`.
+  11.         final LoginInteractor.Listener listener) {
+  12.       LoginInteractor interactor = new LoginInteractor();
+  13. >     interactor.presenter = presenter;
+  14.       interactor.accountNetworkRepository = accountNetworkRepository;
+  15.       interactor.listener = listener;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/TestInstrumentInteractor.java:15: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.accountId`.
+  13.       interactor.presenter = presenter;
+  14.       interactor.instrumentNetworkRepository = instrumentNetworkRepository;
+  15. >     interactor.accountId = accountId;
+  16.       return interactor;
+  17.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/TestInstrumentInteractor.java:14: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.instrumentNetworkRepository`.
+  12.       InstrumentInteractor interactor = new InstrumentInteractor();
+  13.       interactor.presenter = presenter;
+  14. >     interactor.instrumentNetworkRepository = instrumentNetworkRepository;
+  15.       interactor.accountId = accountId;
+  16.       return interactor;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/TestInstrumentInteractor.java:13: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.presenter`.
+  11.         final InstrumentNetworkRepository instrumentNetworkRepository, final String accountId) {
+  12.       InstrumentInteractor interactor = new InstrumentInteractor();
+  13. >     interactor.presenter = presenter;
+  14.       interactor.instrumentNetworkRepository = instrumentNetworkRepository;
+  15.       interactor.accountId = accountId;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootInteractor_MembersInjector.java:16: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootInteractor_MembersInjector.presenterProvider`.
+  14.   
+  15.     public RootInteractor_MembersInjector(Provider<RootInteractor.RootPresenter> presenterProvider) {
+  16. >     this.presenterProvider = presenterProvider;
+  17.     }
+  18.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_ProvideHttpClientFactory.java:18: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_ProvideHttpClientFactory.contextProvider`.
+  16.   
+  17.     public LoginBuilder_Module_ProvideHttpClientFactory(Provider<Context> contextProvider) {
+  18. >     this.contextProvider = contextProvider;
+  19.     }
+  20.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_ProvideLoginLisenter$app_debugFactory.java:19: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_ProvideLoginLisenter$app_debugFactory.rootInteractorProvider`.
+  17.     public RootBuilder_Module_ProvideLoginLisenter$app_debugFactory(
+  18.         Provider<RootInteractor> rootInteractorProvider) {
+  19. >     this.rootInteractorProvider = rootInteractorProvider;
+  20.     }
+  21.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideHttpClientFactory.java:19: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_ProvideHttpClientFactory.contextProvider`.
+  17.   
+  18.     public InstrumentBuilder_Module_ProvideHttpClientFactory(Provider<Context> contextProvider) {
+  19. >     this.contextProvider = contextProvider;
+  20.     }
+  21.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideInstrumentAPIServiceFactory.java:20: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_ProvideInstrumentAPIServiceFactory.okHttpClientProvider`.
+  18.     public InstrumentBuilder_Module_ProvideInstrumentAPIServiceFactory(
+  19.         Provider<OkHttpClient> okHttpClientProvider) {
+  20. >     this.okHttpClientProvider = okHttpClientProvider;
+  21.     }
+  22.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory.java:20: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory.instrumentAPIServiceProvider`.
+  18.     public InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory(
+  19.         Provider<InstrumentAPIService> instrumentAPIServiceProvider) {
+  20. >     this.instrumentAPIServiceProvider = instrumentAPIServiceProvider;
+  21.     }
+  22.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_ProvideAccountAPIServiceFactory.java:20: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_ProvideAccountAPIServiceFactory.okHttpClientProvider`.
+  18.     public LoginBuilder_Module_ProvideAccountAPIServiceFactory(
+  19.         Provider<OkHttpClient> okHttpClientProvider) {
+  20. >     this.okHttpClientProvider = okHttpClientProvider;
+  21.     }
+  22.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory.java:20: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory.accountAPIServiceProvider`.
+  18.     public LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory(
+  19.         Provider<AccountAPIService> accountAPIServiceProvider) {
+  20. >     this.accountAPIServiceProvider = accountAPIServiceProvider;
+  21.     }
+  22.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Router$app_debugFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Router$app_debugFactory.componentProvider`.
+  21.         Provider<LoginView> viewProvider,
+  22.         Provider<LoginInteractor> interactorProvider) {
+  23. >     this.componentProvider = componentProvider;
+  24.       this.viewProvider = viewProvider;
+  25.       this.interactorProvider = interactorProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Router$app_debugFactory.java:25: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Router$app_debugFactory.interactorProvider`.
+  23.       this.componentProvider = componentProvider;
+  24.       this.viewProvider = viewProvider;
+  25. >     this.interactorProvider = interactorProvider;
+  26.     }
+  27.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Router$app_debugFactory.java:24: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Router$app_debugFactory.viewProvider`.
+  22.         Provider<LoginInteractor> interactorProvider) {
+  23.       this.componentProvider = componentProvider;
+  24. >     this.viewProvider = viewProvider;
+  25.       this.interactorProvider = interactorProvider;
+  26.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Companion_ProvideLoginLisenter$app_debugFactory.java:21: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Companion_ProvideLoginLisenter$app_debugFactory.module`.
+  19.     public RootBuilder_Module_Companion_ProvideLoginLisenter$app_debugFactory(
+  20.         RootBuilder.Module.Companion module, Provider<RootInteractor> rootInteractorProvider) {
+  21. >     this.module = module;
+  22.       this.rootInteractorProvider = rootInteractorProvider;
+  23.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Companion_ProvideLoginLisenter$app_debugFactory.java:22: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Companion_ProvideLoginLisenter$app_debugFactory.rootInteractorProvider`.
+  20.         RootBuilder.Module.Companion module, Provider<RootInteractor> rootInteractorProvider) {
+  21.       this.module = module;
+  22. >     this.rootInteractorProvider = rootInteractorProvider;
+  23.     }
+  24.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Router$app_debugFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Router$app_debugFactory.componentProvider`.
+  21.         Provider<RootView> viewProvider,
+  22.         Provider<RootInteractor> interactorProvider) {
+  23. >     this.componentProvider = componentProvider;
+  24.       this.viewProvider = viewProvider;
+  25.       this.interactorProvider = interactorProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Router$app_debugFactory.java:25: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Router$app_debugFactory.interactorProvider`.
+  23.       this.componentProvider = componentProvider;
+  24.       this.viewProvider = viewProvider;
+  25. >     this.interactorProvider = interactorProvider;
+  26.     }
+  27.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Router$app_debugFactory.java:24: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Router$app_debugFactory.viewProvider`.
+  22.         Provider<RootInteractor> interactorProvider) {
+  23.       this.componentProvider = componentProvider;
+  24. >     this.viewProvider = viewProvider;
+  25.       this.interactorProvider = interactorProvider;
+  26.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.contextProvider`.
+  21.         InstrumentBuilder.Module.Companion module, Provider<Context> contextProvider) {
+  22.       this.module = module;
+  23. >     this.contextProvider = contextProvider;
+  24.     }
+  25.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.java:22: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.module`.
+  20.     public InstrumentBuilder_Module_Companion_ProvideHttpClientFactory(
+  21.         InstrumentBuilder.Module.Companion module, Provider<Context> contextProvider) {
+  22. >     this.module = module;
+  23.       this.contextProvider = contextProvider;
+  24.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.java:22: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.module`.
+  20.     public InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory(
+  21.         InstrumentBuilder.Module.Companion module, Provider<OkHttpClient> okHttpClientProvider) {
+  22. >     this.module = module;
+  23.       this.okHttpClientProvider = okHttpClientProvider;
+  24.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.okHttpClientProvider`.
+  21.         InstrumentBuilder.Module.Companion module, Provider<OkHttpClient> okHttpClientProvider) {
+  22.       this.module = module;
+  23. >     this.okHttpClientProvider = okHttpClientProvider;
+  24.     }
+  25.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.java:24: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.instrumentAPIServiceProvider`.
+  22.         Provider<InstrumentAPIService> instrumentAPIServiceProvider) {
+  23.       this.module = module;
+  24. >     this.instrumentAPIServiceProvider = instrumentAPIServiceProvider;
+  25.     }
+  26.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.module`.
+  21.         InstrumentBuilder.Module.Companion module,
+  22.         Provider<InstrumentAPIService> instrumentAPIServiceProvider) {
+  23. >     this.module = module;
+  24.       this.instrumentAPIServiceProvider = instrumentAPIServiceProvider;
+  25.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Router$app_debugFactory.java:24: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Router$app_debugFactory.componentProvider`.
+  22.         Provider<InstrumentView> viewProvider,
+  23.         Provider<InstrumentInteractor> interactorProvider) {
+  24. >     this.componentProvider = componentProvider;
+  25.       this.viewProvider = viewProvider;
+  26.       this.interactorProvider = interactorProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Router$app_debugFactory.java:26: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Router$app_debugFactory.interactorProvider`.
+  24.       this.componentProvider = componentProvider;
+  25.       this.viewProvider = viewProvider;
+  26. >     this.interactorProvider = interactorProvider;
+  27.     }
+  28.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Router$app_debugFactory.java:25: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Router$app_debugFactory.viewProvider`.
+  23.         Provider<InstrumentInteractor> interactorProvider) {
+  24.       this.componentProvider = componentProvider;
+  25. >     this.viewProvider = viewProvider;
+  26.       this.interactorProvider = interactorProvider;
+  27.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.java:22: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.module`.
+  20.     public LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory(
+  21.         LoginBuilder.Module.Companion module, Provider<OkHttpClient> okHttpClientProvider) {
+  22. >     this.module = module;
+  23.       this.okHttpClientProvider = okHttpClientProvider;
+  24.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.okHttpClientProvider`.
+  21.         LoginBuilder.Module.Companion module, Provider<OkHttpClient> okHttpClientProvider) {
+  22.       this.module = module;
+  23. >     this.okHttpClientProvider = okHttpClientProvider;
+  24.     }
+  25.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.accountAPIServiceProvider`.
+  21.         LoginBuilder.Module.Companion module, Provider<AccountAPIService> accountAPIServiceProvider) {
+  22.       this.module = module;
+  23. >     this.accountAPIServiceProvider = accountAPIServiceProvider;
+  24.     }
+  25.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.java:22: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.module`.
+  20.     public LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory(
+  21.         LoginBuilder.Module.Companion module, Provider<AccountAPIService> accountAPIServiceProvider) {
+  22. >     this.module = module;
+  23.       this.accountAPIServiceProvider = accountAPIServiceProvider;
+  24.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideHttpClientFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideHttpClientFactory.contextProvider`.
+  21.         LoginBuilder.Module.Companion module, Provider<Context> contextProvider) {
+  22.       this.module = module;
+  23. >     this.contextProvider = contextProvider;
+  24.     }
+  25.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideHttpClientFactory.java:22: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideHttpClientFactory.module`.
+  20.     public LoginBuilder_Module_Companion_ProvideHttpClientFactory(
+  21.         LoginBuilder.Module.Companion module, Provider<Context> contextProvider) {
+  22. >     this.module = module;
+  23.       this.contextProvider = contextProvider;
+  24.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:25: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor_MembersInjector.accountNetworkRepositoryProvider`.
+  23.         Provider<LoginInteractor.Listener> listenerProvider) {
+  24.       this.presenterProvider = presenterProvider;
+  25. >     this.accountNetworkRepositoryProvider = accountNetworkRepositoryProvider;
+  26.       this.listenerProvider = listenerProvider;
+  27.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:26: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor_MembersInjector.listenerProvider`.
+  24.       this.presenterProvider = presenterProvider;
+  25.       this.accountNetworkRepositoryProvider = accountNetworkRepositoryProvider;
+  26. >     this.listenerProvider = listenerProvider;
+  27.     }
+  28.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:24: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor_MembersInjector.presenterProvider`.
+  22.         Provider<AccountNetworkRepository> accountNetworkRepositoryProvider,
+  23.         Provider<LoginInteractor.Listener> listenerProvider) {
+  24. >     this.presenterProvider = presenterProvider;
+  25.       this.accountNetworkRepositoryProvider = accountNetworkRepositoryProvider;
+  26.       this.listenerProvider = listenerProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:27: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor_MembersInjector.accountIdProvider`.
+  25.       this.presenterProvider = presenterProvider;
+  26.       this.instrumentNetworkRepositoryProvider = instrumentNetworkRepositoryProvider;
+  27. >     this.accountIdProvider = accountIdProvider;
+  28.     }
+  29.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:26: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor_MembersInjector.instrumentNetworkRepositoryProvider`.
+  24.         Provider<String> accountIdProvider) {
+  25.       this.presenterProvider = presenterProvider;
+  26. >     this.instrumentNetworkRepositoryProvider = instrumentNetworkRepositoryProvider;
+  27.       this.accountIdProvider = accountIdProvider;
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:25: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor_MembersInjector.presenterProvider`.
+  23.         Provider<InstrumentNetworkRepository> instrumentNetworkRepositoryProvider,
+  24.         Provider<String> accountIdProvider) {
+  25. >     this.presenterProvider = presenterProvider;
+  26.       this.instrumentNetworkRepositoryProvider = instrumentNetworkRepositoryProvider;
+  27.       this.accountIdProvider = accountIdProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_debugFactory.java:28: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_debugFactory.componentProvider`.
+  26.         Provider<InstrumentInteractor> interactorProvider) {
+  27.       this.module = module;
+  28. >     this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+  30.       this.interactorProvider = interactorProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_debugFactory.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_debugFactory.interactorProvider`.
+  28.       this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+  30. >     this.interactorProvider = interactorProvider;
+  31.     }
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_debugFactory.java:27: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_debugFactory.module`.
+  25.         Provider<InstrumentView> viewProvider,
+  26.         Provider<InstrumentInteractor> interactorProvider) {
+  27. >     this.module = module;
+  28.       this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_debugFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_debugFactory.viewProvider`.
+  27.       this.module = module;
+  28.       this.componentProvider = componentProvider;
+  29. >     this.viewProvider = viewProvider;
+  30.       this.interactorProvider = interactorProvider;
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_debugFactory.java:28: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_debugFactory.componentProvider`.
+  26.         Provider<LoginInteractor> interactorProvider) {
+  27.       this.module = module;
+  28. >     this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+  30.       this.interactorProvider = interactorProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_debugFactory.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_debugFactory.interactorProvider`.
+  28.       this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+  30. >     this.interactorProvider = interactorProvider;
+  31.     }
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_debugFactory.java:27: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_debugFactory.module`.
+  25.         Provider<LoginView> viewProvider,
+  26.         Provider<LoginInteractor> interactorProvider) {
+  27. >     this.module = module;
+  28.       this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_debugFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_debugFactory.viewProvider`.
+  27.       this.module = module;
+  28.       this.componentProvider = componentProvider;
+  29. >     this.viewProvider = viewProvider;
+  30.       this.interactorProvider = interactorProvider;
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_debugFactory.java:28: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_debugFactory.componentProvider`.
+  26.         Provider<RootInteractor> interactorProvider) {
+  27.       this.module = module;
+  28. >     this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+  30.       this.interactorProvider = interactorProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_debugFactory.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_debugFactory.interactorProvider`.
+  28.       this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+  30. >     this.interactorProvider = interactorProvider;
+  31.     }
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_debugFactory.java:27: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_debugFactory.module`.
+  25.         Provider<RootView> viewProvider,
+  26.         Provider<RootInteractor> interactorProvider) {
+  27. >     this.module = module;
+  28.       this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_debugFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_debugFactory.viewProvider`.
+  27.       this.module = module;
+  28.       this.componentProvider = componentProvider;
+  29. >     this.viewProvider = viewProvider;
+  30.       this.interactorProvider = interactorProvider;
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootInteractor_MembersInjector.java:32: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootInteractor.presenter`.
+  30.     public static void injectPresenter(
+  31.         RootInteractor instance, RootInteractor.RootPresenter presenter) {
+  32. >     instance.presenter = presenter;
+  33.     }
+  34.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/RootInteractor_MembersInjector.java:32: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  30.     public static void injectPresenter(
+  31.         RootInteractor instance, RootInteractor.RootPresenter presenter) {
+  32. >     instance.presenter = presenter;
+  33.     }
+  34.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:42: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  40.     @SuppressWarnings("unchecked")
+  41.     private void initialize(final Builder builder) {
+  42. >     this.viewProvider = InstanceFactory.create(builder.view);
+  43.       this.presenter$app_debugProvider = DoubleCheck.provider((Provider) viewProvider);
+  44.       this.componentProvider = InstanceFactory.<RootBuilder.Component>create(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:45: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  43.       this.presenter$app_debugProvider = DoubleCheck.provider((Provider) viewProvider);
+  44.       this.componentProvider = InstanceFactory.<RootBuilder.Component>create(this);
+  45. >     this.interactorProvider = InstanceFactory.create(builder.interactor);
+  46.       this.router$app_debugProvider =
+  47.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:53: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  51.           DoubleCheck.provider(
+  52.               RootBuilder_Module_ProvideLoginLisenter$app_debugFactory.create(interactorProvider));
+  53. >     this.provideContext = builder.provideContext;
+  54.     }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:47: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.presenter`.
+  45.     public static void injectPresenter(
+  46.         LoginInteractor instance, LoginInteractor.LoginPresenter presenter) {
+  47. >     instance.presenter = presenter;
+  48.     }
+  49.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:47: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  45.     public static void injectPresenter(
+  46.         LoginInteractor instance, LoginInteractor.LoginPresenter presenter) {
+  47. >     instance.presenter = presenter;
+  48.     }
+  49.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:48: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.presenter`.
+  46.     public static void injectPresenter(
+  47.         InstrumentInteractor instance, InstrumentInteractor.InstrumentPresenter presenter) {
+  48. >     instance.presenter = presenter;
+  49.     }
+  50.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:48: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  46.     public static void injectPresenter(
+  47.         InstrumentInteractor instance, InstrumentInteractor.InstrumentPresenter presenter) {
+  48. >     instance.presenter = presenter;
+  49.     }
+  50.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:50: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  48.     @SuppressWarnings("unchecked")
+  49.     private void initialize(final Builder builder) {
+  50. >     this.viewProvider = InstanceFactory.create(builder.view);
+  51.       this.presenter$app_debugProvider = DoubleCheck.provider((Provider) viewProvider);
+  52.       this.contextProvider =
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:54: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  52.       this.contextProvider =
+  53.           new com_wdx_oandafx_instrument_InstrumentBuilder_ParentComponent_context(
+  54. >             builder.parentComponent);
+  55.       this.provideHttpClientProvider =
+  56.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:66: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  64.               InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory.create(
+  65.                   provideInstrumentAPIServiceProvider));
+  66. >     this.accountId = builder.accountId;
+  67.       this.componentProvider = InstanceFactory.<InstrumentBuilder.Component>create(this);
+  68.       this.interactorProvider = InstanceFactory.create(builder.interactor);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:68: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  66.       this.accountId = builder.accountId;
+  67.       this.componentProvider = InstanceFactory.<InstrumentBuilder.Component>create(this);
+  68. >     this.interactorProvider = InstanceFactory.create(builder.interactor);
+  69.       this.router$app_debugProvider =
+  70.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:50: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  48.     @SuppressWarnings("unchecked")
+  49.     private void initialize(final Builder builder) {
+  50. >     this.viewProvider = InstanceFactory.create(builder.view);
+  51.       this.presenter$app_debugProvider = DoubleCheck.provider((Provider) viewProvider);
+  52.       this.contextProvider =
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:53: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  51.       this.presenter$app_debugProvider = DoubleCheck.provider((Provider) viewProvider);
+  52.       this.contextProvider =
+  53. >         new com_wdx_oandafx_login_LoginBuilder_ParentComponent_context(builder.parentComponent);
+  54.       this.provideHttpClientProvider =
+  55.           DoubleCheck.provider(LoginBuilder_Module_ProvideHttpClientFactory.create(contextProvider));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:63: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  61.               LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory.create(
+  62.                   provideAccountAPIServiceProvider));
+  63. >     this.parentComponent = builder.parentComponent;
+  64.       this.componentProvider = InstanceFactory.<LoginBuilder.Component>create(this);
+  65.       this.interactorProvider = InstanceFactory.create(builder.interactor);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:65: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  63.       this.parentComponent = builder.parentComponent;
+  64.       this.componentProvider = InstanceFactory.<LoginBuilder.Component>create(this);
+  65. >     this.interactorProvider = InstanceFactory.create(builder.interactor);
+  66.       this.router$app_debugProvider =
+  67.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:52: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.accountNetworkRepository`.
+  50.     public static void injectAccountNetworkRepository(
+  51.         LoginInteractor instance, AccountNetworkRepository accountNetworkRepository) {
+  52. >     instance.accountNetworkRepository = accountNetworkRepository;
+  53.     }
+  54.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:52: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  50.     public static void injectAccountNetworkRepository(
+  51.         LoginInteractor instance, AccountNetworkRepository accountNetworkRepository) {
+  52. >     instance.accountNetworkRepository = accountNetworkRepository;
+  53.     }
+  54.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:53: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.instrumentNetworkRepository`.
+  51.     public static void injectInstrumentNetworkRepository(
+  52.         InstrumentInteractor instance, InstrumentNetworkRepository instrumentNetworkRepository) {
+  53. >     instance.instrumentNetworkRepository = instrumentNetworkRepository;
+  54.     }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:53: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  51.     public static void injectInstrumentNetworkRepository(
+  52.         InstrumentInteractor instance, InstrumentNetworkRepository instrumentNetworkRepository) {
+  53. >     instance.instrumentNetworkRepository = instrumentNetworkRepository;
+  54.     }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.listener`.
+  54.   
+  55.     public static void injectListener(LoginInteractor instance, LoginInteractor.Listener listener) {
+  56. >     instance.listener = listener;
+  57.     }
+  58.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:56: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  54.   
+  55.     public static void injectListener(LoginInteractor instance, LoginInteractor.Listener listener) {
+  56. >     instance.listener = listener;
+  57.     }
+  58.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:57: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.accountId`.
+  55.   
+  56.     public static void injectAccountId(InstrumentInteractor instance, String accountId) {
+  57. >     instance.accountId = accountId;
+  58.     }
+  59.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:57: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  55.   
+  56.     public static void injectAccountId(InstrumentInteractor instance, String accountId) {
+  57. >     instance.accountId = accountId;
+  58.     }
+  59.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:80: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `RootInteractor DaggerRootBuilder_Component.injectRootInteractor(RootInteractor)`.
+  78.       Interactor_MembersInjector.injectPresenter(instance, presenter$app_debugProvider.get());
+  79.       RootInteractor_MembersInjector.injectPresenter(instance, presenter$app_debugProvider.get());
+  80. >     return instance;
+  81.     }
+  82.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:93: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `LoginInteractor DaggerLoginBuilder_Component.injectLoginInteractor(LoginInteractor)`.
+  91.               parentComponent.loginListener(),
+  92.               "Cannot return null from a non-@Nullable component method"));
+  93. >     return instance;
+  94.     }
+  95.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:83: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  81.     }
+  82.   
+  83. >   private static final class Builder implements RootBuilder.Component.Builder {
+  84.       private RootBuilder.ParentComponent parentComponent;
+  85.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:93: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `InstrumentInteractor DaggerInstrumentBuilder_Component.injectInstrumentInteractor(InstrumentInteractor)`.
+  91.           instance, provideInstrumentNetworkRepositoryProvider.get());
+  92.       InstrumentInteractor_MembersInjector.injectAccountId(instance, accountId);
+  93. >     return instance;
+  94.     }
+  95.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:96: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements InstrumentBuilder.Component.Builder {
+  97.       private InstrumentBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:96: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements LoginBuilder.Component.Builder {
+  97.       private LoginBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:143: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.DaggerLoginBuilder_Component$com_wdx_oandafx_login_LoginBuilder_ParentComponent_context.parentComponent`.
+  141.       com_wdx_oandafx_login_LoginBuilder_ParentComponent_context(
+  142.           LoginBuilder.ParentComponent parentComponent) {
+  143. >       this.parentComponent = parentComponent;
+  144.       }
+  145.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:155: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.DaggerInstrumentBuilder_Component$com_wdx_oandafx_instrument_InstrumentBuilder_ParentComponent_context.parentComponent`.
+  153.       com_wdx_oandafx_instrument_InstrumentBuilder_ParentComponent_context(
+  154.           InstrumentBuilder.ParentComponent parentComponent) {
+  155. >       this.parentComponent = parentComponent;
+  156.       }
+  157.   
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 68
+     GRADUAL_CHECK: 21Found 89 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/TestRootInteractor.java:9: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootInteractor.presenter`.
+  7.     public static RootInteractor create(final RootInteractor.RootPresenter presenter) {
+  8.       RootInteractor interactor = new RootInteractor();
+  9. >     interactor.presenter = presenter;
+  10.       return interactor;
+  11.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/TestLoginInteractor.java:14: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.accountNetworkRepository`.
+  12.       LoginInteractor interactor = new LoginInteractor();
+  13.       interactor.presenter = presenter;
+  14. >     interactor.accountNetworkRepository = accountNetworkRepository;
+  15.       interactor.listener = listener;
+  16.       return interactor;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/TestLoginInteractor.java:15: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.listener`.
+  13.       interactor.presenter = presenter;
+  14.       interactor.accountNetworkRepository = accountNetworkRepository;
+  15. >     interactor.listener = listener;
+  16.       return interactor;
+  17.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/TestLoginInteractor.java:13: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.presenter`.
+  11.         final LoginInteractor.Listener listener) {
+  12.       LoginInteractor interactor = new LoginInteractor();
+  13. >     interactor.presenter = presenter;
+  14.       interactor.accountNetworkRepository = accountNetworkRepository;
+  15.       interactor.listener = listener;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/TestInstrumentInteractor.java:15: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.accountId`.
+  13.       interactor.presenter = presenter;
+  14.       interactor.instrumentNetworkRepository = instrumentNetworkRepository;
+  15. >     interactor.accountId = accountId;
+  16.       return interactor;
+  17.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/TestInstrumentInteractor.java:14: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.instrumentNetworkRepository`.
+  12.       InstrumentInteractor interactor = new InstrumentInteractor();
+  13.       interactor.presenter = presenter;
+  14. >     interactor.instrumentNetworkRepository = instrumentNetworkRepository;
+  15.       interactor.accountId = accountId;
+  16.       return interactor;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/TestInstrumentInteractor.java:13: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.presenter`.
+  11.         final InstrumentNetworkRepository instrumentNetworkRepository, final String accountId) {
+  12.       InstrumentInteractor interactor = new InstrumentInteractor();
+  13. >     interactor.presenter = presenter;
+  14.       interactor.instrumentNetworkRepository = instrumentNetworkRepository;
+  15.       interactor.accountId = accountId;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootInteractor_MembersInjector.java:16: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootInteractor_MembersInjector.presenterProvider`.
+  14.   
+  15.     public RootInteractor_MembersInjector(Provider<RootInteractor.RootPresenter> presenterProvider) {
+  16. >     this.presenterProvider = presenterProvider;
+  17.     }
+  18.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_ProvideHttpClientFactory.java:18: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_ProvideHttpClientFactory.contextProvider`.
+  16.   
+  17.     public LoginBuilder_Module_ProvideHttpClientFactory(Provider<Context> contextProvider) {
+  18. >     this.contextProvider = contextProvider;
+  19.     }
+  20.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_ProvideLoginLisenter$app_releaseFactory.java:19: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_ProvideLoginLisenter$app_releaseFactory.rootInteractorProvider`.
+  17.     public RootBuilder_Module_ProvideLoginLisenter$app_releaseFactory(
+  18.         Provider<RootInteractor> rootInteractorProvider) {
+  19. >     this.rootInteractorProvider = rootInteractorProvider;
+  20.     }
+  21.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideHttpClientFactory.java:19: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_ProvideHttpClientFactory.contextProvider`.
+  17.   
+  18.     public InstrumentBuilder_Module_ProvideHttpClientFactory(Provider<Context> contextProvider) {
+  19. >     this.contextProvider = contextProvider;
+  20.     }
+  21.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideInstrumentAPIServiceFactory.java:20: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_ProvideInstrumentAPIServiceFactory.okHttpClientProvider`.
+  18.     public InstrumentBuilder_Module_ProvideInstrumentAPIServiceFactory(
+  19.         Provider<OkHttpClient> okHttpClientProvider) {
+  20. >     this.okHttpClientProvider = okHttpClientProvider;
+  21.     }
+  22.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory.java:20: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory.instrumentAPIServiceProvider`.
+  18.     public InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory(
+  19.         Provider<InstrumentAPIService> instrumentAPIServiceProvider) {
+  20. >     this.instrumentAPIServiceProvider = instrumentAPIServiceProvider;
+  21.     }
+  22.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_ProvideAccountAPIServiceFactory.java:20: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_ProvideAccountAPIServiceFactory.okHttpClientProvider`.
+  18.     public LoginBuilder_Module_ProvideAccountAPIServiceFactory(
+  19.         Provider<OkHttpClient> okHttpClientProvider) {
+  20. >     this.okHttpClientProvider = okHttpClientProvider;
+  21.     }
+  22.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory.java:20: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory.accountAPIServiceProvider`.
+  18.     public LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory(
+  19.         Provider<AccountAPIService> accountAPIServiceProvider) {
+  20. >     this.accountAPIServiceProvider = accountAPIServiceProvider;
+  21.     }
+  22.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Router$app_releaseFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Router$app_releaseFactory.componentProvider`.
+  21.         Provider<LoginView> viewProvider,
+  22.         Provider<LoginInteractor> interactorProvider) {
+  23. >     this.componentProvider = componentProvider;
+  24.       this.viewProvider = viewProvider;
+  25.       this.interactorProvider = interactorProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Router$app_releaseFactory.java:25: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Router$app_releaseFactory.interactorProvider`.
+  23.       this.componentProvider = componentProvider;
+  24.       this.viewProvider = viewProvider;
+  25. >     this.interactorProvider = interactorProvider;
+  26.     }
+  27.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Router$app_releaseFactory.java:24: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Router$app_releaseFactory.viewProvider`.
+  22.         Provider<LoginInteractor> interactorProvider) {
+  23.       this.componentProvider = componentProvider;
+  24. >     this.viewProvider = viewProvider;
+  25.       this.interactorProvider = interactorProvider;
+  26.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Companion_ProvideLoginLisenter$app_releaseFactory.java:21: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Companion_ProvideLoginLisenter$app_releaseFactory.module`.
+  19.     public RootBuilder_Module_Companion_ProvideLoginLisenter$app_releaseFactory(
+  20.         RootBuilder.Module.Companion module, Provider<RootInteractor> rootInteractorProvider) {
+  21. >     this.module = module;
+  22.       this.rootInteractorProvider = rootInteractorProvider;
+  23.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Companion_ProvideLoginLisenter$app_releaseFactory.java:22: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Companion_ProvideLoginLisenter$app_releaseFactory.rootInteractorProvider`.
+  20.         RootBuilder.Module.Companion module, Provider<RootInteractor> rootInteractorProvider) {
+  21.       this.module = module;
+  22. >     this.rootInteractorProvider = rootInteractorProvider;
+  23.     }
+  24.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Router$app_releaseFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Router$app_releaseFactory.componentProvider`.
+  21.         Provider<RootView> viewProvider,
+  22.         Provider<RootInteractor> interactorProvider) {
+  23. >     this.componentProvider = componentProvider;
+  24.       this.viewProvider = viewProvider;
+  25.       this.interactorProvider = interactorProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Router$app_releaseFactory.java:25: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Router$app_releaseFactory.interactorProvider`.
+  23.       this.componentProvider = componentProvider;
+  24.       this.viewProvider = viewProvider;
+  25. >     this.interactorProvider = interactorProvider;
+  26.     }
+  27.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Router$app_releaseFactory.java:24: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Router$app_releaseFactory.viewProvider`.
+  22.         Provider<RootInteractor> interactorProvider) {
+  23.       this.componentProvider = componentProvider;
+  24. >     this.viewProvider = viewProvider;
+  25.       this.interactorProvider = interactorProvider;
+  26.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.contextProvider`.
+  21.         InstrumentBuilder.Module.Companion module, Provider<Context> contextProvider) {
+  22.       this.module = module;
+  23. >     this.contextProvider = contextProvider;
+  24.     }
+  25.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.java:22: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideHttpClientFactory.module`.
+  20.     public InstrumentBuilder_Module_Companion_ProvideHttpClientFactory(
+  21.         InstrumentBuilder.Module.Companion module, Provider<Context> contextProvider) {
+  22. >     this.module = module;
+  23.       this.contextProvider = contextProvider;
+  24.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.java:22: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.module`.
+  20.     public InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory(
+  21.         InstrumentBuilder.Module.Companion module, Provider<OkHttpClient> okHttpClientProvider) {
+  22. >     this.module = module;
+  23.       this.okHttpClientProvider = okHttpClientProvider;
+  24.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentAPIServiceFactory.okHttpClientProvider`.
+  21.         InstrumentBuilder.Module.Companion module, Provider<OkHttpClient> okHttpClientProvider) {
+  22.       this.module = module;
+  23. >     this.okHttpClientProvider = okHttpClientProvider;
+  24.     }
+  25.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.java:24: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.instrumentAPIServiceProvider`.
+  22.         Provider<InstrumentAPIService> instrumentAPIServiceProvider) {
+  23.       this.module = module;
+  24. >     this.instrumentAPIServiceProvider = instrumentAPIServiceProvider;
+  25.     }
+  26.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_ProvideInstrumentNetworkRepositoryFactory.module`.
+  21.         InstrumentBuilder.Module.Companion module,
+  22.         Provider<InstrumentAPIService> instrumentAPIServiceProvider) {
+  23. >     this.module = module;
+  24.       this.instrumentAPIServiceProvider = instrumentAPIServiceProvider;
+  25.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Router$app_releaseFactory.java:24: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Router$app_releaseFactory.componentProvider`.
+  22.         Provider<InstrumentView> viewProvider,
+  23.         Provider<InstrumentInteractor> interactorProvider) {
+  24. >     this.componentProvider = componentProvider;
+  25.       this.viewProvider = viewProvider;
+  26.       this.interactorProvider = interactorProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Router$app_releaseFactory.java:26: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Router$app_releaseFactory.interactorProvider`.
+  24.       this.componentProvider = componentProvider;
+  25.       this.viewProvider = viewProvider;
+  26. >     this.interactorProvider = interactorProvider;
+  27.     }
+  28.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Router$app_releaseFactory.java:25: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Router$app_releaseFactory.viewProvider`.
+  23.         Provider<InstrumentInteractor> interactorProvider) {
+  24.       this.componentProvider = componentProvider;
+  25. >     this.viewProvider = viewProvider;
+  26.       this.interactorProvider = interactorProvider;
+  27.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.java:22: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.module`.
+  20.     public LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory(
+  21.         LoginBuilder.Module.Companion module, Provider<OkHttpClient> okHttpClientProvider) {
+  22. >     this.module = module;
+  23.       this.okHttpClientProvider = okHttpClientProvider;
+  24.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountAPIServiceFactory.okHttpClientProvider`.
+  21.         LoginBuilder.Module.Companion module, Provider<OkHttpClient> okHttpClientProvider) {
+  22.       this.module = module;
+  23. >     this.okHttpClientProvider = okHttpClientProvider;
+  24.     }
+  25.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.accountAPIServiceProvider`.
+  21.         LoginBuilder.Module.Companion module, Provider<AccountAPIService> accountAPIServiceProvider) {
+  22.       this.module = module;
+  23. >     this.accountAPIServiceProvider = accountAPIServiceProvider;
+  24.     }
+  25.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.java:22: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory.module`.
+  20.     public LoginBuilder_Module_Companion_ProvideAccountNetworkRepositoryFactory(
+  21.         LoginBuilder.Module.Companion module, Provider<AccountAPIService> accountAPIServiceProvider) {
+  22. >     this.module = module;
+  23.       this.accountAPIServiceProvider = accountAPIServiceProvider;
+  24.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideHttpClientFactory.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideHttpClientFactory.contextProvider`.
+  21.         LoginBuilder.Module.Companion module, Provider<Context> contextProvider) {
+  22.       this.module = module;
+  23. >     this.contextProvider = contextProvider;
+  24.     }
+  25.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_ProvideHttpClientFactory.java:22: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_ProvideHttpClientFactory.module`.
+  20.     public LoginBuilder_Module_Companion_ProvideHttpClientFactory(
+  21.         LoginBuilder.Module.Companion module, Provider<Context> contextProvider) {
+  22. >     this.module = module;
+  23.       this.contextProvider = contextProvider;
+  24.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:25: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor_MembersInjector.accountNetworkRepositoryProvider`.
+  23.         Provider<LoginInteractor.Listener> listenerProvider) {
+  24.       this.presenterProvider = presenterProvider;
+  25. >     this.accountNetworkRepositoryProvider = accountNetworkRepositoryProvider;
+  26.       this.listenerProvider = listenerProvider;
+  27.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:26: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor_MembersInjector.listenerProvider`.
+  24.       this.presenterProvider = presenterProvider;
+  25.       this.accountNetworkRepositoryProvider = accountNetworkRepositoryProvider;
+  26. >     this.listenerProvider = listenerProvider;
+  27.     }
+  28.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:24: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor_MembersInjector.presenterProvider`.
+  22.         Provider<AccountNetworkRepository> accountNetworkRepositoryProvider,
+  23.         Provider<LoginInteractor.Listener> listenerProvider) {
+  24. >     this.presenterProvider = presenterProvider;
+  25.       this.accountNetworkRepositoryProvider = accountNetworkRepositoryProvider;
+  26.       this.listenerProvider = listenerProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:27: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor_MembersInjector.accountIdProvider`.
+  25.       this.presenterProvider = presenterProvider;
+  26.       this.instrumentNetworkRepositoryProvider = instrumentNetworkRepositoryProvider;
+  27. >     this.accountIdProvider = accountIdProvider;
+  28.     }
+  29.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:26: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor_MembersInjector.instrumentNetworkRepositoryProvider`.
+  24.         Provider<String> accountIdProvider) {
+  25.       this.presenterProvider = presenterProvider;
+  26. >     this.instrumentNetworkRepositoryProvider = instrumentNetworkRepositoryProvider;
+  27.       this.accountIdProvider = accountIdProvider;
+  28.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:25: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor_MembersInjector.presenterProvider`.
+  23.         Provider<InstrumentNetworkRepository> instrumentNetworkRepositoryProvider,
+  24.         Provider<String> accountIdProvider) {
+  25. >     this.presenterProvider = presenterProvider;
+  26.       this.instrumentNetworkRepositoryProvider = instrumentNetworkRepositoryProvider;
+  27.       this.accountIdProvider = accountIdProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_releaseFactory.java:28: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_releaseFactory.componentProvider`.
+  26.         Provider<InstrumentInteractor> interactorProvider) {
+  27.       this.module = module;
+  28. >     this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+  30.       this.interactorProvider = interactorProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_releaseFactory.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_releaseFactory.interactorProvider`.
+  28.       this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+  30. >     this.interactorProvider = interactorProvider;
+  31.     }
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_releaseFactory.java:27: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_releaseFactory.module`.
+  25.         Provider<InstrumentView> viewProvider,
+  26.         Provider<InstrumentInteractor> interactorProvider) {
+  27. >     this.module = module;
+  28.       this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentBuilder_Module_Companion_Router$app_releaseFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentBuilder_Module_Companion_Router$app_releaseFactory.viewProvider`.
+  27.       this.module = module;
+  28.       this.componentProvider = componentProvider;
+  29. >     this.viewProvider = viewProvider;
+  30.       this.interactorProvider = interactorProvider;
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_releaseFactory.java:28: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_releaseFactory.componentProvider`.
+  26.         Provider<LoginInteractor> interactorProvider) {
+  27.       this.module = module;
+  28. >     this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+  30.       this.interactorProvider = interactorProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_releaseFactory.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_releaseFactory.interactorProvider`.
+  28.       this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+  30. >     this.interactorProvider = interactorProvider;
+  31.     }
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_releaseFactory.java:27: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_releaseFactory.module`.
+  25.         Provider<LoginView> viewProvider,
+  26.         Provider<LoginInteractor> interactorProvider) {
+  27. >     this.module = module;
+  28.       this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginBuilder_Module_Companion_Router$app_releaseFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginBuilder_Module_Companion_Router$app_releaseFactory.viewProvider`.
+  27.       this.module = module;
+  28.       this.componentProvider = componentProvider;
+  29. >     this.viewProvider = viewProvider;
+  30.       this.interactorProvider = interactorProvider;
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_releaseFactory.java:28: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_releaseFactory.componentProvider`.
+  26.         Provider<RootInteractor> interactorProvider) {
+  27.       this.module = module;
+  28. >     this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+  30.       this.interactorProvider = interactorProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_releaseFactory.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_releaseFactory.interactorProvider`.
+  28.       this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+  30. >     this.interactorProvider = interactorProvider;
+  31.     }
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_releaseFactory.java:27: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_releaseFactory.module`.
+  25.         Provider<RootView> viewProvider,
+  26.         Provider<RootInteractor> interactorProvider) {
+  27. >     this.module = module;
+  28.       this.componentProvider = componentProvider;
+  29.       this.viewProvider = viewProvider;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootBuilder_Module_Companion_Router$app_releaseFactory.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootBuilder_Module_Companion_Router$app_releaseFactory.viewProvider`.
+  27.       this.module = module;
+  28.       this.componentProvider = componentProvider;
+  29. >     this.viewProvider = viewProvider;
+  30.       this.interactorProvider = interactorProvider;
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootInteractor_MembersInjector.java:32: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.root.RootInteractor.presenter`.
+  30.     public static void injectPresenter(
+  31.         RootInteractor instance, RootInteractor.RootPresenter presenter) {
+  32. >     instance.presenter = presenter;
+  33.     }
+  34.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/RootInteractor_MembersInjector.java:32: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  30.     public static void injectPresenter(
+  31.         RootInteractor instance, RootInteractor.RootPresenter presenter) {
+  32. >     instance.presenter = presenter;
+  33.     }
+  34.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:42: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  40.     @SuppressWarnings("unchecked")
+  41.     private void initialize(final Builder builder) {
+  42. >     this.viewProvider = InstanceFactory.create(builder.view);
+  43.       this.presenter$app_releaseProvider = DoubleCheck.provider((Provider) viewProvider);
+  44.       this.componentProvider = InstanceFactory.<RootBuilder.Component>create(this);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:45: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  43.       this.presenter$app_releaseProvider = DoubleCheck.provider((Provider) viewProvider);
+  44.       this.componentProvider = InstanceFactory.<RootBuilder.Component>create(this);
+  45. >     this.interactorProvider = InstanceFactory.create(builder.interactor);
+  46.       this.router$app_releaseProvider =
+  47.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:53: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  51.           DoubleCheck.provider(
+  52.               RootBuilder_Module_ProvideLoginLisenter$app_releaseFactory.create(interactorProvider));
+  53. >     this.provideContext = builder.provideContext;
+  54.     }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:47: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.presenter`.
+  45.     public static void injectPresenter(
+  46.         LoginInteractor instance, LoginInteractor.LoginPresenter presenter) {
+  47. >     instance.presenter = presenter;
+  48.     }
+  49.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:47: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  45.     public static void injectPresenter(
+  46.         LoginInteractor instance, LoginInteractor.LoginPresenter presenter) {
+  47. >     instance.presenter = presenter;
+  48.     }
+  49.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:48: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.presenter`.
+  46.     public static void injectPresenter(
+  47.         InstrumentInteractor instance, InstrumentInteractor.InstrumentPresenter presenter) {
+  48. >     instance.presenter = presenter;
+  49.     }
+  50.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:48: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  46.     public static void injectPresenter(
+  47.         InstrumentInteractor instance, InstrumentInteractor.InstrumentPresenter presenter) {
+  48. >     instance.presenter = presenter;
+  49.     }
+  50.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:50: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  48.     @SuppressWarnings("unchecked")
+  49.     private void initialize(final Builder builder) {
+  50. >     this.viewProvider = InstanceFactory.create(builder.view);
+  51.       this.presenter$app_releaseProvider = DoubleCheck.provider((Provider) viewProvider);
+  52.       this.contextProvider =
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:54: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  52.       this.contextProvider =
+  53.           new com_wdx_oandafx_instrument_InstrumentBuilder_ParentComponent_context(
+  54. >             builder.parentComponent);
+  55.       this.provideHttpClientProvider =
+  56.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:66: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  64.               InstrumentBuilder_Module_ProvideInstrumentNetworkRepositoryFactory.create(
+  65.                   provideInstrumentAPIServiceProvider));
+  66. >     this.accountId = builder.accountId;
+  67.       this.componentProvider = InstanceFactory.<InstrumentBuilder.Component>create(this);
+  68.       this.interactorProvider = InstanceFactory.create(builder.interactor);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:68: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  66.       this.accountId = builder.accountId;
+  67.       this.componentProvider = InstanceFactory.<InstrumentBuilder.Component>create(this);
+  68. >     this.interactorProvider = InstanceFactory.create(builder.interactor);
+  69.       this.router$app_releaseProvider =
+  70.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:50: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  48.     @SuppressWarnings("unchecked")
+  49.     private void initialize(final Builder builder) {
+  50. >     this.viewProvider = InstanceFactory.create(builder.view);
+  51.       this.presenter$app_releaseProvider = DoubleCheck.provider((Provider) viewProvider);
+  52.       this.contextProvider =
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:53: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  51.       this.presenter$app_releaseProvider = DoubleCheck.provider((Provider) viewProvider);
+  52.       this.contextProvider =
+  53. >         new com_wdx_oandafx_login_LoginBuilder_ParentComponent_context(builder.parentComponent);
+  54.       this.provideHttpClientProvider =
+  55.           DoubleCheck.provider(LoginBuilder_Module_ProvideHttpClientFactory.create(contextProvider));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:63: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  61.               LoginBuilder_Module_ProvideAccountNetworkRepositoryFactory.create(
+  62.                   provideAccountAPIServiceProvider));
+  63. >     this.parentComponent = builder.parentComponent;
+  64.       this.componentProvider = InstanceFactory.<LoginBuilder.Component>create(this);
+  65.       this.interactorProvider = InstanceFactory.create(builder.interactor);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:65: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `builder`.
+  63.       this.parentComponent = builder.parentComponent;
+  64.       this.componentProvider = InstanceFactory.<LoginBuilder.Component>create(this);
+  65. >     this.interactorProvider = InstanceFactory.create(builder.interactor);
+  66.       this.router$app_releaseProvider =
+  67.           DoubleCheck.provider(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:52: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.accountNetworkRepository`.
+  50.     public static void injectAccountNetworkRepository(
+  51.         LoginInteractor instance, AccountNetworkRepository accountNetworkRepository) {
+  52. >     instance.accountNetworkRepository = accountNetworkRepository;
+  53.     }
+  54.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:52: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  50.     public static void injectAccountNetworkRepository(
+  51.         LoginInteractor instance, AccountNetworkRepository accountNetworkRepository) {
+  52. >     instance.accountNetworkRepository = accountNetworkRepository;
+  53.     }
+  54.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:53: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.instrumentNetworkRepository`.
+  51.     public static void injectInstrumentNetworkRepository(
+  52.         InstrumentInteractor instance, InstrumentNetworkRepository instrumentNetworkRepository) {
+  53. >     instance.instrumentNetworkRepository = instrumentNetworkRepository;
+  54.     }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:53: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  51.     public static void injectInstrumentNetworkRepository(
+  52.         InstrumentInteractor instance, InstrumentNetworkRepository instrumentNetworkRepository) {
+  53. >     instance.instrumentNetworkRepository = instrumentNetworkRepository;
+  54.     }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:56: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.LoginInteractor.listener`.
+  54.   
+  55.     public static void injectListener(LoginInteractor instance, LoginInteractor.Listener listener) {
+  56. >     instance.listener = listener;
+  57.     }
+  58.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/LoginInteractor_MembersInjector.java:56: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  54.   
+  55.     public static void injectListener(LoginInteractor instance, LoginInteractor.Listener listener) {
+  56. >     instance.listener = listener;
+  57.     }
+  58.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:57: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.InstrumentInteractor.accountId`.
+  55.   
+  56.     public static void injectAccountId(InstrumentInteractor instance, String accountId) {
+  57. >     instance.accountId = accountId;
+  58.     }
+  59.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/InstrumentInteractor_MembersInjector.java:57: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `instance`.
+  55.   
+  56.     public static void injectAccountId(InstrumentInteractor instance, String accountId) {
+  57. >     instance.accountId = accountId;
+  58.     }
+  59.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:80: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `RootInteractor DaggerRootBuilder_Component.injectRootInteractor(RootInteractor)`.
+  78.       Interactor_MembersInjector.injectPresenter(instance, presenter$app_releaseProvider.get());
+  79.       RootInteractor_MembersInjector.injectPresenter(instance, presenter$app_releaseProvider.get());
+  80. >     return instance;
+  81.     }
+  82.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:93: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `LoginInteractor DaggerLoginBuilder_Component.injectLoginInteractor(LoginInteractor)`.
+  91.               parentComponent.loginListener(),
+  92.               "Cannot return null from a non-@Nullable component method"));
+  93. >     return instance;
+  94.     }
+  95.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:83: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  81.     }
+  82.   
+  83. >   private static final class Builder implements RootBuilder.Component.Builder {
+  84.       private RootBuilder.ParentComponent parentComponent;
+  85.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:93: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `InstrumentInteractor DaggerInstrumentBuilder_Component.injectInstrumentInteractor(InstrumentInteractor)`.
+  91.           instance, provideInstrumentNetworkRepositoryProvider.get());
+  92.       InstrumentInteractor_MembersInjector.injectAccountId(instance, accountId);
+  93. >     return instance;
+  94.     }
+  95.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:96: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements InstrumentBuilder.Component.Builder {
+  97.       private InstrumentBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:96: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `x0`.
+  94.     }
+  95.   
+  96. >   private static final class Builder implements LoginBuilder.Component.Builder {
+  97.       private LoginBuilder.ParentComponent parentComponent;
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:143: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.login.DaggerLoginBuilder_Component$com_wdx_oandafx_login_LoginBuilder_ParentComponent_context.parentComponent`.
+  141.       com_wdx_oandafx_login_LoginBuilder_ParentComponent_context(
+  142.           LoginBuilder.ParentComponent parentComponent) {
+  143. >       this.parentComponent = parentComponent;
+  144.       }
+  145.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/OANDAFX/app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:155: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `com.wdx.oandafx.instrument.DaggerInstrumentBuilder_Component$com_wdx_oandafx_instrument_InstrumentBuilder_ParentComponent_context.parentComponent`.
+  153.       com_wdx_oandafx_instrument_InstrumentBuilder_ParentComponent_context(
+  154.           InstrumentBuilder.ParentComponent parentComponent) {
+  155. >       this.parentComponent = parentComponent;
+  156.       }
+  157.   
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 68
+     GRADUAL_CHECK: 21

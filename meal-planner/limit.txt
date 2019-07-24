@@ -1,0 +1,1077 @@
+Found 125 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParser.java:15: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `recipeScanner` passed to nonnull parameter,check ambiguous argument `ingredientScanner` passed to nonnull parameter.
+  13.         SchemaOrgRecipeScanner recipeScanner,
+  14.         SchemaOrgQuirksModeIngredientScanner ingredientScanner) {
+  15. >     super(recipeScanner, ingredientScanner);
+  16.     }
+  17.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:14: error: GRADUAL_STATIC
+  possibly-null assignment to nonnull field `de.zuellich.meal_planner.algorithms.IngredientUnitLookup.instance`.
+  12.   public class IngredientUnitLookup {
+  13.   
+  14. >   @Nullable private static IngredientUnitLookup instance = null;
+  15.   
+  16.     private Map<String, IngredientUnit> byShorthand;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/NullFormatDetector.java:15: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.NullFormatDetector.parser`.
+  13.     @Autowired
+  14.     public NullFormatDetector(final NullParser parser) {
+  15. >     this.parser = parser;
+  16.     }
+  17.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/config/WebConfig.java:15: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `registry`.
+  13.     @Override
+  14.     public void addResourceHandlers(ResourceHandlerRegistry registry) {
+  15. >     registry.addResourceHandler("/resources/**").addResourceLocations("classpath:/public/");
+  16.     }
+  17.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:16: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.datatypes.Ingredient.amount`.
+  14.     public Ingredient(String type, float amount, IngredientUnit unit) {
+  15.       this.type = type;
+  16. >     this.amount = amount;
+  17.       this.unit = unit;
+  18.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:15: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.datatypes.Ingredient.type`.
+  13.   
+  14.     public Ingredient(String type, float amount, IngredientUnit unit) {
+  15. >     this.type = type;
+  16.       this.amount = amount;
+  17.       this.unit = unit;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/datatypes/Ingredient.java:17: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.datatypes.Ingredient.unit`.
+  15.       this.type = type;
+  16.       this.amount = amount;
+  17. >     this.unit = unit;
+  18.     }
+  19.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/RecipeParserFactory.java:18: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.RecipeParserFactory.defaultParser`.
+  16.     public RecipeParserFactory(final Set<FormatDetector> formatDetectors, NullParser defaultParser) {
+  17.       this.formatDetectors = formatDetectors;
+  18. >     this.defaultParser = defaultParser;
+  19.     }
+  20.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/RecipeParserFactory.java:17: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.RecipeParserFactory.formatDetectors`.
+  15.     @Autowired
+  16.     public RecipeParserFactory(final Set<FormatDetector> formatDetectors, NullParser defaultParser) {
+  17. >     this.formatDetectors = formatDetectors;
+  18.       this.defaultParser = defaultParser;
+  19.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/RecipeService.java:18: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.RecipeService.fetcherService`.
+  16.     public RecipeService(RecipeParserFactory parserFactory, RecipeFetcherService fetcherService) {
+  17.       this.parserFactory = parserFactory;
+  18. >     this.fetcherService = fetcherService;
+  19.     }
+  20.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/RecipeService.java:17: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.RecipeService.parserFactory`.
+  15.   
+  16.     public RecipeService(RecipeParserFactory parserFactory, RecipeFetcherService fetcherService) {
+  17. >     this.parserFactory = parserFactory;
+  18.       this.fetcherService = fetcherService;
+  19.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeFormatDetector.java:18: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.schema_org.SchemaOrgQuirksModeFormatDetector.parser`.
+  16.   
+  17.     public SchemaOrgQuirksModeFormatDetector(final SchemaOrgQuirksModeParser parser) {
+  18. >     this.parser = parser;
+  19.     }
+  20.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/controller/StatusController.java:18: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.controller.StatusController.restTemplate`.
+  16.     @Autowired
+  17.     public StatusController(OAuth2RestOperations restTemplate) {
+  18. >     this.restTemplate = restTemplate;
+  19.     }
+  20.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardList.java:18: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.pinterest.datatypes.BoardList.boards`.
+  16.   
+  17.     public void setBoards(List<Board> boards) {
+  18. >     this.boards = boards;
+  19.     }
+  20.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:20: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.datatypes.Recipe.ingredients`.
+  18.     public Recipe(String name, List<Ingredient> ingredients, String source) {
+  19.       this.name = name;
+  20. >     this.ingredients = ingredients;
+  21.       this.source = source;
+  22.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:19: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.datatypes.Recipe.name`.
+  17.   
+  18.     public Recipe(String name, List<Ingredient> ingredients, String source) {
+  19. >     this.name = name;
+  20.       this.ingredients = ingredients;
+  21.       this.source = source;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:21: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.datatypes.Recipe.source`.
+  19.       this.name = name;
+  20.       this.ingredients = ingredients;
+  21. >     this.source = source;
+  22.     }
+  23.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:19: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.pinterest.datatypes.Board.id`.
+  17.   
+  18.     public void setId(String id) {
+  19. >     this.id = id;
+  20.     }
+  21.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardRequest.java:19: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.pinterest.datatypes.BoardRequest.board`.
+  17.   
+  18.     public void setBoard(Board board) {
+  19. >     this.board = board;
+  20.     }
+  21.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/PlainTextIngredientScanner.java:21: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.PlainTextIngredientScanner.amountParser`.
+  19.     public PlainTextIngredientScanner(
+  20.         final AmountParser amountParser, final IngredientUnitLookup ingredientUnitLookup) {
+  21. >     this.amountParser = amountParser;
+  22.       this.ingredientUnitLookup = ingredientUnitLookup;
+  23.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/PlainTextIngredientScanner.java:22: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.PlainTextIngredientScanner.ingredientUnitLookup`.
+  20.         final AmountParser amountParser, final IngredientUnitLookup ingredientUnitLookup) {
+  21.       this.amountParser = amountParser;
+  22. >     this.ingredientUnitLookup = ingredientUnitLookup;
+  23.     }
+  24.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/controller/Parse.java:20: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.controller.Parse.recipeService`.
+  18.     @Autowired
+  19.     public Parse(RecipeService recipeService) {
+  20. >     this.recipeService = recipeService;
+  21.     }
+  22.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardListing.java:21: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.pinterest.datatypes.BoardListing.board`.
+  19.   
+  20.     public void setBoard(final Board board) {
+  21. >     this.board = board;
+  22.     }
+  23.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDFormatDetector.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.schema_org.SchemaOrgJSONLDFormatDetector.parser`.
+  21.     @Autowired
+  22.     public SchemaOrgJSONLDFormatDetector(final SchemaOrgJSONLDParser parser) {
+  23. >     this.parser = parser;
+  24.     }
+  25.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PinList.java:23: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.pinterest.datatypes.PinList.pins`.
+  21.   
+  22.     public void setPins(List<Pin> pins) {
+  23. >     this.pins = pins;
+  24.     }
+  25.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:27: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.pinterest.datatypes.Board.name`.
+  25.   
+  26.     public void setName(String name) {
+  27. >     this.name = name;
+  28.     }
+  29.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/RecipeParserFactory.java:30: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  28.       FormatDetector mostCompatibleFormat = null;
+  29.       int highestCompatibility = 0;
+  30. >     for (final FormatDetector formatDetector : formatDetectors) {
+  31.         final int compatibility = formatDetector.isSupported(source);
+  32.         if (compatibility > highestCompatibility) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/RecipeParserFactory.java:28: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `RecipeParser RecipeParserFactory.getParser(String)`.
+  26.      */
+  27.     public RecipeParser getParser(final String source) {
+  28. >     FormatDetector mostCompatibleFormat = null;
+  29.       int highestCompatibility = 0;
+  30.       for (final FormatDetector formatDetector : formatDetectors) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/RecipeService.java:31: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `Recipe RecipeService.fromURL(String)`.
+  29.       try {
+  30.         recipeSource = fetcherService.fetchByURL(url);
+  31. >     } catch (IOException e) {
+  32.         throw new RecipeParseException("Error fetching recipe.", e);
+  33.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/RecipeService.java:28: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `Recipe RecipeService.fromURL(String)`.
+  26.      */
+  27.     public Recipe fromURL(String url) {
+  28. >     String recipeSource = null;
+  29.       try {
+  30.         recipeSource = fetcherService.fetchByURL(url);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/RecipeService.java:31: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `Recipe RecipeService.fromURL(String)`.
+  29.       try {
+  30.         recipeSource = fetcherService.fetchByURL(url);
+  31. >     } catch (IOException e) {
+  32.         throw new RecipeParseException("Error fetching recipe.", e);
+  33.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDParser.java:28: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.schema_org.SchemaOrgJSONLDParser.ingredientScanner`.
+  26.     @Autowired
+  27.     public SchemaOrgJSONLDParser(final PlainTextIngredientScanner ingredientScanner) {
+  28. >     this.ingredientScanner = ingredientScanner;
+  29.     }
+  30.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/datatypes/IngredientUnit.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.datatypes.IngredientUnit.plural`.
+  27.     IngredientUnit(String singular, String plural, String shorthand) {
+  28.       this.singular = singular;
+  29. >     this.plural = plural;
+  30.       this.shorthand = shorthand;
+  31.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/datatypes/IngredientUnit.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.datatypes.IngredientUnit.shorthand`.
+  28.       this.singular = singular;
+  29.       this.plural = plural;
+  30. >     this.shorthand = shorthand;
+  31.     }
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/datatypes/IngredientUnit.java:28: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.datatypes.IngredientUnit.singular`.
+  26.      */
+  27.     IngredientUnit(String singular, String plural, String shorthand) {
+  28. >     this.singular = singular;
+  29.       this.plural = plural;
+  30.       this.shorthand = shorthand;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeIngredientScanner.java:33: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.schema_org.SchemaOrgQuirksModeIngredientScanner.ingredientMatcher`.
+  31.         IngredientMatcher ingredientMatcher) {
+  32.       super(amountParser, ingredientUnitLookup);
+  33. >     this.ingredientMatcher = ingredientMatcher;
+  34.     }
+  35.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/BoardListing.java:29: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.pinterest.datatypes.BoardListing.pins`.
+  27.   
+  28.     public void setPins(final List<Pin> pins) {
+  29. >     this.pins = pins;
+  30.     }
+  31.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:30: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.IngredientMatcher.ingredientUnitLookup`.
+  28.     @Autowired
+  29.     public IngredientMatcher(final IngredientUnitLookup ingredientUnitLookup) {
+  30. >     this.ingredientUnitLookup = ingredientUnitLookup;
+  31.     }
+  32.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/PlainTextIngredientScanner.java:32: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `source`.
+  30.     public List<Ingredient> parse(final String source) {
+  31.       // https://stackoverflow.com/a/8910767
+  32. >     final int numberOfWhitespaces = source.length() - source.replace(" ", "").length();
+  33.       if (numberOfWhitespaces < 2) {
+  34.         return ImmutableList.of(new Ingredient(source, 0, IngredientUnit.NULL));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/PlainTextIngredientScanner.java:39: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `source`.
+  37.       int start = 0;
+  38.       int end = 0;
+  39. >     for (; end < source.length(); end++) {
+  40.         final Optional<Integer> optionalInteger = parseInt(source.charAt(end));
+  41.         if (source.charAt(end) == ' ' && !optionalInteger.isPresent()) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/PlainTextIngredientScanner.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `source`.
+  38.       int end = 0;
+  39.       for (; end < source.length(); end++) {
+  40. >       final Optional<Integer> optionalInteger = parseInt(source.charAt(end));
+  41.         if (source.charAt(end) == ' ' && !optionalInteger.isPresent()) {
+  42.           break;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/PlainTextIngredientScanner.java:41: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `source`.
+  39.       for (; end < source.length(); end++) {
+  40.         final Optional<Integer> optionalInteger = parseInt(source.charAt(end));
+  41. >       if (source.charAt(end) == ' ' && !optionalInteger.isPresent()) {
+  42.           break;
+  43.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/PlainTextIngredientScanner.java:46: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `source`.
+  44.       }
+  45.   
+  46. >     final String amount = source.substring(start, end).trim();
+  47.       final float parseAmount = amountParser.parseAmount(amount);
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/PlainTextIngredientScanner.java:52: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `source`.
+  50.       do {
+  51.         end++;
+  52. >     } while (source.charAt(end) != ' ');
+  53.   
+  54.       final String unit = source.substring(start, end).trim();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/PlainTextIngredientScanner.java:54: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `source`.
+  52.       } while (source.charAt(end) != ' ');
+  53.   
+  54. >     final String unit = source.substring(start, end).trim();
+  55.       final Optional<IngredientUnit> ingredientUnit = ingredientUnitLookup.lookup(unit);
+  56.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/PlainTextIngredientScanner.java:62: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `source`.
+  60.           ingredientUnit
+  61.               .map((notused) -> source.substring(finalEnd))
+  62. >             .orElse(source.substring(finalStart))
+  63.               .trim();
+  64.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgIngredientScanner.java:32: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.schema_org.SchemaOrgIngredientScanner.amountParser`.
+  30.     public SchemaOrgIngredientScanner(
+  31.         final AmountParser amountParser, final IngredientUnitLookup ingredientUnitLookup) {
+  32. >     this.amountParser = amountParser;
+  33.       this.ingredientUnitLookup = ingredientUnitLookup;
+  34.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgIngredientScanner.java:33: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.schema_org.SchemaOrgIngredientScanner.ingredientUnitLookup`.
+  31.         final AmountParser amountParser, final IngredientUnitLookup ingredientUnitLookup) {
+  32.       this.amountParser = amountParser;
+  33. >     this.ingredientUnitLookup = ingredientUnitLookup;
+  34.     }
+  35.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/PinList.java:31: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.pinterest.datatypes.PinList.page`.
+  29.   
+  30.     public void setPage(PagingInformation page) {
+  31. >     this.page = page;
+  32.     }
+  33.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:31: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.pinterest.services.BoardService.restTemplate`.
+  29.     @Autowired
+  30.     public BoardService(final OAuth2RestOperations restTemplate) {
+  31. >     this.restTemplate = restTemplate;
+  32.     }
+  33.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:34: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.controller.PinterestExplorer.recipeService`.
+  32.         IBoardService service, RecipeService recipeService, OAuth2RestOperations restTemplate) {
+  33.       this.service = service;
+  34. >     this.recipeService = recipeService;
+  35.       this.restTemplate = restTemplate;
+  36.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:35: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.controller.PinterestExplorer.restTemplate`.
+  33.       this.service = service;
+  34.       this.recipeService = recipeService;
+  35. >     this.restTemplate = restTemplate;
+  36.     }
+  37.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:33: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.controller.PinterestExplorer.service`.
+  31.     public PinterestExplorer(
+  32.         IBoardService service, RecipeService recipeService, OAuth2RestOperations restTemplate) {
+  33. >     this.service = service;
+  34.       this.recipeService = recipeService;
+  35.       this.restTemplate = restTemplate;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDParser.java:38: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `Recipe SchemaOrgJSONLDParser.parse(String)`.
+  36.         final ImmutableList<Ingredient> ingredients = getIngredients(flatten);
+  37.         return new Recipe(name, ingredients, "");
+  38. >     } catch (final IOException e) {
+  39.         throw new RuntimeException(e);
+  40.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDParser.java:38: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `Recipe SchemaOrgJSONLDParser.parse(String)`.
+  36.         final ImmutableList<Ingredient> ingredients = getIngredients(flatten);
+  37.         return new Recipe(name, ingredients, "");
+  38. >     } catch (final IOException e) {
+  39.         throw new RuntimeException(e);
+  40.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Board.java:35: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.pinterest.datatypes.Board.url`.
+  33.   
+  34.     public void setUrl(String url) {
+  35. >     this.url = url;
+  36.     }
+  37.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:41: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `List BoardService.getBoards()`.
+  39.             restTemplate.getForEntity(USERS_BOARDS, BoardList.class);
+  40.         return boards.getBody().getBoards();
+  41. >     } catch (final RestClientException e) {
+  42.         e.printStackTrace();
+  43.         return Collections.emptyList();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  40.         return boards.getBody().getBoards();
+  41.       } catch (final RestClientException e) {
+  42. >       e.printStackTrace();
+  43.         return Collections.emptyList();
+  44.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:41: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `List BoardService.getBoards()`.
+  39.             restTemplate.getForEntity(USERS_BOARDS, BoardList.class);
+  40.         return boards.getBody().getBoards();
+  41. >     } catch (final RestClientException e) {
+  42.         e.printStackTrace();
+  43.         return Collections.emptyList();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeIngredientScanner.java:38: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `document`.
+  36.     @Override
+  37.     protected Elements getIngredientElements(Document document) {
+  38. >     return document.getElementsByAttributeValue("itemprop", "ingredients");
+  39.     }
+  40.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgRecipeScanner.java:38: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `recipeRoot`.
+  36.      */
+  37.     private String parseURL(Elements recipeRoot) {
+  38. >     Elements url = recipeRoot.select("[itemprop=url]");
+  39.       if (url.isEmpty()) {
+  40.         return "";
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgIngredientScanner.java:46: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `List SchemaOrgIngredientScanner.parse(String)`.
+  44.       }
+  45.   
+  46. >     return result;
+  47.     }
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgIngredientScanner.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$14`.
+  40.   
+  41.       final List<Ingredient> result = new ArrayList<>(ingredients.size());
+  42. >     for (final Element ingredient : ingredients) {
+  43.         result.add(parseIngredient(ingredient));
+  44.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgIngredientScanner.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `result`.
+  41.       final List<Ingredient> result = new ArrayList<>(ingredients.size());
+  42.       for (final Element ingredient : ingredients) {
+  43. >       result.add(parseIngredient(ingredient));
+  44.       }
+  45.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:44: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `void IngredientUnitLookup.setupLookupTable()`.
+  42.       this.bySingular = new HashMap<>(IngredientUnit.values().length);
+  43.   
+  44. >     for (final IngredientUnit unit : IngredientUnit.values()) {
+  45.         this.byShorthand.put(unit.getShorthand(), unit);
+  46.         this.byPlural.put(unit.getPlural(), unit);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:44: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `n$24`.
+  42.       this.bySingular = new HashMap<>(IngredientUnit.values().length);
+  43.   
+  44. >     for (final IngredientUnit unit : IngredientUnit.values()) {
+  45.         this.byShorthand.put(unit.getShorthand(), unit);
+  46.         this.byPlural.put(unit.getPlural(), unit);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:45: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `unit`.
+  43.   
+  44.       for (final IngredientUnit unit : IngredientUnit.values()) {
+  45. >       this.byShorthand.put(unit.getShorthand(), unit);
+  46.         this.byPlural.put(unit.getPlural(), unit);
+  47.         this.bySingular.put(unit.getSingular(), unit);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:46: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `unit`.
+  44.       for (final IngredientUnit unit : IngredientUnit.values()) {
+  45.         this.byShorthand.put(unit.getShorthand(), unit);
+  46. >       this.byPlural.put(unit.getPlural(), unit);
+  47.         this.bySingular.put(unit.getSingular(), unit);
+  48.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:47: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `unit`.
+  45.         this.byShorthand.put(unit.getShorthand(), unit);
+  46.         this.byPlural.put(unit.getPlural(), unit);
+  47. >       this.bySingular.put(unit.getSingular(), unit);
+  48.       }
+  49.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `response`.
+  40.       service.getBoards();
+  41.       if (!restTemplate.getAccessToken().isExpired()) {
+  42. >       response.setStatus(HttpStatus.FOUND.value());
+  43.         response.setHeader("Location", "https://localhost:8443/resources/web/index.html");
+  44.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `response`.
+  41.       if (!restTemplate.getAccessToken().isExpired()) {
+  42.         response.setStatus(HttpStatus.FOUND.value());
+  43. >       response.setHeader("Location", "https://localhost:8443/resources/web/index.html");
+  44.       }
+  45.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:41: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.pinterest.datatypes.Pin.id`.
+  39.   
+  40.     public void setId(String id) {
+  41. >     this.id = id;
+  42.     }
+  43.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgFormatDetector.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `document`.
+  41.     private boolean canFindSchemaOrgAnnotation(final Document document) {
+  42.       final Elements recipeElement =
+  43. >         document.getElementsByAttributeValue("itemtype", "http://schema.org/Recipe");
+  44.       final Elements ingredientsElement =
+  45.           document.getElementsByAttributeValue("itemprop", "recipeIngredient");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgFormatDetector.java:45: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `document`.
+  43.           document.getElementsByAttributeValue("itemtype", "http://schema.org/Recipe");
+  44.       final Elements ingredientsElement =
+  45. >         document.getElementsByAttributeValue("itemprop", "recipeIngredient");
+  46.       return !recipeElement.isEmpty() && !ingredientsElement.isEmpty();
+  47.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDFormatDetector.java:51: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `boolean SchemaOrgJSONLDFormatDetector.lookForRecipeInformation(Elements)`.
+  49.             return true;
+  50.           }
+  51. >       } catch (final IOException e) {
+  52.           throw new RuntimeException(e);
+  53.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDFormatDetector.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `elements`.
+  41.     private boolean lookForRecipeInformation(final Elements elements) {
+  42.       final ObjectMapper mapper = new ObjectMapper();
+  43. >     for (final Element possibleRecipe : elements) {
+  44.         try {
+  45.           final String html = possibleRecipe.html();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDFormatDetector.java:46: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `mapper`.
+  44.         try {
+  45.           final String html = possibleRecipe.html();
+  46. >         final JsonNode jsonNode = mapper.readTree(html);
+  47.           final JsonNode typeAnnotation = jsonNode.get("@type");
+  48.           if (typeAnnotation != null && typeAnnotation.textValue().equals("Recipe")) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDFormatDetector.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$4`.
+  41.     private boolean lookForRecipeInformation(final Elements elements) {
+  42.       final ObjectMapper mapper = new ObjectMapper();
+  43. >     for (final Element possibleRecipe : elements) {
+  44.         try {
+  45.           final String html = possibleRecipe.html();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDFormatDetector.java:51: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `boolean SchemaOrgJSONLDFormatDetector.lookForRecipeInformation(Elements)`.
+  49.             return true;
+  50.           }
+  51. >       } catch (final IOException e) {
+  52.           throw new RuntimeException(e);
+  53.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeIngredientScanner.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `ingredient`.
+  41.     @Override
+  42.     protected Ingredient parseIngredient(Element ingredient) {
+  43. >     String ingredientDescription = ingredient.text();
+  44.       IngredientMatcher.IngredientMatcherResult result =
+  45.           ingredientMatcher.match(ingredientDescription);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDParser.java:53: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `builder`.
+  51.       for (; elements.hasNext(); ) {
+  52.         final JsonNode element = elements.next();
+  53. >       builder.add(ingredientScanner.parse(element.textValue().trim()).get(0));
+  54.       }
+  55.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDParser.java:56: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `builder`.
+  54.       }
+  55.   
+  56. >     return builder.build();
+  57.     }
+  58.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDParser.java:44: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `data`.
+  42.   
+  43.     private ImmutableList<Ingredient> getIngredients(final JsonNode data) {
+  44. >     if (!data.has("recipeIngredient")) {
+  45.         return ImmutableList.of();
+  46.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDParser.java:48: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `data`.
+  46.       }
+  47.   
+  48. >     final JsonNode recipeIngredients = data.get("recipeIngredient");
+  49.       final ImmutableList.Builder<Ingredient> builder = ImmutableList.builder();
+  50.       final Iterator<JsonNode> elements = recipeIngredients.elements();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDParser.java:51: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `elements`.
+  49.       final ImmutableList.Builder<Ingredient> builder = ImmutableList.builder();
+  50.       final Iterator<JsonNode> elements = recipeIngredients.elements();
+  51. >     for (; elements.hasNext(); ) {
+  52.         final JsonNode element = elements.next();
+  53.         builder.add(ingredientScanner.parse(element.textValue().trim()).get(0));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDParser.java:52: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `elements`.
+  50.       final Iterator<JsonNode> elements = recipeIngredients.elements();
+  51.       for (; elements.hasNext(); ) {
+  52. >       final JsonNode element = elements.next();
+  53.         builder.add(ingredientScanner.parse(element.textValue().trim()).get(0));
+  54.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:44: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.datatypes.Recipe.name`.
+  42.   
+  43.     public void setName(String name) {
+  44. >     this.name = name;
+  45.     }
+  46.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:49: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.pinterest.datatypes.Pin.originalLink`.
+  47.   
+  48.     public void setOriginalLink(String originalLink) {
+  49. >     this.originalLink = originalLink;
+  50.     }
+  51.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:58: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `cursor`.
+  56.         requestParameter.put("id", boardId);
+  57.   
+  58. >       if (!cursor.isEmpty()) {
+  59.           requestParameter.put("cursor", cursor);
+  60.           requestURL = BOARDS_PINS_WITH_CURSOR;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/services/BoardService.java:65: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `result`.
+  63.         final ResponseEntity<PinList> response =
+  64.             restTemplate.getForEntity(requestURL, PinList.class, requestParameter);
+  65. >       result.addAll(response.getBody().getPins());
+  66.   
+  67.         if (!response.getBody().getPage().getCursor().isEmpty()) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:52: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.datatypes.Recipe.ingredients`.
+  50.   
+  51.     public void setIngredients(List<Ingredient> ingredients) {
+  52. >     this.ingredients = ingredients;
+  53.     }
+  54.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgRecipeScanner.java:54: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `recipeRoot`.
+  52.      */
+  53.     private String parseName(Elements recipeRoot) {
+  54. >     Elements elements = recipeRoot.select("[itemprop=name]");
+  55.       if (elements.isEmpty()) {
+  56.         return "";
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgIngredientScanner.java:57: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `document`.
+  55.      */
+  56.     protected Elements getIngredientElements(final Document document) {
+  57. >     return document.getElementsByAttributeValue("itemprop", "recipeIngredient");
+  58.     }
+  59.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDParser.java:64: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `mapper`.
+  62.       final ObjectMapper mapper = new ObjectMapper();
+  63.       for (final Element possibleRecipe : type) {
+  64. >       final JsonNode jsonNode = mapper.readTree(possibleRecipe.html());
+  65.         final JsonNode typeAnnotation = jsonNode.get("@type");
+  66.         if (typeAnnotation != null && "Recipe".equals(typeAnnotation.textValue())) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDParser.java:63: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  61.           Jsoup.parse(source).getElementsByAttributeValue("type", "application/ld+json");
+  62.       final ObjectMapper mapper = new ObjectMapper();
+  63. >     for (final Element possibleRecipe : type) {
+  64.         final JsonNode jsonNode = mapper.readTree(possibleRecipe.html());
+  65.         final JsonNode typeAnnotation = jsonNode.get("@type");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/datatypes/Recipe.java:60: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.datatypes.Recipe.source`.
+  58.   
+  59.     public void setSource(String source) {
+  60. >     this.source = source;
+  61.     }
+  62.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:80: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `ResponseEntity PinterestExplorer.getRecipes()`.
+  78.   
+  79.             Thread.sleep(100);
+  80. >         } catch (RecipeParseException e) {
+  81.             System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
+  82.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:81: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  79.             Thread.sleep(100);
+  80.           } catch (RecipeParseException e) {
+  81. >           System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
+  82.           }
+  83.         }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:68: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$49`.
+  66.         List<Pin> pins = service.getPins(board.getId());
+  67.   
+  68. >       for (Pin pin : pins) {
+  69.           try {
+  70.             System.out.println("\r:: Download pin < " + pin.getOriginalLink() + " >");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:64: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$8`.
+  62.       List<Recipe> recipes = new ArrayList<>();
+  63.   
+  64. >     for (Board board : boards) {
+  65.         System.out.println("Retrieving pins for board: " + board.getName());
+  66.         List<Pin> pins = service.getPins(board.getId());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:77: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `recipes`.
+  75.             }
+  76.   
+  77. >           recipes.add(recipe);
+  78.   
+  79.             Thread.sleep(100);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/controller/PinterestExplorer.java:80: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `ResponseEntity PinterestExplorer.getRecipes()`.
+  78.   
+  79.             Thread.sleep(100);
+  80. >         } catch (RecipeParseException e) {
+  81.             System.out.println("!! Error downloading pin: " + e.getCause().getMessage());
+  82.           }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/PlainTextIngredientScanner.java:61: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `source`.
+  59.       final String ingredientName =
+  60.           ingredientUnit
+  61. >             .map((notused) -> source.substring(finalEnd))
+  62.               .orElse(source.substring(finalStart))
+  63.               .trim();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgIngredientScanner.java:68: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `ingredient`.
+  66.      */
+  67.     protected Ingredient parseIngredient(final Element ingredient) {
+  68. >     final Elements typeElement = ingredient.select(".wprm-recipe-ingredient-name");
+  69.       final Elements amountElement = ingredient.select(".wprm-recipe-ingredient-amount");
+  70.       final Elements ingredientElement = ingredient.select(".wprm-recipe-ingredient-unit");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgIngredientScanner.java:69: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `ingredient`.
+  67.     protected Ingredient parseIngredient(final Element ingredient) {
+  68.       final Elements typeElement = ingredient.select(".wprm-recipe-ingredient-name");
+  69. >     final Elements amountElement = ingredient.select(".wprm-recipe-ingredient-amount");
+  70.       final Elements ingredientElement = ingredient.select(".wprm-recipe-ingredient-unit");
+  71.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgIngredientScanner.java:70: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `ingredient`.
+  68.       final Elements typeElement = ingredient.select(".wprm-recipe-ingredient-name");
+  69.       final Elements amountElement = ingredient.select(".wprm-recipe-ingredient-amount");
+  70. >     final Elements ingredientElement = ingredient.select(".wprm-recipe-ingredient-unit");
+  71.   
+  72.       final String type = typeElement.text();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDParser.java:75: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `jsonData`.
+  73.   
+  74.     private String getRecipeName(final JsonNode jsonData) {
+  75. >     if (!jsonData.has("name")) {
+  76.         return "";
+  77.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgJSONLDParser.java:79: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `jsonData`.
+  77.       }
+  78.   
+  79. >     final String recipeName = jsonData.get("name").textValue();
+  80.       if (!recipeName.isEmpty()) {
+  81.         return recipeName;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:76: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `matcher`.
+  74.      */
+  75.     private String matchRawAmount(final Matcher matcher) {
+  76. >     final String amountGroup = matcher.group(1);
+  77.       if (amountGroup == null) {
+  78.         return "";
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:76: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.pinterest.datatypes.Pin.note`.
+  74.   
+  75.     public void setNote(String note) {
+  76. >     this.note = note;
+  77.     }
+  78.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:81: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `float AmountParser.gracefullyParseFloat(String)`.
+  79.       try {
+  80.         return Float.parseFloat(raw);
+  81. >     } catch (final NumberFormatException e) {
+  82.         e.printStackTrace();
+  83.         return 0;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:82: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  80.         return Float.parseFloat(raw);
+  81.       } catch (final NumberFormatException e) {
+  82. >       e.printStackTrace();
+  83.         return 0;
+  84.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:81: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `float AmountParser.gracefullyParseFloat(String)`.
+  79.       try {
+  80.         return Float.parseFloat(raw);
+  81. >     } catch (final NumberFormatException e) {
+  82.         e.printStackTrace();
+  83.         return 0;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:84: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.pinterest.datatypes.Pin.name`.
+  82.   
+  83.     public void setName(String name) {
+  84. >     this.name = name;
+  85.     }
+  86.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:94: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$2`.
+  92.      */
+  93.     private boolean containsUnicodeFractions(final String raw) {
+  94. >     for (final String unicodeSymbol : UNICODE_FRACTIONS) {
+  95.         final boolean containsUnicode = raw.contains(unicodeSymbol);
+  96.         if (containsUnicode) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:95: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `raw`.
+  93.     private boolean containsUnicodeFractions(final String raw) {
+  94.       for (final String unicodeSymbol : UNICODE_FRACTIONS) {
+  95. >       final boolean containsUnicode = raw.contains(unicodeSymbol);
+  96.         if (containsUnicode) {
+  97.           return true;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:108: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.IngredientMatcher$IngredientMatcherResult.matching`.
+  106.   
+  107.       public IngredientMatcherResult(final boolean isMatching) {
+  108. >       this.matching = isMatching;
+  109.         this.amount = "";
+  110.         this.unit = IngredientUnit.NULL;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:111: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `raw`.
+  109.      */
+  110.     private float resolveFraction(final String raw) {
+  111. >     final boolean isMixedFraction = raw.matches(CONTAINS_DIGITS_PATTERN);
+  112.   
+  113.       if (!isMixedFraction) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:117: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.IngredientMatcher$IngredientMatcherResult.amount`.
+  115.           final String rawAmount, final IngredientUnit unit, final String rawName) {
+  116.         this.matching = true;
+  117. >       this.amount = rawAmount;
+  118.         this.unit = unit;
+  119.         this.name = rawName;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:119: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.IngredientMatcher$IngredientMatcherResult.name`.
+  117.         this.amount = rawAmount;
+  118.         this.unit = unit;
+  119. >       this.name = rawName;
+  120.       }
+  121.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/IngredientMatcher.java:118: warning: GRADUAL_BOUNDARY
+  check ambiguous assignment to nonnull field `de.zuellich.meal_planner.algorithms.IngredientMatcher$IngredientMatcherResult.unit`.
+  116.         this.matching = true;
+  117.         this.amount = rawAmount;
+  118. >       this.unit = unit;
+  119.         this.name = rawName;
+  120.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:127: warning: GRADUAL_BOUNDARY
+  check ambiguous argument `raw` passed to nonnull parameter.
+  125.      */
+  126.     private float parsePrimitiveFraction(final String raw) {
+  127. >     final Float value = fractionLookup.get(raw);
+  128.   
+  129.       if (value == null) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:146: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$2`.
+  144.       String usedFraction = "";
+  145.   
+  146. >     for (final String unicodeFraction : UNICODE_FRACTIONS) {
+  147.         if (raw.contains(unicodeFraction)) {
+  148.           withoutUnicodeFraction = raw.replace(unicodeFraction, "");
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:147: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `raw`.
+  145.   
+  146.       for (final String unicodeFraction : UNICODE_FRACTIONS) {
+  147. >       if (raw.contains(unicodeFraction)) {
+  148.           withoutUnicodeFraction = raw.replace(unicodeFraction, "");
+  149.           usedFraction = unicodeFraction;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/main/java/de/zuellich/meal_planner/algorithms/AmountParser.java:148: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `raw`.
+  146.       for (final String unicodeFraction : UNICODE_FRACTIONS) {
+  147.         if (raw.contains(unicodeFraction)) {
+  148. >         withoutUnicodeFraction = raw.replace(unicodeFraction, "");
+  149.           usedFraction = unicodeFraction;
+  150.           break;
+
+Summary of the reports
+
+  GRADUAL_BOUNDARY: 59
+     GRADUAL_CHECK: 57
+    GRADUAL_STATIC: 9Found 8 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/FixtureBasedTest.java:26: warning: GRADUAL_BOUNDARY
+  check ambiguous return in nonnull method `String FixtureBasedTest.getResource(String)`.
+  24.         final Scanner scanner = new Scanner(in, "UTF-8").useDelimiter("\\A");
+  25.         return scanner.hasNext() ? scanner.next() : "";
+  26. >     } catch (final IOException e) {
+  27.         throw new RuntimeException(e);
+  28.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/FixtureBasedTest.java:26: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$65`.
+  24.         final Scanner scanner = new Scanner(in, "UTF-8").useDelimiter("\\A");
+  25.         return scanner.hasNext() ? scanner.next() : "";
+  26. >     } catch (final IOException e) {
+  27.         throw new RuntimeException(e);
+  28.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/FixtureBasedTest.java:19: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `String FixtureBasedTest.getResource(String)`.
+  17.     public String getResource(final String path) {
+  18.   
+  19. >     try (final InputStream in = FixtureBasedTest.class.getResourceAsStream(path)) {
+  20.         if (in == null) {
+  21.           throw new RuntimeException(String.format("Could not find resource with path %s", path));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/FixtureBasedTest.java:26: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `String FixtureBasedTest.getResource(String)`.
+  24.         final Scanner scanner = new Scanner(in, "UTF-8").useDelimiter("\\A");
+  25.         return scanner.hasNext() ? scanner.next() : "";
+  26. >     } catch (final IOException e) {
+  27.         throw new RuntimeException(e);
+  28.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/controller/StatusControllerTest.java:24: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `accessTokenExpireDate`.
+  22.       final DefaultOAuth2AccessToken tokenFromDate = new DefaultOAuth2AccessToken("");
+  23.       final Date date =
+  24. >         Date.from(accessTokenExpireDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+  25.       tokenFromDate.setExpiration(date);
+  26.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/SSLUtil.java:23: error: GRADUAL_STATIC
+  possibly-null return in nonnull method `java.security.cert.X509Certificate[] SSLUtil$1.getAcceptedIssuers()`.
+  21.             @Override
+  22.             public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+  23. >             return null;
+  24.             }
+  25.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/pinterest/services/BoardServiceTest.java:107: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$2`.
+  105.      */
+  106.     private void assertPinsNotEmptyOrNull(List<Pin> pins) {
+  107. >     for (Pin pin : pins) {
+  108.         assertFalse("Pin's id should be set.", pin.getId().isEmpty());
+  109.         assertFalse("Pin's link should be set.", pin.getOriginalLink().isEmpty());
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/meal-planner/src/test/java/de/zuellich/meal_planner/pinterest/services/BoardServiceTest.java:107: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `pins`.
+  105.      */
+  106.     private void assertPinsNotEmptyOrNull(List<Pin> pins) {
+  107. >     for (Pin pin : pins) {
+  108.         assertFalse("Pin's id should be set.", pin.getId().isEmpty());
+  109.         assertFalse("Pin's link should be set.", pin.getOriginalLink().isEmpty());
+
+Summary of the reports
+
+     GRADUAL_CHECK: 4
+    GRADUAL_STATIC: 3
+  GRADUAL_BOUNDARY: 1
