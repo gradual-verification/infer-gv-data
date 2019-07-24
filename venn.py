@@ -52,7 +52,34 @@ for repo in repos:
     keys = sets.keys()
     venn3([sets[k] for k in keys], set_labels=keys)
     plt.title(repo)
-    dir = 'venn'
+    dir = 'venn/static'
     os.makedirs(dir, exist_ok=True)
     plt.savefig('{}/{}.png'.format(dir, repo))
     plt.clf()
+
+
+modes = {
+    'dereferences': ['GRADUAL_DEREFERENCE'],
+    'unannotated': ['GRADUAL_CHECK', 'GRADUAL_BOUNDARY'],
+    'gradual': ['GRADUAL_CHECK', 'GRADUAL_BOUNDARY'],
+}
+
+for repo in repos:
+    try:
+        sets = {}
+        for name, issuetypes in modes.items():
+            the_set = set()
+            filename = '{}/{}.txt'.format(repo, name)
+            for issuetype in issuetypes:
+                the_set |= lines(filename, issuetype)
+            k = 'annotated' if name == 'gradual' else name
+            sets[k] = the_set
+        keys = sets.keys()
+        venn3([sets[k] for k in keys], set_labels=keys)
+        plt.title(repo)
+        dir = 'venn/dynamic'
+        os.makedirs(dir, exist_ok=True)
+        plt.savefig('{}/{}.png'.format(dir, repo))
+        plt.clf()
+    except:
+        pass

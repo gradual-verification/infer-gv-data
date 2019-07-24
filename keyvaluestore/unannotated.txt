@@ -1,0 +1,3005 @@
+Found 295 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/FileStorageAdapter.java:18: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  16.     @Override
+  17.     public Single<Boolean> exists(String key) {
+  18. >     return Single.fromCallable(() -> file(key).exists());
+  19.     }
+  20.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/FileStorageAdapter.java:23: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  21.     @Override
+  22.     public Single<Boolean> createNew(String key) {
+  23. >     return Single.fromCallable(() -> file(key).createNewFile());
+  24.     }
+  25.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/FileStorageAdapter.java:28: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  26.     @Override
+  27.     public Single<Boolean> delete(String key) {
+  28. >     return Single.fromCallable(() -> file(key).delete());
+  29.     }
+  30.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/AdaptableStorage.java:31: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.AdaptableStorage.storageAdapter`.
+  29.     @Override
+  30.     public ValueStorable value(String key) {
+  31. >     return StorableFactory.value(storageAdapter.storageUnit(key));
+  32.     }
+  33.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/FileStorageAdapter.java:33: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  31.     @Override
+  32.     public Reader reader(String key) throws IOException {
+  33. >     return Files.newBufferedReader(file(key).toPath(), Charset.defaultCharset());
+  34.     }
+  35.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableReader.java:39: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `b`.
+  37.       int read = 0;
+  38.       for (int i = off; i < buffer.length() && read < len; i++, read++) {
+  39. >       b[i] = buffer.charAt(i);
+  40.       }
+  41.       return read;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableReader.java:35: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$7`.
+  33.     public int read(char[] b, int off, int len) {
+  34.       if (buffer == null) {
+  35. >       buffer = readableAdapter.read(key).blockingGet();
+  36.       }
+  37.       int read = 0;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableReader.java:38: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableReader.buffer`.
+  36.       }
+  37.       int read = 0;
+  38. >     for (int i = off; i < buffer.length() && read < len; i++, read++) {
+  39.         b[i] = buffer.charAt(i);
+  40.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableReader.java:39: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableReader.buffer`.
+  37.       int read = 0;
+  38.       for (int i = off; i < buffer.length() && read < len; i++, read++) {
+  39. >       b[i] = buffer.charAt(i);
+  40.       }
+  41.       return read;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableReader.java:35: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableReader.readableAdapter`.
+  33.     public int read(char[] b, int off, int len) {
+  34.       if (buffer == null) {
+  35. >       buffer = readableAdapter.read(key).blockingGet();
+  36.       }
+  37.       int read = 0;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableWriter.java:35: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableWriter.buffer`.
+  33.     @Override
+  34.     public void write(char[] b, int off, int len) {
+  35. >     buffer.append(new String(b, off, len));
+  36.     }
+  37.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableStorageUnit.java:35: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableStorageUnit.storageAdapter`.
+  33.     @Override
+  34.     public Reader reader() throws IOException {
+  35. >     return storageAdapter.reader(key);
+  36.     }
+  37.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/AdaptableStorage.java:36: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.AdaptableStorage.storageAdapter`.
+  34.     @Override
+  35.     public ListStorable list(String key) {
+  36. >     return StorableFactory.list(storageAdapter.storageUnit(key));
+  37.     }
+  38.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/KeyValueStoreV1.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.KeyValueStoreV1.storage`.
+  35.     @Override
+  36.     public <T> ValueType<T> value(String key, Type type) {
+  37. >     return TypeFactory.build(storage.value(key), converter, type);
+  38.     }
+  39.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$1`.
+  38.     public <T> Single<T> converterWrite(T value, Converter converter, Type type) {
+  39.       return createTemp()
+  40. >         .map(
+  41.               tmpFile -> {
+  42.                 converter.write(value, type, tmpFile);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:45: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  43.                 return tmpFile;
+  44.               })
+  45. >         .flatMap(
+  46.               tmpFile ->
+  47.                   delete()
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  40.       return Completable.fromAction(storageUnit::startRead)
+  41.           .andThen(storageUnit.exists())
+  42. >         .filter(Boolean::booleanValue)
+  43.           .map(exists -> Optional.ofNullable(converter.<List<T>>read(storageUnit, type)))
+  44.           .filter(Optional::isPresent)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$22`.
+  41.           .andThen(storageUnit.exists())
+  42.           .filter(Boolean::booleanValue)
+  43. >         .map(exists -> Optional.ofNullable(converter.<List<T>>read(storageUnit, type)))
+  44.           .filter(Optional::isPresent)
+  45.           .map(Optional::get)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:44: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$30`.
+  42.           .filter(Boolean::booleanValue)
+  43.           .map(exists -> Optional.ofNullable(converter.<List<T>>read(storageUnit, type)))
+  44. >         .filter(Optional::isPresent)
+  45.           .map(Optional::get)
+  46.           .toSingle(Collections.emptyList())
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:45: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$35`.
+  43.           .map(exists -> Optional.ofNullable(converter.<List<T>>read(storageUnit, type)))
+  44.           .filter(Optional::isPresent)
+  45. >         .map(Optional::get)
+  46.           .toSingle(Collections.emptyList())
+  47.           .doFinally(storageUnit::endRead);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:46: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$40`.
+  44.           .filter(Optional::isPresent)
+  45.           .map(Optional::get)
+  46. >         .toSingle(Collections.emptyList())
+  47.           .doFinally(storageUnit::endRead);
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:47: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$45`.
+  45.           .map(Optional::get)
+  46.           .toSingle(Collections.emptyList())
+  47. >         .doFinally(storageUnit::endRead);
+  48.     }
+  49.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:41: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  39.     public <T> Single<List<T>> get(Converter converter, Type type) {
+  40.       return Completable.fromAction(storageUnit::startRead)
+  41. >         .andThen(storageUnit.exists())
+  42.           .filter(Boolean::booleanValue)
+  43.           .map(exists -> Optional.ofNullable(converter.<List<T>>read(storageUnit, type)))
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  38.     @Override
+  39.     public <T> Single<List<T>> get(Converter converter, Type type) {
+  40. >     return Completable.fromAction(storageUnit::startRead)
+  41.           .andThen(storageUnit.exists())
+  42.           .filter(Boolean::booleanValue)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:41: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  39.     public <T> Single<List<T>> get(Converter converter, Type type) {
+  40.       return Completable.fromAction(storageUnit::startRead)
+  41. >         .andThen(storageUnit.exists())
+  42.           .filter(Boolean::booleanValue)
+  43.           .map(exists -> Optional.ofNullable(converter.<List<T>>read(storageUnit, type)))
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:46: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  44.           .filter(Optional::isPresent)
+  45.           .map(Optional::get)
+  46. >         .toSingle(Collections.emptyList())
+  47.           .doFinally(storageUnit::endRead);
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableWriter.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$12`.
+  38.     @Override
+  39.     public void flush() {
+  40. >     writableAdapter.write(key, buffer.toString()).blockingAwait();
+  41.     }
+  42.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableWriter.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableWriter.buffer`.
+  38.     @Override
+  39.     public void flush() {
+  40. >     writableAdapter.write(key, buffer.toString()).blockingAwait();
+  41.     }
+  42.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableWriter.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableWriter.writableAdapter`.
+  38.     @Override
+  39.     public void flush() {
+  40. >     writableAdapter.write(key, buffer.toString()).blockingAwait();
+  41.     }
+  42.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ValueTypeV1.java:39: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ValueTypeV1.storage`.
+  37.     @SuppressWarnings("unchecked")
+  38.     public Maybe<T> get() {
+  39. >     return storage.<T>get(converter, type);
+  40.     }
+  41.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  41.       return Completable.fromAction(storageUnit::startRead)
+  42.           .andThen(storageUnit.exists())
+  43. >         .filter(Boolean::booleanValue)
+  44.           .map(exists -> Optional.ofNullable(converter.<T>read(storageUnit, type)))
+  45.           .filter(Optional::isPresent)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:44: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$22`.
+  42.           .andThen(storageUnit.exists())
+  43.           .filter(Boolean::booleanValue)
+  44. >         .map(exists -> Optional.ofNullable(converter.<T>read(storageUnit, type)))
+  45.           .filter(Optional::isPresent)
+  46.           .map(Optional::get)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:45: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$30`.
+  43.           .filter(Boolean::booleanValue)
+  44.           .map(exists -> Optional.ofNullable(converter.<T>read(storageUnit, type)))
+  45. >         .filter(Optional::isPresent)
+  46.           .map(Optional::get)
+  47.           .doFinally(storageUnit::endRead);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:46: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$35`.
+  44.           .map(exists -> Optional.ofNullable(converter.<T>read(storageUnit, type)))
+  45.           .filter(Optional::isPresent)
+  46. >         .map(Optional::get)
+  47.           .doFinally(storageUnit::endRead);
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:47: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$40`.
+  45.           .filter(Optional::isPresent)
+  46.           .map(Optional::get)
+  47. >         .doFinally(storageUnit::endRead);
+  48.     }
+  49.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  40.     public <T> Maybe<T> get(Converter converter, Type type) {
+  41.       return Completable.fromAction(storageUnit::startRead)
+  42. >         .andThen(storageUnit.exists())
+  43.           .filter(Boolean::booleanValue)
+  44.           .map(exists -> Optional.ofNullable(converter.<T>read(storageUnit, type)))
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:41: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ValueStorableV1.storageUnit`.
+  39.     @Override
+  40.     public <T> Maybe<T> get(Converter converter, Type type) {
+  41. >     return Completable.fromAction(storageUnit::startRead)
+  42.           .andThen(storageUnit.exists())
+  43.           .filter(Boolean::booleanValue)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ValueStorableV1.storageUnit`.
+  40.     public <T> Maybe<T> get(Converter converter, Type type) {
+  41.       return Completable.fromAction(storageUnit::startRead)
+  42. >         .andThen(storageUnit.exists())
+  43.           .filter(Boolean::booleanValue)
+  44.           .map(exists -> Optional.ofNullable(converter.<T>read(storageUnit, type)))
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:46: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ValueStorableV1.storageUnit`.
+  44.           .map(exists -> Optional.ofNullable(converter.<T>read(storageUnit, type)))
+  45.           .filter(Optional::isPresent)
+  46. >         .map(Optional::get)
+  47.           .doFinally(storageUnit::endRead);
+  48.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableStorageUnit.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableStorageUnit.storageAdapter`.
+  38.     @Override
+  39.     public InputStream input() throws IOException {
+  40. >     return storageAdapter.input(key);
+  41.     }
+  42.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableOutputStream.java:45: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableOutputStream.buffer`.
+  43.         throw new IOException("Stream Closed");
+  44.       }
+  45. >     buffer.append(new String(b, off, len, UTF_8));
+  46.     }
+  47.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/KeyValueStoreV1.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.KeyValueStoreV1.storage`.
+  40.     @Override
+  41.     public <T> ListType<T> list(String key, Type type) {
+  42. >     return TypeFactory.build(storage.list(key), converter, type);
+  43.     }
+  44.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/FileStorageAdapter.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  41.     @Override
+  42.     public Writer writer(String key) throws IOException {
+  43. >     return Files.newBufferedWriter(file(key).toPath(), Charset.defaultCharset());
+  44.     }
+  45.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `converter`.
+  40.           .map(
+  41.               tmpFile -> {
+  42. >               converter.write(value, type, tmpFile);
+  43.                 return tmpFile;
+  44.               })
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `converter`.
+  41.           .andThen(storageUnit.exists())
+  42.           .filter(Boolean::booleanValue)
+  43. >         .map(exists -> Optional.ofNullable(converter.<List<T>>read(storageUnit, type)))
+  44.           .filter(Optional::isPresent)
+  45.           .map(Optional::get)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:44: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `converter`.
+  42.           .andThen(storageUnit.exists())
+  43.           .filter(Boolean::booleanValue)
+  44. >         .map(exists -> Optional.ofNullable(converter.<T>read(storageUnit, type)))
+  45.           .filter(Optional::isPresent)
+  46.           .map(Optional::get)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ValueUpdate.java:49: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `other`.
+  47.   
+  48.       ValueUpdate other = (ValueUpdate) obj;
+  49. >     if (this.empty) return other.empty;
+  50.       return this.value == other.value
+  51.           || (this.value != null && other.value != null && this.value.equals(other.value));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ValueUpdate.java:50: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `other`.
+  48.       ValueUpdate other = (ValueUpdate) obj;
+  49.       if (this.empty) return other.empty;
+  50. >     return this.value == other.value
+  51.           || (this.value != null && other.value != null && this.value.equals(other.value));
+  52.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ValueUpdate.java:51: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ValueUpdate.value`,check dereference of ambiguous pointer `other`.
+  49.       if (this.empty) return other.empty;
+  50.       return this.value == other.value
+  51. >         || (this.value != null && other.value != null && this.value.equals(other.value));
+  52.     }
+  53.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableInputStream.java:54: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `b`.
+  52.       int read = 0;
+  53.       for (int i = off; i < buffer.length() && read < len; i++, read++) {
+  54. >       b[i] = (byte) buffer.charAt(i);
+  55.       }
+  56.       return read;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableInputStream.java:50: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$13`.
+  48.       }
+  49.       if (buffer == null) {
+  50. >       buffer = readableAdapter.read(key).blockingGet();
+  51.       }
+  52.       int read = 0;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableInputStream.java:53: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableInputStream.buffer`.
+  51.       }
+  52.       int read = 0;
+  53. >     for (int i = off; i < buffer.length() && read < len; i++, read++) {
+  54.         b[i] = (byte) buffer.charAt(i);
+  55.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableInputStream.java:54: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableInputStream.buffer`.
+  52.       int read = 0;
+  53.       for (int i = off; i < buffer.length() && read < len; i++, read++) {
+  54. >       b[i] = (byte) buffer.charAt(i);
+  55.       }
+  56.       return read;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableInputStream.java:50: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableInputStream.readableAdapter`.
+  48.       }
+  49.       if (buffer == null) {
+  50. >       buffer = readableAdapter.read(key).blockingGet();
+  51.       }
+  52.       int read = 0;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableStorageUnit.java:45: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableStorageUnit.storageAdapter`.
+  43.     @Override
+  44.     public Writer writer() throws IOException {
+  45. >     return storageAdapter.writer(key);
+  46.     }
+  47.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableWriter.java:47: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableWriter.closeLock`.
+  45.       synchronized (closeLock) {
+  46.         if (closed) {
+  47. >         return;
+  48.         }
+  49.         closed = true;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableWriter.java:51: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableWriter.closeLock`.
+  49.         closed = true;
+  50.         buffer = new StringBuilder();
+  51. >     }
+  52.     }
+  53.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ValueTypeV1.java:45: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$2`.
+  43.     @Nullable
+  44.     public T blockingGet() {
+  45. >     return get().blockingGet();
+  46.     }
+  47.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableReader.java:48: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableReader.closeLock`.
+  46.       synchronized (closeLock) {
+  47.         if (buffer == null) {
+  48. >         return;
+  49.         }
+  50.         buffer = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableReader.java:51: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableReader.closeLock`.
+  49.         }
+  50.         buffer = null;
+  51. >     }
+  52.     }
+  53.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:46: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ListTypeV1.storage`.
+  44.     @SuppressWarnings("unchecked")
+  45.     public Single<List<T>> get() {
+  46. >     return storage.get(converter, type);
+  47.     }
+  48.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:48: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$2`.
+  46.               tmpFile ->
+  47.                   delete()
+  48. >                     .flatMap(
+  49.                           deleted -> {
+  50.                             if (!deleted) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableOutputStream.java:52: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableOutputStream.closeLock`.
+  50.       synchronized (closeLock) {
+  51.         if (closed) {
+  52. >         return;
+  53.         }
+  54.         writableAdapter.write(key, buffer.toString()).blockingAwait();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableOutputStream.java:57: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableOutputStream.closeLock`.
+  55.         closed = true;
+  56.         buffer = new StringBuilder();
+  57. >     }
+  58.     }
+  59.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableOutputStream.java:54: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$25`.
+  52.           return;
+  53.         }
+  54. >       writableAdapter.write(key, buffer.toString()).blockingAwait();
+  55.         closed = true;
+  56.         buffer = new StringBuilder();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableOutputStream.java:54: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableOutputStream.buffer`.
+  52.           return;
+  53.         }
+  54. >       writableAdapter.write(key, buffer.toString()).blockingAwait();
+  55.         closed = true;
+  56.         buffer = new StringBuilder();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableOutputStream.java:54: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableOutputStream.writableAdapter`.
+  52.           return;
+  53.         }
+  54. >       writableAdapter.write(key, buffer.toString()).blockingAwait();
+  55.         closed = true;
+  56.         buffer = new StringBuilder();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableStorageUnit.java:50: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableStorageUnit.storageAdapter`.
+  48.     @Override
+  49.     public OutputStream output() throws IOException {
+  50. >     return storageAdapter.output(key);
+  51.     }
+  52.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:50: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `deleted`.
+  48.                       .flatMap(
+  49.                           deleted -> {
+  50. >                           if (!deleted) {
+  51.                               throw new IOException("Failed to write get to store.");
+  52.                             }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:54: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  52.                             }
+  53.                             return set(tmpFile)
+  54. >                               .map(
+  55.                                     isSet -> {
+  56.                                       if (!isSet) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:51: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$2`.
+  49.     @Override
+  50.     public List<T> blockingGet() {
+  51. >     return get().blockingGet();
+  52.     }
+  53.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  53.       return Completable.fromAction(storageUnit::startWrite)
+  54.           .andThen(storageUnit.exists())
+  55. >         .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  56.           .flatMap(
+  57.               exists -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:56: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$23`.
+  54.           .andThen(storageUnit.exists())
+  55.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  56. >         .flatMap(
+  57.               exists -> {
+  58.                 if (!exists) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:63: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$32`.
+  61.                 return storageUnit.converterWrite(list, converter, type);
+  62.               })
+  63. >         .doOnSuccess(updateSubject::onNext)
+  64.           .doFinally(storageUnit::endWrite);
+  65.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:64: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$44`.
+  62.               })
+  63.           .doOnSuccess(updateSubject::onNext)
+  64. >         .doFinally(storageUnit::endWrite);
+  65.     }
+  66.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:54: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  52.     public <T> Single<List<T>> put(Converter converter, Type type, List<T> list) {
+  53.       return Completable.fromAction(storageUnit::startWrite)
+  54. >         .andThen(storageUnit.exists())
+  55.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  56.           .flatMap(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:53: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  51.     @SuppressWarnings("unchecked")
+  52.     public <T> Single<List<T>> put(Converter converter, Type type, List<T> list) {
+  53. >     return Completable.fromAction(storageUnit::startWrite)
+  54.           .andThen(storageUnit.exists())
+  55.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:54: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  52.     public <T> Single<List<T>> put(Converter converter, Type type, List<T> list) {
+  53.       return Completable.fromAction(storageUnit::startWrite)
+  54. >         .andThen(storageUnit.exists())
+  55.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  56.           .flatMap(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:63: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  61.                 return storageUnit.converterWrite(list, converter, type);
+  62.               })
+  63. >         .doOnSuccess(updateSubject::onNext)
+  64.           .doFinally(storageUnit::endWrite);
+  65.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:56: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.updateSubject`.
+  54.           .andThen(storageUnit.exists())
+  55.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  56. >         .flatMap(
+  57.               exists -> {
+  58.                 if (!exists) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  53.       return Completable.fromAction(storageUnit::startWrite)
+  54.           .andThen(storageUnit.exists())
+  55. >         .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  56.           .flatMap(
+  57.               createSuccess -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:56: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$23`.
+  54.           .andThen(storageUnit.exists())
+  55.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  56. >         .flatMap(
+  57.               createSuccess -> {
+  58.                 if (!createSuccess) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:63: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$32`.
+  61.                 return storageUnit.converterWrite(value, converter, type);
+  62.               })
+  63. >         .doOnSuccess(o -> updateSubject.onNext(new ValueUpdate<>(value)))
+  64.           .doFinally(storageUnit::endWrite);
+  65.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:64: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$39`.
+  62.               })
+  63.           .doOnSuccess(o -> updateSubject.onNext(new ValueUpdate<>(value)))
+  64. >         .doFinally(storageUnit::endWrite);
+  65.     }
+  66.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:54: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  52.     public <T> Single<T> put(Converter converter, Type type, T value) {
+  53.       return Completable.fromAction(storageUnit::startWrite)
+  54. >         .andThen(storageUnit.exists())
+  55.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  56.           .flatMap(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:53: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ValueStorableV1.storageUnit`.
+  51.     @SuppressWarnings("unchecked")
+  52.     public <T> Single<T> put(Converter converter, Type type, T value) {
+  53. >     return Completable.fromAction(storageUnit::startWrite)
+  54.           .andThen(storageUnit.exists())
+  55.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:54: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ValueStorableV1.storageUnit`.
+  52.     public <T> Single<T> put(Converter converter, Type type, T value) {
+  53.       return Completable.fromAction(storageUnit::startWrite)
+  54. >         .andThen(storageUnit.exists())
+  55.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  56.           .flatMap(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:63: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ValueStorableV1.storageUnit`.
+  61.                 return storageUnit.converterWrite(value, converter, type);
+  62.               })
+  63. >         .doOnSuccess(o -> updateSubject.onNext(new ValueUpdate<>(value)))
+  64.           .doFinally(storageUnit::endWrite);
+  65.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ValueTypeV1.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  53.     @Override
+  54.     public void put(T value, Scheduler scheduler) {
+  55. >     observePut(value).subscribeOn(scheduler).subscribe();
+  56.     }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ValueTypeV1.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$7`.
+  53.     @Override
+  54.     public void put(T value, Scheduler scheduler) {
+  55. >     observePut(value).subscribeOn(scheduler).subscribe();
+  56.     }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `exists`.
+  53.       return Completable.fromAction(storageUnit::startWrite)
+  54.           .andThen(storageUnit.exists())
+  55. >         .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  56.           .flatMap(
+  57.               exists -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  53.       return Completable.fromAction(storageUnit::startWrite)
+  54.           .andThen(storageUnit.exists())
+  55. >         .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  56.           .flatMap(
+  57.               exists -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `exists`.
+  53.       return Completable.fromAction(storageUnit::startWrite)
+  54.           .andThen(storageUnit.exists())
+  55. >         .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  56.           .flatMap(
+  57.               createSuccess -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ValueStorableV1.storageUnit`.
+  53.       return Completable.fromAction(storageUnit::startWrite)
+  54.           .andThen(storageUnit.exists())
+  55. >         .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  56.           .flatMap(
+  57.               createSuccess -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableStorageUnit.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableStorageUnit.storageAdapter`.
+  53.     @Override
+  54.     public Single<Boolean> exists() {
+  55. >     return storageAdapter.exists(key);
+  56.     }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:56: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `isSet`.
+  54.                                 .map(
+  55.                                     isSet -> {
+  56. >                                     if (!isSet) {
+  57.                                         throw new IOException("Failed to write get to store.");
+  58.                                       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:57: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ListTypeV1.storage`.
+  55.     @SuppressWarnings("unchecked")
+  56.     public Single<List<T>> observePut(final List<T> list) {
+  57. >     return storage.put(converter, type, list);
+  58.     }
+  59.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ValueUpdate.java:56: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ValueUpdate.value`.
+  54.     @Override
+  55.     public int hashCode() {
+  56. >     int valueHash = value == null ? 0 : value.hashCode();
+  57.       int emptyHash = empty ? 1 : 0;
+  58.       return 37 * (valueHash + emptyHash);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:58: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `exists`.
+  56.           .flatMap(
+  57.               exists -> {
+  58. >               if (!exists) {
+  59.                   throw new IOException("Could not create store.");
+  60.                 }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:61: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  59.                   throw new IOException("Could not create store.");
+  60.                 }
+  61. >               return storageUnit.converterWrite(list, converter, type);
+  62.               })
+  63.           .doOnSuccess(updateSubject::onNext)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:58: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `createSuccess`.
+  56.           .flatMap(
+  57.               createSuccess -> {
+  58. >               if (!createSuccess) {
+  59.                   throw new IOException("Could not create store.");
+  60.                 }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:61: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ValueStorableV1.storageUnit`.
+  59.                   throw new IOException("Could not create store.");
+  60.                 }
+  61. >               return storageUnit.converterWrite(value, converter, type);
+  62.               })
+  63.           .doOnSuccess(o -> updateSubject.onNext(new ValueUpdate<>(value)))
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/FileStorageAdapter.java:61: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$13`.
+  59.   
+  60.     private String path(String key) {
+  61. >     return basePath + "/" + key + ".json";
+  62.     }
+  63.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/FileStorageAdapter.java:61: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$16`.
+  59.   
+  60.     private String path(String key) {
+  61. >     return basePath + "/" + key + ".json";
+  62.     }
+  63.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/FileStorageAdapter.java:61: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$6`.
+  59.   
+  60.     private String path(String key) {
+  61. >     return basePath + "/" + key + ".json";
+  62.     }
+  63.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/FileStorageAdapter.java:61: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  59.   
+  60.     private String path(String key) {
+  61. >     return basePath + "/" + key + ".json";
+  62.     }
+  63.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableStorageUnit.java:60: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableStorageUnit.storageAdapter`.
+  58.     @Override
+  59.     public Single<Boolean> createNew() {
+  60. >     return storageAdapter.createNew(key);
+  61.     }
+  62.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ValueTypeV1.java:61: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ValueTypeV1.storage`.
+  59.     @SuppressWarnings("unchecked")
+  60.     public Single<T> observePut(final T value) {
+  61. >     return storage.put(converter, type, value);
+  62.     }
+  63.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:63: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ValueStorableV1.updateSubject`.
+  61.                 return storageUnit.converterWrite(value, converter, type);
+  62.               })
+  63. >         .doOnSuccess(o -> updateSubject.onNext(new ValueUpdate<>(value)))
+  64.           .doFinally(storageUnit::endWrite);
+  65.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableStorageUnit.java:65: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.AdaptableStorageUnit.storageAdapter`.
+  63.     @Override
+  64.     public Single<Boolean> delete() {
+  65. >     return storageAdapter.delete(key);
+  66.     }
+  67.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:66: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  64.     @Override
+  65.     public void startRead() {
+  66. >     readWriteLock.readLock().lock();
+  67.     }
+  68.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:66: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.FileStorageUnit.readWriteLock`.
+  64.     @Override
+  65.     public void startRead() {
+  66. >     readWriteLock.readLock().lock();
+  67.     }
+  68.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:67: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  65.     @Override
+  66.     public void put(List<T> list, Scheduler scheduler) {
+  67. >     observePut(list).subscribeOn(scheduler).subscribe();
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:67: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$7`.
+  65.     @Override
+  66.     public void put(List<T> list, Scheduler scheduler) {
+  67. >     observePut(list).subscribeOn(scheduler).subscribe();
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ValueTypeV1.java:67: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ValueTypeV1.storage`.
+  65.     @SuppressWarnings("unchecked")
+  66.     public Observable<ValueUpdate<T>> observe() {
+  67. >     return storage.observe(converter, type);
+  68.     }
+  69.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:70: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$13`.
+  68.     @SuppressWarnings("unchecked")
+  69.     public <T> Observable<List<T>> observe(Converter converter, Type type) {
+  70. >     return updateSubject.startWith(get(converter, type).toObservable()).hide();
+  71.     }
+  72.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:70: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$6`.
+  68.     @SuppressWarnings("unchecked")
+  69.     public <T> Observable<List<T>> observe(Converter converter, Type type) {
+  70. >     return updateSubject.startWith(get(converter, type).toObservable()).hide();
+  71.     }
+  72.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:70: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.updateSubject`.
+  68.     @SuppressWarnings("unchecked")
+  69.     public <T> Observable<List<T>> observe(Converter converter, Type type) {
+  70. >     return updateSubject.startWith(get(converter, type).toObservable()).hide();
+  71.     }
+  72.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:74: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$11`.
+  72.               get(converter, type)
+  73.                   .map(value -> new ValueUpdate<>((T) value))
+  74. >                 .defaultIfEmpty(ValueUpdate.empty())
+  75.                   .toObservable())
+  76.           .hide();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:75: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$16`.
+  73.                   .map(value -> new ValueUpdate<>((T) value))
+  74.                   .defaultIfEmpty(ValueUpdate.empty())
+  75. >                 .toObservable())
+  76.           .hide();
+  77.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:76: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$23`.
+  74.                   .defaultIfEmpty(ValueUpdate.empty())
+  75.                   .toObservable())
+  76. >         .hide();
+  77.     }
+  78.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:73: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$6`.
+  71.           .startWith(
+  72.               get(converter, type)
+  73. >                 .map(value -> new ValueUpdate<>((T) value))
+  74.                   .defaultIfEmpty(ValueUpdate.empty())
+  75.                   .toObservable())
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:71: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ValueStorableV1.updateSubject`.
+  69.     public <T> Observable<ValueUpdate<T>> observe(Converter converter, Type type) {
+  70.       return updateSubject
+  71. >         .startWith(
+  72.               get(converter, type)
+  73.                   .map(value -> new ValueUpdate<>((T) value))
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:71: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `n$3`.
+  69.     @Override
+  70.     public void endRead() {
+  71. >     readWriteLock.readLock().unlock();
+  72.     }
+  73.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:71: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  69.     @Override
+  70.     public void endRead() {
+  71. >     readWriteLock.readLock().unlock();
+  72.     }
+  73.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:71: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.FileStorageUnit.readWriteLock`.
+  69.     @Override
+  70.     public void endRead() {
+  71. >     readWriteLock.readLock().unlock();
+  72.     }
+  73.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ValueTypeV1.java:72: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ValueTypeV1.storage`.
+  70.     @Override
+  71.     public Completable observeClear() {
+  72. >     return storage.clear();
+  73.     }
+  74.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableStorageUnit.java:72: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `converter`.
+  70.       return Single.fromCallable(
+  71.           () -> {
+  72. >           converter.write(value, type, AdaptableStorageUnit.this);
+  73.             return value;
+  74.           });
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:73: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ListTypeV1.storage`.
+  71.     @SuppressWarnings("unchecked")
+  72.     public Observable<List<T>> observe() {
+  73. >     return storage.observe(converter, type);
+  74.     }
+  75.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:78: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  76.       return Completable.fromAction(storageUnit::startWrite)
+  77.           .andThen(storageUnit.exists())
+  78. >         .flatMap(exists -> exists ? storageUnit.delete() : Single.just(true))
+  79.           .map(
+  80.               success -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:79: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$23`.
+  77.           .andThen(storageUnit.exists())
+  78.           .flatMap(exists -> exists ? storageUnit.delete() : Single.just(true))
+  79. >         .map(
+  80.               success -> {
+  81.                 if (!success) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:87: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$28`.
+  85.                 return Collections.<T>emptyList();
+  86.               })
+  87. >         .doOnSuccess(o -> updateSubject.onNext(Collections.<T>emptyList()))
+  88.           .doFinally(storageUnit::endWrite);
+  89.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:88: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$34`.
+  86.               })
+  87.           .doOnSuccess(o -> updateSubject.onNext(Collections.<T>emptyList()))
+  88. >         .doFinally(storageUnit::endWrite);
+  89.     }
+  90.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:77: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  75.     public <T> Single<List<T>> clear() {
+  76.       return Completable.fromAction(storageUnit::startWrite)
+  77. >         .andThen(storageUnit.exists())
+  78.           .flatMap(exists -> exists ? storageUnit.delete() : Single.just(true))
+  79.           .map(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:76: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  74.     @SuppressWarnings("unchecked")
+  75.     public <T> Single<List<T>> clear() {
+  76. >     return Completable.fromAction(storageUnit::startWrite)
+  77.           .andThen(storageUnit.exists())
+  78.           .flatMap(exists -> exists ? storageUnit.delete() : Single.just(true))
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:77: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  75.     public <T> Single<List<T>> clear() {
+  76.       return Completable.fromAction(storageUnit::startWrite)
+  77. >         .andThen(storageUnit.exists())
+  78.           .flatMap(exists -> exists ? storageUnit.delete() : Single.just(true))
+  79.           .map(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:87: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  85.                 return Collections.<T>emptyList();
+  86.               })
+  87. >         .doOnSuccess(o -> updateSubject.onNext(Collections.<T>emptyList()))
+  88.           .doFinally(storageUnit::endWrite);
+  89.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:80: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `readLock`.
+  78.   
+  79.       for (int i = 0; i < readCount; i++) {
+  80. >       readLock.unlock();
+  81.       }
+  82.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:80: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `readLock`.
+  78.   
+  79.       for (int i = 0; i < readCount; i++) {
+  80. >       readLock.unlock();
+  81.       }
+  82.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:79: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.FileStorageUnit.readCount`.
+  77.       readCount = readWriteLock.getWriteHoldCount() == 0 ? readWriteLock.getReadHoldCount() : 0;
+  78.   
+  79. >     for (int i = 0; i < readCount; i++) {
+  80.         readLock.unlock();
+  81.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:76: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.FileStorageUnit.readWriteLock`.
+  74.     @Override
+  75.     public void startWrite() {
+  76. >     Lock readLock = readWriteLock.readLock();
+  77.       readCount = readWriteLock.getWriteHoldCount() == 0 ? readWriteLock.getReadHoldCount() : 0;
+  78.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:77: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.FileStorageUnit.readWriteLock`.
+  75.     public void startWrite() {
+  76.       Lock readLock = readWriteLock.readLock();
+  77. >     readCount = readWriteLock.getWriteHoldCount() == 0 ? readWriteLock.getReadHoldCount() : 0;
+  78.   
+  79.       for (int i = 0; i < readCount; i++) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:83: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.FileStorageUnit.readWriteLock`.
+  81.       }
+  82.   
+  83. >     Lock writeLock = readWriteLock.writeLock();
+  84.       writeLock.lock();
+  85.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:84: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `writeLock`.
+  82.   
+  83.       Lock writeLock = readWriteLock.writeLock();
+  84. >     writeLock.lock();
+  85.     }
+  86.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:78: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `exists`.
+  76.       return Completable.fromAction(storageUnit::startWrite)
+  77.           .andThen(storageUnit.exists())
+  78. >         .flatMap(exists -> exists ? storageUnit.delete() : Single.just(true))
+  79.           .map(
+  80.               success -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:78: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  76.       return Completable.fromAction(storageUnit::startWrite)
+  77.           .andThen(storageUnit.exists())
+  78. >         .flatMap(exists -> exists ? storageUnit.delete() : Single.just(true))
+  79.           .map(
+  80.               success -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:79: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ListTypeV1.storage`.
+  77.     @SuppressWarnings("unchecked")
+  78.     public Single<List<T>> observeClear() {
+  79. >     return storage.clear();
+  80.     }
+  81.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:81: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `success`.
+  79.           .map(
+  80.               success -> {
+  81. >               if (!success) {
+  82.                   throw new IOException("Clear operation on store failed.");
+  83.                 }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:84: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  82.       return Completable.fromAction(storageUnit::startWrite)
+  83.           .andThen(storageUnit.exists())
+  84. >         .filter(Boolean::booleanValue)
+  85.           .flatMapSingle(exists -> storageUnit.delete())
+  86.           .doOnSuccess(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:85: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$22`.
+  83.           .andThen(storageUnit.exists())
+  84.           .filter(Boolean::booleanValue)
+  85. >         .flatMapSingle(exists -> storageUnit.delete())
+  86.           .doOnSuccess(
+  87.               deleteSuccess -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:86: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$28`.
+  84.           .filter(Boolean::booleanValue)
+  85.           .flatMapSingle(exists -> storageUnit.delete())
+  86. >         .doOnSuccess(
+  87.               deleteSuccess -> {
+  88.                 if (!deleteSuccess) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:93: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$34`.
+  91.                 updateSubject.onNext(ValueUpdate.<T>empty());
+  92.               })
+  93. >         .doFinally(storageUnit::endWrite)
+  94.           .ignoreElement();
+  95.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:94: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$46`.
+  92.               })
+  93.           .doFinally(storageUnit::endWrite)
+  94. >         .ignoreElement();
+  95.     }
+  96.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:83: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  81.     public <T> Completable clear() {
+  82.       return Completable.fromAction(storageUnit::startWrite)
+  83. >         .andThen(storageUnit.exists())
+  84.           .filter(Boolean::booleanValue)
+  85.           .flatMapSingle(exists -> storageUnit.delete())
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:82: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ValueStorableV1.storageUnit`.
+  80.     @SuppressWarnings("unchecked")
+  81.     public <T> Completable clear() {
+  82. >     return Completable.fromAction(storageUnit::startWrite)
+  83.           .andThen(storageUnit.exists())
+  84.           .filter(Boolean::booleanValue)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:83: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ValueStorableV1.storageUnit`.
+  81.     public <T> Completable clear() {
+  82.       return Completable.fromAction(storageUnit::startWrite)
+  83. >         .andThen(storageUnit.exists())
+  84.           .filter(Boolean::booleanValue)
+  85.           .flatMapSingle(exists -> storageUnit.delete())
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:86: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ValueStorableV1.storageUnit`.
+  84.           .filter(Boolean::booleanValue)
+  85.           .flatMapSingle(exists -> storageUnit.delete())
+  86. >         .doOnSuccess(
+  87.               deleteSuccess -> {
+  88.                 if (!deleteSuccess) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ValueTypeV1.java:82: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$2`.
+  80.     @Override
+  81.     public void clear(Scheduler scheduler) {
+  82. >     observeClear().subscribeOn(scheduler).subscribe();
+  83.     }
+  84.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ValueTypeV1.java:82: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$6`.
+  80.     @Override
+  81.     public void clear(Scheduler scheduler) {
+  82. >     observeClear().subscribeOn(scheduler).subscribe();
+  83.     }
+  84.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:85: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ValueStorableV1.storageUnit`.
+  83.           .andThen(storageUnit.exists())
+  84.           .filter(Boolean::booleanValue)
+  85. >         .flatMapSingle(exists -> storageUnit.delete())
+  86.           .doOnSuccess(
+  87.               deleteSuccess -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:87: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.updateSubject`.
+  85.                 return Collections.<T>emptyList();
+  86.               })
+  87. >         .doOnSuccess(o -> updateSubject.onNext(Collections.<T>emptyList()))
+  88.           .doFinally(storageUnit::endWrite);
+  89.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:88: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `deleteSuccess`.
+  86.           .doOnSuccess(
+  87.               deleteSuccess -> {
+  88. >               if (!deleteSuccess) {
+  89.                   throw new IOException("Clear operation on store failed.");
+  90.                 }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ValueStorableV1.java:91: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ValueStorableV1.updateSubject`.
+  89.                   throw new IOException("Clear operation on store failed.");
+  90.                 }
+  91. >               updateSubject.onNext(ValueUpdate.<T>empty());
+  92.               })
+  93.           .doFinally(storageUnit::endWrite)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:96: warning: GRADUAL_CHECK
+  check dereference of ambiguous pointer `writeLock`.
+  94.       }
+  95.       readCount = null;
+  96. >     writeLock.unlock();
+  97.     }
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:93: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `readLock`.
+  91.   
+  92.       for (int i = 0; i < (readCount != null ? readCount : 0); i++) {
+  93. >       readLock.lock();
+  94.       }
+  95.       readCount = null;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:92: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.FileStorageUnit.readCount`.
+  90.       Lock writeLock = readWriteLock.writeLock();
+  91.   
+  92. >     for (int i = 0; i < (readCount != null ? readCount : 0); i++) {
+  93.         readLock.lock();
+  94.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:89: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.FileStorageUnit.readWriteLock`.
+  87.     @Override
+  88.     public void endWrite() {
+  89. >     Lock readLock = readWriteLock.readLock();
+  90.       Lock writeLock = readWriteLock.writeLock();
+  91.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:90: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.FileStorageUnit.readWriteLock`.
+  88.     public void endWrite() {
+  89.       Lock readLock = readWriteLock.readLock();
+  90. >     Lock writeLock = readWriteLock.writeLock();
+  91.   
+  92.       for (int i = 0; i < (readCount != null ? readCount : 0); i++) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:96: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `writeLock`.
+  94.       }
+  95.       readCount = null;
+  96. >     writeLock.unlock();
+  97.     }
+  98.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:89: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$2`.
+  87.     @Override
+  88.     public void clear(Scheduler scheduler) {
+  89. >     observeClear().subscribeOn(scheduler).subscribe();
+  90.     }
+  91.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:89: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$6`.
+  87.     @Override
+  88.     public void clear(Scheduler scheduler) {
+  89. >     observeClear().subscribeOn(scheduler).subscribe();
+  90.     }
+  91.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:96: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  94.       return Completable.fromAction(storageUnit::startWrite)
+  95.           .andThen(storageUnit.exists())
+  96. >         .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  97.           .map(
+  98.               success -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:97: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$23`.
+  95.           .andThen(storageUnit.exists())
+  96.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  97. >         .map(
+  98.               success -> {
+  99.                 if (!success) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:104: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$31`.
+  102.                 return Optional.ofNullable(converter.<List<T>>read(storageUnit, type));
+  103.               })
+  104. >         .filter(Optional::isPresent)
+  105.           .map(Optional::get)
+  106.           .toSingle(Collections.emptyList())
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:105: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$36`.
+  103.               })
+  104.           .filter(Optional::isPresent)
+  105. >         .map(Optional::get)
+  106.           .toSingle(Collections.emptyList())
+  107.           .flatMap(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:106: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$41`.
+  104.           .filter(Optional::isPresent)
+  105.           .map(Optional::get)
+  106. >         .toSingle(Collections.emptyList())
+  107.           .flatMap(
+  108.               originalList -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:107: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$46`.
+  105.           .map(Optional::get)
+  106.           .toSingle(Collections.emptyList())
+  107. >         .flatMap(
+  108.               originalList -> {
+  109.                 List<T> result = new ArrayList<>(originalList.size() + 1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:114: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$55`.
+  112.                 return storageUnit.converterWrite(result, converter, type);
+  113.               })
+  114. >         .doOnSuccess(updateSubject::onNext)
+  115.           .doFinally(storageUnit::endWrite);
+  116.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:115: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$67`.
+  113.               })
+  114.           .doOnSuccess(updateSubject::onNext)
+  115. >         .doFinally(storageUnit::endWrite);
+  116.     }
+  117.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:95: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  93.     public <T> Single<List<T>> append(T value, Converter converter, Type type) {
+  94.       return Completable.fromAction(storageUnit::startWrite)
+  95. >         .andThen(storageUnit.exists())
+  96.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  97.           .map(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:94: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  92.     @SuppressWarnings("unchecked")
+  93.     public <T> Single<List<T>> append(T value, Converter converter, Type type) {
+  94. >     return Completable.fromAction(storageUnit::startWrite)
+  95.           .andThen(storageUnit.exists())
+  96.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:95: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  93.     public <T> Single<List<T>> append(T value, Converter converter, Type type) {
+  94.       return Completable.fromAction(storageUnit::startWrite)
+  95. >         .andThen(storageUnit.exists())
+  96.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  97.           .map(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:114: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  112.                 return storageUnit.converterWrite(result, converter, type);
+  113.               })
+  114. >         .doOnSuccess(updateSubject::onNext)
+  115.           .doFinally(storageUnit::endWrite);
+  116.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:107: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.updateSubject`.
+  105.           .map(Optional::get)
+  106.           .toSingle(Collections.emptyList())
+  107. >         .flatMap(
+  108.               originalList -> {
+  109.                 List<T> result = new ArrayList<>(originalList.size() + 1);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:95: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ListTypeV1.storage`.
+  93.     @SuppressWarnings("unchecked")
+  94.     public Single<List<T>> observeAdd(final T value) {
+  95. >     return storage.append(value, converter, type);
+  96.     }
+  97.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:96: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `exists`.
+  94.       return Completable.fromAction(storageUnit::startWrite)
+  95.           .andThen(storageUnit.exists())
+  96. >         .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  97.           .map(
+  98.               success -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:96: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  94.       return Completable.fromAction(storageUnit::startWrite)
+  95.           .andThen(storageUnit.exists())
+  96. >         .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  97.           .map(
+  98.               success -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:102: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `converter`.
+  100.                   throw new IOException("Could not create store.");
+  101.                 }
+  102. >               return Optional.ofNullable(converter.<List<T>>read(storageUnit, type));
+  103.               })
+  104.           .filter(Optional::isPresent)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:99: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `success`.
+  97.           .map(
+  98.               success -> {
+  99. >               if (!success) {
+  100.                   throw new IOException("Could not create store.");
+  101.                 }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:100: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$6`.
+  98.   
+  99.     private Single<FileStorageUnit> createTemp() {
+  100. >     return Single.fromCallable(() -> new FileStorageUnit(key + ".tmp", fileStorageAdapter));
+  101.     }
+  102.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:100: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  98.   
+  99.     private Single<FileStorageUnit> createTemp() {
+  100. >     return Single.fromCallable(() -> new FileStorageUnit(key + ".tmp", fileStorageAdapter));
+  101.     }
+  102.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:105: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  103.     @Override
+  104.     public void add(T value, Scheduler scheduler) {
+  105. >     observeAdd(value).subscribeOn(scheduler).subscribe();
+  106.     }
+  107.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:105: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$7`.
+  103.     @Override
+  104.     public void add(T value, Scheduler scheduler) {
+  105. >     observeAdd(value).subscribeOn(scheduler).subscribe();
+  106.     }
+  107.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:105: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$5`.
+  103.     private Single<Boolean> set(FileStorageUnit storageUnit) {
+  104.       return Single.fromCallable(
+  105. >         () -> fileStorageAdapter.file(storageUnit.key).renameTo(fileStorageAdapter.file(key)));
+  106.     }
+  107.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:105: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.FileStorageUnit.fileStorageAdapter`.
+  103.     private Single<Boolean> set(FileStorageUnit storageUnit) {
+  104.       return Single.fromCallable(
+  105. >         () -> fileStorageAdapter.file(storageUnit.key).renameTo(fileStorageAdapter.file(key)));
+  106.     }
+  107.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:105: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.unit.FileStorageUnit.fileStorageAdapter`,check dereference of ambiguous pointer `storageUnit`.
+  103.     private Single<Boolean> set(FileStorageUnit storageUnit) {
+  104.       return Single.fromCallable(
+  105. >         () -> fileStorageAdapter.file(storageUnit.key).renameTo(fileStorageAdapter.file(key)));
+  106.     }
+  107.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:109: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `originalList`.
+  107.           .flatMap(
+  108.               originalList -> {
+  109. >               List<T> result = new ArrayList<>(originalList.size() + 1);
+  110.                 result.addAll(originalList);
+  111.                 result.add(value);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:112: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  110.                 result.addAll(originalList);
+  111.                 result.add(value);
+  112. >               return storageUnit.converterWrite(result, converter, type);
+  113.               })
+  114.           .doOnSuccess(updateSubject::onNext)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:110: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ListTypeV1.storage`.
+  108.     @Override
+  109.     public Single<List<T>> observeRemoveAll(PredicateFunc<T> predicateFunc) {
+  110. >     return storage.removeAll(predicateFunc, converter, type);
+  111.     }
+  112.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:116: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ListTypeV1.storage`.
+  114.     @SuppressWarnings("unchecked")
+  115.     public Single<List<T>> observeRemove(final PredicateFunc<T> predicateFunc) {
+  116. >     return storage.remove(predicateFunc, converter, type);
+  117.     }
+  118.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:124: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  122.       return Completable.fromAction(storageUnit::startWrite)
+  123.           .andThen(storageUnit.exists())
+  124. >         .filter(Boolean::booleanValue)
+  125.           .flatMap(
+  126.               exists -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:125: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$22`.
+  123.           .andThen(storageUnit.exists())
+  124.           .filter(Boolean::booleanValue)
+  125. >         .flatMap(
+  126.               exists -> {
+  127.                 List<T> originalList = converter.read(storageUnit, type);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:147: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$32`.
+  145.                 return Maybe.just(originalList);
+  146.               })
+  147. >         .toSingle(Collections.<T>emptyList())
+  148.           .doOnSuccess(updateSubject::onNext)
+  149.           .doFinally(storageUnit::endWrite);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:148: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$37`.
+  146.               })
+  147.           .toSingle(Collections.<T>emptyList())
+  148. >         .doOnSuccess(updateSubject::onNext)
+  149.           .doFinally(storageUnit::endWrite);
+  150.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:149: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$49`.
+  147.           .toSingle(Collections.<T>emptyList())
+  148.           .doOnSuccess(updateSubject::onNext)
+  149. >         .doFinally(storageUnit::endWrite);
+  150.     }
+  151.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:123: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  121.         T value, ListType.PredicateFunc<T> predicateFunc, Converter converter, Type type) {
+  122.       return Completable.fromAction(storageUnit::startWrite)
+  123. >         .andThen(storageUnit.exists())
+  124.           .filter(Boolean::booleanValue)
+  125.           .flatMap(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:122: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  120.     public <T> Single<List<T>> replace(
+  121.         T value, ListType.PredicateFunc<T> predicateFunc, Converter converter, Type type) {
+  122. >     return Completable.fromAction(storageUnit::startWrite)
+  123.           .andThen(storageUnit.exists())
+  124.           .filter(Boolean::booleanValue)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:123: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  121.         T value, ListType.PredicateFunc<T> predicateFunc, Converter converter, Type type) {
+  122.       return Completable.fromAction(storageUnit::startWrite)
+  123. >         .andThen(storageUnit.exists())
+  124.           .filter(Boolean::booleanValue)
+  125.           .flatMap(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:148: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  146.               })
+  147.           .toSingle(Collections.<T>emptyList())
+  148. >         .doOnSuccess(updateSubject::onNext)
+  149.           .doFinally(storageUnit::endWrite);
+  150.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:147: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.updateSubject`.
+  145.                 return Maybe.just(originalList);
+  146.               })
+  147. >         .toSingle(Collections.<T>emptyList())
+  148.           .doOnSuccess(updateSubject::onNext)
+  149.           .doFinally(storageUnit::endWrite);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:126: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  124.     @Override
+  125.     public void remove(Scheduler scheduler, PredicateFunc<T> predicateFunc) {
+  126. >     observeRemove(predicateFunc).subscribeOn(scheduler).subscribe();
+  127.     }
+  128.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:126: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$7`.
+  124.     @Override
+  125.     public void remove(Scheduler scheduler, PredicateFunc<T> predicateFunc) {
+  126. >     observeRemove(predicateFunc).subscribeOn(scheduler).subscribe();
+  127.     }
+  128.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:127: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `converter`.
+  125.           .flatMap(
+  126.               exists -> {
+  127. >               List<T> originalList = converter.read(storageUnit, type);
+  128.                 if (originalList == null) originalList = Collections.emptyList();
+  129.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:143: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$45`.
+  141.                   modifiedList.remove(indexOfItemToReplace);
+  142.                   modifiedList.add(indexOfItemToReplace, value);
+  143. >                 return storageUnit.converterWrite(modifiedList, converter, type).toMaybe();
+  144.                 }
+  145.                 return Maybe.just(originalList);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:132: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `originalList`.
+  130.                 int indexOfItemToReplace = -1;
+  131.   
+  132. >               for (int i = 0; i < originalList.size(); i++) {
+  133.                   if (predicateFunc.test(originalList.get(i))) {
+  134.                     indexOfItemToReplace = i;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:133: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `originalList`.
+  131.   
+  132.                 for (int i = 0; i < originalList.size(); i++) {
+  133. >                 if (predicateFunc.test(originalList.get(i))) {
+  134.                     indexOfItemToReplace = i;
+  135.                     break;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:133: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `predicateFunc`.
+  131.   
+  132.                 for (int i = 0; i < originalList.size(); i++) {
+  133. >                 if (predicateFunc.test(originalList.get(i))) {
+  134.                     indexOfItemToReplace = i;
+  135.                     break;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:143: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  141.                   modifiedList.remove(indexOfItemToReplace);
+  142.                   modifiedList.add(indexOfItemToReplace, value);
+  143. >                 return storageUnit.converterWrite(modifiedList, converter, type).toMaybe();
+  144.                 }
+  145.                 return Maybe.just(originalList);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:131: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `value`.
+  129.     @Override
+  130.     public Single<List<T>> observeRemove(final T value) {
+  131. >     return observeRemove(valueToRemove -> value.equals(valueToRemove));
+  132.     }
+  133.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:141: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  139.     @Override
+  140.     public void remove(final T value, Scheduler scheduler) {
+  141. >     observeRemove(value).subscribeOn(scheduler).subscribe();
+  142.     }
+  143.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:141: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$7`.
+  139.     @Override
+  140.     public void remove(final T value, Scheduler scheduler) {
+  141. >     observeRemove(value).subscribeOn(scheduler).subscribe();
+  142.     }
+  143.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:147: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ListTypeV1.storage`.
+  145.     @SuppressWarnings("unchecked")
+  146.     public Single<List<T>> observeRemove(final int position) {
+  147. >     return storage.remove(position, converter, type);
+  148.     }
+  149.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:158: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  156.       return Completable.fromAction(storageUnit::startWrite)
+  157.           .andThen(storageUnit.exists())
+  158. >         .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  159.           .flatMap(
+  160.               createSuccess -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:159: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$23`.
+  157.           .andThen(storageUnit.exists())
+  158.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  159. >         .flatMap(
+  160.               createSuccess -> {
+  161.                 if (!createSuccess) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:191: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$33`.
+  189.                 return storageUnit.converterWrite(modifiedList, converter, type);
+  190.               })
+  191. >         .doOnSuccess(updateSubject::onNext)
+  192.           .doFinally(storageUnit::endWrite);
+  193.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:192: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$45`.
+  190.               })
+  191.           .doOnSuccess(updateSubject::onNext)
+  192. >         .doFinally(storageUnit::endWrite);
+  193.     }
+  194.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:157: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  155.         T value, ListType.PredicateFunc<T> predicateFunc, Converter converter, Type type) {
+  156.       return Completable.fromAction(storageUnit::startWrite)
+  157. >         .andThen(storageUnit.exists())
+  158.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  159.           .flatMap(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:156: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  154.     public <T> Single<List<T>> addOrReplace(
+  155.         T value, ListType.PredicateFunc<T> predicateFunc, Converter converter, Type type) {
+  156. >     return Completable.fromAction(storageUnit::startWrite)
+  157.           .andThen(storageUnit.exists())
+  158.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:157: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  155.         T value, ListType.PredicateFunc<T> predicateFunc, Converter converter, Type type) {
+  156.       return Completable.fromAction(storageUnit::startWrite)
+  157. >         .andThen(storageUnit.exists())
+  158.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  159.           .flatMap(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:191: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  189.                 return storageUnit.converterWrite(modifiedList, converter, type);
+  190.               })
+  191. >         .doOnSuccess(updateSubject::onNext)
+  192.           .doFinally(storageUnit::endWrite);
+  193.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:159: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.updateSubject`.
+  157.           .andThen(storageUnit.exists())
+  158.           .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  159. >         .flatMap(
+  160.               createSuccess -> {
+  161.                 if (!createSuccess) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:157: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  155.     @Override
+  156.     public void remove(int position, Scheduler scheduler) {
+  157. >     observeRemove(position).subscribeOn(scheduler).subscribe();
+  158.     }
+  159.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:157: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$7`.
+  155.     @Override
+  156.     public void remove(int position, Scheduler scheduler) {
+  157. >     observeRemove(position).subscribeOn(scheduler).subscribe();
+  158.     }
+  159.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:158: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `exists`.
+  156.       return Completable.fromAction(storageUnit::startWrite)
+  157.           .andThen(storageUnit.exists())
+  158. >         .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  159.           .flatMap(
+  160.               createSuccess -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:158: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  156.       return Completable.fromAction(storageUnit::startWrite)
+  157.           .andThen(storageUnit.exists())
+  158. >         .flatMap(exists -> exists ? Single.just(true) : storageUnit.createNew())
+  159.           .flatMap(
+  160.               createSuccess -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:164: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `converter`.
+  162.                   throw new IOException("Could not create store.");
+  163.                 }
+  164. >               List<T> originalList = converter.read(storageUnit, type);
+  165.                 if (originalList == null) originalList = Collections.emptyList();
+  166.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:161: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `createSuccess`.
+  159.           .flatMap(
+  160.               createSuccess -> {
+  161. >               if (!createSuccess) {
+  162.                   throw new IOException("Could not create store.");
+  163.                 }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:169: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `originalList`.
+  167.                 int indexOfItemToReplace = -1;
+  168.   
+  169. >               for (int i = 0; i < originalList.size(); i++) {
+  170.                   if (predicateFunc.test(originalList.get(i))) {
+  171.                     indexOfItemToReplace = i;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:170: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `originalList`.
+  168.   
+  169.                 for (int i = 0; i < originalList.size(); i++) {
+  170. >                 if (predicateFunc.test(originalList.get(i))) {
+  171.                     indexOfItemToReplace = i;
+  172.                     break;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:177: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `originalList`.
+  175.   
+  176.                 int modifiedListSize =
+  177. >                   indexOfItemToReplace == -1 ? originalList.size() + 1 : originalList.size();
+  178.   
+  179.                 List<T> modifiedList = new ArrayList<T>(modifiedListSize);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:170: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `predicateFunc`.
+  168.   
+  169.                 for (int i = 0; i < originalList.size(); i++) {
+  170. >                 if (predicateFunc.test(originalList.get(i))) {
+  171.                     indexOfItemToReplace = i;
+  172.                     break;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:189: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  187.                 }
+  188.   
+  189. >               return storageUnit.converterWrite(modifiedList, converter, type);
+  190.               })
+  191.           .doOnSuccess(updateSubject::onNext)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:164: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ListTypeV1.storage`.
+  162.     public Single<List<T>> observeReplace(final T value, final PredicateFunc<T> predicateFunc) {
+  163.   
+  164. >     return storage.replace(value, predicateFunc, converter, type);
+  165.     }
+  166.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:174: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$4`.
+  172.     @Override
+  173.     public void replace(T value, Scheduler scheduler, PredicateFunc<T> predicateFunc) {
+  174. >     observeReplace(value, predicateFunc).subscribeOn(scheduler).subscribe();
+  175.     }
+  176.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:174: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$8`.
+  172.     @Override
+  173.     public void replace(T value, Scheduler scheduler, PredicateFunc<T> predicateFunc) {
+  174. >     observeReplace(value, predicateFunc).subscribeOn(scheduler).subscribe();
+  175.     }
+  176.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:180: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.types.ListTypeV1.storage`.
+  178.     @SuppressWarnings("unchecked")
+  179.     public Single<List<T>> observeAddOrReplace(final T value, final PredicateFunc<T> predicateFunc) {
+  180. >     return storage.addOrReplace(value, predicateFunc, converter, type);
+  181.     }
+  182.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:190: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$4`.
+  188.     @Override
+  189.     public void addOrReplace(T value, Scheduler scheduler, PredicateFunc<T> predicateFunc) {
+  190. >     observeAddOrReplace(value, predicateFunc).subscribeOn(scheduler).subscribe();
+  191.     }
+  192.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ListTypeV1.java:190: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$8`.
+  188.     @Override
+  189.     public void addOrReplace(T value, Scheduler scheduler, PredicateFunc<T> predicateFunc) {
+  190. >     observeAddOrReplace(value, predicateFunc).subscribeOn(scheduler).subscribe();
+  191.     }
+  192.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:201: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  199.       return Completable.fromAction(storageUnit::startWrite)
+  200.           .andThen(storageUnit.exists())
+  201. >         .filter(Boolean::booleanValue)
+  202.           .flatMap(
+  203.               exists -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:202: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$22`.
+  200.           .andThen(storageUnit.exists())
+  201.           .filter(Boolean::booleanValue)
+  202. >         .flatMap(
+  203.               exists -> {
+  204.                 List<T> originalList = converter.read(storageUnit, type);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:224: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$31`.
+  222.                 return Maybe.just(modifiedList);
+  223.               })
+  224. >         .toSingle(Collections.emptyList())
+  225.           .doOnSuccess(updateSubject::onNext)
+  226.           .doFinally(storageUnit::endWrite);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:225: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$36`.
+  223.               })
+  224.           .toSingle(Collections.emptyList())
+  225. >         .doOnSuccess(updateSubject::onNext)
+  226.           .doFinally(storageUnit::endWrite);
+  227.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:226: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$48`.
+  224.           .toSingle(Collections.emptyList())
+  225.           .doOnSuccess(updateSubject::onNext)
+  226. >         .doFinally(storageUnit::endWrite);
+  227.     }
+  228.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:200: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  198.         final ListType.PredicateFunc<T> predicateFunc, Converter converter, Type type) {
+  199.       return Completable.fromAction(storageUnit::startWrite)
+  200. >         .andThen(storageUnit.exists())
+  201.           .filter(Boolean::booleanValue)
+  202.           .flatMap(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:199: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  197.     public <T> Single<List<T>> remove(
+  198.         final ListType.PredicateFunc<T> predicateFunc, Converter converter, Type type) {
+  199. >     return Completable.fromAction(storageUnit::startWrite)
+  200.           .andThen(storageUnit.exists())
+  201.           .filter(Boolean::booleanValue)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:200: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  198.         final ListType.PredicateFunc<T> predicateFunc, Converter converter, Type type) {
+  199.       return Completable.fromAction(storageUnit::startWrite)
+  200. >         .andThen(storageUnit.exists())
+  201.           .filter(Boolean::booleanValue)
+  202.           .flatMap(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:225: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  223.               })
+  224.           .toSingle(Collections.emptyList())
+  225. >         .doOnSuccess(updateSubject::onNext)
+  226.           .doFinally(storageUnit::endWrite);
+  227.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:224: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.updateSubject`.
+  222.                 return Maybe.just(modifiedList);
+  223.               })
+  224. >         .toSingle(Collections.emptyList())
+  225.           .doOnSuccess(updateSubject::onNext)
+  226.           .doFinally(storageUnit::endWrite);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:204: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `converter`.
+  202.           .flatMap(
+  203.               exists -> {
+  204. >               List<T> originalList = converter.read(storageUnit, type);
+  205.                 if (originalList == null) originalList = Collections.emptyList();
+  206.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:211: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `each`.
+  209.                 boolean removed = false;
+  210.                 final Iterator<T> each = modifiedList.iterator();
+  211. >               while (each.hasNext()) {
+  212.                   if (predicateFunc.test(each.next())) {
+  213.                     each.remove();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:212: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `each`.
+  210.                 final Iterator<T> each = modifiedList.iterator();
+  211.                 while (each.hasNext()) {
+  212. >                 if (predicateFunc.test(each.next())) {
+  213.                     each.remove();
+  214.                     removed = true;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:213: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `each`.
+  211.                 while (each.hasNext()) {
+  212.                   if (predicateFunc.test(each.next())) {
+  213. >                   each.remove();
+  214.                     removed = true;
+  215.                     break;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:220: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$38`.
+  218.   
+  219.                 if (removed) {
+  220. >                 return storageUnit.converterWrite(modifiedList, converter, type).toMaybe();
+  221.                 }
+  222.                 return Maybe.just(modifiedList);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:212: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `predicateFunc`.
+  210.                 final Iterator<T> each = modifiedList.iterator();
+  211.                 while (each.hasNext()) {
+  212. >                 if (predicateFunc.test(each.next())) {
+  213.                     each.remove();
+  214.                     removed = true;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:220: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  218.   
+  219.                 if (removed) {
+  220. >                 return storageUnit.converterWrite(modifiedList, converter, type).toMaybe();
+  221.                 }
+  222.                 return Maybe.just(modifiedList);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:236: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  234.       return Completable.fromAction(storageUnit::startWrite)
+  235.           .andThen(storageUnit.exists())
+  236. >         .filter(Boolean::booleanValue)
+  237.           .flatMap(
+  238.               exists -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:237: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$22`.
+  235.           .andThen(storageUnit.exists())
+  236.           .filter(Boolean::booleanValue)
+  237. >         .flatMap(
+  238.               exists -> {
+  239.                 List<T> originalList = converter.read(storageUnit, type);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:258: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$31`.
+  256.                 return Maybe.just(modifiedList);
+  257.               })
+  258. >         .toSingle(Collections.emptyList())
+  259.           .doOnSuccess(updateSubject::onNext)
+  260.           .doFinally(storageUnit::endWrite);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:259: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$36`.
+  257.               })
+  258.           .toSingle(Collections.emptyList())
+  259. >         .doOnSuccess(updateSubject::onNext)
+  260.           .doFinally(storageUnit::endWrite);
+  261.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:260: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$48`.
+  258.           .toSingle(Collections.emptyList())
+  259.           .doOnSuccess(updateSubject::onNext)
+  260. >         .doFinally(storageUnit::endWrite);
+  261.     }
+  262.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:235: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  233.   
+  234.       return Completable.fromAction(storageUnit::startWrite)
+  235. >         .andThen(storageUnit.exists())
+  236.           .filter(Boolean::booleanValue)
+  237.           .flatMap(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:234: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  232.         final ListType.PredicateFunc<T> predicateFunc, Converter converter, Type type) {
+  233.   
+  234. >     return Completable.fromAction(storageUnit::startWrite)
+  235.           .andThen(storageUnit.exists())
+  236.           .filter(Boolean::booleanValue)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:235: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  233.   
+  234.       return Completable.fromAction(storageUnit::startWrite)
+  235. >         .andThen(storageUnit.exists())
+  236.           .filter(Boolean::booleanValue)
+  237.           .flatMap(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:259: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  257.               })
+  258.           .toSingle(Collections.emptyList())
+  259. >         .doOnSuccess(updateSubject::onNext)
+  260.           .doFinally(storageUnit::endWrite);
+  261.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:258: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.updateSubject`.
+  256.                 return Maybe.just(modifiedList);
+  257.               })
+  258. >         .toSingle(Collections.emptyList())
+  259.           .doOnSuccess(updateSubject::onNext)
+  260.           .doFinally(storageUnit::endWrite);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:239: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `converter`.
+  237.           .flatMap(
+  238.               exists -> {
+  239. >               List<T> originalList = converter.read(storageUnit, type);
+  240.                 if (originalList == null) originalList = Collections.emptyList();
+  241.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:246: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `each`.
+  244.                 boolean removed = false;
+  245.                 final Iterator<T> each = modifiedList.iterator();
+  246. >               while (each.hasNext()) {
+  247.                   if (predicateFunc.test(each.next())) {
+  248.                     each.remove();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:247: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `each`.
+  245.                 final Iterator<T> each = modifiedList.iterator();
+  246.                 while (each.hasNext()) {
+  247. >                 if (predicateFunc.test(each.next())) {
+  248.                     each.remove();
+  249.                     removed = true;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:248: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `each`.
+  246.                 while (each.hasNext()) {
+  247.                   if (predicateFunc.test(each.next())) {
+  248. >                   each.remove();
+  249.                     removed = true;
+  250.                   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:254: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$38`.
+  252.   
+  253.                 if (removed) {
+  254. >                 return storageUnit.converterWrite(modifiedList, converter, type).toMaybe();
+  255.                 }
+  256.                 return Maybe.just(modifiedList);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:247: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `predicateFunc`.
+  245.                 final Iterator<T> each = modifiedList.iterator();
+  246.                 while (each.hasNext()) {
+  247. >                 if (predicateFunc.test(each.next())) {
+  248.                     each.remove();
+  249.                     removed = true;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:254: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  252.   
+  253.                 if (removed) {
+  254. >                 return storageUnit.converterWrite(modifiedList, converter, type).toMaybe();
+  255.                 }
+  256.                 return Maybe.just(modifiedList);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:268: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$17`.
+  266.       return Completable.fromAction(storageUnit::startWrite)
+  267.           .andThen(storageUnit.exists())
+  268. >         .filter(Boolean::booleanValue)
+  269.           .flatMap(
+  270.               exists -> {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:269: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$22`.
+  267.           .andThen(storageUnit.exists())
+  268.           .filter(Boolean::booleanValue)
+  269. >         .flatMap(
+  270.               exists -> {
+  271.                 List<T> originalList = converter.read(storageUnit, type);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:279: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$31`.
+  277.                 return storageUnit.converterWrite(modifiedList, converter, type).toMaybe();
+  278.               })
+  279. >         .toSingle(Collections.emptyList())
+  280.           .doOnSuccess(updateSubject::onNext)
+  281.           .doFinally(storageUnit::endWrite);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:280: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$36`.
+  278.               })
+  279.           .toSingle(Collections.emptyList())
+  280. >         .doOnSuccess(updateSubject::onNext)
+  281.           .doFinally(storageUnit::endWrite);
+  282.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:281: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$48`.
+  279.           .toSingle(Collections.emptyList())
+  280.           .doOnSuccess(updateSubject::onNext)
+  281. >         .doFinally(storageUnit::endWrite);
+  282.     }
+  283.   }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:267: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  265.     public <T> Single<List<T>> remove(int position, Converter converter, Type type) {
+  266.       return Completable.fromAction(storageUnit::startWrite)
+  267. >         .andThen(storageUnit.exists())
+  268.           .filter(Boolean::booleanValue)
+  269.           .flatMap(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:266: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  264.     @SuppressWarnings("unchecked")
+  265.     public <T> Single<List<T>> remove(int position, Converter converter, Type type) {
+  266. >     return Completable.fromAction(storageUnit::startWrite)
+  267.           .andThen(storageUnit.exists())
+  268.           .filter(Boolean::booleanValue)
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:267: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  265.     public <T> Single<List<T>> remove(int position, Converter converter, Type type) {
+  266.       return Completable.fromAction(storageUnit::startWrite)
+  267. >         .andThen(storageUnit.exists())
+  268.           .filter(Boolean::booleanValue)
+  269.           .flatMap(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:280: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  278.               })
+  279.           .toSingle(Collections.emptyList())
+  280. >         .doOnSuccess(updateSubject::onNext)
+  281.           .doFinally(storageUnit::endWrite);
+  282.     }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:279: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.updateSubject`.
+  277.                 return storageUnit.converterWrite(modifiedList, converter, type).toMaybe();
+  278.               })
+  279. >         .toSingle(Collections.emptyList())
+  280.           .doOnSuccess(updateSubject::onNext)
+  281.           .doFinally(storageUnit::endWrite);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:271: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `converter`.
+  269.           .flatMap(
+  270.               exists -> {
+  271. >               List<T> originalList = converter.read(storageUnit, type);
+  272.                 if (originalList == null) originalList = Collections.emptyList();
+  273.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:277: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$23`.
+  275.                 modifiedList.remove(position);
+  276.   
+  277. >               return storageUnit.converterWrite(modifiedList, converter, type).toMaybe();
+  278.               })
+  279.           .toSingle(Collections.emptyList())
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/storable/ListStorableV1.java:277: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.storage.storable.ListStorableV1.storageUnit`.
+  275.                 modifiedList.remove(position);
+  276.   
+  277. >               return storageUnit.converterWrite(modifiedList, converter, type).toMaybe();
+  278.               })
+  279.           .toSingle(Collections.emptyList())
+
+Summary of the reports
+
+  GRADUAL_CHECK: 295Found 6 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/gson-converter/src/main/java/com/ludwig/keyvaluestore/converters/GsonConverter.java:27: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `storageUnit`.
+  25.         throws ConverterException {
+  26.       try {
+  27. >       Writer writer = storageUnit.writer();
+  28.         gson.toJson(data, type, writer);
+  29.         writer.close();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/gson-converter/src/main/java/com/ludwig/keyvaluestore/converters/GsonConverter.java:28: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.converters.GsonConverter.gson`.
+  26.       try {
+  27.         Writer writer = storageUnit.writer();
+  28. >       gson.toJson(data, type, writer);
+  29.         writer.close();
+  30.       } catch (Exception e) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/gson-converter/src/main/java/com/ludwig/keyvaluestore/converters/GsonConverter.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `writer`.
+  27.         Writer writer = storageUnit.writer();
+  28.         gson.toJson(data, type, writer);
+  29. >       writer.close();
+  30.       } catch (Exception e) {
+  31.         throw new ConverterException(e);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/gson-converter/src/main/java/com/ludwig/keyvaluestore/converters/GsonConverter.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `reader`.
+  40.         Reader reader = storageUnit.reader();
+  41.         T value = gson.fromJson(reader, type);
+  42. >       reader.close();
+  43.         return value;
+  44.       } catch (Exception e) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/gson-converter/src/main/java/com/ludwig/keyvaluestore/converters/GsonConverter.java:40: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `storageUnit`.
+  38.     public <T> T read(StorageUnit storageUnit, Type type) throws ConverterException {
+  39.       try {
+  40. >       Reader reader = storageUnit.reader();
+  41.         T value = gson.fromJson(reader, type);
+  42.         reader.close();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/gson-converter/src/main/java/com/ludwig/keyvaluestore/converters/GsonConverter.java:41: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.converters.GsonConverter.gson`.
+  39.       try {
+  40.         Reader reader = storageUnit.reader();
+  41. >       T value = gson.fromJson(reader, type);
+  42.         reader.close();
+  43.         return value;
+
+Summary of the reports
+
+  GRADUAL_CHECK: 6Found 9 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/jackson-converter/src/main/java/com/ludwig/keyvaluestore/converters/JacksonConverter.java:31: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `outputStream`.
+  29.         OutputStream outputStream = storageUnit.output();
+  30.         objectMapper.writeValue(outputStream, data);
+  31. >       outputStream.close();
+  32.       } catch (Exception e) {
+  33.         throw new ConverterException(e);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/jackson-converter/src/main/java/com/ludwig/keyvaluestore/converters/JacksonConverter.java:29: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `storageUnit`.
+  27.         throws ConverterException {
+  28.       try {
+  29. >       OutputStream outputStream = storageUnit.output();
+  30.         objectMapper.writeValue(outputStream, data);
+  31.         outputStream.close();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/jackson-converter/src/main/java/com/ludwig/keyvaluestore/converters/JacksonConverter.java:30: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.converters.JacksonConverter.objectMapper`.
+  28.       try {
+  29.         OutputStream outputStream = storageUnit.output();
+  30. >       objectMapper.writeValue(outputStream, data);
+  31.         outputStream.close();
+  32.       } catch (Exception e) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/jackson-converter/src/main/java/com/ludwig/keyvaluestore/converters/JacksonConverter.java:41: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$3`.
+  39.     @SuppressWarnings("TypeParameterUnusedInFormals")
+  40.     public <T> T read(StorageUnit storageUnit, Type type) throws ConverterException {
+  41. >     JavaType javaType = objectMapper.getTypeFactory().constructType(type);
+  42.   
+  43.       try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/jackson-converter/src/main/java/com/ludwig/keyvaluestore/converters/JacksonConverter.java:47: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `reader`.
+  45.         T value;
+  46.   
+  47. >       if (!reader.ready()) {
+  48.           value = null;
+  49.         } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/jackson-converter/src/main/java/com/ludwig/keyvaluestore/converters/JacksonConverter.java:53: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `reader`.
+  51.         }
+  52.   
+  53. >       reader.close();
+  54.         return value;
+  55.       } catch (Exception e) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/jackson-converter/src/main/java/com/ludwig/keyvaluestore/converters/JacksonConverter.java:44: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `storageUnit`.
+  42.   
+  43.       try {
+  44. >       Reader reader = storageUnit.reader();
+  45.         T value;
+  46.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/jackson-converter/src/main/java/com/ludwig/keyvaluestore/converters/JacksonConverter.java:41: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.converters.JacksonConverter.objectMapper`.
+  39.     @SuppressWarnings("TypeParameterUnusedInFormals")
+  40.     public <T> T read(StorageUnit storageUnit, Type type) throws ConverterException {
+  41. >     JavaType javaType = objectMapper.getTypeFactory().constructType(type);
+  42.   
+  43.       try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/jackson-converter/src/main/java/com/ludwig/keyvaluestore/converters/JacksonConverter.java:50: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.converters.JacksonConverter.objectMapper`.
+  48.           value = null;
+  49.         } else {
+  50. >         value = objectMapper.readValue(reader, javaType);
+  51.         }
+  52.   
+
+Summary of the reports
+
+  GRADUAL_CHECK: 9Found 12 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/moshi-converter/src/main/java/com/ludwig/keyvaluestore/converters/MoshiConverter.java:34: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `adapter`.
+  32.         JsonAdapter<T> adapter = moshi.adapter(type);
+  33.         BufferedSink sink = Okio.buffer(Okio.sink(outputStream));
+  34. >       adapter.toJson(sink, data);
+  35.         sink.close();
+  36.         outputStream.close();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/moshi-converter/src/main/java/com/ludwig/keyvaluestore/converters/MoshiConverter.java:36: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `outputStream`.
+  34.         adapter.toJson(sink, data);
+  35.         sink.close();
+  36. >       outputStream.close();
+  37.       } catch (Exception e) {
+  38.         throw new ConverterException(e);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/moshi-converter/src/main/java/com/ludwig/keyvaluestore/converters/MoshiConverter.java:35: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `sink`.
+  33.         BufferedSink sink = Okio.buffer(Okio.sink(outputStream));
+  34.         adapter.toJson(sink, data);
+  35. >       sink.close();
+  36.         outputStream.close();
+  37.       } catch (Exception e) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/moshi-converter/src/main/java/com/ludwig/keyvaluestore/converters/MoshiConverter.java:31: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `storageUnit`.
+  29.         throws ConverterException {
+  30.       try {
+  31. >       OutputStream outputStream = storageUnit.output();
+  32.         JsonAdapter<T> adapter = moshi.adapter(type);
+  33.         BufferedSink sink = Okio.buffer(Okio.sink(outputStream));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/moshi-converter/src/main/java/com/ludwig/keyvaluestore/converters/MoshiConverter.java:32: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.converters.MoshiConverter.moshi`.
+  30.       try {
+  31.         OutputStream outputStream = storageUnit.output();
+  32. >       JsonAdapter<T> adapter = moshi.adapter(type);
+  33.         BufferedSink sink = Okio.buffer(Okio.sink(outputStream));
+  34.         adapter.toJson(sink, data);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/moshi-converter/src/main/java/com/ludwig/keyvaluestore/converters/MoshiConverter.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `adapter`.
+  53.           value = null;
+  54.         } else {
+  55. >         value = adapter.nullSafe().fromJson(source);
+  56.         }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/moshi-converter/src/main/java/com/ludwig/keyvaluestore/converters/MoshiConverter.java:59: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `inputStream`.
+  57.   
+  58.         source.close();
+  59. >       inputStream.close();
+  60.         return value;
+  61.       } catch (Exception e) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/moshi-converter/src/main/java/com/ludwig/keyvaluestore/converters/MoshiConverter.java:55: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$18`.
+  53.           value = null;
+  54.         } else {
+  55. >         value = adapter.nullSafe().fromJson(source);
+  56.         }
+  57.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/moshi-converter/src/main/java/com/ludwig/keyvaluestore/converters/MoshiConverter.java:52: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `source`.
+  50.         T value;
+  51.   
+  52. >       if (source.exhausted()) {
+  53.           value = null;
+  54.         } else {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/moshi-converter/src/main/java/com/ludwig/keyvaluestore/converters/MoshiConverter.java:58: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `source`.
+  56.         }
+  57.   
+  58. >       source.close();
+  59.         inputStream.close();
+  60.         return value;
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/moshi-converter/src/main/java/com/ludwig/keyvaluestore/converters/MoshiConverter.java:47: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `storageUnit`.
+  45.     public <T> T read(StorageUnit storageUnit, Type type) {
+  46.       try {
+  47. >       InputStream inputStream = storageUnit.input();
+  48.         JsonAdapter<T> adapter = moshi.adapter(type);
+  49.         BufferedSource source = Okio.buffer(Okio.source(inputStream));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/converters/moshi-converter/src/main/java/com/ludwig/keyvaluestore/converters/MoshiConverter.java:48: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `this->com.ludwig.keyvaluestore.converters.MoshiConverter.moshi`.
+  46.       try {
+  47.         InputStream inputStream = storageUnit.input();
+  48. >       JsonAdapter<T> adapter = moshi.adapter(type);
+  49.         BufferedSource source = Okio.buffer(Okio.source(inputStream));
+  50.         T value;
+
+Summary of the reports
+
+  GRADUAL_CHECK: 12Found 51 issues
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:133: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  131.           t.join();
+  132.         } catch (InterruptedException e) {
+  133. >         e.printStackTrace();
+  134.         }
+  135.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:61: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `listStore`.
+  59.   
+  60.       listStore
+  61. >         .observe()
+  62.           .skip(1)
+  63.           .subscribe(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:85: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `listStore`.
+  83.       valueStore.observePut("value2").blockingGet();
+  84.   
+  85. >     listStore.observeClear().ignoreElement().blockingAwait();
+  86.       int threadCount = 25;
+  87.       List<Thread> threads = new ArrayList<>(threadCount * 2);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:126: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$108`.
+  124.         threads.add(new Thread(runnable));
+  125.       }
+  126. >     for (Thread t : threads) {
+  127.         t.start();
+  128.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:129: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$123`.
+  127.         t.start();
+  128.       }
+  129. >     for (Thread t : threads) {
+  130.         try {
+  131.           t.join();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:42: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$18`.
+  40.       valueStore
+  41.           .observe()
+  42. >         .skip(1)
+  43.           .subscribe(
+  44.               new Observer<ValueUpdate<String>>() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:43: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$21`.
+  41.           .observe()
+  42.           .skip(1)
+  43. >         .subscribe(
+  44.               new Observer<ValueUpdate<String>>() {
+  45.                 @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:62: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$30`.
+  60.       listStore
+  61.           .observe()
+  62. >         .skip(1)
+  63.           .subscribe(
+  64.               new Observer<List<String>>() {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:63: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$33`.
+  61.           .observe()
+  62.           .skip(1)
+  63. >         .subscribe(
+  64.               new Observer<List<String>>() {
+  65.                 @Override
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:80: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$42`.
+  78.               });
+  79.   
+  80. >     valueStore.observePut("value1").blockingGet();
+  81.       valueStore.observePut("value2").blockingGet();
+  82.       valueStore.observePut("value1").blockingGet();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:81: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$48`.
+  79.   
+  80.       valueStore.observePut("value1").blockingGet();
+  81. >     valueStore.observePut("value2").blockingGet();
+  82.       valueStore.observePut("value1").blockingGet();
+  83.       valueStore.observePut("value2").blockingGet();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:82: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$54`.
+  80.       valueStore.observePut("value1").blockingGet();
+  81.       valueStore.observePut("value2").blockingGet();
+  82. >     valueStore.observePut("value1").blockingGet();
+  83.       valueStore.observePut("value2").blockingGet();
+  84.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:83: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$60`.
+  81.       valueStore.observePut("value2").blockingGet();
+  82.       valueStore.observePut("value1").blockingGet();
+  83. >     valueStore.observePut("value2").blockingGet();
+  84.   
+  85.       listStore.observeClear().ignoreElement().blockingAwait();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:85: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$66`.
+  83.       valueStore.observePut("value2").blockingGet();
+  84.   
+  85. >     listStore.observeClear().ignoreElement().blockingAwait();
+  86.       int threadCount = 25;
+  87.       List<Thread> threads = new ArrayList<>(threadCount * 2);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:85: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$69`.
+  83.       valueStore.observePut("value2").blockingGet();
+  84.   
+  85. >     listStore.observeClear().ignoreElement().blockingAwait();
+  86.       int threadCount = 25;
+  87.       List<Thread> threads = new ArrayList<>(threadCount * 2);
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:37: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `store`.
+  35.           KeyValueStoreFactory.build(
+  36.               new FileStorage(new FileStorageAdapter("/tmp")), new MoshiConverter());
+  37. >     ValueType<String> valueStore = store.value("value", String.class);
+  38.       ListType<String> listStore = store.list("list", String.class);
+  39.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:38: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `store`.
+  36.               new FileStorage(new FileStorageAdapter("/tmp")), new MoshiConverter());
+  37.       ValueType<String> valueStore = store.value("value", String.class);
+  38. >     ListType<String> listStore = store.list("list", String.class);
+  39.   
+  40.       valueStore
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:127: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `t`.
+  125.       }
+  126.       for (Thread t : threads) {
+  127. >       t.start();
+  128.       }
+  129.       for (Thread t : threads) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:131: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `t`.
+  129.       for (Thread t : threads) {
+  130.         try {
+  131. >         t.join();
+  132.         } catch (InterruptedException e) {
+  133.           e.printStackTrace();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:104: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `threads`.
+  102.               }
+  103.             };
+  104. >       threads.add(new Thread(runnable));
+  105.       }
+  106.       for (int j = 0; j < threadCount; j++) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:124: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `threads`.
+  122.               }
+  123.             };
+  124. >       threads.add(new Thread(runnable));
+  125.       }
+  126.       for (Thread t : threads) {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:126: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `threads`.
+  124.         threads.add(new Thread(runnable));
+  125.       }
+  126. >     for (Thread t : threads) {
+  127.         t.start();
+  128.       }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:129: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `threads`.
+  127.         t.start();
+  128.       }
+  129. >     for (Thread t : threads) {
+  130.         try {
+  131.           t.join();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:41: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `valueStore`.
+  39.   
+  40.       valueStore
+  41. >         .observe()
+  42.           .skip(1)
+  43.           .subscribe(
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:80: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `valueStore`.
+  78.               });
+  79.   
+  80. >     valueStore.observePut("value1").blockingGet();
+  81.       valueStore.observePut("value2").blockingGet();
+  82.       valueStore.observePut("value1").blockingGet();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:81: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `valueStore`.
+  79.   
+  80.       valueStore.observePut("value1").blockingGet();
+  81. >     valueStore.observePut("value2").blockingGet();
+  82.       valueStore.observePut("value1").blockingGet();
+  83.       valueStore.observePut("value2").blockingGet();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:82: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `valueStore`.
+  80.       valueStore.observePut("value1").blockingGet();
+  81.       valueStore.observePut("value2").blockingGet();
+  82. >     valueStore.observePut("value1").blockingGet();
+  83.       valueStore.observePut("value2").blockingGet();
+  84.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:83: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `valueStore`.
+  81.       valueStore.observePut("value2").blockingGet();
+  82.       valueStore.observePut("value1").blockingGet();
+  83. >     valueStore.observePut("value2").blockingGet();
+  84.   
+  85.       listStore.observeClear().ignoreElement().blockingAwait();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:50: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `lang.System.java.lang.System.out`.
+  48.                 @Override
+  49.                 public void onNext(ValueUpdate<String> stringValueUpdate) {
+  50. >                 System.out.println("value update: " + stringValueUpdate.value);
+  51.                 }
+  52.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:50: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$11`.
+  48.                 @Override
+  49.                 public void onNext(ValueUpdate<String> stringValueUpdate) {
+  50. >                 System.out.println("value update: " + stringValueUpdate.value);
+  51.                 }
+  52.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:50: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$5`,check dereference of ambiguous pointer `stringValueUpdate`.
+  48.                 @Override
+  49.                 public void onNext(ValueUpdate<String> stringValueUpdate) {
+  50. >                 System.out.println("value update: " + stringValueUpdate.value);
+  51.                 }
+  52.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:70: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `lang.System.java.lang.System.out`.
+  68.                 @Override
+  69.                 public void onNext(List<String> strings) {
+  70. >                 System.out.println("list update: " + strings);
+  71.                 }
+  72.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:70: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$5`.
+  68.                 @Override
+  69.                 public void onNext(List<String> strings) {
+  70. >                 System.out.println("list update: " + strings);
+  71.                 }
+  72.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:70: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  68.                 @Override
+  69.                 public void onNext(List<String> strings) {
+  70. >                 System.out.println("list update: " + strings);
+  71.                 }
+  72.   
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:100: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  98.                   Thread.sleep((int) (Math.random() * 20));
+  99.                 } catch (InterruptedException e) {
+  100. >                 e.printStackTrace();
+  101.                 }
+  102.               }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:95: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `listStore`.
+  93.             () -> {
+  94.               for (int i = _j * elementsPerThread; i < (_j + 1) * elementsPerThread; i++) {
+  95. >               listStore.observeAdd("lv" + _j + ": " + i).ignoreElement().blockingAwait();
+  96.   
+  97.                 try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:95: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$13`.
+  93.             () -> {
+  94.               for (int i = _j * elementsPerThread; i < (_j + 1) * elementsPerThread; i++) {
+  95. >               listStore.observeAdd("lv" + _j + ": " + i).ignoreElement().blockingAwait();
+  96.   
+  97.                 try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:95: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$16`.
+  93.             () -> {
+  94.               for (int i = _j * elementsPerThread; i < (_j + 1) * elementsPerThread; i++) {
+  95. >               listStore.observeAdd("lv" + _j + ": " + i).ignoreElement().blockingAwait();
+  96.   
+  97.                 try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:95: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$20`.
+  93.             () -> {
+  94.               for (int i = _j * elementsPerThread; i < (_j + 1) * elementsPerThread; i++) {
+  95. >               listStore.observeAdd("lv" + _j + ": " + i).ignoreElement().blockingAwait();
+  96.   
+  97.                 try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:95: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$27`.
+  93.             () -> {
+  94.               for (int i = _j * elementsPerThread; i < (_j + 1) * elementsPerThread; i++) {
+  95. >               listStore.observeAdd("lv" + _j + ": " + i).ignoreElement().blockingAwait();
+  96.   
+  97.                 try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:95: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$30`.
+  93.             () -> {
+  94.               for (int i = _j * elementsPerThread; i < (_j + 1) * elementsPerThread; i++) {
+  95. >               listStore.observeAdd("lv" + _j + ": " + i).ignoreElement().blockingAwait();
+  96.   
+  97.                 try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:95: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$9`.
+  93.             () -> {
+  94.               for (int i = _j * elementsPerThread; i < (_j + 1) * elementsPerThread; i++) {
+  95. >               listStore.observeAdd("lv" + _j + ": " + i).ignoreElement().blockingAwait();
+  96.   
+  97.                 try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:120: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `e`.
+  118.                   Thread.sleep((int) (Math.random() * 20));
+  119.                 } catch (InterruptedException e) {
+  120. >                 e.printStackTrace();
+  121.                 }
+  122.               }
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:114: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `listStore`.
+  112.   
+  113.                 listStore
+  114. >                   .observeRemove(value -> value.equals("lv" + _j + ": " + _i))
+  115.                     .ignoreElement()
+  116.                     .blockingAwait();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:115: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$12`.
+  113.                 listStore
+  114.                     .observeRemove(value -> value.equals("lv" + _j + ": " + _i))
+  115. >                   .ignoreElement()
+  116.                     .blockingAwait();
+  117.                 try {
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:116: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$15`.
+  114.                     .observeRemove(value -> value.equals("lv" + _j + ": " + _i))
+  115.                     .ignoreElement()
+  116. >                   .blockingAwait();
+  117.                 try {
+  118.                   Thread.sleep((int) (Math.random() * 20));
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:114: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$11`.
+  112.   
+  113.                 listStore
+  114. >                   .observeRemove(value -> value.equals("lv" + _j + ": " + _i))
+  115.                     .ignoreElement()
+  116.                     .blockingAwait();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:114: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$15`.
+  112.   
+  113.                 listStore
+  114. >                   .observeRemove(value -> value.equals("lv" + _j + ": " + _i))
+  115.                     .ignoreElement()
+  116.                     .blockingAwait();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:114: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$4`.
+  112.   
+  113.                 listStore
+  114. >                   .observeRemove(value -> value.equals("lv" + _j + ": " + _i))
+  115.                     .ignoreElement()
+  116.                     .blockingAwait();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:114: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `n$8`.
+  112.   
+  113.                 listStore
+  114. >                   .observeRemove(value -> value.equals("lv" + _j + ": " + _i))
+  115.                     .ignoreElement()
+  116.                     .blockingAwait();
+
+/home/sam/sandbox/NullSafetyJava-master/nullaway-eval/repos/keyvaluestore/samples/sample-java/src/main/java/com/example/keyvaluestore/KeyValueStoreExample.java:114: warning: GRADUAL_CHECK
+  check method call on ambiguous pointer `value`.
+  112.   
+  113.                 listStore
+  114. >                   .observeRemove(value -> value.equals("lv" + _j + ": " + _i))
+  115.                     .ignoreElement()
+  116.                     .blockingAwait();
+
+Summary of the reports
+
+  GRADUAL_CHECK: 51
