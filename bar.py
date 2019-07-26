@@ -24,5 +24,7 @@ for k in ['limit', 'unannotated', 'all']:
     for repo, this_bar in bars.items():
         if repo == 'FloatingActionButtonSpeedDial':
             repo = 'FABSD'
+        if repo == 'skaffold-tools-for-java':
+            repo = 'skaffold-tools'
         print('  ({},{})'.format(repo, this_bar[k]))
     print('};')
