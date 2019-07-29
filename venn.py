@@ -10,8 +10,10 @@ for repo in repos:
     for name, issuetype in checkers.items():
         sets[name] = lines('{}/{}.txt'.format(repo, name), issuetype)
     keys = sets.keys()
-    venn3([sets[k] for k in keys], set_labels=keys)
-    plt.title(repo)
+    venn3([sets[k] for k in keys],
+        set_labels=['' for k in keys],
+        subset_label_formatter=lambda l: ''
+    )
     dir = 'venn/static'
     os.makedirs(dir, exist_ok=True)
     plt.savefig('{}/{}.png'.format(dir, repo))
