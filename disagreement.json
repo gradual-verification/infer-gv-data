@@ -55,5 +55,13 @@
         "skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:189": "checked field"
       }
     }
+  },
+  "uLeak": {
+    "present": {
+      "gradual": {
+        "uleak/src/main/java/com/uber/uleak/ActiveTracker.java:173": "checked field",
+        "uleak/src/main/java/com/uber/uleak/ULeak.java:118": "assigned field"
+      }
+    }
   }
 }
