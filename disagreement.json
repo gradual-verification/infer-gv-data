@@ -42,6 +42,37 @@
   },
   "FloatingActionButtonSpeedDial": {
     "present": {
+      "eradicate": {
+        "library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:76": "eradicate parameter",
+        "library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:81": "eradicate parameter",
+        "library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:237": "eradicate parameter",
+        "library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:238": "eradicate parameter",
+        "library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:261": "eradicate parameter",
+        "library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:336": "eradicate parameter",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:44": "eradicate parameter",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:50": "eradicate parameter",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:99": "eradicate parameter",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialOverlayLayout.java:103": "eradicate parameter",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:126": "eradicate parameter",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:269": "eradicate parameter",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:606": "unstrict return",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:685": "eradicate parameter",
+        "sample/src/main/java/com/leinardi/android/speeddial/sample/MainActivity.java:46": "eradicate parameter",
+        "sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/BaseUseCaseActivity.java:43": "unstrict field",
+        "sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/UseCasesActivity.java:32": "eradicate parameter"
+      },
+      "gradual": {
+        "library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:220": "checked field",
+        "library/src/main/java/com/leinardi/android/speeddial/FabWithLabelView.java:232": "checked field",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:104": "checked field",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:735": "checked field",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:750": "checked field",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:762": "checked field",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:811": "checked field",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:813": "checked field",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:1159": "assigned field",
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:1225": "phantom code"
+      },
       "nullsafe": {
         "library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:620": "missing annotation",
         "sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/BaseUseCaseActivity.java:160": "missing annotation",
