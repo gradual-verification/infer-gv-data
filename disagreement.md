@@ -15,6 +15,7 @@ Negative
   I'm just gonna start ignoring these.
 - _fine inconsistent annotation_: An overridden annotation is marked as
   inconsistent, but it isn't used in an unsafe way.
+- _generated code_: A warning in non-source code.
 - _initialized elsewhere_: The two fields aren't initialized in a constructor,
   but there is a specially marked `@Before` method that initializes them.
 - _missing annotation_: A field is checked for null, or a method returns null,

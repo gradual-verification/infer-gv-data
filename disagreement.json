@@ -119,6 +119,42 @@
       }
     }
   },
+  "OANDAFX": {
+    "present": {
+      "eradicate": {
+        "app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:96": "generated code",
+        "app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:96": "generated code",
+        "app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:83": "generated code",
+        "app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:96": "generated code",
+        "app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:96": "generated code",
+        "app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:83": "generated code"
+      },
+      "nullsafe": {
+        "app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:107": "generated code",
+        "app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:111": "generated code",
+        "app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:115": "generated code",
+        "app/build/generated/source/kapt/debug/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:118": "generated code",
+        "app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:105": "generated code",
+        "app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:109": "generated code",
+        "app/build/generated/source/kapt/debug/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:112": "generated code",
+        "app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:94": "generated code",
+        "app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:98": "generated code",
+        "app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:101": "generated code",
+        "app/build/generated/source/kapt/debug/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:104": "generated code",
+        "app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:107": "generated code",
+        "app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:111": "generated code",
+        "app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:115": "generated code",
+        "app/build/generated/source/kapt/release/com/wdx/oandafx/instrument/DaggerInstrumentBuilder_Component.java:118": "generated code",
+        "app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:105": "generated code",
+        "app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:109": "generated code",
+        "app/build/generated/source/kapt/release/com/wdx/oandafx/login/DaggerLoginBuilder_Component.java:112": "generated code",
+        "app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:94": "generated code",
+        "app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:98": "generated code",
+        "app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:101": "generated code",
+        "app/build/generated/source/kapt/release/com/wdx/oandafx/root/DaggerRootBuilder_Component.java:104": "generated code"
+      }
+    }
+  },
   "picasso": {
     "present": {
       "gradual": {
