@@ -133,7 +133,7 @@
         "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:96": "eradicate test",
         "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:97": "eradicate test",
         "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:98": "eradicate test",
-        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:99": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:99": "eradicate test"
       },
       "gradual": {
         "skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:189": "checked field"
