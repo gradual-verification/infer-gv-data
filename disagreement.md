@@ -9,8 +9,11 @@ Negative
   `instanceof`, which [prevents a null dereference][instanceof].
 - _complicated check_: The variable is safe, but for complicated control-flow
   reasons.
+- _fine inconsistent annotation_: An overridden annotation is marked as
+  inconsistent, but it isn't used in an unsafe way.
 - _initialized elsewhere_: The two fields aren't initialized in a constructor,
   but there is a specially marked `@Before` method that initializes them.
+- _unstrict parameter_: A parameter that allows null is appraised as non-null.
 
 Positive
 --------

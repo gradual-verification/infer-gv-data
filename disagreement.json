@@ -41,6 +41,14 @@
       }
     }
   },
+  "QRContact": {
+    "present": {
+      "eradicate": {
+        "app/src/main/java/com/example/emily/qrcontact/Make.java:207": "unstrict parameter",
+        "app/src/main/java/com/example/emily/qrcontact/MainActivity.java:46": "fine inconsistent annotation"
+      }
+    }
+  }
   "skaffold-tools-for-java": {
     "present": {
       "gradual": {
