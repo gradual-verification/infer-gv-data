@@ -15,6 +15,9 @@ Negative
   but there is a specially marked `@Before` method that initializes them.
 - _missing annotation_: A field is checked for null, or a method returns null,
   so nullsafe insists that it be annotated as `@Nullable`.
+- _phantom code_: Warning about some code that's not there.
+- _eradicate test_: Eradicate seems to give tons of false positives in tests so
+  I'm just gonna start ignoring these.
 - _unstrict field_: A field that allows null is appraised as non-null.
 - _unstrict parameter_: A parameter that allows null is appraised as non-null.
 

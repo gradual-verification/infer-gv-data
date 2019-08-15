@@ -111,6 +111,30 @@
   },
   "skaffold-tools-for-java": {
     "present": {
+      "eradicate": {
+        "skaffold-plugins-core/src/integration-test/java/com/google/cloud/tools/skaffold/downloader/CachedSkaffoldManagerIntegrationTest.java:30": "eradicate test",
+        "skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:174": "phantom code",
+        "skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/image/ImageReference.java:144": "unstrict parameter",
+        "skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/image/ImageReference.java:147": "unstrict parameter",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/downloader/DownloaderTest.java:37": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/filesystem/UserCacheHomeTest.java:35": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:102": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:103": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:104": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:105": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:108": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:109": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:110": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:111": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:114": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:115": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:116": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:117": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:96": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:97": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:98": "eradicate test",
+        "skaffold-plugins-core/src/test/java/com/google/cloud/tools/skaffold/image/DescriptorDigestTest.java:99": "eradicate test",
+      },
       "gradual": {
         "skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:189": "checked field"
       }
