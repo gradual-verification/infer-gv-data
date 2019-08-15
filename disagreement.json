@@ -49,6 +49,20 @@
       }
     }
   },
+  "keyvaluestore": {
+    "present": {
+      "gradual": {
+        "keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableInputStream.java:53": "assigned field",
+        "keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableInputStream.java:54": "assigned field",
+        "keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableReader.java:38": "assigned field",
+        "keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/AdaptableReader.java:39": "assigned field",
+        "keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:79": "assigned field",
+        "keyvaluestore/src/main/java/com/ludwig/keyvaluestore/storage/unit/FileStorageUnit.java:92": "unchecked field",
+        "keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ValueUpdate.java:51": "checked field",
+        "keyvaluestore/src/main/java/com/ludwig/keyvaluestore/types/ValueUpdate.java:56": "checked field"
+      }
+    }
+  },
   "picasso": {
     "present": {
       "gradual": {
