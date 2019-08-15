@@ -54,6 +54,11 @@
       "gradual": {
         "picasso/src/test/java/com/squareup/picasso3/DispatcherTest.java:256": "assigned field",
         "picasso-pollexor/src/main/java/com/squareup/picasso3/pollexor/PollexorRequestTransformer.java:41": "unchecked field"
+      },
+      "nullsafe": {
+        "picasso/src/test/java/com/squareup/picasso3/BitmapHunterTest.java:1099": "missing annotation",
+        "picasso-provider/src/main/java/com/squareup/picasso3/provider/PicassoProvider.java:33": "missing annotation",
+        "picasso-sample/src/main/java/com/example/picasso/SampleGalleryActivity.java:39": "missing annotation"
       }
     }
   },
