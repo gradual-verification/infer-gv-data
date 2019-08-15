@@ -16,13 +16,13 @@ def explain(repo):
         present = sets[name] - (sets[other1] | sets[other2])
         if present:
             print('Only present in {}:'.format(name))
-            for line in present:
+            for line in sorted(present):
                 print(line)
             print()
         missing = (sets[other1] & sets[other2]) - sets[name]
         if missing:
             print('Only missing in {}:'.format(name))
-            for line in missing:
+            for line in sorted(missing):
                 print(line)
             print()
 
