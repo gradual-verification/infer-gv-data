@@ -1,6 +1,8 @@
 Negative
 --------
 
+- _assigned field_: The path being dereferenced is a field which is assigned a
+  non-null value beforehand, but gradual doesn't update field lattice values.
 - _checked field_: The path being dereferenced is a field which is checked for
   null beforehand, but gradual doesn't update field lattice values.
 - _checked instanceof_: The code checks the variable beforehand using

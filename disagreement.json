@@ -33,6 +33,14 @@
       }
     }
   },
+  "picasso": {
+    "present": {
+      "gradual": {
+        "picasso/src/test/java/com/squareup/picasso3/DispatcherTest.java:256": "assigned field",
+        "picasso-pollexor/src/main/java/com/squareup/picasso3/pollexor/PollexorRequestTransformer.java:41": "unchecked field"
+      }
+    }
+  },
   "skaffold-tools-for-java": {
     "present": {
       "gradual": {
