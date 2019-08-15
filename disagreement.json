@@ -11,6 +11,10 @@
     "missing": {
       "eradicate": {
         "butterknife-lint/src/main/java/butterknife/lint/InvalidR2UsageDetector.java:104": "checked instanceof"
+      },
+      "nullsafe": {
+        "butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1308": "unchecked field",
+        "butterknife-compiler/src/main/java/butterknife/compiler/ButterKnifeProcessor.java:1322": "unchecked field"
       }
     }
   },

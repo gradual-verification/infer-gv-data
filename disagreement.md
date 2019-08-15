@@ -8,4 +8,9 @@ Negative
 - _initialized elsewhere_: The two fields aren't initialized in a constructor,
   but there is a specially marked `@Before` method that initializes them.
 
+Positive
+--------
+
+- _unchecked field_: The field is marked as `@Nullable` and not checked.
+
 [instanceof]: https://stackoverflow.com/a/2950415/5044950
