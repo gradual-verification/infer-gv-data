@@ -63,6 +63,31 @@
       }
     }
   },
+  "meal-planner": {
+    "present": {
+      "eradicate": {
+        "src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:58": "unstrict parameter",
+        "src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:68": "unstrict parameter",
+        "src/main/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookup.java:97": "unstrict parameter",
+        "src/main/java/de/zuellich/meal_planner/pinterest/datatypes/Pin.java:33": "unstrict parameter",
+        "src/test/java/de/zuellich/meal_planner/SSLUtil.java:22": "missing annotation",
+        "src/test/java/de/zuellich/meal_planner/SSLUtil.java:41": "unstrict parameter",
+        "src/test/java/de/zuellich/meal_planner/SSLUtil.java:47": "unstrict parameter",
+        "src/test/java/de/zuellich/meal_planner/algorithms/AmountParserTest.java:9": "initialized elsewhere",
+        "src/test/java/de/zuellich/meal_planner/algorithms/AmountParserTest.java:46": "unstrict parameter",
+        "src/test/java/de/zuellich/meal_planner/algorithms/IngredientMatcherTest.java:10": "initialized elsewhere",
+        "src/test/java/de/zuellich/meal_planner/algorithms/IngredientUnitLookupTest.java:12": "initialized elsewhere",
+        "src/test/java/de/zuellich/meal_planner/algorithms/PlainTextIngredientScannerTest.java:14": "initialized elsewhere",
+        "src/test/java/de/zuellich/meal_planner/algorithms/RecipeServiceTest.java:42": "unstrict parameter",
+        "src/test/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgParserTest.java:19": "unstrict field",
+        "src/test/java/de/zuellich/meal_planner/algorithms/schema_org/SchemaOrgQuirksModeParserTest.java:20": "unstrict field",
+        "src/test/java/de/zuellich/meal_planner/controller/ParseTest.java:27": "unstrict field",
+        "src/test/java/de/zuellich/meal_planner/controller/PinterestExplorerTest.java:18": "unstrict field",
+        "src/test/java/de/zuellich/meal_planner/pinterest/services/BoardServiceCachingTest.java:28": "unstrict field",
+        "src/test/java/de/zuellich/meal_planner/pinterest/services/BoardServicePinsTest.java:25": "initialized elsewhere"
+      }
+    }
+  },
   "picasso": {
     "present": {
       "gradual": {

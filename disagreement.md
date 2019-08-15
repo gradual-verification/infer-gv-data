@@ -13,8 +13,9 @@ Negative
   inconsistent, but it isn't used in an unsafe way.
 - _initialized elsewhere_: The two fields aren't initialized in a constructor,
   but there is a specially marked `@Before` method that initializes them.
-- _missing annotation_: A field is checked for null so nullsafe insists that it
-  be annotated as `@Nullable`.
+- _missing annotation_: A field is checked for null, or a method returns null,
+  so nullsafe insists that it be annotated as `@Nullable`.
+- _unstrict field_: A field that allows null is appraised as non-null.
 - _unstrict parameter_: A parameter that allows null is appraised as non-null.
 
 Positive
