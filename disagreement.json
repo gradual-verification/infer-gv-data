@@ -118,6 +118,28 @@
   },
   "uLeak": {
     "present": {
+      "eradicate": {
+        "uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:59": "unstrict field",
+        "uleak/src/test/java/com/uber/uleak/ActiveTrackerTest.java:417": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:31": "unstrict field",
+        "uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:63": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:74": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:85": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:101": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:102": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/LifecycleInstanceTrackerTest.java:115": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:31": "unstrict field",
+        "uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:75": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:86": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:98": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:99": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:100": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:114": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:115": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:130": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/SingleInstanceTrackerTest.java:131": "unstrict parameter",
+        "uleak/src/test/java/com/uber/uleak/TrackedReferencesTest.java:28": "unstrict field"
+      },
       "gradual": {
         "uleak/src/main/java/com/uber/uleak/ActiveTracker.java:173": "checked field",
         "uleak/src/main/java/com/uber/uleak/ULeak.java:118": "assigned field"
