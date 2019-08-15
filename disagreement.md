@@ -1,3 +1,11 @@
+- AutoDispose:
+  - Only present in gradual:
+    - sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:90
+      - **Negative:** The path being dereferenced is a field which is checked
+        for null beforehand, but gradual doesn't update field lattice values.
+    - sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:97
+      - **Negative:** The path being dereferenced is a field which is checked
+        for null beforehand, but gradual doesn't update field lattice values.
 - butterknife
   - Only missing in _eradicate_:
     - butterknife-lint/src/main/java/butterknife/lint/InvalidR2UsageDetector.java:104
