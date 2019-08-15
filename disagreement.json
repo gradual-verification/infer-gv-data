@@ -40,6 +40,15 @@
       }
     }
   },
+  "FloatingActionButtonSpeedDial": {
+    "present": {
+      "nullsafe": {
+        "library/src/main/java/com/leinardi/android/speeddial/SpeedDialView.java:620": "missing annotation",
+        "sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/BaseUseCaseActivity.java:160": "missing annotation",
+        "sample/src/main/java/com/leinardi/android/speeddial/sample/usecases/BaseUseCaseActivity.java:170": "missing annotation"
+      }
+    }
+  },
   "picasso": {
     "present": {
       "gradual": {
