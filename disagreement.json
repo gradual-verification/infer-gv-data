@@ -1,0 +1,31 @@
+{
+  "AutoDispose": {
+    "present": {
+      "gradual": {
+        "sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:90": "checked field",
+        "sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:97": "checked field"
+      }
+    }
+  },
+  "butterknife": {
+    "missing": {
+      "eradicate": {
+        "butterknife-lint/src/main/java/butterknife/lint/InvalidR2UsageDetector.java:104": "checked instanceof"
+      }
+    }
+  },
+  "filesystem-generator": {
+    "present": {
+      "eradicate": {
+        "src/test/java/de/zuellich/fsgenerator/FSGeneratorTest.java:13": "initialized elsewhere"
+      }
+    }
+  },
+  "skaffold-tools-for-java": {
+    "present": {
+      "gradual": {
+        "skaffold-plugins-core/src/main/java/com/google/cloud/tools/skaffold/command/Skaffold.java:189": "checked field"
+      }
+    }
+  }
+}
