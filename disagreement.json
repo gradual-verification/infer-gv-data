@@ -1,5 +1,12 @@
 {
   "AutoDispose": {
+    "missing": {
+      "nullsafe": {
+        "autodispose/src/main/java/com/uber/autodispose/HalfSerializer.java:148": "unchecked call",
+        "sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:105": "unchecked field",
+        "sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:117": "unchecked field"
+      }
+    },
     "present": {
       "gradual": {
         "sample/src/main/java/com/uber/autodispose/recipes/AutoDisposeView.java:90": "checked field",

@@ -19,5 +19,7 @@ Positive
 --------
 
 - _unchecked field_: The field is marked as `@Nullable` and not checked.
+- _unchecked call_: The return value of a call is marked as `@Nullable` and not
+  checked.
 
 [instanceof]: https://stackoverflow.com/a/2950415/5044950
