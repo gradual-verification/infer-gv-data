@@ -5,6 +5,8 @@ Negative
   null beforehand, but gradual doesn't update field lattice values.
 - _checked instanceof_: The code checks the variable beforehand using
   `instanceof`, which [prevents a null dereference][instanceof].
+- _complicated check_: The variable is safe, but for complicated control-flow
+  reasons.
 - _initialized elsewhere_: The two fields aren't initialized in a constructor,
   but there is a specially marked `@Before` method that initializes them.
 

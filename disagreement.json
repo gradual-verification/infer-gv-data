@@ -18,6 +18,14 @@
       }
     }
   },
+  "caffeine": {
+    "missing": {
+      "nullsafe": {
+        "caffeine/src/main/java/com/github/benmanes/caffeine/SingleConsumerQueue.java:280": "complicated check",
+        "caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java:589": "complicated check"
+      }
+    }
+  },
   "filesystem-generator": {
     "present": {
       "eradicate": {
