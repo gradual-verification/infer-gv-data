@@ -11,6 +11,8 @@ Negative
   `instanceof`, which [prevents a null dereference][instanceof].
 - _complicated check_: The variable is safe, but for complicated control-flow
   reasons.
+- _eradicate override_: Eradicate seems to give lots of false positives about
+  annotations in overrides, so I'm gonna start ignoring these.
 - _eradicate parameter_: Eradicate seems to give tons of false positives about
   passing parameters so I'm just gonna start ignoring these.
 - _eradicate test_: Eradicate seems to give tons of false positives in tests so
