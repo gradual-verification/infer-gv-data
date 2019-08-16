@@ -1311,6 +1311,13 @@
       }
     }
   },
+  "jib": {
+    "present": {
+      "nullsafe": {
+        "jib-core/src/main/java/com/google/cloud/tools/jib/frontend/CredentialRetrieverFactory.java:255": "missing annotation"
+      }
+    }
+  },
   "keyvaluestore": {
     "present": {
       "gradual": {
