@@ -3,6 +3,7 @@ Negative
 
 - _assigned field_: The path being dereferenced is a field which is assigned a
   non-null value beforehand, but gradual doesn't update field lattice values.
+- _asserted variable_: The variable was previously asserted to be non-null.
 - _checked call_: The return value of a probably-referentially-transparent call
   is checked before usage.
 - _checked field_: The path being dereferenced is a field which is checked for
