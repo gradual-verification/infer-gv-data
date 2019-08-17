@@ -39,18 +39,21 @@ for repo, groups in data.items():
         for checker, messages in checks.items():
             for line, appraisal in messages.items():
                 if not appraisal:
-                    if type == 'present':
-                        message = indices[repo][checker][line]
-                        if checker == 'eradicate':
-                            if 'test' in line.lower():
-                                appraisals[line] = 'eradicate test'
-                            elif 'ERADICATE_PARAMETER_NOT_NULLABLE' in message[0]:
-                                appraisals[line] = 'eradicate parameter'
-                            elif 'ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION' in message[0]:
-                                appraisals[line] = 'eradicate override'
-                            elif 'ERADICATE_FIELD_NOT_INITIALIZED' in message[0]:
-                                appraisals[line] = 'unstrict field'
-                        elif checker == 'nullsafe' and 'NULLSAFE_FIELD_NOT_NULLABLE' in message[0]:
+                    if ((type == 'present' and checker == 'eradicate') or (type == 'missing' and checker != 'eradicate')) and line in indices[repo]['eradicate']:
+                        message = indices[repo]['eradicate'][line]
+                        if 'test' in line.lower():
+                            appraisals[line] = 'eradicate test'
+                        elif 'ERADICATE_PARAMETER_NOT_NULLABLE' in message[0]:
+                            appraisals[line] = 'eradicate parameter'
+                        elif 'ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION' in message[0]:
+                            appraisals[line] = 'eradicate override'
+                        elif 'ERADICATE_FIELD_NOT_INITIALIZED' in message[0]:
+                            appraisals[line] = 'unstrict field'
+                        elif 'ERADICATE_FIELD_NOT_NULLABLE' in message[0]:
+                            appraisals[line] = 'missing annotation'
+                    elif ((type == 'present' and checker == 'nullsafe') or (type == 'missing' and checker != 'eradicate')) and line in indices[repo]['nullsafe']:
+                        message = indices[repo]['nullsafe'][line]
+                        if 'NULLSAFE_FIELD_NOT_NULLABLE' in message[0]:
                             appraisals[line] = 'missing annotation'
 
 with open('disagreement.json') as input:
