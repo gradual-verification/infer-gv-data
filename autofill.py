@@ -51,6 +51,8 @@ for repo, groups in data.items():
                             appraisals[line] = 'unstrict field'
                         elif 'ERADICATE_FIELD_NOT_NULLABLE' in message[0]:
                             appraisals[line] = 'missing annotation'
+                        elif 'ERADICATE_RETURN_NOT_NULLABLE' in message[0]:
+                            appraisals[line] = 'missing annotation'
                     elif ((type == 'present' and checker == 'nullsafe') or (type == 'missing' and checker != 'eradicate')) and line in indices[repo]['nullsafe']:
                         message = indices[repo]['nullsafe'][line]
                         if 'NULLSAFE_FIELD_NOT_NULLABLE' in message[0]:
