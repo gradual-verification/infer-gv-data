@@ -32,9 +32,34 @@ for repo in repos:
 with open('disagreement.json') as file:
     data = json.load(file)
 
+appraisals = {}
+
 for repo, groups in data.items():
     for type, checks in groups.items():
-        for messages in checks.values():
+        for checker, messages in checks.items():
             for line, appraisal in messages.items():
                 if not appraisal:
-                    print([(len(indices[repo][checker][line]) if line in indices[repo][checker] else 0) for checker in checkers.keys()])
+                    if type == 'present':
+                        message = indices[repo][checker][line]
+                        if checker == 'eradicate':
+                            if 'test' in line.lower():
+                                appraisals[line] = 'eradicate test'
+                            elif 'ERADICATE_PARAMETER_NOT_NULLABLE' in message[0]:
+                                appraisals[line] = 'eradicate parameter'
+                            elif 'ERADICATE_INCONSISTENT_SUBCLASS_PARAMETER_ANNOTATION' in message[0]:
+                                appraisals[line] = 'eradicate override'
+                            elif 'ERADICATE_FIELD_NOT_INITIALIZED' in message[0]:
+                                appraisals[line] = 'unstrict field'
+                        elif checker == 'nullsafe' and 'NULLSAFE_FIELD_NOT_NULLABLE' in message[0]:
+                            appraisals[line] = 'missing annotation'
+
+with open('disagreement.json') as input:
+    for line in input:
+        if '""' in line:
+            first_quote = find_nth(line, '"', 1)
+            second_quote = find_nth(line, '"', 2)
+            key = line[first_quote+1:second_quote]
+            if key in appraisals:
+                print(line.replace('""', '"'+appraisals[key]+'"'),end='')
+                continue
+        print(line, end='')
